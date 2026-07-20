@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Primary Meta Tags -->
+  <title>Ferretería Ukra Blog - Guías Técnicas de Ferretería, Electricidad SEC y Construcción</title>
+  <meta name="title" content="Ferretería Ukra Blog - Guías Técnicas de Ferretería, Electricidad SEC y Construcción">
+  <meta name="description" content="El portal de referencia en Chile para guías técnicas de ferretería, normativas eléctricas SEC, aislación OGUC, cálculo de materiales de construcción y herramientas.">
+  <meta name="keywords" content="blog ferreteria chile, guias tecnicas construccion, norma SEC NCh Elec 4 2003, calculo materiales metalcon zinc, electrodos soldadura, herramientas">
+  <meta name="author" content="Ferretería Ukra Chile - Portal Técnico">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://www.ferreteriaukra.cl/index.html">
+  <meta name="theme-color" content="#D9381E">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ferretería Ukra Blog - Ferretería y Bricolaje Técnico">
+  <meta property="og:url" content="https://www.ferreteriaukra.cl/index.html">
+  <meta property="og:title" content="Ferretería Ukra Blog - Manuales y Guías Técnicas de Ferretería">
+  <meta property="og:description" content="Guías paso a paso de electricidad SEC, estructuras Metalcon, techumbres, aislación, soldadura y carpintería en Chile.">
+  <meta property="og:locale" content="es_CL">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ferretería Ukra Blog - Guías Técnicas de Ferretería en Chile">
+  <meta name="twitter:description" content="Encuentra tutoriales de electricidad, herramientas, cálculo de materiales y carpintería.">
+
+  <!-- Preconnect and Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google AdSense Auto Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7032484018692343" crossorigin="anonymous"></script>
+
+  <!-- Embedded Styling -->
+  <style>
+    :root {
+      --primary: #D9381E;
+      --primary-hover: #B82A13;
+      --secondary: #1E293B;
+      --accent: #F59E0B;
+      --bg-body: #F8FAFC;
+      --bg-card: #FFFFFF;
+      --text-main: #0F172A;
+      --text-muted: #64748B;
+      --border-color: #E2E8F0;
+      --radius-sm: 0.375rem;
+      --radius-md: 0.75rem;
+      --radius-lg: 1rem;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+      --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+      --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-stack);
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.65;
+      font-size: 1rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img, svg {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .progress-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: transparent;
+      z-index: 100;
+    }
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      width: 0%;
+      transition: width 0.1s linear;
+    }
+
+    .top-bar {
+      background-color: #0F172A;
+      color: #94A3B8;
+      font-size: 0.85rem;
+      padding: 0.4rem 1rem;
+      text-align: center;
+      border-bottom: 1px solid #1E293B;
+    }
+    .top-bar span {
+      color: #F8FAFC;
+      font-weight: 600;
+    }
+
+    header {
+      background-color: var(--secondary);
+      color: #FFFFFF;
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      box-shadow: var(--shadow-md);
+    }
+    .header-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 1.5rem;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+    }
+    .brand-logo svg {
+      width: 34px;
+      height: 34px;
+      fill: var(--primary);
+    }
+    .brand-logo span.badge {
+      font-size: 0.65rem;
+      background: var(--primary);
+      color: #FFF;
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    nav a {
+      color: #CBD5E1;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.4rem 0.2rem;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s ease;
+    }
+    nav a:hover, nav a.active {
+      color: #FFFFFF;
+      text-decoration: none;
+      border-bottom-color: var(--primary);
+    }
+
+    .search-widget-nav {
+      display: flex;
+      align-items: center;
+      background: #334155;
+      border-radius: var(--radius-sm);
+      padding: 0.35rem 0.75rem;
+      gap: 0.5rem;
+    }
+    .search-widget-nav input {
+      background: transparent;
+      border: none;
+      color: #FFF;
+      font-size: 0.875rem;
+      outline: none;
+      width: 140px;
+    }
+    .search-widget-nav input::placeholder {
+      color: #94A3B8;
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .breadcrumbs a {
+      color: var(--text-muted);
+    }
+    .breadcrumbs a:hover {
+      color: var(--primary);
+    }
+    .breadcrumbs span.separator {
+      color: #CBD5E1;
+    }
+
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    @media (min-width: 992px) {
+      .layout-grid {
+        grid-template-columns: 2.5fr 1fr;
+      }
+    }
+
+    article.main-article {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+    }
+
+    .category-pill {
+      display: inline-block;
+      background-color: #FEF2F2;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.3rem 0.8rem;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+      border: 1px solid #FCA5A5;
+    }
+
+    h1.article-title {
+      font-size: 2.25rem;
+      line-height: 1.25;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .calculator-card {
+      background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 100%);
+      border: 1px solid #BFDBFE;
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      margin: 2.5rem 0;
+    }
+    .calculator-card h3 {
+      margin-top: 0;
+      color: #1E3A8A;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+      color: #1E293B;
+    }
+    .form-group select {
+      width: 100%;
+      padding: 0.65rem 0.85rem;
+      border: 1px solid #CBD5E1;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      background: #FFF;
+      outline: none;
+    }
+    .calc-btn {
+      background-color: var(--primary);
+      color: #FFF;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      width: 100%;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+    .calc-btn:hover {
+      background-color: var(--primary-hover);
+    }
+    .calc-result {
+      margin-top: 1.25rem;
+      padding: 1rem;
+      background: #FFFFFF;
+      border: 1px solid #93C5FD;
+      border-radius: var(--radius-md);
+      display: none;
+    }
+
+    /* Sidebar */
+    aside.sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .widget {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .widget-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .popular-posts {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .post-mini {
+      display: flex;
+      gap: 0.85rem;
+      align-items: center;
+    }
+    .post-mini-num {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #CBD5E1;
+      width: 28px;
+      text-align: center;
+    }
+    .post-mini-info h4 {
+      font-size: 0.9rem;
+      line-height: 1.3;
+      margin-bottom: 0.2rem;
+    }
+    .post-mini-info h4 a {
+      color: #1E293B;
+    }
+    .post-mini-info h4 a:hover {
+      color: var(--primary);
+    }
+    .post-mini-meta {
+      font-size: 0.775rem;
+      color: var(--text-muted);
+    }
+
+    .related-section {
+      margin-top: 3rem;
+    }
+    .related-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      color: #0F172A;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card-post {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-post:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .card-post-header {
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 1rem;
+    }
+    .card-post-body {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .card-post-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .card-post-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      line-height: 1.35;
+    }
+    .card-post-title a {
+      color: #0F172A;
+    }
+    .card-post-title a:hover {
+      color: var(--primary);
+    }
+    .card-post-excerpt {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      flex-grow: 1;
+    }
+
+    footer {
+      background-color: #0F172A;
+      color: #94A3B8;
+      padding: 3rem 0 1.5rem 0;
+      margin-top: 4rem;
+      border-top: 4px solid var(--primary);
+    }
+    .footer-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2.5rem;
+    }
+    .footer-col h4 {
+      color: #F8FAFC;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .footer-links a {
+      color: #94A3B8;
+      font-size: 0.9rem;
+    }
+    .footer-links a:hover {
+      color: #FFF;
+    }
+    .footer-bottom {
+      max-width: 1240px;
+      margin: 2.5rem auto 0 auto;
+      padding: 1.5rem 1.5rem 0 1.5rem;
+      border-top: 1px solid #1E293B;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #1E293B;
+      color: #FFF;
+      padding: 0.85rem 1.25rem;
+      border-radius: var(--radius-md);
+      border-left: 4px solid var(--primary);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s ease;
+      z-index: 1000;
+      font-size: 0.9rem;
+    }
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div class="progress-container" aria-hidden="true">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    ⚙️ <span>Ferretería Ukra Blog Técnico:</span> Todo el conocimiento en ferretería, electricidad SEC, construcción y herramientas. <a href="#articulos" style="color:#F59E0B; text-decoration:underline; font-weight:600; margin-left:6px;">Explorar Artículos &rarr;</a>
+  </div>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Ir a Inicio de Ferretería Ukra Blog">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.4-2.4c.4-.4.4-1 0-1.3z"/>
+        </svg>
+        Ferretería Ukra <span class="badge">Blog</span>
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="#articulos">Guías Técnicas</a></li>
+          <li><a href="#calculadora">Calculadora</a></li>
+        </ul>
+      </nav>
+
+      <div class="search-widget-nav">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#CBD5E1" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" id="searchInput" placeholder="Buscar guía o artículo..." aria-label="Buscar artículos en el blog">
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="index.html">Inicio</a>
+      <span class="separator">/</span>
+      <span aria-current="page">Portal de Contenidos Técnicos</span>
+    </nav>
+
+    <div class="layout-grid">
+      <main>
+        <!-- Calculator Widget -->
+        <div class="calculator-card" id="calculadora">
+          <h3>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            Asistente de Recomendación de Broca y Herramienta
+          </h3>
+          
+          <div class="form-group">
+            <label for="calcMaterial">Material a trabajar:</label>
+            <select id="calcMaterial">
+              <option value="madera">Madera / MDF / Melamina</option>
+              <option value="ladrillo">Ladrillo Hueco / Mampostería</option>
+              <option value="metal">Acero / Perfiles Metalcon</option>
+              <option value="hormigon">Hormigón Armado / Radier</option>
+            </select>
+          </div>
+
+          <button class="calc-btn" onclick="calcularRecomendacion()">Generar Diagnóstico Técnico</button>
+
+          <div class="calc-result" id="calcResult">
+            <h4 style="color:#1E3A8A; font-size:1.1rem; margin-bottom:0.5rem;" id="resTitulo">Diagnóstico Recomendado:</h4>
+            <p id="resTexto" style="font-size:0.95rem; color:#334155; margin:0;"></p>
+          </div>
+        </div>
+
+        <!-- Articles Section Grid -->
+        <section class="related-section" id="articulos">
+          <h2 class="related-title">Catálogo Completo de Guías y Artículos Técnicos (25)</h2>
+          <div class="related-grid">
+
+            <article class="card-post">
+              <div class="card-post-header" style="background:#0057e7; color:#FFF;">
+                ⚡ Electricidad SEC
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Norma NCh Elec 4/2003</div>
+                <h4 class="card-post-title"><a href="blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica.html">Cómo Identificar Cables por Código de Colores en Chile</a></h4>
+                <p class="card-post-excerpt">Aprende a diferenciar fase (marrón), neutro (azul claro) y tierra (verde/amarillo) según la norma de la SEC en Chile.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">6 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#0F172A; color:#FFF;">
+                🏠 Techumbres
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Cálculo de Cubiertas</div>
+                <h4 class="card-post-title"><a href="blog/como-calcular-planchas-de-zinc-por-m2-de-manera-facil.html">Cómo Calcular Planchas de Zinc por m² de Manera Fácil</a></h4>
+                <p class="card-post-excerpt">Aprende a calcular el área útil real descontando los solapes laterales y longitudinales para no comprar material de menos.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">5 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#D9381E; color:#FFF;">
+                👨‍🏭 Soldadura & EPP
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Protección Visual</div>
+                <h4 class="card-post-title"><a href="blog/mejor-mascara-de-soldar.html">Mejor Máscara de Soldar: Ranking Técnico 2026</a></h4>
+                <p class="card-post-excerpt">Comparativa de 10 caretas de soldar fotosensibles y pasivas. Análisis de 4 sensores, velocidad de reacción y clase óptica EN 379.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">7 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#c0392b; color:#FFF;">
+                🛠️ Mantenimiento Techos
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Reparación de Filtraciones</div>
+                <h4 class="card-post-title"><a href="blog/como-reparar-gotera-en-techo-de-zinc-guia-paso-a-paso.html">Cómo Reparar una Gotera en Techo de Zinc Paso a Paso</a></h4>
+                <p class="card-post-excerpt">Diagnóstico de filtraciones en fijaciones, traslapes y oxidación. Aplicación de selladores de poliuretano y masilla en frío.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">6 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#1E293B; color:#FFF;">
+                🏗️ Construcción en Seco
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Perfiles y Drywall</div>
+                <h4 class="card-post-title"><a href="blog/guia-completa-como-calcular-materiales-para-un-tabique-de-metalcon.html">Cómo Calcular Materiales para un Tabique de Metalcon</a></h4>
+                <p class="card-post-excerpt">Fórmulas exactas para calcular soleras (U), montantes (C), placas de yeso cartón simple o doble cara, tornillos TN25 y aislación.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">6 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#1A1A2E; color:#FFF;">
+                ⚡ Electricidad SEC
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Respaldo de Energía</div>
+                <h4 class="card-post-title"><a href="blog/guia-completa-para-la-instalacion-de-tablero-de-transferencia-automatica-ats.html">Instalación de Tablero de Transferencia Automática ATS</a></h4>
+                <p class="card-post-excerpt">Dimensionamiento por pico de arranque de motores, interbloqueo mecánico, sistema a tierra TN-S y norma NCh Elec 4/2003.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">8 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#27ae60; color:#FFF;">
+                ❄️ Aislación Térmica
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Normativa OGUC</div>
+                <h4 class="card-post-title"><a href="blog/aislapol-plumavit-en-cielo-raso-la-solucion-ideal-para-tu-hogar.html">Aislapol (Plumavit) en Cielo Raso: Guía Técnica</a></h4>
+                <p class="card-post-excerpt">Cálculo de espesores por zonas climáticas de Chile (Zonas 1 a 7), R térmico mínimo exigido, barreras de vapor y costos.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">6 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#0057e7; color:#FFF;">
+                🚰 Hidráulica & Gasfitería
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Bombas e Hidropacks</div>
+                <h4 class="card-post-title"><a href="blog/que-hacer-si-la-bomba-de-agua-no-corta-guia-completa-para-solucionar-problemas.html">Bomba de Agua No Corta: Diagnóstico y Solución</a></h4>
+                <p class="card-post-excerpt">Las 5 causas reales por las que una bomba no apaga sola: calibración de presostato, vejiga de hidropack y válvulas check.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">7 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#B82A13; color:#FFF;">
+                👨‍🏭 Soldadura SMAW
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Norma AWS A5.1</div>
+                <h4 class="card-post-title"><a href="blog/tipos-de-electrodos-comparativa-entre-6011-6013-y-7018.html">Electrodos 6011 vs 6013 vs 7018: Guía y Comparativa</a></h4>
+                <p class="card-post-excerpt">Descomposición del código AWS A5.1, tabla de amperajes por diámetro, revestimiento celulósico, rutilo y bajo hidrógeno.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">7 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#F59E0B; color:#FFF;">
+                🪚 Carpintería & Pisos
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Pisos Laminados HDF</div>
+                <h4 class="card-post-title"><a href="blog/guia-completa-como-cortar-piso-flotante-sin-astillar.html">Cómo Cortar Piso Flotante Sin Astillar la Melamina</a></h4>
+                <p class="card-post-excerpt">La regla de oro para cortar HDF sin levantar la melamina decorativa usando cutter, sierra caladora o sierra circular.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">6 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#1E293B; color:#FFF;">
+                🔌 Electricidad SEC
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Medición Domiciliaria</div>
+                <h4 class="card-post-title"><a href="blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica.html">Cómo Identificar Fase y Neutro en un Enchufe</a></h4>
+                <p class="card-post-excerpt">4 métodos seguros con buscapolo, multímetro digital y colores según NCh Elec 4/2003 para prevenir descargas a tierra.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">6 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#922b21; color:#FFF;">
+                🥽 Soldadura & EPP
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Calibración Caretas</div>
+                <h4 class="card-post-title"><a href="blog/como-regular-mascara-fotosensible.html">Cómo Regular Máscara Fotosensible: DIN y Sensibilidad</a></h4>
+                <p class="card-post-excerpt">Configuración de perillas de sombra DIN según el proceso de soldadura (TIG, MIG, SMAW), sensibilidad y tiempo de retardo.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">6 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#334155; color:#FFF;">
+                🪛 Herramientas Manuales
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Tornillería y Puntas</div>
+                <h4 class="card-post-title"><a href="blog/guia-completa-sobre-tipos-de-destornilladores-y-sus-puntas.html">Tipos de Destornilladores y sus Puntas</a></h4>
+                <p class="card-post-excerpt">Aprende a diferenciar Phillips (PH), Pozidriv (PZ), Torx, Allen y Robertson. Prevención de barrido y prevención del cam-out.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">6 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#b82a13; color:#FFF;">
+                ⚙️ Reparación Electrodomésticos
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Motores Universales</div>
+                <h4 class="card-post-title"><a href="blog/como-arreglar-una-licuadora-que-huele-a-quemado-soluciones-practicas.html">Cómo Arreglar una Licuadora que Huele a Quemado</a></h4>
+                <p class="card-post-excerpt">Diagnóstico electromecánico con multímetro, escobillas de carbón, rodamiento 608ZZ y sustitución de fusibles térmicos.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">7 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#2C3036; color:#FFF;">
+                🏠 Carpintería Interiores
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Zócalos e Ingletes</div>
+                <h4 class="card-post-title"><a href="blog/guia-completa-para-instalar-guardapolvos-de-madera-o-mdf.html">Guía Completa para Instalar Guardapolvos de Madera o MDF</a></h4>
+                <p class="card-post-excerpt">MDF estándar vs hidrófugo verde, cortes a 45° con ingletadora, fijación mecánica en concreto y drywall, y juntas de expansión.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">7 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#1E293B; color:#FFF;">
+                📺 Fijaciones y Soportes
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Anclajes Especiales</div>
+                <h4 class="card-post-title"><a href="blog/como-colgar-una-pantalla-tv-en-muro-de-ladrillo-hueco.html">Cómo Colgar Pantalla TV en Muro de Ladrillo Hueco</a></h4>
+                <p class="card-post-excerpt">Tipos de anclajes para ladrillo cerámico (Fischer SX, expansivos metálicos y resina química), estándares VESA y prevención de caídas.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">6 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#10B981; color:#FFF;">
+                🧱 Construcción & Hormigón
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Obra Gruesa</div>
+                <h4 class="card-post-title"><a href="blog/guia-para-hacer-un-radier-armado-con-malla-acma-en-chile.html">Guía para Hacer un Radier Armado con Malla Acma</a></h4>
+                <p class="card-post-excerpt">Dosificación de hormigón H-20 según NCh 2361, tipos de malla Acma (Q188, Q257), recubrimiento con sillas plásticas y curado.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">8 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#F59E0B; color:#FFF;">
+                ☕ Electrodomésticos
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Análisis de Materiales</div>
+                <h4 class="card-post-title"><a href="blog/vidrio-plastico-o-acero-cual-hervidor-es-mejor-para-ti.html">Vidrio, Plástico o Acero: ¿Cuál Hervidor Eléctrico es Mejor para Ti?</a></h4>
+                <p class="card-post-excerpt">Análisis técnico de hervidores eléctricos: vidrio borosilicato, acero AISI 304 y plástico PP libre de BPA. Rendimiento, sarro y costos.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">7 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#D9381E; color:#FFF;">
+                ⚙️ Herramientas Eléctricas
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Abrasivos e Ingeniería EN 12413</div>
+                <h4 class="card-post-title"><a href="blog/guia-completa-sobre-tipos-de-discos-para-esmeril-angular.html">Guía Completa sobre Tipos de Discos para Esmeril Angular</a></h4>
+                <p class="card-post-excerpt">Aprende a descifrar códigos A 60 T BF, velocidad periférica máxima a 80 m/s, discos de corte, desbaste, Flap y diamantados.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">8 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#0057e7; color:#FFF;">
+                🚰 Gasfitería & Hidráulica
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Manual RIDAA e Inspección</div>
+                <h4 class="card-post-title"><a href="blog/herramientas-basicas-de-gasfiteria-todo-lo-que-necesitas-saber.html">Herramientas Básicas de Gasfitería: Todo lo que Necesitas Saber</a></h4>
+                <p class="card-post-excerpt">Equipamiento para redes de Cobre, PPR, PVC y PEX. Termofusoras, soldadura 95/5 sin plomo, Stillson y pruebas hidrostáticas.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">8 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#922b21; color:#FFF;">
+                🔋 Soldadura & EPP
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Electrónica de Caretas</div>
+                <h4 class="card-post-title"><a href="blog/bateria-mascara-de-soldar.html">Batería de Máscara de Soldar: Diagnóstico, Modelos y Reemplazo</a></h4>
+                <p class="card-post-excerpt">Aprende a diagnosticar fallas de parpadeo en filtros LCD, baterías de litio CR2032/CR2450, voltajes mínimos y reemplazo paso a paso.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">7 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#c0392b; color:#FFF;">
+                🧱 Albañilería & Fachadas
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Química de Materiales</div>
+                <h4 class="card-post-title"><a href="blog/como-limpiar-ladrillo-visto-con-acido-muriatico-facilmente.html">Cómo Limpiar Ladrillo Visto con Ácido Muriático Fácilmente</a></h4>
+                <p class="card-post-excerpt">Proporciones de dilución (1:10), regla de oro 'Ácido sobre Agua', saturación previa para evitar manchas amarillas y neutralización.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">7 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#0057e7; color:#FFF;">
+                🚰 Gasfitería & Hidráulica
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Hermetizado Roscado NPT/BSP</div>
+                <h4 class="card-post-title"><a href="blog/selladores-de-rosca-teflon-vs-estopa-cual-elegir.html">Selladores de Rosca: Teflón PTFE vs. Estopa de Lino ¿Cuál Elegir?</a></h4>
+                <p class="card-post-excerpt">Comparativa técnica: tolerancia al retroceso angular, hinchamiento higroscópico, teflón de alta densidad para gas y selladores anaeróbicos.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">7 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#10B981; color:#FFF;">
+                🧱 Albañilería & Estructuras
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Materiales NCh 169 y OGUC</div>
+                <h4 class="card-post-title"><a href="blog/descubre-los-tipos-de-ladrillos-fiscal-princesa-y-hormigon-celular.html">Tipos de Ladrillos: Fiscal, Princesa y Hormigón Celular HCA</a></h4>
+                <p class="card-post-excerpt">Comparativa de ladrillo Fiscal artesanal, cerámico Princesa extruido y bloques de Hormigón Celular Autoclavado (HCA). Resistencia y termicidad.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">8 min lectura</span>
+              </div>
+            </article>
+            <article class="card-post">
+              <div class="card-post-header" style="background:#334155; color:#FFF;">
+                🔧 Herramientas Manuales
+              </div>
+              <div class="card-post-body">
+                <div class="card-post-tag">Mecánica e ISO 2936</div>
+                <h4 class="card-post-title"><a href="blog/llaves-allen-y-torx-guia-de-medidas.html">Llaves Allen y Torx: Guía de Medidas Métricas y SAE</a></h4>
+                <p class="card-post-excerpt">Dimensiones en milímetros y pulgadas SAE para llaves Allen, Torx T6-T50, Torx de seguridad con hueco central y E-Torx hembra.</p>
+                <span style="font-size:0.8rem; color:var(--text-muted);">8 min lectura</span>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="widget">
+          <h3 class="widget-title">🔥 Artículos Destacados</h3>
+          <div class="popular-posts">
+
+            <div class="post-mini">
+              <span class="post-mini-num">01</span>
+              <div class="post-mini-info">
+                <h4><a href="blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica.html">Cómo Identificar Cables por Código de Colores en Chile</a></h4>
+                <div class="post-mini-meta">Electricidad SEC • 6 min lectura</div>
+              </div>
+            </div>
+            <div class="post-mini">
+              <span class="post-mini-num">02</span>
+              <div class="post-mini-info">
+                <h4><a href="blog/como-calcular-planchas-de-zinc-por-m2-de-manera-facil.html">Cómo Calcular Planchas de Zinc por m² de Manera Fácil</a></h4>
+                <div class="post-mini-meta">Techumbres • 5 min lectura</div>
+              </div>
+            </div>
+            <div class="post-mini">
+              <span class="post-mini-num">03</span>
+              <div class="post-mini-info">
+                <h4><a href="blog/mejor-mascara-de-soldar.html">Mejor Máscara de Soldar: Ranking Técnico 2026</a></h4>
+                <div class="post-mini-meta">Soldadura & EPP • 7 min lectura</div>
+              </div>
+            </div>
+            <div class="post-mini">
+              <span class="post-mini-num">04</span>
+              <div class="post-mini-info">
+                <h4><a href="blog/como-reparar-gotera-en-techo-de-zinc-guia-paso-a-paso.html">Cómo Reparar una Gotera en Techo de Zinc Paso a Paso</a></h4>
+                <div class="post-mini-meta">Mantenimiento Techos • 6 min lectura</div>
+              </div>
+            </div>
+            <div class="post-mini">
+              <span class="post-mini-num">05</span>
+              <div class="post-mini-info">
+                <h4><a href="blog/guia-completa-como-calcular-materiales-para-un-tabique-de-metalcon.html">Cómo Calcular Materiales para un Tabique de Metalcon</a></h4>
+                <div class="post-mini-meta">Construcción en Seco • 6 min lectura</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="widget">
+          <h3 class="widget-title">⚙️ Categorías Principales</h3>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; font-size:0.925rem;">
+            <li><a href="blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica.html">⚡ Electricidad y Normas SEC</a></li>
+            <li><a href="blog/llaves-allen-y-torx-guia-de-medidas.html">🔧 Herramientas Manuales e ISO</a></li>
+            <li><a href="blog/descubre-los-tipos-de-ladrillos-fiscal-princesa-y-hormigon-celular.html">🧱 Albañilería y Ladrillos NCh 169</a></li>
+            <li><a href="blog/selladores-de-rosca-teflon-vs-estopa-cual-elegir.html">🚰 Gasfitería e Hermetizado RIDAA</a></li>
+            <li><a href="blog/como-limpiar-ladrillo-visto-con-acido-muriatico-facilmente.html">🧱 Limpieza Química de Fachadas</a></li>
+            <li><a href="blog/bateria-mascara-de-soldar.html">🔋 Electrónica de Caretas y EPP</a></li>
+            <li><a href="blog/guia-completa-sobre-tipos-de-discos-para-esmeril-angular.html">⚙️ Abrasivos e Ingeniería EN 12413</a></li>
+            <li><a href="blog/como-calcular-planchas-de-zinc-por-m2-de-manera-facil.html">🏠 Cubiertas y Techumbres</a></li>
+            <li><a href="blog/guia-completa-como-calcular-materiales-para-un-tabique-de-metalcon.html">🏗️ Construcción en Seco</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>Ferretería Ukra Blog Chile</h4>
+        <p style="font-size:0.875rem;">El portal de información técnica en ingeniería, ferretería, normativas SEC, aislación OGUC y construcción.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Artículos de Electricidad</h4>
+        <ul class="footer-links">
+          <li><a href="blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica.html">Código de Colores de Cables</a></li>
+          <li><a href="blog/guia-completa-para-la-instalacion-de-tablero-de-transferencia-automatica-ats.html">Instalación Tableros ATS</a></li>
+          <li><a href="blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica.html">Fase y Neutro en Enchufes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Construcción y Obras</h4>
+        <ul class="footer-links">
+          <li><a href="blog/guia-completa-como-calcular-materiales-para-un-tabique-de-metalcon.html">Cálculo Tabique Metalcon</a></li>
+          <li><a href="blog/guia-para-hacer-un-radier-armado-con-malla-acma-en-chile.html">Radier Armado Malla Acma</a></li>
+          <li><a href="blog/descubre-los-tipos-de-ladrillos-fiscal-princesa-y-hormigon-celular.html">Tipos de Ladrillos NCh 169</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 Ferretería Ukra Blog Chile. Todos los derechos reservados.</div>
+      <div>Desarrollado con Código Limpio HTML5 sin enlaces rotos</div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">Acción completada con éxito.</div>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+
+    function calcularRecomendacion() {
+      const mat = document.getElementById('calcMaterial').value;
+      const resBox = document.getElementById('calcResult');
+      const resTex = document.getElementById('resTexto');
+
+      if (mat === 'madera') {
+        resTex.innerText = '🛠️ Utiliza broca de 3 puntas o paleta, operando a alta velocidad. Consulta nuestra guía de corte de piso flotante.';
+      } else if (mat === 'ladrillo') {
+        resTex.innerText = '🛠️ Perfora con broca Widia a velocidad moderada sin percusión brusca. Consulta nuestra guía sobre ladrillos Fiscal, Princesa e HCA.';
+      } else if (mat === 'metal') {
+        resTex.innerText = '🛠️ Utiliza broca HSS-G o HSS-Co al 5% con lubricación. Revisa nuestra guía de tipos de discos de esmeril y cálculo de Metalcon.';
+      } else if (mat === 'hormigon') {
+        resTex.innerText = '🛠️ Usa broca con cabeza de carburo para percusión pesada. Revisa nuestra guía técnica de construcción de radieres H-20 con malla Acma.';
+      }
+      resBox.style.display = 'block';
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.innerText = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3000);
+    }
+
+    document.getElementById('searchInput').addEventListener('keyup', function(e) {
+      if (e.key === 'Enter' && e.target.value.length > 2) {
+        showToast('Buscando: ' + e.target.value);
+      }
+    });
+  </script>
+</body>
+</html>

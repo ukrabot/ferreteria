@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Batería de Máscara de Soldar: Tipos, Cambio y Diagnóstico | Guía Técnica 2026</title>
+  <meta name="title" content="Batería de Máscara de Soldar: Tipos, Cambio y Diagnóstico | Guía Técnica 2026">
+  <meta name="description" content="Aprende a diagnosticar y cambiar la batería de tu careta fotosensible (CR2032 y CR2450). Solución a parpadeos del filtro LCD, baja respuesta en TIG y voltaje mínimo de conmutación.">
+  <meta name="keywords" content="bateria mascara de soldar, pila cr2032 cr2450 careta fotosensible, cambiar bateria mascara soldar ubermann, filtro lcd parpadea soldando, ferreteria ukra">
+  <meta name="author" content="Ferretería Ukra Blog - Electrónica y EPP Industrial">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://www.ferreteriaukra.cl/blog/bateria-mascara-de-soldar.html">
+  <meta name="theme-color" content="#D9381E">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Ferretería Ukra Blog - Ferretería y Bricolaje Técnico">
+  <meta property="og:url" content="https://www.ferreteriaukra.cl/blog/bateria-mascara-de-soldar.html">
+  <meta property="og:title" content="Batería de Máscara de Soldar: Diagnóstico, Modelos y Reemplazo">
+  <meta property="og:description" content="¿Tu careta fotosensible parpadea o tarda en oscurecer? Guía técnica para medir voltajes en baterías de litio CR2032/CR2450 y extender la vida útil del filtro LCD.">
+  <meta property="og:locale" content="es_CL">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Batería de Máscara de Soldar Fotosensible">
+  <meta name="twitter:description" content="Manual técnico de reemplazo de pilas en caretas automáticas de soldadura.">
+
+  <!-- Schema.org JSON-LD Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.ferreteriaukra.cl/#website",
+        "url": "https://www.ferreteriaukra.cl/",
+        "name": "Ferretería Ukra Blog",
+        "inLanguage": "es"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.ferreteriaukra.cl/blog/bateria-mascara-de-soldar.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.ferreteriaukra.cl/index.html" },
+          { "@type": "ListItem", "position": 2, "name": "Soldadura y EPP", "item": "https://www.ferreteriaukra.cl/index.html#soldadura" },
+          { "@type": "ListItem", "position": 3, "name": "Batería Máscara de Soldar", "item": "https://www.ferreteriaukra.cl/blog/bateria-mascara-de-soldar.html" }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://www.ferreteriaukra.cl/blog/bateria-mascara-de-soldar.html#article",
+        "isPartOf": { "@id": "https://www.ferreteriaukra.cl/blog/bateria-mascara-de-soldar.html" },
+        "headline": "Batería de máscara de soldar: tipos, diagnóstico de fallas y cómo cambiarla paso a paso",
+        "description": "Análisis electrónico del circuito de alimentación híbrido (fotocélula solar + batería de litio) en caretas fotosensibles y protocolo de sustitución.",
+        "inLanguage": "es",
+        "mainEntityOfPage": "https://www.ferreteriaukra.cl/blog/bateria-mascara-de-soldar.html",
+        "datePublished": "2026-07-19T16:00:00+00:00",
+        "dateModified": "2026-07-19T16:20:00+00:00",
+        "keywords": "bateria mascara de soldar, pila cr2032 cr2450, cambiar bateria careta soldadora, parpadeo filtro lcd soldadura, ferreteria ukra"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Por qué mi máscara fotosensible parpadea si la celda solar recibe luz?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La celda solar no energiza la conmutación rápida de 1/25.000 s: esa corriente instantánea la entrega la batería interna de litio (CR2032 / CR2450). La celdilla solar solo recarga el sistema y mantiene el estado claro. Si la batería de litio baja de 2,4 V, el filtro parpadea porque no puede mantener el voltaje sobre los cristales líquidos."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuáles son los modelos de pila más comunes en caretas de soldar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Los modelos estándar son las pilas de botón de Litio de 3 voltios CR2032 (capacidad de 220 mAh) y CR2450 (capacidad de 620 mAh). Las caretas profesionales de alta gama suelen utilizar dos pilas CR2450 para garantizar mayor autonomía en jornadas extensas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Se puede cambiar la batería si el cartucho LCD no tiene portapilas visible?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí, en la mayoría de los casos. Las caretas económicas suelen tener la batería de litio soldada internamente con patillas al circuito impreso. Se puede abrir con cuidado la carcasa de plástico abs del casete, desoldar la pila agotada e instalar un portapilas externo CR2032 para recambios futuros."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuál es la vida útil promedio de la batería de una careta de soldar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "En uso continuo profesional dura entre 12 y 24 meses (aprox. 2.000 horas de arco). En almacenamiento sin uso dentro de un maletín oscuro, la pila se descarga lentamente por baja auto-descarga en un período de 2 a 3 años."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Embedded Stylesheet -->
+  <style>
+    :root {
+      --primary: #D9381E;
+      --primary-hover: #B82A13;
+      --secondary: #1E293B;
+      --accent: #F59E0B;
+      --bg-body: #F8FAFC;
+      --bg-card: #FFFFFF;
+      --text-main: #0F172A;
+      --text-muted: #64748B;
+      --border-color: #E2E8F0;
+      --radius-sm: 0.375rem;
+      --radius-md: 0.75rem;
+      --radius-lg: 1rem;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+      --font-stack: Arial, system-ui, -apple-system, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-stack);
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.65;
+      font-size: 1rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: #0057e7;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img, svg {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .progress-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: transparent;
+      z-index: 100;
+    }
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      width: 0%;
+      transition: width 0.1s linear;
+    }
+
+    .top-bar {
+      background-color: #0F172A;
+      color: #94A3B8;
+      font-size: 0.85rem;
+      padding: 0.4rem 1rem;
+      text-align: center;
+      border-bottom: 1px solid #1E293B;
+    }
+    .top-bar span {
+      color: #F8FAFC;
+      font-weight: 600;
+    }
+
+    header {
+      background-color: var(--secondary);
+      color: #FFFFFF;
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      box-shadow: var(--shadow-md);
+    }
+    .header-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 1.5rem;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+    }
+    .brand-logo svg {
+      width: 34px;
+      height: 34px;
+      fill: var(--primary);
+    }
+    .brand-logo span.badge {
+      font-size: 0.65rem;
+      background: var(--primary);
+      color: #FFF;
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    nav a {
+      color: #CBD5E1;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.4rem 0.2rem;
+      border-bottom: 2px solid transparent;
+    }
+    nav a:hover, nav a.active {
+      color: #FFFFFF;
+      text-decoration: none;
+      border-bottom-color: var(--primary);
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .breadcrumbs a {
+      color: var(--text-muted);
+    }
+    .breadcrumbs a:hover {
+      color: var(--primary);
+    }
+    .breadcrumbs span.separator {
+      color: #CBD5E1;
+    }
+
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    @media (min-width: 992px) {
+      .layout-grid {
+        grid-template-columns: 2.5fr 1fr;
+      }
+    }
+
+    article.main-article {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+    }
+
+    .category-pill {
+      display: inline-block;
+      background-color: #FEF2F2;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.3rem 0.8rem;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+      border: 1px solid #FCA5A5;
+    }
+
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.25rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .article-body p {
+      margin-bottom: 1.25rem;
+      color: #334155;
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    .article-body h2 {
+      font-size: 1.55rem;
+      color: #0F172A;
+      margin-top: 2.25rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid #F1F5F9;
+    }
+
+    .article-body h3 {
+      font-size: 1.2rem;
+      color: #1E293B;
+      margin-top: 1.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 1.75rem 0;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+    }
+
+    aside.sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .widget {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .widget-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary);
+    }
+
+    footer {
+      background-color: #0F172A;
+      color: #94A3B8;
+      padding: 3rem 0 1.5rem 0;
+      margin-top: 4rem;
+      border-top: 4px solid var(--primary);
+    }
+    .footer-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2.5rem;
+    }
+    .footer-bottom {
+      max-width: 1240px;
+      margin: 2.5rem auto 0 auto;
+      padding: 1.5rem 1.5rem 0 1.5rem;
+      border-top: 1px solid #1E293B;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+    }
+  </style>
+  <!-- Google AdSense Auto Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7032484018692343" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div class="progress-container" aria-hidden="true">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    🔋 <span>Electrónica de EPP Industrial:</span> Guía de diagnóstico y reemplazo de baterías de litio en filtros fotosensibles LCD. <a href="../index.html" style="color:#F59E0B; text-decoration:underline; font-weight:600; margin-left:6px;">&larr; Volver al Inicio del Blog</a>
+  </div>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="header-inner">
+      <a href="../index.html" class="brand-logo" aria-label="Ir a Inicio de Ferretería Ukra Blog">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.4-2.4c.4-.4.4-1 0-1.3z"/>
+        </svg>
+        Ferretería Ukra <span class="badge">Soldadura</span>
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="mejor-mascara-de-soldar.html">Ranking Caretas</a></li>
+          <li><a href="como-regular-mascara-fotosensible.html">Calibración DIN</a></li>
+          <li><a href="#" class="active">Batería Careta</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <div class="container">
+    
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../index.html">Inicio</a>
+      <span class="separator">/</span>
+      <a href="../index.html#soldadura">Soldadura y EPP</a>
+      <span class="separator">/</span>
+      <span aria-current="page">Batería Máscara de Soldar</span>
+    </nav>
+
+    <div class="layout-grid">
+      
+      <!-- Main Content Area -->
+      <main>
+        <article class="main-article" itemscope itemtype="https://schema.org/BlogPosting">
+          
+          <span class="category-pill">Mantenimiento de EPP &amp; Baterías de Litio</span>
+
+          <div class="article-meta">
+            <div><strong>Por Equipo Técnico Ferretería Ukra</strong> | Diagnóstico de Circuitos LCD Fotosensibles</div>
+            <div><span>📅 19 Jul, 2026</span></div>
+            <div><span>⏱️ 7 min de lectura</span></div>
+            <div style="margin-left:auto;">
+              <a href="../index.html" style="font-weight:600; color:var(--primary);">&larr; Volver al inicio</a>
+            </div>
+          </div>
+
+          <!-- Article Body -->
+          <div class="article-body" itemprop="articleBody">
+            
+            <h1 style="font-family:Arial,sans-serif;font-size:1.6em;color:#1a1a1a;line-height:1.3;margin:0 0 16px 0;">Batería de máscara de soldar: tipos, diagnóstico de fallas y cómo cambiarla paso a paso</h1>
+
+            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+              Estás en medio de un cordón de soldadura crítico, cebas el arco y repentinamente la pantalla fotosensible empieza a parpadear, dejando pasar destellos de luz directa a tus ojos.
+            </p>
+
+            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+              Muchos soldadores asumen erróneamente que la máscara se ha arruinado o que el panel solar se rompió. En el 90 % de los casos, el responsable es la <strong>batería de litio agotada</strong> dentro del cartucho LCD. Entender cómo funciona el sistema de alimentación híbrido de tu careta te permitirá reparar la falla en 10 minutos por un costo inferior a los <strong>$3.000 CLP</strong>.
+            </p>
+
+            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">1. ¿Cómo se alimenta electrónicamente una careta fotosensible?</h2>
+
+            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+              El casete de oscurecimiento automático (ADF - <em>Auto-Darkening Filter</em>) opera bajo un sistema de energía dual compuesto por dos fuentes complementarias:
+            </p>
+
+            <ul style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;padding-left:20px;">
+              <li><strong>Fotocélula Solar Exterior:</strong> Absorbe la luz ultravioleta e infrarroja emitida por el propio arco de soldadura durante la ebullición. Se encarga de alimentar el cristal líquido mientras el arco está encendido y mantiene la carga de reposo.</li>
+              <li><strong>Batería de Litio Botón (CR2032 / CR2450):</strong> Entrega la pulso de corriente de alta respuesta necesaria para la <strong>conmutación ultrarrápida (1/25.000 de segundo)</strong> cuando los sensores fotoeléctricos detectan el primer pico de luz del cebado.</li>
+            </ul>
+
+            <div style="border-left:4px solid #e63946;background:#fff5f5;padding:14px 16px;margin:20px 0;font-family:Arial,sans-serif;font-size:0.95em;color:#1a1a1a;">
+              <strong>⚠️ Mito frecuente:</strong> "Si la careta tiene panel solar, no usa pilas". Esto es falso. La celdilla solar no reacciona a tiempo suficiente para dar la partida de oscurecimiento desde estado claro (DIN 3-4). Sin la batería de litio de 3V para excitar las moléculas de cristal líquido, tus retinas recibirán el destello inicial antes de que la celda reaccione.
+            </div>
+
+            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">2. Modelos de baterías más comunes en el mercado chileno</h2>
+
+            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+              Las caretas fotosensibles utilizan celdas botón primarias de Litio-Dióxido de Manganeso (Li/MnO₂) de 3 Volts nominales:
+            </p>
+
+            <div class="table-wrapper">
+              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em;font-family:Arial,sans-serif;">
+                <thead>
+                  <tr style="background:#f0f4f8;">
+                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Modelo Batería</th>
+                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Dimensiones (Diámetro × Espesor)</th>
+                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Capacidad Nominal</th>
+                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Gama de Caretas Típica</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="border:1px solid #ccc;padding:10px;"><strong>CR2032</strong></td>
+                    <td style="border:1px solid #ccc;padding:10px;">20 mm × 3,2 mm</td>
+                    <td style="border:1px solid #ccc;padding:10px;">220 mAh</td>
+                    <td style="border:1px solid #ccc;padding:10px;">Caretas nivel hobbista / semi-pro (2 o 3 sensores)</td>
+                  </tr>
+                  <tr style="background:#fafafa;">
+                    <td style="border:1px solid #ccc;padding:10px;"><strong>CR2450</strong></td>
+                    <td style="border:1px solid #ccc;padding:10px;">24 mm × 5,0 mm</td>
+                    <td style="border:1px solid #ccc;padding:10px;">620 mAh (Triplica vida útil)</td>
+                    <td style="border:1px solid #ccc;padding:10px;">Caretas industriales profesionales (4 sensores)</td>
+                  </tr>
+                  <tr>
+                    <td style="border:1px solid #ccc;padding:10px;"><strong>CR2025 / CR2016</strong></td>
+                    <td style="border:1px solid #ccc;padding:10px;">20 mm × 2,5 mm / 1,6 mm</td>
+                    <td style="border:1px solid #ccc;padding:10px;">90 - 160 mAh</td>
+                    <td style="border:1px solid #ccc;padding:10px;">Modelos compactos o visores de perfil bajo</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">3. Síntomas inequívocos de batería agotada o defectuosa</h2>
+
+            <ul style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;padding-left:20px;">
+              <li><strong>Indicador LED de batería baja (Low Bat):</strong> En casetes de gama media-alta, una luz LED roja o naranja parpadea en el panel interior para advertir que el voltaje ha descendido de 2,4 V.</li>
+              <li><strong>Parpadeo o intermitencia durante la soldadura (Flicker):</strong> El cristal líquido pasa repentinamente de oscuro a claro durante el cordón de soldadura, exponiendo la vista.</li>
+              <li><strong>Funciona bien al sol pero falla en taller:</strong> Si la máscara oscurece expuesta a la luz solar abierta pero no responde al arco TIG en interiores, la batería de litio está sin carga y depende exclusivamente del panel solar.</li>
+              <li><strong>Encandilamiento inicial (Flash):</strong> Retardo perceptible de varias milésimas de segundo al encender el arco.</li>
+            </ul>
+
+            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">4. Paso a paso para reemplazar la batería</h2>
+
+            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+              Sigue estas instrucciones para sustituir la pila sin dañar los componentes optoelectrónicos:
+            </p>
+
+            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+              <strong>Paso 1: Extrae el casete LCD de la careta plástica.</strong> Libera las pestañas o perillas de retención laterales que fijan el módulo fotovoltaico a la máscara.
+            </p>
+
+            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+              <strong>Paso 2: Localiza la bahía o bandeja de batería.</strong> En los modelos modernos con batería reemplazable, verás una pequeña tapa deslizable o una gaveta circular extraíble identificada como <em>Bat / CR2032</em>.
+            </p>
+
+            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+              <strong>Paso 3: Mide la batería usada con multímetro.</strong> Configura tu tester en corriente continua (VDC 20V). Una pila CR2032 nueva debe marcar entre <strong>3,2 V y 3,3 V</strong>. Si tu lectura marca menos de <strong>2,6 V</strong>, la pila debe desecharse.
+            </p>
+
+            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+              <strong>Paso 4: Inserta la nueva pila respetando la polaridad.</strong> El lado ancho marcado con la cara positiva (+ y el grabado del modelo) debe quedar orientado hacia arriba según la serigrafía del cartucho.
+            </p>
+
+            <div style="border-left:4px solid #0057e7;background:#f5f8ff;padding:14px 16px;margin:20px 0;font-family:Arial,sans-serif;font-size:0.95em;color:#1a1a1a;">
+              <strong>🛠️ Solución para caretas con batería sellada de fábrica:</strong> Si tu casete no tiene tapa externa de batería, la pila interna está soldada a la placa electrónica. Puedes abrir suavemente la carcasa de sellado con un destornillador fino, desoldar la pila agotada e instalar un portapilas externo adhesivo por $1.500 CLP para facilitar recambios futuros.
+            </div>
+
+            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">5. Mantenimiento preventivo y hábitos para prolongar la pila</h2>
+
+            <ul style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;padding-left:20px;">
+              <li><strong>Guardar en ambiente iluminado pero sin sol directo:</strong> Almacenar la careta en oscuridad total durante meses activa el circuito en estado de reposo profundo, descargando lentamente la pila de litio. Dejarla en un estante con luz ambiental suave mantiene la fotocélula equilibrada.</li>
+              <li><strong>Verificar el interruptor en modo WELD:</strong> Si dejas la careta en modo <em>Grind</em> (Esmerilar), los sensores permanecen en consumo continuo desactivado, desgastando la batería innecesariamente.</li>
+              <li><strong>Limpiar las micas protectoras externas:</strong> Una mica sucia o llena de salpicaduras reduce un 30 % la transmisión de luz hacia los fototransistores, obligando al circuito a consumir más energía para detectar el arco.</li>
+            </ul>
+
+            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">Preguntas frecuentes sobre baterías de caretas fotosensibles</h2>
+
+            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Por qué mi máscara fotosensible parpadea si la celda solar recibe luz?</h3>
+
+            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+              La celda solar no energiza la conmutación rápida de 1/25.000 s: esa corriente instantánea la entrega la batería interna de litio (CR2032 / CR2450). La celdilla solar solo recarga el sistema y mantiene el estado claro. Si la batería de litio baja de 2,4 V, el filtro parpadea porque no puede mantener el voltaje sobre los cristales líquidos.
+            </p>
+
+            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Cuáles son los modelos de pila más comunes en caretas de soldar?</h3>
+
+            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+              Los modelos estándar son las pilas de botón de Litio de 3 voltios CR2032 (capacidad de 220 mAh) y CR2450 (capacidad de 620 mAh). Las caretas profesionales de alta gama suelen utilizar dos pilas CR2450 para garantizar mayor autonomía en jornadas extensas.
+            </p>
+
+            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Se puede cambiar la batería si el cartucho LCD no tiene portapilas visible?</h3>
+
+            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+              Sí, en la mayoría de los casos. Las caretas económicas suelen tener la batería de litio soldada internamente con patillas al circuito impreso. Se puede abrir con cuidado la carcasa de plástico abs del casete, desoldar la pila agotada e instalar un portapilas externo CR2032 para recambios futuros.
+            </p>
+
+            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Cuál es la vida útil promedio de la batería de una careta de soldar?</h3>
+
+            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+              En uso continuo profesional dura entre 12 y 24 meses (aprox. 2.000 horas de arco). En almacenamiento sin uso dentro de un maletín oscuro, la pila se descarga lentamente por baja auto-descarga en un período de 2 a 3 años.
+            </p>
+
+            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">Ver también en Ferretería Ukra Blog</h2>
+
+            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+              <a href="como-regular-mascara-fotosensible.html" style="color:#0057e7;text-decoration:underline;">Cómo regular máscara fotosensible: DIN, sensibilidad y retardo</a> |
+              <a href="mejor-mascara-de-soldar.html" style="color:#0057e7;text-decoration:underline;">Mejor máscara de soldar — Ranking técnico</a> |
+              <a href="tipos-de-electrodos-comparativa-entre-6011-6013-y-7018.html" style="color:#0057e7;text-decoration:underline;">Electrodos 6011 vs 6013 vs 7018</a>
+            </p>
+
+          </div>
+        </article>
+      </main>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="widget">
+          <h3 class="widget-title">🥽 Navegación Soldadura y EPP</h3>
+          <p style="font-size:0.9rem; color:#475569; margin-bottom:1rem;">Manuales técnicos sobre calibración de caretas, cambio de baterías y consumibles.</p>
+          <a href="../index.html" style="display:block; text-align:center; padding:0.65rem; background:var(--primary); color:#FFF; font-weight:700; border-radius:var(--radius-sm); margin-bottom:0.75rem;">
+            &larr; Volver al Inicio (Ferretería Ukra)
+          </a>
+          <a href="como-regular-mascara-fotosensible.html" style="display:block; text-align:center; padding:0.65rem; background:#922b21; color:#FFF; font-weight:700; border-radius:var(--radius-sm); margin-bottom:0.75rem;">
+            🥽 Calibración DIN Careta
+          </a>
+          <a href="mejor-mascara-de-soldar.html" style="display:block; text-align:center; padding:0.65rem; background:#1E293B; color:#FFF; font-weight:700; border-radius:var(--radius-sm);">
+            👨‍🏭 Ranking Máscaras de Soldar
+          </a>
+        </div>
+
+        <div class="widget">
+          <h3 class="widget-title">🔋 Chequeo de Voltajes</h3>
+          <ul style="list-style:none; font-size:0.875rem; color:#334155; display:flex; flex-direction:column; gap:0.5rem;">
+            <li>🔋 <strong>Pila Nueva 3V:</strong> 3.2 V - 3.3 VDC.</li>
+            <li>⚠️ <strong>Voltaje Crítico:</strong> &lt; 2.6 VDC.</li>
+            <li>⚡ <strong>Pila Estándar:</strong> CR2032 / CR2450.</li>
+            <li>⏱️ <strong>Conmutación:</strong> 1/25.000 seg.</li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <h4 style="color:#FFF;">Ferretería Ukra Chile</h4>
+        <p style="font-size:0.875rem;">Portal técnico especializado en electrónica de EPP, caretas fotosensibles, soldadura por arco y mantenimiento industrial.</p>
+      </div>
+      <div>
+        <h4 style="color:#FFF;">Enlaces Rápidos</h4>
+        <p><a href="../index.html" style="color:#94A3B8;">&rarr; Inicio Ferretería Ukra Blog</a></p>
+        <p><a href="como-regular-mascara-fotosensible.html" style="color:#94A3B8;">&rarr; Calibración Máscaras</a></p>
+        <p><a href="mejor-mascara-de-soldar.html" style="color:#94A3B8;">&rarr; Ranking Máscaras de Soldar</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Ferretería Ukra Blog Chile. Normas de Seguridad Ocular y EPP.</div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+  </script>
+</body>
+</html>
