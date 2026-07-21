@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Cómo Calcular el Consumo de una Estufa a Gas | Guía Técnica Chile 2026</title>
+  <meta name="title" content="Cómo Calcular el Consumo de una Estufa a Gas | Guía Técnica Chile 2026">
+  <meta name="description" content="Aprende a calcular el consumo de una estufa a gas licuado (GLP) o gas natural (GN) en g/h, kW y costo en CLP/hora. Autonomía de cilindros de 15 kg y normas SEC.">
+  <meta name="keywords" content="como calcular el consumo de una estufa a gas, consumo estufa gas licuado g/h, consumo balon de gas 15 kg chile, cuanto dura balon de gas 15 kg estufa, calculo kw a gramos de gas, precio gas licuado chile, sello SEC estufas gas, ferreteria ukra">
+  <meta name="author" content="Ferretería Ukra Blog - Climatización y Gasfitería">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://www.ferreteriaukra.cl/blog/como-calcular-el-consumo-de-una-estufa-a-gas.html">
+  <meta name="theme-color" content="#D9381E">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Ferretería Ukra Blog - Ferretería y Bricolaje Técnico">
+  <meta property="og:url" content="https://www.ferreteriaukra.cl/blog/como-calcular-el-consumo-de-una-estufa-a-gas.html">
+  <meta property="og:title" content="Cómo Calcular el Consumo de una Estufa a Gas | Guía Técnica Chile">
+  <meta property="og:description" content="Fórmulas paso a paso para calcular el gasto exacto de tu estufa en g/h, duración de balones de 15 kg y costo operativo por hora en pesos chilenos.">
+  <meta property="og:image" content="https://images.pexels.com/photos/8005397/pexels-photo-8005397.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+  <meta property="og:locale" content="es_CL">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cómo Calcular el Consumo de una Estufa a Gas | Guía Chile">
+  <meta name="twitter:description" content="Calcula cuántos gramos/hora gasta tu estufa a gas licuado, duración del cilindro de 15 kg y recomendaciones SEC.">
+  <meta name="twitter:image" content="https://images.pexels.com/photos/8005397/pexels-photo-8005397.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+
+  <!-- Schema.org JSON-LD Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.ferreteriaukra.cl/#website",
+        "url": "https://www.ferreteriaukra.cl/",
+        "name": "Ferretería Ukra Blog",
+        "inLanguage": "es"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.ferreteriaukra.cl/blog/como-calcular-el-consumo-de-una-estufa-a-gas.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.ferreteriaukra.cl/index.html" },
+          { "@type": "ListItem", "position": 2, "name": "Climatización y Gasfitería", "item": "https://www.ferreteriaukra.cl/index.html#climatizacion" },
+          { "@type": "ListItem", "position": 3, "name": "Cómo Calcular el Consumo de una Estufa a Gas", "item": "https://www.ferreteriaukra.cl/blog/como-calcular-el-consumo-de-una-estufa-a-gas.html" }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://www.ferreteriaukra.cl/blog/como-calcular-el-consumo-de-una-estufa-a-gas.html#article",
+        "isPartOf": { "@id": "https://www.ferreteriaukra.cl/blog/como-calcular-el-consumo-de-una-estufa-a-gas.html" },
+        "headline": "Cómo calcular el consumo de una estufa a gas: Guía técnica y fórmulas de gasto en Chile",
+        "description": "Fórmulas matemáticas para determinar el consumo másico (g/h) y volumétrico (m3/h) de estufas catalíticas, infrarrojas y de tiro balanceado con costos actualizados en pesos chilenos (CLP).",
+        "inLanguage": "es",
+        "mainEntityOfPage": "https://www.ferreteriaukra.cl/blog/como-calcular-el-consumo-de-una-estufa-a-gas.html",
+        "datePublished": "2026-07-20T10:00:00+00:00",
+        "dateModified": "2026-07-20T10:00:00+00:00",
+        "image": "https://images.pexels.com/photos/8005397/pexels-photo-8005397.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "keywords": "como calcular consumo estufa a gas, consumo gas licuado g/h, cuanto dura balon 15 kg estufa gas, costo por hora calefaccion gas chile, sello SEC estufa gas, ferreteria ukra"
+      },
+      {
+        "@type": "HowTo",
+        "name": "Cómo calcular el consumo por hora y la autonomía de una estufa a gas",
+        "description": "Pasos matemáticos para convertir la potencia en kW o BTU/h de tu estufa a consumo en gramos por hora (g/h) de GLP y calcular el costo operativo en CLP.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Identificar la potencia en la placa SEC",
+            "text": "Ubica la placa técnica de la Superintendencia de Electricidad y Combustibles (SEC) en la parte posterior de la estufa para obtener la potencia nominal en kW, kcal/h o BTU/h."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Convertir unidades a kW de potencia térmica",
+            "text": "Si la potencia viene dada en BTU/h, divídela por 3.412. Si viene en kcal/h, divídela por 860 para obtener el valor en kilowatts (kW)."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Calcular la tasa de consumo másico en g/h",
+            "text": "Multiplica la potencia en kW por la constante de consumo de GLP (aproximadamente 75 g/h a 80 g/h por kW térmico producido)."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Determinar la autonomía del cilindro de gas",
+            "text": "Divide la capacidad del cilindro en gramos (ej. 15.000 g para un balón de 15 kg) entre la tasa de consumo en g/h para obtener las horas de uso continuo."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Calcular el costo operativo en pesos chilenos (CLP)",
+            "text": "Divide el costo total del cilindro ($ CLP) por las horas totales de autonomía para calcular la tarifa por hora de uso."
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cuántas horas dura un balón de 15 kg en una estufa a gas infrarroja?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Un cilindro de 15 kg de GLP dura aproximadamente 48 a 50 horas encendido al máximo de potencia (4,2 kW / ~310 g/h). Si la usas en nivel medio (2,8 kW / ~205 g/h) dura 73 horas, y en nivel mínimo (1,4 kW / ~100 g/h) alcanza hasta 150 horas de uso continuo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuánto cuesta calentar por hora con una estufa a gas licuado en Chile?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Con un precio promedio del balón de 15 kg de $28.500 CLP ($1.900 CLP/kg), el costo aproximado por hora es: $190 CLP/h en nivel mínimo, $390 CLP/h en nivel medio y $590 CLP/h al nivel máximo de potencia."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Por qué las estufas a gas empañan los vidrios y generan humedad?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La combustión de 1 kg de GLP (propano/butano) produce químicamente cerca de 1,5 kg de vapor de agua. En estufas de ambiente sin tiro al exterior (catalíticas e infrarrojas), este agua queda atrapada en el aire del recinto y se condensa en ventanas y muros fríos."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué es el sistema de seguridad ODS o piloto analizador de atmósfera?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El sensor ODS (Oxygen Depletion Sensor) es un dispositivo exigido por la SEC que corta automáticamente el paso de gas si la concentración de oxígeno en la habitación baja de un 18% (el nivel normal es 21%), evitando la acumulación peligrosa de monóxido de carbono."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuál es la vida útil del regulador y la manguera flexible de gas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Según la normativa SEC en Chile, las mangueras de goma flexible y los reguladores de presión tienen una fecha de caducidad impresa de 5 años. Deben ser reemplazados de inmediato si están vencidos, endurecidos o con fisuras para evitar fugas de alto riesgo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Dónde comprar insumos para instalaciones y gasfitería con certificación SEC?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "En Ferretería Ukra encuentras reguladores aprobados por la SEC, mangueras de gas reforzadas, teflón de alta densidad para redes de gas y selladores anaeróbicos específicos para cañerías roscadas."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Embedded Stylesheet -->
+  <style>
+    :root {
+      --primary: #D9381E;
+      --primary-hover: #B82A13;
+      --secondary: #1E293B;
+      --accent: #F59E0B;
+      --bg-body: #F8FAFC;
+      --bg-card: #FFFFFF;
+      --text-main: #0F172A;
+      --text-muted: #64748B;
+      --border-color: #E2E8F0;
+      --radius-sm: 0.375rem;
+      --radius-md: 0.75rem;
+      --radius-lg: 1rem;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+      --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-stack);
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.65;
+      font-size: 1rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: #0057e7;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img, svg {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .progress-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: transparent;
+      z-index: 100;
+    }
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      width: 0%;
+      transition: width 0.1s linear;
+    }
+
+    .top-bar {
+      background-color: #0F172A;
+      color: #94A3B8;
+      font-size: 0.85rem;
+      padding: 0.4rem 1rem;
+      text-align: center;
+      border-bottom: 1px solid #1E293B;
+    }
+    .top-bar span {
+      color: #F8FAFC;
+      font-weight: 600;
+    }
+
+    header {
+      background-color: var(--secondary);
+      color: #FFFFFF;
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      box-shadow: var(--shadow-md);
+    }
+    .header-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 1.5rem;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+    }
+    .brand-logo svg {
+      width: 34px;
+      height: 34px;
+      fill: var(--primary);
+    }
+    .brand-logo span.badge {
+      font-size: 0.65rem;
+      background: var(--primary);
+      color: #FFF;
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    nav a {
+      color: #CBD5E1;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.4rem 0.2rem;
+      border-bottom: 2px solid transparent;
+    }
+    nav a:hover, nav a.active {
+      color: #FFFFFF;
+      text-decoration: none;
+      border-bottom-color: var(--primary);
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .breadcrumbs a {
+      color: var(--text-muted);
+    }
+    .breadcrumbs a:hover {
+      color: var(--primary);
+    }
+    .breadcrumbs span.separator {
+      color: #CBD5E1;
+    }
+
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    @media (min-width: 992px) {
+      .layout-grid {
+        grid-template-columns: 2.5fr 1fr;
+      }
+    }
+
+    article.main-article {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+    }
+
+    .category-pill {
+      display: inline-block;
+      background-color: #FEF2F2;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.3rem 0.8rem;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+      border: 1px solid #FCA5A5;
+    }
+
+    h1.article-title {
+      font-size: 2.1rem;
+      line-height: 1.3;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.25rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .article-body p {
+      margin-bottom: 1.25rem;
+      color: #334155;
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    .article-body h2 {
+      font-size: 1.55rem;
+      color: #0F172A;
+      margin-top: 2.25rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid #F1F5F9;
+    }
+
+    .article-body h3 {
+      font-size: 1.2rem;
+      color: #1E293B;
+      margin-top: 1.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 1.75rem 0;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+    }
+
+    .formula-box {
+      background: #F1F5F9;
+      border-left: 4px solid var(--primary);
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      font-family: monospace;
+      font-size: 1.02rem;
+      color: #0F172A;
+    }
+
+    aside.sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .widget {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .widget-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary);
+    }
+
+    footer {
+      background-color: #0F172A;
+      color: #94A3B8;
+      padding: 3rem 0 1.5rem 0;
+      margin-top: 4rem;
+      border-top: 4px solid var(--primary);
+    }
+    .footer-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2.5rem;
+    }
+    .footer-bottom {
+      max-width: 1240px;
+      margin: 2.5rem auto 0 auto;
+      padding: 1.5rem 1.5rem 0 1.5rem;
+      border-top: 1px solid #1E293B;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+    }
+  </style>
+
+  <!-- Google AdSense Auto Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7032484018692343" crossorigin="anonymous"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LQF2BQ14K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-8LQF2BQ14K');
+  </script>
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div class="progress-container" aria-hidden="true">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    🔥 <span>Cálculo de Calefacción Domiciliaria:</span> Domina la conversión de kW a g/h de gas licuado y optimiza tu presupuesto en Chile. <a href="../index.html" style="color:#F59E0B; text-decoration:underline; font-weight:600; margin-left:6px;">&larr; Volver al Inicio del Blog</a>
+  </div>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="header-inner">
+      <a href="../index.html" class="brand-logo" aria-label="Ir a Inicio de Ferretería Ukra Blog">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.4-2.4c.4-.4.4-1 0-1.3z"/>
+        </svg>
+        Ferretería Ukra <span class="badge">Gasfitería</span>
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../index.html#guias">Guías Técnicas</a></li>
+          <li><a href="herramientas-basicas-de-gasfiteria-todo-lo-que-necesitas-saber.html">Gasfitería</a></li>
+          <li><a href="#" class="active">Consumo Gas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <div class="container">
+    
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="../index.html">Inicio</a>
+      <span class="separator">/</span>
+      <a href="../index.html#climatizacion">Climatización &amp; Gas</a>
+      <span class="separator">/</span>
+      <span aria-current="page">Cómo Calcular el Consumo de una Estufa a Gas</span>
+    </nav>
+
+    <div class="layout-grid">
+      
+      <!-- Main Content Area -->
+      <main>
+        <article class="main-article" itemscope itemtype="https://schema.org/BlogPosting">
+          
+          <span class="category-pill">Climatización &amp; Eficiencia Energética</span>
+          <h1 class="article-title" itemprop="headline">Cómo Calcular el Consumo de una Estufa a Gas: Guía Técnica y Fórmulas en Chile</h1>
+
+          <div class="article-meta">
+            <div><strong>Por Equipo Técnico Ferretería Ukra</strong> | Especialistas en Climatización y Gasfitería</div>
+            <div><span>📅 20 Jul, 2026</span></div>
+            <div><span>⏱️ 7 min de lectura</span></div>
+            <div style="margin-left:auto;">
+              <a href="../index.html" style="font-weight:600; color:var(--primary);">&larr; Volver al inicio</a>
+            </div>
+          </div>
+
+          <!-- Main Article Body -->
+          <div class="article-body" itemprop="articleBody">
+            
+            <p>Durante la época invernal en Chile, una de las preguntas más recurrentes en hogares y talleres es cuánto gasta realmente una estufa a gas. Para presupuestar el gasto familiar o industrial no basta con saber que un cilindro de 15 kg cuesta cerca de $28.500 CLP; es indispensable calcular la tasa de consumo másico en <strong>gramos por hora (g/h)</strong> o volumétrico en <strong>m³/h</strong> según la potencia térmica nominal en kilowatts (kW).</p>
+
+            <p>Muchas personas asumen erróneamente que encender una estufa catalítica o infrarroja gasta lo mismo sin importar la configuración de paneles quemadores. En este artículo explicamos las fórmulas químicas y termodinámicas fundamentales, desglosamos ejemplos reales de autonomía para balones de 5, 11, 15 y 45 kg, y detallamos los requisitos de ventilación exigidos por la Superintendencia de Electricidad y Combustibles (SEC).</p>
+
+            <figure style="margin:24px auto;text-align:center;max-width:600px;display:block">
+              <img src="https://images.pexels.com/photos/8005397/pexels-photo-8005397.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Llama de estufa a gas licuado en combustión eficiente" style="width:100%;max-width:600px;height:240px;object-fit:cover;border-radius:8px;display:block;margin:0 auto" loading="lazy">
+              <figcaption style="font-size:0.85em;color:#64748B;margin-top:6px;font-style:italic">Combustión azul de alta eficiencia en un quemador a gas licuado certificado por la SEC.</figcaption>
+            </figure>
+
+            <h2>1. Física de la Combustión y Poder Calorífico del Gas</h2>
+
+            <p>El consumo de un equipo de calefacción a gas depende directamente de dos variables físicas principales: la potencia térmica requerida para temperar el recinto y el <strong>Poder Calorífico Superior (PCS) e Inferior (PCI)</strong> del combustible utilizado.</p>
+
+            <p>En Chile existen dos fuentes principales de gas para calefacción doméstica:</p>
+
+            <ul style="margin:1rem 0 1.5rem 1.5rem; color:#334155; line-height:1.75;">
+              <li><strong>GLP (Gas Licuado de Petróleo):</strong> Mezcla comercial de propano ($C_3H_8$) y butano ($C_4H_{10}$). Su poder calorífico inferior es de aproximadamente <strong>11.800 kcal/kg</strong> (equivalente a <strong>13,72 kWh/kg</strong> o 49,4 MJ/kg).</li>
+              <li><strong>GN (Gas Natural):</strong> Mezcla constituida principalmente por metano ($CH_4$). Su poder calorífico ronda los <strong>8.600 a 9.300 kcal/m³</strong> (aproximadamente <strong>10,0 a 10,8 kWh/m³</strong>).</li>
+            </ul>
+
+            <p>Para relacionar la potencia emitida con la masa de combustible quemado, utilizamos las equivalencias termodinámicas estándar:</p>
+
+            <div class="formula-box">
+              1 kW de potencia térmica = 860 kcal/h = 3.412 BTU/h<br>
+              Tasa teórica de consumo GLP = 860 kcal/h / 11,8 kcal/g ≈ 72,88 g/h por kW<br>
+              <strong>Tasa real de consumo GLP (eficiencia ~92-95%) ≈ 75 a 80 g/h por kW</strong>
+            </div>
+
+            <p>Esto significa que por cada kilowatt (kW) de potencia térmica seleccionado en el panel de control de la estufa, el equipo consumirá entre <strong>75 y 80 gramos de gas licuado cada hora</strong>.</p>
+
+            <h2>2. Comparativa Técnica: Potencia vs. Consumo y Costo Operativo en Chile</h2>
+
+            <p>Las estufas infrarrojas y catalíticas portátiles de 15 kg más vendidas en Chile cuentan con tres niveles de potencia ajustables mediante paneles o quemadores independientes. La siguiente tabla sintetiza el comportamiento de consumo para un cilindro de 15 kg con un precio base estimado de <strong>$28.500 CLP</strong> ($1.900 CLP/kg):</p>
+
+            <div class="table-wrapper">
+              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em">
+                <thead>
+                  <tr style="background:#F1F5F9">
+                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Nivel de Potencia</th>
+                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Potencia (kW)</th>
+                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Consumo g/h</th>
+                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Autonomía (Balón 15 kg)</th>
+                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Costo Estimado CLP / Hora</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>Mínimo (1 Panel)</strong></td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">1,40 kW</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">100 – 105 g/h</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">~ 142 a 150 horas</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">$190 – $200 CLP/h</td>
+                  </tr>
+                  <tr style="background:#FAFAFA">
+                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>Medio (2 Paneles)</strong></td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">2,80 kW</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">205 – 210 g/h</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">~ 71 a 73 horas</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">$390 – $400 CLP/h</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>Máximo (3 Paneles)</strong></td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">4,20 kW</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">305 – 315 g/h</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">~ 47 a 49 horas</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">$580 – $600 CLP/h</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>Si utilizas la estufa en nivel medio (2,8 kW) durante 6 horas diarias en los meses fríos de invierno (mayo a agosto), el consumo mensual asciende a aproximadamente <strong>37,8 kg de GLP</strong>, lo que equivale a requerir 2,5 balones de 15 kg al mes (aproximadamente <strong>$71.250 CLP mensuales</strong>).</p>
+
+            <div style="text-align:center;margin:32px auto;padding:20px 24px;max-width:540px;background:#EFF6FF;border-left:4px solid #0057e7;border-radius:0 8px 8px 0">
+              <p style="margin:0 0 12px;font-size:15px;color:#1E293B;line-height:1.5">¿Realizando mantenimiento o instalaciones de cañerías para tu estufa o red de gas?</p>
+              <a href="selladores-de-rosca-teflon-vs-estopa-cual-elegir.html" style="font-weight:700; color:#0057e7;">Ver guía de teflón y selladores de rosca de gas &rarr;</a>
+            </div>
+
+            <h2>3. Guía Paso a Paso para Calcular el Consumo de tu Estufa</h2>
+
+            <p>Sigue esta metodología paso a paso para calcular el costo operacional exacto de cualquier modelo comercial instalado en tu hogar o negocio:</p>
+
+            <h3>Paso 1: Identificar la potencia térmica en la placa SEC</h3>
+            <p>Revisa la placa metálica o autoadhesiva obligatoria de la SEC adherida a la parte posterior del chasis. Busca el dato impreso como <em>Potencia Nominal Térmica</em> expressada en kW, kcal/h o BTU/h.</p>
+
+            <h3>Paso 2: Realizar la conversión de unidades a kW</h3>
+            <p>Si la etiqueta indica únicamente BTU/h, divide el valor por 3.412. Por ejemplo, una estufa de 14.330 BTU/h equivale a $14.330 / 3.412 = 4,20\text{ kW}$. Si viene en kcal/h, divide por 860 ($3.612\text{ kcal/h} / 860 = 4,20\text{ kW}$).</p>
+
+            <h3>Paso 3: Multiplicar por el factor de consumo ($75 \text{ g/h per kW}$)</h3>
+            <p>Calcula los gramos por hora consumidos en la potencia elegida. Para una estufa operando a $3,0\text{ kW}$ de potencia:<br>
+            $$\text{Consumo} = 3,0\text{ kW} \times 75\text{ g/h/kW} = 225\text{ g/h} = 0,225\text{ kg/h}$$</p>
+
+            <h3>Paso 4: Calcular la autonomía del balón de gas</h3>
+            <p>Divide la carga útil de gas entre el consumo por hora. Si dispones de un cilindro de $15\text{ kg}$ ($15.000\text{ gramos}$):<br>
+            $$\text{Autonomía} = \frac{15.000\text{ g}}{225\text{ g/h}} = 66,6\text{ horas de uso continuo}$$</p>
+
+            <h3>Paso 5: Determinar el costo monetario en CLP/hora</h3>
+            <p>Multiplica los kg/h por el valor de cada kilogramo de gas en tu distribución local (ej. $28.500 CLP / 15 kg = $1.900 CLP/kg):<br>
+            $$\text{Costo por hora} = 0,225\text{ kg/h} \times \$1.900\text{ CLP/kg} = \$427,5\text{ CLP por hora}$$</p>
+
+            <h2>4. Tipos de Estufas a Gas y su Eficiencia Térmica</h2>
+
+            <p>No todos los sistemas de calefacción a gas transfieren el calor de la misma manera. La tecnología del quemador influye en el confort térmico percibido y en la propagación del aire caliente:</p>
+
+            <p><strong>A. Estufas Infrarrojas (Radiantes):</strong> Utilizan paneles cerámicos microperforados que alcanzan incandescencia roja. Emiten radiación infrarroja directa sobre personas u objetos. Son ideales para recintos con filtraciones de aire moderadas o techos altos, pues no dependen completamente de la convección del aire.</p>
+
+            <p><strong>B. Estufas Catalíticas:</strong> Emplean un panel poroso compuesto por fibras de lana impregnadas con platino como catalizador. Ocurre una combustión flameless (sin llama visible) a menor temperatura, reduciendo significativamente la emisión de Monóxido de Carbono (CO). Emiten calor por convección y radiación suave, siendo recomendables para hogares con niños pequeños o adultos mayores.</p>
+
+            <p><strong>C. Estufas de Tiro Balanceado o Tiro Forzado (Fijo / Cañón exterior):</strong> Se fijan a muros perimetrales e ingresan aire del exterior expulsando los gases quemados hacia afuera mediante un conducto concéntrico. Su eficiencia energética supera el 85-90% y garantizan la máxima calidad del aire interior al no contaminar la atmósfera del recinto.</p>
+
+            <figure style="margin:24px auto;text-align:center;max-width:600px;display:block">
+              <img src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Instalación y aislamiento térmico de techos para evitar pérdida de calor" style="width:100%;max-width:600px;height:220px;object-fit:cover;border-radius:8px;display:block;margin:0 auto" loading="lazy">
+              <figcaption style="font-size:0.85em;color:#64748B;margin-top:6px;font-style:italic">Reducir las pérdidas térmicas en techos y muros disminuye el consumo de gas en hasta un 40%.</figcaption>
+            </figure>
+
+            <p>Para maximizar la retención del calor en la vivienda y evitar un gasto excesivo de gas, resulta fundamental contar con un buen aislamiento en techumbres. Puedes revisar nuestra guía técnica sobre <a href="aislapol-plumavit-en-cielo-raso-la-solucion-ideal-para-tu-hogar.html">instalación de Aislapol y aislamiento térmico según norma OGUC</a>.</p>
+
+            <h2>5. Requisitos de Seguridad SEC y Ventilación de Ambientes</h2>
+
+            <p>Las estufas portátiles no conectadas a conductos de evacuación exterior (catalíticas e infrarrojas) consumen el oxígeno ambiental disponible en el recinto para mantener la rección de combustión ($C_3H_8 + 5 O_2 \rightarrow 3 CO_2 + 4 H_2O$).Por esta razón, la normativa de la SEC establece criterios estrictos:</p>
+
+            <ul style="margin:1rem 0 1.5rem 1.5rem; color:#334155; line-height:1.75;">
+              <li><strong>Volumen Mínimo del Recinto:</strong> No se deben utilizar estufas no evacuadas en dormitorios o baños. El volumen del espacio debe superar los $10\text{ m}^3$ por cada kW de potencia instalada (para una estufa de 4,2 kW, se requiere una habitación con un volumen mínimo de $42\text{ m}^3$, equivalente a $17\text{ m}^2$ de planta con $2,5\text{ m}$ de altura).</li>
+              <li><strong>Sensor ODS (Piloto Analizador de Atmósfera):</strong> Es un dispositivo de corte automático obligatorio que apaga el paso de gas cuando el oxígeno en la habitación cae por debajo del $18\%$ (el nivel atmosférico normal es $21\%$).</li>
+              <li><strong>Control de Humedad Condensada:</strong> La combustión de $1\text{ kg de GLP}$ genera cerca de $1,5\text{ kg de vapor de agua}$. Ventilar unos minutos cada 2 o 3 horas es indispensable para evitar moho y empañamiento en ventanas.</li>
+              <li><strong>Vencimiento de Reguladores y Flexibles:</strong> El regulador de presión para balones y la manguera flexible reforzada deben reemplazarse cada <strong>5 años</strong>. Revisa siempre la fecha impresa en el flexible.</li>
+            </ul>
+
+            <div style="text-align:center;margin:32px auto;padding:20px 24px;max-width:540px;background:#FFF5F5;border-left:4px solid #D9381E;border-radius:0 8px 8px 0">
+              <p style="margin:0 0 12px;font-size:15px;color:#1E293B;line-height:1.5">¿Buscas herramientas para mantenimientos de redes domésticas?</p>
+              <a href="herramientas-basicas-de-gasfiteria-todo-lo-que-necesitas-saber.html" style="font-weight:700; color:#D9381E;">Descubre las herramientas esenciales de gasfitería &rarr;</a>
+            </div>
+
+            <h2>Preguntas Frecuentes (FAQ)</h2>
+
+            <h3>¿Cuántas horas dura un balón de 15 kg en una estufa a gas infrarroja?</h3>
+
+            <p>Un cilindro de 15 kg de GLP dura aproximadamente 48 a 50 horas encendido al máximo de potencia (4,2 kW / ~310 g/h). Si la usas en nivel medio (2,8 kW / ~205 g/h) dura 73 horas, y en nivel mínimo (1,4 kW / ~100 g/h) alcanza hasta 150 horas de uso continuo.</p>
+
+            <h3>¿Cuánto cuesta calentar por hora con una estufa a gas licuado en Chile?</h3>
+
+            <p>Con un precio promedio del balón de 15 kg de $28.500 CLP ($1.900 CLP/kg), el costo aproximado por hora es: $190 CLP/h en nivel mínimo, $390 CLP/h en nivel medio y $590 CLP/h al nivel máximo de potencia.</p>
+
+            <h3>¿Por qué las estufas a gas empañan los vidrios y generan humedad?</h3>
+
+            <p>La combustión de 1 kg de GLP (propano/butano) produce químicamente cerca de 1,5 kg de vapor de agua. En estufas de ambiente sin tiro al exterior (catalíticas e infrarrojas), este agua queda atrapada en el aire del recinto y se condensa en ventanas y muros fríos.</p>
+
+            <h3>¿Qué es el sistema de seguridad ODS o piloto analizador de atmósfera?</h3>
+
+            <p>El sensor ODS (Oxygen Depletion Sensor) es un dispositivo exigido por la SEC que corta automáticamente el paso de gas si la concentración de oxígeno en la habitación baja de un 18% (el nivel normal es 21%), evitando la acumulación peligrosa de monóxido de carbono.</p>
+
+            <h3>¿Cuál es la vida útil del regulador y la manguera flexible de gas?</h3>
+
+            <p>Según la normativa SEC en Chile, las mangueras de goma flexible y los reguladores de presión tienen una fecha de caducidad impresa de 5 años. Deben ser reemplazados de inmediato si están vencidos, endurecidos o con fisuras para evitar fugas de alto riesgo.</p>
+
+            <h3>¿Dónde comprar insumos para instalaciones y gasfitería con certificación SEC?</h3>
+
+            <p>En <a href="../index.html">Ferretería Ukra</a> encuentras reguladores aprobados por la SEC, mangueras de gas reforzadas, teflón de alta densidad para redes de gas y selladores anaeróbicos específicos para cañerías roscadas con despacho a Santiago y regiones.</p>
+
+            <h2>Conclusión</h2>
+
+            <p>Calcular el consumo exacto de una estufa a gas requiere aplicar la constante de conversión de <strong>75 a 80 gramos por hora por cada kilowatt de potencia térmica</strong>. Con esta simple regla, podrás anticipar la duración exacta de balones de 5, 11, 15 o 45 kg y estimar el gasto operacional por hora en pesos chilenos.</p>
+
+            <p>Para optimizar tu consumo durante los meses fríos, combina el uso de tu estufa en niveles intermedios con un adecuado aislamiento en techos y muros, revisa la caducidad quinquenal de tu regulador y manguera, y respeta los volúmenes mínimos de ventilación para garantizar un ambiente cálido, seguro y eficiente.</p>
+
+            <div style="text-align:center;margin:40px auto;padding:28px 24px;max-width:520px;background:#F8FAFC;border:2px solid #E2E8F0;border-radius:12px">
+              <p style="font-size:16px;font-weight:700;color:#0F172A;margin:0 0 8px;line-height:1.4">¿Equipando tu hogar o taller en Chile?</p>
+              <p style="font-size:14px;color:#64748B;margin:0 0 20px">Encuentra herramientas, selladores de gas, aislamientos y accesorios para instalaciones de calefacción.</p>
+              <a href="../index.html" style="display:inline-block; padding:10px 20px; background:var(--primary); color:#FFF; font-weight:700; border-radius:6px;">🛒 Explorar Catálogo Ferretería Ukra &rarr;</a>
+            </div>
+
+          </div>
+        </article>
+      </main>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="widget">
+          <h3 class="widget-title">🔥 Guías de Gasfitería y Climatización</h3>
+          <p style="font-size:0.9rem; color:#475569; margin-bottom:1rem;">Navega por nuestros manuales técnicos de fontanería, sellados e instalaciones en Chile.</p>
+          <a href="../index.html" style="display:block; text-align:center; padding:0.65rem; background:var(--primary); color:#FFF; font-weight:700; border-radius:var(--radius-sm); margin-bottom:0.75rem;">
+            &larr; Volver al Inicio (Ferretería Ukra)
+          </a>
+          <a href="selladores-de-rosca-teflon-vs-estopa-cual-elegir.html" style="display:block; text-align:center; padding:0.65rem; background:#1E293B; color:#FFF; font-weight:700; border-radius:var(--radius-sm); margin-bottom:0.75rem;">
+            🚰 Teflón vs Estopa para Gas y Agua
+          </a>
+          <a href="que-hacer-si-la-bomba-de-agua-no-corta-guia-completa-para-solucionar-problemas.html" style="display:block; text-align:center; padding:0.65rem; background:#334155; color:#FFF; font-weight:700; border-radius:var(--radius-sm); margin-bottom:0.75rem;">
+            💧 Diagnóstico Bomba e Hidropack
+          </a>
+          <a href="herramientas-basicas-de-gasfiteria-todo-lo-que-necesitas-saber.html" style="display:block; text-align:center; padding:0.65rem; background:#0057e7; color:#FFF; font-weight:700; border-radius:var(--radius-sm);">
+            🛠️ Herramientas de Gasfitería
+          </a>
+        </div>
+
+        <div class="widget">
+          <h3 class="widget-title">📊 Fórmula Rápida Consumo Gas</h3>
+          <div style="font-size:0.875rem; color:#334155; line-height:1.6;">
+            <p><strong>1. Conversión a kW:</strong> BTU/h ÷ 3.412</p>
+            <p><strong>2. Tasa Consumo:</strong> Potencia (kW) × 75 g/h</p>
+            <p><strong>3. Autonomía Balón:</strong> 15.000 g ÷ Consumo (g/h)</p>
+            <p><strong>4. Costo $ CLP/Hora:</strong> Consumo (kg/h) × $1.900 CLP</p>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <h4 style="color:#FFF;">Ferretería Ukra Chile</h4>
+        <p style="font-size:0.875rem;">Portal técnico de información en ferretería, instalaciones de gas, normativas SEC y cálculo de materiales.</p>
+      </div>
+      <div>
+        <h4 style="color:#FFF;">Enlaces Rápidos</h4>
+        <p><a href="../index.html" style="color:#94A3B8;">&rarr; Inicio Blog Ferretería Ukra</a></p>
+        <p><a href="selladores-de-rosca-teflon-vs-estopa-cual-elegir.html" style="color:#94A3B8;">&rarr; Selladores de Rosca PTFE y Gas</a></p>
+        <p><a href="herramientas-basicas-de-gasfiteria-todo-lo-que-necesitas-saber.html" style="color:#94A3B8;">&rarr; Guía Herramientas de Gasfitería</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Ferretería Ukra Blog Chile. Manuales técnicos de climatización y gas.</div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+  </script>
+</body>
+</html>
