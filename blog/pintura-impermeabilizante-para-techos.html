@@ -286,21 +286,18 @@
     .footer-inner a { color: #94A3B8; }
     .footer-inner a:hover { color: #FFF; }
     .footer-bottom { max-width: 1240px; margin: 2.5rem auto 0 auto; padding: 1.5rem 1.5rem 0 1.5rem; border-top: 1px solid #1E293B; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 0.85rem; }
-
-    .cookie-banner {
-      position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
-      background: #0F172A; color: #E2E8F0; padding: 1rem 1.5rem;
-      display: none; flex-wrap: wrap; gap: 0.75rem; align-items: center; justify-content: center;
-      font-size: 0.875rem; box-shadow: 0 -4px 12px rgba(0,0,0,0.2);
-    }
-    .cookie-banner.visible { display: flex; }
-    .cookie-banner p { margin: 0; max-width: 700px; }
-    .cookie-banner button { padding: 0.5rem 1.25rem; border: none; border-radius: 6px; font-weight: 700; cursor: pointer; font-size: 0.875rem; }
-    .cookie-accept { background: var(--primary); color: #FFF; }
-    .cookie-accept:hover { background: var(--primary-hover); }
-    .cookie-reject { background: #334155; color: #FFF; }
-    .cookie-reject:hover { background: #475569; }
   </style>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7032484018692343" crossorigin="anonymous"></script>
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LQF2BQ14K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8LQF2BQ14K');
+  </script>
 </head>
 <body>
 
@@ -701,13 +698,6 @@
     </div>
   </footer>
 
-  <!-- Banner de consentimiento de cookies (Ley 21.719) -->
-  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
-    <p>Usamos cookies propias y de terceros (Google Analytics, Google AdSense) para mejorar tu experiencia y mostrar publicidad relevante. Puedes aceptar o rechazar su uso.</p>
-    <button class="cookie-accept" id="cookieAccept">Aceptar</button>
-    <button class="cookie-reject" id="cookieReject">Rechazar</button>
-  </div>
-
   <script>
     // Barra de progreso de lectura
     window.addEventListener('scroll', () => {
@@ -716,47 +706,6 @@
       const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
       document.getElementById('progressBar').style.width = scrolled + '%';
     });
-
-    // Banner de cookies: solo carga GA/AdSense tras consentimiento
-    (function () {
-      const CONSENT_KEY = 'ukra_cookie_consent';
-      const banner = document.getElementById('cookieBanner');
-      const stored = localStorage.getItem(CONSENT_KEY);
-
-      function loadAnalyticsAndAds() {
-        var gaScript = document.createElement('script');
-        gaScript.async = true;
-        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-8LQF2BQ14K';
-        document.head.appendChild(gaScript);
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-8LQF2BQ14K');
-
-        var adsScript = document.createElement('script');
-        adsScript.async = true;
-        adsScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7032484018692343';
-        adsScript.crossOrigin = 'anonymous';
-        document.head.appendChild(adsScript);
-      }
-
-      if (stored === 'accepted') {
-        loadAnalyticsAndAds();
-      } else if (stored !== 'rejected') {
-        banner.classList.add('visible');
-      }
-
-      document.getElementById('cookieAccept').addEventListener('click', function () {
-        localStorage.setItem(CONSENT_KEY, 'accepted');
-        banner.classList.remove('visible');
-        loadAnalyticsAndAds();
-      });
-
-      document.getElementById('cookieReject').addEventListener('click', function () {
-        localStorage.setItem(CONSENT_KEY, 'rejected');
-        banner.classList.remove('visible');
-      });
-    })();
   </script>
 
 </body>
