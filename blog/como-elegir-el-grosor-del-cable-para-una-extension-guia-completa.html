@@ -1,1 +1,951 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Cómo Elegir el Grosor del Cable para una Extensión: Guía Completa AWG y mm² 2026</title>
+  <meta name="title" content="Cómo Elegir el Grosor del Cable para una Extensión: Guía Completa AWG y mm² 2026">
+  <meta name="description" content="Aprende a calcular el calibre correcto de cable para tu extensión eléctrica según potencia en Watts, amperaje y longitud. Tablas AWG a mm², fórmula de caída de tensión y normativa SEC Chile.">
+  <meta name="keywords" content="como elegir el grosor del cable para una extension guia completa, calibre cable extension electrica, tabla awg a mm2, que cable usar para extension larga, caida de tension formula, cable para aire acondicionado calibre, ferreteria ukra">
+  <meta name="author" content="Ferretería Ukra Blog - Energía Solar y Electricidad SEC">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://www.ferreteriaukra.cl/blog/como-elegir-el-grosor-del-cable-para-una-extension-guia-completa/">
+  <meta name="theme-color" content="#D9381E">
 
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Ferretería Ukra Blog - Ferretería y Bricolaje Técnico">
+  <meta property="og:url" content="https://www.ferreteriaukra.cl/blog/como-elegir-el-grosor-del-cable-para-una-extension-guia-completa/">
+  <meta property="og:title" content="Cómo Elegir el Grosor del Cable para una Extensión | Guía Completa">
+  <meta property="og:description" content="Fórmulas técnicas para calcular el calibre AWG/mm² correcto según Watts, Amperes y metros de longitud. Evita sobrecalentamiento e incendios en tus extensiones eléctricas.">
+  <meta property="og:image" content="https://images.pexels.com/photos/6636421/pexels-photo-6636421.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+  <meta property="og:locale" content="es_CL">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cómo Elegir el Grosor del Cable para una Extensión">
+  <meta name="twitter:description" content="Calcula el calibre correcto AWG/mm² de tu extensión eléctrica según potencia, corriente y distancia.">
+  <meta name="twitter:image" content="https://images.pexels.com/photos/6636421/pexels-photo-6636421.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+
+  <!-- Schema.org JSON-LD Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.ferreteriaukra.cl/#website",
+        "url": "https://www.ferreteriaukra.cl/",
+        "name": "Ferretería Ukra Blog",
+        "inLanguage": "es"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.ferreteriaukra.cl/blog/como-elegir-el-grosor-del-cable-para-una-extension-guia-completa/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.ferreteriaukra.cl/" },
+          { "@type": "ListItem", "position": 2, "name": "Energía Solar y Electricidad", "item": "https://www.ferreteriaukra.cl/#electricidad" },
+          { "@type": "ListItem", "position": 3, "name": "Cómo Elegir el Grosor del Cable para una Extensión", "item": "https://www.ferreteriaukra.cl/blog/como-elegir-el-grosor-del-cable-para-una-extension-guia-completa/" }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://www.ferreteriaukra.cl/blog/como-elegir-el-grosor-del-cable-para-una-extension-guia-completa/#article",
+        "isPartOf": { "@id": "https://www.ferreteriaukra.cl/blog/como-elegir-el-grosor-del-cable-para-una-extension-guia-completa/" },
+        "headline": "Cómo elegir el grosor del cable para una extensión: Guía técnica completa de calibre AWG, mm², amperaje y caída de tensión",
+        "description": "Metodología técnica paso a paso para calcular el calibre correcto de cable según la potencia en Watts, el amperaje de la carga y la longitud del recorrido, evitando sobrecalentamiento e incendios eléctricos.",
+        "inLanguage": "es",
+        "mainEntityOfPage": "https://www.ferreteriaukra.cl/blog/como-elegir-el-grosor-del-cable-para-una-extension-guia-completa/",
+        "datePublished": "2026-08-19T15:00:00+00:00",
+        "dateModified": "2026-08-19T15:30:00+00:00",
+        "image": "https://images.pexels.com/photos/6636421/pexels-photo-6636421.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "keywords": "como elegir el grosor del cable para una extension guia completa, calibre cable extension electrica, tabla awg a mm2, caida de tension formula, ferreteria ukra"
+      },
+      {
+        "@type": "HowTo",
+        "name": "Cómo calcular el calibre correcto de cable para una extensión eléctrica",
+        "description": "Pasos matemáticos para determinar el grosor de cable (AWG o mm²) necesario según la potencia del artefacto y la distancia de la extensión.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Identificar la potencia total en Watts del artefacto",
+            "text": "Revisa la etiqueta técnica del equipo (parte trasera o inferior) y anota el valor en Watts (W) o multiplica Volts × Amperes si solo aparece la corriente."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Calcular la corriente en Amperes usando la fórmula eléctrica",
+            "text": "Aplica la fórmula I = P / V, donde P es la potencia en Watts y V es el voltaje de la red (220V en Chile), para obtener la corriente que circulará por el cable."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Medir la longitud total del recorrido de la extensión",
+            "text": "Mide en metros la distancia real entre el enchufe de pared y el punto donde se conectará el artefacto, considerando el trayecto físico y no la línea recta."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Cruzar el amperaje y la longitud en la tabla de calibres AWG/mm²",
+            "text": "Utiliza la tabla técnica de capacidad de corriente y caída de tensión para identificar el calibre mínimo recomendado según los Amperes calculados y los metros de longitud."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Verificar la caída de tensión y ajustar el calibre si es necesario",
+            "text": "Si el recorrido supera los 15-20 metros, aplica la fórmula de caída de tensión y, si el resultado supera el 3%, selecciona un calibre superior al mínimo indicado por amperaje."
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Qué pasa si uso un cable muy delgado para una extensión de alta potencia?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Un cable con calibre insuficiente para la corriente que circula por él genera un sobrecalentamiento progresivo del conductor debido a la resistencia eléctrica. Esto puede derretir el aislante plástico, provocar cortocircuitos y ser causa directa de incendios domésticos, además de generar caídas de tensión que dañan el motor de electrodomésticos como refrigeradores o aires acondicionados."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuál es la diferencia entre calibre AWG y mm² en los cables eléctricos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AWG (American Wire Gauge) es un sistema de numeración estadounidense donde a menor número, mayor grosor del cable (ej. AWG 10 es más grueso que AWG 18). El mm² es el sistema métrico que mide directamente el área de la sección transversal del conductor de cobre. En Chile ambos sistemas conviven en el mercado, por lo que es fundamental saber convertir entre ellos al comprar un cable o extensión."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué calibre de cable necesito para un aire acondicionado o una soldadora?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Un aire acondicionado split de 12.000 BTU (aproximadamente 1.100W) requiere un cable mínimo de 1,5 mm² (AWG 16) para distancias cortas. Una soldadora eléctrica que consume entre 4.000W y 6.500W en corriente monofásica de 220V necesita un cable de 4 mm² (AWG 12) o superior, especialmente si la extensión supera los 10 metros de longitud, para evitar caídas de tensión que afecten el arco de soldadura."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Por qué la longitud del cable afecta el calibre que debo elegir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A mayor longitud, mayor es la resistencia total del conductor, lo que provoca una caída de tensión más pronunciada en el extremo final del cable. Por eso, para una misma carga eléctrica, una extensión de 30 metros requiere un calibre más grueso que una de 5 metros, con el fin de mantener el voltaje dentro de un rango seguro y eficiente para el artefacto conectado."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Se puede usar un cable más grueso del necesario sin problema?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí, utilizar un calibre superior al mínimo requerido nunca representa un riesgo eléctrico; por el contrario, reduce las pérdidas por calentamiento y la caída de tensión, mejorando la eficiencia energética. La única desventaja es el mayor costo del cable y su menor flexibilidad o manejabilidad al ser más grueso y pesado."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Dónde comprar cables eléctricos certificados por calibre en Chile?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "En Ferretería Ukra encuentras cables THHN, SUT y ST para extensiones en calibres desde AWG 18 (0,75 mm²) hasta AWG 8 (10 mm²), enchufes industriales trifásicos, conectores IP44 resistentes a la intemperie y probadores de continuidad para verificar tus instalaciones."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Embedded Stylesheet -->
+  <style>
+    :root {
+      --primary: #D9381E;
+      --primary-hover: #B82A13;
+      --secondary: #1E293B;
+      --accent: #F59E0B;
+      --bg-body: #F8FAFC;
+      --bg-card: #FFFFFF;
+      --text-main: #0F172A;
+      --text-muted: #64748B;
+      --border-color: #E2E8F0;
+      --radius-sm: 0.375rem;
+      --radius-md: 0.75rem;
+      --radius-lg: 1rem;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+      --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-stack);
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.65;
+      font-size: 1rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: #0057e7;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img, svg {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .progress-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: transparent;
+      z-index: 100;
+    }
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      width: 0%;
+      transition: width 0.1s linear;
+    }
+
+    .top-bar {
+      background-color: #0F172A;
+      color: #94A3B8;
+      font-size: 0.85rem;
+      padding: 0.4rem 1rem;
+      text-align: center;
+      border-bottom: 1px solid #1E293B;
+    }
+    .top-bar span {
+      color: #F8FAFC;
+      font-weight: 600;
+    }
+
+    header {
+      background-color: var(--secondary);
+      color: #FFFFFF;
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      box-shadow: var(--shadow-md);
+    }
+    .header-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 1.5rem;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+    }
+    .brand-logo svg {
+      width: 34px;
+      height: 34px;
+      fill: var(--primary);
+    }
+    .brand-logo span.badge {
+      font-size: 0.65rem;
+      background: var(--primary);
+      color: #FFF;
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    nav a {
+      color: #CBD5E1;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.4rem 0.2rem;
+      border-bottom: 2px solid transparent;
+    }
+    nav a:hover, nav a.active {
+      color: #FFFFFF;
+      text-decoration: none;
+      border-bottom-color: var(--primary);
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .breadcrumbs a {
+      color: var(--text-muted);
+    }
+    .breadcrumbs a:hover {
+      color: var(--primary);
+    }
+    .breadcrumbs span.separator {
+      color: #CBD5E1;
+    }
+
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    @media (min-width: 992px) {
+      .layout-grid {
+        grid-template-columns: 2.5fr 1fr;
+      }
+    }
+
+    article.main-article {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+    }
+
+    .category-pill {
+      display: inline-block;
+      background-color: #FEF2F2;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.3rem 0.8rem;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+      border: 1px solid #FCA5A5;
+    }
+
+    h1.article-title {
+      font-size: 2.1rem;
+      line-height: 1.3;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.25rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .article-body p {
+      margin-bottom: 1.25rem;
+      color: #334155;
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    .article-body h2 {
+      font-size: 1.55rem;
+      color: #0F172A;
+      margin-top: 2.25rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid #F1F5F9;
+    }
+
+    .article-body h3 {
+      font-size: 1.2rem;
+      color: #1E293B;
+      margin-top: 1.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 1.75rem 0;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+    }
+
+    .formula-box {
+      background: #F1F5F9;
+      border-left: 4px solid var(--primary);
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      font-family: monospace;
+      font-size: 1.02rem;
+      color: #0F172A;
+    }
+
+    .warning-box {
+      background: #FFFBEB;
+      border-left: 4px solid var(--accent);
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      font-size: 0.98rem;
+      color: #78350F;
+    }
+
+    aside.sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .widget {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .widget-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary);
+    }
+
+    footer {
+      background-color: #0F172A;
+      color: #94A3B8;
+      padding: 3rem 0 1.5rem 0;
+      margin-top: 4rem;
+      border-top: 4px solid var(--primary);
+    }
+    .footer-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2.5rem;
+    }
+    .footer-bottom {
+      max-width: 1240px;
+      margin: 2.5rem auto 0 auto;
+      padding: 1.5rem 1.5rem 0 1.5rem;
+      border-top: 1px solid #1E293B;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+    }
+  </style>
+
+  <!-- Google AdSense Auto Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7032484018692343" crossorigin="anonymous"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LQF2BQ14K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-8LQF2BQ14K');
+  </script>
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div class="progress-container" aria-hidden="true">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    🔌 <span>Electricidad Segura:</span> Calcula el calibre correcto de cable antes de armar tu extensión eléctrica. <a href="/" style="color:#F59E0B; text-decoration:underline; font-weight:600; margin-left:6px;">&larr; Volver al Inicio del Blog</a>
+  </div>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="header-inner">
+      <a href="/" class="brand-logo" aria-label="Ir a Inicio de Ferretería Ukra Blog">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.4-2.4c.4-.4.4-1 0-1.3z"/>
+        </svg>
+        Ferretería Ukra <span class="badge">Electricidad</span>
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/#guias">Guías Técnicas</a></li>
+          <li><a href="/blog/las-mejores-marcas-de-alargadores-electricos-guia-completa-para-elegir/">Alargadores</a></li>
+          <li><a href="#" class="active">Calibre de Cables</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <div class="container">
+    
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Inicio</a>
+      <span class="separator">/</span>
+      <a href="/#electricidad">Energía Solar &amp; Electricidad</a>
+      <span class="separator">/</span>
+      <span aria-current="page">Cómo Elegir el Grosor del Cable para una Extensión</span>
+    </nav>
+
+    <div class="layout-grid">
+      
+      <!-- Main Content Area -->
+      <main>
+        <article class="main-article" itemscope itemtype="https://schema.org/BlogPosting">
+          
+          <span class="category-pill">Electricidad &amp; Seguridad SEC</span>
+          <h1 class="article-title" itemprop="headline">Cómo Elegir el Grosor del Cable para una Extensión: Guía Técnica Completa de Calibre AWG, mm² y Amperaje</h1>
+
+          <div class="article-meta">
+            <div><strong>Por Equipo Técnico Ferretería Ukra</strong> | Especialistas en Electricidad y Normativa SEC</div>
+            <div><span>📅 19 Ago, 2026</span></div>
+            <div><span>⏱️ 11 min de lectura</span></div>
+            <div style="margin-left:auto;">
+              <a href="/" style="font-weight:600; color:var(--primary);">&larr; Volver al inicio</a>
+            </div>
+          </div>
+
+          <!-- Main Article Body -->
+          <div class="article-body" itemprop="articleBody">
+            
+            <p>Un cliente frecuente de obra llegó una tarde con una consulta que resolvimos en el mostrador pero que pudo evitarle un incendio: había comprado un carrete de cable delgado (calibre 0,75 mm², pensado para lámparas y radios) para alimentar una amoladora angular de 2.200W a través de una extensión de 25 metros hasta el fondo de su patio. A los pocos minutos de uso, el cable estaba tan caliente que el aislante plástico comenzó a ablandarse y desprender olor a quemado. El problema no era la herramienta ni el enchufe: era un <strong>calibre de cable completamente insuficiente</strong> para la corriente y la distancia requeridas.</p>
+
+            <p>Elegir el grosor correcto de un cable no es un detalle menor ni una decisión de "mientras más barato, mejor". Cada milímetro cuadrado de sección transversal de cobre tiene una <strong>capacidad de conducción de corriente limitada</strong>, determinada por leyes físicas de resistencia eléctrica y disipación de calor. Un cable subdimensionado se recalienta, derrite su aislación, provoca caídas de tensión que dañan motores eléctricos y es una de las causas más frecuentes de incendios domésticos e industriales en instalaciones improvisadas.</p>
+
+            <p>En esta guía técnica completa te enseñamos a calcular matemáticamente el calibre correcto según la <strong>potencia en Watts, el amperaje de la carga y la longitud del recorrido</strong>, con tablas de conversión AWG a mm², la fórmula de caída de tensión, y recomendaciones específicas para herramientas, electrodomésticos y equipos de mayor consumo.</p>
+
+            <figure style="margin:24px auto;text-align:center;max-width:600px;display:block">
+              <img src="https://images.pexels.com/photos/6636421/pexels-photo-6636421.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Distintos calibres de cable eléctrico de cobre comparados por grosor en mm2" style="width:100%;max-width:600px;height:240px;object-fit:cover;border-radius:8px;display:block;margin:0 auto" loading="lazy">
+              <figcaption style="font-size:0.85em;color:#64748B;margin-top:6px;font-style:italic">A mayor sección transversal de cobre, mayor es la capacidad de corriente que el cable puede transportar de forma segura.</figcaption>
+            </figure>
+
+            <h2>1. Conceptos Fundamentales: AWG, mm² y Capacidad de Corriente</h2>
+
+            <p>Antes de calcular, es necesario entender los dos sistemas de medida que conviven en el mercado eléctrico chileno:</p>
+
+            <p><strong>Sistema Métrico (mm²):</strong> Mide directamente el área de la sección transversal del conductor de cobre. Es el sistema más usado en cables normalizados IRAM/INN en Chile (ej. cable de 2,5 mm²).</p>
+
+            <p><strong>Sistema AWG (American Wire Gauge):</strong> Sistema de numeración de origen estadounidense, presente en muchas herramientas, extensiones y equipos importados. A diferencia del sistema métrico, <strong>a menor número AWG, mayor es el grosor del cable</strong> (un AWG 10 es mucho más grueso que un AWG 18).</p>
+
+            <div class="table-wrapper">
+              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em">
+                <thead>
+                  <tr style="background:#F1F5F9">
+                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Calibre AWG</th>
+                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Equivalencia mm²</th>
+                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Capacidad Máxima (Amperes)</th>
+                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Uso Típico Recomendado</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>AWG 18</strong></td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">0,75 mm²</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">6 – 8 A</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">Lámparas, cargadores, radios</td>
+                  </tr>
+                  <tr style="background:#FAFAFA">
+                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>AWG 16</strong></td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">1,5 mm²</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">10 – 13 A</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">Extensiones domésticas, ventiladores, TV</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>AWG 14</strong></td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">2,5 mm²</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">15 – 18 A</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">Microondas, hervidores, taladros</td>
+                  </tr>
+                  <tr style="background:#FAFAFA">
+                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>AWG 12</strong></td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">4 mm²</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">20 – 25 A</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">Amoladoras, sierras eléctricas, soldadoras livianas</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>AWG 10</strong></td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">6 mm²</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">30 – 35 A</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">Aires acondicionados, hornos eléctricos, compresores</td>
+                  </tr>
+                  <tr style="background:#FAFAFA">
+                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>AWG 8</strong></td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">10 mm²</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">40 – 50 A</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">Soldadoras industriales, tableros secundarios</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="warning-box">
+              ⚠️ <strong>Nota técnica:</strong> Los valores de amperaje de esta tabla corresponden a instalación al aire libre en ductos individuales. Si el cable va enrollado en un carrete (extensión enrollada sin desplegar), su capacidad real de corriente disminuye hasta un 50% debido a la acumulación de calor por inducción entre espiras. <strong>Siempre desenrolla completamente una extensión antes de usar equipos de alta potencia.</strong>
+            </div>
+
+            <h2>2. Fórmula para Calcular la Corriente (Amperes) de tu Artefacto</h2>
+
+            <p>El primer paso técnico es transformar la potencia del equipo (dato que casi siempre viene en la etiqueta trasera en Watts) a Amperes, que es la unidad que realmente define el esfuerzo sobre el cable:</p>
+
+            <div class="formula-box">
+              I = P / (V × FP)<br>
+              Donde:<br>
+              I = Corriente en Amperes (A)<br>
+              P = Potencia en Watts (W)<br>
+              V = Voltaje de la red (220V en Chile)<br>
+              FP = Factor de Potencia (0,95 a 1,0 para resistivas; 0,8 a 0,85 para motores)<br><br>
+              Ejemplo - Amoladora de 2.200W:<br>
+              I = 2.200 / (220 × 0,9) = 2.200 / 198 = <strong>11,1 Amperes</strong>
+            </div>
+
+            <p>Con este resultado de 11,1 A, observando la tabla anterior, el calibre mínimo requerido sería <strong>AWG 16 (1,5 mm²)</strong>. Sin embargo, este cálculo es incompleto si no consideramos la distancia del recorrido, como veremos en la siguiente sección.</p>
+
+            <h2>3. La Variable Olvidada: Caída de Tensión por Longitud</h2>
+
+            <p>Muchas personas calculan el calibre solo por amperaje y longitud corta, pero ignoran que a mayor distancia, mayor es la resistencia total del cable y, por lo tanto, mayor la <strong>caída de tensión (Voltage Drop)</strong> en el extremo final. Esto es crítico para extensiones de más de 15 metros.</p>
+
+            <div class="formula-box">
+              ΔV = (2 × L × I × ρ) / S<br>
+              Donde:<br>
+              ΔV = Caída de tensión en Volts<br>
+              L = Longitud del cable en metros (solo ida, la fórmula ya duplica por el retorno)<br>
+              I = Corriente en Amperes<br>
+              ρ = Resistividad del cobre (0,0175 Ω·mm²/m)<br>
+              S = Sección del cable en mm²<br><br>
+              Ejemplo - Amoladora 11,1A, cable 1,5mm², 25 metros:<br>
+              ΔV = (2 × 25 × 11,1 × 0,0175) / 1,5 = 9,71 / 1,5 = <strong>6,47 Volts de caída</strong><br>
+              % Caída = 6,47 / 220 × 100 = <strong>2,94% (dentro del límite aceptable de 3%)</strong>
+            </div>
+
+            <p>Si el mismo cálculo se realiza con una extensión de <strong>40 metros</strong> usando el mismo cable de 1,5 mm², la caída de tensión superaría el 4,7%, lo que ya provoca pérdida de potencia notable en la herramienta y calentamiento excesivo del conductor. En ese escenario, sería necesario escalar a un cable de <strong>2,5 mm² (AWG 14)</strong> para mantener la caída bajo el 3% recomendado.</p>
+
+            <div class="table-wrapper">
+              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em">
+                <thead>
+                  <tr style="background:#F1F5F9">
+                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Corriente Carga</th>
+                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Hasta 10 metros</th>
+                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">10 a 25 metros</th>
+                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">25 a 40 metros</th>
+                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">40 a 60 metros</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>Hasta 6 A</strong></td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">0,75 mm²</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">1,0 mm²</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">1,5 mm²</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">2,5 mm²</td>
+                  </tr>
+                  <tr style="background:#FAFAFA">
+                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>6 a 10 A</strong></td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">1,0 mm²</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">1,5 mm²</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">2,5 mm²</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">4 mm²</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>10 a 16 A</strong></td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">1,5 mm²</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">2,5 mm²</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">4 mm²</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">6 mm²</td>
+                  </tr>
+                  <tr style="background:#FAFAFA">
+                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>16 a 25 A</strong></td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">2,5 mm²</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">4 mm²</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">6 mm²</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">10 mm²</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>25 a 32 A</strong></td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">4 mm²</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">6 mm²</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">10 mm²</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">16 mm²</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>Esta tabla ya integra tanto la capacidad de corriente como la caída de tensión, siendo la referencia práctica más rápida para elegir el calibre correcto sin necesidad de realizar los cálculos manualmente cada vez. Si buscas extensiones ya fabricadas con el calibre adecuado, revisa nuestra guía de <a href="/blog/las-mejores-marcas-de-alargadores-electricos-guia-completa-para-elegir/">las mejores marcas de alargadores eléctricos</a>.</p>
+
+            <h2>4. Calibre Recomendado por Tipo de Artefacto o Herramienta</h2>
+
+            <p>Para ahorrarte los cálculos en los casos más consultados, esta tabla resume el calibre mínimo recomendado para una extensión de hasta 20 metros:</p>
+
+            <div class="table-wrapper">
+              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em">
+                <thead>
+                  <tr style="background:#F1F5F9">
+                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Artefacto / Herramienta</th>
+                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Potencia Típica</th>
+                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Calibre Mínimo (hasta 20m)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding:12px;border:1px solid #E2E8F0">Taladro / Atornillador</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">500 – 800 W</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">1,5 mm² (AWG 16)</td>
+                  </tr>
+                  <tr style="background:#FAFAFA">
+                    <td style="padding:12px;border:1px solid #E2E8F0">Amoladora Angular</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">1.200 – 2.200 W</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">2,5 mm² (AWG 14)</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:12px;border:1px solid #E2E8F0">Sierra Circular</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">1.400 – 2.000 W</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">2,5 mm² (AWG 14)</td>
+                  </tr>
+                  <tr style="background:#FAFAFA">
+                    <td style="padding:12px;border:1px solid #E2E8F0">Compresor de Aire</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">1.500 – 2.500 W</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">2,5 mm² (AWG 14)</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:12px;border:1px solid #E2E8F0">Aire Acondicionado Split 12.000 BTU</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">1.000 – 1.300 W</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">1,5 mm² (AWG 16)</td>
+                  </tr>
+                  <tr style="background:#FAFAFA">
+                    <td style="padding:12px;border:1px solid #E2E8F0">Soldadora Inverter 160A</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">4.000 – 6.500 W</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">4 mm² (AWG 12)</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:12px;border:1px solid #E2E8F0">Horno Eléctrico / Cocina</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">2.000 – 3.500 W</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">2,5 a 4 mm² (AWG 14-12)</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:12px;border:1px solid #E2E8F0">Motobomba de Agua</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">750 – 1.500 W</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">1,5 mm² (AWG 16)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div style="text-align:center;margin:32px auto;padding:20px 24px;max-width:540px;background:#EFF6FF;border-left:4px solid #0057e7;border-radius:0 8px 8px 0">
+              <p style="margin:0 0 12px;font-size:15px;color:#1E293B;line-height:1.5">¿Necesitas identificar los colores de fase, neutro y tierra antes de armar tu extensión?</p>
+              <a href="/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/" style="font-weight:700; color:#0057e7;">Ver guía de código de colores de cables en Chile &rarr;</a>
+            </div>
+
+            <h2>5. Tipos de Cable Según su Aislación y Uso</h2>
+
+            <p>El calibre define cuánta corriente soporta el cable, pero el <strong>tipo de aislación</strong> determina en qué ambiente puede instalarse de forma segura:</p>
+
+            <ul style="margin:1rem 0 1.5rem 1.5rem; color:#334155; line-height:1.75;">
+              <li><strong>Cable ST / SJT (uso rudo):</strong> Aislación de caucho o PVC reforzado, resistente a la abrasión y al aplastamiento. Ideal para extensiones de taller, obra y uso industrial en el suelo.</li>
+              <li><strong>Cable THHN:</strong> Diseñado para instalación fija dentro de ductos o canalizaciones, con buena resistencia térmica (hasta 90°C), pero menos flexible para extensiones móviles.</li>
+              <li><strong>Cable H07RN-F (uso exterior/intemperie):</strong> Aislación de neopreno con alta resistencia al agua, aceites y rayos UV. Es el estándar recomendado para extensiones de uso en patios, jardines o construcción a la intemperie.</li>
+              <li><strong>Cable dúplex/tripolar plano:</strong> Uso exclusivamente doméstico en interiores secos, para cargas livianas como lámparas y equipos de baja potencia.</li>
+            </ul>
+
+            <div class="warning-box">
+              ⚠️ <strong>Advertencia SEC:</strong> Nunca uses cable dúplex plano de uso doméstico liviano para conectar herramientas de construcción, equipos de soldadura o extensiones que estarán en contacto con el suelo húmedo o la intemperie. La normativa de seguridad exige aislación reforzada tipo ST o H07RN-F para estos usos, además de un tercer conductor de tierra de protección.
+            </div>
+
+            <h2>6. Precios Referenciales de Cable por Calibre en Chile</h2>
+
+            <div class="table-wrapper">
+              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em">
+                <thead>
+                  <tr style="background:#F1F5F9">
+                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Calibre</th>
+                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Precio Referencial por Metro (CLP)</th>
+                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Precio Rollo 25m Aprox. (CLP)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>1,5 mm² (AWG 16)</strong></td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">$450 – $750</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">$11.000 – $18.500</td>
+                  </tr>
+                  <tr style="background:#FAFAFA">
+                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>2,5 mm² (AWG 14)</strong></td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">$680 – $1.100</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">$17.000 – $27.500</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>4 mm² (AWG 12)</strong></td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">$980 – $1.600</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">$24.500 – $40.000</td>
+                  </tr>
+                  <tr style="background:#FAFAFA">
+                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>6 mm² (AWG 10)</strong></td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">$1.450 – $2.300</td>
+                    <td style="padding:12px;border:1px solid #E2E8F0">$36.000 – $57.500</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>Estos precios corresponden a cable tripolar (con conductor de tierra) de aislación reforzada tipo ST. Los precios pueden variar según la marca del fabricante nacional y las condiciones del mercado del cobre.</p>
+
+            <h2>7. Errores Comunes al Elegir el Calibre de una Extensión</h2>
+
+            <ul style="margin:1rem 0 1.5rem 1.5rem; color:#334155; line-height:1.75;">
+              <li><strong>Calcular solo por amperaje, ignorando la longitud:</strong> un cable correcto para 5 metros puede ser insuficiente para el mismo equipo a 30 metros de distancia.</li>
+              <li><strong>Usar extensiones enrolladas en el carrete:</strong> el calor generado no se disipa correctamente cuando el cable permanece enrollado, reduciendo su capacidad real hasta en un 50%.</li>
+              <li><strong>Conectar múltiples equipos a una sola extensión delgada:</strong> sumar las potencias de varios artefactos (ej. extensión múltiple con taladro y amoladora simultáneos) sin recalcular el calibre total requerido.</li>
+              <li><strong>Ignorar el conductor de tierra:</strong> usar cables bipolares sin tierra de protección en herramientas con carcasa metálica, aumentando el riesgo de electrocución ante una falla de aislación.</li>
+              <li><strong>Comprar por precio en vez de por sección real:</strong> algunos cables económicos declaran un calibre nominal pero el diámetro real de cobre es menor al indicado, por lo que es recomendable comprar en establecimientos con productos certificados.</li>
+            </ul>
+
+            <div style="text-align:center;margin:32px auto;padding:20px 24px;max-width:540px;background:#EFF6FF;border-left:4px solid #0057e7;border-radius:0 8px 8px 0">
+              <p style="margin:0 0 12px;font-size:15px;color:#1E293B;line-height:1.5">¿Verificando la polaridad del enchufe antes de conectar tu extensión?</p>
+              <a href="/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/" style="font-weight:700; color:#0057e7;">Ver guía práctica de identificación de fase y neutro &rarr;</a>
+            </div>
+
+            <h2>Preguntas Frecuentes (FAQ)</h2>
+
+            <h3>¿Qué pasa si uso un cable muy delgado para una extensión de alta potencia?</h3>
+
+            <p>Un cable con calibre insuficiente para la corriente que circula por él genera un sobrecalentamiento progresivo del conductor debido a la resistencia eléctrica. Esto puede derretir el aislante plástico, provocar cortocircuitos y ser causa directa de incendios domésticos, además de generar caídas de tensión que dañan el motor de electrodomésticos como refrigeradores o aires acondicionados.</p>
+
+            <h3>¿Cuál es la diferencia entre calibre AWG y mm² en los cables eléctricos?</h3>
+
+            <p>AWG (American Wire Gauge) es un sistema de numeración estadounidense donde a menor número, mayor grosor del cable (ej. AWG 10 es más grueso que AWG 18). El mm² es el sistema métrico que mide directamente el área de la sección transversal del conductor de cobre. En Chile ambos sistemas conviven en el mercado, por lo que es fundamental saber convertir entre ellos al comprar un cable o extensión.</p>
+
+            <h3>¿Qué calibre de cable necesito para un aire acondicionado o una soldadora?</h3>
+
+            <p>Un aire acondicionado split de 12.000 BTU (aproximadamente 1.100W) requiere un cable mínimo de <strong>1,5 mm² (AWG 16)</strong> para distancias cortas. Una soldadora eléctrica que consume entre 4.000W y 6.500W en corriente monofásica de 220V necesita un cable de <strong>4 mm² (AWG 12)</strong> o superior, especialmente si la extensión supera los 10 metros de longitud, para evitar caídas de tensión que afecten el arco de soldadura.</p>
+
+            <h3>¿Por qué la longitud del cable afecta el calibre que debo elegir?</h3>
+
+            <p>A mayor longitud, mayor es la resistencia total del conductor, lo que provoca una caída de tensión más pronunciada en el extremo final del cable. Por eso, para una misma carga eléctrica, una extensión de 30 metros requiere un calibre más grueso que una de 5 metros, con el fin de mantener el voltaje dentro de un rango seguro y eficiente para el artefacto conectado.</p>
+
+            <h3>¿Se puede usar un cable más grueso del necesario sin problema?</h3>
+
+            <p>Sí, utilizar un calibre superior al mínimo requerido nunca representa un riesgo eléctrico; por el contrario, reduce las pérdidas por calentamiento y la caída de tensión, mejorando la eficiencia energética. La única desventaja es el mayor costo del cable y su menor flexibilidad o manejabilidad al ser más grueso y pesado.</p>
+
+            <h3>¿Dónde comprar cables eléctricos certificados por calibre en Chile?</h3>
+
+            <p>En <a href="/">Ferretería Ukra</a> encuentras cables THHN, SUT y ST para extensiones en calibres desde AWG 18 (0,75 mm²) hasta AWG 8 (10 mm²), enchufes industriales trifásicos, conectores IP44 resistentes a la intemperie y probadores de continuidad para verificar tus instalaciones.</p>
+
+            <h2>Conclusión</h2>
+
+            <p>Elegir correctamente el grosor del cable para una extensión eléctrica es una decisión de seguridad, no solo de presupuesto. La fórmula técnica es clara: <strong>a mayor potencia en Watts y mayor longitud de recorrido, mayor debe ser la sección en mm² del conductor de cobre</strong>. Calcula siempre la corriente real de tu equipo, considera la distancia total del trayecto, y en caso de duda, elige el calibre inmediatamente superior de la tabla.</p>
+
+            <p>Recuerda además <strong>desenrollar completamente</strong> cualquier extensión antes de usar equipos de alta potencia, verificar que cuente con conductor de tierra si vas a conectar herramientas con carcasa metálica, y optar por aislaciones reforzadas tipo ST o H07RN-F para trabajos de obra o intemperie.</p>
+
+            <div style="text-align:center;margin:40px auto;padding:28px 24px;max-width:520px;background:#F8FAFC;border:2px solid #E2E8F0;border-radius:12px">
+              <p style="font-size:16px;font-weight:700;color:#0F172A;margin:0 0 8px;line-height:1.4">¿Armando tu propia extensión eléctrica a medida?</p>
+              <p style="font-size:14px;color:#64748B;margin:0 0 20px">Encuentra cable ST y THHN por metro en todos los calibres, enchufes industriales, conectores IP44 y probadores de continuidad en Ferretería Ukra.</p>
+              <a href="/" style="display:inline-block; padding:10px 20px; background:var(--primary); color:#FFF; font-weight:700; border-radius:6px;">🛒 Explorar Catálogo Ferretería Ukra &rarr;</a>
+            </div>
+
+          </div>
+        </article>
+      </main>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="widget">
+          <h3 class="widget-title">⚡ Guías de Electricidad Segura</h3>
+          <p style="font-size:0.9rem; color:#475569; margin-bottom:1rem;">Manuales técnicos para instalaciones, extensiones y normativa SEC.</p>
+          <a href="/" style="display:block; text-align:center; padding:0.65rem; background:var(--primary); color:#FFF; font-weight:700; border-radius:var(--radius-sm); margin-bottom:0.75rem;">
+            &larr; Volver al Inicio (Ferretería Ukra)
+          </a>
+          <a href="/blog/las-mejores-marcas-de-alargadores-electricos-guia-completa-para-elegir/" style="display:block; text-align:center; padding:0.65rem; background:#1E293B; color:#FFF; font-weight:700; border-radius:var(--radius-sm); margin-bottom:0.75rem;">
+            🔌 Mejores Marcas de Alargadores
+          </a>
+          <a href="/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/" style="display:block; text-align:center; padding:0.65rem; background:#334155; color:#FFF; font-weight:700; border-radius:var(--radius-sm); margin-bottom:0.75rem;">
+            🎨 Código de Colores de Cables
+          </a>
+          <a href="/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/" style="display:block; text-align:center; padding:0.65rem; background:#0057e7; color:#FFF; font-weight:700; border-radius:var(--radius-sm);">
+            🔍 Identificar Fase y Neutro
+          </a>
+        </div>
+
+        <div class="widget">
+          <h3 class="widget-title">📐 Tabla Rápida AWG a mm²</h3>
+          <div style="font-size:0.875rem; color:#334155; line-height:1.6;">
+            <p><strong>• AWG 18:</strong> 0,75 mm² (hasta 8A)</p>
+            <p><strong>• AWG 16:</strong> 1,5 mm² (hasta 13A)</p>
+            <p><strong>• AWG 14:</strong> 2,5 mm² (hasta 18A)</p>
+            <p><strong>• AWG 12:</strong> 4,0 mm² (hasta 25A)</p>
+            <p><strong>• AWG 10:</strong> 6,0 mm² (hasta 35A)</p>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <h4 style="color:#FFF;">Ferretería Ukra Chile</h4>
+        <p style="font-size:0.875rem;">Portal técnico de información en energía solar, ingeniería eléctrica, normativas SEC y materiales de construcción.</p>
+      </div>
+      <div>
+        <h4 style="color:#FFF;">Enlaces Rápidos</h4>
+        <p><a href="/" style="color:#94A3B8;">&rarr; Inicio Blog Ferretería Ukra</a></p>
+        <p><a href="/blog/las-mejores-marcas-de-alargadores-electricos-guia-completa-para-elegir/" style="color:#94A3B8;">&rarr; Mejores Marcas de Alargadores</a></p>
+        <p><a href="/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/" style="color:#94A3B8;">&rarr; Medición de Fase y Neutro</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Ferretería Ukra Blog Chile. Guías de energía solar y electrotecnia.</div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+  </script>
+</body>
+</html>
