@@ -178,10 +178,6 @@
       padding: 0;
     }
 
-    html {
-      overflow-x: hidden;
-    }
-
     body {
       font-family: var(--font-stack);
       background-color: var(--bg-body);
@@ -190,7 +186,6 @@
       font-size: 1rem;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
-      width: 100%;
     }
 
     a {
@@ -369,15 +364,25 @@
       color: #CBD5E1;
     }
 
+    /* ===================================================== */
+    /* FIX PRINCIPAL: Grid Items necesitan min-width:0        */
+    /* para poder encogerse por debajo del contenido (tablas) */
+    /* ===================================================== */
     .layout-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2.5rem;
+      min-width: 0;
     }
     @media (min-width: 992px) {
       .layout-grid {
         grid-template-columns: 2.5fr 1fr;
       }
+    }
+    .layout-grid > main,
+    .layout-grid > aside.sidebar {
+      min-width: 0;
+      width: 100%;
     }
 
     article.main-article {
@@ -386,8 +391,8 @@
       padding: 2.5rem;
       box-shadow: var(--shadow-sm);
       border: 1px solid var(--border-color);
-      max-width: 100%;
-      overflow-wrap: break-word;
+      min-width: 0;
+      width: 100%;
     }
 
     .category-pill {
@@ -411,6 +416,7 @@
       color: #0F172A;
       margin-bottom: 1.25rem;
       letter-spacing: -0.02em;
+      overflow-wrap: break-word;
     }
 
     .article-meta {
@@ -425,11 +431,16 @@
       color: var(--text-muted);
     }
 
+    .article-body {
+      min-width: 0;
+    }
+
     .article-body p {
       margin-bottom: 1.25rem;
       color: #334155;
       font-size: 1.05rem;
       line-height: 1.75;
+      overflow-wrap: break-word;
     }
 
     .article-body h2 {
@@ -439,6 +450,7 @@
       margin-bottom: 1rem;
       padding-bottom: 0.4rem;
       border-bottom: 2px solid #F1F5F9;
+      overflow-wrap: break-word;
     }
 
     .article-body h3 {
@@ -446,17 +458,26 @@
       color: #1E293B;
       margin-top: 1.75rem;
       margin-bottom: 0.75rem;
+      overflow-wrap: break-word;
     }
 
+    /* ===================================================== */
+    /* FIX TABLAS: se elimina el min-width forzado que rompía */
+    /* el layout. Ahora la tabla ocupa 100% y en pantallas    */
+    /* chicas se puede desplazar horizontalmente sin afectar  */
+    /* al resto del artículo.                                 */
+    /* ===================================================== */
     .table-wrapper {
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
       margin: 1.75rem 0;
       border-radius: var(--radius-md);
       border: 1px solid var(--border-color);
+      max-width: 100%;
     }
     .table-wrapper table {
-      min-width: 560px;
+      width: 100%;
+      border-collapse: collapse;
     }
 
     .formula-box {
@@ -470,6 +491,7 @@
       color: #0F172A;
       overflow-x: auto;
       word-break: break-word;
+      max-width: 100%;
     }
 
     aside.sidebar {
@@ -550,15 +572,16 @@
         width: 100%;
       }
       .table-wrapper table {
-        font-size: 0.85rem !important;
+        font-size: 0.82rem;
       }
       .table-wrapper th,
       .table-wrapper td {
         padding: 8px !important;
+        white-space: normal;
       }
       .formula-box {
         padding: 1rem;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
       }
     }
 
@@ -610,6 +633,7 @@
       div[style*="max-width:540px"],
       div[style*="max-width:520px"] {
         padding: 16px !important;
+        max-width: 100% !important;
       }
     }
   </style>
@@ -715,7 +739,7 @@
             <p>El parámetro clave en los cálculos es el número de <strong>Horas Sol Pico (HSP)</strong>, definido como el número de horas equivalentes en que la irradiancia solar alcanza un valor constante de 1.000 Watts por metro cuadrado (1.000 W/m²):</p>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;font-size:0.95em">
+              <table>
                 <thead>
                   <tr style="background:#F1F5F9">
                     <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Zona Geográfica Chile</th>
@@ -791,7 +815,7 @@
             <p><strong>3. Sistemas Híbridos (On-Grid + Respaldo de Baterías EPS):</strong> Combina la inyección de excedentes a la red bajo la Ley 20.571 con la capacidad de mantener encendidos los circuitos críticos de la casa (refrigerador, luces, router Wi-Fi y bombas) mediante baterías de litio durante apagones prolongados.</p>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;font-size:0.95em">
+              <table>
                 <thead>
                   <tr style="background:#F1F5F9">
                     <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Característica</th>
@@ -839,7 +863,7 @@
             <p>Evaluar el presupuesto de una instalación solar en Chile exige cuantificar los componentes del kit solar, las estructuras de montaje de aluminio sobre teja o zinc, los tableros de protección CC/CA y la mano de obra autorizada SEC:</p>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;font-size:0.95em">
+              <table>
                 <thead>
                   <tr style="background:#F1F5F9">
                     <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Potencia Sistema</th>
