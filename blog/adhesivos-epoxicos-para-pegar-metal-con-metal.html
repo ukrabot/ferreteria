@@ -222,6 +222,8 @@
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    html { overflow-x: hidden; }
+
     body {
       font-family: var(--font-stack);
       background-color: var(--bg-body);
@@ -229,6 +231,7 @@
       line-height: 1.65;
       font-size: 1rem;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     a { color: #0057e7; text-decoration: none; transition: color 0.2s ease; }
@@ -271,6 +274,18 @@
       border-radius: 4px; text-transform: uppercase; font-weight: 700;
     }
 
+    /* Menu Toggle (Hamburguesa) */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #FFF;
+      font-size: 1.75rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+    }
+
     nav ul { display: flex; list-style: none; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
     nav a {
       color: #CBD5E1; font-weight: 500; font-size: 0.95rem; padding: 0.4rem 0.2rem;
@@ -278,7 +293,28 @@
     }
     nav a:hover, nav a.active { color: #FFFFFF; text-decoration: none; border-bottom-color: var(--primary); }
 
-    .container { max-width: 1240px; margin: 2rem auto; padding: 0 1.5rem; }
+    /* Responsive Header */
+    @media (max-width: 860px) {
+      .menu-toggle { display: block; }
+      nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 0.75rem;
+        border-top: 1px solid #334155;
+        padding-top: 0.75rem;
+      }
+      nav.active { display: block; }
+      nav ul { flex-direction: column; gap: 0; width: 100%; }
+      nav ul li { width: 100%; }
+      nav a {
+        display: block;
+        padding: 0.85rem 0.25rem;
+        border-bottom: 1px solid #334155;
+      }
+    }
+
+    .container { max-width: 1240px; margin: 2rem auto; padding: 0 1.5rem; width: 100%; }
 
     .breadcrumbs {
       display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem;
@@ -288,14 +324,28 @@
     .breadcrumbs a:hover { color: var(--primary); }
     .breadcrumbs span.separator { color: #CBD5E1; }
 
-    .layout-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
-    @media (min-width: 992px) { .layout-grid { grid-template-columns: 2.5fr 1fr; } }
+    /* FIX PRINCIPAL: grid items deben poder encogerse bajo el contenido (tablas) */
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      min-width: 0;
+    }
+    @media (min-width: 992px) {
+      .layout-grid { grid-template-columns: 2.5fr 1fr; }
+    }
+    .layout-grid > main,
+    .layout-grid > aside.sidebar {
+      min-width: 0;
+      width: 100%;
+    }
 
     article.main-article {
       background: var(--bg-card); border-radius: var(--radius-lg); padding: 2.5rem;
       box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);
+      min-width: 0;
+      width: 100%;
     }
-    @media (max-width: 576px) { article.main-article { padding: 1.5rem; } }
 
     .category-pill {
       display: inline-block; background-color: #FEF2F2; color: var(--primary);
@@ -304,8 +354,10 @@
       margin-bottom: 1rem; border: 1px solid #FCA5A5;
     }
 
-    h1.article-title { font-size: 2.1rem; line-height: 1.3; font-weight: 800; color: #0F172A; margin-bottom: 1.25rem; letter-spacing: -0.02em; }
-    @media (max-width: 576px) { h1.article-title { font-size: 1.6rem; } }
+    h1.article-title {
+      font-size: 2.1rem; line-height: 1.3; font-weight: 800; color: #0F172A;
+      margin-bottom: 1.25rem; letter-spacing: -0.02em; overflow-wrap: break-word;
+    }
 
     .article-meta {
       display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem;
@@ -313,13 +365,27 @@
       margin-bottom: 2rem; font-size: 0.9rem; color: var(--text-muted);
     }
 
-    .article-body p { margin-bottom: 1.25rem; color: #334155; font-size: 1.05rem; line-height: 1.75; }
-    .article-body h2 { font-size: 1.55rem; color: #0F172A; margin-top: 2.25rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 2px solid #F1F5F9; scroll-margin-top: 90px; }
-    .article-body h3 { font-size: 1.2rem; color: #1E293B; margin-top: 1.75rem; margin-bottom: 0.75rem; }
-    .article-body ul, .article-body ol { margin: 0 0 1.25rem 1.5rem; color: #334155; line-height: 1.75; }
-    .article-body li { margin-bottom: 0.4rem; }
+    .article-body { min-width: 0; }
 
-    .table-wrapper { overflow-x: auto; margin: 1.75rem 0; border-radius: var(--radius-md); border: 1px solid var(--border-color); }
+    .article-body p { margin-bottom: 1.25rem; color: #334155; font-size: 1.05rem; line-height: 1.75; overflow-wrap: break-word; }
+    .article-body h2 {
+      font-size: 1.55rem; color: #0F172A; margin-top: 2.25rem; margin-bottom: 1rem;
+      padding-bottom: 0.4rem; border-bottom: 2px solid #F1F5F9; scroll-margin-top: 90px;
+      overflow-wrap: break-word;
+    }
+    .article-body h3 { font-size: 1.2rem; color: #1E293B; margin-top: 1.75rem; margin-bottom: 0.75rem; overflow-wrap: break-word; }
+    .article-body ul, .article-body ol { margin: 0 0 1.25rem 1.5rem; color: #334155; line-height: 1.75; }
+    .article-body li { margin-bottom: 0.4rem; overflow-wrap: break-word; }
+
+    /* FIX TABLAS: overflow-x contenido, sin romper el resto del layout */
+    .table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 1.75rem 0;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      max-width: 100%;
+    }
     .tech-table { width: 100%; border-collapse: collapse; font-size: 0.85em; min-width: 640px; }
     .tech-table th { padding: 10px 6px; border: 1px solid #CBD5E1; text-align: left; background: #F1F5F9; }
     .tech-table td { padding: 8px 6px; border: 1px solid #E2E8F0; }
@@ -333,17 +399,18 @@
       background: #F1F5F9; border-left: 4px solid var(--primary); padding: 1.25rem 1.5rem;
       margin: 1.5rem 0; border-radius: 0 var(--radius-md) var(--radius-md) 0;
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 1.02rem; color: #0F172A;
+      overflow-wrap: break-word; word-break: break-word;
     }
 
     .highlight-box { margin: 24px 0; padding: 18px 22px; background: #FFF5F5; border-left: 4px solid var(--primary); border-radius: 0 8px 8px 0; }
-    .highlight-box p { margin: 0; font-size: 15px; color: #1E293B; line-height: 1.6; }
+    .highlight-box p { margin: 0; font-size: 15px; color: #1E293B; line-height: 1.6; overflow-wrap: break-word; }
     .highlight-box strong.label { color: var(--primary-hover); }
 
     .howto-list { counter-reset: step; list-style: none; margin: 1.5rem 0 !important; padding: 0 !important; }
     .howto-list li {
       counter-increment: step; position: relative; padding: 16px 18px 16px 58px;
       margin: 12px 0 !important; background: #FAFAFA; border: 1px solid var(--border-color);
-      border-radius: var(--radius-md); color: #334155;
+      border-radius: var(--radius-md); color: #334155; overflow-wrap: break-word;
     }
     .howto-list li::before {
       content: counter(step); position: absolute; left: 16px; top: 16px;
@@ -388,15 +455,53 @@
 
     footer { background-color: #0F172A; color: #94A3B8; padding: 3rem 0 1.5rem 0; margin-top: 4rem; border-top: 4px solid var(--primary); }
     .footer-inner { max-width: 1240px; margin: 0 auto; padding: 0 1.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; }
-    .footer-inner h4 { color: #FFF; margin-bottom: 0.5rem; }
+    .footer-inner h2 { color: #FFF; margin-bottom: 0.5rem; font-size: 1.1rem; }
     .footer-inner p { font-size: 0.875rem; margin-bottom: 0.35rem; }
     .footer-inner a { color: #94A3B8; }
     .footer-inner a:hover { color: #FFF; }
-    .footer-bottom { max-width: 1240px; margin: 2.5rem auto 0 auto; padding: 1.5rem 1.5rem 0 1.5rem; border-top: 1px solid #1E293B; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 0.85rem; }
+    .footer-bottom {
+      max-width: 1240px; margin: 2.5rem auto 0 auto; padding: 1.5rem 1.5rem 0 1.5rem;
+      border-top: 1px solid #1E293B; display: flex; flex-wrap: wrap;
+      justify-content: space-between; align-items: center; font-size: 0.85rem; gap: 0.5rem;
+    }
 
     @media (prefers-reduced-motion: reduce) {
       .scroll-smooth { scroll-behavior: auto; }
       .progress-bar { transition: none; }
+    }
+
+    /* ============================= */
+    /* AJUSTES RESPONSIVE ADICIONALES */
+    /* ============================= */
+    @media (max-width: 768px) {
+      article.main-article { padding: 1.75rem 1.25rem; }
+      h1.article-title { font-size: 1.7rem; }
+      .article-body h2 { font-size: 1.3rem; }
+      .article-body h3 { font-size: 1.1rem; }
+      .article-body p, .article-body li { font-size: 1rem; }
+      .article-meta { gap: 0.75rem; font-size: 0.85rem; }
+      .article-meta > div:last-child { margin-left: 0 !important; width: 100%; }
+      .tech-table { font-size: 0.82rem; }
+      .tech-table th, .tech-table td { padding: 8px 6px !important; }
+      .howto-list li { padding: 14px 16px 14px 52px; }
+      .formula-box { font-size: 0.92rem; padding: 1rem 1.1rem; }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { padding: 0.75rem 1rem; }
+      .brand-logo { font-size: 1.05rem; gap: 0.5rem; }
+      .brand-logo svg { width: 26px; height: 26px; }
+      .brand-logo span.badge { font-size: 0.55rem; }
+      .top-bar { font-size: 0.75rem; line-height: 1.4; padding: 0.5rem 0.75rem; }
+      .container { margin: 1.25rem auto; padding: 0 1rem; }
+      article.main-article { padding: 1.25rem 1rem; border-radius: var(--radius-md); }
+      h1.article-title { font-size: 1.4rem; }
+      .article-figure img { height: 180px !important; }
+      .widget { padding: 1.15rem; }
+      .footer-inner { gap: 1.75rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .cta-box { padding: 18px 16px; }
+      .highlight-box { padding: 14px 16px; }
     }
   </style>
 
@@ -428,7 +533,12 @@
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.4-2.4c.4-.4.4-1 0-1.3z"/></svg>
         Ferretería Ukra <span class="badge">Materiales</span>
       </a>
-      <nav aria-label="Navegación principal">
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav aria-label="Navegación principal" id="mainNav">
         <ul>
           <li><a href="/">Inicio</a></li>
           <li><a href="/categoria/materiales-y-adhesivos/">Materiales y Adhesivos</a></li>
@@ -648,7 +758,7 @@
             <p>Un aspecto frecuentemente ignorado es qué ocurre cuando se unen dos metales de distinta naturaleza electroquímica, como acero y aluminio, o acero y cobre. En contacto eléctrico directo y en presencia de humedad, estos pares forman una <strong>celda galvánica</strong> que acelera la corrosión del metal menos noble (el ánodo).</p>
 
             <div class="highlight-box">
-              <p><strong class="label">Ventaja técnica del epóxico:</strong> al ser un material no conductor eléctrico, una capa de adhesivo epóxico entre dos metales distintos actúa como barrera dieléctrica, interrumpiendo el circuito galvánico que causaría corrosión acelerada si esos mismos metales estuvieran soldados o en contacto metal-metal directo (por ejemplo, con un tornillo sin aislamiento). Esto convierte al epóxico en una opción técnicamente superior a la fijación mecánica directa quando se combinan metales incompatibles.</p>
+              <p><strong class="label">Ventaja técnica del epóxico:</strong> al ser un material no conductor eléctrico, una capa de adhesivo epóxico entre dos metales distintos actúa como barrera dieléctrica, interrumpiendo el circuito galvánico que causaría corrosión acelerada si esos mismos metales estuvieran soldados o en contacto metal-metal directo (por ejemplo, con un tornillo sin aislamiento). Esto convierte al epóxico en una opción técnicamente superior a la fijación mecánica directa cuando se combinan metales incompatibles.</p>
             </div>
 
             <div class="table-wrapper">
@@ -892,6 +1002,7 @@
   </footer>
 
   <script>
+    // Barra de progreso de lectura
     (function () {
       const progressBar = document.getElementById('progressBar');
       let ticking = false;
@@ -911,6 +1022,26 @@
         }
       }, { passive: true });
     })();
+
+    // Menú hamburguesa (Responsive)
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', function () {
+      const isOpen = mainNav.classList.toggle('active');
+      this.setAttribute('aria-expanded', isOpen);
+      this.innerHTML = isOpen ? '✕' : '☰';
+    });
+
+    document.querySelectorAll('#mainNav a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 860) {
+          mainNav.classList.remove('active');
+          menuToggle.innerHTML = '☰';
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
   </script>
 
 </body>
