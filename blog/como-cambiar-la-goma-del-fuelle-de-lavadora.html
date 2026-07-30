@@ -183,6 +183,8 @@
       padding: 0;
     }
 
+    html { overflow-x: hidden; }
+
     body {
       font-family: var(--font-stack);
       background-color: var(--bg-body);
@@ -190,6 +192,7 @@
       line-height: 1.65;
       font-size: 1rem;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     a {
@@ -206,6 +209,13 @@
       height: auto;
       display: block;
     }
+
+    .skip-link {
+      position: absolute; left: -9999px; top: 0; background: #FFFFFF;
+      color: var(--text-main); padding: 12px 20px; z-index: 200;
+      font-weight: 700; border-radius: 0 0 8px 0; box-shadow: var(--shadow-md);
+    }
+    .skip-link:focus { left: 0; }
 
     .progress-container {
       position: fixed;
@@ -251,6 +261,8 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.85rem 1.5rem;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
 
     .brand-logo {
@@ -266,6 +278,7 @@
       width: 34px;
       height: 34px;
       fill: var(--primary);
+      flex-shrink: 0;
     }
     .brand-logo span.badge {
       font-size: 0.65rem;
@@ -277,11 +290,24 @@
       font-weight: 700;
     }
 
+    /* Menu Toggle (Hamburguesa) */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #FFF;
+      font-size: 1.75rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+    }
+
     nav ul {
       display: flex;
       list-style: none;
       gap: 1.5rem;
       align-items: center;
+      flex-wrap: wrap;
     }
     nav a {
       color: #CBD5E1;
@@ -296,10 +322,32 @@
       border-bottom-color: var(--primary);
     }
 
+    /* Responsive Header */
+    @media (max-width: 860px) {
+      .menu-toggle { display: block; }
+      nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 0.75rem;
+        border-top: 1px solid #334155;
+        padding-top: 0.75rem;
+      }
+      nav.active { display: block; }
+      nav ul { flex-direction: column; gap: 0; width: 100%; }
+      nav ul li { width: 100%; }
+      nav a {
+        display: block;
+        padding: 0.85rem 0.25rem;
+        border-bottom: 1px solid #334155;
+      }
+    }
+
     .container {
       max-width: 1240px;
       margin: 2rem auto;
       padding: 0 1.5rem;
+      width: 100%;
     }
 
     .breadcrumbs {
@@ -321,15 +369,22 @@
       color: #CBD5E1;
     }
 
+    /* FIX PRINCIPAL: grid items deben poder encogerse bajo el contenido (tablas) */
     .layout-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2.5rem;
+      min-width: 0;
     }
     @media (min-width: 992px) {
       .layout-grid {
         grid-template-columns: 2.5fr 1fr;
       }
+    }
+    .layout-grid > main,
+    .layout-grid > aside.sidebar {
+      min-width: 0;
+      width: 100%;
     }
 
     article.main-article {
@@ -338,6 +393,8 @@
       padding: 2.5rem;
       box-shadow: var(--shadow-sm);
       border: 1px solid var(--border-color);
+      min-width: 0;
+      width: 100%;
     }
 
     .category-pill {
@@ -361,6 +418,7 @@
       color: #0F172A;
       margin-bottom: 1.25rem;
       letter-spacing: -0.02em;
+      overflow-wrap: break-word;
     }
 
     .article-meta {
@@ -375,11 +433,14 @@
       color: var(--text-muted);
     }
 
+    .article-body { min-width: 0; }
+
     .article-body p {
       margin-bottom: 1.25rem;
       color: #334155;
       font-size: 1.05rem;
       line-height: 1.75;
+      overflow-wrap: break-word;
     }
 
     .article-body h2 {
@@ -389,6 +450,8 @@
       margin-bottom: 1rem;
       padding-bottom: 0.4rem;
       border-bottom: 2px solid #F1F5F9;
+      scroll-margin-top: 90px;
+      overflow-wrap: break-word;
     }
 
     .article-body h3 {
@@ -396,13 +459,23 @@
       color: #1E293B;
       margin-top: 1.75rem;
       margin-bottom: 0.75rem;
+      overflow-wrap: break-word;
     }
 
+    .article-body ul { overflow-wrap: break-word; }
+    .article-body li { overflow-wrap: break-word; }
+
+    /* FIX TABLAS: overflow-x contenido, sin romper el resto del layout */
     .table-wrapper {
       overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       margin: 1.75rem 0;
       border-radius: var(--radius-md);
       border: 1px solid var(--border-color);
+      max-width: 100%;
+    }
+    .table-wrapper table {
+      min-width: 620px;
     }
 
     .formula-box {
@@ -411,9 +484,11 @@
       padding: 1.25rem 1.5rem;
       margin: 1.5rem 0;
       border-radius: 0 var(--radius-md) var(--radius-md) 0;
-      font-family: monospace;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       font-size: 1.02rem;
       color: #0F172A;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
 
     .warning-box {
@@ -424,7 +499,56 @@
       border-radius: 0 var(--radius-md) var(--radius-md) 0;
       font-size: 0.98rem;
       color: #78350F;
+      overflow-wrap: break-word;
     }
+
+    .info-box {
+      text-align: center;
+      margin: 32px auto;
+      padding: 20px 24px;
+      max-width: 540px;
+      background: #EFF6FF;
+      border-left: 4px solid #0057e7;
+      border-radius: 0 8px 8px 0;
+    }
+    .info-box p { overflow-wrap: break-word; }
+
+    .article-figure { margin: 24px auto; text-align: center; max-width: 600px; }
+    .article-figure img {
+      width: 100%;
+      max-width: 600px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin: 0 auto;
+    }
+    .article-figure figcaption {
+      font-size: 0.85em;
+      color: var(--text-muted);
+      margin-top: 6px;
+      font-style: italic;
+    }
+
+    .cta-box {
+      text-align: center;
+      margin: 40px auto;
+      padding: 28px 24px;
+      max-width: 520px;
+      background: #F8FAFC;
+      border: 2px solid #E2E8F0;
+      border-radius: 12px;
+    }
+    .cta-box p.cta-title { font-size: 16px; font-weight: 700; color: #0F172A; margin: 0 0 8px; line-height: 1.4; }
+    .cta-box p.cta-text { font-size: 14px; color: #64748B; margin: 0 0 20px; }
+    .cta-box a.cta-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--primary);
+      color: #FFF;
+      font-weight: 700;
+      border-radius: 6px;
+    }
+    .cta-box a.cta-btn:hover { background: var(--primary-hover); text-decoration: none; }
 
     aside.sidebar {
       display: flex;
@@ -447,6 +571,17 @@
       padding-bottom: 0.5rem;
       border-bottom: 2px solid var(--primary);
     }
+    .widget-btn {
+      display: block;
+      text-align: center;
+      padding: 0.65rem;
+      color: #FFF;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.75rem;
+    }
+    .widget-btn:last-child { margin-bottom: 0; }
+    .widget-btn:hover { opacity: 0.9; text-decoration: none; }
 
     footer {
       background-color: #0F172A;
@@ -473,6 +608,46 @@
       justify-content: space-between;
       align-items: center;
       font-size: 0.85rem;
+      gap: 0.5rem;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-smooth { scroll-behavior: auto; }
+      .progress-bar { transition: none; }
+    }
+
+    /* ============================= */
+    /* AJUSTES RESPONSIVE ADICIONALES */
+    /* ============================= */
+    @media (max-width: 768px) {
+      article.main-article { padding: 1.75rem 1.25rem; }
+      h1.article-title { font-size: 1.7rem; }
+      .article-body h2 { font-size: 1.3rem; }
+      .article-body h3 { font-size: 1.1rem; }
+      .article-body p, .article-body li { font-size: 1rem; }
+      .article-meta { gap: 0.75rem; font-size: 0.85rem; }
+      .article-meta > div:last-child { margin-left: 0 !important; width: 100%; }
+      .table-wrapper table { font-size: 0.82rem !important; }
+      .table-wrapper th, .table-wrapper td { padding: 8px 6px !important; }
+      .formula-box, .warning-box { font-size: 0.92rem; padding: 1rem 1.1rem; }
+      .info-box { padding: 16px 18px; max-width: 100%; }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { padding: 0.75rem 1rem; }
+      .brand-logo { font-size: 1.05rem; gap: 0.5rem; }
+      .brand-logo svg { width: 26px; height: 26px; }
+      .brand-logo span.badge { font-size: 0.55rem; }
+      .top-bar { font-size: 0.75rem; line-height: 1.4; padding: 0.5rem 0.75rem; }
+      .container { margin: 1.25rem auto; padding: 0 1rem; }
+      article.main-article { padding: 1.25rem 1rem; border-radius: var(--radius-md); }
+      h1.article-title { font-size: 1.4rem; }
+      .article-figure img { height: 180px !important; }
+      .widget { padding: 1.15rem; }
+      .footer-inner { gap: 1.75rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .cta-box { padding: 18px 16px; max-width: 100%; }
+      .warning-box, .formula-box, .info-box { padding: 14px 16px; }
     }
   </style>
 
@@ -490,6 +665,8 @@
   </script>
 </head>
 <body>
+
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
   <!-- Reading Progress Bar -->
   <div class="progress-container" aria-hidden="true">
@@ -511,12 +688,16 @@
         Ferretería Ukra <span class="badge">Hogar</span>
       </a>
 
-      <nav aria-label="Navegación principal">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav aria-label="Navegación principal" id="mainNav">
         <ul>
           <li><a href="/">Inicio</a></li>
           <li><a href="/#guias">Guías Técnicas</a></li>
           <li><a href="/blog/guia-completa-para-la-instalacion-de-tablero-de-transferencia-automatica-ats/">Tableros ATS</a></li>
-          <li><a href="#" class="active">Electrodomésticos</a></li>
+          <li><a href="#" class="active" aria-current="page">Electrodomésticos</a></li>
         </ul>
       </nav>
     </div>
@@ -537,7 +718,7 @@
     <div class="layout-grid">
       
       <!-- Main Content Area -->
-      <main>
+      <main id="main-content">
         <article class="main-article" itemscope itemtype="https://schema.org/BlogPosting">
           
           <span class="category-pill">Reparación de Lavadoras &amp; Bricolaje</span>
@@ -561,12 +742,12 @@
 
             <p>En esta guía técnica completa te mostramos cómo <strong>diagnosticar, medir, retirar e instalar</strong> correctamente un fuelle nuevo, qué herramientas necesitas, cuánto cuesta el repuesto en Chile según marca, y los errores más comunes que provocan que la reparación falle y la fuga de agua persista.</p>
 
-            <figure style="margin:24px auto;text-align:center;max-width:600px;display:block">
-              <img src="https://images.pexels.com/photos/3768997/pexels-photo-3768997.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Técnico revisando la goma del fuelle de la puerta de una lavadora de carga frontal" style="width:100%;max-width:600px;height:240px;object-fit:cover;border-radius:8px;display:block;margin:0 auto" loading="lazy">
-              <figcaption style="font-size:0.85em;color:#64748B;margin-top:6px;font-style:italic">El fuelle de caucho EPDM sella la unión entre la carcasa y el tambor de la lavadora.</figcaption>
+            <figure class="article-figure">
+              <img src="https://images.pexels.com/photos/3768997/pexels-photo-3768997.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Técnico revisando la goma del fuelle de la puerta de una lavadora de carga frontal" loading="lazy">
+              <figcaption>El fuelle de caucho EPDM sella la unión entre la carcasa y el tambor de la lavadora.</figcaption>
             </figure>
 
-            <h2>1. ¿Por Qué se Rompe o se Llena de Moho la Goma del Fuelle?</h2>
+            <h2 id="por-que-se-rompe">1. ¿Por Qué se Rompe o se Llena de Moho la Goma del Fuelle?</h2>
 
             <p>Antes de comprar el repuesto, es importante entender el origen de la falla para evitar que se repita con la goma nueva. Las causas más frecuentes registradas en servicio técnico son:</p>
 
@@ -578,12 +759,12 @@
               <li><strong>Productos de limpieza abrasivos:</strong> el cloro concentrado y los desengrasantes industriales resecan y agrietan el caucho con el uso repetido.</li>
             </ul>
 
-            <h2>2. Síntomas de que Necesitas Cambiar el Fuelle Urgentemente</h2>
+            <h2 id="sintomas">2. Síntomas de que Necesitas Cambiar el Fuelle Urgentemente</h2>
 
             <p>Identifica estas señales de advertencia antes de que la falla dañe otros componentes eléctricos del equipo, como el motor o la tarjeta electrónica de control:</p>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em">
+              <table style="width:100%;border-collapse:collapse;font-size:0.95em">
                 <thead>
                   <tr style="background:#F1F5F9">
                     <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Síntoma Observado</th>
@@ -616,12 +797,12 @@
               </table>
             </div>
 
-            <h2>3. Herramientas y Materiales Necesarios</h2>
+            <h2 id="herramientas">3. Herramientas y Materiales Necesarios</h2>
 
             <p>Esta reparación no requiere herramientas especializadas costosas. Con un set básico de mecánica doméstica es suficiente:</p>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em">
+              <table style="width:100%;border-collapse:collapse;font-size:0.95em">
                 <thead>
                   <tr style="background:#F1F5F9">
                     <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Herramienta / Material</th>
@@ -664,7 +845,7 @@
               </table>
             </div>
 
-            <h2>4. Cómo Medir y Elegir la Goma Correcta para tu Lavadora</h2>
+            <h2 id="medir">4. Cómo Medir y Elegir la Goma Correcta para tu Lavadora</h2>
 
             <p>El error más común al comprar el repuesto es guiarse solo por la marca. Aunque ayuda, lo técnicamente correcto es tomar tres medidas y datos antes de la compra:</p>
 
@@ -678,7 +859,7 @@
             <p>Además, revisa que el fuelle nuevo incluya la <strong>marca de fábrica o muesca de alineación</strong> (generalmente un punto en relieve o una flecha) que debe coincidir con el punto de desagüe inferior o con el sensor de bloqueo de la puerta, según el modelo.</p>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em">
+              <table style="width:100%;border-collapse:collapse;font-size:0.95em">
                 <thead>
                   <tr style="background:#F1F5F9">
                     <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Marca</th>
@@ -716,12 +897,12 @@
               </table>
             </div>
 
-            <div style="text-align:center;margin:32px auto;padding:20px 24px;max-width:540px;background:#EFF6FF;border-left:4px solid #0057e7;border-radius:0 8px 8px 0">
+            <div class="info-box">
               <p style="margin:0 0 12px;font-size:15px;color:#1E293B;line-height:1.5">¿Necesitas reconectar la lavadora a un enchufe en buen estado tras la reparación?</p>
               <a href="/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/" style="font-weight:700; color:#0057e7;">Ver guía práctica de identificación de fase y neutro &rarr;</a>
             </div>
 
-            <h2>5. Guía Paso a Paso: Cómo Retirar el Fuelle Dañado</h2>
+            <h2 id="retirar-fuelle">5. Guía Paso a Paso: Cómo Retirar el Fuelle Dañado</h2>
 
             <div class="warning-box">
               ⚠️ <strong>Advertencia de seguridad:</strong> Desconecta siempre la lavadora del enchufe y cierra la llave de paso de agua antes de iniciar. Nunca manipules el equipo con las manos mojadas ni con el cable de poder conectado a la red.
@@ -739,7 +920,7 @@
             <h3>Paso 4: Limpiar la carcasa y el tambor</h3>
             <p>Con un paño húmedo y un limpiador antihongos, elimina todo rastro de moho, óxido o restos de silicona vieja tanto en el aro metálico del tambor como en el marco plástico de la carcasa. Una superficie limpia garantiza un sellado hermético con el fuelle nuevo.</p>
 
-            <h2>6. Guía Paso a Paso: Cómo Instalar el Fuelle Nuevo</h2>
+            <h2 id="instalar-fuelle">6. Guía Paso a Paso: Cómo Instalar el Fuelle Nuevo</h2>
 
             <h3>Paso 5: Instalación en el tambor</h3>
             <p>Ubica la marca de fábrica o muesca de alineación del fuelle nuevo (normalmente coincide con el punto más bajo, cercano al desagüe). Encaja primero el borde interior de la goma en el aro del tambor, presionando uniformemente con los dedos en todo el contorno antes de fijar el resorte interior en su ranura.</p>
@@ -755,7 +936,7 @@
             <h3>Paso 7: Prueba de funcionamiento y hermeticidad</h3>
             <p>Reconecta la lavadora a la red eléctrica y abre la llave de paso de agua. Ejecuta un ciclo corto de lavado sin ropa, con la puerta cerrada, y observa atentamente la base del equipo durante 10 a 15 minutos. Si no detectas goteo ni humedad, la instalación fue exitosa.</p>
 
-            <h2>7. Errores Comunes que Arruinan la Instalación</h2>
+            <h2 id="errores">7. Errores Comunes que Arruinan la Instalación</h2>
 
             <ul style="margin:1rem 0 1.5rem 1.5rem; color:#334155; line-height:1.75;">
               <li><strong>No alinear la marca de fábrica:</strong> instalar el fuelle girado provoca que el pliegue de drenaje quede en la posición incorrecta, generando fugas lentas y persistentes.</li>
@@ -765,7 +946,7 @@
               <li><strong>No revisar objetos atrapados:</strong> si el cierre metálico o la moneda que causó la rotura original no se retira, dañará también el fuelle nuevo en pocas semanas.</li>
             </ul>
 
-            <h2>8. Mantenimiento Preventivo para Prolongar la Vida del Fuelle</h2>
+            <h2 id="mantenimiento">8. Mantenimiento Preventivo para Prolongar la Vida del Fuelle</h2>
 
             <p>Una vez instalada la goma nueva, estos hábitos simples pueden extender su vida útil más allá de los 8 años:</p>
 
@@ -777,7 +958,7 @@
               <li>Utiliza detergentes líquidos en dosis moderadas; el exceso de espuma reseca el caucho con el tiempo.</li>
             </ul>
 
-            <div style="text-align:center;margin:32px auto;padding:20px 24px;max-width:540px;background:#EFF6FF;border-left:4px solid #0057e7;border-radius:0 8px 8px 0">
+            <div class="info-box">
               <p style="margin:0 0 12px;font-size:15px;color:#1E293B;line-height:1.5">¿Buscas el cable de extensión correcto para tu lavadora o secadora?</p>
               <a href="/blog/las-mejores-marcas-de-alargadores-electricos-guia-completa-para-elegir/" style="font-weight:700; color:#0057e7;">Ver guía técnica de alargadores y calibre de cables mm² &rarr;</a>
             </div>
@@ -814,10 +995,10 @@
 
             <p>Antes de dar por finalizada la reparación, realiza siempre una <strong>prueba de ciclo corto sin ropa</strong> para confirmar la hermeticidad del sellado, y adopta hábitos de mantenimiento preventivo como ventilar la puerta y revisar los bolsillos de la ropa, para que tu nuevo fuelle supere los 8 años de vida útil sin inconvenientes.</p>
 
-            <div style="text-align:center;margin:40px auto;padding:28px 24px;max-width:520px;background:#F8FAFC;border:2px solid #E2E8F0;border-radius:12px">
-              <p style="font-size:16px;font-weight:700;color:#0F172A;margin:0 0 8px;line-height:1.4">¿Reparando electrodomésticos en tu hogar?</p>
-              <p style="font-size:14px;color:#64748B;margin:0 0 20px">Encuentra alicates, destornilladores, pinzas para abrazaderas, silicona neutra y guantes de protección en Ferretería Ukra.</p>
-              <a href="/" style="display:inline-block; padding:10px 20px; background:var(--primary); color:#FFF; font-weight:700; border-radius:6px;">🛒 Explorar Catálogo Ferretería Ukra &rarr;</a>
+            <div class="cta-box">
+              <p class="cta-title">¿Reparando electrodomésticos en tu hogar?</p>
+              <p class="cta-text">Encuentra alicates, destornilladores, pinzas para abrazaderas, silicona neutra y guantes de protección en Ferretería Ukra.</p>
+              <a href="/" class="cta-btn">🛒 Explorar Catálogo Ferretería Ukra &rarr;</a>
             </div>
 
           </div>
@@ -829,16 +1010,16 @@
         <div class="widget">
           <h3 class="widget-title">🧰 Guías de Reparación del Hogar</h3>
           <p style="font-size:0.9rem; color:#475569; margin-bottom:1rem;">Manuales técnicos para reparar y mantener tus electrodomésticos e instalaciones.</p>
-          <a href="/" style="display:block; text-align:center; padding:0.65rem; background:var(--primary); color:#FFF; font-weight:700; border-radius:var(--radius-sm); margin-bottom:0.75rem;">
+          <a href="/" class="widget-btn" style="background:var(--primary);">
             &larr; Volver al Inicio (Ferretería Ukra)
           </a>
-          <a href="/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/" style="display:block; text-align:center; padding:0.65rem; background:#1E293B; color:#FFF; font-weight:700; border-radius:var(--radius-sm); margin-bottom:0.75rem;">
+          <a href="/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/" class="widget-btn" style="background:#1E293B;">
             🔌 Identificar Fase y Neutro
           </a>
-          <a href="/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/" style="display:block; text-align:center; padding:0.65rem; background:#334155; color:#FFF; font-weight:700; border-radius:var(--radius-sm); margin-bottom:0.75rem;">
+          <a href="/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/" class="widget-btn" style="background:#334155;">
             ⚡ Código de Colores de Cables Chile
           </a>
-          <a href="/blog/las-mejores-marcas-de-alargadores-electricos-guia-completa-para-elegir/" style="display:block; text-align:center; padding:0.65rem; background:#0057e7; color:#FFF; font-weight:700; border-radius:var(--radius-sm);">
+          <a href="/blog/las-mejores-marcas-de-alargadores-electricos-guia-completa-para-elegir/" class="widget-btn" style="background:#0057e7;">
             🔌 Guía de Alargadores y Amperaje
           </a>
         </div>
@@ -878,12 +1059,47 @@
   </footer>
 
   <script>
-    window.addEventListener('scroll', () => {
-      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
-      document.getElementById('progressBar').style.width = scrolled + '%';
+    // Barra de progreso de lectura
+    (function () {
+      const progressBar = document.getElementById('progressBar');
+      let ticking = false;
+
+      function updateProgress() {
+        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+        progressBar.style.width = scrolled + '%';
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          window.requestAnimationFrame(updateProgress);
+          ticking = true;
+        }
+      }, { passive: true });
+    })();
+
+    // Menú hamburguesa (Responsive)
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', function () {
+      const isOpen = mainNav.classList.toggle('active');
+      this.setAttribute('aria-expanded', isOpen);
+      this.innerHTML = isOpen ? '✕' : '☰';
+    });
+
+    document.querySelectorAll('#mainNav a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 860) {
+          mainNav.classList.remove('active');
+          menuToggle.innerHTML = '☰';
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     });
   </script>
+
 </body>
 </html>
