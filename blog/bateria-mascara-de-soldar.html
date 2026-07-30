@@ -127,6 +127,8 @@
       padding: 0;
     }
 
+    html { overflow-x: hidden; }
+
     body {
       font-family: var(--font-stack);
       background-color: var(--bg-body);
@@ -134,6 +136,7 @@
       line-height: 1.65;
       font-size: 1rem;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     a {
@@ -195,6 +198,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.85rem 1.5rem;
+      flex-wrap: wrap;
     }
 
     .brand-logo {
@@ -210,6 +214,7 @@
       width: 34px;
       height: 34px;
       fill: var(--primary);
+      flex-shrink: 0;
     }
     .brand-logo span.badge {
       font-size: 0.65rem;
@@ -221,11 +226,24 @@
       font-weight: 700;
     }
 
+    /* Menu Toggle (Hamburguesa) */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #FFF;
+      font-size: 1.75rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+    }
+
     nav ul {
       display: flex;
       list-style: none;
       gap: 1.5rem;
       align-items: center;
+      flex-wrap: wrap;
     }
     nav a {
       color: #CBD5E1;
@@ -240,10 +258,42 @@
       border-bottom-color: var(--primary);
     }
 
+    /* Responsive Header */
+    @media (max-width: 860px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 0.75rem;
+        border-top: 1px solid #334155;
+        padding-top: 0.75rem;
+      }
+      nav.active {
+        display: block;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+      }
+      nav ul li {
+        width: 100%;
+      }
+      nav a {
+        display: block;
+        padding: 0.85rem 0.25rem;
+        border-bottom: 1px solid #334155;
+      }
+    }
+
     .container {
       max-width: 1240px;
       margin: 2rem auto;
       padding: 0 1.5rem;
+      width: 100%;
     }
 
     .breadcrumbs {
@@ -265,15 +315,22 @@
       color: #CBD5E1;
     }
 
+    /* FIX PRINCIPAL: grid items deben poder encogerse bajo el contenido (tablas) */
     .layout-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2.5rem;
+      min-width: 0;
     }
     @media (min-width: 992px) {
       .layout-grid {
         grid-template-columns: 2.5fr 1fr;
       }
+    }
+    .layout-grid > main,
+    .layout-grid > aside.sidebar {
+      min-width: 0;
+      width: 100%;
     }
 
     article.main-article {
@@ -282,6 +339,8 @@
       padding: 2.5rem;
       box-shadow: var(--shadow-sm);
       border: 1px solid var(--border-color);
+      min-width: 0;
+      width: 100%;
     }
 
     .category-pill {
@@ -310,6 +369,8 @@
       color: var(--text-muted);
     }
 
+    .article-body { min-width: 0; overflow-wrap: break-word; }
+
     .article-body p {
       margin-bottom: 1.25rem;
       color: #334155;
@@ -335,9 +396,15 @@
 
     .table-wrapper {
       overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       margin: 1.75rem 0;
       border-radius: var(--radius-md);
       border: 1px solid var(--border-color);
+      max-width: 100%;
+    }
+    .table-wrapper table {
+      width: 100%;
+      border-collapse: collapse;
     }
 
     aside.sidebar {
@@ -387,6 +454,54 @@
       justify-content: space-between;
       align-items: center;
       font-size: 0.85rem;
+      gap: 0.5rem;
+    }
+
+    /* ================================================================= */
+    /* IMPORTANTE: este artículo usa estilos INLINE en h1/h2/h3/p/ul/li   */
+    /* (font-family, font-size en em, márgenes fijos). Los estilos inline */
+    /* tienen mayor especificidad que las clases .article-body h2, etc.,  */
+    /* por lo tanto los ajustes responsive deben ir con !important        */
+    /* apuntando directamente a los elementos dentro de .article-body.    */
+    /* ================================================================= */
+    @media (max-width: 768px) {
+      article.main-article { padding: 1.75rem 1.25rem; }
+
+      .article-body h1 { font-size: 1.4em !important; }
+      .article-body h2 { font-size: 1.12em !important; margin: 22px 0 10px 0 !important; }
+      .article-body h3 { font-size: 1em !important; }
+      .article-body p,
+      .article-body li { font-size: 0.96em !important; }
+
+      .article-meta { gap: 0.75rem; font-size: 0.85rem; }
+      .article-meta > div:last-child { margin-left: 0 !important; width: 100%; }
+
+      .table-wrapper table { font-size: 0.8em !important; }
+      .table-wrapper th,
+      .table-wrapper td { padding: 8px !important; white-space: normal !important; }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { padding: 0.75rem 1rem; }
+      .brand-logo { font-size: 1.05rem; gap: 0.5rem; }
+      .brand-logo svg { width: 26px; height: 26px; }
+      .brand-logo span.badge { font-size: 0.55rem; }
+      .top-bar { font-size: 0.75rem; line-height: 1.4; padding: 0.5rem 0.75rem; }
+      .container { margin: 1.25rem auto; padding: 0 1rem; }
+      article.main-article { padding: 1.25rem 1rem; border-radius: var(--radius-md); }
+
+      .article-body h1 { font-size: 1.25em !important; }
+      .article-body h2 { font-size: 1.05em !important; }
+
+      .widget { padding: 1.15rem; }
+      .footer-inner { gap: 1.75rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+
+      /* Cajas destacadas con estilos inline (border-left, background) */
+      div[style*="border-left:4px solid #e63946"],
+      div[style*="border-left:4px solid #0057e7"] {
+        padding: 12px 14px !important;
+      }
     }
   </style>
   <!-- Google AdSense Auto Ads -->
@@ -423,7 +538,11 @@
         Ferretería Ukra <span class="badge">Soldadura</span>
       </a>
 
-      <nav aria-label="Navegación principal">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav aria-label="Navegación principal" id="mainNav">
         <ul>
           <li><a href="/">Inicio</a></li>
           <li><a href="/blog/mejor-mascara-de-soldar/">Ranking Caretas</a></li>
@@ -466,7 +585,7 @@
           <!-- Article Body -->
           <div class="article-body" itemprop="articleBody">
             
-            <h1 style="font-family:Arial,sans-serif;font-size:1.6em;color:#1a1a1a;line-height:1.3;margin:0 0 16px 0;">Batería de máscara de soldar: tipos, diagnóstico de fallas y cómo cambiarla paso a paso</h1>
+            <h1 style="font-family:Arial,sans-serif;font-size:1.6em;color:#1a1a1a;line-height:1.3;margin:0 0 16px 0;overflow-wrap:break-word;">Batería de máscara de soldar: tipos, diagnóstico de fallas y cómo cambiarla paso a paso</h1>
 
             <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
               Estás en medio de un cordón de soldadura crítico, cebas el arco y repentinamente la pantalla fotosensible empieza a parpadear, dejando pasar destellos de luz directa a tus ojos.
@@ -476,7 +595,7 @@
               Muchos soldadores asumen erróneamente que la máscara se ha arruinado o que el panel solar se rompió. En el 90 % de los casos, el responsable es la <strong>batería de litio agotada</strong> dentro del cartucho LCD. Entender cómo funciona el sistema de alimentación híbrido de tu careta te permitirá reparar la falla en 10 minutos por un costo inferior a los <strong>$3.000 CLP</strong>.
             </p>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">1. ¿Cómo se alimenta electrónicamente una careta fotosensible?</h2>
+            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;overflow-wrap:break-word;">1. ¿Cómo se alimenta electrónicamente una careta fotosensible?</h2>
 
             <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
               El casete de oscurecimiento automático (ADF - <em>Auto-Darkening Filter</em>) opera bajo un sistema de energía dual compuesto por dos fuentes complementarias:
@@ -491,14 +610,14 @@
               <strong>⚠️ Mito frecuente:</strong> "Si la careta tiene panel solar, no usa pilas". Esto es falso. La celdilla solar no reacciona a tiempo suficiente para dar la partida de oscurecimiento desde estado claro (DIN 3-4). Sin la batería de litio de 3V para excitar las moléculas de cristal líquido, tus retinas recibirán el destello inicial antes de que la celda reaccione.
             </div>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">2. Modelos de baterías más comunes en el mercado chileno</h2>
+            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;overflow-wrap:break-word;">2. Modelos de baterías más comunes en el mercado chileno</h2>
 
             <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
               Las caretas fotosensibles utilizan celdas botón primarias de Litio-Dióxido de Manganeso (Li/MnO₂) de 3 Volts nominales:
             </p>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em;font-family:Arial,sans-serif;">
+              <table style="width:100%;border-collapse:collapse;margin:0;font-size:0.95em;font-family:Arial,sans-serif;">
                 <thead>
                   <tr style="background:#f0f4f8;">
                     <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Modelo Batería</th>
@@ -530,7 +649,7 @@
               </table>
             </div>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">3. Síntomas inequívocos de batería agotada o defectuosa</h2>
+            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;overflow-wrap:break-word;">3. Síntomas inequívocos de batería agotada o defectuosa</h2>
 
             <ul style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;padding-left:20px;">
               <li><strong>Indicador LED de batería baja (Low Bat):</strong> En casetes de gama media-alta, una luz LED roja o naranja parpadea en el panel interior para advertir que el voltaje ha descendido de 2,4 V.</li>
@@ -539,7 +658,7 @@
               <li><strong>Encandilamiento inicial (Flash):</strong> Retardo perceptible de varias milésimas de segundo al encender el arco.</li>
             </ul>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">4. Paso a paso para reemplazar la batería</h2>
+            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;overflow-wrap:break-word;">4. Paso a paso para reemplazar la batería</h2>
 
             <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
               Sigue estas instrucciones para sustituir la pila sin dañar los componentes optoelectrónicos:
@@ -565,7 +684,7 @@
               <strong>🛠️ Solución para caretas con batería sellada de fábrica:</strong> Si tu casete no tiene tapa externa de batería, la pila interna está soldada a la placa electrónica. Puedes abrir suavemente la carcasa de sellado con un destornillador fino, desoldar la pila agotada e instalar un portapilas externo adhesivo por $1.500 CLP para facilitar recambios futuros.
             </div>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">5. Mantenimiento preventivo y hábitos para prolongar la pila</h2>
+            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;overflow-wrap:break-word;">5. Mantenimiento preventivo y hábitos para prolongar la pila</h2>
 
             <ul style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;padding-left:20px;">
               <li><strong>Guardar en ambiente iluminado pero sin sol directo:</strong> Almacenar la careta en oscuridad total durante meses activa el circuito en estado de reposo profundo, descargando lentamente la pila de litio. Dejarla en un estante con luz ambiental suave mantiene la fotocélula equilibrada.</li>
@@ -573,33 +692,33 @@
               <li><strong>Limpiar las micas protectoras externas:</strong> Una mica sucia o llena de salpicaduras reduce un 30 % la transmisión de luz hacia los fototransistores, obligando al circuito a consumir más energía para detectar el arco.</li>
             </ul>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">Preguntas frecuentes sobre baterías de caretas fotosensibles</h2>
+            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;overflow-wrap:break-word;">Preguntas frecuentes sobre baterías de caretas fotosensibles</h2>
 
-            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Por qué mi máscara fotosensible parpadea si la celda solar recibe luz?</h3>
+            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;overflow-wrap:break-word;">¿Por qué mi máscara fotosensible parpadea si la celda solar recibe luz?</h3>
 
             <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
               La celda solar no energiza la conmutación rápida de 1/25.000 s: esa corriente instantánea la entrega la batería interna de litio (CR2032 / CR2450). La celdilla solar solo recarga el sistema y mantiene el estado claro. Si la batería de litio baja de 2,4 V, el filtro parpadea porque no puede mantener el voltaje sobre los cristales líquidos.
             </p>
 
-            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Cuáles son los modelos de pila más comunes en caretas de soldar?</h3>
+            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;overflow-wrap:break-word;">¿Cuáles son los modelos de pila más comunes en caretas de soldar?</h3>
 
             <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
               Los modelos estándar son las pilas de botón de Litio de 3 voltios CR2032 (capacidad de 220 mAh) y CR2450 (capacidad de 620 mAh). Las caretas profesionales de alta gama suelen utilizar dos pilas CR2450 para garantizar mayor autonomía en jornadas extensas.
             </p>
 
-            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Se puede cambiar la batería si el cartucho LCD no tiene portapilas visible?</h3>
+            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;overflow-wrap:break-word;">¿Se puede cambiar la batería si el cartucho LCD no tiene portapilas visible?</h3>
 
             <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
               Sí, en la mayoría de los casos. Las caretas económicas suelen tener la batería de litio soldada internamente con patillas al circuito impreso. Se puede abrir con cuidado la carcasa de plástico abs del casete, desoldar la pila agotada e instalar un portapilas externo CR2032 para recambios futuros.
             </p>
 
-            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Cuál es la vida útil promedio de la batería de una careta de soldar?</h3>
+            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;overflow-wrap:break-word;">¿Cuál es la vida útil promedio de la batería de una careta de soldar?</h3>
 
             <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
               En uso continuo profesional dura entre 12 y 24 meses (aprox. 2.000 horas de arco). En almacenamiento sin uso dentro de un maletín oscuro, la pila se descarga lentamente por baja auto-descarga en un período de 2 a 3 años.
             </p>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">Ver también en Ferretería Ukra Blog</h2>
+            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;overflow-wrap:break-word;">Ver también en Ferretería Ukra Blog</h2>
 
             <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
               <a href="/blog/como-regular-mascara-fotosensible/" style="color:#0057e7;text-decoration:underline;">Cómo regular máscara fotosensible: DIN, sensibilidad y retardo</a> |
@@ -661,11 +780,33 @@
   </footer>
 
   <script>
+    // Barra de progreso de lectura
     window.addEventListener('scroll', () => {
       const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = (winScroll / height) * 100;
       document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+
+    // Menú hamburguesa (Responsive)
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', function() {
+      const isOpen = mainNav.classList.toggle('active');
+      this.setAttribute('aria-expanded', isOpen);
+      this.innerHTML = isOpen ? '✕' : '☰';
+    });
+
+    // Cierra el menú al hacer click en un link (mejor UX en móvil)
+    document.querySelectorAll('#mainNav a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 860) {
+          mainNav.classList.remove('active');
+          menuToggle.innerHTML = '☰';
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     });
   </script>
 </body>
