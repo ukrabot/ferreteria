@@ -150,6 +150,8 @@
       padding: 0;
     }
 
+    html { overflow-x: hidden; }
+
     body {
       font-family: var(--font-stack);
       background-color: var(--bg-body);
@@ -157,6 +159,7 @@
       line-height: 1.65;
       font-size: 1rem;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     a {
@@ -218,6 +221,8 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.85rem 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
 
     .brand-logo {
@@ -233,6 +238,7 @@
       width: 34px;
       height: 34px;
       fill: var(--primary);
+      flex-shrink: 0;
     }
     .brand-logo span.badge {
       font-size: 0.65rem;
@@ -244,11 +250,24 @@
       font-weight: 700;
     }
 
+    /* Menu Toggle (Hamburguesa) */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #FFF;
+      font-size: 1.75rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+    }
+
     nav ul {
       display: flex;
       list-style: none;
       gap: 1.5rem;
       align-items: center;
+      flex-wrap: wrap;
     }
     nav a {
       color: #CBD5E1;
@@ -263,10 +282,32 @@
       border-bottom-color: var(--primary);
     }
 
+    /* Responsive Header */
+    @media (max-width: 860px) {
+      .menu-toggle { display: block; }
+      nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 0.75rem;
+        border-top: 1px solid #334155;
+        padding-top: 0.75rem;
+      }
+      nav.active { display: block; }
+      nav ul { flex-direction: column; gap: 0; width: 100%; }
+      nav ul li { width: 100%; }
+      nav a {
+        display: block;
+        padding: 0.85rem 0.25rem;
+        border-bottom: 1px solid #334155;
+      }
+    }
+
     .container {
       max-width: 1240px;
       margin: 2rem auto;
       padding: 0 1.5rem;
+      width: 100%;
     }
 
     .breadcrumbs {
@@ -288,15 +329,23 @@
       color: #CBD5E1;
     }
 
+    /* ===================================================== */
+    /* FIX PRINCIPAL: Grid Items necesitan min-width:0        */
+    /* para poder encogerse por debajo del contenido (tablas) */
+    /* ===================================================== */
     .layout-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2.5rem;
+      min-width: 0;
     }
     @media (min-width: 992px) {
-      .layout-grid {
-        grid-template-columns: 2.5fr 1fr;
-      }
+      .layout-grid { grid-template-columns: 2.5fr 1fr; }
+    }
+    .layout-grid > main,
+    .layout-grid > aside.sidebar {
+      min-width: 0;
+      width: 100%;
     }
 
     article.main-article {
@@ -305,6 +354,8 @@
       padding: 2.5rem;
       box-shadow: var(--shadow-sm);
       border: 1px solid var(--border-color);
+      min-width: 0;
+      width: 100%;
     }
 
     .category-pill {
@@ -333,6 +384,8 @@
       color: var(--text-muted);
     }
 
+    .article-body { min-width: 0; }
+
     .article-body p {
       margin-bottom: 1.25rem;
       color: #334155;
@@ -356,11 +409,26 @@
       margin-bottom: 0.75rem;
     }
 
+    /* Todo el contenido inline debe poder romper palabras largas */
+    .article-body * {
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    /* ===================================================== */
+    /* FIX TABLAS: scroll horizontal contenido, sin afectar   */
+    /* el resto del layout                                    */
+    /* ===================================================== */
     .table-wrapper {
       overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       margin: 1.75rem 0;
       border-radius: var(--radius-md);
       border: 1px solid var(--border-color);
+      max-width: 100%;
+    }
+    .table-wrapper table {
+      min-width: 560px;
     }
 
     aside.sidebar {
@@ -410,6 +478,66 @@
       justify-content: space-between;
       align-items: center;
       font-size: 0.85rem;
+      gap: 0.5rem;
+    }
+
+    /* ================================================================= */
+    /* AJUSTES RESPONSIVE ADICIONALES                                     */
+    /* Como gran parte del contenido usa estilos inline (font-size en em, */
+    /* padding fijo en px), usamos !important para poder sobreescribirlos */
+    /* correctamente en pantallas pequeñas.                               */
+    /* ================================================================= */
+    @media (max-width: 768px) {
+      article.main-article { padding: 1.75rem 1.25rem; }
+
+      /* h1 inline dentro de article-body */
+      .article-body h1 { font-size: 1.35em !important; }
+      .article-body h2 { font-size: 1.1em !important; margin: 22px 0 10px 0 !important; }
+      .article-body h3 { font-size: 1em !important; }
+      .article-body p { font-size: 0.95em !important; }
+
+      .article-meta { gap: 0.75rem; font-size: 0.85rem; }
+      .article-meta > div:last-child { margin-left: 0 !important; width: 100%; }
+
+      /* Tabla técnica con estilos inline */
+      .table-wrapper table { font-size: 0.82em !important; }
+      .table-wrapper th, .table-wrapper td { padding: 8px !important; }
+
+      /* Cajas de advertencia / tip con estilos inline (border-left, padding) */
+      .article-body div[style*="border-left"] {
+        padding: 12px !important;
+        font-size: 0.9em !important;
+      }
+
+      /* Caja de fórmula química centrada */
+      .article-body p[style*="text-align:center"] {
+        font-size: 0.9em !important;
+        padding: 10px !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { padding: 0.75rem 1rem; }
+      .brand-logo { font-size: 1.05rem; gap: 0.5rem; }
+      .brand-logo svg { width: 26px; height: 26px; }
+      .brand-logo span.badge { font-size: 0.55rem; }
+      .top-bar { font-size: 0.75rem; line-height: 1.4; padding: 0.5rem 0.75rem; }
+      .container { margin: 1.25rem auto; padding: 0 1rem; }
+      article.main-article { padding: 1.25rem 1rem; border-radius: var(--radius-md); }
+
+      .article-body h1 { font-size: 1.2em !important; }
+      .article-body h2 { font-size: 1.05em !important; }
+      .article-body h3 { font-size: 0.95em !important; }
+      .article-body p { font-size: 0.92em !important; }
+
+      .widget { padding: 1.15rem; }
+      .footer-inner { gap: 1.75rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+
+      .article-body div[style*="border-left"] {
+        padding: 10px 12px !important;
+        margin: 14px 0 !important;
+      }
     }
   </style>
   <!-- Google AdSense Auto Ads -->
@@ -446,7 +574,11 @@
         Ferretería Ukra <span class="badge">Albañilería</span>
       </a>
 
-      <nav aria-label="Navegación principal">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+        ☰
+      </button>
+
+      <nav aria-label="Navegación principal" id="mainNav">
         <ul>
           <li><a href="/">Inicio</a></li>
           <li><a href="/blog/guia-para-hacer-un-radier-armado-con-malla-acma-en-chile/">Radier Acma</a></li>
@@ -689,11 +821,45 @@
   </footer>
 
   <script>
-    window.addEventListener('scroll', () => {
-      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
-      document.getElementById('progressBar').style.width = scrolled + '%';
+    // Barra de progreso de lectura
+    (function () {
+      const progressBar = document.getElementById('progressBar');
+      let ticking = false;
+
+      function updateProgress() {
+        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+        progressBar.style.width = scrolled + '%';
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          window.requestAnimationFrame(updateProgress);
+          ticking = true;
+        }
+      }, { passive: true });
+    })();
+
+    // Menú hamburguesa (Responsive)
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', function () {
+      const isOpen = mainNav.classList.toggle('active');
+      this.setAttribute('aria-expanded', isOpen);
+      this.innerHTML = isOpen ? '✕' : '☰';
+    });
+
+    document.querySelectorAll('#mainNav a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 860) {
+          mainNav.classList.remove('active');
+          menuToggle.innerHTML = '☰';
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     });
   </script>
 </body>
