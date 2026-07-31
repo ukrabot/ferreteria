@@ -139,7 +139,10 @@
       background-color: #F8FAFC;
       color: var(--gris-oscuro);
       line-height: 1.7;
+      overflow-x: hidden;
     }
+
+    img, svg { max-width: 100%; height: auto; }
 
     header {
       background-color: #1E293B;
@@ -156,6 +159,8 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.85rem 1.5rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
     }
     .brand-logo {
       display: flex;
@@ -166,7 +171,7 @@
       color: #FFFFFF;
       text-decoration: none;
     }
-    .brand-logo svg { width: 34px; height: 34px; fill: var(--rojo); }
+    .brand-logo svg { width: 34px; height: 34px; fill: var(--rojo); flex-shrink: 0; }
     .brand-logo span.badge {
       font-size: 0.65rem;
       background: var(--rojo);
@@ -176,20 +181,75 @@
       text-transform: uppercase;
       font-weight: 700;
     }
-    nav ul { display: flex; list-style: none; gap: 1.5rem; align-items: center; }
+
+    /* Menu Toggle (Hamburguesa) */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #FFF;
+      font-size: 1.75rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+    }
+
+    nav ul { display: flex; list-style: none; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
     nav a {
       color: #CBD5E1;
       font-weight: 500;
       font-size: 0.95rem;
       padding: 0.4rem 0.2rem;
       text-decoration: none;
+      border-bottom: 2px solid transparent;
     }
-    nav a:hover, nav a.active { color: #FFFFFF; border-bottom: 2px solid var(--rojo); }
+    nav a:hover, nav a.active { color: #FFFFFF; border-bottom-color: var(--rojo); }
+
+    /* Responsive Header */
+    @media (max-width: 860px) {
+      .menu-toggle { display: block; }
+      nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 0.75rem;
+        border-top: 1px solid #334155;
+        padding-top: 0.75rem;
+      }
+      nav.active { display: block; }
+      nav ul { flex-direction: column; gap: 0; width: 100%; }
+      nav ul li { width: 100%; }
+      nav a {
+        display: block;
+        padding: 0.85rem 0.25rem;
+        border-bottom: 1px solid #334155;
+      }
+    }
 
     .site-container {
       max-width: 1240px;
       margin: 2rem auto;
       padding: 0 1.5rem;
+      width: 100%;
+    }
+
+    /* ===================================================== */
+    /* FIX PRINCIPAL: Grid Items necesitan min-width:0        */
+    /* para poder encogerse por debajo del contenido (tablas) */
+    /* ===================================================== */
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      min-width: 0;
+    }
+    @media (min-width: 992px) {
+      .layout-grid { grid-template-columns: 2.8fr 1fr; }
+    }
+    .layout-grid > main,
+    .layout-grid > aside.sidebar {
+      min-width: 0;
+      width: 100%;
     }
 
     /* ── Base del Artículo Gotera ── */
@@ -203,9 +263,12 @@
       border-radius: var(--radio);
       padding: 2.5rem;
       box-shadow: var(--sombra);
+      min-width: 0;
+      width: 100%;
+      overflow-wrap: break-word;
     }
 
-    .art-gotera p { margin-bottom: 1.2em; }
+    .art-gotera p { margin-bottom: 1.2em; overflow-wrap: break-word; }
     .art-gotera h2 {
       font-family: var(--fuente-ui);
       font-size: 1.55em;
@@ -214,12 +277,14 @@
       padding-left: 14px;
       margin: 2.2em 0 0.9em;
       line-height: 1.3;
+      overflow-wrap: break-word;
     }
     .art-gotera h3 {
       font-family: var(--fuente-ui);
       font-size: 1.15em;
       color: var(--gris-oscuro);
       margin: 1.8em 0 0.6em;
+      overflow-wrap: break-word;
     }
 
     /* ── Hero banner ── */
@@ -245,6 +310,7 @@
       font-weight: 800;
       line-height: 1.25;
       margin-bottom: 12px;
+      overflow-wrap: break-word;
     }
     .hero-gotera p {
       font-size: 1.05em;
@@ -302,6 +368,7 @@
       font-family: var(--fuente-ui);
       font-size: 0.95em;
       color: #7d5a00;
+      overflow-wrap: break-word;
     }
     .alerta-emergencia strong { display: block; margin-bottom: 4px; font-size: 1em; }
 
@@ -321,8 +388,10 @@
       align-items: flex-start;
       gap: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      min-width: 0;
     }
     .causa-icon { font-size: 1.8em; line-height: 1; flex-shrink: 0; }
+    .causa-card div { min-width: 0; }
     .causa-card strong {
       display: block;
       font-family: var(--fuente-ui);
@@ -334,6 +403,7 @@
       font-size: 0.88em;
       color: var(--gris-medio);
       line-height: 1.5;
+      overflow-wrap: break-word;
     }
 
     /* ── Lista de materiales ── */
@@ -355,6 +425,7 @@
       align-items: center;
       gap: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      overflow-wrap: break-word;
     }
     .materiales-lista li::before {
       content: '✔';
@@ -387,6 +458,7 @@
       margin-top: 2px;
       box-shadow: 0 3px 10px rgba(192,57,43,0.35);
     }
+    .paso-content { min-width: 0; }
     .paso-content h3 {
       margin-top: 0;
       margin-bottom: 6px;
@@ -398,6 +470,7 @@
       color: var(--gris-medio);
       margin-bottom: 0;
       line-height: 1.7;
+      overflow-wrap: break-word;
     }
     .tip-inline {
       display: inline-block;
@@ -414,10 +487,14 @@
     /* ── Tabla de comparación ── */
     .tabla-wrapper {
       overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       margin: 1.2em 0 2.2em;
+      border-radius: var(--radio);
+      max-width: 100%;
     }
     .tabla-materiales {
       width: 100%;
+      min-width: 680px;
       border-collapse: separate;
       border-spacing: 0;
       border-radius: var(--radio);
@@ -433,6 +510,7 @@
       font-size: 0.88em;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      white-space: nowrap;
     }
     .tabla-materiales tbody tr:nth-child(odd)  { background: #fff; }
     .tabla-materiales tbody tr:nth-child(even) { background: var(--gris-claro); }
@@ -450,6 +528,7 @@
       border-radius: 12px;
       font-size: 0.8em;
       font-weight: 700;
+      white-space: nowrap;
     }
     .badge-alta  { background:#d5f5e3; color:#1e8449; }
     .badge-media { background:#fdebd0; color:#ca6f1e; }
@@ -465,6 +544,7 @@
       font-family: var(--fuente-ui);
       font-size: 0.95em;
       line-height: 1.7;
+      overflow-wrap: break-word;
     }
     .consejo-pro strong {
       display: block;
@@ -487,6 +567,7 @@
     }
     .mantenimiento-list li:last-child { border-bottom: none; }
     .mantenimiento-list .mi { font-size: 1.3em; flex-shrink: 0; }
+    .mantenimiento-list div { min-width: 0; overflow-wrap: break-word; }
 
     /* ── FAQ ── */
     .faq-section { margin-top: 2.5em; }
@@ -536,6 +617,7 @@
       max-height: 600px;
       padding: 18px 20px;
     }
+    .faq-respuesta p { overflow-wrap: break-word; }
 
     /* ── CTA Producto ── */
     .producto-cta {
@@ -550,6 +632,7 @@
       box-shadow: var(--sombra);
     }
     .producto-cta img { width: 90px; height: 90px; object-fit: contain; border-radius: 8px; flex-shrink: 0; }
+    .producto-cta-info { min-width: 0; }
     .producto-cta-info h4 { font-family: var(--fuente-ui); font-size: 1em; margin-bottom: 4px; }
     .producto-cta-info .precio {
       font-family: var(--fuente-ui);
@@ -583,20 +666,9 @@
       font-size: 0.97em;
       color: #1a3a2a;
       line-height: 1.75;
+      overflow-wrap: break-word;
     }
     .conclusion-box strong { color: #1e8449; }
-
-    /* Layout Grid */
-    .layout-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-    @media (min-width: 992px) {
-      .layout-grid {
-        grid-template-columns: 2.8fr 1fr;
-      }
-    }
 
     aside.sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
     .widget {
@@ -630,16 +702,37 @@
       gap: 2.5rem;
     }
 
-    /* Responsive */
-    @media (max-width: 640px) {
+    /* ============================= */
+    /* RESPONSIVE PROGRESIVO         */
+    /* ============================= */
+    @media (max-width: 768px) {
+      .art-gotera { padding: 1.75rem 1.25rem; }
+      .hero-gotera { padding: 30px 22px; }
+      .hero-gotera h1 { font-size: 1.55em; }
+      .art-gotera h2 { font-size: 1.3em; }
+      .art-gotera h3 { font-size: 1.05em; }
+      .toc-box, .alerta-emergencia, .consejo-pro, .conclusion-box { padding: 16px 18px; }
       .causas-grid { grid-template-columns: 1fr; }
       .materiales-lista { grid-template-columns: 1fr; }
-      .hero-gotera h1 { font-size: 1.4em; }
-      .hero-gotera { padding: 28px 20px; }
-      .producto-cta { flex-direction: column; align-items: flex-start; }
       .tabla-materiales { font-size: 0.82em; }
       .tabla-materiales thead th, .tabla-materiales tbody td { padding: 9px 10px; }
-      .art-gotera { padding: 1.5rem; }
+    }
+
+    @media (max-width: 600px) {
+      .site-container { margin: 1.25rem auto; padding: 0 1rem; }
+      .art-gotera { padding: 1.25rem 1rem; border-radius: 8px; }
+      .hero-gotera { padding: 24px 18px; }
+      .hero-gotera h1 { font-size: 1.3em; line-height: 1.3; }
+      .hero-gotera p { font-size: 0.95em; }
+      .hero-gotera::before { font-size: 55px; right: 15px; }
+      .art-gotera h2 { font-size: 1.15em; padding-left: 10px; }
+      .paso { gap: 12px; }
+      .paso-num { width: 34px; height: 34px; font-size: 0.95em; }
+      .producto-cta { flex-direction: column; align-items: flex-start; }
+      .producto-cta img { width: 100%; height: 140px; }
+      .faq-pregunta { padding: 14px 16px; font-size: 0.92em; }
+      .faq-respuesta.abierta { padding: 14px 16px; }
+      .widget { padding: 1.15rem; }
     }
   </style>
   <!-- Google AdSense Auto Ads -->
@@ -666,7 +759,11 @@
         Ferretería Ukra <span class="badge">Techos</span>
       </a>
 
-      <nav aria-label="Navegación principal">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav aria-label="Navegación principal" id="mainNav">
         <ul>
           <li><a href="/">Inicio</a></li>
           <li><a href="/blog/como-calcular-planchas-de-zinc-por-m2-de-manera-facil/">Zinc m2</a></li>
@@ -940,7 +1037,7 @@
             <div class="producto-cta-info">
               <h4>Sellador Acrílico 300 ml</h4>
               <div class="precio">$4.990</div>
-              <a href="/">🛒 Ver Oferta en Tienda &rarr;</a>
+              <a href="/" class="btn-oferta">🛒 Ver Oferta en Tienda &rarr;</a>
             </div>
           </div>
 
@@ -1090,6 +1187,26 @@
       var resp = btn.nextElementSibling;
       resp.classList.toggle('abierta', !expanded);
     }
+
+    // Menú hamburguesa (Responsive)
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', function() {
+      const isOpen = mainNav.classList.toggle('active');
+      this.setAttribute('aria-expanded', isOpen);
+      this.innerHTML = isOpen ? '✕' : '☰';
+    });
+
+    document.querySelectorAll('#mainNav a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 860) {
+          mainNav.classList.remove('active');
+          menuToggle.innerHTML = '☰';
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
   </script>
 </body>
 </html>
