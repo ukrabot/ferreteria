@@ -128,7 +128,7 @@
       --radius-lg: 1rem;
       --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
       --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
-      --font-stack: Arial, system-ui, -apple-system, sans-serif;
+      --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     }
 
     *, *::before, *::after {
@@ -137,6 +137,8 @@
       padding: 0;
     }
 
+    html { overflow-x: hidden; }
+
     body {
       font-family: var(--font-stack);
       background-color: var(--bg-body);
@@ -144,6 +146,7 @@
       line-height: 1.65;
       font-size: 1rem;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     a {
@@ -160,6 +163,13 @@
       height: auto;
       display: block;
     }
+
+    .skip-link {
+      position: absolute; left: -9999px; top: 0; background: #FFFFFF;
+      color: var(--text-main); padding: 12px 20px; z-index: 200;
+      font-weight: 700; border-radius: 0 0 8px 0; box-shadow: var(--shadow-md);
+    }
+    .skip-link:focus { left: 0; }
 
     .progress-container {
       position: fixed;
@@ -205,6 +215,8 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.85rem 1.5rem;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
 
     .brand-logo {
@@ -220,6 +232,7 @@
       width: 34px;
       height: 34px;
       fill: var(--primary);
+      flex-shrink: 0;
     }
     .brand-logo span.badge {
       font-size: 0.65rem;
@@ -231,11 +244,24 @@
       font-weight: 700;
     }
 
+    /* Menu Toggle (Hamburguesa) */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #FFF;
+      font-size: 1.75rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+    }
+
     nav ul {
       display: flex;
       list-style: none;
       gap: 1.5rem;
       align-items: center;
+      flex-wrap: wrap;
     }
     nav a {
       color: #CBD5E1;
@@ -250,10 +276,32 @@
       border-bottom-color: var(--primary);
     }
 
+    /* Responsive Header */
+    @media (max-width: 860px) {
+      .menu-toggle { display: block; }
+      nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 0.75rem;
+        border-top: 1px solid #334155;
+        padding-top: 0.75rem;
+      }
+      nav.active { display: block; }
+      nav ul { flex-direction: column; gap: 0; width: 100%; }
+      nav ul li { width: 100%; }
+      nav a {
+        display: block;
+        padding: 0.85rem 0.25rem;
+        border-bottom: 1px solid #334155;
+      }
+    }
+
     .container {
       max-width: 1240px;
       margin: 2rem auto;
       padding: 0 1.5rem;
+      width: 100%;
     }
 
     .breadcrumbs {
@@ -275,15 +323,22 @@
       color: #CBD5E1;
     }
 
+    /* FIX PRINCIPAL: grid items deben poder encogerse bajo el contenido (tablas) */
     .layout-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2.5rem;
+      min-width: 0;
     }
     @media (min-width: 992px) {
       .layout-grid {
         grid-template-columns: 2.5fr 1fr;
       }
+    }
+    .layout-grid > main,
+    .layout-grid > aside.sidebar {
+      min-width: 0;
+      width: 100%;
     }
 
     article.main-article {
@@ -292,6 +347,8 @@
       padding: 2.5rem;
       box-shadow: var(--shadow-sm);
       border: 1px solid var(--border-color);
+      min-width: 0;
+      width: 100%;
     }
 
     .category-pill {
@@ -308,6 +365,16 @@
       border: 1px solid #FCA5A5;
     }
 
+    h1.article-title {
+      font-size: 2.1rem;
+      line-height: 1.3;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+      overflow-wrap: break-word;
+    }
+
     .article-meta {
       display: flex;
       flex-wrap: wrap;
@@ -320,12 +387,95 @@
       color: var(--text-muted);
     }
 
+    .article-body { min-width: 0; }
+
+    .article-body p {
+      margin-bottom: 1.25rem;
+      color: #334155;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      overflow-wrap: break-word;
+    }
+
+    .article-body h2 {
+      font-size: 1.55rem;
+      color: #0F172A;
+      margin-top: 2.25rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid #F1F5F9;
+      scroll-margin-top: 90px;
+      overflow-wrap: break-word;
+    }
+
+    .article-body h3 {
+      font-size: 1.2rem;
+      color: #1E293B;
+      margin-top: 1.75rem;
+      margin-bottom: 0.75rem;
+      overflow-wrap: break-word;
+    }
+
+    .article-body ul {
+      margin: 0 0 1.25rem 1.25rem;
+      color: #334155;
+      line-height: 1.75;
+      overflow-wrap: break-word;
+    }
+    .article-body li { margin-bottom: 0.4rem; overflow-wrap: break-word; }
+
+    /* FIX TABLAS: overflow-x contenido, sin romper el resto del layout */
     .table-wrapper {
       overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       margin: 1.75rem 0;
       border-radius: var(--radius-md);
       border: 1px solid var(--border-color);
+      max-width: 100%;
     }
+    .table-wrapper table {
+      min-width: 640px;
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95em;
+    }
+    .table-wrapper th, .table-wrapper td {
+      border: 1px solid #E2E8F0;
+      padding: 10px;
+      text-align: left;
+      overflow-wrap: break-word;
+    }
+    .table-wrapper thead tr { background: #F1F5F9; }
+    .table-wrapper tbody tr:nth-child(even) { background: #FAFAFA; }
+
+    .warning-box {
+      border-left: 4px solid var(--primary);
+      background: #FFF5F5;
+      padding: 14px 16px;
+      margin: 20px 0;
+      font-size: 0.95em;
+      color: #1a1a1a;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      overflow-wrap: break-word;
+    }
+
+    .info-box {
+      border-left: 4px solid #0057e7;
+      background: #f5f8ff;
+      padding: 14px 16px;
+      margin: 20px 0;
+      font-size: 0.95em;
+      color: #1a1a1a;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      overflow-wrap: break-word;
+    }
+
+    .link-cta {
+      text-align: center;
+      margin: 28px 0;
+      padding: 12px;
+    }
+    .link-cta a { font-weight: 700; }
 
     aside.sidebar {
       display: flex;
@@ -348,6 +498,17 @@
       padding-bottom: 0.5rem;
       border-bottom: 2px solid var(--primary);
     }
+    .widget-btn {
+      display: block;
+      text-align: center;
+      padding: 0.65rem;
+      color: #FFF;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.75rem;
+    }
+    .widget-btn:last-child { margin-bottom: 0; }
+    .widget-btn:hover { opacity: 0.9; text-decoration: none; }
 
     footer {
       background-color: #0F172A;
@@ -374,6 +535,43 @@
       justify-content: space-between;
       align-items: center;
       font-size: 0.85rem;
+      gap: 0.5rem;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-smooth { scroll-behavior: auto; }
+      .progress-bar { transition: none; }
+    }
+
+    /* ============================= */
+    /* AJUSTES RESPONSIVE ADICIONALES */
+    /* ============================= */
+    @media (max-width: 768px) {
+      article.main-article { padding: 1.75rem 1.25rem; }
+      h1.article-title { font-size: 1.7rem; }
+      .article-body h2 { font-size: 1.3rem; }
+      .article-body h3 { font-size: 1.1rem; }
+      .article-body p, .article-body li { font-size: 1rem; }
+      .article-meta { gap: 0.75rem; font-size: 0.85rem; }
+      .article-meta > div:last-child { margin-left: 0 !important; width: 100%; }
+      .table-wrapper table { font-size: 0.82rem !important; }
+      .table-wrapper th, .table-wrapper td { padding: 8px 6px !important; }
+      .warning-box, .info-box { font-size: 0.9rem; padding: 1rem 1.1rem; }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { padding: 0.75rem 1rem; }
+      .brand-logo { font-size: 1.05rem; gap: 0.5rem; }
+      .brand-logo svg { width: 26px; height: 26px; }
+      .brand-logo span.badge { font-size: 0.55rem; }
+      .top-bar { font-size: 0.75rem; line-height: 1.4; padding: 0.5rem 0.75rem; }
+      .container { margin: 1.25rem auto; padding: 0 1rem; }
+      article.main-article { padding: 1.25rem 1rem; border-radius: var(--radius-md); }
+      h1.article-title { font-size: 1.4rem; }
+      .widget { padding: 1.15rem; }
+      .footer-inner { gap: 1.75rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .warning-box, .info-box { padding: 12px 14px; }
     }
   </style>
   <!-- Google AdSense Auto Ads -->
@@ -389,6 +587,8 @@
   </script>
 </head>
 <body>
+
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
   <!-- Reading Progress Bar -->
   <div class="progress-container" aria-hidden="true">
@@ -410,12 +610,16 @@
         Ferretería Ukra <span class="badge">Fijaciones</span>
       </a>
 
-      <nav aria-label="Navegación principal">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav aria-label="Navegación principal" id="mainNav">
         <ul>
           <li><a href="/">Inicio</a></li>
           <li><a href="/blog/guia-completa-sobre-tipos-de-destornilladores-y-sus-puntas/">Destornilladores</a></li>
           <li><a href="/blog/guia-completa-para-instalar-guardapolvos-de-madera-o-mdf/">Guardapolvos</a></li>
-          <li><a href="#" class="active">Colgar TV Ladrillo</a></li>
+          <li><a href="#" class="active" aria-current="page">Colgar TV Ladrillo</a></li>
         </ul>
       </nav>
     </div>
@@ -436,10 +640,12 @@
     <div class="layout-grid">
       
       <!-- Main Content Area -->
-      <main>
+      <main id="main-content">
         <article class="main-article" itemscope itemtype="https://schema.org/BlogPosting">
           
           <span class="category-pill">Fijaciones Específicas &amp; Muros Huecos</span>
+
+          <h1 class="article-title" itemprop="headline">Cómo colgar una pantalla TV en muro de ladrillo hueco sin que se caiga</h1>
 
           <div class="article-meta">
             <div><strong>Por Equipo Técnico Ferretería Ukra</strong> | Guía de Anclajes de Seguridad</div>
@@ -450,130 +656,128 @@
             </div>
           </div>
 
-          <!-- Article Body Provided -->
+          <!-- Article Body -->
           <div class="article-body" itemprop="articleBody">
-            
-            <h1 style="font-family:Arial,sans-serif;font-size:1.6em;color:#1a1a1a;line-height:1.3;margin:0 0 16px 0;">Cómo colgar una pantalla TV en muro de ladrillo hueco sin que se caiga</h1>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               ¿Colgaste la TV en la pared del living y a los tres meses notaste que el soporte se aflojó o quedó ladeado?
             </p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               En Chile, más del 60 % de las viviendas construidas entre 1970 y 2000 usan <strong>muros de ladrillo hueco</strong> (bloques cerámicos de 12×25×38 cm o 10×20×40 cm). A diferencia del hormigón armado, estos muros tienen <strong>cámaras internas</strong> que reducen el peso, pero también reducen la capacidad de anclaje de un tornillo común.
             </p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               A continuación te explicamos qué anclajes funcionan, cuáles son una invitación al desastre y cómo hacer la instalación paso a paso con herramientas que puedes conseguir hoy mismo.
             </p>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">Por qué el ladrillo hueco es diferente al hormigón</h2>
+            <h2 id="diferencia-hormigon">Por qué el ladrillo hueco es diferente al hormigón</h2>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               Un muro de ladrillo hueco tiene paredes externas de 10-15 mm de espesor y cámaras vacías en el centro. Cuando perforas con una broca de 10 mm, es muy fácil atravesar la pared externa, quedar en el aire de la cámara y salir por el otro lado sin agarrar material sólido.
             </p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               Un tarugo común de plástico (el típico de $100) se expande dentro de la cámara hueca sin ejercer presión contra ninguna pared. El resultado: el tornillo gira en vacío, el soporte se afloja y la TV de 15 kg termina en el piso.
             </p>
 
-            <div style="border-left:4px solid #e63946;background:#fff5f5;padding:14px 16px;margin:20px 0;font-family:Arial,sans-serif;font-size:0.95em;color:#1a1a1a;">
+            <div class="warning-box">
               <strong>⚠️ Dato que nadie te cuenta:</strong> muchos soportes de TV incluyen "tornillos y tarugos universales" que están pensados para muros de hormigón o drywall. En ladrillo hueco, esos tarugos de expansión simple tienen una capacidad de carga real de menos de 5 kg por punto. Una TV de 55" pesa entre 14 y 18 kg. La cuenta no cierra.
             </div>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">Cuánto pesa tu TV: tabla por tamaño de pantalla</h2>
+            <h2 id="peso-tv">Cuánto pesa tu TV: tabla por tamaño de pantalla</h2>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em;font-family:Arial,sans-serif;">
+              <table>
                 <thead>
-                  <tr style="background:#f0f4f8;">
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Tamaño pantalla</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Peso aproximado</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Estándar VESA más común</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Anclajes recomendados</th>
+                  <tr>
+                    <th scope="col">Tamaño pantalla</th>
+                    <th scope="col">Peso aproximado</th>
+                    <th scope="col">Estándar VESA más común</th>
+                    <th scope="col">Anclajes recomendados</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">32" - 40"</td>
-                    <td style="border:1px solid #ccc;padding:10px;">4 - 8 kg</td>
-                    <td style="border:1px solid #ccc;padding:10px;">100×100 mm / 200×200 mm</td>
-                    <td style="border:1px solid #ccc;padding:10px;">4 tarugos especiales ladrillo hueco</td>
-                  </tr>
-                  <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;">43" - 50"</td>
-                    <td style="border:1px solid #ccc;padding:10px;">9 - 14 kg</td>
-                    <td style="border:1px solid #ccc;padding:10px;">200×200 mm / 300×300 mm</td>
-                    <td style="border:1px solid #ccc;padding:10px;">4 tarugos especiales + anclaje químico en punto superior</td>
+                    <td>32" - 40"</td>
+                    <td>4 - 8 kg</td>
+                    <td>100×100 mm / 200×200 mm</td>
+                    <td>4 tarugos especiales ladrillo hueco</td>
                   </tr>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">55" - 65"</td>
-                    <td style="border:1px solid #ccc;padding:10px;">15 - 22 kg</td>
-                    <td style="border:1px solid #ccc;padding:10px;">400×400 mm</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Anclaje químico en los 4 puntos o anclaje metálico expansivo</td>
+                    <td>43" - 50"</td>
+                    <td>9 - 14 kg</td>
+                    <td>200×200 mm / 300×300 mm</td>
+                    <td>4 tarugos especiales + anclaje químico en punto superior</td>
                   </tr>
-                  <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;">70" - 85"</td>
-                    <td style="border:1px solid #ccc;padding:10px;">23 - 35 kg</td>
-                    <td style="border:1px solid #ccc;padding:10px;">600×400 mm</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Anclaje químico obligatorio + placa distribuidora</td>
+                  <tr>
+                    <td>55" - 65"</td>
+                    <td>15 - 22 kg</td>
+                    <td>400×400 mm</td>
+                    <td>Anclaje químico en los 4 puntos o anclaje metálico expansivo</td>
+                  </tr>
+                  <tr>
+                    <td>70" - 85"</td>
+                    <td>23 - 35 kg</td>
+                    <td>600×400 mm</td>
+                    <td>Anclaje químico obligatorio + placa distribuidora</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">Tipos de anclaje para ladrillo hueco: comparativa real</h2>
+            <h2 id="tipos-anclaje">Tipos de anclaje para ladrillo hueco: comparativa real</h2>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em;font-family:Arial,sans-serif;">
+              <table>
                 <thead>
-                  <tr style="background:#f0f4f8;">
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Tipo de anclaje</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Carga en ladrillo hueco</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Precio aprox. CLP</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Cuándo usarlo</th>
+                  <tr>
+                    <th scope="col">Tipo de anclaje</th>
+                    <th scope="col">Carga en ladrillo hueco</th>
+                    <th scope="col">Precio aprox. CLP</th>
+                    <th scope="col">Cuándo usarlo</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">Tarugo plástico estándar</td>
-                    <td style="border:1px solid #ccc;padding:10px;">3 - 5 kg</td>
-                    <td style="border:1px solid #ccc;padding:10px;">$100 - $300 c/u</td>
-                    <td style="border:1px solid #ccc;padding:10px;"><strong>Nunca en TV.</strong> Solo para cuadros livianos.</td>
-                  </tr>
-                  <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;">Tarugo especial ladrillo hueco (Fischer SX / Tox Acrobat)</td>
-                    <td style="border:1px solid #ccc;padding:10px;">15 - 25 kg</td>
-                    <td style="border:1px solid #ccc;padding:10px;">$600 - $1.500 c/u</td>
-                    <td style="border:1px solid #ccc;padding:10px;">TVs hasta 50". Se expanden en las cámaras.</td>
+                    <td>Tarugo plástico estándar</td>
+                    <td>3 - 5 kg</td>
+                    <td>$100 - $300 c/u</td>
+                    <td><strong>Nunca en TV.</strong> Solo para cuadros livianos.</td>
                   </tr>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">Anclaje metálico expansivo (camisa + tornillo)</td>
-                    <td style="border:1px solid #ccc;padding:10px;">30 - 50 kg</td>
-                    <td style="border:1px solid #ccc;padding:10px;">$2.000 - $5.000 c/u</td>
-                    <td style="border:1px solid #ccc;padding:10px;">TVs 55"-65". Requiere broca 10-12 mm.</td>
+                    <td>Tarugo especial ladrillo hueco (Fischer SX / Tox Acrobat)</td>
+                    <td>15 - 25 kg</td>
+                    <td>$600 - $1.500 c/u</td>
+                    <td>TVs hasta 50". Se expanden en las cámaras.</td>
                   </tr>
-                  <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;">Anclaje químico (resina + malla + varilla roscada)</td>
-                    <td style="border:1px solid #ccc;padding:10px;">80 - 150 kg</td>
-                    <td style="border:1px solid #ccc;padding:10px;">$8.000 - $18.000 kit</td>
-                    <td style="border:1px solid #ccc;padding:10px;">TVs grandes o muros en mal estado. Máxima seguridad.</td>
+                  <tr>
+                    <td>Anclaje metálico expansivo (camisa + tornillo)</td>
+                    <td>30 - 50 kg</td>
+                    <td>$2.000 - $5.000 c/u</td>
+                    <td>TVs 55"-65". Requiere broca 10-12 mm.</td>
+                  </tr>
+                  <tr>
+                    <td>Anclaje químico (resina + malla + varilla roscada)</td>
+                    <td>80 - 150 kg</td>
+                    <td>$8.000 - $18.000 kit</td>
+                    <td>TVs grandes o muros en mal estado. Máxima seguridad.</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <div style="border-left:4px solid #0057e7;background:#f5f8ff;padding:14px 16px;margin:20px 0;font-family:Arial,sans-serif;font-size:0.95em;color:#1a1a1a;">
+            <div class="info-box">
               <strong>💡 Regla de oro:</strong> la carga de trabajo de un anclaje debe ser como máximo el <strong>25 % de su carga de rotura</strong>. Si tu TV pesa 16 kg y usas 4 puntos, cada anclaje soporta 4 kg. Un tarugo especial con rotura de 20 kg te da un factor de seguridad de 5×. Eso es lo mínimo aceptable para algo que cuelga sobre tu familia.
             </div>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">Herramientas que necesitas</h2>
+            <h2 id="herramientas">Herramientas que necesitas</h2>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               No necesitas un taller completo. Con estas herramientas básicas puedes instalar una TV de hasta 65" en ladrillo hueco:
             </p>
 
-            <ul style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;padding-left:20px;">
+            <ul>
               <li><strong>Taladro percutor</strong> con broca Widia de 10 mm (para tarugos) o 12 mm (para anclajes metálicos).</li>
               <li><strong>Nivel de burbuja</strong> de 30 cm o nivel láser cruzado.</li>
               <li><strong>Destornillador</strong> o atornillador inalámbrico con punta adecuada.</li>
@@ -581,107 +785,107 @@
               <li><strong>Broca de hormigón</strong> solo si hay una viga de relleno oculta detrás del ladrillo.</li>
             </ul>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">Guía paso a paso para instalar en ladrillo hueco</h2>
+            <h2 id="paso-a-paso">Guía paso a paso para instalar en ladrillo hueco</h2>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               <strong>Paso 1: Identifica el estándar VESA de tu TV.</strong> Mide la distancia entre los orificios de montaje en la parte posterior. Los más comunes son 200×200 mm, 300×300 mm y 400×400 mm. El soporte que compres debe coincidir exactamente.
             </p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               <strong>Paso 2: Marca la altura correcta.</strong> El centro de la pantalla debe quedar a la altura de los ojos cuando estás sentado: entre <strong>90 y 110 cm desde el piso</strong> para un living estándar con sillón de 45 cm de altura. Usa el nivel para trazar una línea horizontal.
             </p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               <strong>Paso 3: Perfora con cuidado.</strong> Usa broca Widia de 10 mm y taladro en modo <strong>percutor</strong> (no martillo). Perfora despacio para sentir cuándo atraviesas la primera pared del ladrillo. Si la broca entra sin resistencia después de 15 mm, estás en una cámara hueca. Retira y desplaza 2 cm.
             </p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               <strong>Paso 4: Inserta el anclaje correcto.</strong> Si usas tarugo especial para ladrillo hueco, golpéalo suavemente hasta que quede a ras de la pared. Si usas anclaje químico, limpia el polvo con una brocha, introduce la malla metálica y llena con resina epóxica. Espera el tiempo de curado indicado (generalmente 20-60 minutos).
             </p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               <strong>Paso 5: Atornilla el soporte.</strong> Aprieta en cruz para distribuir la presión uniformemente. No aprietes al máximo con atornillador de impacto: puedes romper la pared externa del ladrillo. Usa torque medio y verifica con el nivel antes de colgar la TV.
             </p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               <strong>Paso 6: Cuelga la TV y verifica.</strong> Con ayuda de otra persona, levanta la TV y engancha los soportes. Empuja suavemente hacia arriba y hacia los lados. Si hay juego o la pared cruje, baja la TV y refuerza los anclajes.
             </p>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">5 errores costosos al colgar TV en ladrillo hueco</h2>
+            <h2 id="errores">5 errores costosos al colgar TV en ladrillo hueco</h2>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               <strong>1. Usar los tarugos que vienen en la caja del soporte.</strong> Esos tarugos están diseñados para hormigón sólido o drywall. En ladrillo hueco se expanden en el aire y no agarran nada. Compra tarugos específicos para ladrillo hueco.
             </p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               <strong>2. Perforar en la junta de mortero.</strong> El mortero entre ladrillos tiene poca resistencia a la tracción. Si atornillas ahí, el anclaje se desprende con el peso. Perfora siempre en el <strong>centro del ladrillo</strong>, donde la cerámica es más densa.
             </p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               <strong>3. Ignorar el estándar VESA.</strong> Comprar un soporte "universal" sin verificar las medidas VESA de tu TV es un error común. Si los orificios no coinciden, no hay forma de adaptarlo sin soldar o perforar el chasis de la TV.
             </p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               <strong>4. Colgar la TV demasiado alta.</strong> Una pantalla colgada a 140 cm del piso fuerza el cuello y genera fatiga visual. La norma ergonómica recomienda que el centro de la pantalla quede a la altura de los ojos sentados.
             </p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               <strong>5. No verificar si hay instalaciones detrás del muro.</strong> En muros de ladrillo hueco de casas chilenas antiguas, los cables eléctricos y cañerías de gas a veces pasan por las cámaras del ladrillo. Perforar sin precaución puede cortar un cable 220V o pinchar una cañería de cobre.
             </p>
 
-            <div style="text-align:center;margin:28px 0;">
+            <div class="link-cta">
               <a href="/">Ver taladros percutores en Ferretería Ukra &rarr;</a>
             </div>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">¿Cuándo llamar a un profesional?</h2>
+            <h2 id="profesional">¿Cuándo llamar a un profesional?</h2>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               Si el muro tiene grietas visibles, si la TV pesa más de 25 kg, o si necesitas ocultar cables dentro del muro (ruteo embutido), contrata a un instalador certificado. En Chile, un instalador de racks de TV cobra entre <strong>$25.000 y $60.000 CLP</strong> por trabajo estándar.
             </p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               También es recomendable asesoría profesional si el muro es de <strong>ladrillo hueco doble</strong> (dos hojas separadas por una cámara de aire) o si la vivienda está en una zona sísmica alta, donde las vibraciones pueden aflojar anclajes con el tiempo.
             </p>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">También te puede interesar</h2>
+            <h2 id="relacionados">También te puede interesar</h2>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
-              <a href="/blog/guia-completa-sobre-tipos-de-destornilladores-y-sus-puntas/" style="color:#0057e7;text-decoration:underline;">Tipos de Destornilladores y Puntas</a> |
+            <p>
+              <a href="/blog/guia-completa-sobre-tipos-de-destornilladores-y-sus-puntas/">Tipos de Destornilladores y Puntas</a> |
               <a href="/">Brocas Widia y Cerámica</a> |
               <a href="/">Lentes de Seguridad</a> |
               <a href="/">Coleto Carpintero</a> |
               <a href="/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/">Guía técnica herramientas eléctricas</a>
             </p>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">Preguntas frecuentes sobre cómo colgar una pantalla TV en muro de ladrillo hueco</h2>
+            <h2>Preguntas frecuentes sobre cómo colgar una pantalla TV en muro de ladrillo hueco</h2>
 
-            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Puedo usar tarugos normales en ladrillo hueco?</h3>
+            <h3>¿Puedo usar tarugos normales en ladrillo hueco?</h3>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               No. Los tarugos plásticos estándar se expanden dentro de la cámara hueca sin ejercer presión contra las paredes internas. Usa tarugos específicos para ladrillo hueco (Fischer SX, Tox Acrobat) o anclaje químico.
             </p>
 
-            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿A qué altura debo colgar la TV?</h3>
+            <h3>¿A qué altura debo colgar la TV?</h3>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               El centro de la pantalla debe quedar entre 90 y 110 cm desde el piso para un sillón estándar de 45 cm. En dormitorios (viendo acostado), puede subir a 120-130 cm.
             </p>
 
-            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Cuánto pesa una TV de 55 pulgadas?</h3>
+            <h3>¿Cuánto pesa una TV de 55 pulgadas?</h3>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               Entre 14 y 18 kg para modelos LED modernos. Las OLED son más livianas (10-14 kg). Las TVs antiguas de plasma pueden superar los 25 kg.
             </p>
 
-            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Qué pasa si perforo y encuentro una cámara hueca?</h3>
+            <h3>¿Qué pasa si perforo y encuentro una cámara hueca?</h3>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               Desplaza el punto de perforación 2-3 cm hacia arriba o hacia los lados hasta encontrar el tabique sólido del ladrillo. Si el muro es completamente hueco, usa anclaje químico con malla que se expande dentro de la cámara vacía.
             </p>
 
-            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Es seguro colgar una TV de 65" en ladrillo hueco?</h3>
+            <h3>¿Es seguro colgar una TV de 65" en ladrillo hueco?</h3>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               Sí, siempre que uses anclaje químico o metálico expansivo en los 4 puntos VESA y verifiques que el muro no tenga grietas estructurales. El anclaje químico Fischer FIS VS soporta más de 80 kg por punto en ladrillo hueco.
             </p>
 
@@ -694,20 +898,20 @@
         <div class="widget">
           <h3 class="widget-title">📌 Navegación Fijaciones</h3>
           <p style="font-size:0.9rem; color:#475569; margin-bottom:1rem;">Manuales sobre tacos, anclajes químicos, brocas y tornillería en Chile.</p>
-          <a href="/" style="display:block; text-align:center; padding:0.65rem; background:var(--primary); color:#FFF; font-weight:700; border-radius:var(--radius-sm); margin-bottom:0.75rem;">
+          <a href="/" class="widget-btn" style="background:var(--primary);">
             &larr; Volver al Inicio (Ferretería Ukra)
           </a>
-          <a href="/blog/guia-completa-sobre-tipos-de-destornilladores-y-sus-puntas/" style="display:block; text-align:center; padding:0.65rem; background:#334155; color:#FFF; font-weight:700; border-radius:var(--radius-sm); margin-bottom:0.75rem;">
+          <a href="/blog/guia-completa-sobre-tipos-de-destornilladores-y-sus-puntas/" class="widget-btn" style="background:#334155;">
             🪛 Tipos de Destornilladores
           </a>
-          <a href="/blog/guia-completa-para-instalar-guardapolvos-de-madera-o-mdf/" style="display:block; text-align:center; padding:0.65rem; background:#2C3036; color:#FFF; font-weight:700; border-radius:var(--radius-sm);">
+          <a href="/blog/guia-completa-para-instalar-guardapolvos-de-madera-o-mdf/" class="widget-btn" style="background:#2C3036;">
             🏠 Instalar Guardapolvos MDF
           </a>
         </div>
 
         <div class="widget">
           <h3 class="widget-title">⚙️ Carga Máxima Ladrillo</h3>
-          <ul style="list-style:none; font-size:0.875rem; color:#334155; display:flex; flex-direction:column; gap:0.5rem;">
+          <ul style="list-style:none; font-size:0.875rem; color:#334155; display:flex; flex-direction:column; gap:0.5rem; margin:0; padding:0;">
             <li>❌ <strong>Tarugo Plástico:</strong> 3-5 kg (No usar).</li>
             <li>🔹 <strong>Fischer SX:</strong> 15-25 kg (TVs &lt;50").</li>
             <li>🔹 <strong>Anclaje Metálico:</strong> 30-50 kg (TVs 55"-65").</li>
@@ -739,11 +943,45 @@
   </footer>
 
   <script>
-    window.addEventListener('scroll', () => {
-      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
-      document.getElementById('progressBar').style.width = scrolled + '%';
+    // Barra de progreso de lectura
+    (function () {
+      const progressBar = document.getElementById('progressBar');
+      let ticking = false;
+
+      function updateProgress() {
+        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+        progressBar.style.width = scrolled + '%';
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          window.requestAnimationFrame(updateProgress);
+          ticking = true;
+        }
+      }, { passive: true });
+    })();
+
+    // Menú hamburguesa (Responsive)
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', function () {
+      const isOpen = mainNav.classList.toggle('active');
+      this.setAttribute('aria-expanded', isOpen);
+      this.innerHTML = isOpen ? '✕' : '☰';
+    });
+
+    document.querySelectorAll('#mainNav a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 860) {
+          mainNav.classList.remove('active');
+          menuToggle.innerHTML = '☰';
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     });
   </script>
 </body>
