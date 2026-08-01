@@ -1,3 +1,4 @@
+<!-- LISTO -->
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
@@ -190,6 +191,7 @@
       line-height: 1.65;
       font-size: 1rem;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     a {
@@ -251,6 +253,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.85rem 1.5rem;
+      flex-wrap: wrap;
     }
 
     .brand-logo {
@@ -266,6 +269,7 @@
       width: 34px;
       height: 34px;
       fill: var(--primary);
+      flex-shrink: 0;
     }
     .brand-logo span.badge {
       font-size: 0.65rem;
@@ -277,11 +281,24 @@
       font-weight: 700;
     }
 
+    /* Menu Toggle (Hamburguesa) */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #FFF;
+      font-size: 1.75rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+    }
+
     nav ul {
       display: flex;
       list-style: none;
       gap: 1.5rem;
       align-items: center;
+      flex-wrap: wrap;
     }
     nav a {
       color: #CBD5E1;
@@ -296,10 +313,42 @@
       border-bottom-color: var(--primary);
     }
 
+    /* Responsive Header */
+    @media (max-width: 860px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 0.75rem;
+        border-top: 1px solid #334155;
+        padding-top: 0.75rem;
+      }
+      nav.active {
+        display: block;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+      }
+      nav ul li {
+        width: 100%;
+      }
+      nav a {
+        display: block;
+        padding: 0.85rem 0.25rem;
+        border-bottom: 1px solid #334155;
+      }
+    }
+
     .container {
       max-width: 1240px;
       margin: 2rem auto;
       padding: 0 1.5rem;
+      width: 100%;
     }
 
     .breadcrumbs {
@@ -321,15 +370,25 @@
       color: #CBD5E1;
     }
 
+    /* ===================================================== */
+    /* FIX PRINCIPAL: Grid Items necesitan min-width:0        */
+    /* para poder encogerse por debajo del contenido (tablas) */
+    /* ===================================================== */
     .layout-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2.5rem;
+      min-width: 0;
     }
     @media (min-width: 992px) {
       .layout-grid {
         grid-template-columns: 2.5fr 1fr;
       }
+    }
+    .layout-grid > main,
+    .layout-grid > aside.sidebar {
+      min-width: 0;
+      width: 100%;
     }
 
     article.main-article {
@@ -338,6 +397,8 @@
       padding: 2.5rem;
       box-shadow: var(--shadow-sm);
       border: 1px solid var(--border-color);
+      min-width: 0;
+      width: 100%;
     }
 
     .category-pill {
@@ -361,6 +422,7 @@
       color: #0F172A;
       margin-bottom: 1.25rem;
       letter-spacing: -0.02em;
+      overflow-wrap: break-word;
     }
 
     .article-meta {
@@ -375,11 +437,16 @@
       color: var(--text-muted);
     }
 
+    .article-body {
+      min-width: 0;
+    }
+
     .article-body p {
       margin-bottom: 1.25rem;
       color: #334155;
       font-size: 1.05rem;
       line-height: 1.75;
+      overflow-wrap: break-word;
     }
 
     .article-body h2 {
@@ -389,6 +456,7 @@
       margin-bottom: 1rem;
       padding-bottom: 0.4rem;
       border-bottom: 2px solid #F1F5F9;
+      overflow-wrap: break-word;
     }
 
     .article-body h3 {
@@ -396,13 +464,30 @@
       color: #1E293B;
       margin-top: 1.75rem;
       margin-bottom: 0.75rem;
+      overflow-wrap: break-word;
     }
 
+    .article-body ul, .article-body ol {
+      overflow-wrap: break-word;
+    }
+    .article-body li {
+      overflow-wrap: break-word;
+    }
+
+    /* ===================================================== */
+    /* FIX TABLAS: overflow-x contenido dentro del wrapper     */
+    /* ===================================================== */
     .table-wrapper {
       overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       margin: 1.75rem 0;
       border-radius: var(--radius-md);
       border: 1px solid var(--border-color);
+      max-width: 100%;
+    }
+    .table-wrapper table {
+      width: 100%;
+      border-collapse: collapse;
     }
 
     .formula-box {
@@ -414,6 +499,7 @@
       font-family: monospace;
       font-size: 1.02rem;
       color: #0F172A;
+      overflow-x: auto;
     }
 
     .warning-box {
@@ -424,6 +510,7 @@
       border-radius: 0 var(--radius-md) var(--radius-md) 0;
       font-size: 0.98rem;
       color: #78350F;
+      overflow-wrap: break-word;
     }
 
     aside.sidebar {
@@ -473,6 +560,101 @@
       justify-content: space-between;
       align-items: center;
       font-size: 0.85rem;
+      gap: 0.5rem;
+    }
+
+    /* ============================= */
+    /* AJUSTES RESPONSIVE ADICIONALES */
+    /* ============================= */
+    @media (max-width: 768px) {
+      article.main-article {
+        padding: 1.75rem 1.25rem;
+      }
+      h1.article-title {
+        font-size: 1.6rem;
+      }
+      .article-body h2 {
+        font-size: 1.3rem;
+      }
+      .article-body h3 {
+        font-size: 1.1rem;
+      }
+      .article-body p {
+        font-size: 1rem;
+      }
+      .article-meta {
+        gap: 0.75rem;
+        font-size: 0.85rem;
+      }
+      .article-meta > div:last-child {
+        margin-left: 0 !important;
+        width: 100%;
+      }
+      .table-wrapper table {
+        font-size: 0.82rem;
+      }
+      .table-wrapper th,
+      .table-wrapper td {
+        padding: 8px !important;
+        white-space: normal;
+      }
+      .formula-box {
+        font-size: 0.9rem;
+        padding: 1rem 1.1rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner {
+        padding: 0.75rem 1rem;
+      }
+      .brand-logo {
+        font-size: 1.05rem;
+        gap: 0.5rem;
+      }
+      .brand-logo svg {
+        width: 26px;
+        height: 26px;
+      }
+      .brand-logo span.badge {
+        font-size: 0.55rem;
+      }
+      .top-bar {
+        font-size: 0.75rem;
+        line-height: 1.4;
+        padding: 0.5rem 0.75rem;
+      }
+      .container {
+        margin: 1.25rem auto;
+        padding: 0 1rem;
+      }
+      article.main-article {
+        padding: 1.25rem 1rem;
+        border-radius: var(--radius-md);
+      }
+      h1.article-title {
+        font-size: 1.4rem;
+      }
+      figure img {
+        height: 180px !important;
+      }
+      .widget {
+        padding: 1.15rem;
+      }
+      .footer-inner {
+        gap: 1.75rem;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+      /* Cajas CTA con estilos inline: forzamos ajuste en móvil */
+      div[style*="max-width:540px"],
+      div[style*="max-width:520px"],
+      div[style*="max-width:480px"] {
+        padding: 16px !important;
+        max-width: 100% !important;
+      }
     }
   </style>
 
@@ -511,7 +693,11 @@
         Ferretería Ukra <span class="badge">Gasfitería</span>
       </a>
 
-      <nav aria-label="Navegación principal">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav aria-label="Navegación principal" id="mainNav">
         <ul>
           <li><a href="/">Inicio</a></li>
           <li><a href="/#guias">Guías Técnicas</a></li>
@@ -577,7 +763,7 @@
             <p>Antes de soldar, es fundamental identificar correctamente la clase de tubería que estás instalando, ya que cada una está diseñada para un uso y presión específicos:</p>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em">
+              <table>
                 <thead>
                   <tr style="background:#F1F5F9">
                     <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Clase</th>
@@ -612,7 +798,7 @@
             <h2>3. Herramientas Necesarias para la Termofusión</h2>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em">
+              <table>
                 <thead>
                   <tr style="background:#F1F5F9">
                     <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Herramienta</th>
@@ -672,7 +858,7 @@
             </div>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em">
+              <table>
                 <thead>
                   <tr style="background:#F1F5F9">
                     <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Diámetro (mm)</th>
@@ -789,7 +975,7 @@
             <h2>7. Precios Referenciales de Tubería y Accesorios PPR en Chile</h2>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em">
+              <table>
                 <thead>
                   <tr style="background:#F1F5F9">
                     <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Diámetro / Ítem</th>
@@ -935,11 +1121,33 @@
   </footer>
 
   <script>
+    // Barra de progreso de lectura
     window.addEventListener('scroll', () => {
       const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = (winScroll / height) * 100;
       document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+
+    // Menú hamburguesa (Responsive)
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', function() {
+      const isOpen = mainNav.classList.toggle('active');
+      this.setAttribute('aria-expanded', isOpen);
+      this.innerHTML = isOpen ? '✕' : '☰';
+    });
+
+    // Cierra el menú al hacer click en un link (mejor UX en móvil)
+    document.querySelectorAll('#mainNav a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 860) {
+          mainNav.classList.remove('active');
+          menuToggle.innerHTML = '☰';
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     });
   </script>
 </body>
