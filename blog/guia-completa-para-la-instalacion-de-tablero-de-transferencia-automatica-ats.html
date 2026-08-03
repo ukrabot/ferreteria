@@ -1,3 +1,4 @@
+<!-- LISTO -->
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
@@ -131,6 +132,10 @@
       padding: 0;
     }
 
+    html {
+      overflow-x: hidden;
+    }
+
     body {
       font-family: var(--font-stack);
       background-color: var(--bg-body);
@@ -138,6 +143,8 @@
       line-height: 1.7;
       font-size: 1rem;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      width: 100%;
     }
 
     a {
@@ -199,6 +206,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.85rem 1.5rem;
+      flex-wrap: wrap;
     }
 
     .brand-logo {
@@ -214,6 +222,7 @@
       width: 34px;
       height: 34px;
       fill: var(--primary);
+      flex-shrink: 0;
     }
     .brand-logo span.badge {
       font-size: 0.65rem;
@@ -225,11 +234,24 @@
       font-weight: 700;
     }
 
+    /* Menu Toggle (Hamburguesa) */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #FFF;
+      font-size: 1.75rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+    }
+
     nav ul {
       display: flex;
       list-style: none;
       gap: 1.5rem;
       align-items: center;
+      flex-wrap: wrap;
     }
     nav a {
       color: #CBD5E1;
@@ -244,10 +266,42 @@
       border-bottom-color: var(--primary);
     }
 
+    /* Responsive Header con menú hamburguesa */
+    @media (max-width: 860px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 0.75rem;
+        border-top: 1px solid #334155;
+        padding-top: 0.75rem;
+      }
+      nav.active {
+        display: block;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+      }
+      nav ul li {
+        width: 100%;
+      }
+      nav a {
+        display: block;
+        padding: 0.85rem 0.25rem;
+        border-bottom: 1px solid #334155;
+      }
+    }
+
     .container {
       max-width: 1240px;
       margin: 2rem auto;
       padding: 0 1.5rem;
+      width: 100%;
     }
 
     .breadcrumbs {
@@ -269,15 +323,23 @@
       color: #CBD5E1;
     }
 
+    /* Grid con fix de min-width:0 para permitir encoger contenido (tablas anchas) */
     .layout-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2.5rem;
+      min-width: 0;
+      width: 100%;
     }
     @media (min-width: 992px) {
       .layout-grid {
         grid-template-columns: 2.5fr 1fr;
       }
+    }
+    .layout-grid > main,
+    .layout-grid > aside.sidebar {
+      min-width: 0;
+      width: 100%;
     }
 
     article.main-article {
@@ -286,6 +348,8 @@
       padding: 2.5rem;
       box-shadow: var(--shadow-sm);
       border: 1px solid var(--border-color);
+      min-width: 0;
+      width: 100%;
     }
 
     .category-pill {
@@ -309,6 +373,7 @@
       color: #0F172A;
       margin-bottom: 1.25rem;
       letter-spacing: -0.02em;
+      overflow-wrap: break-word;
     }
 
     .article-meta {
@@ -323,11 +388,36 @@
       color: var(--text-muted);
     }
 
+    .article-body {
+      min-width: 0;
+      width: 100%;
+      overflow-wrap: break-word;
+    }
+    .article-body * {
+      max-width: 100%;
+    }
+    .article-body h2,
+    .article-body h3,
+    .article-body p,
+    .article-body li {
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    /* Tablas con scroll horizontal propio, contenido dentro del wrapper */
     .table-wrapper {
       overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       margin: 1.75rem 0;
       border-radius: var(--radius-md);
       border: 1px solid var(--border-color);
+      max-width: 100%;
+      width: 100%;
+    }
+    .table-wrapper table {
+      width: 100%;
+      min-width: 680px;
+      border-collapse: collapse;
     }
 
     aside.sidebar {
@@ -377,6 +467,112 @@
       justify-content: space-between;
       align-items: center;
       font-size: 0.85rem;
+      gap: 0.5rem;
+    }
+
+    /* Ajustes responsive que vencen los estilos inline del contenido */
+    @media (max-width: 768px) {
+      article.main-article {
+        padding: 1.75rem 1.25rem;
+      }
+      h1.article-title {
+        font-size: 1.65rem;
+      }
+      .article-body h2 {
+        font-size: 1.3em !important;
+        margin: 1.75rem 0 1rem !important;
+      }
+      .article-body h3 {
+        font-size: 1.1em !important;
+        margin: 1.5rem 0 0.6rem !important;
+      }
+      .article-body p,
+      .article-body li {
+        font-size: 0.98em !important;
+      }
+      .article-meta {
+        gap: 0.75rem;
+        font-size: 0.85rem;
+      }
+      .article-meta > div:last-child {
+        margin-left: 0 !important;
+        width: 100%;
+      }
+      .table-wrapper table {
+        font-size: 0.82rem !important;
+        min-width: 600px;
+      }
+      .table-wrapper th,
+      .table-wrapper td {
+        padding: 8px !important;
+        white-space: normal !important;
+      }
+      figure img {
+        height: 200px !important;
+        object-fit: cover;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner {
+        padding: 0.75rem 1rem;
+      }
+      .brand-logo {
+        font-size: 1.05rem;
+        gap: 0.5rem;
+      }
+      .brand-logo svg {
+        width: 26px;
+        height: 26px;
+      }
+      .brand-logo span.badge {
+        font-size: 0.55rem;
+      }
+      .top-bar {
+        font-size: 0.75rem;
+        line-height: 1.4;
+        padding: 0.5rem 0.75rem;
+      }
+      .container {
+        margin: 1.25rem auto;
+        padding: 0 1rem;
+      }
+      article.main-article {
+        padding: 1.25rem 1rem;
+        border-radius: var(--radius-md);
+      }
+      h1.article-title {
+        font-size: 1.4rem;
+      }
+      .article-body h2 {
+        font-size: 1.15em !important;
+      }
+      .article-body h3 {
+        font-size: 1.02em !important;
+      }
+      .article-body p,
+      .article-body li {
+        font-size: 0.92em !important;
+      }
+      .table-wrapper table {
+        min-width: 540px;
+      }
+      figure img {
+        height: 170px !important;
+      }
+      .widget {
+        padding: 1.15rem;
+      }
+      .footer-inner {
+        gap: 1.75rem;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+      div[style*="border-left:4px solid"] {
+        padding: 14px 16px !important;
+      }
     }
   </style>
   <!-- Google AdSense Auto Ads -->
@@ -413,7 +609,11 @@
         Ferretería Ukra <span class="badge">SEC Chile</span>
       </a>
 
-      <nav aria-label="Navegación principal">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav aria-label="Navegación principal" id="mainNav">
         <ul>
           <li><a href="/">Inicio</a></li>
           <li><a href="/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/">Cables Chile</a></li>
@@ -465,8 +665,8 @@
 
             <p style="color:#333;line-height:1.7;margin:12px 0;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:1em;">Pero instalar un ATS mal dimensionado, sin protección de seccionamiento ni puesta a tierra independiente, es tan peligroso como no tenerlo. En este artículo te explico cómo seleccionar, dimensionar e instalar un ATS cumpliendo la <strong>NCh Elec 4/2003</strong> y la normativa de la <strong>SEC</strong>, con costos reales en <strong>CLP</strong>.</p>
 
-            <figure style="margin:24px 0;text-align:center;">
-              <img src="https://images.pexels.com/photos/8447833/pexels-photo-8447833.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Tablero de transferencia automática ATS con contactores y controlador" style="max-width:600px;width:100%;height:auto;object-fit:cover;border-radius:6px;display:block;margin:0 auto;" loading="lazy">
+            <figure style="margin:24px auto;text-align:center;max-width:600px;">
+              <img src="https://images.pexels.com/photos/8447833/pexels-photo-8447833.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Tablero de transferencia automática ATS con contactores y controlador" style="max-width:600px;width:100%;height:220px;object-fit:cover;border-radius:6px;display:block;margin:0 auto;" loading="lazy">
               <figcaption style="font-size:0.9em;color:#666;margin-top:8px;font-style:italic;">ATS trifásico 100 A con contactores mecánicos interbloqueados y controlador de secuencia.</figcaption>
             </figure>
 
@@ -475,7 +675,7 @@
             <p style="color:#333;line-height:1.7;margin:12px 0;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:1em;">No existe "un ATS para todo". La elección depende del tiempo máximo de interrupción tolerable, la potencia de la carga y si hay equipos sensibles como UPS médicas o servidores.</p>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+              <table style="width:100%;border-collapse:collapse;margin:0;font-size:0.95em;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
                 <thead>
                   <tr style="background:#f5f5f5;">
                     <th style="border:1px solid #ddd;padding:10px;text-align:left;font-weight:600;">Tipo de ATS</th>
@@ -529,7 +729,7 @@
             <p style="color:#333;line-height:1.7;margin:12px 0;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:1em;">Suma las potencias de todos los equipos que deben funcionar durante el corte. Luego aplica el factor de simultaneidad y el pico de arranque.</p>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+              <table style="width:100%;border-collapse:collapse;margin:0;font-size:0.95em;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
                 <thead>
                   <tr style="background:#f5f5f5;">
                     <th style="border:1px solid #ddd;padding:10px;text-align:left;font-weight:600;">Equipo</th>
@@ -585,7 +785,7 @@
             <p style="color:#333;line-height:1.7;margin:12px 0;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:1em;">La norma chilena exige protecciones y seccionamientos específicos. Un ATS no es solo "un switch": es un sistema con protecciones coordinadas.</p>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+              <table style="width:100%;border-collapse:collapse;margin:0;font-size:0.95em;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
                 <thead>
                   <tr style="background:#f5f5f5;">
                     <th style="border:1px solid #ddd;padding:10px;text-align:left;font-weight:600;">Componente</th>
@@ -678,7 +878,7 @@
             <h2 style="color:#1a1a1a;font-size:1.6em;margin:32px 0 16px;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">Costos reales en Chile: equipamiento + instalación profesional</h2>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+              <table style="width:100%;border-collapse:collapse;margin:0;font-size:0.95em;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
                 <thead>
                   <tr style="background:#f5f5f5;">
                     <th style="border:1px solid #ddd;padding:10px;text-align:left;font-weight:600;">Concepto</th>
@@ -854,11 +1054,32 @@
   </footer>
 
   <script>
+    // Barra de progreso de lectura
     window.addEventListener('scroll', () => {
       const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = (winScroll / height) * 100;
       document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+
+    // Menú hamburguesa (Responsive)
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', function() {
+      const isOpen = mainNav.classList.toggle('active');
+      this.setAttribute('aria-expanded', isOpen);
+      this.innerHTML = isOpen ? '✕' : '☰';
+    });
+
+    document.querySelectorAll('#mainNav a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 860) {
+          mainNav.classList.remove('active');
+          menuToggle.innerHTML = '☰';
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     });
   </script>
 </body>
