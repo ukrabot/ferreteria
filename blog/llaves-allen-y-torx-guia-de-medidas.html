@@ -1,3 +1,4 @@
+<!-- LISTO -->
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
@@ -134,6 +135,7 @@
       line-height: 1.65;
       font-size: 1rem;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     a {
@@ -195,6 +197,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.85rem 1.5rem;
+      flex-wrap: wrap;
     }
 
     .brand-logo {
@@ -210,6 +213,7 @@
       width: 34px;
       height: 34px;
       fill: var(--primary);
+      flex-shrink: 0;
     }
     .brand-logo span.badge {
       font-size: 0.65rem;
@@ -221,11 +225,24 @@
       font-weight: 700;
     }
 
+    /* Menu Toggle (Hamburguesa) */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #FFF;
+      font-size: 1.75rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+    }
+
     nav ul {
       display: flex;
       list-style: none;
       gap: 1.5rem;
       align-items: center;
+      flex-wrap: wrap;
     }
     nav a {
       color: #CBD5E1;
@@ -240,10 +257,42 @@
       border-bottom-color: var(--primary);
     }
 
+    /* Responsive Header */
+    @media (max-width: 860px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 0.75rem;
+        border-top: 1px solid #334155;
+        padding-top: 0.75rem;
+      }
+      nav.active {
+        display: block;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+      }
+      nav ul li {
+        width: 100%;
+      }
+      nav a {
+        display: block;
+        padding: 0.85rem 0.25rem;
+        border-bottom: 1px solid #334155;
+      }
+    }
+
     .container {
       max-width: 1240px;
       margin: 2rem auto;
       padding: 0 1.5rem;
+      width: 100%;
     }
 
     .breadcrumbs {
@@ -265,15 +314,22 @@
       color: #CBD5E1;
     }
 
+    /* Grid Items necesitan min-width:0 para encogerse por debajo del contenido (tablas) */
     .layout-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2.5rem;
+      min-width: 0;
     }
     @media (min-width: 992px) {
       .layout-grid {
         grid-template-columns: 2.5fr 1fr;
       }
+    }
+    .layout-grid > main,
+    .layout-grid > aside.sidebar {
+      min-width: 0;
+      width: 100%;
     }
 
     article.main-article {
@@ -282,6 +338,8 @@
       padding: 2.5rem;
       box-shadow: var(--shadow-sm);
       border: 1px solid var(--border-color);
+      min-width: 0;
+      width: 100%;
     }
 
     .category-pill {
@@ -298,6 +356,16 @@
       border: 1px solid #FCA5A5;
     }
 
+    h1.article-title {
+      font-size: 2.1rem;
+      line-height: 1.3;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+      overflow-wrap: break-word;
+    }
+
     .article-meta {
       display: flex;
       flex-wrap: wrap;
@@ -310,11 +378,16 @@
       color: var(--text-muted);
     }
 
+    .article-body {
+      min-width: 0;
+    }
+
     .article-body p {
       margin-bottom: 1.25rem;
       color: #334155;
       font-size: 1.05rem;
       line-height: 1.75;
+      overflow-wrap: break-word;
     }
 
     .article-body h2 {
@@ -324,6 +397,7 @@
       margin-bottom: 1rem;
       padding-bottom: 0.4rem;
       border-bottom: 2px solid #F1F5F9;
+      overflow-wrap: break-word;
     }
 
     .article-body h3 {
@@ -331,15 +405,63 @@
       color: #1E293B;
       margin-top: 1.75rem;
       margin-bottom: 0.75rem;
+      overflow-wrap: break-word;
     }
 
+    .article-body ul {
+      margin: 0 0 1.25rem 1.5rem;
+      color: #334155;
+      line-height: 1.75;
+      overflow-wrap: break-word;
+    }
+    .article-body ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Tablas: ocupan 100% del wrapper y hacen scroll horizontal sin afectar el layout */
     .table-wrapper {
       overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       margin: 1.75rem 0;
       border-radius: var(--radius-md);
       border: 1px solid var(--border-color);
+      max-width: 100%;
+    }
+    .table-wrapper table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95em;
+    }
+    .table-wrapper th,
+    .table-wrapper td {
+      border: 1px solid #E2E8F0;
+      padding: 10px;
+      text-align: left;
+    }
+    .table-wrapper thead tr {
+      background: #F1F5F9;
+    }
+    .table-wrapper th {
+      color: #0F172A;
     }
 
+    /* Callout boxes (advertencia / consejo) unificados en clase */
+    .callout-box {
+      border-left: 4px solid var(--primary);
+      background: #FFF5F5;
+      padding: 14px 16px;
+      margin: 20px 0;
+      font-size: 0.95rem;
+      color: #1a1a1a;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      overflow-wrap: break-word;
+    }
+    .callout-box.info {
+      border-left-color: #0057e7;
+      background: #F5F8FF;
+    }
+
+    /* Sidebar */
     aside.sidebar {
       display: flex;
       flex-direction: column;
@@ -387,6 +509,89 @@
       justify-content: space-between;
       align-items: center;
       font-size: 0.85rem;
+      gap: 0.5rem;
+    }
+
+    /* Ajustes responsive adicionales */
+    @media (max-width: 768px) {
+      article.main-article {
+        padding: 1.75rem 1.25rem;
+      }
+      h1.article-title {
+        font-size: 1.6rem;
+      }
+      .article-body h2 {
+        font-size: 1.3rem;
+      }
+      .article-body h3 {
+        font-size: 1.1rem;
+      }
+      .article-body p {
+        font-size: 1rem;
+      }
+      .article-meta {
+        gap: 0.75rem;
+        font-size: 0.85rem;
+      }
+      .article-meta > div:last-child {
+        margin-left: 0 !important;
+        width: 100%;
+      }
+      .table-wrapper table {
+        font-size: 0.82rem;
+      }
+      .table-wrapper th,
+      .table-wrapper td {
+        padding: 8px !important;
+        white-space: normal;
+      }
+      .callout-box {
+        font-size: 0.88rem;
+        padding: 12px 14px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner {
+        padding: 0.75rem 1rem;
+      }
+      .brand-logo {
+        font-size: 1.05rem;
+        gap: 0.5rem;
+      }
+      .brand-logo svg {
+        width: 26px;
+        height: 26px;
+      }
+      .brand-logo span.badge {
+        font-size: 0.55rem;
+      }
+      .top-bar {
+        font-size: 0.75rem;
+        line-height: 1.4;
+        padding: 0.5rem 0.75rem;
+      }
+      .container {
+        margin: 1.25rem auto;
+        padding: 0 1rem;
+      }
+      article.main-article {
+        padding: 1.25rem 1rem;
+        border-radius: var(--radius-md);
+      }
+      h1.article-title {
+        font-size: 1.4rem;
+      }
+      .widget {
+        padding: 1.15rem;
+      }
+      .footer-inner {
+        gap: 1.75rem;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
   <!-- Google AdSense Auto Ads -->
@@ -423,7 +628,11 @@
         Ferretería Ukra <span class="badge">Ajuste</span>
       </a>
 
-      <nav aria-label="Navegación principal">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav aria-label="Navegación principal" id="mainNav">
         <ul>
           <li><a href="/">Inicio</a></li>
           <li><a href="/blog/guia-completa-sobre-tipos-de-destornilladores-y-sus-puntas/">Puntas</a></li>
@@ -453,6 +662,7 @@
         <article class="main-article" itemscope itemtype="https://schema.org/BlogPosting">
           
           <span class="category-pill">Mecánica de Precisión &amp; Fasteners</span>
+          <h1 class="article-title" itemprop="headline">Llaves Allen y Torx: Guía Completa de Medidas Métricas, Pulgadas y Seguridad</h1>
 
           <div class="article-meta">
             <div><strong>Por Equipo Técnico Ferretería Ukra</strong> | Normas ISO 2936, ANSI B18.3 e ISO 10664</div>
@@ -465,199 +675,197 @@
 
           <!-- Article Body Content -->
           <div class="article-body" itemprop="articleBody">
-            
-            <h1 style="font-family:Arial,sans-serif;font-size:1.6em;color:#1a1a1a;line-height:1.3;margin:0 0 16px 0;">Llaves Allen y Torx: guía completa de medidas métricas, pulgadas y seguridad</h1>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               Estás reparando una bicicleta de alta gama, armando un mueble RTA importado o desarmando la culata de un motor automotriz, tomas una llave Allen, aplicas fuerza y de pronto sientes que la arista del perno cede, dejándolo completamente "rodado" y redondeado.
             </p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               En el 95 % de las ocasiones, este desastre mecánico no se debe a un defecto del perno, sino a haber confundido una <strong>llave Allen Métrica (ISO 2936)</strong> con una <strong>llave Allen Imperial en Pulgadas (SAE)</strong>, o haber usado una llave Torx estándar en un perno <strong>Torx de Seguridad (Tamper-Resistant)</strong>.
             </p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               En este manual técnico desglosamos las dimensiones exactas punto a punto, las equivalencias críticas de conversión y la física del torque para que nunca más barras un perno.
             </p>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">1. Sistema de Llaves Allen (Hexagonal): Métrico ISO 2936 vs. SAE en Pulgadas</h2>
+            <h2>1. Sistema de Llaves Allen (Hexagonal): Métrico ISO 2936 vs. SAE en Pulgadas</h2>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               Las llaves Allen (inventadas por la <em>Allen Manufacturing Company</em>) transmiten torque mediante una geometría de seis caras planas paralelas. Se miden por la distancia entre dos caras opuestas (ancho entre caras - <em>Across Flats AF</em>).
             </p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               <strong>La trampa de las equivalencias "casi iguales":</strong>
             </p>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em;font-family:Arial,sans-serif;">
+              <table>
                 <thead>
-                  <tr style="background:#f0f4f8;">
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Medida Métrica (mm)</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Medida Imperial SAE (Pulgadas)</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Valor Decimal SAE (mm)</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Holgura Peligrosa / Compatibilidad</th>
+                  <tr>
+                    <th>Medida Métrica (mm)</th>
+                    <th>Medida Imperial SAE (Pulgadas)</th>
+                    <th>Valor Decimal SAE (mm)</th>
+                    <th>Holgura Peligrosa / Compatibilidad</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;"><strong>2.5 mm</strong></td>
-                    <td style="border:1px solid #ccc;padding:10px;">3/32"</td>
-                    <td style="border:1px solid #ccc;padding:10px;">2.38 mm</td>
-                    <td style="border:1px solid #ccc;padding:10px;">❌ Holgura de 0.12 mm. Barra el perno métrico.</td>
+                    <td><strong>2.5 mm</strong></td>
+                    <td>3/32"</td>
+                    <td>2.38 mm</td>
+                    <td>❌ Holgura de 0.12 mm. Barra el perno métrico.</td>
                   </tr>
                   <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;"><strong>4.0 mm</strong></td>
-                    <td style="border:1px solid #ccc;padding:10px;">5/32"</td>
-                    <td style="border:1px solid #ccc;padding:10px;">3.97 mm</td>
-                    <td style="border:1px solid #ccc;padding:10px;">⚠️ Diferencia de 0.03 mm. Parece calzar pero barre al torque alto.</td>
+                    <td><strong>4.0 mm</strong></td>
+                    <td>5/32"</td>
+                    <td>3.97 mm</td>
+                    <td>⚠️ Diferencia de 0.03 mm. Parece calzar pero barre al torque alto.</td>
                   </tr>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;"><strong>5.0 mm</strong></td>
-                    <td style="border:1px solid #ccc;padding:10px;">13/64"</td>
-                    <td style="border:1px solid #ccc;padding:10px;">5.16 mm</td>
-                    <td style="border:1px solid #ccc;padding:10px;">❌ La llave SAE no entra en el perno métrico.</td>
+                    <td><strong>5.0 mm</strong></td>
+                    <td>13/64"</td>
+                    <td>5.16 mm</td>
+                    <td>❌ La llave SAE no entra en el perno métrico.</td>
                   </tr>
                   <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;"><strong>8.0 mm</strong></td>
-                    <td style="border:1px solid #ccc;padding:10px;">5/16"</td>
-                    <td style="border:1px solid #ccc;padding:10px;">7.94 mm</td>
-                    <td style="border:1px solid #ccc;padding:10px;">⚠️ Calce engañoso. Solo para torques bajos.</td>
+                    <td><strong>8.0 mm</strong></td>
+                    <td>5/16"</td>
+                    <td>7.94 mm</td>
+                    <td>⚠️ Calce engañoso. Solo para torques bajos.</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <div style="border-left:4px solid #e63946;background:#fff5f5;padding:14px 16px;margin:20px 0;font-family:Arial,sans-serif;font-size:0.95em;color:#1a1a1a;">
+            <div class="callout-box">
               <strong>⚠️ Regla de taller:</strong> Jamás uses llaves en pulgadas en pernos de origen europeo o asiático (métrica). Aunque parezca que entra con firmeza, el área de contacto disminuye un 40 %, concentrando la presión en las aristas y redondeando el hueco interior.
             </div>
 
-            <h3 style="color:#1a1a1a;font-size:1.2em;margin:20px 0 10px;">Llave Allen plana vs. Punta de Bola (Ball End)</h3>
+            <h3>Llave Allen plana vs. Punta de Bola (Ball End)</h3>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               Las llaves de calidad profesional incluyen en el vástago largo un mecanizado en forma de esfera trunca (Punta de Bola):
             </p>
 
-            <ul style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;padding-left:20px;">
+            <ul>
               <li><strong>Punta de Bola:</strong> Permite ingresar al perno con un ángulo inclinado de hasta <strong>25° a 30°</strong> fuera de centro. Ideal para trabajar entre tubos de bicicletas o carcasas de máquinas. <em>Advertencia: Soporta máximo un 60 % del torque nominal. No se debe usar para la ruptura inicial de aflojado.</em></li>
               <li><strong>Punta Recta Plana:</strong> Asiento al 100 % de contacto. Debe usarse siempre para dar el apretón final o soltar pernos agarrotados.</li>
             </ul>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">2. Sistema Torx (ISO 10664): Nomenclatura "T" y Geometría Lobular</h2>
+            <h2>2. Sistema Torx (ISO 10664): Nomenclatura "T" y Geometría Lobular</h2>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
-              Desarrollado originalmente por Camcar Textron, el perfil Torx reemplaza las caras planas por una estrella de seis lóbulo circulares con un ángulo de impulso de casi <strong>0°</strong>. Esto elimina por completo la fuerza radial de expulsión (cam-out) y permite aplicar hasta un 100 % más de torque que una llave Allen de igual tamaño.
+            <p>
+              Desarrollado originalmente por Camcar Textron, el perfil Torx reemplaza las caras planas por una estrella de seis lóbulos circulares con un ángulo de impulso de casi <strong>0°</strong>. Esto elimina por completo la fuerza radial de expulsión (cam-out) y permite aplicar hasta un 100 % más de torque que una llave Allen de igual tamaño.
             </p>
 
-            <h3 style="font-family:Arial,sans-serif;font-size:1.2em;margin:20px 0 10px;">Tabla de Dimensiones de Llaves Torx Estándar (T)</h3>
+            <h3>Tabla de Dimensiones de Llaves Torx Estándar (T)</h3>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em;font-family:Arial,sans-serif;">
+              <table>
                 <thead>
-                  <tr style="background:#f0f4f8;">
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Código Torx</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Medida Lóbulo a Lóbulo (mm)</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Rango de Pernos Rosca Típicos</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Uso Frecuente</th>
+                  <tr>
+                    <th>Código Torx</th>
+                    <th>Medida Lóbulo a Lóbulo (mm)</th>
+                    <th>Rango de Pernos Rosca Típicos</th>
+                    <th>Uso Frecuente</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;"><strong>T10</strong></td>
-                    <td style="border:1px solid #ccc;padding:10px;">2.74 mm</td>
-                    <td style="border:1px solid #ccc;padding:10px;">M2.5 - M3</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Electrónica, discos duros, carcasas</td>
+                    <td><strong>T10</strong></td>
+                    <td>2.74 mm</td>
+                    <td>M2.5 - M3</td>
+                    <td>Electrónica, discos duros, carcasas</td>
                   </tr>
                   <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;"><strong>T15</strong></td>
-                    <td style="border:1px solid #ccc;padding:10px;">3.27 mm</td>
-                    <td style="border:1px solid #ccc;padding:10px;">M3.5</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Muebles de placa, tableros de autos</td>
+                    <td><strong>T15</strong></td>
+                    <td>3.27 mm</td>
+                    <td>M3.5</td>
+                    <td>Muebles de placa, tableros de autos</td>
                   </tr>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;"><strong>T20</strong></td>
-                    <td style="border:1px solid #ccc;padding:10px;">3.86 mm</td>
-                    <td style="border:1px solid #ccc;padding:10px;">M4</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Pernos de electrodomésticos, motos</td>
+                    <td><strong>T20</strong></td>
+                    <td>3.86 mm</td>
+                    <td>M4</td>
+                    <td>Pernos de electrodomésticos, motos</td>
                   </tr>
                   <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;"><strong>T25</strong></td>
-                    <td style="border:1px solid #ccc;padding:10px;">4.43 mm</td>
-                    <td style="border:1px solid #ccc;padding:10px;">M4.5 - M5</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Frenos de disco de bicicleta, motor</td>
+                    <td><strong>T25</strong></td>
+                    <td>4.43 mm</td>
+                    <td>M4.5 - M5</td>
+                    <td>Frenos de disco de bicicleta, motor</td>
                   </tr>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;"><strong>T27</strong></td>
-                    <td style="border:1px solid #ccc;padding:10px;">4.99 mm</td>
-                    <td style="border:1px solid #ccc;padding:10px;">M5 especial</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Maquinaria agrícola, sierras a motor Stihl</td>
+                    <td><strong>T27</strong></td>
+                    <td>4.99 mm</td>
+                    <td>M5 especial</td>
+                    <td>Maquinaria agrícola, sierras a motor Stihl</td>
                   </tr>
                   <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;"><strong>T30</strong></td>
-                    <td style="border:1px solid #ccc;padding:10px;">5.52 mm</td>
-                    <td style="border:1px solid #ccc;padding:10px;">M6</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Estructuras metálicas, chasis automotriz</td>
+                    <td><strong>T30</strong></td>
+                    <td>5.52 mm</td>
+                    <td>M6</td>
+                    <td>Estructuras metálicas, chasis automotriz</td>
                   </tr>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;"><strong>T40</strong></td>
-                    <td style="border:1px solid #ccc;padding:10px;">6.65 mm</td>
-                    <td style="border:1px solid #ccc;padding:10px;">M8</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Bisagras de puertas de auto, pinzas de freno</td>
+                    <td><strong>T40</strong></td>
+                    <td>6.65 mm</td>
+                    <td>M8</td>
+                    <td>Bisagras de puertas de auto, pinzas de freno</td>
                   </tr>
                   <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;"><strong>T50</strong></td>
-                    <td style="border:1px solid #ccc;padding:10px;">8.83 mm</td>
-                    <td style="border:1px solid #ccc;padding:10px;">M10</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Cinturones de seguridad, culatas de motor</td>
+                    <td><strong>T50</strong></td>
+                    <td>8.83 mm</td>
+                    <td>M10</td>
+                    <td>Cinturones de seguridad, culatas de motor</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">3. Variantes Especiales: Torx de Seguridad (TR) y E-Torx Hembra</h2>
+            <h2>3. Variantes Especiales: Torx de Seguridad (TR) y E-Torx Hembra</h2>
 
-            <ul style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;padding-left:20px;">
+            <ul>
               <li><strong>Torx TR (Tamper-Resistant / Security Torx):</strong> La cabeza del perno posee un poste o vástago cilíndrico en el centro. Requiere llaves que tengan una <strong>perforación coaxial hueca</strong> en la punta para calzar. Usado en medidores de gas, ascensores y consolas de juego.</li>
               <li><strong>E-Torx / Dado Torx Invertido (E4 a E16):</strong> El perno en lugar de tener un orificio hundido, tiene una estrella saliente hacia afuera. La herramienta es un dado tubular estrella hembra. Muy frecuente en marcas automotrices como BMW, Peugeot, Chevrolet y Mercedes-Benz.</li>
             </ul>
 
-            <div style="border-left:4px solid #0057e7;background:#f5f8ff;padding:14px 16px;margin:20px 0;font-family:Arial,sans-serif;font-size:0.95em;color:#1a1a1a;">
+            <div class="callout-box info">
               <strong>💡 Consejo de Compra Metalúrgico:</strong> Al seleccionar juegos de llaves Allen o Torx, exige aleaciones de <strong>Acero S2 (Silicio-Manganeso)</strong> o <strong>Cromo-Vanadio (Cr-V) con tratamiento térmico</strong>. Las llaves económicas de acero al carbono dulce se torsionan y redondean al superar los 15 Nm de torque.
             </div>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">Preguntas frecuentes sobre medidas de llaves Allen y Torx</h2>
+            <h2>Preguntas frecuentes sobre medidas de llaves Allen y Torx</h2>
 
-            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Por qué se redondean las cabezas de los pernos Allen?</h3>
+            <h3>¿Por qué se redondean las cabezas de los pernos Allen?</h3>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               Se debe principalmente a la mezcla involuntaria entre el sistema métrico (mm) y el sistema en pulgadas (SAE). Por ejemplo, usar una llave de 5/32 pulgadas (3,97 mm) en un perno métrico de 4,0 mm deja una holgura microscópica que, al aplicar un torque superior a 12 Nm, destruye las seis aristas interiores del hueco hexagonal.
             </p>
 
-            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Para qué sirve la punta de bola (Ball End) en las llaves Allen?</h3>
+            <h3>¿Para qué sirve la punta de bola (Ball End) en las llaves Allen?</h3>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               La punta redonda o de bola en el extremo largo de la llave Allen permite insertar la herramienta e imprimir rotación en un ángulo inclinado de hasta 25° a 30° respecto al eje del perno. Es ideal para trabajar en espacios reducidos u obstruidos. Sin embargo, no se debe usar para aflojar o realizar el apriete de ruptura inicial porque posee menor área de contacto.
             </p>
 
-            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Qué diferencia hay entre una llave Torx estándar (T) y una Torx de Seguridad (TR)?</h3>
+            <h3>¿Qué diferencia hay entre una llave Torx estándar (T) y una Torx de Seguridad (TR)?</h3>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               El perno Torx de Seguridad (Tamper-Resistant / Tamper-Proof) incluye un pivote o pin cilíndrico saliente en el centro del hueco en forma de estrella. Una llave Torx estándar no puede ingresar porque tropieza con el pin. La llave Torx TR cuenta con una perforación o agujero central mecanizado para alojar dicho pivote.
             </p>
 
-            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Qué significa la numeración 'E' en dados E-Torx?</h3>
+            <h3>¿Qué significa la numeración 'E' en dados E-Torx?</h3>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               La letra 'E' corresponde a Torx Invertido o Hembra (External Torx). En este sistema, la cabeza del perno es saliente con la forma de estrella de seis puntas, y la herramienta es un dado hembra tubular (ejemplos: E4, E6, E8, E10, E12, E14). Es de uso extendido en motores automotrices europeos y americanos.
             </p>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">Ver también en Ferretería Ukra Blog</h2>
+            <h2>Ver también en Ferretería Ukra Blog</h2>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
-              <a href="/blog/guia-completa-sobre-tipos-de-destornilladores-y-sus-puntas/" style="color:#0057e7;text-decoration:underline;">Tipos de destornilladores y sus puntas: guía completa</a> |
-              <a href="/blog/guia-completa-sobre-tipos-de-discos-para-esmeril-angular/" style="color:#0057e7;text-decoration:underline;">Guía completa sobre tipos de discos para esmeril angular</a> |
-              <a href="/blog/mejor-mascara-de-soldar/" style="color:#0057e7;text-decoration:underline;">Mejor máscara de soldar — Ranking técnico</a>
+            <p>
+              <a href="/blog/guia-completa-sobre-tipos-de-destornilladores-y-sus-puntas/">Tipos de destornilladores y sus puntas: guía completa</a> |
+              <a href="/blog/guia-completa-sobre-tipos-de-discos-para-esmeril-angular/">Guía completa sobre tipos de discos para esmeril angular</a> |
+              <a href="/blog/mejor-mascara-de-soldar/">Mejor máscara de soldar — Ranking técnico</a>
             </p>
 
           </div>
@@ -714,11 +922,33 @@
   </footer>
 
   <script>
+    // Barra de progreso de lectura
     window.addEventListener('scroll', () => {
       const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = (winScroll / height) * 100;
       document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+
+    // Menú hamburguesa (Responsive)
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', function() {
+      const isOpen = mainNav.classList.toggle('active');
+      this.setAttribute('aria-expanded', isOpen);
+      this.innerHTML = isOpen ? '✕' : '☰';
+    });
+
+    // Cierra el menú al hacer click en un link (mejor UX en móvil)
+    document.querySelectorAll('#mainNav a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 860) {
+          mainNav.classList.remove('active');
+          menuToggle.innerHTML = '☰';
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     });
   </script>
 </body>
