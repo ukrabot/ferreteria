@@ -1,3 +1,4 @@
+<!-- LISTO -->
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
@@ -169,6 +170,8 @@
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    html { overflow-x: hidden; }
+
     body {
       font-family: var(--font-stack);
       background-color: var(--bg-body);
@@ -176,6 +179,7 @@
       line-height: 1.65;
       font-size: 1rem;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     a { color: #0057e7; text-decoration: none; transition: color 0.2s ease; }
@@ -217,6 +221,18 @@
       border-radius: 4px; text-transform: uppercase; font-weight: 700;
     }
 
+    /* Menu Toggle (Hamburguesa) */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #FFF;
+      font-size: 1.75rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+    }
+
     nav ul { display: flex; list-style: none; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
     nav a {
       color: #CBD5E1; font-weight: 500; font-size: 0.95rem; padding: 0.4rem 0.2rem;
@@ -224,7 +240,24 @@
     }
     nav a:hover, nav a.active { color: #FFFFFF; text-decoration: none; border-bottom-color: var(--primary); }
 
-    .container { max-width: 1240px; margin: 2rem auto; padding: 0 1.5rem; }
+    /* Responsive Header */
+    @media (max-width: 860px) {
+      .menu-toggle { display: block; }
+      nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 0.75rem;
+        border-top: 1px solid #334155;
+        padding-top: 0.75rem;
+      }
+      nav.active { display: block; }
+      nav ul { flex-direction: column; gap: 0; width: 100%; }
+      nav ul li { width: 100%; }
+      nav a { display: block; padding: 0.85rem 0.25rem; border-bottom: 1px solid #334155; }
+    }
+
+    .container { max-width: 1240px; margin: 2rem auto; padding: 0 1.5rem; width: 100%; }
 
     .breadcrumbs {
       display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem;
@@ -234,14 +267,31 @@
     .breadcrumbs a:hover { color: var(--primary); }
     .breadcrumbs span.separator { color: #CBD5E1; }
 
-    .layout-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
-    @media (min-width: 992px) { .layout-grid { grid-template-columns: 2.5fr 1fr; } }
+    /* ===================================================== */
+    /* FIX PRINCIPAL: Grid items necesitan min-width:0        */
+    /* para poder encogerse por debajo del contenido (tablas) */
+    /* ===================================================== */
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      min-width: 0;
+    }
+    @media (min-width: 992px) {
+      .layout-grid { grid-template-columns: 2.5fr 1fr; }
+    }
+    .layout-grid > main,
+    .layout-grid > aside.sidebar {
+      min-width: 0;
+      width: 100%;
+    }
 
     article.main-article {
       background: var(--bg-card); border-radius: var(--radius-lg); padding: 2.5rem;
       box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);
+      min-width: 0;
+      width: 100%;
     }
-    @media (max-width: 576px) { article.main-article { padding: 1.5rem; } }
 
     .category-pill {
       display: inline-block; background-color: #FEF2F2; color: var(--primary);
@@ -250,8 +300,10 @@
       margin-bottom: 1rem; border: 1px solid #FCA5A5;
     }
 
-    h1.article-title { font-size: 2.1rem; line-height: 1.3; font-weight: 800; color: #0F172A; margin-bottom: 1.25rem; letter-spacing: -0.02em; }
-    @media (max-width: 576px) { h1.article-title { font-size: 1.6rem; } }
+    h1.article-title {
+      font-size: 2.1rem; line-height: 1.3; font-weight: 800; color: #0F172A;
+      margin-bottom: 1.25rem; letter-spacing: -0.02em; overflow-wrap: break-word;
+    }
 
     .article-meta {
       display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem;
@@ -270,13 +322,26 @@
     .toc-box a { color: #334155; }
     .toc-box a:hover { color: var(--primary); }
 
-    .article-body p { margin-bottom: 1.25rem; color: #334155; font-size: 1.05rem; line-height: 1.75; }
-    .article-body h2 { font-size: 1.55rem; color: #0F172A; margin-top: 2.25rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 2px solid #F1F5F9; scroll-margin-top: 90px; }
-    .article-body h3 { font-size: 1.2rem; color: #1E293B; margin-top: 1.75rem; margin-bottom: 0.75rem; scroll-margin-top: 90px; }
+    .article-body { min-width: 0; }
+    .article-body p { margin-bottom: 1.25rem; color: #334155; font-size: 1.05rem; line-height: 1.75; overflow-wrap: break-word; }
+    .article-body h2 { font-size: 1.55rem; color: #0F172A; margin-top: 2.25rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 2px solid #F1F5F9; scroll-margin-top: 90px; overflow-wrap: break-word; }
+    .article-body h3 { font-size: 1.2rem; color: #1E293B; margin-top: 1.75rem; margin-bottom: 0.75rem; scroll-margin-top: 90px; overflow-wrap: break-word; }
 
-    .table-wrapper { overflow-x: auto; margin: 1.75rem 0; border-radius: var(--radius-md); border: 1px solid var(--border-color); }
+    /* ===================================================== */
+    /* FIX TABLAS: overflow controlado dentro del wrapper,    */
+    /* sin afectar el ancho del resto del artículo             */
+    /* ===================================================== */
+    .table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 1.75rem 0;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      max-width: 100%;
+    }
     .tech-table { width: 100%; border-collapse: collapse; font-size: 0.85em; min-width: 640px; }
-    .tech-table th { padding: 10px 6px; border: 1px solid #CBD5E1; text-align: left; background: #F1F5F9; }
+    .tech-table.wide-table { min-width: 820px; }
+    .tech-table th { padding: 10px 6px; border: 1px solid #CBD5E1; text-align: left; background: #F1F5F9; white-space: nowrap; }
     .tech-table td { padding: 8px 6px; border: 1px solid #E2E8F0; }
     .tech-table tbody tr:nth-child(even) { background: #FAFAFA; }
     .tech-table caption { caption-side: top; text-align: left; font-weight: 600; padding: 8px 6px; color: #334155; }
@@ -289,6 +354,7 @@
       background: #F1F5F9; border-left: 4px solid var(--primary); padding: 1.25rem 1.5rem;
       margin: 1.5rem 0; border-radius: 0 var(--radius-md) var(--radius-md) 0;
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 1.02rem; color: #0F172A;
+      overflow-x: auto; word-wrap: break-word;
     }
 
     .highlight-box { text-align: center; margin: 32px auto; padding: 20px 24px; max-width: 560px; background: #FFF5F5; border-left: 4px solid var(--primary); border-radius: 0 8px 8px 0; }
@@ -319,7 +385,7 @@
     }
     .sources-box h4 { font-size: 0.95rem; margin-bottom: 0.75rem; color: #0F172A; }
     .sources-box ul { list-style: none; }
-    .sources-box li { font-size: 0.875rem; margin-bottom: 0.5rem; padding-left: 1.25rem; position: relative; }
+    .sources-box li { font-size: 0.875rem; margin-bottom: 0.5rem; padding-left: 1.25rem; position: relative; overflow-wrap: break-word; }
     .sources-box li::before { content: "🔗"; position: absolute; left: 0; }
 
     .cta-box { text-align: center; margin: 40px auto; padding: 28px 24px; max-width: 520px; background: #F8FAFC; border: 2px solid var(--border-color); border-radius: 12px; }
@@ -379,6 +445,53 @@
     .cookie-accept:hover { background: var(--primary-hover); }
     .cookie-reject { background: #334155; color: #FFF; }
     .cookie-reject:hover { background: #475569; }
+
+    /* ============================= */
+    /* AJUSTES RESPONSIVE ADICIONALES */
+    /* ============================= */
+    @media (max-width: 768px) {
+      article.main-article { padding: 1.75rem 1.25rem; }
+      h1.article-title { font-size: 1.6rem; }
+      .article-body h2 { font-size: 1.3rem; }
+      .article-body h3 { font-size: 1.1rem; }
+      .article-body p { font-size: 1rem; }
+      .article-meta { gap: 0.75rem; font-size: 0.85rem; }
+      .toc-box { padding: 1rem 1.25rem; }
+      .tech-table { font-size: 0.8rem; }
+      .tech-table th, .tech-table td { padding: 7px 6px !important; }
+      .article-figure img { height: 190px; }
+      .formula-box { font-size: 0.92rem; padding: 1rem 1.25rem; }
+      .disclaimer-box { padding: 1rem 1.25rem; font-size: 0.85rem; }
+      .author-box { padding: 1.25rem; }
+      .related-articles { margin-top: 2.25rem; }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { padding: 0.75rem 1rem; }
+      .brand-logo { font-size: 1.05rem; gap: 0.5rem; }
+      .brand-logo svg { width: 26px; height: 26px; }
+      .brand-logo span.badge { font-size: 0.55rem; }
+      .top-bar { font-size: 0.75rem; line-height: 1.4; padding: 0.5rem 0.75rem; }
+      .container { margin: 1.25rem auto; padding: 0 1rem; }
+      article.main-article { padding: 1.25rem 1rem; border-radius: var(--radius-md); }
+      h1.article-title { font-size: 1.4rem; }
+      .article-figure img { height: 160px !important; }
+      .widget { padding: 1.15rem; }
+      .footer-inner { gap: 1.75rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-bottom .legal-links a:first-child { margin-left: 1rem; }
+      .toc-box { padding: 1rem; }
+      .toc-box ol { margin-left: 1rem; }
+      .formula-box { font-size: 0.85rem; padding: 1rem; }
+      .disclaimer-box { padding: 1rem; font-size: 0.82rem; }
+      .author-box { flex-direction: column; align-items: center; text-align: center; }
+      /* Cajas CTA / highlight con max-width fijo: forzamos ajuste en móvil */
+      .highlight-box,
+      .cta-box {
+        padding: 16px !important;
+        max-width: 100% !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -397,7 +510,12 @@
         <svg viewBox="0 0 24 24" role="img" aria-label="Logo Ferretería Ukra"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.4-2.4c.4-.4.4-1 0-1.3z"/></svg>
         Ferretería Ukra <span class="badge">Seguridad</span>
       </a>
-      <nav aria-label="Navegación principal">
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav aria-label="Navegación principal" id="mainNav">
         <ul>
           <li><a href="/">Inicio</a></li>
           <li><a href="/#seguridad">Seguridad</a></li>
@@ -495,7 +613,7 @@
             <p>La norma europea clasifica las propiedades dieléctricas bajo el código <strong>DI (Dielectric Insulation)</strong>. A diferencia de ASTM, ISO 20345 especifica ensayos de rigidez dieléctrica en suela nueva y after-aging. El marcado DI garantiza resistencia de aislamiento superior a 1.000 MΩ en ensayo de 500 V CC. Algunos fabricantes europeos complementan con certificación IEC 61111 (mantas aislantes) para calzado de alta tensión. La ventaja de ISO 20345 es su rigurosidad en ensayos de envejecimiento acelerado.</p>
 
             <div class="table-wrapper">
-              <table class="tech-table">
+              <table class="tech-table wide-table">
                 <caption>Comparativa de normas técnicas para calzado dieléctrico</caption>
                 <thead>
                   <tr>
@@ -551,7 +669,7 @@
             <p>La clasificación por clases de voltaje es la herramienta más importante para elegir el calzado correcto. No tiene sentido usar un zapato clase 30 kV en electricidad domiciliaria (sobreprotección innecesaria y costo elevado), ni usar un clase 5 kV en una subestación de 23 kV (riesgo mortal). Estas son las clases según la normativa técnica chilena e internacional:</p>
 
             <div class="table-wrapper">
-              <table class="tech-table">
+              <table class="tech-table wide-table">
                 <caption>Clases de aislamiento dieléctrico y su aplicación en Chile</caption>
                 <thead>
                   <tr>
@@ -615,7 +733,7 @@
             <p>Algunos fabricantes de gama alta (Panter, U-Power) utilizan compuestos de capa doble: una base de NBR para resistencia química y mecánica, con una capa exterior de PU dieléctrico de alta resistencia. Además, incorporan aditivos como silanos y titanatos que mejoran la compatibilidad entre la carga mineral y la matriz polimérica, reduciendo la formación de vacuolos donde se acumula humedad. El resultado es una suela con resistencia eléctrica más estable en el tiempo y menor degradación por ciclos de flexión.</p>
 
             <div class="table-wrapper">
-              <table class="tech-table">
+              <table class="tech-table wide-table">
                 <caption>Comparativa de materiales de suela dieléctrica</caption>
                 <thead>
                   <tr>
@@ -720,7 +838,7 @@
             <h2 id="precios">7. Marcas y Precios de Zapatos de Seguridad Dieléctricos en Chile (2026)</h2>
 
             <div class="table-wrapper">
-              <table class="tech-table">
+              <table class="tech-table wide-table">
                 <caption>Precios referenciales de calzado dieléctrico en el mercado chileno</caption>
                 <thead>
                   <tr>
@@ -946,6 +1064,27 @@
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
       document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+
+    // Menú hamburguesa (Responsive)
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', function() {
+      const isOpen = mainNav.classList.toggle('active');
+      this.setAttribute('aria-expanded', isOpen);
+      this.innerHTML = isOpen ? '✕' : '☰';
+    });
+
+    // Cierra el menú al hacer click en un link (mejor UX en móvil)
+    document.querySelectorAll('#mainNav a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 860) {
+          mainNav.classList.remove('active');
+          menuToggle.innerHTML = '☰';
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     });
 
     // Banner de cookies: solo carga GA/AdSense tras consentimiento
