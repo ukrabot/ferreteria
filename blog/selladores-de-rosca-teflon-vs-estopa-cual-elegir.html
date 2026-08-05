@@ -1,3 +1,4 @@
+<!-- LISTO -->
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
@@ -118,7 +119,7 @@
       --radius-lg: 1rem;
       --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
       --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
-      --font-stack: Arial, system-ui, -apple-system, sans-serif;
+      --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
 
     *, *::before, *::after {
@@ -134,6 +135,7 @@
       line-height: 1.65;
       font-size: 1rem;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     a {
@@ -195,6 +197,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.85rem 1.5rem;
+      flex-wrap: wrap;
     }
 
     .brand-logo {
@@ -210,6 +213,7 @@
       width: 34px;
       height: 34px;
       fill: var(--primary);
+      flex-shrink: 0;
     }
     .brand-logo span.badge {
       font-size: 0.65rem;
@@ -221,11 +225,24 @@
       font-weight: 700;
     }
 
+    /* Menu Toggle (Hamburguesa) */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #FFF;
+      font-size: 1.75rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+    }
+
     nav ul {
       display: flex;
       list-style: none;
       gap: 1.5rem;
       align-items: center;
+      flex-wrap: wrap;
     }
     nav a {
       color: #CBD5E1;
@@ -240,10 +257,42 @@
       border-bottom-color: var(--primary);
     }
 
+    /* Responsive Header */
+    @media (max-width: 860px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 0.75rem;
+        border-top: 1px solid #334155;
+        padding-top: 0.75rem;
+      }
+      nav.active {
+        display: block;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+      }
+      nav ul li {
+        width: 100%;
+      }
+      nav a {
+        display: block;
+        padding: 0.85rem 0.25rem;
+        border-bottom: 1px solid #334155;
+      }
+    }
+
     .container {
       max-width: 1240px;
       margin: 2rem auto;
       padding: 0 1.5rem;
+      width: 100%;
     }
 
     .breadcrumbs {
@@ -265,15 +314,25 @@
       color: #CBD5E1;
     }
 
+    /* ===================================================== */
+    /* FIX PRINCIPAL: Grid Items necesitan min-width:0        */
+    /* para poder encogerse por debajo del contenido (tablas) */
+    /* ===================================================== */
     .layout-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2.5rem;
+      min-width: 0;
     }
     @media (min-width: 992px) {
       .layout-grid {
         grid-template-columns: 2.5fr 1fr;
       }
+    }
+    .layout-grid > main,
+    .layout-grid > aside.sidebar {
+      min-width: 0;
+      width: 100%;
     }
 
     article.main-article {
@@ -282,6 +341,8 @@
       padding: 2.5rem;
       box-shadow: var(--shadow-sm);
       border: 1px solid var(--border-color);
+      min-width: 0;
+      width: 100%;
     }
 
     .category-pill {
@@ -298,6 +359,16 @@
       border: 1px solid #FCA5A5;
     }
 
+    h1.article-title {
+      font-size: 2.1rem;
+      line-height: 1.3;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+      overflow-wrap: break-word;
+    }
+
     .article-meta {
       display: flex;
       flex-wrap: wrap;
@@ -310,11 +381,17 @@
       color: var(--text-muted);
     }
 
+    .article-body {
+      min-width: 0;
+    }
+
+    /* AdSense Optimized Paragraph Formatting */
     .article-body p {
       margin-bottom: 1.25rem;
       color: #334155;
       font-size: 1.05rem;
       line-height: 1.75;
+      overflow-wrap: break-word;
     }
 
     .article-body h2 {
@@ -324,6 +401,7 @@
       margin-bottom: 1rem;
       padding-bottom: 0.4rem;
       border-bottom: 2px solid #F1F5F9;
+      overflow-wrap: break-word;
     }
 
     .article-body h3 {
@@ -331,15 +409,74 @@
       color: #1E293B;
       margin-top: 1.75rem;
       margin-bottom: 0.75rem;
+      overflow-wrap: break-word;
     }
 
+    .article-body ul {
+      margin: 0 0 1.25rem 1.5rem;
+      color: #334155;
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+
+    .article-body ul li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* ===================================================== */
+    /* FIX TABLAS: sin min-width forzado. Ahora ocupan 100%   */
+    /* y en pantallas chicas se desplazan horizontalmente     */
+    /* sin afectar al resto del artículo.                     */
+    /* ===================================================== */
     .table-wrapper {
       overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       margin: 1.75rem 0;
       border-radius: var(--radius-md);
       border: 1px solid var(--border-color);
+      max-width: 100%;
+    }
+    .table-wrapper table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .table-wrapper th,
+    .table-wrapper td {
+      border: 1px solid #E2E8F0;
+      padding: 12px;
+      text-align: left;
+      font-size: 0.95rem;
+      color: #334155;
+    }
+    .table-wrapper thead th {
+      background: #F0F4FF;
+      color: #0F172A;
+      font-weight: 700;
+    }
+    .table-wrapper tbody tr:nth-child(even) {
+      background: #FAFAFA;
     }
 
+    /* Callout boxes */
+    .callout {
+      border-left: 4px solid;
+      padding: 14px 16px;
+      margin: 20px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+    .callout-danger {
+      border-color: #e63946;
+      background: #fff5f5;
+    }
+    .callout-info {
+      border-color: #0057e7;
+      background: #f5f8ff;
+    }
+
+    /* Sidebar */
     aside.sidebar {
       display: flex;
       flex-direction: column;
@@ -387,6 +524,91 @@
       justify-content: space-between;
       align-items: center;
       font-size: 0.85rem;
+      gap: 0.5rem;
+    }
+
+    /* ============================= */
+    /* AJUSTES RESPONSIVE ADICIONALES */
+    /* ============================= */
+    @media (max-width: 768px) {
+      article.main-article {
+        padding: 1.75rem 1.25rem;
+      }
+      h1.article-title {
+        font-size: 1.6rem;
+      }
+      .article-body h2 {
+        font-size: 1.3rem;
+      }
+      .article-body h3 {
+        font-size: 1.1rem;
+      }
+      .article-body p,
+      .article-body ul {
+        font-size: 1rem;
+      }
+      .article-meta {
+        gap: 0.75rem;
+        font-size: 0.85rem;
+      }
+      .article-meta > div:last-child {
+        margin-left: 0 !important;
+        width: 100%;
+      }
+      .table-wrapper table {
+        font-size: 0.82rem;
+      }
+      .table-wrapper th,
+      .table-wrapper td {
+        padding: 8px !important;
+        white-space: normal;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner {
+        padding: 0.75rem 1rem;
+      }
+      .brand-logo {
+        font-size: 1.05rem;
+        gap: 0.5rem;
+      }
+      .brand-logo svg {
+        width: 26px;
+        height: 26px;
+      }
+      .brand-logo span.badge {
+        font-size: 0.55rem;
+      }
+      .top-bar {
+        font-size: 0.75rem;
+        line-height: 1.4;
+        padding: 0.5rem 0.75rem;
+      }
+      .container {
+        margin: 1.25rem auto;
+        padding: 0 1rem;
+      }
+      article.main-article {
+        padding: 1.25rem 1rem;
+        border-radius: var(--radius-md);
+      }
+      h1.article-title {
+        font-size: 1.4rem;
+      }
+      .widget {
+        padding: 1.15rem;
+      }
+      .footer-inner {
+        gap: 1.75rem;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+      .callout {
+        padding: 12px;
+      }
     }
   </style>
   <!-- Google AdSense Auto Ads -->
@@ -423,7 +645,11 @@
         Ferretería Ukra <span class="badge">Gasfitería</span>
       </a>
 
-      <nav aria-label="Navegación principal">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav aria-label="Navegación principal" id="mainNav">
         <ul>
           <li><a href="/">Inicio</a></li>
           <li><a href="/blog/herramientas-basicas-de-gasfiteria-todo-lo-que-necesitas-saber/">Herramientas</a></li>
@@ -454,6 +680,8 @@
           
           <span class="category-pill">Fontanería &amp; Sellado de Roscas</span>
 
+          <h1 class="article-title" itemprop="headline">Selladores de rosca teflón vs estopa: cuál elegir según la aplicación y presión</h1>
+
           <div class="article-meta">
             <div><strong>Por Equipo Técnico Ferretería Ukra</strong> | Manual de Hermetizado Roscado</div>
             <div><span>📅 19 Jul, 2026</span></div>
@@ -465,154 +693,130 @@
 
           <!-- Article Body Content -->
           <div class="article-body" itemprop="articleBody">
-            
-            <h1 style="font-family:Arial,sans-serif;font-size:1.6em;color:#1a1a1a;line-height:1.3;margin:0 0 16px 0;">Selladores de rosca teflón vs estopa: cuál elegir según la aplicación y presión</h1>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
-              ¿Instalaste un codo o una llave de paso con cinta de Teflón, tuviste que retrocederla un cuarto de vuelta para dejarla alineada con la pared y a los 10 minutos comenzó a gotear?
-            </p>
+            <p>¿Instalaste un codo o una llave de paso con cinta de Teflón, tuviste que retrocederla un cuarto de vuelta para dejarla alineada con la pared y a los 10 minutos comenzó a gotear?</p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
-              Este es uno de los errores más frustrantes en fontanería. La creencia popular de que "el Teflón sirve para todo" es la causa de miles de fugas en redes de agua y gas. En fontanería técnica existen tres grandes familias de hermetizantes de roscas: <strong>Cinta de Teflón (PTFE)</strong>, <strong>Estopa de Cáñamo con Pasta</strong> y <strong>Selladores Líquidos Anaeróbicos</strong>. Cada uno responde a principios mecánicos completamente distintos.
-            </p>
+            <p>Este es uno de los errores más frustrantes en fontanería. La creencia popular de que "el Teflón sirve para todo" es la causa de miles de fugas en redes de agua y gas. En fontanería técnica existen tres grandes familias de hermetizantes de roscas: <strong>Cinta de Teflón (PTFE)</strong>, <strong>Estopa de Cáñamo con Pasta</strong> y <strong>Selladores Líquidos Anaeróbicos</strong>. Cada uno responde a principios mecánicos completamente distintos.</p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
-              En esta guía te enseñamos la física del sellado roscado, cómo evitar que el Teflón falle al alinear griferías y cuál es la alternativa profesional obligatoria según el fluido y la presión.
-            </p>
+            <p>En esta guía te enseñamos la física del sellado roscado, cómo evitar que el Teflón falle al alinear griferías y cuál es la alternativa profesional obligatoria según el fluido y la presión.</p>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">1. Geometría de roscas: NPT vs. BSP y el rol del sellador</h2>
+            <h2>1. Geometría de roscas: NPT vs. BSP y el rol del sellador</h2>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
-              Ninguna rosca metálica o plástica es 100 % estanca por sí sola. Entre el filete macho y la cúpula hembra existe una holgura helicoidal microscópica a través de la cual los fluidos bajo presión escapan.
-            </p>
+            <p>Ninguna rosca metálica o plástica es 100 % estanca por sí sola. Entre el filete macho y la cúpula hembra existe una holgura helicoidal microscópica a través de la cual los fluidos bajo presión escapan.</p>
 
-            <ul style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;padding-left:20px;">
+            <ul>
               <li><strong>Roscas Cónicas (NPT / BSPT):</strong> Los filetes convergen en ángulo de 1° 47'. El apriete genera interferencia mecánica directa, comprimiendo el sellador en los intersticios.</li>
-              <li><strong>Roscas Cilíndricas (BSPP / ISO 228-1):</strong> El diámetro es constante. El sellado de la rosca depende 100 % del relleno de la holgura por el sellante o de una junta/o-ring en la cara de apoyo.</li>
+              <li><strong>Roscas Cilíndricas (BSPP / ISO 228-1):</strong> El diámetro es constante. El sellado depende 100 % del relleno de la holgura por el sellante o de una junta/o-ring en la cara de apoyo.</li>
             </ul>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">2. Cinta de Teflón (PTFE): Lubricación y de plastificación estática</h2>
+            <h2>2. Cinta de Teflón (PTFE): lubricación y plastificación estática</h2>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
-              El PTFE (Politetrafluoroetileno) no actúa como un adhesivo ni se deforma de manera elástica: es un <strong>lubricante sólido de ultra bajo coeficiente de fricción ($\mu \approx 0,05$)</strong> que permite que la rosca macho ingrese más profundo en la hembra y rellene las crestas.
-            </p>
+            <p>El PTFE (Politetrafluoroetileno) no actúa como un adhesivo ni se deforma de manera elástica: es un <strong>lubricante sólido de ultra bajo coeficiente de fricción (μ ≈ 0,05)</strong> que permite que la rosca macho ingrese más profundo en la hembra y rellene las crestas.</p>
 
-            <ul style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;padding-left:20px;">
+            <ul>
               <li><strong>Teflón Blanco Estándar (0.075 mm):</strong> Indicado únicamente para uniones pequeñas de agua fría de baja presión (hasta 6 Bar) en plástico o latón.</li>
-              <li><strong>Teflón de Alta Densidad (0.1 mm - Rosado / Amarillo):</strong> Densidad superior a $1.2 \text{ g/cm}^3$. Certificado para líneas de gas (GLP/GN por SEC) y redes de agua de alta presión.</li>
+              <li><strong>Teflón de Alta Densidad (0.1 mm — Rosado / Amarillo):</strong> Densidad superior a 1,2 g/cm³. Certificado para líneas de gas (GLP/GN por SEC) y redes de agua de alta presión.</li>
             </ul>
 
-            <div style="border-left:4px solid #e63946;background:#fff5f5;padding:14px 16px;margin:20px 0;font-family:Arial,sans-serif;font-size:0.95em;color:#1a1a1a;">
-              <strong>⚠️ El talón de Aquiles del Teflón:</strong> La cinta de Teflón tiene <strong>CERO tolerancia al retroceso</strong>. Una vez apretada la pieza, si la desenroscas levemente para alinear un codo, la película plástica se cizalla de forma irreversible y la unión comenzará a fugar inmediatamente.
+            <div class="callout callout-danger">
+              <strong>⚠️ El talón de Aquiles del Teflón:</strong> La cinta de Teflón tiene <strong>cero tolerancia al retroceso</strong>. Una vez apretada la pieza, si la desenroscas levemente para alinear un codo, la película plástica se cizalla de forma irreversible y la unión comenzará a fugar inmediatamente.
             </div>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">3. Estopa de Cáñamo/Lino + Pasta de Gasfitería: Hinchamiento higroscópico y reajuste</h2>
+            <h2>3. Estopa de Cáñamo/Lino + Pasta de Gasfitería: hinchamiento higroscópico y reajuste</h2>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
-              Utilizada durante más de un siglo en fontanería profesional, la combinación de fibra de cáñamo natural y pasta selladora sintética no endurecible (non-hardening) es el estándar superior para tuberías metálicas.
-            </p>
+            <p>Utilizada durante más de un siglo en fontanería profesional, la combinación de fibra de cáñamo natural y pasta selladora sintética no endurecible (non-hardening) es el estándar superior para tuberías metálicas.</p>
 
-            <ul style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;padding-left:20px;">
-              <li><strong>Propiedad Higroscópica Única:</strong> Si queda un micro-poro, las fibras de lino absorben trazas de agua y se hinchen dentro del filete, autobloqueando la fuga dinámicamente.</li>
-              <li><strong>Permite Alineación y Retroceso:</strong> Puedes retroceder la rosca hasta <strong>45° a 90°</strong> sin perder el sellado, permitiendo dejar griferías de pared perfectamente plomo y niveladas.</li>
-              <li><strong>Resistencia Térmica:</strong> Soporta hasta <strong>130 °C</strong> en circuitos de calefacción por radiadores sin degradarse.</li>
+            <ul>
+              <li><strong>Propiedad higroscópica única:</strong> si queda un micro-poro, las fibras de lino absorben trazas de agua y se hinchan dentro del filete, autobloqueando la fuga dinámicamente.</li>
+              <li><strong>Permite alineación y retroceso:</strong> puedes retroceder la rosca hasta <strong>45° a 90°</strong> sin perder el sellado, permitiendo dejar griferías de pared perfectamente a plomo y niveladas.</li>
+              <li><strong>Resistencia térmica:</strong> soporta hasta <strong>130 °C</strong> en circuitos de calefacción por radiadores sin degradarse.</li>
             </ul>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">4. Selladores Líquidos Anaeróbicos: Polimerización de alta ingeniería</h2>
+            <h2>4. Selladores líquidos anaeróbicos: polimerización de alta ingeniería</h2>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
-              Son resinas compuestas líquidas que permanecen estables en presencia de oxígeno, pero <strong>se polimerizan en un plástico termoestable rígido</strong> cuando quedan confinadas dentro de la rosca en contacto con los iones del metal (cobre, latón, acero).
-            </p>
+            <p>Son resinas compuestas líquidas que permanecen estables en presencia de oxígeno, pero <strong>se polimerizan en un plástico termoestable rígido</strong> cuando quedan confinadas dentro de la rosca en contacto con los iones del metal (cobre, latón, acero).</p>
 
-            <ul style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;padding-left:20px;">
+            <ul>
               <li>Resisten presiones extremas de hasta <strong>300 Bar (4.300 PSI)</strong>.</li>
               <li>Inmunes a la vibración, golpes de ariete y agentes químicos agresivos.</li>
               <li>Ideales para centrales térmicas, salas de bombas y redes industriales.</li>
             </ul>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">5. Tabla Comparativa de Selección Técnica</h2>
+            <h2>5. Tabla comparativa de selección técnica</h2>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em;font-family:Arial,sans-serif;">
+              <table>
                 <thead>
-                  <tr style="background:#f0f4f8;">
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Característica</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Cinta Teflón (PTFE)</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Estopa Lino + Pasta</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Sellador Anaeróbico</th>
+                  <tr>
+                    <th>Característica</th>
+                    <th>Cinta Teflón (PTFE)</th>
+                    <th>Estopa Lino + Pasta</th>
+                    <th>Sellador Anaeróbico</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">Permite desajuste / reajuste</td>
-                    <td style="border:1px solid #ccc;padding:10px;">❌ Nulo (Fuga garantizada)</td>
-                    <td style="border:1px solid #ccc;padding:10px;">✅ Excelente (Hasta 90°)</td>
-                    <td style="border:1px solid #ccc;padding:10px;">⚠️ Durante el tiempo de curado</td>
-                  </tr>
-                  <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;">Uso en plástico (PVC / PP)</td>
-                    <td style="border:1px solid #ccc;padding:10px;">✅ Ideal</td>
-                    <td style="border:1px solid #ccc;padding:10px;">❌ No recomendado (Riesgo fisura)</td>
-                    <td style="border:1px solid #ccc;padding:10px;">❌ Requiere activador especial</td>
+                    <td>Permite desajuste / reajuste</td>
+                    <td>❌ Nulo (fuga garantizada)</td>
+                    <td>✅ Excelente (hasta 90°)</td>
+                    <td>⚠️ Durante el tiempo de curado</td>
                   </tr>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">Agua Caliente / Calefacción</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Bajo (Pierde ajuste)</td>
-                    <td style="border:1px solid #ccc;padding:10px;">✅ Óptimo (Hasta 130°C)</td>
-                    <td style="border:1px solid #ccc;padding:10px;">✅ Excelente (Hasta 150°C)</td>
-                  </tr>
-                  <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;">Redes de Gas (SEC)</td>
-                    <td style="border:1px solid #ccc;padding:10px;">✅ Solo Teflón Alta Densidad</td>
-                    <td style="border:1px solid #ccc;padding:10px;">❌ Prohibido en Gas</td>
-                    <td style="border:1px solid #ccc;padding:10px;">✅ Si posee certificación Gas</td>
+                    <td>Uso en plástico (PVC / PP)</td>
+                    <td>✅ Ideal</td>
+                    <td>❌ No recomendado (riesgo fisura)</td>
+                    <td>❌ Requiere activador especial</td>
                   </tr>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">Costo por unión en Chile</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Económico ($100 CLP)</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Bajo ($200 CLP)</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Medio-Alto ($800 CLP)</td>
+                    <td>Agua caliente / calefacción</td>
+                    <td>Bajo (pierde ajuste)</td>
+                    <td>✅ Óptimo (hasta 130 °C)</td>
+                    <td>✅ Excelente (hasta 150 °C)</td>
+                  </tr>
+                  <tr>
+                    <td>Redes de gas (SEC)</td>
+                    <td>✅ Solo Teflón Alta Densidad</td>
+                    <td>❌ Prohibido en gas</td>
+                    <td>✅ Si posee certificación gas</td>
+                  </tr>
+                  <tr>
+                    <td>Costo por unión en Chile</td>
+                    <td>Económico ($100 CLP)</td>
+                    <td>Bajo ($200 CLP)</td>
+                    <td>Medio-Alto ($800 CLP)</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <div style="border-left:4px solid #0057e7;background:#f5f8ff;padding:14px 16px;margin:20px 0;font-family:Arial,sans-serif;font-size:0.95em;color:#1a1a1a;">
-              <strong>💡 Recomendación Práctica:</strong> Para instalar griferías de pared, llaves de jardín o nipples de bronce donde requieras ajustar la posición final a plomo, utiliza <strong>Estopa de Lino con Pasta No-Secante</strong>. Para uniones plásticas de PVC/PPR o fittings de gas, utiliza <strong>Teflón de Alta Densidad de 0.1 mm</strong>.
+            <div class="callout callout-info">
+              <strong>💡 Recomendación práctica:</strong> para instalar griferías de pared, llaves de jardín o nipples de bronce donde requieras ajustar la posición final a plomo, utiliza <strong>estopa de lino con pasta no secante</strong>. Para uniones plásticas de PVC/PPR o fittings de gas, utiliza <strong>Teflón de Alta Densidad de 0.1 mm</strong>.
             </div>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">Preguntas frecuentes sobre sellantes de roscas</h2>
+            <h2>Preguntas frecuentes sobre sellantes de roscas</h2>
 
-            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Por qué el teflón fugará si desenrosco un poco para alinear la llave?</h3>
+            <h3>¿Por qué el teflón fugará si desenrosco un poco para alinear la llave?</h3>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
-              La cinta de Teflón (PTFE) es un sólido plástico no elástico. Al apretar la rosca, la cinta se deforma permanentemente para rellenar los intersticios metálicos. Si retrocedes la llave aunque sea 1/8 de vuelta, la cinta pierde la compresión física y se cizalla, dejando canales abiertos por donde el fluido bajo presión se filtra. Para llaves que requieren alineación precisa, se debe usar estopa de lino con pasta o sellador anaeróbico de curado lento.
-            </p>
+            <p>La cinta de Teflón (PTFE) es un sólido plástico no elástico. Al apretar la rosca, la cinta se deforma permanentemente para rellenar los intersticios metálicos. Si retrocedes la llave aunque sea 1/8 de vuelta, la cinta pierde la compresión física y se cizalla, dejando canales abiertos por donde el fluido bajo presión se filtra. Para llaves que requieren alineación precisa, se debe usar estopa de lino con pasta o sellador anaeróbico de curado lento.</p>
 
-            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿En qué dirección se debe colocar la cinta de Teflón en la rosca?</h3>
+            <h3>¿En qué dirección se debe colocar la cinta de Teflón en la rosca?</h3>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
-              Se debe enrollar siempre en el mismo sentido de apriete de la rosca (sentido horario mirando la boca del tubo de frente). Si la enrollas en sentido contrario, al enroscar la pieza hembra el borde de la rosca 'desenrollará' la cinta de Teflón, amontonándola en el exterior y dejando la unión sin sellante.
-            </p>
+            <p>Se debe enrollar siempre en el mismo sentido de apriete de la rosca (sentido horario mirando la boca del tubo de frente). Si la enrollas en sentido contrario, al enroscar la pieza hembra el borde de la rosca "desenrollará" la cinta de Teflón, amontonándola en el exterior y dejando la unión sin sellante.</p>
 
-            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Qué sellador es obligatorio para redes de gas en Chile según la SEC?</h3>
+            <h3>¿Qué sellador es obligatorio para redes de gas en Chile según la SEC?</h3>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
-              En instalaciones de gas licuado (GLP) y gas natural (GN) certificadas por la SEC, se exige usar cinta de Teflón de Alta Densidad especial para gas (color amarillo o rosado con espesor ≥ 0.1 mm) o selladores anaeróbicos líquidos específicos con certificación para hidrocarburos gaseosos. Está prohibido usar estopa vegetal común o pasta hidráulica convencional en líneas de gas.
-            </p>
+            <p>En instalaciones de gas licuado (GLP) y gas natural (GN) certificadas por la SEC, se exige usar cinta de Teflón de Alta Densidad especial para gas (color amarillo o rosado con espesor ≥ 0.1 mm) o selladores anaeróbicos líquidos específicos con certificación para hidrocarburos gaseosos. Está prohibido usar estopa vegetal común o pasta hidráulica convencional en líneas de gas.</p>
 
-            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Por qué la estopa de lino sigue siendo superior al teflón en agua caliente y calefacción?</h3>
+            <h3>¿Por qué la estopa de lino sigue siendo superior al teflón en agua caliente y calefacción?</h3>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
-              El cáñamo vegetal de la estopa posee fibras higroscópicas que se dilatan e hinchan al contacto con trazas microscópicas de agua, sellando dinámicamente la junta. Además, absorbe los ciclos de dilatación y contracción térmica causados por el agua caliente (hasta 120 °C) en radiadores y calefonts sin resquebrajarse.
-            </p>
+            <p>El cáñamo vegetal de la estopa posee fibras higroscópicas que se dilatan e hinchan al contacto con trazas microscópicas de agua, sellando dinámicamente la junta. Además, absorbe los ciclos de dilatación y contracción térmica causados por el agua caliente (hasta 120 °C) en radiadores y calefonts sin resquebrajarse.</p>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">Ver también en Ferretería Ukra Blog</h2>
+            <h2>Ver también en Ferretería Ukra Blog</h2>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
-              <a href="/blog/herramientas-basicas-de-gasfiteria-todo-lo-que-necesitas-saber/" style="color:#0057e7;text-decoration:underline;">Herramientas básicas de gasfitería — Guía completa</a> |
-              <a href="/blog/que-hacer-si-la-bomba-de-agua-no-corta-guia-completa-para-solucionar-problemas/" style="color:#0057e7;text-decoration:underline;">Bomba de agua no corta: diagnóstico y presostato</a> |
-              <a href="/blog/como-reparar-gotera-en-techo-de-zinc-guia-paso-a-paso/" style="color:#0057e7;text-decoration:underline;">Cómo reparar goteras en techo de zinc</a>
+            <p>
+              <a href="/blog/herramientas-basicas-de-gasfiteria-todo-lo-que-necesitas-saber/">Herramientas básicas de gasfitería — Guía completa</a> ·
+              <a href="/blog/que-hacer-si-la-bomba-de-agua-no-corta-guia-completa-para-solucionar-problemas/">Bomba de agua no corta: diagnóstico y presostato</a> ·
+              <a href="/blog/como-reparar-gotera-en-techo-de-zinc-guia-paso-a-paso/">Cómo reparar goteras en techo de zinc</a>
             </p>
 
           </div>
@@ -669,11 +873,33 @@
   </footer>
 
   <script>
+    // Barra de progreso de lectura
     window.addEventListener('scroll', () => {
       const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = (winScroll / height) * 100;
       document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+
+    // Menú hamburguesa (Responsive)
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', function() {
+      const isOpen = mainNav.classList.toggle('active');
+      this.setAttribute('aria-expanded', isOpen);
+      this.innerHTML = isOpen ? '✕' : '☰';
+    });
+
+    // Cierra el menú al hacer click en un link (mejor UX en móvil)
+    document.querySelectorAll('#mainNav a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 860) {
+          mainNav.classList.remove('active');
+          menuToggle.innerHTML = '☰';
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     });
   </script>
 </body>
