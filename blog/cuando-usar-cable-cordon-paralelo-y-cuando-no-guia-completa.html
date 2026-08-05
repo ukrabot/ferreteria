@@ -1,3 +1,4 @@
+<!-- LISTO -->
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
@@ -173,6 +174,10 @@
       padding: 0;
     }
 
+    html {
+      overflow-x: hidden;
+    }
+
     body {
       font-family: var(--font-stack);
       background-color: var(--bg-body);
@@ -180,6 +185,8 @@
       line-height: 1.65;
       font-size: 1rem;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      width: 100%;
     }
 
     a {
@@ -196,6 +203,20 @@
       height: auto;
       display: block;
     }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: #FFFFFF;
+      color: var(--text-main);
+      padding: 12px 20px;
+      z-index: 200;
+      font-weight: 700;
+      border-radius: 0 0 8px 0;
+      box-shadow: var(--shadow-md);
+    }
+    .skip-link:focus { left: 0; }
 
     .progress-container {
       position: fixed;
@@ -241,6 +262,8 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.85rem 1.5rem;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
 
     .brand-logo {
@@ -256,6 +279,7 @@
       width: 34px;
       height: 34px;
       fill: var(--primary);
+      flex-shrink: 0;
     }
     .brand-logo span.badge {
       font-size: 0.65rem;
@@ -267,11 +291,24 @@
       font-weight: 700;
     }
 
+    /* Menu Toggle (Hamburguesa) */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #FFF;
+      font-size: 1.75rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+    }
+
     nav ul {
       display: flex;
       list-style: none;
       gap: 1.5rem;
       align-items: center;
+      flex-wrap: wrap;
     }
     nav a {
       color: #CBD5E1;
@@ -286,10 +323,32 @@
       border-bottom-color: var(--primary);
     }
 
+    /* Responsive Header */
+    @media (max-width: 860px) {
+      .menu-toggle { display: block; }
+      nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 0.75rem;
+        border-top: 1px solid #334155;
+        padding-top: 0.75rem;
+      }
+      nav.active { display: block; }
+      nav ul { flex-direction: column; gap: 0; width: 100%; }
+      nav ul li { width: 100%; }
+      nav a {
+        display: block;
+        padding: 0.85rem 0.25rem;
+        border-bottom: 1px solid #334155;
+      }
+    }
+
     .container {
       max-width: 1240px;
       margin: 2rem auto;
       padding: 0 1.5rem;
+      width: 100%;
     }
 
     .breadcrumbs {
@@ -315,11 +374,17 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 2.5rem;
+      min-width: 0;
     }
     @media (min-width: 992px) {
       .layout-grid {
         grid-template-columns: 2.5fr 1fr;
       }
+    }
+    .layout-grid > main,
+    .layout-grid > aside.sidebar {
+      min-width: 0;
+      width: 100%;
     }
 
     article.main-article {
@@ -328,6 +393,8 @@
       padding: 2.5rem;
       box-shadow: var(--shadow-sm);
       border: 1px solid var(--border-color);
+      min-width: 0;
+      width: 100%;
     }
 
     .category-pill {
@@ -351,6 +418,7 @@
       color: #0F172A;
       margin-bottom: 1.25rem;
       letter-spacing: -0.02em;
+      overflow-wrap: break-word;
     }
 
     .article-meta {
@@ -365,11 +433,14 @@
       color: var(--text-muted);
     }
 
+    .article-body { min-width: 0; }
+
     .article-body p {
       margin-bottom: 1.25rem;
       color: #334155;
       font-size: 1.05rem;
       line-height: 1.75;
+      overflow-wrap: break-word;
     }
 
     .article-body h2 {
@@ -379,6 +450,7 @@
       margin-bottom: 1rem;
       padding-bottom: 0.4rem;
       border-bottom: 2px solid #F1F5F9;
+      overflow-wrap: break-word;
     }
 
     .article-body h3 {
@@ -386,13 +458,59 @@
       color: #1E293B;
       margin-top: 1.75rem;
       margin-bottom: 0.75rem;
+      overflow-wrap: break-word;
     }
 
+    .article-body ul {
+      overflow-wrap: break-word;
+    }
+
+    /* Tablas responsivas */
     .table-wrapper {
       overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       margin: 1.75rem 0;
       border-radius: var(--radius-md);
       border: 1px solid var(--border-color);
+      max-width: 100%;
+    }
+    .tech-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9em;
+      min-width: 620px;
+    }
+    .tech-table th {
+      padding: 12px;
+      border: 1px solid #CBD5E1;
+      text-align: left;
+      background: #F1F5F9;
+    }
+    .tech-table td {
+      padding: 12px;
+      border: 1px solid #E2E8F0;
+    }
+    .tech-table tbody tr:nth-child(even) { background: #FAFAFA; }
+
+    .article-figure {
+      margin: 24px auto;
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
+    .article-figure img {
+      width: 100%;
+      max-width: 600px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin: 0 auto;
+    }
+    .article-figure figcaption {
+      font-size: 0.85em;
+      color: var(--text-muted);
+      margin-top: 6px;
+      font-style: italic;
     }
 
     .formula-box {
@@ -401,10 +519,62 @@
       padding: 1.25rem 1.5rem;
       margin: 1.5rem 0;
       border-radius: 0 var(--radius-md) var(--radius-md) 0;
-      font-family: monospace;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       font-size: 1.02rem;
       color: #0F172A;
+      overflow-wrap: break-word;
+      max-width: 100%;
     }
+
+    .highlight-box {
+      text-align: center;
+      margin: 32px auto;
+      padding: 20px 24px;
+      max-width: 560px;
+      background: #FFF5F5;
+      border-left: 4px solid var(--primary);
+      border-radius: 0 8px 8px 0;
+      width: 100%;
+    }
+    .highlight-box p {
+      margin: 0;
+      font-size: 15px;
+      color: #1E293B;
+      line-height: 1.5;
+      overflow-wrap: break-word;
+    }
+
+    .cta-box {
+      text-align: center;
+      margin: 40px auto;
+      padding: 28px 24px;
+      max-width: 520px;
+      background: #F8FAFC;
+      border: 2px solid var(--border-color);
+      border-radius: 12px;
+      width: 100%;
+    }
+    .cta-box .cta-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #0F172A;
+      margin: 0 0 8px;
+      line-height: 1.4;
+    }
+    .cta-box .cta-text {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin: 0 0 20px;
+    }
+    .btn-primary {
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--primary);
+      color: #FFF;
+      font-weight: 700;
+      border-radius: 6px;
+    }
+    .btn-primary:hover { background: var(--primary-hover); text-decoration: none; }
 
     aside.sidebar {
       display: flex;
@@ -427,6 +597,28 @@
       padding-bottom: 0.5rem;
       border-bottom: 2px solid var(--primary);
     }
+    .widget p.widget-desc {
+      font-size: 0.9rem;
+      color: #475569;
+      margin-bottom: 1rem;
+    }
+    .widget-btn {
+      display: block;
+      text-align: center;
+      padding: 0.65rem;
+      color: #FFF;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.75rem;
+    }
+    .widget-btn:last-child { margin-bottom: 0; }
+    .widget-btn:hover { opacity: 0.9; text-decoration: none; }
+    .widget-btn.b1 { background: var(--primary); }
+    .widget-btn.b2 { background: #1E293B; }
+    .widget-btn.b3 { background: #334155; }
+    .widget-btn.b4 { background: #0057e7; }
+    .widget .quick-calc { font-size: 0.875rem; color: #334155; line-height: 1.6; }
+    .widget .quick-calc p { margin-bottom: 0.5rem; overflow-wrap: break-word; }
 
     footer {
       background-color: #0F172A;
@@ -443,6 +635,10 @@
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 2.5rem;
     }
+    .footer-inner h4 { color: #FFF; margin-bottom: 0.5rem; font-size: 1.05rem; }
+    .footer-inner p { font-size: 0.875rem; margin-bottom: 0.35rem; }
+    .footer-inner a { color: #94A3B8; }
+    .footer-inner a:hover { color: #FFF; }
     .footer-bottom {
       max-width: 1240px;
       margin: 2.5rem auto 0 auto;
@@ -453,6 +649,46 @@
       justify-content: space-between;
       align-items: center;
       font-size: 0.85rem;
+      gap: 0.5rem;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-smooth { scroll-behavior: auto; }
+      .progress-bar { transition: none; }
+    }
+
+    /* ============================= */
+    /* AJUSTES RESPONSIVE ADICIONALES */
+    /* ============================= */
+    @media (max-width: 768px) {
+      article.main-article { padding: 1.75rem 1.25rem; }
+      h1.article-title { font-size: 1.6rem; }
+      .article-body h2 { font-size: 1.3rem; }
+      .article-body h3 { font-size: 1.1rem; }
+      .article-body p { font-size: 1rem; }
+      .article-meta { gap: 0.75rem; font-size: 0.85rem; }
+      .article-meta > div:last-child { margin-left: 0 !important; width: 100%; }
+      .tech-table { font-size: 0.8rem; min-width: 560px; }
+      .tech-table th, .tech-table td { padding: 8px 10px !important; }
+      .formula-box { padding: 1rem 1.1rem; font-size: 0.92rem; }
+      .article-figure img { height: 200px; }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { padding: 0.75rem 1rem; }
+      .brand-logo { font-size: 1.05rem; gap: 0.5rem; }
+      .brand-logo svg { width: 26px; height: 26px; }
+      .brand-logo span.badge { font-size: 0.55rem; }
+      .top-bar { font-size: 0.75rem; line-height: 1.4; padding: 0.5rem 0.75rem; }
+      .container { margin: 1.25rem auto; padding: 0 1rem; }
+      article.main-article { padding: 1.25rem 1rem; border-radius: var(--radius-md); }
+      h1.article-title { font-size: 1.4rem; }
+      .article-figure img { height: 170px; }
+      .widget { padding: 1.15rem; }
+      .footer-inner { gap: 1.75rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .highlight-box, .cta-box { padding: 16px !important; max-width: 100% !important; }
+      .formula-box { padding: 0.85rem 1rem; font-size: 0.85rem; }
     }
   </style>
 
@@ -470,6 +706,8 @@
   </script>
 </head>
 <body>
+
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
   <!-- Reading Progress Bar -->
   <div class="progress-container" aria-hidden="true">
@@ -491,12 +729,16 @@
         Ferretería Ukra <span class="badge">Electricidad</span>
       </a>
 
-      <nav aria-label="Navegación principal">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+        ☰
+      </button>
+
+      <nav aria-label="Navegación principal" id="mainNav">
         <ul>
           <li><a href="/">Inicio</a></li>
           <li><a href="/#guias">Guías Técnicas</a></li>
           <li><a href="/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/">Cables Chile</a></li>
-          <li><a href="#" class="active">Cordón Paralelo</a></li>
+          <li><a href="#" class="active" aria-current="page">Cordón Paralelo</a></li>
         </ul>
       </nav>
     </div>
@@ -517,7 +759,7 @@
     <div class="layout-grid">
       
       <!-- Main Content Area -->
-      <main>
+      <main id="main-content">
         <article class="main-article" itemscope itemtype="https://schema.org/BlogPosting">
           
           <span class="category-pill">Electricidad &amp; Normativa SEC</span>
@@ -541,9 +783,9 @@
 
             <p>En esta guía técnica explicamos la estructura constructiva del cordón paralelo, sus límites de amperaje según el calibre AWG/mm², sus aplicaciones legítimas en artefactos móviles y las estrictas prohibiciones vigentes bajo la normativa de la <strong>Superintendencia de Electricidad y Combustibles (SEC)</strong> y el pliego técnico <strong>RIC N°04</strong>.</p>
 
-            <figure style="margin:24px auto;text-align:center;max-width:600px;display:block">
-              <img src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Conexión y detalle de conductores eléctricos flexibles aislados en PVC" style="width:100%;max-width:600px;height:240px;object-fit:cover;border-radius:8px;display:block;margin:0 auto" loading="lazy">
-              <figcaption style="font-size:0.85em;color:#64748B;margin-top:6px;font-style:italic">Conductores eléctricos de cobre multifilar para instalaciones residenciales y comerciales.</figcaption>
+            <figure class="article-figure">
+              <img src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Conexión y detalle de conductores eléctricos flexibles aislados en PVC" width="600" height="240" loading="lazy" decoding="async">
+              <figcaption>Conductores eléctricos de cobre multifilar para instalaciones residenciales y comerciales.</figcaption>
             </figure>
 
             <h2>1. Anatomía y Clasificación del Cordón Paralelo (SPT-1 vs. SPT-2)</h2>
@@ -553,27 +795,27 @@
             <p>Bajo la norma internacional NEMA/UL y las especificaciones reconocidas por la SEC en Chile, existen dos clasificaciones según el espesor de aislamiento:</p>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em">
+              <table class="tech-table">
                 <thead>
-                  <tr style="background:#F1F5F9">
-                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Especie / Tipo</th>
-                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Espesor de Aislamiento PVC</th>
-                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Resistencia Mecánica</th>
-                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Aplicación Típica</th>
+                  <tr>
+                    <th scope="col">Especie / Tipo</th>
+                    <th scope="col">Espesor de Aislamiento PVC</th>
+                    <th scope="col">Resistencia Mecánica</th>
+                    <th scope="col">Aplicación Típica</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>SPT-1 (Servicio Liviano)</strong></td>
-                    <td style="padding:12px;border:1px solid #E2E8F0">0,76 mm (30 mils)</td>
-                    <td style="padding:12px;border:1px solid #E2E8F0">Baja (Fácilmente muescable)</td>
-                    <td style="padding:12px;border:1px solid #E2E8F0">Lámparas de velador, radios, relojes, equipos de muy bajo consumo (&lt; 300W).</td>
+                    <td><strong>SPT-1 (Servicio Liviano)</strong></td>
+                    <td>0,76 mm (30 mils)</td>
+                    <td>Baja (Fácilmente muescable)</td>
+                    <td>Lámparas de velador, radios, relojes, equipos de muy bajo consumo (&lt; 300W).</td>
                   </tr>
-                  <tr style="background:#FAFAFA">
-                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>SPT-2 (Servicio Mediano)</strong></td>
-                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>1,14 mm (45 mils)</strong></td>
-                    <td style="padding:12px;border:1px solid #E2E8F0">Moderada (Mayor rigidez dieléctrica)</td>
-                    <td style="padding:12px;border:1px solid #E2E8F0">Televisores, extensiones cortas de sobremesa, pequeños artefactos móviles (&lt; 1.200W).</td>
+                  <tr>
+                    <td><strong>SPT-2 (Servicio Mediano)</strong></td>
+                    <td><strong>1,14 mm (45 mils)</strong></td>
+                    <td>Moderada (Mayor rigidez dieléctrica)</td>
+                    <td>Televisores, extensiones cortas de sobremesa, pequeños artefactos móviles (&lt; 1.200W).</td>
                   </tr>
                 </tbody>
               </table>
@@ -586,33 +828,33 @@
             <p>En la red monofásica de Chile (220 Volts / 50 Hz), la corriente eléctrica que puede transportar un cordón paralelo de cobre sin sobrepasar su temperatura límite de servicio de 60°C se detalla en la siguiente tabla:</p>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em">
+              <table class="tech-table">
                 <thead>
-                  <tr style="background:#F1F5F9">
-                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Calibre AWG / Seccion mm²</th>
-                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Corriente Máx. (Amperes)</th>
-                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Potencia Máx. a 220V (Watts)</th>
-                    <th style="padding:12px;border:1px solid #CBD5E1;text-align:left">Límite de Uso Seguro</th>
+                  <tr>
+                    <th scope="col">Calibre AWG / Sección mm²</th>
+                    <th scope="col">Corriente Máx. (Amperes)</th>
+                    <th scope="col">Potencia Máx. a 220V (Watts)</th>
+                    <th scope="col">Límite de Uso Seguro</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>2 × 18 AWG (0,82 mm²)</strong></td>
-                    <td style="padding:12px;border:1px solid #E2E8F0">7 Amperes</td>
-                    <td style="padding:12px;border:1px solid #E2E8F0">1.540 Watts</td>
-                    <td style="padding:12px;border:1px solid #E2E8F0">Luminarias LED, cargadores móviles, aparatos livianos.</td>
-                  </tr>
-                  <tr style="background:#FAFAFA">
-                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>2 × 16 AWG (1,31 mm²)</strong></td>
-                    <td style="padding:12px;border:1px solid #E2E8F0">10 Amperes</td>
-                    <td style="padding:12px;border:1px solid #E2E8F0">2.200 Watts</td>
-                    <td style="padding:12px;border:1px solid #E2E8F0">Lámparas de pie, ventiladores, extensiones de oficina cortas.</td>
+                    <td><strong>2 × 18 AWG (0,82 mm²)</strong></td>
+                    <td>7 Amperes</td>
+                    <td>1.540 Watts</td>
+                    <td>Luminarias LED, cargadores móviles, aparatos livianos.</td>
                   </tr>
                   <tr>
-                    <td style="padding:12px;border:1px solid #E2E8F0"><strong>2 × 14 AWG (2,08 mm²)</strong></td>
-                    <td style="padding:12px;border:1px solid #E2E8F0">15 Amperes</td>
-                    <td style="padding:12px;border:1px solid #E2E8F0">3.300 Watts</td>
-                    <td style="padding:12px;border:1px solid #E2E8F0">Equipos portátiles medianos de taller o ferretería.</td>
+                    <td><strong>2 × 16 AWG (1,31 mm²)</strong></td>
+                    <td>10 Amperes</td>
+                    <td>2.200 Watts</td>
+                    <td>Lámparas de pie, ventiladores, extensiones de oficina cortas.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>2 × 14 AWG (2,08 mm²)</strong></td>
+                    <td>15 Amperes</td>
+                    <td>3.300 Watts</td>
+                    <td>Equipos portátiles medianos de taller o ferretería.</td>
                   </tr>
                 </tbody>
               </table>
@@ -626,7 +868,7 @@
 
             <h2>3. ¿Cuándo SÍ se Puede Usar Cordón Paralelo?</h2>
 
-            <p>El uso del cordón paralelo está reglamentariamente limitado a **conexiones visibles y móviles de baja demanda eléctrica (Clase II - Doble Aislamiento)**:</p>
+            <p>El uso del cordón paralelo está reglamentariamente limitado a <strong>conexiones visibles y móviles de baja demanda eléctrica (Clase II - Doble Aislamiento)</strong>:</p>
 
             <ul style="margin:1rem 0 1.5rem 1.5rem; color:#334155; line-height:1.75;">
               <li><strong>Alimentación de Lámparas de Mesa y Veladores:</strong> Conexión desde el enchufe de pared hasta el portalámparas de artefactos portátiles de iluminación.</li>
@@ -650,8 +892,8 @@
 
             <p><strong>5. NUNCA Pasado por Debajo de Alfombras o a Través de Puertas:</strong> El pisoteo constante sobre el cordón paralelo bajo alfombras quiebra las hebras interiores de cobre por fatiga mecánica, generando arcos eléctricos ocultos de alta temperatura que encienden la alfombra sin activar el automático.</p>
 
-            <div style="text-align:center;margin:32px auto;padding:20px 24px;max-width:560px;background:#FFF5F5;border-left:4px solid #D9381E;border-radius:0 8px 8px 0">
-              <p style="margin:0 0 12px;font-size:15px;color:#1E293B;line-height:1.5"><strong>ADVERTENCIA TÉCNICA SEC:</strong> Si requieres confeccionar o comprar una extensión de uso pesado para herramientas o faenas, exige cordón multiconductor de uso rudo **H05VV-F (tipo Aislapol/Rudo)** o neopreno de $3 \times 1,5\text{ mm}^2$ con tierra de protección. Revisa nuestro análisis de <a href="/blog/las-mejores-marcas-de-alargadores-electricos-guia-completa-para-elegir/" style="font-weight:700; color:#D9381E;">las mejores marcas de alargadores eléctricos en Chile</a>.</p>
+            <div class="highlight-box">
+              <p><strong>ADVERTENCIA TÉCNICA SEC:</strong> Si requieres confeccionar o comprar una extensión de uso pesado para herramientas o faenas, exige cordón multiconductor de uso rudo <strong>H05VV-F (tipo Aislapol/Rudo)</strong> o neopreno de 3 × 1,5 mm² con tierra de protección. Revisa nuestro análisis de <a href="/blog/las-mejores-marcas-de-alargadores-electricos-guia-completa-para-elegir/" style="font-weight:700; color:#D9381E;">las mejores marcas de alargadores eléctricos en Chile</a>.</p>
             </div>
 
             <h2>Preguntas Frecuentes (FAQ)</h2>
@@ -682,14 +924,14 @@
 
             <h2>Conclusión</h2>
 
-            <p>El cordón paralelo es un excelente conductor para la alimentación de luminarias de sobremesa y pequeños artefactos móviles de Clase II. Sin embargo, **jamás debe utilizarse como sustituto de cables de canalización fija, ni embutirse en tubos ni conectarse a equipos con chasis metálico que exijan tierra de protección**.</p>
+            <p>El cordón paralelo es un excelente conductor para la alimentación de luminarias de sobremesa y pequeños artefactos móviles de Clase II. Sin embargo, <strong>jamás debe utilizarse como sustituto de cables de canalización fija, ni embutirse en tubos ni conectarse a equipos con chasis metálico que exijan tierra de protección</strong>.</p>
 
-            <p>Respeta los límites de amperaje (7A para 18 AWG y 10A para 16 AWG), exige siempre conductores con **Sello SEC** y elige cables con doble chaqueta para extensiones o trabajos de mayor exigencia mecánica.</p>
+            <p>Respeta los límites de amperaje (7A para 18 AWG y 10A para 16 AWG), exige siempre conductores con <strong>Sello SEC</strong> y elige cables con doble chaqueta para extensiones o trabajos de mayor exigencia mecánica.</p>
 
-            <div style="text-align:center;margin:40px auto;padding:28px 24px;max-width:520px;background:#F8FAFC;border:2px solid #E2E8F0;border-radius:12px">
-              <p style="font-size:16px;font-weight:700;color:#0F172A;margin:0 0 8px;line-height:1.4">¿Adquiriendo insumos eléctricos certificados en Chile?</p>
-              <p style="font-size:14px;color:#64748B;margin:0 0 20px">Encuentra conductores unipolares EVA/NYA, cables de uso rudo, tableros y automáticos normados por la SEC en Ferretería Ukra.</p>
-              <a href="/" style="display:inline-block; padding:10px 20px; background:var(--primary); color:#FFF; font-weight:700; border-radius:6px;">🛒 Explorar Catálogo Ferretería Ukra &rarr;</a>
+            <div class="cta-box">
+              <p class="cta-title">¿Adquiriendo insumos eléctricos certificados en Chile?</p>
+              <p class="cta-text">Encuentra conductores unipolares EVA/NYA, cables de uso rudo, tableros y automáticos normados por la SEC en Ferretería Ukra.</p>
+              <a href="/" class="btn-primary">🛒 Explorar Catálogo Ferretería Ukra &rarr;</a>
             </div>
 
           </div>
@@ -697,27 +939,19 @@
       </main>
 
       <!-- Sidebar -->
-      <aside class="sidebar">
+      <aside class="sidebar" aria-label="Barra lateral">
         <div class="widget">
-          <h3 class="widget-title">⚡ Guías de Electricidad SEC</h3>
-          <p style="font-size:0.9rem; color:#475569; margin-bottom:1rem;">Manuales para selección de cables, código de colores e instalaciones seguras.</p>
-          <a href="/" style="display:block; text-align:center; padding:0.65rem; background:var(--primary); color:#FFF; font-weight:700; border-radius:var(--radius-sm); margin-bottom:0.75rem;">
-            &larr; Volver al Inicio (Ferretería Ukra)
-          </a>
-          <a href="/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/" style="display:block; text-align:center; padding:0.65rem; background:#1E293B; color:#FFF; font-weight:700; border-radius:var(--radius-sm); margin-bottom:0.75rem;">
-            ⚡ Código de Colores de Cables Chile
-          </a>
-          <a href="/blog/las-mejores-marcas-de-alargadores-electricos-guia-completa-para-elegir/" style="display:block; text-align:center; padding:0.65rem; background:#334155; color:#FFF; font-weight:700; border-radius:var(--radius-sm); margin-bottom:0.75rem;">
-            🔌 Guía de Alargadores y Amperaje
-          </a>
-          <a href="/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/" style="display:block; text-align:center; padding:0.65rem; background:#0057e7; color:#FFF; font-weight:700; border-radius:var(--radius-sm);">
-            🔌 Identificar Fase y Neutro en Enchufe
-          </a>
+          <h2 class="widget-title">⚡ Guías de Electricidad SEC</h2>
+          <p class="widget-desc">Manuales para selección de cables, código de colores e instalaciones seguras.</p>
+          <a href="/" class="widget-btn b1">&larr; Volver al Inicio (Ferretería Ukra)</a>
+          <a href="/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/" class="widget-btn b2">⚡ Código de Colores de Cables Chile</a>
+          <a href="/blog/las-mejores-marcas-de-alargadores-electricos-guia-completa-para-elegir/" class="widget-btn b3">🔌 Guía de Alargadores y Amperaje</a>
+          <a href="/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/" class="widget-btn b4">🔌 Identificar Fase y Neutro en Enchufe</a>
         </div>
 
         <div class="widget">
-          <h3 class="widget-title">📐 Amperaje Cordón Paralelo</h3>
-          <div style="font-size:0.875rem; color:#334155; line-height:1.6;">
+          <h2 class="widget-title">📐 Amperaje Cordón Paralelo</h2>
+          <div class="quick-calc">
             <p><strong>• 2x18 AWG (0,82 mm²):</strong> Máx 7A / 1.540W</p>
             <p><strong>• 2x16 AWG (1,31 mm²):</strong> Máx 10A / 2.200W</p>
             <p><strong>• 2x14 AWG (2,08 mm²):</strong> Máx 15A / 3.300W</p>
@@ -733,14 +967,14 @@
   <footer>
     <div class="footer-inner">
       <div>
-        <h4 style="color:#FFF;">Ferretería Ukra Chile</h4>
-        <p style="font-size:0.875rem;">Portal técnico de información en ingeniería eléctrica, seguridad domiciliaria, normativas SEC y construcción.</p>
+        <h4>Ferretería Ukra Chile</h4>
+        <p>Portal técnico de información en ingeniería eléctrica, seguridad domiciliaria, normativas SEC y construcción.</p>
       </div>
       <div>
-        <h4 style="color:#FFF;">Enlaces Rápidos</h4>
-        <p><a href="/" style="color:#94A3B8;">&rarr; Inicio Blog Ferretería Ukra</a></p>
-        <p><a href="/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/" style="color:#94A3B8;">&rarr; Código de Colores de Cables SEC</a></p>
-        <p><a href="/blog/las-mejores-marcas-de-alargadores-electricos-guia-completa-para-elegir/" style="color:#94A3B8;">&rarr; Alargadores y Uso Rudo</a></p>
+        <h4>Enlaces Rápidos</h4>
+        <p><a href="/">&rarr; Inicio Blog Ferretería Ukra</a></p>
+        <p><a href="/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/">&rarr; Código de Colores de Cables SEC</a></p>
+        <p><a href="/blog/las-mejores-marcas-de-alargadores-electricos-guia-completa-para-elegir/">&rarr; Alargadores y Uso Rudo</a></p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -749,12 +983,47 @@
   </footer>
 
   <script>
-    window.addEventListener('scroll', () => {
-      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
-      document.getElementById('progressBar').style.width = scrolled + '%';
+    // Barra de progreso de lectura
+    (function () {
+      const progressBar = document.getElementById('progressBar');
+      let ticking = false;
+
+      function updateProgress() {
+        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+        progressBar.style.width = scrolled + '%';
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          window.requestAnimationFrame(updateProgress);
+          ticking = true;
+        }
+      }, { passive: true });
+    })();
+
+    // Menú hamburguesa (Responsive)
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', function () {
+      const isOpen = mainNav.classList.toggle('active');
+      this.setAttribute('aria-expanded', isOpen);
+      this.innerHTML = isOpen ? '✕' : '☰';
+    });
+
+    document.querySelectorAll('#mainNav a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 860) {
+          mainNav.classList.remove('active');
+          menuToggle.innerHTML = '☰';
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     });
   </script>
+
 </body>
 </html>

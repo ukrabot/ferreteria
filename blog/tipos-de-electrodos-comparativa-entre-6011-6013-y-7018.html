@@ -1,3 +1,4 @@
+<!-- LISTO -->
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
@@ -137,6 +138,8 @@
       padding: 0;
     }
 
+    html { overflow-x: hidden; }
+
     body {
       font-family: var(--font-stack);
       background-color: var(--bg-body);
@@ -144,6 +147,7 @@
       line-height: 1.65;
       font-size: 1rem;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     a {
@@ -205,6 +209,8 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.85rem 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
 
     .brand-logo {
@@ -220,6 +226,7 @@
       width: 34px;
       height: 34px;
       fill: var(--primary);
+      flex-shrink: 0;
     }
     .brand-logo span.badge {
       font-size: 0.65rem;
@@ -231,11 +238,24 @@
       font-weight: 700;
     }
 
+    /* Menu Toggle (Hamburguesa) */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #FFF;
+      font-size: 1.75rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+    }
+
     nav ul {
       display: flex;
       list-style: none;
       gap: 1.5rem;
       align-items: center;
+      flex-wrap: wrap;
     }
     nav a {
       color: #CBD5E1;
@@ -250,10 +270,42 @@
       border-bottom-color: var(--primary);
     }
 
+    /* Responsive Header */
+    @media (max-width: 860px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 0.75rem;
+        border-top: 1px solid #334155;
+        padding-top: 0.75rem;
+      }
+      nav.active {
+        display: block;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+      }
+      nav ul li {
+        width: 100%;
+      }
+      nav a {
+        display: block;
+        padding: 0.85rem 0.25rem;
+        border-bottom: 1px solid #334155;
+      }
+    }
+
     .container {
       max-width: 1240px;
       margin: 2rem auto;
       padding: 0 1.5rem;
+      width: 100%;
     }
 
     .breadcrumbs {
@@ -275,15 +327,25 @@
       color: #CBD5E1;
     }
 
+    /* ===================================================== */
+    /* FIX PRINCIPAL: Grid items necesitan min-width:0        */
+    /* para poder encogerse por debajo del contenido (tablas) */
+    /* ===================================================== */
     .layout-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2.5rem;
+      min-width: 0;
     }
     @media (min-width: 992px) {
       .layout-grid {
         grid-template-columns: 2.5fr 1fr;
       }
+    }
+    .layout-grid > main,
+    .layout-grid > aside.sidebar {
+      min-width: 0;
+      width: 100%;
     }
 
     article.main-article {
@@ -292,6 +354,8 @@
       padding: 2.5rem;
       box-shadow: var(--shadow-sm);
       border: 1px solid var(--border-color);
+      min-width: 0;
+      width: 100%;
     }
 
     .category-pill {
@@ -320,11 +384,104 @@
       color: var(--text-muted);
     }
 
+    .article-body { min-width: 0; }
+
+    /* ===================================================== */
+    /* Tipografía del artículo (reemplaza los estilos inline) */
+    /* ===================================================== */
+    .article-body h1.article-title {
+      font-family: var(--font-stack);
+      font-size: 1.9rem;
+      color: #1a1a1a;
+      line-height: 1.3;
+      margin: 0 0 16px 0;
+      font-weight: 800;
+      overflow-wrap: break-word;
+    }
+    .article-body h2 {
+      font-family: var(--font-stack);
+      font-size: 1.4rem;
+      color: #1a1a1a;
+      margin: 28px 0 12px 0;
+      overflow-wrap: break-word;
+    }
+    .article-body h3 {
+      font-family: var(--font-stack);
+      font-size: 1.1rem;
+      color: #1a1a1a;
+      margin: 18px 0 8px 0;
+      overflow-wrap: break-word;
+    }
+    .article-body p {
+      font-family: var(--font-stack);
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.65;
+      margin: 0 0 12px 0;
+      overflow-wrap: break-word;
+    }
+    .article-body ul {
+      font-family: var(--font-stack);
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.6;
+      margin: 0 0 12px 0;
+      padding-left: 20px;
+    }
+
+    .note-box {
+      border-left: 4px solid var(--primary);
+      background: #fff5f5;
+      padding: 14px 16px;
+      margin: 20px 0;
+      font-family: var(--font-stack);
+      font-size: 0.95rem;
+      color: #1a1a1a;
+      border-radius: 0 6px 6px 0;
+      overflow-wrap: break-word;
+    }
+    .note-box.blue {
+      border-left-color: #0057e7;
+      background: #f5f8ff;
+    }
+
+    /* ===================================================== */
+    /* FIX TABLAS: wrapper con scroll horizontal y tabla con  */
+    /* min-width para que las columnas no se compriman ilegibles */
+    /* ===================================================== */
     .table-wrapper {
       overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       margin: 1.75rem 0;
       border-radius: var(--radius-md);
       border: 1px solid var(--border-color);
+      max-width: 100%;
+    }
+    .table-wrapper table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--font-stack);
+      font-size: 0.95rem;
+      min-width: 560px;
+    }
+    .table-wrapper table.wide-table {
+      min-width: 720px;
+    }
+    .table-wrapper th {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+      color: #1a1a1a;
+      background: #f0f4f8;
+      white-space: nowrap;
+    }
+    .table-wrapper td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      color: #333;
+    }
+    .table-wrapper tbody tr:nth-child(even) {
+      background: #fafafa;
     }
 
     aside.sidebar {
@@ -374,6 +531,90 @@
       justify-content: space-between;
       align-items: center;
       font-size: 0.85rem;
+      gap: 0.5rem;
+    }
+
+    /* ============================= */
+    /* AJUSTES RESPONSIVE ADICIONALES */
+    /* ============================= */
+    @media (max-width: 768px) {
+      article.main-article {
+        padding: 1.75rem 1.25rem;
+      }
+      .article-body h1.article-title {
+        font-size: 1.5rem;
+      }
+      .article-body h2 {
+        font-size: 1.2rem;
+      }
+      .article-body h3 {
+        font-size: 1.05rem;
+      }
+      .article-body p, .article-body ul {
+        font-size: 0.98rem;
+      }
+      .article-meta {
+        gap: 0.75rem;
+        font-size: 0.85rem;
+      }
+      .article-meta > div:last-child {
+        margin-left: 0 !important;
+        width: 100%;
+      }
+      .table-wrapper table {
+        font-size: 0.85rem;
+      }
+      .table-wrapper th,
+      .table-wrapper td {
+        padding: 8px !important;
+      }
+      .note-box {
+        padding: 12px 14px;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner {
+        padding: 0.75rem 1rem;
+      }
+      .brand-logo {
+        font-size: 1.05rem;
+        gap: 0.5rem;
+      }
+      .brand-logo svg {
+        width: 26px;
+        height: 26px;
+      }
+      .brand-logo span.badge {
+        font-size: 0.55rem;
+      }
+      .top-bar {
+        font-size: 0.75rem;
+        line-height: 1.4;
+        padding: 0.5rem 0.75rem;
+      }
+      .container {
+        margin: 1.25rem auto;
+        padding: 0 1rem;
+      }
+      article.main-article {
+        padding: 1.25rem 1rem;
+        border-radius: var(--radius-md);
+      }
+      .article-body h1.article-title {
+        font-size: 1.3rem;
+      }
+      .widget {
+        padding: 1.15rem;
+      }
+      .footer-inner {
+        gap: 1.75rem;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
   <!-- Google AdSense Auto Ads -->
@@ -410,7 +651,11 @@
         Ferretería Ukra <span class="badge">Soldadura</span>
       </a>
 
-      <nav aria-label="Navegación principal">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav aria-label="Navegación principal" id="mainNav">
         <ul>
           <li><a href="/">Inicio</a></li>
           <li><a href="/blog/mejor-mascara-de-soldar/">Caretas</a></li>
@@ -453,250 +698,250 @@
           <!-- Article Content Provided -->
           <div class="article-body" itemprop="articleBody">
             
-            <h1 style="font-family:Arial,sans-serif;font-size:1.6em;color:#1a1a1a;line-height:1.3;margin:0 0 16px 0;">Electrodos 6011 vs 6013 vs 7018: qué significa el código AWS, cuándo usar cada uno y cuánto cuestan en Chile</h1>
+            <h1 class="article-title">Electrodos 6011 vs 6013 vs 7018: qué significa el código AWS, cuándo usar cada uno y cuánto cuestan en Chile</h1>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               ¿Compraste un paquete de electrodos 6013 para reparar un portón de hierro de 6 mm y el cordón quedó poroso y sin penetración?
             </p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               El problema no fue la técnica: fue el electrodo. Los códigos <strong>E6011, E6013 y E7018</strong> no son marcas comerciales. Son la clasificación <strong>AWS A5.1</strong> que indica resistencia mecánica, tipo de revestimiento y corriente eléctrica recomendada. Usar el código equivocado en una estructura que soporta carga puede significar una soldadura que agrieta en frío o que no cumple la norma <strong>NCh 427</strong> de estructuras de acero en Chile.
             </p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               A continuación te explicamos qué significa cada número, cuándo usar cada electrodo y los errores que convierten un paquete de $5.000 en un desperdicio de material y tiempo.
             </p>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">Cómo leer el código AWS de un electrodo</h2>
+            <h2>Cómo leer el código AWS de un electrodo</h2>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               El código <strong>E6011</strong> se descompone en cuatro partes:
             </p>
 
-            <ul style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;padding-left:20px;">
+            <ul>
               <li><strong>E</strong> = Electrodo (para soldadura manual con arco eléctrico, SMAW).</li>
               <li><strong>60</strong> = Resistencia a la tracción mínima de <strong>60.000 psi</strong> (420 MPa). El 70 del 7018 indica <strong>70.000 psi</strong> (490 MPa).</li>
               <li><strong>1</strong> = Posición de soldadura: <strong>todas</strong> (plana, horizontal, vertical, overhead).</li>
               <li><strong>1 / 3 / 8</strong> = Tipo de revestimiento y corriente eléctrica recomendada.</li>
             </ul>
 
-            <div style="border-left:4px solid #e63946;background:#fff5f5;padding:14px 16px;margin:20px 0;font-family:Arial,sans-serif;font-size:0.95em;color:#1a1a1a;">
+            <div class="note-box">
               <strong>⚠️ Dato que nadie te cuenta:</strong> el electrodo 7018 tiene un revestimiento <strong>básico de bajo hidrógeno</strong>. Si lo dejas al aire libre en un galpón húmedo de Valparaíso o Concepción, absorbe humedad en horas. Al soldar, esa humedad se convierte en hidrógeno molecular que genera <strong>grietas por fragilización</strong> en el metal base, especialmente en aceros de alta resistencia o espesores mayores a 12 mm. Un paquete de 7018 mal almacenado es peor que no soldar.
             </div>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">E6011: penetración profunda para acero sucio y reparaciones</h2>
+            <h2>E6011: penetración profunda para acero sucio y reparaciones</h2>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               El <strong>E6011</strong> tiene un revestimiento <strong>celulósico</strong>. Eso significa que la fundente contiene celulosa (material orgánico) que al arder genera un gas protector de CO₂ y vapor de agua. El arco es agresivo, con penetración profunda y mucho chisporroteo.
             </p>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em;font-family:Arial,sans-serif;">
+              <table>
                 <thead>
-                  <tr style="background:#f0f4f8;">
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Característica</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">E6011</th>
+                  <tr>
+                    <th>Característica</th>
+                    <th>E6011</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">Revestimiento</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Celulósico</td>
-                  </tr>
-                  <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;">Corriente</td>
-                    <td style="border:1px solid #ccc;padding:10px;">AC o DC+ (electrodo positivo)</td>
+                    <td>Revestimiento</td>
+                    <td>Celulósico</td>
                   </tr>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">Penetración</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Profunda</td>
-                  </tr>
-                  <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;">Resistencia cordón</td>
-                    <td style="border:1px solid #ccc;padding:10px;">60.000 psi (420 MPa)</td>
+                    <td>Corriente</td>
+                    <td>AC o DC+ (electrodo positivo)</td>
                   </tr>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">Escoria</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Delgada, fácil de remover</td>
-                  </tr>
-                  <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;">Uso ideal</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Reparaciones en campo, acero con óxido, tuberías, raíces de soldadura</td>
+                    <td>Penetración</td>
+                    <td>Profunda</td>
                   </tr>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">No usar en</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Chapas delgadas (&lt;2 mm), acero inoxidable, aluminio</td>
+                    <td>Resistencia cordón</td>
+                    <td>60.000 psi (420 MPa)</td>
+                  </tr>
+                  <tr>
+                    <td>Escoria</td>
+                    <td>Delgada, fácil de remover</td>
+                  </tr>
+                  <tr>
+                    <td>Uso ideal</td>
+                    <td>Reparaciones en campo, acero con óxido, tuberías, raíces de soldadura</td>
+                  </tr>
+                  <tr>
+                    <td>No usar en</td>
+                    <td>Chapas delgadas (&lt;2 mm), acero inoxidable, aluminio</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               El 6011 es el electrodo de emergencia del soldador. Si llegas a una obra y el acero está oxidado o pintado, el 6011 quema la contaminación y penetra de todos modos. Pero esa agresividad tiene un costo: el cordón es rugoso, con mucho humo y no es estético.
             </p>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">E6013: el electrodo para principiantes y chapas delgadas</h2>
+            <h2>E6013: el electrodo para principiantes y chapas delgadas</h2>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               El <strong>E6013</strong> tiene un revestimiento <strong>rutilo</strong> (dióxido de titanio). El arco es estable, silencioso y fácil de controlar. Es el electrodo que usan las escuelas de soldadura para enseñar a los alumnos porque perdona errores de ángulo y velocidad.
             </p>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em;font-family:Arial,sans-serif;">
+              <table>
                 <thead>
-                  <tr style="background:#f0f4f8;">
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Característica</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">E6013</th>
+                  <tr>
+                    <th>Característica</th>
+                    <th>E6013</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">Revestimiento</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Rutilo</td>
-                  </tr>
-                  <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;">Corriente</td>
-                    <td style="border:1px solid #ccc;padding:10px;">AC o DC- (electrodo negativo)</td>
+                    <td>Revestimiento</td>
+                    <td>Rutilo</td>
                   </tr>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">Penetración</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Media/baja</td>
-                  </tr>
-                  <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;">Resistencia cordón</td>
-                    <td style="border:1px solid #ccc;padding:10px;">60.000 psi (420 MPa)</td>
+                    <td>Corriente</td>
+                    <td>AC o DC- (electrodo negativo)</td>
                   </tr>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">Escoria</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Compacta, se desprende sola</td>
-                  </tr>
-                  <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;">Uso ideal</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Chapas delgadas (1-4 mm), muebles metálicos, trabajos estéticos, aprendizaje</td>
+                    <td>Penetración</td>
+                    <td>Media/baja</td>
                   </tr>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">No usar en</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Estructuras críticas, acero grueso (&gt;10 mm), raíces de soldadura</td>
+                    <td>Resistencia cordón</td>
+                    <td>60.000 psi (420 MPa)</td>
+                  </tr>
+                  <tr>
+                    <td>Escoria</td>
+                    <td>Compacta, se desprende sola</td>
+                  </tr>
+                  <tr>
+                    <td>Uso ideal</td>
+                    <td>Chapas delgadas (1-4 mm), muebles metálicos, trabajos estéticos, aprendizaje</td>
+                  </tr>
+                  <tr>
+                    <td>No usar en</td>
+                    <td>Estructuras críticas, acero grueso (&gt;10 mm), raíces de soldadura</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               El 6013 produce un cordón liso y brillante que parece profesional. Pero esa apariencia engaña: la penetración es superficial. Si usas 6013 para soldar dos perfiles de 10 mm en una estructura que soporta carga, la soldadura puede fallar por falta de fusión en la raíz.
             </p>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">E7018: alta resistencia y bajo hidrógeno para estructuras críticas</h2>
+            <h2>E7018: alta resistencia y bajo hidrógeno para estructuras críticas</h2>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               El <strong>E7018</strong> tiene un revestimiento <strong>básico de bajo hidrógeno</strong>. Eso significa que la fundente contiene carbonatos y fluoruros que generan un arco limpio con muy poco hidrógeno en el cordón. El resultado es una soldadura con <strong>70.000 psi</strong> de resistencia y alta tenacidad (resistencia al impacto).
             </p>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em;font-family:Arial,sans-serif;">
+              <table>
                 <thead>
-                  <tr style="background:#f0f4f8;">
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Característica</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">E7018</th>
+                  <tr>
+                    <th>Característica</th>
+                    <th>E7018</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">Revestimiento</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Básico low hydrogen</td>
-                  </tr>
-                  <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;">Corriente</td>
-                    <td style="border:1px solid #ccc;padding:10px;">DC+ (algunos tipos permiten AC)</td>
+                    <td>Revestimiento</td>
+                    <td>Básico low hydrogen</td>
                   </tr>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">Penetración</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Media, cordón ancho y plano</td>
-                  </tr>
-                  <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;">Resistencia cordón</td>
-                    <td style="border:1px solid #ccc;padding:10px;">70.000 psi (490 MPa)</td>
+                    <td>Corriente</td>
+                    <td>DC+ (algunos tipos permiten AC)</td>
                   </tr>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">Escoria</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Densa, se desprende en láminas</td>
-                  </tr>
-                  <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;">Uso ideal</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Estructuras de carga, puentes, maquinaria pesada, acero grueso (&gt;6 mm)</td>
+                    <td>Penetración</td>
+                    <td>Media, cordón ancho y plano</td>
                   </tr>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">No usar en</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Chapas muy delgadas (&lt;2 mm), sin horno de secado, acero sucio</td>
+                    <td>Resistencia cordón</td>
+                    <td>70.000 psi (490 MPa)</td>
+                  </tr>
+                  <tr>
+                    <td>Escoria</td>
+                    <td>Densa, se desprende en láminas</td>
+                  </tr>
+                  <tr>
+                    <td>Uso ideal</td>
+                    <td>Estructuras de carga, puentes, maquinaria pesada, acero grueso (&gt;6 mm)</td>
+                  </tr>
+                  <tr>
+                    <td>No usar en</td>
+                    <td>Chapas muy delgadas (&lt;2 mm), sin horno de secado, acero sucio</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               El 7018 es el único de los tres que exige <strong>preparación del material</strong>. El acero debe estar limpio de óxido, grasa y pintura. Si soldas 7018 sobre acero oxidado, el cordón queda poroso y puede presentar fisuras internas.
             </p>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">Comparativa rápida: 6011 vs 6013 vs 7018</h2>
+            <h2>Comparativa rápida: 6011 vs 6013 vs 7018</h2>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em;font-family:Arial,sans-serif;">
+              <table class="wide-table">
                 <thead>
-                  <tr style="background:#f0f4f8;">
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Característica</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">E6011</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">E6013</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">E7018</th>
+                  <tr>
+                    <th>Característica</th>
+                    <th>E6011</th>
+                    <th>E6013</th>
+                    <th>E7018</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">Resistencia</td>
-                    <td style="border:1px solid #ccc;padding:10px;">60 ksi (420 MPa)</td>
-                    <td style="border:1px solid #ccc;padding:10px;">60 ksi (420 MPa)</td>
-                    <td style="border:1px solid #ccc;padding:10px;">70 ksi (490 MPa)</td>
-                  </tr>
-                  <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;">Penetración</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Profunda</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Media/baja</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Media</td>
+                    <td>Resistencia</td>
+                    <td>60 ksi (420 MPa)</td>
+                    <td>60 ksi (420 MPa)</td>
+                    <td>70 ksi (490 MPa)</td>
                   </tr>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">Facilidad de uso</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Media</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Alta (principiante)</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Baja (requiere técnica)</td>
-                  </tr>
-                  <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;">Apariencia cordón</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Rugoso</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Liso y brillante</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Plano, uniforme</td>
+                    <td>Penetración</td>
+                    <td>Profunda</td>
+                    <td>Media/baja</td>
+                    <td>Media</td>
                   </tr>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">Tolerancia a suciedad</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Alta</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Media</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Ninguna (debe estar limpio)</td>
-                  </tr>
-                  <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;">Almacenamiento</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Normal</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Normal</td>
-                    <td style="border:1px solid #ccc;padding:10px;">Horno 120-150 °C obligatorio</td>
+                    <td>Facilidad de uso</td>
+                    <td>Media</td>
+                    <td>Alta (principiante)</td>
+                    <td>Baja (requiere técnica)</td>
                   </tr>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">Precio CLP/kg (1/8")</td>
-                    <td style="border:1px solid #ccc;padding:10px;">$4.000 - $6.500</td>
-                    <td style="border:1px solid #ccc;padding:10px;">$3.500 - $5.500</td>
-                    <td style="border:1px solid #ccc;padding:10px;">$5.500 - $8.000</td>
+                    <td>Apariencia cordón</td>
+                    <td>Rugoso</td>
+                    <td>Liso y brillante</td>
+                    <td>Plano, uniforme</td>
+                  </tr>
+                  <tr>
+                    <td>Tolerancia a suciedad</td>
+                    <td>Alta</td>
+                    <td>Media</td>
+                    <td>Ninguna (debe estar limpio)</td>
+                  </tr>
+                  <tr>
+                    <td>Almacenamiento</td>
+                    <td>Normal</td>
+                    <td>Normal</td>
+                    <td>Horno 120-150 °C obligatorio</td>
+                  </tr>
+                  <tr>
+                    <td>Precio CLP/kg (1/8")</td>
+                    <td>$4.000 - $6.500</td>
+                    <td>$3.500 - $5.500</td>
+                    <td>$5.500 - $8.000</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <div style="border-left:4px solid #0057e7;background:#f5f8ff;padding:14px 16px;margin:20px 0;font-family:Arial,sans-serif;font-size:0.95em;color:#1a1a1a;">
+            <div class="note-box blue">
               <strong>💡 Conclusión práctica:</strong> si eres principiante y soldas muebles de hierro o chapas delgadas, usa <strong>6013</strong>. Si reparas una reja oxidada o una tubería en el campo, usa <strong>6011</strong>. Si construyes una estructura de carga, un portalón de camión o una plataforma, usa <strong>7018</strong> y mantenlo seco.
             </div>
 
@@ -704,113 +949,113 @@
               <a href="/blog/mejor-mascara-de-soldar/">Ver electrodos y materiales de soldadura en Ferretería Ukra &rarr;</a>
             </div>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">Amperaje recomendado según diámetro del electrodo</h2>
+            <h2>Amperaje recomendado según diámetro del electrodo</h2>
 
             <div class="table-wrapper">
-              <table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95em;font-family:Arial,sans-serif;">
+              <table class="wide-table">
                 <thead>
-                  <tr style="background:#f0f4f8;">
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Diámetro</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">E6011 (A)</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">E6013 (A)</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">E7018 (A)</th>
-                    <th style="border:1px solid #ccc;padding:10px;text-align:left;color:#1a1a1a;">Espesor metal base</th>
+                  <tr>
+                    <th>Diámetro</th>
+                    <th>E6011 (A)</th>
+                    <th>E6013 (A)</th>
+                    <th>E7018 (A)</th>
+                    <th>Espesor metal base</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">3/32" (2,4 mm)</td>
-                    <td style="border:1px solid #ccc;padding:10px;">70-100</td>
-                    <td style="border:1px solid #ccc;padding:10px;">60-90</td>
-                    <td style="border:1px solid #ccc;padding:10px;">70-100</td>
-                    <td style="border:1px solid #ccc;padding:10px;">1,5 - 3 mm</td>
-                  </tr>
-                  <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;">1/8" (3,2 mm)</td>
-                    <td style="border:1px solid #ccc;padding:10px;">90-140</td>
-                    <td style="border:1px solid #ccc;padding:10px;">80-130</td>
-                    <td style="border:1px solid #ccc;padding:10px;">90-140</td>
-                    <td style="border:1px solid #ccc;padding:10px;">3 - 8 mm</td>
+                    <td>3/32" (2,4 mm)</td>
+                    <td>70-100</td>
+                    <td>60-90</td>
+                    <td>70-100</td>
+                    <td>1,5 - 3 mm</td>
                   </tr>
                   <tr>
-                    <td style="border:1px solid #ccc;padding:10px;">5/32" (4,0 mm)</td>
-                    <td style="border:1px solid #ccc;padding:10px;">130-190</td>
-                    <td style="border:1px solid #ccc;padding:10px;">120-170</td>
-                    <td style="border:1px solid #ccc;padding:10px;">130-190</td>
-                    <td style="border:1px solid #ccc;padding:10px;">6 - 12 mm</td>
+                    <td>1/8" (3,2 mm)</td>
+                    <td>90-140</td>
+                    <td>80-130</td>
+                    <td>90-140</td>
+                    <td>3 - 8 mm</td>
                   </tr>
-                  <tr style="background:#fafafa;">
-                    <td style="border:1px solid #ccc;padding:10px;">3/16" (4,8 mm)</td>
-                    <td style="border:1px solid #ccc;padding:10px;">180-250</td>
-                    <td style="border:1px solid #ccc;padding:10px;">160-220</td>
-                    <td style="border:1px solid #ccc;padding:10px;">180-250</td>
-                    <td style="border:1px solid #ccc;padding:10px;">10 - 20 mm</td>
+                  <tr>
+                    <td>5/32" (4,0 mm)</td>
+                    <td>130-190</td>
+                    <td>120-170</td>
+                    <td>130-190</td>
+                    <td>6 - 12 mm</td>
+                  </tr>
+                  <tr>
+                    <td>3/16" (4,8 mm)</td>
+                    <td>180-250</td>
+                    <td>160-220</td>
+                    <td>180-250</td>
+                    <td>10 - 20 mm</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">5 errores costosos al elegir y usar electrodos</h2>
+            <h2>5 errores costosos al elegir y usar electrodos</h2>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               <strong>1. Usar 7018 sin horno de secado en climas húmedos.</strong> En Chile, especialmente en la costa y el sur, la humedad relativa supera el 80 % gran parte del año. Un paquete de 7018 abierto absorbe humedad en 4-6 horas. Para estructuras críticas, los electrodos deben secarse a <strong>120-150 °C durante 1-2 horas</strong> antes de usar. Si no tienes horno, compra paquetes de 1 kg y úsalos el mismo día.
             </p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               <strong>2. Soldar chapas delgadas (&lt;2 mm) con 6011.</strong> La penetración profunda del 6011 perfora chapa de 1,5 mm en lugar de soldarla. Para chapas delgadas usa 6013 a bajo amperaje (60-80 A) o alambre MIG con gas CO₂.
             </p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               <strong>3. Usar 6013 para estructuras que requieren 70.000 psi.</strong> El 6013 solo garantiza 60.000 psi. Si la norma del proyecto (NCh 427, AWS D1.1) exige 70 ksi, usar 6013 es una no-conformidad que puede invalidar la garantía estructural.
             </p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               <strong>4. No limpiar el material antes de soldar con 7018.</strong> El revestimiento básico del 7018 no tolera óxido, grasa ni pintura. A diferencia del 6011, que quema la contaminación, el 7018 la encapsula y genera porosidades. Limpia con escobilla de acero o amoladora con disco flap antes de soldar.
             </p>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               <strong>5. Almacenar electrodos abiertos en el galpón.</strong> Todos los electrodos absorben humedad, pero el 7018 es el más crítico. Incluso el 6011 y 6013 degradan si se mojan: el revestimiento se ablanda, el arco se vuelve inestable y la escoria no se desprende. Guarda los electrodos en un recipiente hermético con silica gel.
             </p>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">También te puede interesar</h2>
+            <h2>También te puede interesar</h2>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
-              <a href="/blog/mejor-mascara-de-soldar/" style="color:#0057e7;text-decoration:underline;">Máscara de Soldar — Ranking Técnico</a> |
+            <p>
+              <a href="/blog/mejor-mascara-de-soldar/">Máscara de Soldar — Ranking Técnico</a> |
               <a href="/">Taladro Percutor DEWALT</a> |
               <a href="/">Lentes de Seguridad</a> |
               <a href="/">Coleto Carpintero</a> |
               <a href="/">Guías técnicas soldadura</a>
             </p>
 
-            <h2 style="font-family:Arial,sans-serif;font-size:1.25em;color:#1a1a1a;margin:28px 0 12px 0;">Preguntas frecuentes sobre electrodos 6011, 6013 y 7018</h2>
+            <h2>Preguntas frecuentes sobre electrodos 6011, 6013 y 7018</h2>
 
-            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Puedo usar 7018 con soldadora inverter de 120 A?</h3>
+            <h3>¿Puedo usar 7018 con soldadora inverter de 120 A?</h3>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               Sí, pero solo con electrodos de 3/32" (2,4 mm) a 70-100 A. Un electrodo 7018 de 1/8" (3,2 mm) requiere 90-140 A. Si tu máquina no entrega al menos 130 A en DC+, el arco será inestable y el cordón quedará frio y poroso.
             </p>
 
-            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Cuál electrodo es mejor para soldar rejas y portones de hierro?</h3>
+            <h3>¿Cuál electrodo es mejor para soldar rejas y portones de hierro?</h3>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               Para rejas y portones de hierro al carbono con espesor de 3-6 mm, el <strong>6011</strong> es la opción más práctica porque penetra bien incluso sobre óxido ligero y el cordón no necesita ser estético. Si el portón es estructural (soporta peso de vehículos), usa <strong>7018</strong> después de limpiar las superficies.
             </p>
 
-            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Por qué el 7018 es más caro que el 6011 y 6013?</h3>
+            <h3>¿Por qué el 7018 es más caro que el 6011 y 6013?</h3>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               Porque el revestimiento básico contiene minerales más costosos (carbonatos, fluoruros) y el proceso de fabricación incluye control de humedad. Además, el 7018 debe almacenarse en condiciones controladas hasta la venta. En Chile, un kilo de 7018 cuesta aproximadamente <strong>30-40 % más</strong> que un kilo de 6013.
             </p>
 
-            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Puedo soldar acero inoxidable con estos electrodos?</h3>
+            <h3>¿Puedo soldar acero inoxidable con estos electrodos?</h3>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               No. Los electrodos 6011, 6013 y 7018 están diseñados para <strong>acero al carbono y baja aleación</strong>. Para acero inoxidable (AISI 304, 316) necesitas electrodos específicos como el <strong>E308L-16</strong> o <strong>E316L-16</strong>. Usar un 6013 en inoxidable produce un cordón frágil que se oxida y agrieta.
             </p>
 
-            <h3 style="font-family:Arial,sans-serif;font-size:1.05em;color:#1a1a1a;margin:18px 0 8px 0;">¿Cómo sé si un electrodo 7018 está húmedo?</h3>
+            <h3>¿Cómo sé si un electrodo 7018 está húmedo?</h3>
 
-            <p style="font-family:Arial,sans-serif;font-size:1em;color:#333;line-height:1.6;margin:0 0 12px 0;">
+            <p>
               Tres señales: el arco produce <strong>mucho chisporroteo y salpicadura</strong>, el cordón queda con <strong>poros visibles</strong> después de limpiar la escoria, y la escoria es difícil de remover. Si golpeas dos electrodos entre sí, un 7018 seco suena como cerámica; si está húmedo, suena sordo y el revestimiento se desmenuza.
             </p>
 
@@ -870,8 +1115,29 @@
     window.addEventListener('scroll', () => {
       const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
+      const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
       document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+
+    // Menú hamburguesa (Responsive)
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', function() {
+      const isOpen = mainNav.classList.toggle('active');
+      this.setAttribute('aria-expanded', isOpen);
+      this.innerHTML = isOpen ? '✕' : '☰';
+    });
+
+    // Cierra el menú al hacer click en un link (mejor UX en móvil)
+    document.querySelectorAll('#mainNav a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 860) {
+          mainNav.classList.remove('active');
+          menuToggle.innerHTML = '☰';
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     });
   </script>
 </body>
