@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es-CL" class="scroll-smooth">
+<html lang="es" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO principal -->
+  <!-- SEO Meta Tags -->
   <title>Cómo Instalar un Enchufe en Chile: Guía Segura 2026</title>
   <meta name="title" content="Cómo Instalar un Enchufe en Chile: Guía Segura 2026">
   <meta name="description" content="Aprende cómo instalar o cambiar un enchufe en Chile: bornes L, N y tierra, cajas, protección diferencial, RIC 10, pruebas y errores que debes evitar.">
@@ -12,9 +12,9 @@
   <meta name="author" content="Equipo Técnico Ferretería Ukra">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="https://www.ferreteriaukra.cl/blog/como-instalar-un-enchufe-en-chile-guia-segura/">
-  <meta name="theme-color" content="#0057E7">
+  <meta name="theme-color" content="#D9381E">
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Ferretería Ukra Blog - Ferretería y Bricolaje Técnico">
   <meta property="og:url" content="https://www.ferreteriaukra.cl/blog/como-instalar-un-enchufe-en-chile-guia-segura/">
@@ -35,7 +35,7 @@
   <meta name="twitter:image" content="https://images.pexels.com/photos/5691590/pexels-photo-5691590.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=1200">
   <meta name="twitter:image:alt" content="Reparación profesional de un enchufe eléctrico">
 
-  <!-- Datos estructurados -->
+  <!-- Schema.org JSON-LD Markup -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -82,7 +82,7 @@
         ]
       },
       {
-        "@type": "TechArticle",
+        "@type": "BlogPosting",
         "@id": "https://www.ferreteriaukra.cl/blog/como-instalar-un-enchufe-en-chile-guia-segura/#article",
         "isPartOf": {
           "@id": "https://www.ferreteriaukra.cl/blog/como-instalar-un-enchufe-en-chile-guia-segura/"
@@ -242,17 +242,15 @@
 
   <style>
     :root {
-      --primary: #0057E7;
-      --primary-hover: #0042B5;
+      --primary: #D9381E;
+      --primary-hover: #B82A13;
       --secondary: #1E293B;
       --accent: #F59E0B;
-      --danger: #D9381E;
       --bg-body: #F8FAFC;
       --bg-card: #FFFFFF;
       --text-main: #0F172A;
-      --text-body: #334155;
       --text-muted: #64748B;
-      --border: #E2E8F0;
+      --border-color: #E2E8F0;
       --radius-sm: 0.375rem;
       --radius-md: 0.75rem;
       --radius-lg: 1rem;
@@ -261,173 +259,573 @@
       --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { overflow-x: hidden; }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: var(--font-stack);
-      background: var(--bg-body);
+      background-color: var(--bg-body);
       color: var(--text-main);
       line-height: 1.65;
       font-size: 1rem;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
-    a { color: var(--primary); text-decoration: none; transition: color 0.2s ease; }
-    a:hover { color: var(--primary-hover); text-decoration: underline; }
-    img, svg { max-width: 100%; height: auto; display: block; }
-    :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 
-    .skip-link {
-      position: absolute; left: -9999px; top: 0; z-index: 200;
-      background: #FFF; color: var(--text-main); padding: 12px 20px;
-      font-weight: 700; border-radius: 0 0 8px 0;
+    a {
+      color: #0057e7;
+      text-decoration: none;
+      transition: color 0.2s ease;
     }
-    .skip-link:focus { left: 0; }
-    .progress-container { position: fixed; top: 0; left: 0; width: 100%; height: 4px; z-index: 100; }
-    .progress-bar { height: 100%; width: 0; background: linear-gradient(90deg, var(--primary), var(--accent)); transition: width .1s linear; }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img, svg {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .progress-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: transparent;
+      z-index: 100;
+    }
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      width: 0%;
+      transition: width 0.1s linear;
+    }
 
     .top-bar {
-      background: #0F172A; color: #94A3B8; padding: .45rem 1rem;
-      text-align: center; font-size: .85rem; border-bottom: 1px solid #1E293B;
+      background-color: #0F172A;
+      color: #94A3B8;
+      font-size: 0.85rem;
+      padding: 0.4rem 1rem;
+      text-align: center;
+      border-bottom: 1px solid #1E293B;
     }
-    .top-bar strong { color: #FFF; }
-    .top-bar a { color: #F59E0B; text-decoration: underline; font-weight: 700; margin-left: 6px; }
+    .top-bar span {
+      color: #F8FAFC;
+      font-weight: 600;
+    }
 
-    header { background: var(--secondary); color: #FFF; position: sticky; top: 0; z-index: 90; box-shadow: var(--shadow-md); }
+    header {
+      background-color: var(--secondary);
+      color: #FFFFFF;
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      box-shadow: var(--shadow-md);
+    }
     .header-inner {
-      max-width: 1240px; margin: 0 auto; padding: .85rem 1.5rem;
-      display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 1.5rem;
+      flex-wrap: wrap;
     }
-    .brand-logo { display: flex; align-items: center; gap: .75rem; font-size: 1.5rem; font-weight: 800; color: #FFF; letter-spacing: -.02em; }
-    .brand-logo:hover { color: #FFF; text-decoration: none; }
-    .brand-logo svg { width: 34px; height: 34px; fill: var(--primary); flex-shrink: 0; }
-    .brand-logo .badge { font-size: .65rem; background: var(--primary); color: #FFF; padding: 2px 6px; border-radius: 4px; text-transform: uppercase; font-weight: 700; }
-    .menu-toggle { display: none; background: none; border: 0; color: #FFF; font-size: 1.75rem; line-height: 1; cursor: pointer; padding: .25rem .5rem; }
-    nav ul { display: flex; list-style: none; align-items: center; gap: 1.5rem; }
-    nav a { color: #CBD5E1; font-size: .95rem; font-weight: 500; padding: .4rem .2rem; border-bottom: 2px solid transparent; }
-    nav a:hover, nav a.active { color: #FFF; text-decoration: none; border-bottom-color: var(--primary); }
 
-    .container { max-width: 1240px; width: 100%; margin: 2rem auto; padding: 0 1.5rem; }
-    .breadcrumbs { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.5rem; color: var(--text-muted); font-size: .875rem; }
-    .breadcrumbs a { color: var(--text-muted); }
-    .breadcrumbs .separator { color: #CBD5E1; }
-    .layout-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; min-width: 0; }
-    @media (min-width: 992px) { .layout-grid { grid-template-columns: 2.5fr 1fr; } }
-    .layout-grid > main, .layout-grid > aside { min-width: 0; width: 100%; }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+    }
+    .brand-logo svg {
+      width: 34px;
+      height: 34px;
+      fill: var(--primary);
+      flex-shrink: 0;
+    }
+    .brand-logo span.badge {
+      font-size: 0.65rem;
+      background: var(--primary);
+      color: #FFF;
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
 
-    article.main-article { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: 2.5rem; min-width: 0; }
-    .category-pill { display: inline-block; margin-bottom: 1rem; padding: .3rem .8rem; border: 1px solid #93C5FD; border-radius: 50px; background: #EFF6FF; color: var(--primary); font-size: .8rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
-    h1.article-title { margin-bottom: 1.25rem; color: var(--text-main); font-size: 2.15rem; line-height: 1.25; font-weight: 800; letter-spacing: -.025em; overflow-wrap: break-word; }
-    .article-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.25rem; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); color: var(--text-muted); font-size: .9rem; }
-    .article-body { min-width: 0; }
-    .article-body p { margin-bottom: 1.25rem; color: var(--text-body); font-size: 1.05rem; line-height: 1.75; overflow-wrap: break-word; }
-    .article-body h2 { margin-top: 2.35rem; margin-bottom: 1rem; padding-bottom: .4rem; border-bottom: 2px solid #F1F5F9; color: var(--text-main); font-size: 1.55rem; line-height: 1.35; scroll-margin-top: 90px; overflow-wrap: break-word; }
-    .article-body h3 { margin-top: 1.75rem; margin-bottom: .75rem; color: var(--secondary); font-size: 1.2rem; line-height: 1.4; overflow-wrap: break-word; }
-    .article-body ul, .article-body ol { margin: 0 0 1.25rem 1.5rem; color: var(--text-body); font-size: 1.05rem; line-height: 1.75; }
-    .article-body li { margin-bottom: .5rem; overflow-wrap: break-word; }
-    .article-body strong { color: #1E293B; }
+    /* Menu Toggle (Hamburguesa) */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #FFF;
+      font-size: 1.75rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+    }
 
-    .toc { margin-bottom: 2rem; padding: 1.25rem 1.5rem; border: 1px solid var(--border); border-radius: var(--radius-md); background: #F8FAFC; }
-    .toc h2 { margin: 0 0 .75rem; padding: 0; border: 0; font-size: 1.05rem; }
-    .toc ol { margin: 0 0 0 1.25rem; padding: 0; font-size: .95rem; }
-    .toc li { margin-bottom: .3rem; }
-    .toc a { color: var(--text-body); font-weight: 600; }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #CBD5E1;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.4rem 0.2rem;
+      border-bottom: 2px solid transparent;
+    }
+    nav a:hover, nav a.active {
+      color: #FFFFFF;
+      text-decoration: none;
+      border-bottom-color: var(--primary);
+    }
 
-    .article-figure { max-width: 760px; margin: 1.5rem auto 2rem; text-align: center; }
-    .article-figure img { width: 100%; max-width: 760px; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 8px; margin: 0 auto; }
-    .article-figure figcaption { margin-top: 6px; color: var(--text-muted); font-size: .85rem; font-style: italic; }
+    /* Responsive Header */
+    @media (max-width: 860px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 0.75rem;
+        border-top: 1px solid #334155;
+        padding-top: 0.75rem;
+      }
+      nav.active {
+        display: block;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+      }
+      nav ul li {
+        width: 100%;
+      }
+      nav a {
+        display: block;
+        padding: 0.85rem 0.25rem;
+        border-bottom: 1px solid #334155;
+      }
+    }
 
-    .danger-box, .info-box, .warning-box { margin: 1.5rem 0; padding: 1rem 1.25rem; border-radius: 0 var(--radius-md) var(--radius-md) 0; overflow-wrap: break-word; }
-    .danger-box { border: 1px solid #FECACA; border-left: 4px solid var(--danger); background: #FEF2F2; color: #7F1D1D; font-size: .95rem; }
-    .info-box { border: 1px solid #BFDBFE; border-left: 4px solid var(--primary); background: #EFF6FF; color: #1E3A8A; font-size: .95rem; }
-    .warning-box { border: 1px solid #FDE68A; border-left: 4px solid var(--accent); background: #FFFBEB; color: #78350F; font-size: .95rem; }
+    .container {
+      max-width: 1240px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      width: 100%;
+    }
 
-    .table-wrapper { max-width: 100%; margin: 1.75rem 0; overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--border); border-radius: var(--radius-md); }
-    .table-wrapper table { width: 100%; min-width: 600px; border-collapse: collapse; font-size: .92rem; }
-    .table-wrapper th, .table-wrapper td { padding: 10px 9px; border: 1px solid var(--border); text-align: left; vertical-align: top; overflow-wrap: break-word; }
-    .table-wrapper th { background: #F1F5F9; color: var(--secondary); font-weight: 800; }
-    .table-wrapper tr:nth-child(even) td { background: #FAFAFA; }
+    .breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .breadcrumbs a {
+      color: var(--text-muted);
+    }
+    .breadcrumbs a:hover {
+      color: var(--primary);
+    }
+    .breadcrumbs span.separator {
+      color: #CBD5E1;
+    }
 
-    .formula-box { max-width: 100%; margin: 1.5rem 0; padding: 1rem 1.25rem; border-left: 4px solid var(--primary); border-radius: 0 var(--radius-md) var(--radius-md) 0; background: #F1F5F9; color: var(--text-main); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .98rem; line-height: 1.65; overflow-x: auto; }
-    .step-box { display: flex; gap: 1rem; margin-bottom: 1rem; padding: 1.1rem 1.25rem; border: 1px solid var(--border); border-radius: var(--radius-md); background: #F8FAFC; }
-    .step-number { display: flex; flex: 0 0 34px; width: 34px; height: 34px; align-items: center; justify-content: center; border-radius: 50%; background: var(--primary); color: #FFF; font-size: .95rem; font-weight: 800; }
+    /* ===================================================== */
+    /* FIX PRINCIPAL: Grid Items necesitan min-width:0        */
+    /* para poder encogerse por debajo del contenido (tablas) */
+    /* ===================================================== */
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      min-width: 0;
+    }
+    @media (min-width: 992px) {
+      .layout-grid {
+        grid-template-columns: 2.5fr 1fr;
+      }
+    }
+    .layout-grid > main,
+    .layout-grid > aside.sidebar {
+      min-width: 0;
+      width: 100%;
+    }
+
+    article.main-article {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      min-width: 0;
+      width: 100%;
+    }
+
+    .category-pill {
+      display: inline-block;
+      background-color: #FEF2F2;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.3rem 0.8rem;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+      border: 1px solid #FCA5A5;
+    }
+
+    h1.article-title {
+      font-size: 2.1rem;
+      line-height: 1.3;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+      overflow-wrap: break-word;
+    }
+
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.25rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .article-body {
+      min-width: 0;
+    }
+
+    /* AdSense Optimized Paragraph Formatting */
+    .article-body p {
+      margin-bottom: 1.25rem;
+      color: #334155;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      overflow-wrap: break-word;
+    }
+
+    .article-body h2 {
+      font-size: 1.55rem;
+      color: #0F172A;
+      margin-top: 2.25rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid #F1F5F9;
+      overflow-wrap: break-word;
+    }
+
+    .article-body h3 {
+      font-size: 1.2rem;
+      color: #1E293B;
+      margin-top: 1.75rem;
+      margin-bottom: 0.75rem;
+      overflow-wrap: break-word;
+    }
+
+    /* ===================================================== */
+    /* FIX TABLAS: sin min-width forzado. Ahora ocupan 100%   */
+    /* y en pantallas chicas se desplazan horizontalmente     */
+    /* sin afectar al resto del artículo.                     */
+    /* ===================================================== */
+    .table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 1.75rem 0;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      max-width: 100%;
+    }
+    .table-wrapper table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    /* Sidebar */
+    aside.sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .widget {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .widget-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary);
+    }
+
+    footer {
+      background-color: #0F172A;
+      color: #94A3B8;
+      padding: 3rem 0 1.5rem 0;
+      margin-top: 4rem;
+      border-top: 4px solid var(--primary);
+    }
+    .footer-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2.5rem;
+    }
+    .footer-bottom {
+      max-width: 1240px;
+      margin: 2.5rem auto 0 auto;
+      padding: 1.5rem 1.5rem 0 1.5rem;
+      border-top: 1px solid #1E293B;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      gap: 0.5rem;
+    }
+
+    /* ============================= */
+    /* AJUSTES RESPONSIVE ADICIONALES */
+    /* ============================= */
+    @media (max-width: 768px) {
+      article.main-article {
+        padding: 1.75rem 1.25rem;
+      }
+      h1.article-title {
+        font-size: 1.6rem;
+      }
+      .article-body h2 {
+        font-size: 1.3rem;
+      }
+      .article-body h3 {
+        font-size: 1.1rem;
+      }
+      .article-body p {
+        font-size: 1rem;
+      }
+      .article-meta {
+        gap: 0.75rem;
+        font-size: 0.85rem;
+      }
+      .article-meta > div:last-child {
+        margin-left: 0 !important;
+        width: 100%;
+      }
+      .table-wrapper table {
+        font-size: 0.82rem;
+      }
+      .table-wrapper th,
+      .table-wrapper td {
+        padding: 8px !important;
+        white-space: normal;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner {
+        padding: 0.75rem 1rem;
+      }
+      .brand-logo {
+        font-size: 1.05rem;
+        gap: 0.5rem;
+      }
+      .brand-logo svg {
+        width: 26px;
+        height: 26px;
+      }
+      .brand-logo span.badge {
+        font-size: 0.55rem;
+      }
+      .top-bar {
+        font-size: 0.75rem;
+        line-height: 1.4;
+        padding: 0.5rem 0.75rem;
+      }
+      .container {
+        margin: 1.25rem auto;
+        padding: 0 1rem;
+      }
+      article.main-article {
+        padding: 1.25rem 1rem;
+        border-radius: var(--radius-md);
+      }
+      h1.article-title {
+        font-size: 1.4rem;
+      }
+      figure img {
+        height: 180px !important;
+      }
+      .widget {
+        padding: 1.15rem;
+      }
+      .footer-inner {
+        gap: 1.75rem;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+      /* Cajas CTA con estilos inline: forzamos ajuste en móvil */
+      div[style*="max-width:520px"],
+      div[style*="max-width:480px"] {
+        padding: 16px !important;
+        max-width: 100% !important;
+      }
+    }
+
+
+    /* Extensiones del formato de artículos técnicos Ukra */
+    .toc {
+      background: #F8FAFC;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .toc h2 { font-size: 1.05rem; margin: 0 0 .75rem; border: none; padding: 0; }
+    .toc ol { margin: 0 0 0 1.2rem; padding: 0; }
+    .toc li { margin-bottom: .35rem; font-size: .95rem; overflow-wrap: break-word; }
+    .toc a { color: #334155; font-weight: 500; }
+
+    .article-figure { margin: 24px auto; text-align: center; max-width: 700px; }
+    .article-figure img { width: 100%; max-width: 700px; height: auto; aspect-ratio: 16/9; object-fit: cover; border-radius: 8px; margin: 0 auto; }
+    .article-figure figcaption { font-size: .85em; color: var(--text-muted); margin-top: 6px; font-style: italic; }
+
+    .danger-box, .info-box, .warning-box {
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      font-size: .95rem;
+      overflow-wrap: break-word;
+    }
+    .danger-box { background: #FEF2F2; border: 1px solid #FECACA; border-left: 4px solid #D9381E; color: #7F1D1D; }
+    .info-box { background: #EFF6FF; border: 1px solid #BFDBFE; border-left: 4px solid #0057E7; color: #1E3A8A; }
+    .warning-box { background: #FFFBEB; border: 1px solid #FDE68A; border-left: 4px solid var(--accent); color: #78350F; }
+
+    .step-box {
+      display: flex;
+      gap: 1rem;
+      background: #F8FAFC;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.1rem 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .step-number {
+      flex-shrink: 0;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: .95rem;
+    }
     .step-box > div:last-child { min-width: 0; }
-    .step-box h3, .step-box h4 { margin: 0 0 .35rem; font-size: 1.02rem; }
-    .step-box p { margin: 0; font-size: .98rem; }
+    .step-box h3 { margin: 0 0 .35rem; font-size: 1.02rem; }
+    .step-box p { margin-bottom: 0; font-size: .98rem; }
 
-    .checklist { list-style: none; margin-left: 0 !important; padding: 1rem 1.25rem; border: 1px solid var(--border); border-radius: var(--radius-md); background: #F8FAFC; }
+    .checklist {
+      list-style: none;
+      margin-left: 0 !important;
+      padding: 1rem 1.25rem;
+      background: #F8FAFC;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+    }
     .checklist li { position: relative; padding-left: 1.6rem; }
     .checklist li::before { content: "✓"; position: absolute; left: 0; color: #16A34A; font-weight: 900; }
-    .author-box { display: flex; gap: 1rem; align-items: flex-start; margin-top: 2.5rem; padding: 1.25rem; border: 1px solid var(--border); border-radius: var(--radius-md); background: #F8FAFC; }
-    .author-avatar { display: flex; flex: 0 0 52px; width: 52px; height: 52px; align-items: center; justify-content: center; border-radius: 50%; background: var(--secondary); color: #FFF; font-weight: 800; }
-    .author-box p { margin: .35rem 0 0; font-size: .9rem; }
-    .cta-box { max-width: 540px; margin: 2.5rem auto; padding: 1.75rem 1.5rem; border: 2px solid var(--border); border-radius: 12px; background: #F8FAFC; text-align: center; }
-    .cta-box .cta-title { margin-bottom: .5rem; color: var(--text-main); font-size: 1rem; font-weight: 800; }
-    .cta-box .cta-text { margin-bottom: 1.25rem; color: var(--text-muted); font-size: .9rem; }
-    .cta-btn { display: inline-block; padding: .65rem 1.2rem; border-radius: 6px; background: var(--primary); color: #FFF; font-weight: 800; }
-    .cta-btn:hover { background: var(--primary-hover); color: #FFF; text-decoration: none; }
 
-    aside.sidebar { display: flex; flex-direction: column; gap: 2rem; }
-    .widget { padding: 1.5rem; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--bg-card); box-shadow: var(--shadow-sm); }
-    .widget-title { margin-bottom: 1.1rem; padding-bottom: .5rem; border-bottom: 2px solid var(--primary); color: var(--text-main); font-size: 1.1rem; font-weight: 800; }
-    .widget-btn { display: block; margin-bottom: .7rem; padding: .65rem; border-radius: var(--radius-sm); color: #FFF; text-align: center; font-weight: 800; }
-    .widget-btn:hover { color: #FFF; opacity: .9; text-decoration: none; }
-    .widget-btn:last-child { margin-bottom: 0; }
-    .quick-list { list-style: none; margin: 0; color: var(--text-body); font-size: .9rem; line-height: 1.7; }
-    .quick-list li { margin-bottom: .55rem; }
-
-    footer { margin-top: 4rem; padding: 3rem 0 1.5rem; border-top: 4px solid var(--primary); background: #0F172A; color: #94A3B8; }
-    .footer-inner { max-width: 1240px; margin: 0 auto; padding: 0 1.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; }
-    .footer-inner h4 { margin-bottom: .75rem; color: #FFF; }
-    .footer-inner p { font-size: .875rem; }
-    .footer-inner a { color: #94A3B8; }
-    .footer-bottom { max-width: 1240px; margin: 2.5rem auto 0; padding: 1.5rem 1.5rem 0; border-top: 1px solid #1E293B; font-size: .85rem; text-align: center; }
-
-    @media (max-width: 860px) {
-      .menu-toggle { display: block; }
-      header nav { display: none; width: 100%; order: 3; margin-top: .75rem; padding-top: .75rem; border-top: 1px solid #334155; }
-      header nav.active { display: block; }
-      header nav ul { flex-direction: column; align-items: stretch; gap: 0; }
-      header nav li { width: 100%; }
-      header nav a { display: block; padding: .8rem .25rem; border-bottom: 1px solid #334155; }
+    .author-box {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      background: #F8FAFC;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      margin-top: 2.5rem;
     }
+    .author-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--secondary);
+      color: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .author-box p { font-size: .88rem; color: #475569; margin: .35rem 0 0; }
+
+    .cta-box {
+      text-align: center;
+      margin: 40px auto;
+      padding: 28px 24px;
+      max-width: 520px;
+      background: #F8FAFC;
+      border: 2px solid #E2E8F0;
+      border-radius: 12px;
+    }
+    .cta-box .cta-title { font-size: 16px; font-weight: 700; color: #0F172A; margin: 0 0 8px; line-height: 1.4; }
+    .cta-box .cta-text { font-size: 14px; color: var(--text-muted); margin: 0 0 20px; }
+    .cta-box .cta-btn { display: inline-block; padding: 10px 20px; background: var(--primary); color: #FFF; font-weight: 700; border-radius: 6px; }
+    .cta-box .cta-btn:hover { background: var(--primary-hover); text-decoration: none; }
+
+    .quick-list { list-style: none; display: flex; flex-direction: column; gap: .5rem; margin: 0; padding: 0; font-size: .9rem; }
+    .quick-list li { color: #334155; }
+
     @media (max-width: 768px) {
-      article.main-article { padding: 1.75rem 1.25rem; }
-      h1.article-title { font-size: 1.7rem; }
-      .article-body h2 { font-size: 1.3rem; }
-      .article-body h3 { font-size: 1.1rem; }
-      .article-body p, .article-body li { font-size: 1rem; }
-      .article-meta { gap: .75rem; font-size: .85rem; }
-      .table-wrapper table { font-size: .82rem; }
-      .table-wrapper th, .table-wrapper td { padding: 8px 6px; }
+      .toc { padding: 1rem 1.1rem; }
       .step-box { padding: .9rem 1rem; gap: .75rem; }
-    }
-    @media (max-width: 600px) {
-      .header-inner { padding: .75rem 1rem; }
-      .brand-logo { gap: .5rem; font-size: 1.05rem; }
-      .brand-logo svg { width: 26px; height: 26px; }
-      .brand-logo .badge { font-size: .55rem; }
-      .top-bar { padding: .5rem .75rem; font-size: .75rem; line-height: 1.4; }
-      .container { margin: 1.25rem auto; padding: 0 1rem; }
-      article.main-article { padding: 1.25rem 1rem; border-radius: var(--radius-md); }
-      h1.article-title { font-size: 1.4rem; }
-      .article-figure img { aspect-ratio: 4 / 3; }
-      .widget { padding: 1.15rem; }
+      .step-number { width: 28px; height: 28px; font-size: .85rem; }
       .author-box { flex-direction: column; align-items: center; text-align: center; }
-      .cta-box { padding: 1.1rem 1rem; }
-      .formula-box { padding: .9rem; font-size: .85rem; }
-      .footer-bottom { padding-right: 1rem; padding-left: 1rem; }
     }
-    @media (prefers-reduced-motion: reduce) {
-      .scroll-smooth { scroll-behavior: auto; }
-      .progress-bar { transition: none; }
-    }
-  </style>
+</style>
 
   <!-- Google AdSense Auto Ads -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7032484018692343" crossorigin="anonymous"></script>
 
-  <!-- Google Analytics -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LQF2BQ14K"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -473,7 +871,7 @@
 
     <div class="layout-grid">
       <main id="main-content">
-        <article class="main-article" itemscope itemtype="https://schema.org/TechArticle">
+        <article class="main-article" itemscope itemtype="https://schema.org/BlogPosting">
           <span class="category-pill">Electricidad domiciliaria &bull; Guía segura &bull; Chile</span>
           <h1 class="article-title" itemprop="headline">Cómo Instalar un Enchufe en Chile: Guía Segura Paso a Paso</h1>
 
@@ -482,6 +880,7 @@
             <div><span>📅 6 Ago, 2026</span></div>
             <div><span>🔄 Actualizado: 6 Ago, 2026</span></div>
             <div><span>⏱️ 12 min de lectura</span></div>
+            <div style="margin-left:auto;"><a href="/" style="font-weight:600; color:var(--primary);">&larr; Volver al inicio</a></div>
           </div>
 
           <nav class="toc" aria-label="Índice de contenidos">
@@ -738,7 +1137,7 @@
           <a href="/" class="widget-btn" style="background:var(--primary);">&larr; Inicio Ferretería Ukra</a>
           <a href="/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/" class="widget-btn" style="background:#1E293B;">🔎 Fase y neutro en un enchufe</a>
           <a href="/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/" class="widget-btn" style="background:#334155;">🎨 Colores de cables en Chile</a>
-          <a href="/blog/como-dimensionar-circuito-electrico-para-taller-domestico-chile.html" class="widget-btn" style="background:#0057E7;">📐 Dimensionar un circuito</a>
+          <a href="/blog/como-dimensionar-circuito-electrico-para-taller-domestico-chile.html" class="widget-btn" style="background:var(--primary);">📐 Dimensionar un circuito</a>
         </div>
 
         <div class="widget">
