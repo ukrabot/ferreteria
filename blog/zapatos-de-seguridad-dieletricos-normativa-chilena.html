@@ -1,3 +1,4 @@
+ <!-- LISTO -->
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
@@ -168,6 +169,10 @@
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    /* FIX: scroll suave sin forzar overflow-y en <html> (evita romper
+       el sticky header en iOS Safari). */
+    html { scroll-behavior: smooth; }
+
     body {
       font-family: var(--font-stack);
       background-color: var(--bg-body);
@@ -175,6 +180,7 @@
       line-height: 1.65;
       font-size: 1rem;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden; /* FIX: evita scroll horizontal global */
     }
 
     a { color: #0057e7; text-decoration: none; transition: color 0.2s ease; }
@@ -198,26 +204,41 @@
     .header-inner {
       max-width: 1240px; margin: 0 auto; display: flex; align-items: center;
       justify-content: space-between; padding: 0.85rem 1.5rem;
+      flex-wrap: wrap; /* FIX: permite reflow del nav en mobile */
+      gap: 1rem;
     }
 
     .brand-logo {
       display: flex; align-items: center; gap: 0.75rem; font-size: 1.5rem;
       font-weight: 800; color: #FFFFFF; letter-spacing: -0.02em;
     }
-    .brand-logo svg { width: 34px; height: 34px; fill: var(--primary); }
+    .brand-logo:hover { text-decoration: none; color: #FFFFFF; }
+    .brand-logo svg { width: 34px; height: 34px; fill: var(--primary); flex-shrink: 0; }
     .brand-logo span.badge {
       font-size: 0.65rem; background: var(--primary); color: #FFF; padding: 2px 6px;
       border-radius: 4px; text-transform: uppercase; font-weight: 700;
     }
 
-    nav ul { display: flex; list-style: none; gap: 1.5rem; align-items: center; }
+    /* FIX: botón hamburguesa, inexistente en el original */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #FFF;
+      font-size: 1.75rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+    }
+
+    nav ul { display: flex; list-style: none; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
     nav a {
       color: #CBD5E1; font-weight: 500; font-size: 0.95rem; padding: 0.4rem 0.2rem;
       border-bottom: 2px solid transparent;
     }
     nav a:hover, nav a[aria-current="page"] { color: #FFFFFF; text-decoration: none; border-bottom-color: var(--primary); }
 
-    .container { max-width: 1240px; margin: 2rem auto; padding: 0 1.5rem; }
+    .container { max-width: 1240px; margin: 2rem auto; padding: 0 1.5rem; width: 100%; }
 
     .breadcrumbs {
       display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem;
@@ -227,12 +248,17 @@
     .breadcrumbs a:hover { color: var(--primary); }
     .breadcrumbs span.separator { color: #CBD5E1; }
 
-    .layout-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
+    /* FIX: min-width:0 en el grid y sus hijos para permitir que la
+       columna principal se encoja por debajo del ancho de las tablas. */
+    .layout-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; min-width: 0; }
     @media (min-width: 992px) { .layout-grid { grid-template-columns: 2.5fr 1fr; } }
+    .layout-grid > main,
+    .layout-grid > aside.sidebar { min-width: 0; width: 100%; }
 
     article.main-article {
       background: var(--bg-card); border-radius: var(--radius-lg); padding: 2.5rem;
       box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);
+      min-width: 0; width: 100%;
     }
 
     .category-pill {
@@ -242,7 +268,11 @@
       margin-bottom: 1rem; border: 1px solid #FCA5A5;
     }
 
-    h1.article-title { font-size: 2.1rem; line-height: 1.3; font-weight: 800; color: #0F172A; margin-bottom: 1.25rem; letter-spacing: -0.02em; }
+    h1.article-title {
+      font-size: 2.1rem; line-height: 1.3; font-weight: 800; color: #0F172A;
+      margin-bottom: 1.25rem; letter-spacing: -0.02em;
+      overflow-wrap: break-word; /* FIX */
+    }
 
     .article-meta {
       display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem;
@@ -253,42 +283,61 @@
     .toc {
       background: #F8FAFC; border: 1px solid var(--border-color); border-radius: var(--radius-md);
       padding: 1.25rem 1.5rem; margin-bottom: 2rem;
+      min-width: 0; /* FIX */
+      overflow-wrap: break-word; /* FIX */
     }
-    .toc h2 { font-size: 1.05rem; margin: 0 0 0.75rem; border: none; padding: 0; }
+    .toc h2 { font-size: 1.05rem; margin: 0 0 0.75rem; border: none; padding: 0; scroll-margin-top: 90px; }
     .toc ol { margin: 0 0 0 1.2rem; padding: 0; }
     .toc li { margin-bottom: 0.35rem; font-size: 0.95rem; }
     .toc a { color: #334155; font-weight: 500; }
     .toc a:hover { color: var(--primary); }
 
-    .article-body p { margin-bottom: 1.25rem; color: #334155; font-size: 1.05rem; line-height: 1.75; }
-    .article-body h2 { font-size: 1.55rem; color: #0F172A; margin-top: 2.25rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 2px solid #F1F5F9; scroll-margin-top: 90px; }
-    .article-body h3 { font-size: 1.2rem; color: #1E293B; margin-top: 1.75rem; margin-bottom: 0.75rem; }
+    .article-body { min-width: 0; } /* FIX */
+    .article-body p { margin-bottom: 1.25rem; color: #334155; font-size: 1.05rem; line-height: 1.75; overflow-wrap: break-word; }
+    .article-body h2 { font-size: 1.55rem; color: #0F172A; margin-top: 2.25rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 2px solid #F1F5F9; scroll-margin-top: 90px; overflow-wrap: break-word; }
+    .article-body h3 { font-size: 1.2rem; color: #1E293B; margin-top: 1.75rem; margin-bottom: 0.75rem; overflow-wrap: break-word; }
     .article-body ol, .article-body ul { margin: 0 0 1.25rem 1.5rem; color: #334155; font-size: 1.05rem; line-height: 1.75; }
-    .article-body li { margin-bottom: 0.5rem; }
+    .article-body li { margin-bottom: 0.5rem; overflow-wrap: break-word; }
 
-    .table-wrapper { overflow-x: auto; margin: 1.75rem 0; border-radius: var(--radius-md); border: 1px solid var(--border-color); }
+    /* FIX: overflow-x auto + scroll táctil suave; table sin min-width
+       forzado para permitir que se comprima antes de necesitar scroll. */
+    .table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 1.75rem 0;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      max-width: 100%;
+    }
+    .table-wrapper table { width: 100%; border-collapse: collapse; }
 
     .formula-box {
       background: #F1F5F9; border-left: 4px solid var(--primary); padding: 1.25rem 1.5rem;
       margin: 1.5rem 0; border-radius: 0 var(--radius-md) var(--radius-md) 0;
-      font-family: monospace; font-size: 1.02rem; color: #0F172A;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 1.02rem; color: #0F172A;
+      overflow-x: auto; /* FIX */
+      word-break: break-word;
+      max-width: 100%;
     }
 
     .disclaimer-box {
       background: #FFFBEB; border: 1px solid #FDE68A; border-left: 4px solid var(--accent);
       padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 var(--radius-md) var(--radius-md) 0;
       font-size: 0.92rem; color: #78350F;
+      overflow-wrap: break-word; /* FIX */
     }
 
     .danger-box {
       background: #FEF2F2; border: 1px solid #FECACA; border-left: 4px solid var(--primary);
       padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 var(--radius-md) var(--radius-md) 0;
       font-size: 0.92rem; color: #7F1D1D;
+      overflow-wrap: break-word; /* FIX */
     }
 
-    .pros-cons { display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 1.25rem 0; }
+    .pros-cons { display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 1.25rem 0; min-width: 0; }
     @media (min-width: 640px) { .pros-cons { grid-template-columns: 1fr 1fr; } }
-    .pros-cons .box { border-radius: var(--radius-md); padding: 1rem 1.25rem; font-size: 0.92rem; }
+    .pros-cons .box { border-radius: var(--radius-md); padding: 1rem 1.25rem; font-size: 0.92rem; min-width: 0; overflow-wrap: break-word; }
     .pros-cons .pros { background: #F0FDF4; border: 1px solid #BBF7D0; }
     .pros-cons .cons { background: #FEF2F2; border: 1px solid #FECACA; }
     .pros-cons h4 { margin-bottom: 0.5rem; font-size: 0.95rem; }
@@ -299,12 +348,14 @@
       display: flex; gap: 1rem; align-items: flex-start; background: #F8FAFC;
       border: 1px solid var(--border-color); border-radius: var(--radius-md);
       padding: 1.25rem; margin-top: 2.5rem;
+      flex-wrap: wrap; /* FIX */
     }
     .author-box .avatar {
       width: 52px; height: 52px; border-radius: 50%; background: var(--secondary);
       color: #FFF; display: flex; align-items: center; justify-content: center;
       font-weight: 800; font-size: 1.1rem; flex-shrink: 0;
     }
+    .author-box > div { min-width: 0; flex: 1 1 200px; } /* FIX */
 
     aside.sidebar { display: flex; flex-direction: column; gap: 2rem; }
     .widget {
@@ -318,7 +369,62 @@
 
     footer { background-color: #0F172A; color: #94A3B8; padding: 3rem 0 1.5rem 0; margin-top: 4rem; border-top: 4px solid var(--primary); }
     .footer-inner { max-width: 1240px; margin: 0 auto; padding: 0 1.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; }
-    .footer-bottom { max-width: 1240px; margin: 2.5rem auto 0 auto; padding: 1.5rem 1.5rem 0 1.5rem; border-top: 1px solid #1E293B; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 0.85rem; }
+    .footer-bottom { max-width: 1240px; margin: 2.5rem auto 0 auto; padding: 1.5rem 1.5rem 0 1.5rem; border-top: 1px solid #1E293B; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: 0.85rem; gap: 0.5rem; }
+
+    /* ============================================================ */
+    /* MEDIA QUERIES — el original solo tenía las de 992px y 640px.  */
+    /* Se agregan aquí los breakpoints de header y contenido usados  */
+    /* en los artículos de referencia ya corregidos.                 */
+    /* ============================================================ */
+
+    @media (max-width: 860px) {
+      .menu-toggle { display: block; }
+      header nav { display: none; width: 100%; order: 3; margin-top: .75rem; border-top: 1px solid #334155; padding-top: .75rem; }
+      header nav.active { display: block; }
+      header nav ul { flex-direction: column; gap: 0; width: 100%; }
+      header nav ul li { width: 100%; }
+      header nav a { display: block; padding: .85rem .25rem; border-bottom: 1px solid #334155; }
+    }
+
+    @media (max-width: 768px) {
+      article.main-article { padding: 1.75rem 1.25rem; }
+      h1.article-title { font-size: 1.6rem; }
+      .article-body h2 { font-size: 1.3rem; }
+      .article-body h3 { font-size: 1.1rem; }
+      .article-body p, .article-body li { font-size: 1rem; }
+      .article-meta { gap: .75rem; font-size: .85rem; }
+      .toc { padding: 1rem 1.1rem; }
+      .toc h2 { font-size: .98rem; }
+      .toc li { font-size: .88rem; }
+      .table-wrapper table { font-size: .78rem; }
+      .table-wrapper th, .table-wrapper td { padding: 8px !important; white-space: normal !important; }
+      .formula-box { padding: 1rem; font-size: .85rem; }
+      .disclaimer-box, .danger-box { padding: .85rem 1rem; font-size: .85rem; }
+      .pros-cons .box { padding: .85rem 1rem; font-size: .85rem; }
+      figure img { height: 200px !important; }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { padding: .75rem 1rem; }
+      .brand-logo { font-size: 1.05rem; gap: .5rem; }
+      .brand-logo svg { width: 26px; height: 26px; }
+      .brand-logo span.badge { font-size: .55rem; }
+      .top-bar { font-size: .75rem; line-height: 1.4; padding: .5rem .75rem; }
+      .container { margin: 1.25rem auto; padding: 0 1rem; }
+      article.main-article { padding: 1.25rem 1rem; border-radius: var(--radius-md); }
+      h1.article-title { font-size: 1.4rem; }
+      figure img { height: 170px !important; }
+      .widget { padding: 1.15rem; }
+      .footer-inner { gap: 1.75rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .author-box { flex-direction: column; align-items: center; text-align: center; }
+
+      /* FIX: caja CTA con estilo inline max-width:520px comprimida en mobile */
+      div[style*="max-width:520px"] {
+        padding: 16px !important;
+        max-width: 100% !important;
+      }
+    }
   </style>
 
   <!-- Google AdSense Auto Ads -->
@@ -347,7 +453,10 @@
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.4-2.4c.4-.4.4-1 0-1.3z"/></svg>
         Ferretería Ukra <span class="badge">EPP</span>
       </a>
-      <nav aria-label="Navegación principal">
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+      <nav aria-label="Navegación principal" id="mainNav">
         <ul>
           <li><a href="/">Inicio</a></li>
           <li><a href="/#epp">Seguridad y EPP</a></li>
@@ -720,11 +829,32 @@
   </footer>
 
   <script>
+    // Barra de progreso de lectura
     window.addEventListener('scroll', () => {
       const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
+      const scrolled = height ? (winScroll / height) * 100 : 0;
       document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+
+    // FIX: menú hamburguesa — no existía en el original
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', function() {
+      const isOpen = mainNav.classList.toggle('active');
+      this.setAttribute('aria-expanded', isOpen);
+      this.textContent = isOpen ? '✕' : '☰';
+    });
+
+    document.querySelectorAll('#mainNav a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 860) {
+          mainNav.classList.remove('active');
+          menuToggle.textContent = '☰';
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     });
   </script>
 </body>
