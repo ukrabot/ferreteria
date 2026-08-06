@@ -1,3 +1,4 @@
+<!-- LISTO -->
 <!DOCTYPE html>
 <html lang="es-CL" class="scroll-smooth">
 <head>
@@ -209,7 +210,17 @@
       --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { overflow-x: hidden; scroll-behavior: smooth; }
+
+    /* ============================================================ */
+    /* FIX #1: se elimina "overflow-x:hidden" del <html>.            */
+    /* Definirlo aquí (sin overflow-y) fuerza a que overflow-y se    */
+    /* compute como "auto", convirtiendo <html> en un contenedor de  */
+    /* scroll propio. En iOS Safari eso rompe el position:sticky del */
+    /* header. El overflow-x:hidden se deja únicamente en <body>,    */
+    /* igual que en la versión que funcionó bien.                    */
+    /* ============================================================ */
+    html { scroll-behavior: smooth; }
+
     body { font-family: var(--font-stack); background: var(--bg-body); color: var(--text-main); line-height: 1.65; font-size: 1rem; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
     a { color: #0057e7; text-decoration: none; transition: color .2s ease; }
     a:hover { text-decoration: underline; }
@@ -249,8 +260,17 @@
     .article-body ul, .article-body ol { margin: 1rem 0 1.5rem 1.5rem; color: #334155; line-height: 1.75; }
     .article-body li { margin-bottom: .5rem; }
     .article-body strong { color: #1E293B; }
+
+    /* ============================================================ */
+    /* FIX #2: se elimina el min-width:560px de la tabla.             */
+    /* Igual que en el artículo de referencia, la tabla debe poder    */
+    /* encogerse al 100% del wrapper; el overflow-x:auto del wrapper  */
+    /* solo debe activarse si el contenido realmente no cabe, no de   */
+    /* forma forzada en cualquier celular.                            */
+    /* ============================================================ */
     .table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1.75rem 0; border-radius: var(--radius-md); border: 1px solid var(--border-color); max-width: 100%; }
-    .table-wrapper table { width: 100%; border-collapse: collapse; min-width: 560px; }
+    .table-wrapper table { width: 100%; border-collapse: collapse; }
+
     .table-wrapper th, .table-wrapper td { padding: 11px 12px; border: 1px solid #E2E8F0; text-align: left; vertical-align: top; }
     .table-wrapper th { background: #F1F5F9; color: #0F172A; font-weight: 800; }
     .formula-box { background: #F1F5F9; border-left: 4px solid var(--primary); padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-radius: 0 var(--radius-md) var(--radius-md) 0; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 1.02rem; color: #0F172A; overflow-x: auto; word-break: break-word; max-width: 100%; }
@@ -277,7 +297,9 @@
     .footer-inner h4 { color: #FFF; margin-bottom: .5rem; }
     .footer-inner p { font-size: .875rem; margin-bottom: .4rem; }
     .footer-bottom { max-width: 1240px; margin: 2.5rem auto 0; padding: 1.5rem 1.5rem 0; border-top: 1px solid #1E293B; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; font-size: .85rem; gap: .5rem; }
+
     @media (min-width: 992px) { .layout-grid { grid-template-columns: 2.5fr 1fr; } }
+
     @media (max-width: 860px) {
       .menu-toggle { display: block; }
       header nav { display: none; width: 100%; order: 3; margin-top: .75rem; border-top: 1px solid #334155; padding-top: .75rem; }
@@ -286,6 +308,7 @@
       header nav ul li { width: 100%; }
       header nav a { display: block; padding: .85rem .25rem; border-bottom: 1px solid #334155; }
     }
+
     @media (max-width: 768px) {
       article.main-article { padding: 1.75rem 1.25rem; }
       h1.article-title { font-size: 1.6rem; }
@@ -295,9 +318,13 @@
       .article-meta { gap: .75rem; font-size: .85rem; }
       .article-meta > div:last-child { margin-left: 0 !important; width: 100%; }
       .table-wrapper table { font-size: .82rem; }
-      .table-wrapper th, .table-wrapper td { padding: 8px; }
+      /* FIX: se agrega white-space:normal explícito, igual que en el
+         artículo de referencia, para asegurar el ajuste de texto en
+         celdas dentro de pantallas angostas */
+      .table-wrapper th, .table-wrapper td { padding: 8px; white-space: normal; }
       .formula-box { padding: 1rem; font-size: .85rem; }
     }
+
     @media (max-width: 600px) {
       .header-inner { padding: .75rem 1rem; }
       .brand-logo { font-size: 1.05rem; gap: .5rem; }
@@ -311,6 +338,18 @@
       .widget { padding: 1.15rem; }
       .footer-inner { gap: 1.75rem; }
       .footer-bottom { flex-direction: column; text-align: center; }
+
+      /* ============================================================ */
+      /* FIX #3: cajas CTA con estilos inline (max-width:540/480px)     */
+      /* Igual técnica usada en el artículo de referencia: se apunta    */
+      /* por selector de atributo para comprimir padding y ancho en     */
+      /* móviles pequeños sin tocar el HTML.                            */
+      /* ============================================================ */
+      div[style*="max-width:540px"],
+      div[style*="max-width:480px"] {
+        padding: 16px !important;
+        max-width: 100% !important;
+      }
     }
 
   </style>
@@ -329,7 +368,7 @@
   <header>
     <div class="header-inner">
       <a href="/" class="brand-logo" aria-label="Ir a Inicio de Ferretería Ukra Blog">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.4-2.4c.4-.4 0-1 0-1.3z"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.4-2.4c.4-.4.4-1 0-1.3z"/></svg>
         Ferretería Ukra <span class="badge">Guías técnicas</span>
       </a>
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
