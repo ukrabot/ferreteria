@@ -2,14 +2,16 @@
 """Inserta y verifica unidades AdSense en los artículos compatibles.
 
 El repositorio contiene varias generaciones de plantillas. La estructura actual
-no usa elementos <section>; por eso este script adapta la regla solicitada de
-forma conservadora:
+no usa elementos <section>; por eso este script adapta la regla solicitada:
 
 * TOC: un único bloque dentro del artículo con clase `toc` o `toc-box`.
+* Sin TOC: la primera unidad se ubica antes del primer <h2>, después de la
+  introducción del artículo.
 * Secciones: encabezados <h2> del artículo (sin contar el <h2> del TOC).
-* FAQ: un único bloque o encabezado dentro del artículo con `id="faq"`.
+* FAQ: el bloque con `id="faq"` o, en plantillas antiguas, el único <h2> cuyo
+  texto identifica las preguntas frecuentes.
 
-Los artículos sin esas tres referencias inequívocas se omiten y se informan.
+Una estructura solo se omite cuando esas referencias siguen siendo ambiguas.
 El script no modifica el contenido existente: solo inserta bloques en límites
 de elementos de bloque. Es idempotente y no tiene dependencias externas.
 """
@@ -199,7 +201,7 @@ def class_tokens(element: Element) -> set[str]:
 
 @dataclass
 class ArticleStructure:
-    toc: Element
+    toc: Element | None
     headings: list[Element]
     faq: Element
 
@@ -247,34 +249,21 @@ def analyze_article(source: str) -> Analysis:
             for candidate in toc_candidates
         )
     ]
-    if len(toc_candidates) != 1:
+    if len(toc_candidates) > 1:
         return Analysis(
             parser,
             None,
-            f"TOC inequívoco no disponible (encontrados: {len(toc_candidates)})",
+            f"TOC ambiguo (encontrados: {len(toc_candidates)})",
         )
-    toc = toc_candidates[0]
+    toc = toc_candidates[0] if toc_candidates else None
 
     headings = [
         element
         for element in descendants
-        if element.tag == "h2" and not toc.contains(element)
+        if element.tag == "h2" and (toc is None or not toc.contains(element))
     ]
     if not headings:
         return Analysis(parser, None, "no tiene encabezados <h2> de sección")
-
-    faq_candidates = [
-        element
-        for element in descendants
-        if element.attr("id").strip().lower() == "faq"
-    ]
-    if len(faq_candidates) != 1:
-        return Analysis(
-            parser,
-            None,
-            f'bloque id="faq" inequívoco no disponible (encontrados: {len(faq_candidates)})',
-        )
-    faq = faq_candidates[0]
 
     faq_heading_candidates = [
         heading
@@ -292,6 +281,19 @@ def analyze_article(source: str) -> Analysis:
             "el encabezado de preguntas frecuentes no es inequívoco",
         )
     faq_heading = faq_heading_candidates[0]
+
+    faq_candidates = [
+        element
+        for element in descendants
+        if element.attr("id").strip().lower() == "faq"
+    ]
+    if len(faq_candidates) > 1:
+        return Analysis(
+            parser,
+            None,
+            f'bloque id="faq" ambiguo (encontrados: {len(faq_candidates)})',
+        )
+    faq = faq_candidates[0] if faq_candidates else faq_heading
     if faq is not faq_heading and not faq.contains(faq_heading):
         return Analysis(
             parser,
@@ -404,9 +406,14 @@ def process(root: Path, apply: bool) -> RunReport:
             if ins_count == 0 and marker_count == 0:
                 structure = analysis.structure
                 middle_index = math.ceil(len(structure.headings) / 2) - 1
+                first_insertion = (
+                    insertion_after(source, structure.toc, AD_BLOCK)
+                    if structure.toc is not None
+                    else insertion_before(source, structure.headings[0], AD_BLOCK)
+                )
                 insertions.extend(
                     [
-                        insertion_after(source, structure.toc, AD_BLOCK),
+                        first_insertion,
                         insertion_before(
                             source, structure.headings[middle_index], AD_BLOCK
                         ),
