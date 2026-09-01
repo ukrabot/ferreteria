@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.ferreteriaukra.cl/</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -27,6 +27,12 @@
   <url>
     <loc>https://www.ferreteriaukra.cl/blog/bateria-mascara-de-soldar/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ferreteriaukra.cl/blog/bomba-sumergible-pozo-profundo-como-elegir-instalar-chile/</loc>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -817,13 +823,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ferreteriaukra.cl/blog/normas-de-seguridad-para-cascos-de-obra/</loc>
+    <loc>https://www.ferreteriaukra.cl/blog/normas-de-seguridad-para-cascos-de-obra-y-mascara-de-soldar-miller/</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ferreteriaukra.cl/blog/normas-de-seguridad-para-cascos-de-obra-y-mascara-de-soldar-miller/</loc>
+    <loc>https://www.ferreteriaukra.cl/blog/normas-de-seguridad-para-cascos-de-obra/</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -939,6 +945,12 @@
   <url>
     <loc>https://www.ferreteriaukra.cl/blog/termitas-y-xilofagos-en-la-madera-diagnostico-chile/</loc>
     <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ferreteriaukra.cl/blog/termosifon-solar-agua-caliente-como-elegir-instalar-chile/</loc>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
