@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.ferreteriaukra.cl/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -39,6 +39,12 @@
   <url>
     <loc>https://www.ferreteriaukra.cl/blog/bomba-sumergible-pozo-profundo-como-elegir-instalar-chile/</loc>
     <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ferreteriaukra.cl/blog/bomba-y-filtro-de-piscina-como-elegir-dimensionar-chile/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -891,6 +897,12 @@
   <url>
     <loc>https://www.ferreteriaukra.cl/blog/racores-y-acoples-rapidos-tipos-y-medidas/</loc>
     <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ferreteriaukra.cl/blog/regularizar-ampliacion-vivienda-ley-del-mono-dom-chile/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
