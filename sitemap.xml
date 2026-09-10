@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.ferreteriaukra.cl/</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -679,6 +679,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.ferreteriaukra.cl/blog/encimera-cocina-gas-vitroceramica-o-induccion-como-elegir-chile/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.ferreteriaukra.cl/blog/esmalte-al-agua-vs-esmalte-sintetico-cual-elegir/</loc>
     <lastmod>2026-08-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -693,6 +699,12 @@
   <url>
     <loc>https://www.ferreteriaukra.cl/blog/fosa-septica-y-drenaje-como-elegir-dimensionar-instalar-chile/</loc>
     <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ferreteriaukra.cl/blog/fuga-de-gas-y-monoxido-como-detectar-y-que-hacer-chile/</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
