@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400">
+  <defs>
+    <pattern id="mortar" width="1" height="1" patternContentUnits="objectBoundingBox"><rect width="1" height="1" fill="#C4B5A3"/></pattern>
+    <linearGradient id="eflo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feBlend in="SourceGraphic" mode="multiply"/></filter>
+  </defs>
+  <!-- Fondo mortero -->
+  <rect width="900" height="400" fill="#B8A898"/>
+  <!-- Filas de ladrillos -->
+  <!-- Fila 1 -->
+  <rect x="2" y="2" width="145" height="55" rx="2" fill="#B5533E"/><rect x="151" y="2" width="145" height="55" rx="2" fill="#A84835"/><rect x="300" y="2" width="145" height="55" rx="2" fill="#C06040"/><rect x="449" y="2" width="145" height="55" rx="2" fill="#B25038"/><rect x="598" y="2" width="145" height="55" rx="2" fill="#A84C3A"/><rect x="747" y="2" width="151" height="55" rx="2" fill="#C46648"/>
+  <!-- Fila 2 offset -->
+  <rect x="2" y="61" width="70" height="55" rx="2" fill="#B85840"/><rect x="76" y="61" width="145" height="55" rx="2" fill="#A04030"/><rect x="225" y="61" width="145" height="55" rx="2" fill="#B55538"/><rect x="374" y="61" width="145" height="55" rx="2" fill="#C86A4C"/><rect x="523" y="61" width="145" height="55" rx="2" fill="#A8483A"/><rect x="672" y="61" width="145" height="55" rx="2" fill="#B05038"/><rect x="821" y="61" width="77" height="55" rx="2" fill="#C26248"/>
+  <!-- Fila 3 -->
+  <rect x="2" y="120" width="145" height="55" rx="2" fill="#C46A48"/><rect x="151" y="120" width="145" height="55" rx="2" fill="#A84C38"/><rect x="300" y="120" width="145" height="55" rx="2" fill="#B85A42"/><rect x="449" y="120" width="145" height="55" rx="2" fill="#A24032"/><rect x="598" y="120" width="145" height="55" rx="2" fill="#BC6244"/><rect x="747" y="120" width="151" height="55" rx="2" fill="#B05438"/>
+  <!-- Fila 4 offset -->
+  <rect x="2" y="179" width="70" height="55" rx="2" fill="#A64A3C"/><rect x="76" y="179" width="145" height="55" rx="2" fill="#B85C44"/><rect x="225" y="179" width="145" height="55" rx="2" fill="#C46848"/><rect x="374" y="179" width="145" height="55" rx="2" fill="#A44838"/><rect x="523" y="179" width="145" height="55" rx="2" fill="#B25238"/><rect x="672" y="179" width="145" height="55" rx="2" fill="#C06040"/><rect x="821" y="179" width="77" height="55" rx="2" fill="#AA4E3C"/>
+  <!-- Fila 5 -->
+  <rect x="2" y="238" width="145" height="55" rx="2" fill="#B65840"/><rect x="151" y="238" width="145" height="55" rx="2" fill="#C26448"/><rect x="300" y="238" width="145" height="55" rx="2" fill="#A44232"/><rect x="449" y="238" width="145" height="55" rx="2" fill="#BA5E42"/><rect x="598" y="238" width="145" height="55" rx="2" fill="#A84C3A"/><rect x="747" y="238" width="151" height="55" rx="2" fill="#B45438"/>
+  <!-- Fila 6 offset -->
+  <rect x="2" y="297" width="70" height="55" rx="2" fill="#BC6042"/><rect x="76" y="297" width="145" height="55" rx="2" fill="#A64A38"/><rect x="225" y="297" width="145" height="55" rx="2" fill="#B25038"/><rect x="374" y="297" width="145" height="55" rx="2" fill="#C86C4E"/><rect x="523" y="297" width="145" height="55" rx="2" fill="#B45640"/><rect x="672" y="297" width="145" height="55" rx="2" fill="#A24234"/><rect x="821" y="297" width="77" height="55" rx="2" fill="#B85C44"/>
+  <!-- Fila 7 -->
+  <rect x="2" y="356" width="145" height="42" rx="2" fill="#A84C38"/><rect x="151" y="356" width="145" height="42" rx="2" fill="#B65A42"/><rect x="300" y="356" width="145" height="42" rx="2" fill="#C46A4C"/><rect x="449" y="356" width="145" height="42" rx="2" fill="#AA5040"/><rect x="598" y="356" width="145" height="42" rx="2" fill="#B85E44"/><rect x="747" y="356" width="151" height="42" rx="2" fill="#A44638"/>
+  <!-- Eflorescencias blancas (salitre) en algunas juntas -->
+  <rect x="0" y="56" width="250" height="6" fill="url(#eflo)" opacity=".7"/>
+  <rect x="350" y="115" width="200" height="6" fill="url(#eflo)" opacity=".6"/>
+  <rect x="500" y="174" width="180" height="6" fill="url(#eflo)" opacity=".5"/>
+  <rect x="100" y="233" width="300" height="6" fill="url(#eflo)" opacity=".55"/>
+  <!-- Manchas de mortero sobre ladrillos -->
+  <ellipse cx="200" cy="140" rx="35" ry="12" fill="#C4B8A8" opacity=".6" transform="rotate(-5 200 140)"/>
+  <ellipse cx="550" cy="85" rx="28" ry="10" fill="#C4B8A8" opacity=".55" transform="rotate(3 550 85)"/>
+  <ellipse cx="700" cy="260" rx="40" ry="14" fill="#C4B8A8" opacity=".5" transform="rotate(-8 700 260)"/>
+  <!-- Etiquetas -->
+  <rect x="30" y="10" width="240" height="36" rx="6" fill="#0F172A" opacity=".85"/>
+  <text x="150" y="34" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#FFF">LADRILLO VISTO CON EFLORESCENCIAS</text>
+  <rect x="620" y="350" width="260" height="36" rx="6" fill="#D9381E" opacity=".9"/>
+  <text x="750" y="374" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#FFF">Manchas de mortero y salitre</text>
+</svg>
