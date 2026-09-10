@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.ferreteriaukra.cl/</loc>
-    <lastmod>2026-09-09</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -195,6 +195,12 @@
   <url>
     <loc>https://www.ferreteriaukra.cl/blog/como-colocar-ceramica-tipo-espina-de-pescado-en-tu-hogar/</loc>
     <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ferreteriaukra.cl/blog/como-construir-un-quincho-con-parrilla-guia-chile/</loc>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -669,6 +675,12 @@
   <url>
     <loc>https://www.ferreteriaukra.cl/blog/diferencias-entre-tuberias-pvc-y-ppr-guia-completa-para-elegir-la-mejor-opcion/</loc>
     <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ferreteriaukra.cl/blog/domotica-casa-inteligente-como-empezar-chile/</loc>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
