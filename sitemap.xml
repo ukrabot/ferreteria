@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.ferreteriaukra.cl/</loc>
-    <lastmod>2026-09-18</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -39,6 +39,12 @@
   <url>
     <loc>https://www.ferreteriaukra.cl/blog/andamios-y-trabajo-en-altura-como-montar-seguro-chile/</loc>
     <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ferreteriaukra.cl/blog/arduino-vs-raspberry-pi-cual-elegir-para-proyectos-caseros-chile/</loc>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1143,6 +1149,12 @@
   <url>
     <loc>https://www.ferreteriaukra.cl/blog/selladores-de-rosca-teflon-vs-estopa-cual-elegir/</loc>
     <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ferreteriaukra.cl/blog/sensores-para-proyectos-diy-ultrasonico-hc-sr04-y-pir-hc-sr501/</loc>
+    <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es-CL" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sensores DIY: Ultrasónico HC-SR04 y PIR HC-SR501, Guía 2026</title>
+<meta name="title" content="Sensores DIY: Ultrasónico HC-SR04 y PIR HC-SR501, Guía 2026">
+<meta name="description" content="Guía técnica de sensores para proyectos DIY en Chile: cómo funcionan el ultrasónico HC-SR04 y el PIR HC-SR501, diferencias, conexión, ajustes, limitaciones reales y proyectos prácticos.">
+<meta name="keywords" content="hc-sr04 sensor ultrasonico, hc-sr501 pir arduino, sensor de distancia arduino, sensor de movimiento diy, medir distancia ultrasonido, proyectos con sensores arduino">
+<meta name="author" content="Equipo Técnico Ferretería Ukra">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://www.ferreteriaukra.cl/blog/sensores-para-proyectos-diy-ultrasonico-hc-sr04-y-pir-hc-sr501/">
+<meta name="theme-color" content="#D9381E">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin><link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Ferretería Ukra Blog">
+<meta property="og:url" content="https://www.ferreteriaukra.cl/blog/sensores-para-proyectos-diy-ultrasonico-hc-sr04-y-pir-hc-sr501/"><meta property="og:title" content="Sensores DIY: Ultrasónico HC-SR04 y PIR HC-SR501, Guía 2026">
+<meta property="og:description" content="Guía técnica de sensores para proyectos DIY en Chile: cómo funcionan el ultrasónico HC-SR04 y el PIR HC-SR501, diferencias, conexión, ajustes, limitaciones reales y proyectos prácticos.">
+<meta property="og:locale" content="es_CL"><meta property="article:section" content="Electrónica y Maker">
+<meta property="article:published_time" content="2026-09-19T00:00:00+00:00"><meta property="article:modified_time" content="2026-09-19T00:00:00+00:00">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Sensores DIY: Ultrasónico HC-SR04 y PIR HC-SR501, Guía 2026">
+<meta name="twitter:description" content="Guía técnica de sensores para proyectos DIY en Chile: cómo funcionan el ultrasónico HC-SR04 y el PIR HC-SR501, diferencias, conexión, ajustes, limitaciones reales y proyectos prácticos.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebSite","@id":"https://www.ferreteriaukra.cl/#website","url":"https://www.ferreteriaukra.cl/","name":"Ferretería Ukra Blog","inLanguage":"es-CL"},
+{"@type":"Organization","@id":"https://www.ferreteriaukra.cl/#organization","name":"Ferretería Ukra","url":"https://www.ferreteriaukra.cl/","logo":{"@type":"ImageObject","url":"https://www.ferreteriaukra.cl/assets/logo-ukra.png"}},
+{"@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.ferreteriaukra.cl/"},
+{"@type":"ListItem","position":2,"name":"Electrónica","item":"https://www.ferreteriaukra.cl/#guias"},
+{"@type":"ListItem","position":3,"name":"Sensores DIY","item":"https://www.ferreteriaukra.cl/blog/sensores-para-proyectos-diy-ultrasonico-hc-sr04-y-pir-hc-sr501/"}
+]},
+{"@type":"BlogPosting","@id":"https://www.ferreteriaukra.cl/blog/sensores-para-proyectos-diy-ultrasonico-hc-sr04-y-pir-hc-sr501/#article",
+"headline":"Sensores para proyectos DIY: ultrasónico HC-SR04 y PIR HC-SR501",
+"description":"Guía técnica de sensores para proyectos DIY en Chile: cómo funcionan el ultrasónico HC-SR04 y el PIR HC-SR501, diferencias, conexión, ajustes, limitaciones reales y proyectos prácticos.","inLanguage":"es-CL","mainEntityOfPage":"https://www.ferreteriaukra.cl/blog/sensores-para-proyectos-diy-ultrasonico-hc-sr04-y-pir-hc-sr501/",
+"datePublished":"2026-09-19T00:00:00+00:00","dateModified":"2026-09-19T00:00:00+00:00",
+"author":{"@type":"Organization","name":"Equipo Técnico Ferretería Ukra"},
+"publisher":{"@id":"https://www.ferreteriaukra.cl/#organization"},
+"articleSection":"Electrónica y Maker","keywords":"hc-sr04 sensor ultrasonico, hc-sr501 pir arduino, sensor de distancia arduino, sensor de movimiento diy, medir distancia ultrasonido, proyectos con sensores arduino"
+},
+{"@type":"FAQPage","@id":"https://www.ferreteriaukra.cl/blog/sensores-para-proyectos-diy-ultrasonico-hc-sr04-y-pir-hc-sr501/#faq","mainEntity":[
+{"@type":"Question","name":"¿Cuál es la diferencia entre un sensor ultrasónico y un sensor PIR?","acceptedAnswer":{"@type":"Answer","text":"Miden cosas distintas y no son intercambiables. El ultrasónico emite un pulso de sonido de alta frecuencia y mide cuánto tarda el eco en volver, con lo que calcula la distancia hasta un objeto, detectándolo esté quieto o en movimiento. El PIR es un sensor pasivo que no emite nada: detecta variaciones en la radiación infrarroja del entorno, es decir, el calor corporal en movimiento, por lo que solo reacciona cuando algo tibio se desplaza dentro de su campo de visión y no entrega ninguna medida de distancia. Si necesitas saber a qué distancia está un objeto, usas ultrasónico; si necesitas saber si alguien entró a una habitación, usas PIR."}},
+{"@type":"Question","name":"¿Por qué mi sensor PIR se activa solo?","acceptedAnswer":{"@type":"Answer","text":"Las causas más frecuentes son corrientes de aire caliente o frío que atraviesan su campo de visión, luz solar directa incidiendo sobre el lente, la cercanía de fuentes de calor como estufas, radiadores o equipos electrónicos, y las mascotas, que al ser cuerpos tibios en movimiento son detectadas igual que una persona. También influye la alimentación: un PIR alimentado con una fuente ruidosa o insuficiente genera disparos falsos. Otro factor es el tiempo de estabilización inicial, ya que el sensor necesita un período de calentamiento tras energizarse durante el cual sus lecturas no son confiables y puede activarse sin motivo."}},
+{"@type":"Question","name":"¿Qué limitaciones tiene el sensor ultrasónico HC-SR04?","acceptedAnswer":{"@type":"Answer","text":"Su principal limitación es que depende de que el eco regrese al sensor, por lo que falla con superficies que absorben el sonido, como telas y materiales porosos, y con superficies inclinadas respecto del eje del sensor, porque el pulso rebota en otra dirección y nunca vuelve. También pierde precisión con objetos muy pequeños o de bordes irregulares, tiene un ángulo de detección acotado y un rango mínimo por debajo del cual no puede medir. Además, como la velocidad del sonido varía con la temperatura del aire, las mediciones tienen una deriva apreciable entre un ambiente frío y uno caluroso si no se compensa ese efecto en el cálculo."}},
+{"@type":"Question","name":"¿Puedo usar estos sensores para la seguridad de mi casa?","acceptedAnswer":{"@type":"Answer","text":"Para aprender y para proyectos personales funcionan muy bien, pero no son sustitutos de un sistema de seguridad comercial. Los módulos DIY carecen de supervisión de línea, respaldo de energía, protección antisabotaje, comunicación redundante y certificación, características que sí traen los equipos diseñados para seguridad y que son justamente las que importan cuando alguien intenta vulnerar el sistema. Un montaje casero es excelente para automatizar comodidades como encender una luz de pasillo o avisar que alguien se acerca al portón, pero si el objetivo es proteger la vivienda conviene un sistema comercial certificado, eventualmente complementado con proyectos propios para funciones auxiliares."}}
+]}
+]}
+</script>
+<style>:root{--primary:#D9381E;--primary-hover:#B82A13;--secondary:#1E293B;--accent:#F59E0B;--bg-body:#F8FAFC;--bg-card:#FFF;--text-main:#0F172A;--text-muted:#64748B;--border-color:#E2E8F0;--radius-sm:.375rem;--radius-md:.75rem;--radius-lg:1rem;--shadow-sm:0 1px 3px rgba(0,0,0,.08);--shadow-md:0 4px 12px rgba(0,0,0,.06);--font-stack:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{overflow-x:hidden;scroll-behavior:smooth}body{font-family:var(--font-stack);background:var(--bg-body);color:var(--text-main);line-height:1.65;font-size:1rem;-webkit-font-smoothing:antialiased;overflow-x:hidden}a{color:#0057e7;text-decoration:none;transition:color .2s}a:hover{text-decoration:underline}img,svg{max-width:100%;height:auto;display:block}:focus-visible{outline:3px solid var(--accent);outline-offset:2px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.progress-container{position:fixed;top:0;left:0;width:100%;height:4px;background:transparent;z-index:100}.progress-bar{height:100%;background:linear-gradient(90deg,var(--primary),var(--accent));width:0%;transition:width .1s linear}.top-bar{background:#0F172A;color:#94A3B8;font-size:.85rem;padding:.4rem 1rem;text-align:center;border-bottom:1px solid #1E293B}.top-bar span{color:#F8FAFC;font-weight:600}header{background:var(--secondary);color:#FFF;position:sticky;top:0;z-index:90;box-shadow:var(--shadow-md)}.header-inner{max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.85rem 1.5rem;gap:1rem;flex-wrap:wrap}.brand-logo{display:flex;align-items:center;gap:.75rem;font-size:1.35rem;font-weight:800;color:#FFF;letter-spacing:-.02em}.brand-logo:hover{text-decoration:none;color:#FFF}.brand-logo svg{width:34px;height:34px;fill:var(--primary);flex-shrink:0}.brand-logo .badge{font-size:.62rem;background:var(--primary);color:#FFF;padding:2px 6px;border-radius:4px;text-transform:uppercase;font-weight:700}.menu-toggle{display:none;background:0 0;border:none;color:#FFF;font-size:1.75rem;line-height:1;cursor:pointer;padding:.25rem .5rem}nav ul{display:flex;list-style:none;gap:1.5rem;align-items:center;flex-wrap:wrap}nav a{color:#CBD5E1;font-weight:500;font-size:.95rem;padding:.4rem .2rem;border-bottom:2px solid transparent}nav a:hover,nav a[aria-current="page"]{color:#FFF;text-decoration:none;border-bottom-color:var(--primary)}.container{max-width:1240px;margin:2rem auto;padding:0 1.5rem;width:100%}.breadcrumbs{display:flex;align-items:center;gap:.5rem;font-size:.875rem;color:var(--text-muted);margin-bottom:1.5rem;flex-wrap:wrap}.breadcrumbs a{color:var(--text-muted)}.breadcrumbs a:hover{color:var(--primary)}.breadcrumbs .separator{color:#CBD5E1}.layout-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;min-width:0}.layout-grid>main,.layout-grid>aside.sidebar{min-width:0;width:100%}article.main-article{background:var(--bg-card);border-radius:var(--radius-lg);padding:2.5rem;box-shadow:var(--shadow-sm);border:1px solid var(--border-color);min-width:0;width:100%}.category-pill{display:inline-block;background:#FEF2F2;color:var(--primary);font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;padding:.3rem .8rem;border-radius:50px;margin-bottom:1rem;border:1px solid #FCA5A5}h1.article-title{font-size:2.1rem;line-height:1.3;font-weight:800;color:#0F172A;margin-bottom:1.25rem;letter-spacing:-.02em;overflow-wrap:break-word}.article-meta{display:flex;flex-wrap:wrap;align-items:center;gap:1.25rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border-color);margin-bottom:2rem;font-size:.9rem;color:var(--text-muted)}.article-body{min-width:0}.article-body p{margin-bottom:1.25rem;color:#334155;font-size:1.05rem;line-height:1.75;overflow-wrap:break-word}.article-body .lead{font-size:1.15rem;line-height:1.75;color:#1E293B}.article-body h2{font-size:1.55rem;color:#0F172A;margin-top:2.25rem;margin-bottom:1rem;padding-bottom:.4rem;border-bottom:2px solid #F1F5F9;overflow-wrap:break-word}.article-body h3{font-size:1.2rem;color:#1E293B;margin-top:1.75rem;margin-bottom:.75rem;overflow-wrap:break-word}.article-body ul,.article-body ol{margin:1rem 0 1.5rem 1.5rem;color:#334155;line-height:1.75}.article-body li{margin-bottom:.5rem}.article-body strong{color:#1E293B}.table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.75rem 0;border-radius:var(--radius-md);border:1px solid var(--border-color);max-width:100%}.table-wrapper table{width:100%;border-collapse:collapse;min-width:560px}.table-wrapper th,.table-wrapper td{padding:11px 12px;border:1px solid #E2E8F0;text-align:left;vertical-align:top}.table-wrapper th{background:#F1F5F9;color:#0F172A;font-weight:800}.editorial-notice{background:#EFF6FF;border:1px solid #BFDBFE;border-left:4px solid #3B82F6;padding:1.2rem 1.4rem;margin:1.5rem 0;border-radius:0 var(--radius-md) var(--radius-md) 0;color:#1E3A8A;font-size:.95rem}.notice{background:#FFF7ED;border:1px solid #FED7AA;border-left:4px solid #F59E0B;padding:1.1rem 1.25rem;margin:1.5rem 0;border-radius:0 var(--radius-md) var(--radius-md) 0;color:#7C2D12}.checklist{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:var(--radius-md);padding:1.25rem 1.5rem;margin:1.5rem 0}.checklist h3{margin-top:0;color:#166534}.checklist ul{margin-bottom:0;color:#166534}.faq-list{margin:2rem 0}.faq-item{background:#F8FAFC;border:1px solid #E2E8F0;border-radius:var(--radius-md);padding:1.25rem 1.5rem;margin-bottom:1.25rem}.faq-item h3{font-size:1.15rem;color:#0F172A;margin-top:0;margin-bottom:.6rem;border-bottom:0}.faq-item p{margin-bottom:0;color:#334155;line-height:1.65}aside.sidebar{display:flex;flex-direction:column;gap:2rem}.widget{background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:1.5rem;box-shadow:var(--shadow-sm)}.widget-title{font-size:1.1rem;font-weight:800;color:#0F172A;margin-bottom:1.25rem;padding-bottom:.5rem;border-bottom:2px solid var(--primary)}.widget ul{list-style:none;padding:0;margin:0}.widget li{padding:.55rem 0;border-bottom:1px solid #F1F5F9;font-size:.92rem;line-height:1.45}.widget li:last-child{border-bottom:0}.widget .button-link{display:block;text-align:center;padding:.65rem;background:var(--primary);color:#FFF;font-weight:700;border-radius:var(--radius-sm);margin-top:.75rem}.widget .button-link:hover{background:var(--primary-hover);text-decoration:none}footer{background:#0F172A;color:#94A3B8;padding:3rem 0 1.5rem;margin-top:4rem;border-top:4px solid var(--primary)}.footer-inner{max-width:1240px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2.5rem}.footer-inner h4{color:#FFF;margin-bottom:.5rem}.footer-inner p{font-size:.875rem;margin-bottom:.4rem}.footer-bottom{max-width:1240px;margin:2.5rem auto 0;padding:1.5rem 1.5rem 0;border-top:1px solid #1E293B;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;font-size:.85rem;gap:.5rem}@media(min-width:992px){.layout-grid{grid-template-columns:2.5fr 1fr}}@media(max-width:860px){.menu-toggle{display:block}nav{display:none;width:100%;order:3;margin-top:.75rem;border-top:1px solid #334155;padding-top:.75rem}nav.active{display:block}nav ul{flex-direction:column;gap:0;width:100%}nav ul li{width:100%}nav a{display:block;padding:.75rem .25rem;border-bottom:1px solid #334155}}@media(max-width:768px){article.main-article{padding:1.75rem 1.25rem;} h1.article-title{font-size:1.6rem;} .article-body h2{font-size:1.3rem;} .article-body h3{font-size:1.1rem;} .article-body p{font-size:1rem;} .article-meta{gap:0.75rem;font-size:0.85rem;} .article-meta > div:last-child{margin-left:0 !important;width:100%;} .table-wrapper table{font-size:0.82rem;} .table-wrapper th,.table-wrapper td{padding:8px !important;white-space:normal;}}@media(max-width:600px){.header-inner{padding:0.75rem 1rem;} .brand-logo{font-size:1.05rem;gap:0.5rem;} .brand-logo svg{width:26px;height:26px;} .brand-logo span.badge{font-size:0.55rem;} .top-bar{font-size:0.75rem;line-height:1.4;padding:0.5rem 0.75rem;} .container{margin:1.25rem auto;padding:0 1rem;} article.main-article{padding:1.25rem 1rem;border-radius:var(--radius-md);} h1.article-title{font-size:1.4rem;} figure img{height:180px !important;} .widget{padding:1.15rem;} .footer-inner{gap:1.75rem;} .footer-bottom{flex-direction:column;text-align:center;} div[style*="max-width:520px"],div[style*="max-width:480px"]{padding:16px !important;max-width:100% !important;}}</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7032484018692343" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8LQF2BQ14K"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-8LQF2BQ14K');</script>
+</head>
+<body>
+<div class="progress-container" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
+<div class="top-bar">📡 <span>Electrónica y Maker:</span> Sensores ultrasónico y PIR para proyectos DIY. <a href="/" style="color:#F59E0B;text-decoration:underline;font-weight:600;margin-left:6px;">← Volver al inicio</a></div>
+<header><div class="header-inner">
+<a href="/" class="brand-logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.4-2.4c.4-.4 0-1 0-1.3z"/></svg>Ferretería Ukra <span class="badge">Guías técnicas</span></a>
+<button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+<nav aria-label="Navegación principal" id="mainNav"><ul><li><a href="/">Inicio</a></li><li><a href="/blog/arduino-vs-raspberry-pi-cual-elegir-para-proyectos-caseros-chile/">Arduino vs Raspberry</a></li><li><a href="/blog/como-usar-un-multimetro-guia-para-principiantes/">Multímetro</a></li><li><a href="/blog/sensores-para-proyectos-diy-ultrasonico-hc-sr04-y-pir-hc-sr501/" aria-current="page">Sensores DIY</a></li></ul></nav>
+</div></header>
+<div class="container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Inicio</a><span class="separator">/</span><a href="/#guias">Electrónica</a><span class="separator">/</span><span aria-current="page">Sensores DIY</span></nav>
+<div class="layout-grid">
+<main><article class="main-article" itemscope itemtype="https://schema.org/TechArticle">
+<span class="category-pill">Electrónica y Maker</span>
+<h1 class="article-title" itemprop="headline">Sensores DIY: Ultrasónico HC-SR04 y PIR HC-SR501</h1>
+<div class="article-meta"><div><strong>Por Equipo Técnico Ferretería Ukra</strong></div><div>📅 19 Sep, 2026</div><div>⏱️ 17 min de lectura</div><div style="margin-left:auto;"><a href="/" style="font-weight:600;color:var(--primary);">← Inicio</a></div></div>
+<div class="article-body" itemprop="articleBody">
+<div class="editorial-notice"><strong>Ficha editorial:</strong> Esta guía trata <strong>módulos sensores de baja tensión</strong> (3,3-5 V) para proyectos de electrónica DIY. No debe confundirse con nuestra guía de <a href="/blog/como-instalar-sensor-de-movimiento-para-luces-guia-chile/">sensor de movimiento de 220 V</a>, que es un producto comercial certificado para iluminación de red. Para elegir la placa que controlará estos sensores, revisa <a href="/blog/arduino-vs-raspberry-pi-cual-elegir-para-proyectos-caseros-chile/">Arduino vs Raspberry Pi</a>.</div>
+
+<p class="lead">El HC-SR04 y el HC-SR501 son probablemente los dos sensores más usados en proyectos de electrónica casera, y también los dos que más frustración generan, porque la gente los compra esperando que hagan lo mismo. No lo hacen: uno mide distancia, el otro detecta movimiento de cuerpos tibios. Entender esa diferencia y las limitaciones reales de cada uno ahorra semanas de ensayo y error.</p>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7032484018692343" data-ad-slot="1137373683" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<h2>Los dos sensores, lado a lado</h2>
+<div class="table-wrapper"><table>
+<thead><tr><th>Aspecto</th><th>HC-SR04 (ultrasónico)</th><th>HC-SR501 (PIR)</th></tr></thead>
+<tbody>
+<tr><td><strong>Qué mide</strong></td><td>Distancia a un objeto</td><td>Presencia de cuerpo tibio en movimiento</td></tr>
+<tr><td><strong>Principio</strong></td><td>Activo: emite ultrasonido y mide el eco</td><td>Pasivo: detecta cambios de radiación infrarroja</td></tr>
+<tr><td><strong>Detecta objetos quietos</strong></td><td>Sí</td><td><strong>No:</strong> requiere movimiento</td></tr>
+<tr><td><strong>Detecta objetos fríos</strong></td><td>Sí</td><td>No</td></tr>
+<tr><td><strong>Entrega distancia</strong></td><td>Sí, numérica</td><td>No: solo señal de detección</td></tr>
+<tr><td><strong>Salida</strong></td><td>Pulso proporcional al tiempo de eco</td><td>Señal digital alta o baja</td></tr>
+<tr><td><strong>Complejidad de código</strong></td><td>Media: hay que medir tiempos</td><td>Muy baja: leer un pin</td></tr>
+<tr><td><strong>Ajustes físicos</strong></td><td>Ninguno</td><td>Dos potenciómetros y un jumper</td></tr>
+</tbody>
+</table></div>
+<div class="notice"><strong>La regla para elegir:</strong> ¿necesitas saber <strong>a qué distancia</strong> está algo? → ultrasónico. ¿Necesitas saber <strong>si alguien entró</strong>? → PIR. Muchos proyectos usan ambos: el PIR despierta el sistema y el ultrasónico mide con precisión.</div>
+
+<h2>HC-SR04: cómo funciona realmente</h2>
+<p>Emite un pulso de ultrasonido y mide cuánto tarda el eco en volver. Como la velocidad del sonido en el aire es conocida, con ese tiempo se calcula la distancia. Es el mismo principio del sonar.</p>
+<p>Tiene cuatro pines: alimentación, tierra, un pin de disparo (trigger) con el que le pides que emita el pulso, y un pin de eco cuyo tiempo en estado alto es proporcional a la distancia recorrida por el sonido.</p>
+<div class="notice"><strong>El detalle que casi nadie considera:</strong> el sonido viaja más rápido en aire caliente que en aire frío. Si tu proyecto vive en un ambiente con variaciones térmicas importantes, las mediciones tendrán una deriva apreciable entre invierno y verano a menos que compenses la temperatura en el cálculo. Para un proyecto de aprendizaje no importa; para uno que debe ser preciso, sí.</div>
+
+<h3>Sus limitaciones reales</h3>
+<ul>
+<li><strong>Superficies que absorben sonido:</strong> telas, ropa, espuma y materiales porosos devuelven muy poco eco. El sensor "no ve" una cortina.</li>
+<li><strong>Superficies inclinadas:</strong> si el objeto está en ángulo respecto del eje del sensor, el pulso rebota hacia otro lado y nunca vuelve. Es la causa más frecuente de lecturas erráticas.</li>
+<li><strong>Objetos pequeños o de bordes irregulares:</strong> devuelven eco débil o disperso.</li>
+<li><strong>Rango mínimo:</strong> por debajo de cierta distancia no puede medir, porque el eco vuelve antes de que el sensor termine de emitir.</li>
+<li><strong>Ángulo de detección acotado:</strong> no barre toda la escena, solo un cono frente a él.</li>
+<li><strong>Interferencia entre sensores:</strong> dos ultrasónicos cercanos disparando a la vez se confunden entre sí. Hay que alternarlos.</li>
+</ul>
+<p>Para un montaje práctico de introducción que combina este sensor con indicadores visuales, Robotics Engineering Lab desarrolla paso a paso una <a href="https://roboticsengineeringlab.com/articles/hc-sr04-ultrasonic-led-proximity-alert">alerta de proximidad con HC-SR04 y LEDs</a>, que es uno de los mejores primeros proyectos para entender la relación entre lectura y acción.</p>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7032484018692343" data-ad-slot="1137373683" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<h2>HC-SR501: el PIR y sus tres ajustes</h2>
+<p>PIR significa infrarrojo pasivo: <strong>no emite nada</strong>. Detecta variaciones en la radiación infrarroja del entorno, es decir, el calor de un cuerpo que se mueve dentro de su campo de visión. Por eso no detecta objetos quietos ni objetos fríos.</p>
+<p>El módulo tiene tres controles físicos que definen su comportamiento:</p>
+<div class="table-wrapper"><table>
+<thead><tr><th>Control</th><th>Qué ajusta</th><th>Efecto práctico</th></tr></thead>
+<tbody>
+<tr><td><strong>Potenciómetro de sensibilidad</strong></td><td>Alcance de detección</td><td>Más sensibilidad, más alcance, pero también más falsos positivos</td></tr>
+<tr><td><strong>Potenciómetro de tiempo</strong></td><td>Cuánto permanece activa la salida tras detectar</td><td>Define la duración del "aviso"</td></tr>
+<tr><td><strong>Jumper de modo</strong></td><td>Disparo único o repetible</td><td>En modo repetible, el tiempo se reinicia si sigue detectando movimiento</td></tr>
+</tbody>
+</table></div>
+<div class="notice"><strong>El jumper de modo es el que más confunde.</strong> En <strong>disparo único</strong>, el sensor activa la salida, cuenta el tiempo y se apaga aunque siga habiendo movimiento. En <strong>repetible</strong>, cada nueva detección reinicia el contador, manteniendo la salida activa mientras haya actividad. Para una luz de pasillo quieres repetible; para un contador de eventos, único.</div>
+
+<h3>Por qué se activa solo</h3>
+<ul>
+<li><strong>Corrientes de aire</strong> caliente o frío cruzando su campo de visión.</li>
+<li><strong>Luz solar directa</strong> sobre el lente.</li>
+<li><strong>Fuentes de calor cercanas:</strong> estufas, radiadores, equipos electrónicos.</li>
+<li><strong>Mascotas:</strong> son cuerpos tibios en movimiento; el sensor no distingue.</li>
+<li><strong>Alimentación ruidosa o insuficiente,</strong> que genera disparos falsos.</li>
+<li><strong>Tiempo de estabilización:</strong> tras energizarse necesita un período de calentamiento durante el cual sus lecturas no son confiables.</li>
+</ul>
+<p>Para el detalle del montaje, la configuración de los potenciómetros y la lectura desde código, Robotics Engineering Lab tiene una guía dedicada al <a href="https://roboticsengineeringlab.com/articles/hc-sr501-pir-motion-sensor-arduino">sensor de movimiento PIR HC-SR501 con Arduino</a>.</p>
+
+<h2>Conexión y alimentación</h2>
+<ul>
+<li><strong>Verifica la tensión de trabajo</strong> del módulo antes de conectarlo. Alimentar un módulo de 3,3 V con 5 V puede dañarlo.</li>
+<li><strong>Respeta la polaridad:</strong> invertir alimentación y tierra es la forma más rápida de quemar un módulo.</li>
+<li><strong>Tierra común:</strong> si el sensor y la placa se alimentan de fuentes distintas, sus tierras deben estar unidas o las lecturas serán erráticas.</li>
+<li><strong>Cables cortos</strong> en protoboard: los cables largos captan ruido.</li>
+<li><strong>Fuente estable:</strong> muchos problemas atribuidos al sensor son en realidad de alimentación. Un <a href="/blog/como-usar-un-multimetro-guia-para-principiantes/">multímetro</a> te dice en segundos si la tensión que llega al módulo es la correcta.</li>
+</ul>
+<div class="notice"><strong>Antes de culpar al sensor, mide.</strong> La secuencia de diagnóstico que resuelve la mayoría de los casos: verifica tensión de alimentación en los pines del módulo, confirma que la tierra sea común, revisa que el pin de datos esté en la entrada correcta y recién después revisa el código.</div>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7032484018692343" data-ad-slot="1137373683" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<h2>Proyectos según el sensor</h2>
+<div class="table-wrapper"><table>
+<thead><tr><th>Proyecto</th><th>Sensor</th><th>Por qué</th></tr></thead>
+<tbody>
+<tr><td>Alerta de proximidad al estacionar</td><td>Ultrasónico</td><td>Necesita distancia numérica</td></tr>
+<tr><td>Medidor de nivel en un estanque</td><td>Ultrasónico</td><td>Mide a la superficie del agua sin contacto</td></tr>
+<tr><td>Robot que evita obstáculos</td><td>Ultrasónico</td><td>Distancia en tiempo real</td></tr>
+<tr><td>Luz que se enciende al entrar</td><td>PIR</td><td>Solo necesita saber si hay alguien</td></tr>
+<tr><td>Aviso de alguien acercándose al portón</td><td>PIR</td><td>Detección de presencia en área amplia</td></tr>
+<tr><td>Contador de personas en un acceso</td><td>Ambos</td><td>PIR despierta, ultrasónico confirma dirección</td></tr>
+<tr><td>Dispensador automático</td><td>Ultrasónico o infrarrojo corto</td><td>Requiere detectar mano cerca</td></tr>
+</tbody>
+</table></div>
+<p>Si quieres integrar sensores en un proyecto con movimiento, la progresión por etapas de un vehículo robot es el ejercicio que más conceptos integra: Robotics Engineering Lab documenta esa evolución en su serie sobre el <a href="https://roboticsengineeringlab.com/articles/arduino-robot-car-evolution-four-versions">auto robot Arduino en cuatro versiones</a>.</p>
+
+<h2>DIY vs producto comercial: cuándo usar cada uno</h2>
+<div class="notice"><strong>Estos módulos son excelentes para aprender y para automatizar comodidades, pero no son sistemas de seguridad.</strong> Carecen de supervisión de línea, respaldo de energía, protección antisabotaje, comunicación redundante y certificación, que son justamente las características que importan cuando alguien intenta vulnerar el sistema.</div>
+<div class="table-wrapper"><table>
+<thead><tr><th>Objetivo</th><th>Qué conviene</th></tr></thead>
+<tbody>
+<tr><td>Aprender electrónica y programación</td><td>DIY, sin duda</td></tr>
+<tr><td>Encender una luz de pasillo automáticamente</td><td><a href="/blog/como-instalar-sensor-de-movimiento-para-luces-guia-chile/">Sensor comercial de 220 V</a>: más simple y certificado</td></tr>
+<tr><td>Proteger la vivienda</td><td><a href="/blog/como-instalar-camaras-de-seguridad-en-casa-guia-2026/">Sistema comercial</a> certificado</td></tr>
+<tr><td>Automatizar algo que no existe como producto</td><td>DIY: es donde realmente brilla</td></tr>
+<tr><td>Integrar con asistentes de voz</td><td><a href="/blog/domotica-casa-inteligente-como-empezar-chile/">Ecosistema domótico comercial</a></td></tr>
+</tbody>
+</table></div>
+<p>El DIY con microcontroladores brilla en lo que <strong>no existe como producto comercial</strong>: un medidor de nivel para tu estanque específico, un aviso cuando el portón lleva mucho rato abierto, un registro de temperatura de tu invernadero. No en reemplazar productos certificados que ya resuelven bien el problema.</p>
+
+<h2>Si recién empiezas</h2>
+<p>Ambos sensores vienen habitualmente en los kits de iniciación, que es la forma más económica de tenerlos junto con protoboard, cables y resistencias. Para una ruta de aprendizaje ordenada desde cero, Robotics Engineering Lab publica una <a href="https://roboticsengineeringlab.com/articles/arduino-classroom-robotics-beginners">introducción a la robótica con Arduino orientada a principiantes</a> y una <a href="https://roboticsengineeringlab.com/articles/arduino-mega-kit-getting-started">guía para partir con un kit Arduino Mega</a>, útil si quieres una placa con margen para conectar varios sensores a la vez.</p>
+<p>Para decidir qué placa controlará tus sensores, revisa nuestra comparativa de <a href="/blog/arduino-vs-raspberry-pi-cual-elegir-para-proyectos-caseros-chile/">Arduino vs Raspberry Pi</a>: para leer sensores con precisión temporal, el microcontrolador tiene ventaja clara.</p>
+
+<h2>Errores frecuentes</h2>
+<ul>
+<li><strong>Esperar que el PIR detecte objetos quietos.</strong> No lo hace: necesita movimiento.</li>
+<li><strong>Esperar que el PIR entregue distancia.</strong> Solo entrega presencia sí o no.</li>
+<li><strong>Apuntar el ultrasónico a una superficie inclinada</strong> y culpar al sensor por las lecturas erráticas.</li>
+<li><strong>Medir con ultrasónico hacia una cortina o ropa,</strong> que absorben el eco.</li>
+<li><strong>No unir las tierras</strong> cuando sensor y placa usan fuentes distintas.</li>
+<li><strong>Invertir alimentación y tierra</strong> al conectar.</li>
+<li><strong>Juzgar el PIR durante su tiempo de estabilización</strong> inicial.</li>
+<li><strong>Instalar el PIR frente a una ventana con sol</strong> o cerca de una estufa.</li>
+<li><strong>Usar dos ultrasónicos simultáneos</strong> sin alternarlos, generando interferencia.</li>
+<li><strong>Confiar en un montaje DIY como sistema de seguridad</strong> de la vivienda.</li>
+</ul>
+
+<h2>Precios referenciales en Chile 2026</h2>
+<div class="table-wrapper"><table>
+<thead><tr><th>Ítem</th><th>Precio referencial (CLP)</th></tr></thead>
+<tbody>
+<tr><td>Módulo ultrasónico HC-SR04</td><td>$1.500 – $5.000</td></tr>
+<tr><td>Módulo PIR HC-SR501</td><td>$1.500 – $6.000</td></tr>
+<tr><td>Kit de sensores variados</td><td>$15.000 – $60.000</td></tr>
+<tr><td>Protoboard y jumpers</td><td>$5.000 – $15.000</td></tr>
+<tr><td>Placa de desarrollo compatible</td><td>$8.000 – $25.000</td></tr>
+<tr><td>Multímetro básico</td><td>$10.000 – $40.000</td></tr>
+<tr><td>Sensor de movimiento comercial 220 V (alternativa)</td><td>$8.000 – $35.000</td></tr>
+</tbody>
+</table></div>
+<p>El costo de estos módulos es tan bajo que conviene comprar dos de cada uno: tener un repuesto permite descartar rápidamente si el problema es el sensor o el montaje.</p>
+
+<h2>Checklist de diagnóstico</h2>
+<div class="checklist">
+<h3>Si tu sensor no funciona, revisa en este orden</h3>
+<ul>
+<li>☑️ Tensión de alimentación correcta medida en los pines del módulo</li>
+<li>☑️ Polaridad correcta (alimentación y tierra no invertidas)</li>
+<li>☑️ Tierra común entre sensor y placa si usan fuentes distintas</li>
+<li>☑️ Pin de datos conectado a la entrada que declara tu código</li>
+<li>☑️ Cables firmes en la protoboard (los contactos flojos son causa frecuente)</li>
+<li>☑️ PIR: ¿pasó su tiempo de estabilización inicial?</li>
+<li>☑️ PIR: ¿los potenciómetros están en posición razonable?</li>
+<li>☑️ PIR: ¿hay fuentes de calor o sol directo en su campo de visión?</li>
+<li>☑️ Ultrasónico: ¿la superficie objetivo es perpendicular y reflectante?</li>
+<li>☑️ Ultrasónico: ¿el objeto está fuera del rango mínimo?</li>
+<li>☑️ Probaste con un segundo módulo para descartar falla del sensor</li>
+</ul>
+</div>
+
+<h2>Preguntas frecuentes</h2>
+<div class="faq-list">
+<div class="faq-item"><h3>¿Diferencia entre ultrasónico y PIR?</h3><p>Miden cosas distintas. El ultrasónico emite un pulso de sonido y mide el eco para calcular distancia, detectando objetos quietos o en movimiento. El PIR es pasivo: detecta variaciones de radiación infrarroja, o sea calor corporal en movimiento, y no entrega distancia. Distancia: ultrasónico. Presencia de alguien: PIR.</p></div>
+<div class="faq-item"><h3>¿Por qué mi PIR se activa solo?</h3><p>Corrientes de aire caliente o frío, sol directo sobre el lente, fuentes de calor cercanas (estufas, equipos), mascotas (cuerpos tibios en movimiento), alimentación ruidosa o insuficiente, y el tiempo de estabilización inicial tras energizarlo, durante el cual sus lecturas no son confiables.</p></div>
+<div class="faq-item"><h3>¿Qué limitaciones tiene el HC-SR04?</h3><p>Depende de que el eco regrese: falla con telas y materiales porosos que absorben sonido, y con superficies inclinadas donde el pulso rebota hacia otro lado. Pierde precisión con objetos pequeños, tiene ángulo acotado y rango mínimo. Además la velocidad del sonido varía con la temperatura, lo que genera deriva si no se compensa.</p></div>
+<div class="faq-item"><h3>¿Sirven para la seguridad de mi casa?</h3><p>Para aprender y para proyectos personales sí, pero no reemplazan un sistema comercial. Los módulos DIY no tienen supervisión de línea, respaldo de energía, antisabotaje, comunicación redundante ni certificación, que es justo lo que importa cuando alguien intenta vulnerar el sistema. Para proteger la vivienda, sistema certificado.</p></div>
+</div>
+
+<h2>Conclusión</h2>
+<p>Estos dos sensores cuestan menos que un café y enseñan más sobre electrónica que muchos cursos, siempre que entiendas qué puede hacer cada uno. El PIR te dice que alguien se movió; el ultrasónico te dice a qué distancia está algo. Ninguno hace el trabajo del otro, y ambos fallan de maneras predecibles que ahora conoces: superficies inclinadas y absorbentes para el ultrasónico, calor y corrientes de aire para el PIR. Y cuando algo no funcione, mide la alimentación antes de revisar el código.</p>
+</div>
+</article></main>
+<aside class="sidebar">
+<div class="widget"><h3 class="widget-title">🤖 Electrónica y Maker</h3><ul>
+<li><a href="/blog/arduino-vs-raspberry-pi-cual-elegir-para-proyectos-caseros-chile/">Arduino vs Raspberry Pi</a></li>
+<li><a href="/blog/como-usar-un-multimetro-guia-para-principiantes/">Cómo usar un multímetro</a></li>
+<li><a href="/blog/domotica-casa-inteligente-como-empezar-chile/">Domótica comercial</a></li>
+<li><a href="/blog/cableado-de-red-domestica-como-instalar-ethernet-en-casa-chile/">Cableado de red</a></li>
+</ul><a href="/#guias" class="button-link">Todas las guías</a></div>
+<div class="widget"><h3 class="widget-title">🔌 Alternativas Comerciales</h3><ul>
+<li><a href="/blog/como-instalar-sensor-de-movimiento-para-luces-guia-chile/">Sensor de movimiento 220 V</a></li>
+<li><a href="/blog/como-instalar-camaras-de-seguridad-en-casa-guia-2026/">Cámaras de seguridad</a></li>
+<li><a href="/blog/cerco-electrico-de-seguridad-como-elegir-e-instalar-chile/">Cerco eléctrico</a></li>
+<li><a href="/blog/como-elegir-cerradura-digital-inteligente-chile/">Cerradura digital</a></li>
+</ul></div>
+<div class="widget"><h3 class="widget-title">📌 Dato Clave</h3><p style="font-size:.9rem;color:#334155;line-height:1.65;margin:0;">Antes de culpar al sensor, mide la alimentación en sus pines y confirma que la tierra sea común. La mayoría de los "sensores defectuosos" son problemas de alimentación.</p></div>
+</aside>
+</div>
+</div>
+<footer><div class="footer-inner">
+<div><h4>Ferretería Ukra Chile</h4><p>Portal técnico de electrónica, electricidad, construcción y hogar en Chile.</p></div>
+<div><h4>Electrónica</h4>
+<p><a href="/blog/arduino-vs-raspberry-pi-cual-elegir-para-proyectos-caseros-chile/">→ Arduino vs Raspberry Pi</a></p>
+<p><a href="/blog/como-usar-un-multimetro-guia-para-principiantes/">→ Usar un multímetro</a></p>
+<p><a href="/blog/domotica-casa-inteligente-como-empezar-chile/">→ Domótica</a></p>
+</div>
+<div><h4>Seguridad</h4>
+<p><a href="/blog/como-instalar-camaras-de-seguridad-en-casa-guia-2026/">→ Cámaras de seguridad</a></p>
+<p><a href="/blog/como-instalar-sensor-de-movimiento-para-luces-guia-chile/">→ Sensor de movimiento</a></p>
+<p><a href="/">→ Inicio Ferretería Ukra</a></p>
+</div>
+</div><div class="footer-bottom"><div>&copy; 2026 Ferretería Ukra Chile. Precios referenciales.</div><div>Electrónica y Maker</div></div></footer>
+<script>(function(){const p=document.getElementById('progressBar');let t=false;function u(){const s=document.documentElement.scrollTop||document.body.scrollTop;const h=document.documentElement.scrollHeight-document.documentElement.clientHeight;p.style.width=(h>0?(s/h)*100:0)+'%';t=false}window.addEventListener('scroll',function(){if(!t){window.requestAnimationFrame(u);t=true}},{passive:true})})();const m=document.getElementById('menuToggle');const n=document.getElementById('mainNav');m.addEventListener('click',function(){const o=n.classList.toggle('active');this.setAttribute('aria-expanded',o);this.innerHTML=o?'✕':'☰'});</script>
+</body></html>

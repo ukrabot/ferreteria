@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es-CL" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arduino vs Raspberry Pi: Cuál Elegir para Proyectos Caseros 2026</title>
+<meta name="title" content="Arduino vs Raspberry Pi: Cuál Elegir para Proyectos Caseros 2026">
+<meta name="description" content="Guía técnica para elegir entre Arduino y Raspberry Pi en Chile: diferencias reales entre microcontrolador y computador, consumo, tiempo real, GPIO, kits para empezar y proyectos de automatización casera.">
+<meta name="keywords" content="arduino vs raspberry pi, cual elegir arduino o raspberry, arduino chile kit, microcontrolador vs computador, proyectos arduino casa, automatizacion diy arduino">
+<meta name="author" content="Equipo Técnico Ferretería Ukra">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://www.ferreteriaukra.cl/blog/arduino-vs-raspberry-pi-cual-elegir-para-proyectos-caseros-chile/">
+<meta name="theme-color" content="#D9381E">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin><link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Ferretería Ukra Blog">
+<meta property="og:url" content="https://www.ferreteriaukra.cl/blog/arduino-vs-raspberry-pi-cual-elegir-para-proyectos-caseros-chile/"><meta property="og:title" content="Arduino vs Raspberry Pi: Cuál Elegir para Proyectos Caseros 2026">
+<meta property="og:description" content="Guía técnica para elegir entre Arduino y Raspberry Pi en Chile: diferencias reales entre microcontrolador y computador, consumo, tiempo real, GPIO, kits para empezar y proyectos de automatización casera.">
+<meta property="og:locale" content="es_CL"><meta property="article:section" content="Electrónica y Maker">
+<meta property="article:published_time" content="2026-09-19T00:00:00+00:00"><meta property="article:modified_time" content="2026-09-19T00:00:00+00:00">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Arduino vs Raspberry Pi: Cuál Elegir para Proyectos Caseros 2026">
+<meta name="twitter:description" content="Guía técnica para elegir entre Arduino y Raspberry Pi en Chile: diferencias reales entre microcontrolador y computador, consumo, tiempo real, GPIO, kits para empezar y proyectos de automatización casera.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebSite","@id":"https://www.ferreteriaukra.cl/#website","url":"https://www.ferreteriaukra.cl/","name":"Ferretería Ukra Blog","inLanguage":"es-CL"},
+{"@type":"Organization","@id":"https://www.ferreteriaukra.cl/#organization","name":"Ferretería Ukra","url":"https://www.ferreteriaukra.cl/","logo":{"@type":"ImageObject","url":"https://www.ferreteriaukra.cl/assets/logo-ukra.png"}},
+{"@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.ferreteriaukra.cl/"},
+{"@type":"ListItem","position":2,"name":"Electrónica","item":"https://www.ferreteriaukra.cl/#guias"},
+{"@type":"ListItem","position":3,"name":"Arduino vs Raspberry Pi","item":"https://www.ferreteriaukra.cl/blog/arduino-vs-raspberry-pi-cual-elegir-para-proyectos-caseros-chile/"}
+]},
+{"@type":"BlogPosting","@id":"https://www.ferreteriaukra.cl/blog/arduino-vs-raspberry-pi-cual-elegir-para-proyectos-caseros-chile/#article",
+"headline":"Arduino vs Raspberry Pi: cuál elegir para proyectos caseros",
+"description":"Guía técnica para elegir entre Arduino y Raspberry Pi en Chile: diferencias reales entre microcontrolador y computador, consumo, tiempo real, GPIO, kits para empezar y proyectos de automatización casera.","inLanguage":"es-CL","mainEntityOfPage":"https://www.ferreteriaukra.cl/blog/arduino-vs-raspberry-pi-cual-elegir-para-proyectos-caseros-chile/",
+"datePublished":"2026-09-19T00:00:00+00:00","dateModified":"2026-09-19T00:00:00+00:00",
+"author":{"@type":"Organization","name":"Equipo Técnico Ferretería Ukra"},
+"publisher":{"@id":"https://www.ferreteriaukra.cl/#organization"},
+"articleSection":"Electrónica y Maker","keywords":"arduino vs raspberry pi, cual elegir arduino o raspberry, arduino chile kit, microcontrolador vs computador, proyectos arduino casa, automatizacion diy arduino"
+},
+{"@type":"FAQPage","@id":"https://www.ferreteriaukra.cl/blog/arduino-vs-raspberry-pi-cual-elegir-para-proyectos-caseros-chile/#faq","mainEntity":[
+{"@type":"Question","name":"¿Cuál es la diferencia real entre Arduino y Raspberry Pi?","acceptedAnswer":{"@type":"Answer","text":"No son dos versiones de lo mismo: son categorías distintas de dispositivo. Arduino es un microcontrolador, es decir, un chip que ejecuta un solo programa de forma continua y directa sobre el hardware, sin sistema operativo, lo que le permite responder a una entrada en microsegundos y arrancar instantáneamente al recibir energía. Raspberry Pi es un computador completo que corre un sistema operativo, normalmente una distribución de Linux, con procesador, memoria, puertos USB, salida de video y conectividad de red, capaz de ejecutar varios programas a la vez, navegar por internet y manejar archivos. Por eso Arduino es superior para controlar sensores y actuadores con precisión temporal, mientras que Raspberry Pi lo es para tareas que requieren procesamiento, interfaz gráfica o conexión a servicios en red."}},
+{"@type":"Question","name":"¿Cuál conviene para empezar desde cero?","acceptedAnswer":{"@type":"Answer","text":"Para quien nunca ha programado ni armado un circuito, Arduino suele ser el punto de partida más adecuado por tres razones. Primero, el modelo mental es más simple: se escribe un programa, se carga a la placa y esta lo ejecuta, sin sistema operativo ni configuración previa de por medio. Segundo, el riesgo de dañar el equipo es menor y las placas son más económicas de reemplazar si se comete un error de conexión. Tercero, la relación entre el código y el mundo físico es inmediata y visible, lo que hace mucho más fácil entender qué está pasando cuando algo no funciona. Una vez dominados los conceptos básicos de entradas, salidas y lógica de control, pasar a Raspberry Pi resulta bastante natural."}},
+{"@type":"Question","name":"¿Puedo usar Arduino o Raspberry Pi para controlar luces de 220 V?","acceptedAnswer":{"@type":"Answer","text":"Estas placas trabajan con tensiones muy bajas, del orden de 3,3 a 5 voltios, y jamás deben conectarse directamente a la red domiciliaria de 220 voltios. Para controlar una carga de red se requiere una etapa de aislación intermedia, como un módulo de relé o un relé de estado sólido, dimensionado para la corriente de la carga, y el cableado del lado de 220 voltios debe cumplir la normativa eléctrica y ejecutarse con las mismas precauciones que cualquier instalación domiciliaria. Para iluminación doméstica corriente, en la mayoría de los casos es más seguro y más simple usar un sensor o interruptor comercial certificado para 220 voltios en vez de construir el control desde cero."}},
+{"@type":"Question","name":"¿Qué kit conviene comprar para empezar?","acceptedAnswer":{"@type":"Answer","text":"Conviene un kit que incluya la placa, una protoboard, cables de conexión, resistencias, LEDs, algunos sensores básicos y componentes de salida como un zumbador o un servomotor, porque comprar los componentes sueltos al inicio resulta más caro y es fácil olvidar piezas elementales. Entre las placas, las de mayor cantidad de pines y memoria dan más margen para crecer en el mismo proyecto sin quedarse corto, mientras que las compactas son suficientes para los primeros ejercicios y más baratas de reemplazar. Lo importante es empezar con un kit que permita hacer varios ejercicios distintos, porque la curva de aprendizaje avanza mucho más rápido variando proyectos que repitiendo el mismo montaje."}}
+]}
+]}
+</script>
+<style>:root{--primary:#D9381E;--primary-hover:#B82A13;--secondary:#1E293B;--accent:#F59E0B;--bg-body:#F8FAFC;--bg-card:#FFF;--text-main:#0F172A;--text-muted:#64748B;--border-color:#E2E8F0;--radius-sm:.375rem;--radius-md:.75rem;--radius-lg:1rem;--shadow-sm:0 1px 3px rgba(0,0,0,.08);--shadow-md:0 4px 12px rgba(0,0,0,.06);--font-stack:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{overflow-x:hidden;scroll-behavior:smooth}body{font-family:var(--font-stack);background:var(--bg-body);color:var(--text-main);line-height:1.65;font-size:1rem;-webkit-font-smoothing:antialiased;overflow-x:hidden}a{color:#0057e7;text-decoration:none;transition:color .2s}a:hover{text-decoration:underline}img,svg{max-width:100%;height:auto;display:block}:focus-visible{outline:3px solid var(--accent);outline-offset:2px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.progress-container{position:fixed;top:0;left:0;width:100%;height:4px;background:transparent;z-index:100}.progress-bar{height:100%;background:linear-gradient(90deg,var(--primary),var(--accent));width:0%;transition:width .1s linear}.top-bar{background:#0F172A;color:#94A3B8;font-size:.85rem;padding:.4rem 1rem;text-align:center;border-bottom:1px solid #1E293B}.top-bar span{color:#F8FAFC;font-weight:600}header{background:var(--secondary);color:#FFF;position:sticky;top:0;z-index:90;box-shadow:var(--shadow-md)}.header-inner{max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.85rem 1.5rem;gap:1rem;flex-wrap:wrap}.brand-logo{display:flex;align-items:center;gap:.75rem;font-size:1.35rem;font-weight:800;color:#FFF;letter-spacing:-.02em}.brand-logo:hover{text-decoration:none;color:#FFF}.brand-logo svg{width:34px;height:34px;fill:var(--primary);flex-shrink:0}.brand-logo .badge{font-size:.62rem;background:var(--primary);color:#FFF;padding:2px 6px;border-radius:4px;text-transform:uppercase;font-weight:700}.menu-toggle{display:none;background:0 0;border:none;color:#FFF;font-size:1.75rem;line-height:1;cursor:pointer;padding:.25rem .5rem}nav ul{display:flex;list-style:none;gap:1.5rem;align-items:center;flex-wrap:wrap}nav a{color:#CBD5E1;font-weight:500;font-size:.95rem;padding:.4rem .2rem;border-bottom:2px solid transparent}nav a:hover,nav a[aria-current="page"]{color:#FFF;text-decoration:none;border-bottom-color:var(--primary)}.container{max-width:1240px;margin:2rem auto;padding:0 1.5rem;width:100%}.breadcrumbs{display:flex;align-items:center;gap:.5rem;font-size:.875rem;color:var(--text-muted);margin-bottom:1.5rem;flex-wrap:wrap}.breadcrumbs a{color:var(--text-muted)}.breadcrumbs a:hover{color:var(--primary)}.breadcrumbs .separator{color:#CBD5E1}.layout-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;min-width:0}.layout-grid>main,.layout-grid>aside.sidebar{min-width:0;width:100%}article.main-article{background:var(--bg-card);border-radius:var(--radius-lg);padding:2.5rem;box-shadow:var(--shadow-sm);border:1px solid var(--border-color);min-width:0;width:100%}.category-pill{display:inline-block;background:#FEF2F2;color:var(--primary);font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;padding:.3rem .8rem;border-radius:50px;margin-bottom:1rem;border:1px solid #FCA5A5}h1.article-title{font-size:2.1rem;line-height:1.3;font-weight:800;color:#0F172A;margin-bottom:1.25rem;letter-spacing:-.02em;overflow-wrap:break-word}.article-meta{display:flex;flex-wrap:wrap;align-items:center;gap:1.25rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border-color);margin-bottom:2rem;font-size:.9rem;color:var(--text-muted)}.article-body{min-width:0}.article-body p{margin-bottom:1.25rem;color:#334155;font-size:1.05rem;line-height:1.75;overflow-wrap:break-word}.article-body .lead{font-size:1.15rem;line-height:1.75;color:#1E293B}.article-body h2{font-size:1.55rem;color:#0F172A;margin-top:2.25rem;margin-bottom:1rem;padding-bottom:.4rem;border-bottom:2px solid #F1F5F9;overflow-wrap:break-word}.article-body h3{font-size:1.2rem;color:#1E293B;margin-top:1.75rem;margin-bottom:.75rem;overflow-wrap:break-word}.article-body ul,.article-body ol{margin:1rem 0 1.5rem 1.5rem;color:#334155;line-height:1.75}.article-body li{margin-bottom:.5rem}.article-body strong{color:#1E293B}.table-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.75rem 0;border-radius:var(--radius-md);border:1px solid var(--border-color);max-width:100%}.table-wrapper table{width:100%;border-collapse:collapse;min-width:560px}.table-wrapper th,.table-wrapper td{padding:11px 12px;border:1px solid #E2E8F0;text-align:left;vertical-align:top}.table-wrapper th{background:#F1F5F9;color:#0F172A;font-weight:800}.editorial-notice{background:#EFF6FF;border:1px solid #BFDBFE;border-left:4px solid #3B82F6;padding:1.2rem 1.4rem;margin:1.5rem 0;border-radius:0 var(--radius-md) var(--radius-md) 0;color:#1E3A8A;font-size:.95rem}.notice{background:#FFF7ED;border:1px solid #FED7AA;border-left:4px solid #F59E0B;padding:1.1rem 1.25rem;margin:1.5rem 0;border-radius:0 var(--radius-md) var(--radius-md) 0;color:#7C2D12}.checklist{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:var(--radius-md);padding:1.25rem 1.5rem;margin:1.5rem 0}.checklist h3{margin-top:0;color:#166534}.checklist ul{margin-bottom:0;color:#166534}.faq-list{margin:2rem 0}.faq-item{background:#F8FAFC;border:1px solid #E2E8F0;border-radius:var(--radius-md);padding:1.25rem 1.5rem;margin-bottom:1.25rem}.faq-item h3{font-size:1.15rem;color:#0F172A;margin-top:0;margin-bottom:.6rem;border-bottom:0}.faq-item p{margin-bottom:0;color:#334155;line-height:1.65}aside.sidebar{display:flex;flex-direction:column;gap:2rem}.widget{background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:1.5rem;box-shadow:var(--shadow-sm)}.widget-title{font-size:1.1rem;font-weight:800;color:#0F172A;margin-bottom:1.25rem;padding-bottom:.5rem;border-bottom:2px solid var(--primary)}.widget ul{list-style:none;padding:0;margin:0}.widget li{padding:.55rem 0;border-bottom:1px solid #F1F5F9;font-size:.92rem;line-height:1.45}.widget li:last-child{border-bottom:0}.widget .button-link{display:block;text-align:center;padding:.65rem;background:var(--primary);color:#FFF;font-weight:700;border-radius:var(--radius-sm);margin-top:.75rem}.widget .button-link:hover{background:var(--primary-hover);text-decoration:none}footer{background:#0F172A;color:#94A3B8;padding:3rem 0 1.5rem;margin-top:4rem;border-top:4px solid var(--primary)}.footer-inner{max-width:1240px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2.5rem}.footer-inner h4{color:#FFF;margin-bottom:.5rem}.footer-inner p{font-size:.875rem;margin-bottom:.4rem}.footer-bottom{max-width:1240px;margin:2.5rem auto 0;padding:1.5rem 1.5rem 0;border-top:1px solid #1E293B;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;font-size:.85rem;gap:.5rem}@media(min-width:992px){.layout-grid{grid-template-columns:2.5fr 1fr}}@media(max-width:860px){.menu-toggle{display:block}nav{display:none;width:100%;order:3;margin-top:.75rem;border-top:1px solid #334155;padding-top:.75rem}nav.active{display:block}nav ul{flex-direction:column;gap:0;width:100%}nav ul li{width:100%}nav a{display:block;padding:.75rem .25rem;border-bottom:1px solid #334155}}@media(max-width:768px){article.main-article{padding:1.75rem 1.25rem;} h1.article-title{font-size:1.6rem;} .article-body h2{font-size:1.3rem;} .article-body h3{font-size:1.1rem;} .article-body p{font-size:1rem;} .article-meta{gap:0.75rem;font-size:0.85rem;} .article-meta > div:last-child{margin-left:0 !important;width:100%;} .table-wrapper table{font-size:0.82rem;} .table-wrapper th,.table-wrapper td{padding:8px !important;white-space:normal;}}@media(max-width:600px){.header-inner{padding:0.75rem 1rem;} .brand-logo{font-size:1.05rem;gap:0.5rem;} .brand-logo svg{width:26px;height:26px;} .brand-logo span.badge{font-size:0.55rem;} .top-bar{font-size:0.75rem;line-height:1.4;padding:0.5rem 0.75rem;} .container{margin:1.25rem auto;padding:0 1rem;} article.main-article{padding:1.25rem 1rem;border-radius:var(--radius-md);} h1.article-title{font-size:1.4rem;} figure img{height:180px !important;} .widget{padding:1.15rem;} .footer-inner{gap:1.75rem;} .footer-bottom{flex-direction:column;text-align:center;} div[style*="max-width:520px"],div[style*="max-width:480px"]{padding:16px !important;max-width:100% !important;}}</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7032484018692343" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8LQF2BQ14K"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-8LQF2BQ14K');</script>
+</head>
+<body>
+<div class="progress-container" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
+<div class="top-bar">🤖 <span>Electrónica y Maker:</span> Arduino vs Raspberry Pi. <a href="/" style="color:#F59E0B;text-decoration:underline;font-weight:600;margin-left:6px;">← Volver al inicio</a></div>
+<header><div class="header-inner">
+<a href="/" class="brand-logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.4-2.4c.4-.4 0-1 0-1.3z"/></svg>Ferretería Ukra <span class="badge">Guías técnicas</span></a>
+<button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+<nav aria-label="Navegación principal" id="mainNav"><ul><li><a href="/">Inicio</a></li><li><a href="/#guias">Guías</a></li><li><a href="/blog/domotica-casa-inteligente-como-empezar-chile/">Domótica</a></li><li><a href="/blog/arduino-vs-raspberry-pi-cual-elegir-para-proyectos-caseros-chile/" aria-current="page">Arduino vs Raspberry</a></li></ul></nav>
+</div></header>
+<div class="container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Inicio</a><span class="separator">/</span><a href="/#guias">Electrónica</a><span class="separator">/</span><span aria-current="page">Arduino vs Raspberry Pi</span></nav>
+<div class="layout-grid">
+<main><article class="main-article" itemscope itemtype="https://schema.org/TechArticle">
+<span class="category-pill">Electrónica y Maker</span>
+<h1 class="article-title" itemprop="headline">Arduino vs Raspberry Pi: Cuál Elegir para Proyectos Caseros</h1>
+<div class="article-meta"><div><strong>Por Equipo Técnico Ferretería Ukra</strong></div><div>📅 19 Sep, 2026</div><div>⏱️ 18 min de lectura</div><div style="margin-left:auto;"><a href="/" style="font-weight:600;color:var(--primary);">← Inicio</a></div></div>
+<div class="article-body" itemprop="articleBody">
+<div class="editorial-notice"><strong>Ficha editorial:</strong> Esta guía trata <strong>placas de desarrollo para proyectos de electrónica DIY</strong> de baja tensión. Es complementaria a nuestras guías de <a href="/blog/domotica-casa-inteligente-como-empezar-chile/">domótica con productos comerciales</a> (ecosistemas listos para usar, WiFi y Zigbee) y <a href="/blog/como-instalar-sensor-de-movimiento-para-luces-guia-chile/">sensor de movimiento de 220 V</a> (producto certificado de red). <strong>Advertencia:</strong> estas placas trabajan a 3,3-5 V y nunca deben conectarse directamente a 220 V.</div>
+
+<p class="lead">La pregunta "¿Arduino o Raspberry Pi?" está mal planteada, y esa es la razón por la que tanta gente compra la placa equivocada. No son dos versiones del mismo producto compitiendo por el mismo lugar: son categorías distintas de dispositivo, y la elección correcta depende de una sola cosa que se puede responder en un minuto.</p>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7032484018692343" data-ad-slot="1137373683" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<h2>La diferencia fundamental: microcontrolador vs computador</h2>
+<p><strong>Arduino es un microcontrolador.</strong> Un chip que ejecuta un solo programa, de forma continua y directa sobre el hardware, sin sistema operativo. Enciendes y en un instante ya está corriendo tu código. Responde a una entrada en microsegundos, siempre con el mismo tiempo de respuesta.</p>
+<p><strong>Raspberry Pi es un computador completo.</strong> Corre un sistema operativo (normalmente Linux), con procesador, memoria, USB, salida de video y red. Puede ejecutar varios programas a la vez, navegar, manejar archivos y servir páginas web.</p>
+<div class="notice"><strong>La pregunta que resuelve la elección:</strong> ¿tu proyecto necesita <strong>reaccionar</strong> o necesita <strong>pensar</strong>?
+<br>• Reaccionar a sensores con precisión temporal, mover motores, leer entradas de forma continua → <strong>Arduino</strong>.
+<br>• Procesar imágenes, servir una interfaz web, guardar bases de datos, conectarse a servicios en línea → <strong>Raspberry Pi</strong>.</div>
+
+<h2>Comparativa técnica</h2>
+<div class="table-wrapper"><table>
+<thead><tr><th>Aspecto</th><th>Arduino</th><th>Raspberry Pi</th></tr></thead>
+<tbody>
+<tr><td><strong>Qué es</strong></td><td>Microcontrolador</td><td>Computador de placa única</td></tr>
+<tr><td><strong>Sistema operativo</strong></td><td>Ninguno: ejecuta tu programa directo</td><td>Linux u otro SO</td></tr>
+<tr><td><strong>Arranque</strong></td><td>Instantáneo</td><td>Toma segundos (booteo)</td></tr>
+<tr><td><strong>Tiempo real</strong></td><td>Determinista y preciso</td><td>El SO introduce latencia variable</td></tr>
+<tr><td><strong>Consumo</strong></td><td>Muy bajo: viable a pilas</td><td>Considerablemente mayor</td></tr>
+<tr><td><strong>Entradas analógicas</strong></td><td>Sí, integradas</td><td>No: requiere conversor externo</td></tr>
+<tr><td><strong>Multitarea</strong></td><td>No (un solo programa)</td><td>Sí</td></tr>
+<tr><td><strong>Red / internet</strong></td><td>Con módulo adicional</td><td>Integrada (WiFi y Ethernet)</td></tr>
+<tr><td><strong>Apagado abrupto</strong></td><td>Sin consecuencias</td><td>Puede corromper la tarjeta SD</td></tr>
+<tr><td><strong>Curva de aprendizaje</strong></td><td>Más suave</td><td>Requiere manejo de Linux</td></tr>
+<tr><td><strong>Costo</strong></td><td>Menor</td><td>Mayor</td></tr>
+</tbody>
+</table></div>
+
+<h3>Los tres puntos que más se subestiman</h3>
+<ol>
+<li><strong>Tiempo real.</strong> Un Arduino responde siempre en el mismo tiempo. En Raspberry Pi, el sistema operativo puede decidir atender otra tarea justo cuando tu sensor necesitaba ser leído. Para medir distancias por eco o controlar motores, esa diferencia importa.</li>
+<li><strong>Entradas analógicas.</strong> Arduino las trae integradas; Raspberry Pi no tiene, y requiere un conversor analógico-digital externo. Muchos sensores baratos entregan señal analógica.</li>
+<li><strong>Apagón.</strong> Cortar la energía a un Arduino no tiene consecuencias: al volver, arranca y sigue. A una Raspberry Pi puede corromperle la tarjeta SD. En un proyecto que vivirá conectado permanentemente, esto define cuál elegir.</li>
+</ol>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7032484018692343" data-ad-slot="1137373683" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<h2>Qué elegir según el proyecto</h2>
+<div class="table-wrapper"><table>
+<thead><tr><th>Proyecto</th><th>Placa adecuada</th><th>Por qué</th></tr></thead>
+<tbody>
+<tr><td>Riego automático con sensor de humedad</td><td>Arduino</td><td>Lectura analógica, bajo consumo, funcionamiento continuo</td></tr>
+<tr><td>Alarma de proximidad con sensor ultrasónico</td><td>Arduino</td><td>Requiere medición precisa de tiempo de eco</td></tr>
+<tr><td>Robot móvil con motores</td><td>Arduino</td><td>Control de motores en tiempo real</td></tr>
+<tr><td>Cámara de seguridad con reconocimiento</td><td>Raspberry Pi</td><td>Procesamiento de imagen</td></tr>
+<tr><td>Panel web para monitorear sensores</td><td>Raspberry Pi</td><td>Servidor web y almacenamiento</td></tr>
+<tr><td>Registro de temperatura a largo plazo</td><td>Ambos (Arduino mide, Pi almacena)</td><td>Combinación habitual</td></tr>
+<tr><td>Estación meteorológica casera</td><td>Arduino o ambos</td><td>Sensores analógicos + registro</td></tr>
+</tbody>
+</table></div>
+<div class="notice"><strong>No son excluyentes.</strong> Una combinación muy usada es un Arduino encargado de leer sensores y controlar actuadores en tiempo real, comunicándose con una Raspberry Pi que almacena los datos y entrega una interfaz web. Cada uno hace lo que hace bien.</div>
+
+<h2>Cómo empezar desde cero</h2>
+<p>Si nunca has programado ni armado un circuito, Arduino suele ser el mejor punto de partida: el modelo mental es simple (escribes un programa, lo cargas, la placa lo ejecuta), el riesgo de dañar el equipo es menor y las placas son económicas de reemplazar si te equivocas en una conexión.</p>
+<p>Para una introducción ordenada al ecosistema y a los primeros ejercicios, el sitio especializado Robotics Engineering Lab publica guías detalladas en inglés: su <a href="https://roboticsengineeringlab.com/articles/arduino-classroom-robotics-beginners">introducción a la robótica con Arduino para principiantes</a> ordena los conceptos desde cero, y su <a href="https://roboticsengineeringlab.com/articles/arduino-mega-kit-getting-started">guía para partir con un kit Arduino Mega</a> explica qué trae un kit y cómo hacer los primeros montajes.</p>
+<p>Si además quieres entender el contraste técnico con más profundidad, su artículo sobre <a href="https://roboticsengineeringlab.com/articles/arduino-vs-raspberry-pi-robotics">Arduino frente a Raspberry Pi aplicado a robótica</a> desarrolla el mismo dilema desde la perspectiva de proyectos con movimiento y control.</p>
+
+<h3>Qué debe traer un kit inicial</h3>
+<ul>
+<li><strong>La placa</strong> y su cable de conexión al computador.</li>
+<li><strong>Protoboard</strong> para armar circuitos sin soldar.</li>
+<li><strong>Cables de conexión</strong> (jumpers) en cantidad suficiente.</li>
+<li><strong>Resistencias</strong> de varios valores y <strong>LEDs</strong>.</li>
+<li><strong>Sensores básicos:</strong> temperatura, luz, movimiento, distancia.</li>
+<li><strong>Salidas:</strong> zumbador, servomotor, pantalla pequeña.</li>
+<li><strong>Pulsadores y potenciómetros</strong> para entradas.</li>
+</ul>
+<div class="notice"><strong>Compra un kit, no componentes sueltos al inicio.</strong> Sale más barato y evita el problema clásico de tener el sensor pero no la resistencia correcta. Las placas con más pines y memoria dan margen para crecer en el mismo proyecto; las compactas bastan para los primeros ejercicios y son más baratas de reemplazar.</div>
+
+<h2>Proyectos que enseñan progresivamente</h2>
+<p>La curva de aprendizaje avanza mucho más rápido variando proyectos que repitiendo el mismo montaje. Una progresión razonable:</p>
+<ol>
+<li><strong>Encender un LED</strong> y controlarlo con un pulsador (entradas y salidas digitales).</li>
+<li><strong>Leer un sensor analógico</strong> y mostrar el valor (entradas analógicas).</li>
+<li><strong>Controlar un servomotor</strong> según la lectura de un sensor (actuadores).</li>
+<li><strong>Combinar varios sensores</strong> con lógica de decisión.</li>
+<li><strong>Armar algo que se mueva:</strong> un vehículo con motores y sensores es el proyecto que más conceptos integra a la vez. La serie de Robotics Engineering Lab sobre la <a href="https://roboticsengineeringlab.com/articles/arduino-robot-car-evolution-four-versions">evolución de un auto robot Arduino en cuatro versiones</a> muestra bien cómo un mismo proyecto se va complejizando por etapas.</li>
+</ol>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7032484018692343" data-ad-slot="1137373683" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<h2>Seguridad: la línea que no se cruza</h2>
+<div class="notice"><strong>Estas placas trabajan a 3,3 o 5 voltios. Nunca las conectes directamente a 220 V.</strong> Para controlar una carga de red se necesita una etapa de aislación intermedia (módulo de relé o relé de estado sólido) dimensionada para la corriente de la carga, y el cableado del lado de 220 V debe cumplir la normativa eléctrica con las mismas precauciones que cualquier instalación domiciliaria. Ver nuestras guías de <a href="/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/">tablero eléctrico domiciliario</a> y <a href="/blog/puesta-a-tierra-domiciliaria-como-hacerla-y-medirla-chile/">puesta a tierra</a>.</div>
+<p><strong>Criterio práctico:</strong> para iluminación doméstica corriente, en la mayoría de los casos es más seguro y más simple usar un <a href="/blog/como-instalar-sensor-de-movimiento-para-luces-guia-chile/">sensor de movimiento comercial certificado para 220 V</a> que construir el control desde cero. El DIY con microcontroladores brilla en lo que no existe como producto comercial, no en reemplazar productos certificados que ya resuelven bien el problema.</p>
+<ul>
+<li><strong>Verifica polaridad y tensión</strong> antes de energizar: invertir la alimentación daña la placa.</li>
+<li><strong>Respeta la corriente máxima por pin</strong> declarada por el fabricante. Un motor conectado directo a un pin lo quema.</li>
+<li><strong>Usa fuente de alimentación externa</strong> para motores y cargas: el puerto USB no alcanza.</li>
+<li><strong>Para medir en circuitos,</strong> revisa nuestra guía de <a href="/blog/como-usar-un-multimetro-guia-para-principiantes/">uso del multímetro</a>.</li>
+</ul>
+
+<h2>Herramientas complementarias</h2>
+<ul>
+<li><strong>Multímetro:</strong> imprescindible para verificar continuidad y tensión. Ver <a href="/blog/como-usar-un-multimetro-guia-para-principiantes/">cómo usar un multímetro</a>.</li>
+<li><strong>Cautín y estaño</strong> cuando pases de la protoboard a un montaje permanente.</li>
+<li><strong>Pelacables y alicate de corte</strong> de precisión.</li>
+<li><strong>Caja o gabinete</strong> para proteger el montaje final del polvo y la humedad.</li>
+<li><strong>Fuente de poder regulada</strong> si el proyecto quedará permanente.</li>
+</ul>
+
+<h2>Precios referenciales en Chile 2026</h2>
+<div class="table-wrapper"><table>
+<thead><tr><th>Ítem</th><th>Precio referencial (CLP)</th></tr></thead>
+<tbody>
+<tr><td>Placa Arduino compatible (compacta)</td><td>$8.000 – $25.000</td></tr>
+<tr><td>Placa Arduino de mayor capacidad</td><td>$25.000 – $70.000</td></tr>
+<tr><td>Kit completo de iniciación</td><td>$30.000 – $120.000</td></tr>
+<tr><td>Raspberry Pi (placa sola, según modelo)</td><td>$50.000 – $200.000</td></tr>
+<tr><td>Kit Raspberry Pi con fuente y carcasa</td><td>$90.000 – $300.000</td></tr>
+<tr><td>Módulo de relé</td><td>$3.000 – $15.000</td></tr>
+<tr><td>Protoboard y jumpers</td><td>$5.000 – $15.000</td></tr>
+<tr><td>Multímetro básico</td><td>$10.000 – $40.000</td></tr>
+</tbody>
+</table></div>
+
+<h2>Checklist para decidir</h2>
+<div class="checklist">
+<h3>Responde estas preguntas antes de comprar</h3>
+<ul>
+<li>☑️ ¿El proyecto necesita reaccionar en tiempos precisos? → Arduino</li>
+<li>☑️ ¿Necesita procesar imágenes o servir una interfaz web? → Raspberry Pi</li>
+<li>☑️ ¿Hay sensores analógicos? → Arduino (o conversor externo en Pi)</li>
+<li>☑️ ¿Funcionará a pilas o con consumo mínimo? → Arduino</li>
+<li>☑️ ¿Puede quedarse sin energía de golpe? → Arduino tolera; Pi no</li>
+<li>☑️ ¿Es tu primer proyecto de electrónica? → Arduino</li>
+<li>☑️ ¿Vas a controlar algo de 220 V? → Necesitas etapa de relé y precaución eléctrica</li>
+<li>☑️ ¿Existe un producto comercial certificado que ya lo resuelve? → Evalúa usarlo</li>
+</ul>
+</div>
+
+<h2>Preguntas frecuentes</h2>
+<div class="faq-list">
+<div class="faq-item"><h3>¿Diferencia real entre Arduino y Raspberry Pi?</h3><p>Arduino es un microcontrolador: ejecuta un solo programa directo sobre el hardware, sin sistema operativo, con arranque instantáneo y respuesta en microsegundos. Raspberry Pi es un computador completo con Linux, capaz de multitarea, red y procesamiento. Arduino manda en control de sensores y actuadores; Raspberry Pi en tareas que requieren procesar o servir información.</p></div>
+<div class="faq-item"><h3>¿Cuál conviene para empezar?</h3><p>Arduino, por tres razones: el modelo mental es más simple (escribes, cargas, ejecuta), el riesgo de dañar el equipo es menor y las placas son baratas de reemplazar, y la relación entre código y mundo físico es inmediata. Dominados los conceptos de entradas, salidas y lógica, pasar a Raspberry Pi resulta natural.</p></div>
+<div class="faq-item"><h3>¿Puedo controlar luces de 220 V?</h3><p>Nunca conectando la placa directo a la red: trabajan a 3,3-5 V. Se requiere una etapa de aislación (módulo de relé o relé de estado sólido) dimensionada para la carga, y el lado de 220 V debe cumplir normativa. Para iluminación doméstica corriente suele ser más seguro y simple usar un sensor comercial certificado.</p></div>
+<div class="faq-item"><h3>¿Qué kit conviene comprar?</h3><p>Uno que incluya placa, protoboard, jumpers, resistencias, LEDs, sensores básicos y salidas como zumbador o servomotor. Comprar componentes sueltos al inicio sale más caro y es fácil olvidar piezas elementales. Las placas con más pines dan margen para crecer; las compactas bastan para los primeros ejercicios.</p></div>
+</div>
+
+<h2>Conclusión</h2>
+<p>La elección se resuelve con una pregunta: ¿tu proyecto necesita reaccionar o pensar? Si va a leer sensores, mover motores y responder con precisión temporal, Arduino es la herramienta correcta y además el mejor lugar para aprender. Si necesita procesar imágenes, servir una interfaz o guardar datos, Raspberry Pi. Y si te preguntas por qué no usar ambos: eso es exactamente lo que hacen la mayoría de los proyectos serios.</p>
+<p><em>Contenido informativo. El control de cargas de 220 V requiere etapa de aislación adecuada y debe ejecutarse conforme a la normativa eléctrica vigente.</em></p>
+</div>
+</article></main>
+<aside class="sidebar">
+<div class="widget"><h3 class="widget-title">🤖 Electrónica y Maker</h3><ul>
+<li><a href="/blog/como-usar-un-multimetro-guia-para-principiantes/">Cómo usar un multímetro</a></li>
+<li><a href="/blog/domotica-casa-inteligente-como-empezar-chile/">Domótica comercial</a></li>
+<li><a href="/blog/como-instalar-sensor-de-movimiento-para-luces-guia-chile/">Sensor de movimiento 220 V</a></li>
+<li><a href="/blog/cableado-de-red-domestica-como-instalar-ethernet-en-casa-chile/">Cableado de red</a></li>
+</ul><a href="/#guias" class="button-link">Todas las guías</a></div>
+<div class="widget"><h3 class="widget-title">⚡ Seguridad Eléctrica</h3><ul>
+<li><a href="/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/">Tablero eléctrico SEC</a></li>
+<li><a href="/blog/puesta-a-tierra-domiciliaria-como-hacerla-y-medirla-chile/">Puesta a tierra</a></li>
+<li><a href="/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/">Código de colores</a></li>
+<li><a href="/blog/como-elegir-el-grosor-del-cable-para-una-extension-guia-completa/">Grosor de cable</a></li>
+</ul></div>
+<div class="widget"><h3 class="widget-title">📌 Dato Clave</h3><p style="font-size:.9rem;color:#334155;line-height:1.65;margin:0;">¿Tu proyecto necesita reaccionar o pensar? Reaccionar a sensores en tiempos precisos: Arduino. Procesar, servir web o guardar datos: Raspberry Pi.</p></div>
+</aside>
+</div>
+</div>
+<footer><div class="footer-inner">
+<div><h4>Ferretería Ukra Chile</h4><p>Portal técnico de electrónica, electricidad, construcción y hogar en Chile.</p></div>
+<div><h4>Electrónica</h4>
+<p><a href="/blog/como-usar-un-multimetro-guia-para-principiantes/">→ Usar un multímetro</a></p>
+<p><a href="/blog/domotica-casa-inteligente-como-empezar-chile/">→ Domótica</a></p>
+<p><a href="/blog/cableado-de-red-domestica-como-instalar-ethernet-en-casa-chile/">→ Cableado de red</a></p>
+</div>
+<div><h4>Electricidad</h4>
+<p><a href="/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/">→ Tablero eléctrico</a></p>
+<p><a href="/blog/puesta-a-tierra-domiciliaria-como-hacerla-y-medirla-chile/">→ Puesta a tierra</a></p>
+<p><a href="/">→ Inicio Ferretería Ukra</a></p>
+</div>
+</div><div class="footer-bottom"><div>&copy; 2026 Ferretería Ukra Chile. Precios referenciales.</div><div>Electrónica y Maker</div></div></footer>
+<script>(function(){const p=document.getElementById('progressBar');let t=false;function u(){const s=document.documentElement.scrollTop||document.body.scrollTop;const h=document.documentElement.scrollHeight-document.documentElement.clientHeight;p.style.width=(h>0?(s/h)*100:0)+'%';t=false}window.addEventListener('scroll',function(){if(!t){window.requestAnimationFrame(u);t=true}},{passive:true})})();const m=document.getElementById('menuToggle');const n=document.getElementById('mainNav');m.addEventListener('click',function(){const o=n.classList.toggle('active');this.setAttribute('aria-expanded',o);this.innerHTML=o?'✕':'☰'});</script>
+</body></html>
