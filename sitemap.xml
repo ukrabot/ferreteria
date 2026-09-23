@@ -727,6 +727,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.ferreteriaukra.cl/blog/detector-de-cables-y-canerias-en-muros-como-usarlo-chile/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.ferreteriaukra.cl/blog/detector-de-humo-como-elegir-ubicar-y-mantener-chile/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -1045,6 +1051,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.ferreteriaukra.cl/blog/mosquiteros-para-ventanas-como-elegir-e-instalar-chile/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.ferreteriaukra.cl/blog/motor-porton-corredera-como-elegir-e-instalar-chile/</loc>
     <lastmod>2026-08-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -1351,7 +1363,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ferreteriaukra.cl/producto/mascara-de-soldar-ubermann/</loc>
+    <loc>https://www.ferreteriaukra.cl/producto/bomba-de-agua-sumergible/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -1363,21 +1375,21 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.ferreteriaukra.cl/producto/taladro-inalambrico-ubermann/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.ferreteriaukra.cl/producto/bomba-de-agua-sumergible/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://www.ferreteriaukra.cl/producto/interruptor-diferencial-25a-easy9/</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ferreteriaukra.cl/producto/mascara-de-soldar-ubermann/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.ferreteriaukra.cl/producto/taladro-inalambrico-ubermann/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
