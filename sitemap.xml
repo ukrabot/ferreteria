@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.ferreteriaukra.cl/</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1443,6 +1443,18 @@
   <url>
     <loc>https://www.ferreteriaukra.cl/blog/gas-refrigerante-aire-acondicionado-fugas-recarga-r32-chile/</loc>
     <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ferreteriaukra.cl/blog/calefaccion-mas-barata-chile-costo-por-kwh-lena-pellet-parafina-gas/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ferreteriaukra.cl/blog/sello-verde-gas-inspeccion-periodica-sello-amarillo-rojo-chile/</loc>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
