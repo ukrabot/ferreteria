@@ -199,6 +199,108 @@
     ]
   }
   </script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "ItemList",
+ "name": "Productos de Ferretería Ukra",
+ "description": "Herramientas, material eléctrico, bombas de agua y repuestos disponibles con ficha técnica y despacho a todo Chile.",
+ "numberOfItems": 15,
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "url": "https://www.ferreteriaukra.cl/producto/bateria-de-automovil-60-ah",
+   "name": "Batería de Auto 60 Ah Hankook"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "url": "https://www.ferreteriaukra.cl/producto/pistola-para-pintar-400-w",
+   "name": "Pistola para Pintar 400 W BAUKER"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "url": "https://www.ferreteriaukra.cl/producto/interruptor-automatico-20-a",
+   "name": "Interruptor Automático 20 A LEXO"
+  },
+  {
+   "@type": "ListItem",
+   "position": 4,
+   "url": "https://www.ferreteriaukra.cl/producto/martillo-carpintero-ubermann",
+   "name": "Martillo Carpintero 20 oz Ubermann"
+  },
+  {
+   "@type": "ListItem",
+   "position": 5,
+   "url": "https://www.ferreteriaukra.cl/producto/lampara-emergencia-portatil",
+   "name": "Lámpara de Emergencia Portátil LED"
+  },
+  {
+   "@type": "ListItem",
+   "position": 6,
+   "url": "https://www.ferreteriaukra.cl/producto/bomba-presurizadora-123-w",
+   "name": "Bomba Presurizadora 123 W"
+  },
+  {
+   "@type": "ListItem",
+   "position": 7,
+   "url": "https://www.ferreteriaukra.cl/producto/cortina-bano-blanca",
+   "name": "Forro de Cortina de Baño 178×180"
+  },
+  {
+   "@type": "ListItem",
+   "position": 8,
+   "url": "https://www.ferreteriaukra.cl/producto/aceite-para-generador-1-litro",
+   "name": "Aceite 15W-40 para Generador 1 L"
+  },
+  {
+   "@type": "ListItem",
+   "position": 9,
+   "url": "https://www.ferreteriaukra.cl/producto/bomba-periferica-1-hp-50-l-min",
+   "name": "Bomba Periférica 1 HP 50 l/min"
+  },
+  {
+   "@type": "ListItem",
+   "position": 10,
+   "url": "https://www.ferreteriaukra.cl/producto/electrobomba-centrifuga-2-hp-183-l-min",
+   "name": "Electrobomba Centrífuga 2 HP"
+  },
+  {
+   "@type": "ListItem",
+   "position": 11,
+   "url": "https://www.ferreteriaukra.cl/producto/bomba-de-agua-sumergible",
+   "name": "Bomba Sumergible 1 HP 178 l/min"
+  },
+  {
+   "@type": "ListItem",
+   "position": 12,
+   "url": "https://www.ferreteriaukra.cl/producto/taladro-inalambrico-ubermann",
+   "name": "Taladro Percutor Inalámbrico 20 V"
+  },
+  {
+   "@type": "ListItem",
+   "position": 13,
+   "url": "https://www.ferreteriaukra.cl/producto/generador-electrico-a-gasolina",
+   "name": "Generador Eléctrico a Gasolina 720 W"
+  },
+  {
+   "@type": "ListItem",
+   "position": 14,
+   "url": "https://www.ferreteriaukra.cl/producto/mascara-de-soldar-ubermann",
+   "name": "Máscara de Soldar Fotosensible"
+  },
+  {
+   "@type": "ListItem",
+   "position": 15,
+   "url": "https://www.ferreteriaukra.cl/producto/interruptor-diferencial-25a-easy9",
+   "name": "Interruptor Diferencial 25 A Easy9"
+  }
+ ]
+}
+</script>
+
 
   <!-- Embedded Styling -->
   <style>
@@ -813,7 +915,32 @@
       .footer-bottom { flex-direction: column; text-align: center; }
       .toast { right: 12px; left: 12px; bottom: 12px; max-width: none; }
     }
-  </style>
+  
+/* ===== Seccion de productos ===== */
+.prod-section { margin: 0 0 3rem; }
+.prod-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+.prod-head h2 { font-size: 1.6rem; font-weight: 800; color: #0F172A; margin: 0 0 .35rem; }
+.prod-head p { font-size: .95rem; color: var(--text-muted); margin: 0; max-width: 60ch; }
+.prod-ship { flex-shrink: 0; font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; color: var(--primary); background: #FEF2F2; border: 1px solid #FECACA; border-radius: 999px; padding: .45rem .9rem; }
+.prod-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1.25rem; }
+.card-prod { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .2s, box-shadow .2s; display: flex; flex-direction: column; }
+.card-prod:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.card-prod-media { background: #FFFFFF; border-bottom: 1px solid var(--border-color); aspect-ratio: 1 / 1; display: block; }
+.card-prod-media img { width: 100%; height: 100%; object-fit: contain; display: block; padding: .5rem; }
+.card-prod-body { padding: 1rem 1.1rem 1.15rem; display: flex; flex-direction: column; flex-grow: 1; }
+.card-prod-tag { font-size: .68rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: .04em; margin-bottom: .4rem; }
+.card-prod-title { font-size: .98rem; font-weight: 700; line-height: 1.3; margin: 0 0 .45rem; }
+.card-prod-title a { color: var(--text-main); }
+.card-prod-title a:hover { color: var(--primary); }
+.card-prod-excerpt { font-size: .82rem; color: var(--text-muted); line-height: 1.5; margin: 0 0 .9rem; flex-grow: 1; }
+.card-prod-foot { display: flex; align-items: center; justify-content: space-between; gap: .5rem; margin-top: auto; }
+.card-prod-price { font-size: 1.12rem; font-weight: 800; color: var(--text-main); }
+.card-prod-price small { font-size: .7rem; font-weight: 600; color: var(--text-muted); margin-left: .15rem; }
+.card-prod-cta { font-size: .8rem; font-weight: 700; color: #FFF; background: var(--primary); border-radius: 999px; padding: .42rem .85rem; white-space: nowrap; }
+.card-prod-cta:hover { background: var(--primary-hover); color: #FFF; }
+@media (max-width: 480px) { .prod-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .9rem; } .card-prod-body { padding: .8rem .85rem 1rem; } .card-prod-title { font-size: .9rem; } }
+
+</style>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LQF2BQ14K"></script>
@@ -849,7 +976,8 @@
         <nav aria-label="Navegación principal">
           <ul>
             <li><a href="/" class="active">Inicio</a></li>
-            <li><a href="#articulos">Guías Técnicas</a></li>
+            <li><a href="#productos">Productos</a></li>
+<li><a href="#articulos">Guías Técnicas</a></li>
             <li><a href="#calculadora">Calculadora</a></li>
           </ul>
         </nav>
@@ -889,9 +1017,236 @@
           <span class="stat-label">Categorías</span>
         </div>
         <div class="stat-item">
+          <span class="stat-number">15</span>
+          <span class="stat-label">Productos</span>
+        </div>
+        <div class="stat-item">
           <span class="stat-number">100%</span>
           <span class="stat-label">Normativa Chilena</span>
         </div>
+      </div>
+    </section>
+
+
+    <section class="prod-section" id="productos" aria-labelledby="productos-titulo">
+      <div class="prod-head">
+        <div>
+          <h2 id="productos-titulo">Productos disponibles en Ferretería Ukra</h2>
+          <p>Herramientas, material eléctrico, bombas de agua y repuestos con ficha técnica completa. Cada producto incluye especificaciones verificadas, advertencias de uso y las correcciones que detectamos en las fichas de los proveedores.</p>
+        </div>
+        <span class="prod-ship">Envíos a todo Chile</span>
+      </div>
+      <div class="prod-grid">
+        <article class="card-prod">
+          <a class="card-prod-media" href="/producto/bateria-de-automovil-60-ah" aria-label="Ver Batería de Auto 60 Ah Hankook">
+            <img src="/producto/bateria-de-automovil-60-ah.webp" alt="Batería de Auto 60 Ah Hankook" width="1200" height="1200" loading="lazy" decoding="async">
+          </a>
+          <div class="card-prod-body">
+            <div class="card-prod-tag">Automotriz</div>
+            <h3 class="card-prod-title"><a href="/producto/bateria-de-automovil-60-ah">Batería de Auto 60 Ah Hankook</a></h3>
+            <p class="card-prod-excerpt">12 V, 550 CCA, positivo derecho y libre de mantención. Verificamos polaridad y medidas antes de despachar.</p>
+            <div class="card-prod-foot">
+              <span class="card-prod-price">$149.990 <small>CLP</small></span>
+              <a class="card-prod-cta" href="/producto/bateria-de-automovil-60-ah">Ver ficha</a>
+            </div>
+          </div>
+        </article>
+        <article class="card-prod">
+          <a class="card-prod-media" href="/producto/pistola-para-pintar-400-w" aria-label="Ver Pistola para Pintar 400 W BAUKER">
+            <img src="/producto/pistola-para-pintar-400-w.webp" alt="Pistola para Pintar 400 W BAUKER" width="1200" height="1200" loading="lazy" decoding="async">
+          </a>
+          <div class="card-prod-body">
+            <div class="card-prod-tag">Herramientas eléctricas</div>
+            <h3 class="card-prod-title"><a href="/producto/pistola-para-pintar-400-w">Pistola para Pintar 400 W BAUKER</a></h3>
+            <p class="card-prod-excerpt">HVLP de turbina con estanque de 700 ml, 3 patrones y vaso medidor de viscosidad incluido.</p>
+            <div class="card-prod-foot">
+              <span class="card-prod-price">$59.990 <small>CLP</small></span>
+              <a class="card-prod-cta" href="/producto/pistola-para-pintar-400-w">Ver ficha</a>
+            </div>
+          </div>
+        </article>
+        <article class="card-prod">
+          <a class="card-prod-media" href="/producto/interruptor-automatico-20-a" aria-label="Ver Interruptor Automático 20 A LEXO">
+            <img src="/producto/interruptor-automatico-20-a.webp" alt="Interruptor Automático 20 A LEXO" width="1200" height="1200" loading="lazy" decoding="async">
+          </a>
+          <div class="card-prod-body">
+            <div class="card-prod-tag">Material eléctrico</div>
+            <h3 class="card-prod-title"><a href="/producto/interruptor-automatico-20-a">Interruptor Automático 20 A LEXO</a></h3>
+            <p class="card-prod-excerpt">Curva C, 1 polo y 6.000 A de capacidad de corte. Riel DIN, norma IEC 60898.</p>
+            <div class="card-prod-foot">
+              <span class="card-prod-price">$4.990 <small>CLP</small></span>
+              <a class="card-prod-cta" href="/producto/interruptor-automatico-20-a">Ver ficha</a>
+            </div>
+          </div>
+        </article>
+        <article class="card-prod">
+          <a class="card-prod-media" href="/producto/martillo-carpintero-ubermann" aria-label="Ver Martillo Carpintero 20 oz Ubermann">
+            <img src="/producto/martillo-carpintero-ubermann.webp" alt="Martillo Carpintero 20 oz Ubermann" width="1200" height="1200" loading="lazy" decoding="async">
+          </a>
+          <div class="card-prod-body">
+            <div class="card-prod-tag">Herramientas manuales</div>
+            <h3 class="card-prod-title"><a href="/producto/martillo-carpintero-ubermann">Martillo Carpintero 20 oz Ubermann</a></h3>
+            <p class="card-prod-excerpt">Uña curva, mango de fibra de vidrio antivibración y soporte magnético para iniciar el clavo.</p>
+            <div class="card-prod-foot">
+              <span class="card-prod-price">$34.990 <small>CLP</small></span>
+              <a class="card-prod-cta" href="/producto/martillo-carpintero-ubermann">Ver ficha</a>
+            </div>
+          </div>
+        </article>
+        <article class="card-prod">
+          <a class="card-prod-media" href="/producto/lampara-emergencia-portatil" aria-label="Ver Lámpara de Emergencia Portátil LED">
+            <img src="/producto/lampara-emergencia-portatil.webp" alt="Lámpara de Emergencia Portátil LED" width="1200" height="1200" loading="lazy" decoding="async">
+          </a>
+          <div class="card-prod-body">
+            <div class="card-prod-tag">Emergencia</div>
+            <h3 class="card-prod-title"><a href="/producto/lampara-emergencia-portatil">Lámpara de Emergencia Portátil LED</a></h3>
+            <p class="card-prod-excerpt">Farol recargable con radio incorporada, para cortes de luz y uso en exteriores.</p>
+            <div class="card-prod-foot">
+              <span class="card-prod-price">$49.990 <small>CLP</small></span>
+              <a class="card-prod-cta" href="/producto/lampara-emergencia-portatil">Ver ficha</a>
+            </div>
+          </div>
+        </article>
+        <article class="card-prod">
+          <a class="card-prod-media" href="/producto/bomba-presurizadora-123-w" aria-label="Ver Bomba Presurizadora 123 W">
+            <img src="/producto/bomba-presurizadora-123-w.webp" alt="Bomba Presurizadora 123 W" width="1200" height="1200" loading="lazy" decoding="async">
+          </a>
+          <div class="card-prod-body">
+            <div class="card-prod-tag">Bombas de agua</div>
+            <h3 class="card-prod-title"><a href="/producto/bomba-presurizadora-123-w">Bomba Presurizadora 123 W</a></h3>
+            <p class="card-prod-excerpt">Automática en línea, para levantar la presión de la ducha y los artefactos del hogar.</p>
+            <div class="card-prod-foot">
+              <span class="card-prod-price">$89.990 <small>CLP</small></span>
+              <a class="card-prod-cta" href="/producto/bomba-presurizadora-123-w">Ver ficha</a>
+            </div>
+          </div>
+        </article>
+        <article class="card-prod">
+          <a class="card-prod-media" href="/producto/cortina-bano-blanca" aria-label="Ver Forro de Cortina de Baño 178×180">
+            <img src="/producto/cortina-bano-blanca.webp" alt="Forro de Cortina de Baño 178×180" width="1200" height="1200" loading="lazy" decoding="async">
+          </a>
+          <div class="card-prod-body">
+            <div class="card-prod-tag">Baño</div>
+            <h3 class="card-prod-title"><a href="/producto/cortina-bano-blanca">Forro de Cortina de Baño 178×180</a></h3>
+            <p class="card-prod-excerpt">Blanco, con magnetos en el borde inferior. Pensado para usar bajo la cortina decorativa.</p>
+            <div class="card-prod-foot">
+              <span class="card-prod-price">$4.990 <small>CLP</small></span>
+              <a class="card-prod-cta" href="/producto/cortina-bano-blanca">Ver ficha</a>
+            </div>
+          </div>
+        </article>
+        <article class="card-prod">
+          <a class="card-prod-media" href="/producto/aceite-para-generador-1-litro" aria-label="Ver Aceite 15W-40 para Generador 1 L">
+            <img src="/producto/aceite-para-generador-1-litro.webp" alt="Aceite 15W-40 para Generador 1 L" width="1200" height="1200" loading="lazy" decoding="async">
+          </a>
+          <div class="card-prod-body">
+            <div class="card-prod-tag">Lubricantes</div>
+            <h3 class="card-prod-title"><a href="/producto/aceite-para-generador-1-litro">Aceite 15W-40 para Generador 1 L</a></h3>
+            <p class="card-prod-excerpt">Aceite de cárter para motores diésel de cuatro tiempos. No sirve para motores de dos tiempos.</p>
+            <div class="card-prod-foot">
+              <span class="card-prod-price">$24.990 <small>CLP</small></span>
+              <a class="card-prod-cta" href="/producto/aceite-para-generador-1-litro">Ver ficha</a>
+            </div>
+          </div>
+        </article>
+        <article class="card-prod">
+          <a class="card-prod-media" href="/producto/bomba-periferica-1-hp-50-l-min" aria-label="Ver Bomba Periférica 1 HP 50 l/min">
+            <img src="/producto/bomba-periferica-1-hp-50-l-min.webp" alt="Bomba Periférica 1 HP 50 l/min" width="1200" height="1200" loading="lazy" decoding="async">
+          </a>
+          <div class="card-prod-body">
+            <div class="card-prod-tag">Bombas de agua</div>
+            <h3 class="card-prod-title"><a href="/producto/bomba-periferica-1-hp-50-l-min">Bomba Periférica 1 HP 50 l/min</a></h3>
+            <p class="card-prod-excerpt">Alta presión y bajo caudal: ideal para elevar agua a estanques y sistemas domiciliarios.</p>
+            <div class="card-prod-foot">
+              <span class="card-prod-price">$149.990 <small>CLP</small></span>
+              <a class="card-prod-cta" href="/producto/bomba-periferica-1-hp-50-l-min">Ver ficha</a>
+            </div>
+          </div>
+        </article>
+        <article class="card-prod">
+          <a class="card-prod-media" href="/producto/electrobomba-centrifuga-2-hp-183-l-min" aria-label="Ver Electrobomba Centrífuga 2 HP">
+            <img src="/producto/electrobomba-centrifuga-2-hp-183-l-min.webp" alt="Electrobomba Centrífuga 2 HP" width="1200" height="1200" loading="lazy" decoding="async">
+          </a>
+          <div class="card-prod-body">
+            <div class="card-prod-tag">Bombas de agua</div>
+            <h3 class="card-prod-title"><a href="/producto/electrobomba-centrifuga-2-hp-183-l-min">Electrobomba Centrífuga 2 HP</a></h3>
+            <p class="card-prod-excerpt">183 l/min de caudal para riego y trasvase. Succión de hasta 6 metros.</p>
+            <div class="card-prod-foot">
+              <span class="card-prod-price">$329.990 <small>CLP</small></span>
+              <a class="card-prod-cta" href="/producto/electrobomba-centrifuga-2-hp-183-l-min">Ver ficha</a>
+            </div>
+          </div>
+        </article>
+        <article class="card-prod">
+          <a class="card-prod-media" href="/producto/bomba-de-agua-sumergible" aria-label="Ver Bomba Sumergible 1 HP 178 l/min">
+            <img src="/producto/bomba-de-agua-sumergible.webp" alt="Bomba Sumergible 1 HP 178 l/min" width="1200" height="1200" loading="lazy" decoding="async">
+          </a>
+          <div class="card-prod-body">
+            <div class="card-prod-tag">Bombas de agua</div>
+            <h3 class="card-prod-title"><a href="/producto/bomba-de-agua-sumergible">Bomba Sumergible 1 HP 178 l/min</a></h3>
+            <p class="card-prod-excerpt">Para pozo, estanque o achique. Cuerpo de acero inoxidable y flotador de nivel.</p>
+            <div class="card-prod-foot">
+              <span class="card-prod-price">$129.990 <small>CLP</small></span>
+              <a class="card-prod-cta" href="/producto/bomba-de-agua-sumergible">Ver ficha</a>
+            </div>
+          </div>
+        </article>
+        <article class="card-prod">
+          <a class="card-prod-media" href="/producto/taladro-inalambrico-ubermann" aria-label="Ver Taladro Percutor Inalámbrico 20 V">
+            <img src="/producto/taladro-inalambrico-ubermann.webp" alt="Taladro Percutor Inalámbrico 20 V" width="1200" height="1200" loading="lazy" decoding="async">
+          </a>
+          <div class="card-prod-body">
+            <div class="card-prod-tag">Herramientas eléctricas</div>
+            <h3 class="card-prod-title"><a href="/producto/taladro-inalambrico-ubermann">Taladro Percutor Inalámbrico 20 V</a></h3>
+            <p class="card-prod-excerpt">Portabrocas de 13 mm, percusión y batería de litio. Para madera, metal y albañilería.</p>
+            <div class="card-prod-foot">
+              <span class="card-prod-price">$199.990 <small>CLP</small></span>
+              <a class="card-prod-cta" href="/producto/taladro-inalambrico-ubermann">Ver ficha</a>
+            </div>
+          </div>
+        </article>
+        <article class="card-prod">
+          <a class="card-prod-media" href="/producto/generador-electrico-a-gasolina" aria-label="Ver Generador Eléctrico a Gasolina 720 W">
+            <img src="/producto/generador-electrico-a-gasolina.webp" alt="Generador Eléctrico a Gasolina 720 W" width="1200" height="1200" loading="lazy" decoding="async">
+          </a>
+          <div class="card-prod-body">
+            <div class="card-prod-tag">Energía y respaldo</div>
+            <h3 class="card-prod-title"><a href="/producto/generador-electrico-a-gasolina">Generador Eléctrico a Gasolina 720 W</a></h3>
+            <p class="card-prod-excerpt">Partida manual y estanque de 4,3 litros. Para respaldo de consumos pequeños.</p>
+            <div class="card-prod-foot">
+              <span class="card-prod-price">$199.990 <small>CLP</small></span>
+              <a class="card-prod-cta" href="/producto/generador-electrico-a-gasolina">Ver ficha</a>
+            </div>
+          </div>
+        </article>
+        <article class="card-prod">
+          <a class="card-prod-media" href="/producto/mascara-de-soldar-ubermann" aria-label="Ver Máscara de Soldar Fotosensible">
+            <img src="/producto/mascara-de-soldar-ubermann.webp" alt="Máscara de Soldar Fotosensible" width="1200" height="1200" loading="lazy" decoding="async">
+          </a>
+          <div class="card-prod-body">
+            <div class="card-prod-tag">Protección personal</div>
+            <h3 class="card-prod-title"><a href="/producto/mascara-de-soldar-ubermann">Máscara de Soldar Fotosensible</a></h3>
+            <p class="card-prod-excerpt">Oscurecimiento automático con alimentación LED. Protección para arco eléctrico.</p>
+            <div class="card-prod-foot">
+              <span class="card-prod-price">$109.990 <small>CLP</small></span>
+              <a class="card-prod-cta" href="/producto/mascara-de-soldar-ubermann">Ver ficha</a>
+            </div>
+          </div>
+        </article>
+        <article class="card-prod">
+          <a class="card-prod-media" href="/producto/interruptor-diferencial-25a-easy9" aria-label="Ver Interruptor Diferencial 25 A Easy9">
+            <img src="/producto/interruptor-diferencial-25a-easy9.webp" alt="Interruptor Diferencial 25 A Easy9" width="1200" height="1200" loading="lazy" decoding="async">
+          </a>
+          <div class="card-prod-body">
+            <div class="card-prod-tag">Protección eléctrica</div>
+            <h3 class="card-prod-title"><a href="/producto/interruptor-diferencial-25a-easy9">Interruptor Diferencial 25 A Easy9</a></h3>
+            <p class="card-prod-excerpt">Schneider Electric, 2 polos y 30 mA. Protege a las personas contra fugas a tierra.</p>
+            <div class="card-prod-foot">
+              <span class="card-prod-price">$37.300 <small>CLP</small></span>
+              <a class="card-prod-cta" href="/producto/interruptor-diferencial-25a-easy9">Ver ficha</a>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
