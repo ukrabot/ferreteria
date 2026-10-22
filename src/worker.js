@@ -601,6 +601,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110227676',
   },
+  {
+    slug: 'adaptador-universal-multinorma-halux',
+    name: 'Adaptador Universal Multinorma 10 A Blanco Halux',
+    price: 4490,
+    image: '/producto/adaptador-universal-multinorma-halux.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110223343',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
