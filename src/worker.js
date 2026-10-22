@@ -465,6 +465,51 @@ async function handleAdminDeleteOrder(request, env, orderId) {
   return json({ deleted: true, order_number: existing.order_number });
 }
 
+// ── Route: POST /api/admin/products (create) ────────────────────────
+
+async function handleAdminCreateProduct(request, env) {
+  if (!checkAdmin(request, env)) return err('No autorizado', 401);
+
+  let data;
+  try {
+    data = await request.json();
+  } catch {
+    return err('JSON inválido');
+  }
+
+  const { slug, name, price, image, category, status } = data;
+  if (!slug || !name || !price) {
+    return err('Campos obligatorios: slug, name, price');
+  }
+
+  // Check slug doesn't already exist
+  const existing = await env.DB.prepare(
+    `SELECT id FROM products WHERE slug = ?`
+  ).bind(slug).first();
+  if (existing) return err('Ya existe un producto con ese slug', 409);
+
+  const parsedPrice = parseInt(price);
+  if (isNaN(parsedPrice) || parsedPrice < 0) return err('Precio inválido');
+
+  await env.DB.prepare(
+    `INSERT INTO products (slug, name, price, image, category, status)
+     VALUES (?, ?, ?, ?, ?, ?)`
+  ).bind(
+    slug.trim(),
+    name.trim(),
+    parsedPrice,
+    (image || '').trim(),
+    (category || '').trim(),
+    status || 'available'
+  ).run();
+
+  const created = await env.DB.prepare(
+    `SELECT id, slug, name, price, image, category, status, updated_at FROM products WHERE slug = ?`
+  ).bind(slug.trim()).first();
+
+  return json(created, 201);
+}
+
 // ── Main router ──────────────────────────────────────────────────────
 
 export default {
@@ -498,6 +543,7 @@ export default {
       if (path === '/api/admin/orders' && method === 'GET') return handleAdminOrders(request, env, url);
       if (path === '/api/admin/stats' && method === 'GET') return handleAdminStats(request, env);
       if (path === '/api/admin/products' && method === 'GET') return handleAdminProducts(request, env);
+      if (path === '/api/admin/products' && method === 'POST') return handleAdminCreateProduct(request, env);
 
       // Admin product update: PUT /api/admin/products/SLUG
       const productMatch = path.match(/^\/api\/admin\/products\/([a-z0-9-]+)$/);
