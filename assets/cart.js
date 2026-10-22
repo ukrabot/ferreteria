@@ -167,20 +167,23 @@
         dbStatus = dbProd.status || 'available';
         if (dbProd.price) {
           info.price = dbProd.price; // Use DB price for cart
-          // Update displayed price on the page
-          const priceStrong = document.querySelector('.price-panel strong');
-          if (priceStrong) priceStrong.innerHTML = fmt(dbProd.price) + ' <small>CLP</small>';
-          // Update buy-box price if present
-          document.querySelectorAll('.buy-box p strong').forEach(el => {
-            if (/\$[\d.,]+/.test(el.textContent)) el.textContent = fmt(dbProd.price) + ' CLP';
-          });
+          showPrice(dbProd.price);
         }
       }
     } catch {}
 
-    const isAvailable = dbStatus === 'available';
+    function showPrice(price) {
+      // Update displayed price on the page
+      const priceStrong = document.querySelector('.price-panel strong');
+      if (priceStrong) priceStrong.innerHTML = fmt(price) + ' <small>CLP</small>';
+      // Update buy-box price if present
+      document.querySelectorAll('.buy-box p strong').forEach(el => {
+        if (/\$[\d.,]+/.test(el.textContent)) el.textContent = fmt(price) + ' CLP';
+      });
+    }
 
-    function createCartBtn(fullWidth) {
+    function createCartBtn(fullWidth, status = dbStatus) {
+      const isAvailable = status === 'available';
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'btn btn-cart';
@@ -197,7 +200,7 @@
         btn.onmouseleave = () => { btn.style.background = '#1e1b15'; btn.style.transform = 'none'; };
         btn.onclick = (e) => { e.preventDefault(); addToCart(info); };
       } else {
-        const label = dbStatus === 'agotado' ? '🔴 Producto Agotado' : '⚫ No Disponible';
+        const label = status === 'agotado' ? '🔴 Producto Agotado' : '⚫ No Disponible';
         btn.innerHTML = label;
         btn.disabled = true;
         Object.assign(btn.style, {
@@ -223,6 +226,50 @@
       if (!card || card.querySelector('.btn-cart')) return;
       card.appendChild(createCartBtn(true));
     });
+
+    // Color/variant picker. Markup: <button class="variant-btn" data-slug data-name
+    // data-image data-price data-param data-alt>. Each variant is its own DB product
+    // (own SKU, price, status) but shares this page, so there is no duplicate URL.
+    const vbtns = document.querySelectorAll('.variant-btn');
+    if (vbtns.length) {
+      async function selectVariant(b, updateUrl) {
+        vbtns.forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));
+        info.slug = b.dataset.slug;
+        info.name = b.dataset.name;
+        info.image = b.dataset.image;
+        info.price = parseInt(b.dataset.price) || info.price;
+        let status = 'available';
+        try {
+          const r = await fetch(`/api/products?slug=${info.slug}`);
+          if (r.ok) {
+            const d = await r.json();
+            status = d.status || 'available';
+            if (d.price) info.price = d.price;
+          }
+        } catch {}
+        showPrice(info.price);
+        document.querySelectorAll('.btn-cart').forEach(old => {
+          old.replaceWith(createCartBtn(old.style.width === '100%', status));
+        });
+        const main = document.getElementById('mainShot');
+        if (main && b.dataset.image) {
+          main.src = b.dataset.image;
+          if (b.dataset.alt) main.alt = b.dataset.alt;
+          document.querySelectorAll('.thumbs button').forEach(t =>
+            t.setAttribute('aria-current', t.dataset.src === b.dataset.image ? 'true' : 'false'));
+        }
+        const label = document.getElementById('variant-label');
+        if (label) label.textContent = b.textContent.trim();
+        if (updateUrl) {
+          const url = b.dataset.param ? `?color=${b.dataset.param}` : location.pathname;
+          history.replaceState(null, '', url);
+        }
+      }
+      vbtns.forEach(b => b.addEventListener('click', () => selectVariant(b, true)));
+      const wanted = new URLSearchParams(location.search).get('color');
+      const pre = [...vbtns].find(b => b.dataset.param && b.dataset.param === wanted);
+      if (pre) selectVariant(pre, false);
+    }
   }
 
   // ── Catalog page: add mini-cart buttons to product cards ───────────
