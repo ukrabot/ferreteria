@@ -519,10 +519,38 @@ async function handleAdminCreateProduct(request, env) {
   return json(created, 201);
 }
 
+// ── One-time product seed (runs once, then remove) ──────────────────
+
+const SEED_PRODUCTS = [
+  {
+    slug: 'cable-libre-halogenos-lsoh-2-5-mm2-100m',
+    name: 'Cable Libre de Halógenos H07Z1-K 2,5 mm² Rojo 100 m MADECO',
+    price: 89990,
+    image: '/producto/cable-libre-halogenos-lsoh-2-5-mm2-100m.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+  },
+];
+
+async function seedProducts(env) {
+  for (const p of SEED_PRODUCTS) {
+    const exists = await env.DB.prepare('SELECT id FROM products WHERE slug = ?').bind(p.slug).first();
+    if (!exists) {
+      await env.DB.prepare(
+        'INSERT INTO products (slug, name, price, image, category, status) VALUES (?, ?, ?, ?, ?, ?)'
+      ).bind(p.slug, p.name, p.price, p.image, p.category, p.status).run();
+      console.log('Seeded product:', p.slug);
+    }
+  }
+}
+
 // ── Main router ──────────────────────────────────────────────────────
 
 export default {
   async fetch(request, env, ctx) {
+    // Seed products on first request (lightweight check)
+    ctx.waitUntil(seedProducts(env));
+
     const url = new URL(request.url);
     // Normalize: strip trailing slash (except root) so /api/flow/return/ matches /api/flow/return
     const rawPath = url.pathname;
