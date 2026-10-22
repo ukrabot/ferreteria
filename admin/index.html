@@ -121,6 +121,16 @@ tr:hover td{background:rgba(15,23,42,.3)}
 .toast.show{transform:translateY(0);opacity:1}
 .toast.error{background:#7f1d1d;color:#fca5a5}
 
+/* Add product modal */
+.add-form label{display:block;font-size:.72rem;text-transform:uppercase;color:#94a3b8;font-weight:700;letter-spacing:.04em;margin-bottom:4px}
+.add-form input,.add-form select{width:100%;padding:10px 12px;border:1px solid #334155;border-radius:8px;background:#0f172a;color:#e2e8f0;font-size:.88rem;font-family:inherit;margin-bottom:12px}
+.add-form input:focus,.add-form select:focus{outline:none;border-color:#a97b23;box-shadow:0 0 0 3px rgba(169,123,35,.12)}
+.add-form .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.add-form .submit-btn{width:100%;padding:12px;background:#a97b23;color:#fff;border:none;border-radius:999px;font-weight:700;font-size:.95rem;cursor:pointer;transition:.2s;margin-top:4px}
+.add-form .submit-btn:hover{background:#8c6419}
+.add-form .submit-btn:disabled{opacity:.5;cursor:not-allowed}
+.add-form .slug-preview{font-size:.72rem;color:#64748b;margin:-8px 0 12px;word-break:break-all}
+
 @media(max-width:700px){
   .dash-header{padding:10px 14px}
   .dash-body{padding:16px 10px}
@@ -170,8 +180,11 @@ tr:hover td{background:rgba(15,23,42,.3)}
 
     <!-- PRODUCTS TAB -->
     <div class="tab-content active" id="tab-products">
-      <div class="search-box">
-        <input type="text" id="prod-search" placeholder="Buscar producto por nombre, slug o categoría…" autocomplete="off">
+      <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px;flex-wrap:wrap">
+        <div class="search-box" style="flex:1;min-width:200px;margin-bottom:0">
+          <input type="text" id="prod-search" placeholder="Buscar producto por nombre, slug o categoría…" autocomplete="off">
+        </div>
+        <button class="btn-small" style="background:#a97b23;color:#fff;padding:10px 18px;font-size:.85rem" onclick="showAddProduct()">+ Agregar Producto</button>
       </div>
       <div class="filters" id="prod-filters">
         <button class="filter-btn active" data-status="all">Todos</button>
@@ -570,6 +583,102 @@ tr:hover td{background:rgba(15,23,42,.3)}
   };
 
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  // ── Add Product ────────────────────────────────────────────────────
+
+  function slugify(text) {
+    return text.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')
+      .replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').substring(0,80);
+  }
+
+  window.showAddProduct = function() {
+    const mc = $('modal-content');
+    mc.innerHTML = `
+      <h2>➕ Agregar Producto</h2>
+      <form class="add-form" onsubmit="return submitNewProduct(event)">
+        <label for="ap-name">Nombre del producto *</label>
+        <input id="ap-name" type="text" required placeholder="Ej: Cable Libre de Halógenos H07Z1-K 2,5 mm²" oninput="updateSlugPreview()">
+        <label for="ap-slug">Slug (URL) *</label>
+        <input id="ap-slug" type="text" required placeholder="cable-libre-halogenos-lsoh-2-5-mm2-100m" oninput="updateSlugPreview()">
+        <div class="slug-preview" id="ap-slug-preview">/producto/...</div>
+        <div class="row2">
+          <div>
+            <label for="ap-price">Precio CLP *</label>
+            <input id="ap-price" type="number" required min="0" step="10" placeholder="89990">
+          </div>
+          <div>
+            <label for="ap-category">Categoría</label>
+            <input id="ap-category" type="text" placeholder="Material Eléctrico">
+          </div>
+        </div>
+        <label for="ap-image">URL imagen</label>
+        <input id="ap-image" type="text" placeholder="/producto/mi-producto.webp">
+        <label for="ap-status">Estado</label>
+        <select id="ap-status">
+          <option value="available">✅ Disponible</option>
+          <option value="agotado">🔴 Agotado</option>
+          <option value="no_disponible">⚫ No disponible</option>
+        </select>
+        <button type="submit" class="submit-btn" id="ap-submit">Crear Producto</button>
+      </form>
+      <button class="close-btn" onclick="closeModal()" style="margin-top:12px">Cancelar</button>
+    `;
+    $('modal-overlay').style.display = 'flex';
+
+    // Auto-generate slug from name
+    $('ap-name').addEventListener('input', function() {
+      if (!$('ap-slug')._manual) {
+        $('ap-slug').value = slugify(this.value);
+        updateSlugPreview();
+      }
+    });
+    $('ap-slug').addEventListener('input', function() { this._manual = this.value !== ''; });
+  };
+
+  window.updateSlugPreview = function() {
+    const slug = ($('ap-slug') || {}).value || '';
+    const el = $('ap-slug-preview');
+    if (el) el.textContent = slug ? '/producto/' + slug + '/' : '/producto/...';
+  };
+
+  window.submitNewProduct = async function(e) {
+    e.preventDefault();
+    const btn = $('ap-submit');
+    btn.disabled = true;
+    btn.textContent = 'Creando…';
+
+    const data = {
+      slug: $('ap-slug').value.trim(),
+      name: $('ap-name').value.trim(),
+      price: parseInt($('ap-price').value),
+      image: $('ap-image').value.trim(),
+      category: $('ap-category').value.trim(),
+      status: $('ap-status').value,
+    };
+
+    try {
+      const res = await apiFetch('/api/admin/products', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const result = await res.json();
+      if (res.ok) {
+        toast('Producto creado: ' + data.name);
+        closeModal();
+        loadProducts();
+      } else {
+        toast(result.error || 'Error al crear producto', true);
+        btn.disabled = false;
+        btn.textContent = 'Crear Producto';
+      }
+    } catch {
+      toast('Error de conexión', true);
+      btn.disabled = false;
+      btn.textContent = 'Crear Producto';
+    }
+    return false;
+  };
 })();
 </script>
 </body>
