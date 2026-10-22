@@ -7,44 +7,50 @@
 <meta name="description" content="Revisa tu carrito y finaliza tu compra en Ferretería Ukra Chile.">
 <meta name="robots" content="noindex,nofollow">
 <link rel="canonical" href="https://www.ferreteriaukra.cl/checkout">
-<meta name="theme-color" content="#f6f4ee">
+<meta name="theme-color" content="#D9381E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+:root{--primary:#D9381E;--primary-hover:#B82A13;--secondary:#1E293B;--bg-body:#F8FAFC;--bg-card:#FFF;--text-main:#0F172A;--text-muted:#64748B;--border-color:#E2E8F0;--font-stack:'Inter',system-ui,-apple-system,sans-serif}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Inter,system-ui,sans-serif;background:#f6f4ee;color:#1e1b15;line-height:1.6}
-a{color:#a97b23;text-decoration:none}
+body{font-family:var(--font-stack);background:var(--bg-body);color:var(--text-main);line-height:1.6}
+a{color:var(--primary);text-decoration:none}
 a:hover{text-decoration:underline}
 
-.topbar{background:#1e1b15;color:#fff;font-size:.75rem;text-align:center;padding:6px 16px}
-.topbar a{color:#d4a94b}
-header{background:#fff;border-bottom:1px solid #e2e0d8;padding:12px 16px;display:flex;align-items:center;gap:12px}
-header .logo{font-size:1.3rem;font-weight:800;color:#1e1b15}
-header .logo span{color:#a97b23}
-header nav{margin-left:auto;display:flex;gap:16px;font-size:.85rem;font-weight:600}
-header nav a{color:#1e1b15}
+.top-bar{background:#0F172A;color:#94A3B8;font-size:.85rem;padding:.4rem 1rem;text-align:center;border-bottom:1px solid #1E293B}
+.top-bar span{color:#F8FAFC;font-weight:600}
+header{background:var(--secondary);color:#FFF;position:sticky;top:0;z-index:90;box-shadow:0 4px 12px rgba(0,0,0,.06)}
+.header-inner{max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.85rem 1.5rem;gap:1rem;flex-wrap:wrap}
+.brand-logo{display:flex;align-items:center;gap:.75rem;font-size:1.35rem;font-weight:800;color:#FFF;letter-spacing:-.02em}
+.brand-logo:hover{text-decoration:none;color:#FFF}
+.brand-logo svg{width:34px;height:34px;fill:var(--primary);flex-shrink:0}
+.brand-logo .badge{font-size:.62rem;background:var(--primary);color:#FFF;padding:2px 6px;border-radius:4px;text-transform:uppercase;font-weight:700}
+.menu-toggle{display:none;background:0 0;border:none;color:#FFF;font-size:1.75rem;line-height:1;cursor:pointer;padding:.25rem .5rem}
+nav ul{display:flex;list-style:none;gap:1.5rem;align-items:center}
+nav a{color:#CBD5E1;font-weight:500;font-size:.95rem;padding:.4rem .2rem;border-bottom:2px solid transparent}
+nav a:hover{color:#FFF;text-decoration:none;border-bottom-color:var(--primary)}
 
 .container{max-width:900px;margin:0 auto;padding:24px 16px}
 h1{font-size:1.6rem;font-weight:800;margin-bottom:8px}
-.subtitle{color:#64748b;margin-bottom:24px;font-size:.9rem}
+.subtitle{color:var(--text-muted);margin-bottom:24px;font-size:.9rem}
 
 /* Cart items */
-.cart-item{display:flex;gap:16px;padding:16px;background:#fff;border-radius:12px;margin-bottom:12px;border:1px solid #e2e0d8;align-items:flex-start}
+.cart-item{display:flex;gap:16px;padding:16px;background:var(--bg-card);border-radius:.75rem;margin-bottom:12px;border:1px solid var(--border-color);align-items:flex-start;box-shadow:0 1px 3px rgba(0,0,0,.08)}
 .cart-item img{border-radius:8px;flex-shrink:0}
 .cart-item-info{flex:1;min-width:0}
 .cart-item-info strong{display:block;font-size:.95rem;margin-bottom:4px}
-.cart-item-price{color:#a97b23;font-weight:700;font-size:.9rem}
+.cart-item-price{color:var(--primary);font-weight:700;font-size:.9rem}
 .cart-item-controls{display:flex;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap}
-.qty-btn{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:8px;padding:4px 12px;cursor:pointer;font-size:.85rem;font-weight:700;transition:.15s}
-.qty-btn:hover{background:#e2e8f0}
+.qty-btn{background:#f1f5f9;border:1px solid var(--border-color);border-radius:8px;padding:4px 12px;cursor:pointer;font-size:.85rem;font-weight:700;transition:.15s}
+.qty-btn:hover{background:var(--border-color)}
 .qty-btn.remove{background:transparent;color:#ef4444;border-color:#fecaca;font-weight:600;font-size:.8rem}
 .qty-btn.remove:hover{background:#fef2f2}
 .qty-val{font-weight:700;min-width:24px;text-align:center}
 
 /* Total bar */
-.total-bar{background:#fff;border-radius:12px;padding:20px;border:1px solid #e2e0d8;display:flex;justify-content:space-between;align-items:center;margin:20px 0;font-size:1.1rem;font-weight:700}
-.total-bar .amount{font-size:1.4rem;color:#a97b23}
+.total-bar{background:var(--bg-card);border-radius:.75rem;padding:20px;border:1px solid var(--border-color);display:flex;justify-content:space-between;align-items:center;margin:20px 0;font-size:1.1rem;font-weight:700;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.total-bar .amount{font-size:1.4rem;color:var(--primary)}
 
 /* Form */
 .form-section{margin-top:28px}
@@ -53,37 +59,64 @@ h1{font-size:1.6rem;font-weight:800;margin-bottom:8px}
 @media(max-width:600px){.form-grid{grid-template-columns:1fr}}
 .form-group{display:flex;flex-direction:column;gap:4px}
 .form-group.full{grid-column:1/-1}
-.form-group label{font-size:.8rem;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:.03em}
-.form-group input{padding:12px 14px;border:1px solid #e2e0d8;border-radius:10px;font-size:.95rem;font-family:inherit;transition:border .15s}
-.form-group input:focus{outline:none;border-color:#a97b23;box-shadow:0 0 0 3px rgba(169,123,35,.12)}
+.form-group label{font-size:.8rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.03em}
+.form-group input,.form-group select{padding:12px 14px;border:1px solid var(--border-color);border-radius:.625rem;font-size:.95rem;font-family:inherit;transition:border .15s;background:var(--bg-card)}
+.form-group input:focus,.form-group select:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(217,56,30,.1)}
 
-.btn-pay{display:block;width:100%;padding:16px;background:#a97b23;color:#fff;border:none;border-radius:999px;font-size:1.05rem;font-weight:800;cursor:pointer;margin-top:20px;transition:.2s;font-family:inherit}
-.btn-pay:hover{background:#8c6419;transform:translateY(-1px)}
+.btn-pay{display:block;width:100%;padding:16px;background:var(--primary);color:#fff;border:none;border-radius:999px;font-size:1.05rem;font-weight:800;cursor:pointer;margin-top:20px;transition:.2s;font-family:inherit}
+.btn-pay:hover{background:var(--primary-hover);transform:translateY(-1px)}
 .btn-pay:disabled{opacity:.6;cursor:not-allowed;transform:none}
 
 /* Empty state */
 .empty-state{text-align:center;padding:60px 20px}
 .empty-state .icon{font-size:3rem;margin-bottom:12px}
 .empty-state h2{font-size:1.3rem;margin-bottom:8px}
-.empty-state p{color:#64748b;margin-bottom:20px}
-.btn-shop{display:inline-block;background:#1e1b15;color:#fff;padding:13px 28px;border-radius:999px;font-weight:700;font-size:.9rem;transition:.2s}
-.btn-shop:hover{background:#333;text-decoration:none}
+.empty-state p{color:var(--text-muted);margin-bottom:20px}
+.btn-shop{display:inline-block;background:var(--secondary);color:#fff;padding:13px 28px;border-radius:999px;font-weight:700;font-size:.9rem;transition:.2s}
+.btn-shop:hover{background:#334155;text-decoration:none}
 
-.secure-note{display:flex;align-items:center;gap:8px;margin-top:16px;font-size:.8rem;color:#64748b}
+.secure-note{display:flex;align-items:center;gap:8px;margin-top:16px;font-size:.8rem;color:var(--text-muted)}
 .secure-note svg{flex-shrink:0}
 
-footer{background:#1e1b15;color:#ccc;text-align:center;padding:24px 16px;margin-top:48px;font-size:.8rem}
-footer a{color:#d4a94b}
+footer{background:#0F172A;color:#94A3B8;padding:3rem 0 1.5rem;margin-top:48px;border-top:4px solid var(--primary)}
+.footer-inner{max-width:1240px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2.5rem}
+.footer-inner h4{color:#FFF;margin-bottom:.5rem}
+.footer-inner p,.footer-inner a{font-size:.875rem;color:#94A3B8}
+.footer-inner a:hover{color:#FFF;text-decoration:none}
+.footer-bottom{max-width:1240px;margin:2rem auto 0;padding:1.5rem 1.5rem 0;border-top:1px solid #1E293B;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;font-size:.85rem;gap:.5rem}
+
+@media(max-width:860px){
+  .menu-toggle{display:block}
+  nav{display:none;width:100%;order:3;margin-top:.75rem;border-top:1px solid #334155;padding-top:.75rem}
+  nav.active{display:block}
+  nav ul{flex-direction:column;gap:0;width:100%}
+  nav ul li{width:100%}
+  nav a{display:block;padding:.75rem .25rem;border-bottom:1px solid #334155}
+}
+@media(max-width:480px){
+  .footer-bottom{flex-direction:column;text-align:center}
+}
 </style>
 </head>
 <body>
-<div class="topbar">📞 <a href="tel:+56993514970">+56 9 9351 4970</a> · <a href="mailto:contacto@ferreteriaukra.cl">contacto@ferreteriaukra.cl</a></div>
+<div class="top-bar">Envíos a todo Chile · Atención directa por <span>WhatsApp</span></div>
 <header>
-  <a href="/" class="logo">Ferretería <span>Ukra</span></a>
-  <nav>
-    <a href="/productos/">Productos</a>
-    <a href="/blog/">Blog</a>
-  </nav>
+  <div class="header-inner">
+    <a href="/" class="brand-logo" aria-label="Ir a Inicio de Ferretería Ukra">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.4-2.4c.4-.4.4-1 0-1.3z"/>
+      </svg>
+      Ferretería Ukra <span class="badge">Chile</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav aria-label="Navegación principal" id="mainNav">
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/productos/">Productos</a></li>
+        <li><a href="/#articulos">Guías Técnicas</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <div class="container">
@@ -135,7 +168,7 @@ footer a{color:#d4a94b}
           </div>
           <div class="form-group">
             <label for="customer_region">Región *</label>
-            <select id="customer_region" name="customer_region" required style="padding:12px 14px;border:1px solid #e2e0d8;border-radius:10px;font-size:.95rem;font-family:inherit;background:#fff">
+            <select id="customer_region" name="customer_region" required>
               <option value="">Selecciona tu región</option>
               <option value="Arica y Parinacota">Arica y Parinacota</option>
               <option value="Tarapacá">Tarapacá</option>
@@ -167,10 +200,34 @@ footer a{color:#d4a94b}
 </div>
 
 <footer>
-  <p>© 2024 Ferretería Ukra Chile · <a href="/productos/">Productos</a> · <a href="/blog/">Blog</a></p>
-  <p style="margin-top:4px"><a href="https://wa.me/56993514970">WhatsApp</a> · contacto@ferreteriaukra.cl</p>
+  <div class="footer-inner">
+    <div>
+      <h4>Ferretería Ukra Chile</h4>
+      <p>Herramientas, material eléctrico, bombas de agua, gasfitería y más con ficha técnica completa y envío a todo Chile.</p>
+    </div>
+    <div>
+      <h4>Guías Técnicas</h4>
+      <p><a href="/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/">→ Tablero eléctrico SEC</a></p>
+      <p><a href="/blog/guia-para-hacer-un-radier-armado-con-malla-acma-en-chile/">→ Radier armado malla Acma</a></p>
+      <p><a href="/">→ Todas las guías</a></p>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <p><a href="https://wa.me/56993514970">→ WhatsApp</a></p>
+      <p><a href="mailto:contacto@ferreteriaukra.cl">→ contacto@ferreteriaukra.cl</a></p>
+      <p><a href="/productos/">→ Ver productos</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2026 Ferretería Ukra Chile. Todos los derechos reservados.</div>
+    <div>Envíos a todo Chile · Santiago</div>
+  </div>
 </footer>
 
+<script>
+var m=document.getElementById('menuToggle'),n=document.getElementById('mainNav');
+m.addEventListener('click',function(){var o=n.classList.toggle('active');this.setAttribute('aria-expanded',o);this.innerHTML=o?'✕':'☰'});
+</script>
 <script src="/assets/cart.js"></script>
 </body>
 </html>

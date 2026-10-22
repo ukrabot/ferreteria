@@ -470,7 +470,9 @@ async function handleAdminDeleteOrder(request, env, orderId) {
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
-    const path = url.pathname;
+    // Normalize: strip trailing slash (except root) so /api/flow/return/ matches /api/flow/return
+    const rawPath = url.pathname;
+    const path = rawPath.length > 1 && rawPath.endsWith('/') ? rawPath.slice(0, -1) : rawPath;
     const method = request.method;
 
     try {
