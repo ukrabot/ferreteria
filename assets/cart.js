@@ -109,7 +109,7 @@
     Object.assign(btn.style, {
       position: 'fixed', bottom: '96px', right: '24px', zIndex: '10000',
       width: '56px', height: '56px', borderRadius: '50%',
-      background: '#a97b23', display: 'flex', alignItems: 'center', justifyContent: 'center',
+      background: '#D9381E', display: 'flex', alignItems: 'center', justifyContent: 'center',
       boxShadow: '0 4px 16px rgba(0,0,0,.2)', textDecoration: 'none',
       transition: 'transform .2s',
     });
@@ -253,7 +253,7 @@
         Object.assign(btn.style, {
           position: 'absolute', top: '8px', right: '8px', zIndex: '5',
           width: '36px', height: '36px', borderRadius: '50%',
-          background: '#a97b23', color: '#fff', border: 'none',
+          background: '#D9381E', color: '#fff', border: 'none',
           fontSize: '1rem', cursor: 'pointer', display: 'flex',
           alignItems: 'center', justifyContent: 'center',
           boxShadow: '0 2px 8px rgba(0,0,0,.15)', transition: '.2s',
