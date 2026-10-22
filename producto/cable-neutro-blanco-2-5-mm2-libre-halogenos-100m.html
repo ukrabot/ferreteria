@@ -29,7 +29,7 @@
 "@type":"Product",
 "name":"Cable neutro blanco 2,5 mm² libre de halógenos H07Z1-K 100 m MADECO",
 "description":"Rollo de 100 metros de cable blanco 1×2,5 mm² tipo H07Z1-K, marca MADECO, para el conductor neutro de instalaciones eléctricas en Chile (color blanco según NCh Elec 4/2003, numeral 8.0.4.15). Conductor de cobre flexible, aislación libre de halógenos, tensión nominal 450/750 V. Certificado SEC E-021-14-4239. Para circuitos de enchufes, iluminación y tableros domiciliarios.",
-"image":["https://www.ferreteriaukra.cl/producto/cable-neutro-blanco-2-5-mm2-libre-halogenos-100m.webp"],
+"image":["https://www.ferreteriaukra.cl/producto/cable-neutro-blanco-2-5-mm2-libre-halogenos-100m.webp","https://www.ferreteriaukra.cl/producto/cable-neutro-blanco-2-5-mm2-libre-halogenos-100m-02.webp"],
 "brand":{"@type":"Brand","name":"MADECO"},
 "model":"H07Z1-K 1×2,5 mm² blanco",
 "color":"Blanco",
@@ -127,6 +127,11 @@ nav a:hover{color:#FFF;text-decoration:none;border-bottom-color:var(--primary)}
 .hero h1{font-size:clamp(2rem,4.5vw,3.5rem);font-weight:800;line-height:1.1;letter-spacing:-.025em;margin:14px 0 18px;color:var(--text-main)}
 .hero .lede{font-size:1.05rem;color:var(--text-muted);max-width:690px;line-height:1.7}
 .hero-media{position:relative}
+.main-shot{position:relative}
+.thumbs{display:flex;gap:10px;margin-top:12px}
+.thumbs button{padding:0;border:2px solid var(--border-color);border-radius:var(--radius-md);background:#fff;cursor:pointer;width:84px;height:84px;overflow:hidden;transition:border-color .2s}
+.thumbs button[aria-current="true"],.thumbs button:hover{border-color:var(--primary)}
+.hero-media .thumbs img{width:100%;height:100%;object-fit:contain;border:0;border-radius:0;box-shadow:none;aspect-ratio:auto}
 .hero-media img{display:block;width:100%;aspect-ratio:1/1;object-fit:contain;background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);border:1px solid var(--border-color)}
 .stock-note{position:absolute;left:16px;bottom:16px;background:rgba(255,255,255,.96);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:10px 14px;font-size:.82rem;box-shadow:var(--shadow-md)}
 .stock-note strong{display:block;color:var(--text-main)}
@@ -275,10 +280,16 @@ try{var c=document.cookie.match(/(?:^|;\s*)rel_consent=([^;]+)/);if(c&&c[1]==='g
     <p class="microcopy">Pago por transferencia, tarjeta o Flow · IVA incluido</p>
   </div>
   <div class="hero-media">
-    <img src="/producto/cable-neutro-blanco-2-5-mm2-libre-halogenos-100m.webp" alt="Rollo de cable blanco 2,5 mm² libre de halógenos H07Z1-K de 100 metros para conductor neutro" width="800" height="800" loading="eager">
-    <div class="stock-note">
-      <strong>En stock</strong>
-      <span>Despacho en 24-48 h hábiles</span>
+    <div class="main-shot">
+      <img id="mainShot" src="/producto/cable-neutro-blanco-2-5-mm2-libre-halogenos-100m.webp" alt="Cable blanco 2,5 mm² libre de halógenos H07Z1-K de 100 metros con conductor de cobre flexible para neutro" width="800" height="800" loading="eager">
+      <div class="stock-note">
+        <strong>En stock</strong>
+        <span>Despacho en 24-48 h hábiles</span>
+      </div>
+    </div>
+    <div class="thumbs" role="group" aria-label="Fotos del producto">
+      <button type="button" aria-current="true" data-src="/producto/cable-neutro-blanco-2-5-mm2-libre-halogenos-100m.webp" data-alt="Cable blanco 2,5 mm² libre de halógenos H07Z1-K de 100 metros con conductor de cobre flexible para neutro"><img src="/producto/cable-neutro-blanco-2-5-mm2-libre-halogenos-100m.webp" alt="Ver foto del cable blanco con cobre flexible" width="84" height="84"></button>
+      <button type="button" data-src="/producto/cable-neutro-blanco-2-5-mm2-libre-halogenos-100m-02.webp" data-alt="Rollo de 100 m de cable MADECO Freetox-Flex H07Z1-K 2,5 mm² blanco libre de halógenos"><img src="/producto/cable-neutro-blanco-2-5-mm2-libre-halogenos-100m-02.webp" alt="Ver foto del rollo MADECO Freetox-Flex 100 m" width="84" height="84" loading="lazy"></button>
     </div>
   </div>
 </section>
@@ -317,6 +328,7 @@ try{var c=document.cookie.match(/(?:^|;\s*)rel_consent=([^;]+)/);if(c&&c[1]==='g
 <tr><td>Marca</td><td>MADECO (fabricado en Chile)</td></tr>
 <tr><td>Uso en el circuito</td><td>Conductor neutro (N)</td></tr>
 <tr><td>Color</td><td>Blanco</td></tr>
+<tr><td>Línea</td><td>Freetox-Flex (cable de baja tensión libre de halógenos)</td></tr>
 <tr><td>Designación</td><td>H07Z1-K</td></tr>
 <tr><td>Sección</td><td>1×2,5 mm² (unipolar)</td></tr>
 <tr><td>Conductor</td><td>Cobre flexible clase 5</td></tr>
@@ -537,6 +549,9 @@ try{var c=document.cookie.match(/(?:^|;\s*)rel_consent=([^;]+)/);if(c&&c[1]==='g
 <script>
 var m=document.getElementById('menuToggle'),n=document.getElementById('mainNav');
 m.addEventListener('click',function(){var o=n.classList.toggle('active');this.setAttribute('aria-expanded',o);this.innerHTML=o?'✕':'☰'});
+</script>
+<script>
+document.querySelectorAll('.thumbs button').forEach(function(b){b.addEventListener('click',function(){var m=document.getElementById('mainShot');m.src=b.dataset.src;m.alt=b.dataset.alt;document.querySelectorAll('.thumbs button').forEach(function(x){x.setAttribute('aria-current',x===b?'true':'false')})})});
 </script>
 <script src="/assets/cart.js"></script>
 </body>
