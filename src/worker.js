@@ -245,10 +245,19 @@ async function handleFlowConfirm(request, env) {
   }
 }
 
-// ── Route: GET /api/flow/return ──────────────────────────────────────
+// ── Route: GET|POST /api/flow/return ────────────────────────────────
 
 async function handleFlowReturn(request, env, url) {
-  const token = url.searchParams.get('token');
+  // Flow may send token via query string (GET) or form body (POST)
+  let token = url.searchParams.get('token');
+  if (!token && request.method === 'POST') {
+    try {
+      const form = await request.formData();
+      token = form.get('token');
+    } catch {
+      try { const body = await request.json(); token = body.token; } catch {}
+    }
+  }
   if (!token) {
     return Response.redirect(`${env.SITE_URL}/orden/?error=no_token`, 302);
   }
@@ -536,7 +545,7 @@ export default {
       if (path === '/api/products' && method === 'GET') return handleGetProducts(request, env, url);
       if (path === '/api/checkout' && method === 'POST') return handleCheckout(request, env);
       if (path === '/api/flow/confirm' && method === 'POST') return handleFlowConfirm(request, env);
-      if (path === '/api/flow/return' && method === 'GET') return handleFlowReturn(request, env, url);
+      if (path === '/api/flow/return' && (method === 'GET' || method === 'POST')) return handleFlowReturn(request, env, url);
       if (path === '/api/order-status' && method === 'GET') return handleOrderStatus(request, env, url);
 
       // Admin API routes
