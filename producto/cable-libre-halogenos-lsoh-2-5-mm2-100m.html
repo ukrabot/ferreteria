@@ -52,7 +52,7 @@
 {"@type":"PropertyValue","name":"Tensión nominal","value":"450/750 V"},
 {"@type":"PropertyValue","name":"Capacidad de corriente","value":"Hasta 20 A en canalización empotrada (según tabla RIC, método B1)"},
 {"@type":"PropertyValue","name":"Temperatura de servicio","value":"–15 °C a +70 °C"},
-{"@type":"PropertyValue","name":"Color de aislación","value":"Rojo (identifica fase en instalación monofásica según NCh Elec 4/2003)"},
+{"@type":"PropertyValue","name":"Color de aislación","value":"Rojo (identifica conductor de fase según NCh Elec 4/2003, numeral 8.0.4.15)"},
 {"@type":"PropertyValue","name":"Longitud del rollo","value":"100 metros"},
 {"@type":"PropertyValue","name":"Resistencia al fuego","value":"No propagador de llama (IEC 60332-1), baja emisión de humo (IEC 61034), libre de halógenos (IEC 60754)"},
 {"@type":"PropertyValue","name":"Certificación SEC","value":"E-021-14-4239"},
@@ -85,7 +85,7 @@
 {"@type":"Question","name":"¿Es obligatorio usar cable libre de halógenos en Chile?","acceptedAnswer":{"@type":"Answer","text":"La normativa SEC a través del RIC (Reglamento de Instalaciones de Consumo) permite tanto cables THW/THHN convencionales como cables libres de halógenos H07Z1-K para instalaciones domiciliarias. Sin embargo, la tendencia regulatoria va hacia exigir cables LSOH en edificios de uso público, hospitales, centros comerciales y recintos con alta concentración de personas. Usar cable libre de halógenos en una vivienda no es obligatorio pero sí es una mejora significativa en seguridad contra incendios, especialmente en departamentos y condominios."}},
 {"@type":"Question","name":"¿Puedo usar cable H07Z1-K de 2,5 mm² para el circuito de enchufes de mi casa?","acceptedAnswer":{"@type":"Answer","text":"Sí. El cable de 2,5 mm² H07Z1-K se usa ampliamente para circuitos de enchufes normales protegidos con un interruptor automático de 16 A, según la tabla de capacidad de corriente del RIC. También se usa en circuitos de iluminación protegidos con automático de 10 A cuando se quiere un margen de seguridad adicional. Para circuitos de mayor potencia como cocina eléctrica, horno, calefont o secadora, se requiere cable de 4 mm² o 6 mm² según la carga."}},
 {"@type":"Question","name":"¿Cuál es la diferencia entre cable H07Z1-K y cable THHN/THW?","acceptedAnswer":{"@type":"Answer","text":"La diferencia principal es el material de aislación. El cable THHN/THW usa aislación de PVC (policloruro de vinilo), que contiene cloro, un halógeno que al quemarse produce ácido clorhídrico (HCl), un gas altamente tóxico y corrosivo. El cable H07Z1-K usa aislación termoplástica libre de halógenos que, en caso de incendio, emite humo claro y no tóxico. Eléctricamente ambos funcionan igual: mismo conductor de cobre, misma capacidad de corriente para la misma sección. La diferencia es la seguridad pasiva contra incendios."}},
-{"@type":"Question","name":"¿El cable rojo siempre va en la fase?","acceptedAnswer":{"@type":"Answer","text":"En Chile, según la NCh Elec 4/2003 y el pliego técnico RIC N°10, el color rojo se utiliza para identificar el conductor de fase en instalaciones monofásicas. El azul se usa para neutro y el verde/amarillo para tierra de protección. En instalaciones trifásicas las fases se identifican con rojo, negro y azul. Respetar el código de colores es obligatorio en toda instalación nueva y es fundamental para la seguridad del instalador y del usuario."}},
+{"@type":"Question","name":"¿El cable rojo siempre va en la fase?","acceptedAnswer":{"@type":"Answer","text":"Sí. En Chile, según el numeral 8.0.4.15 de la NCh Elec 4/2003, las fases se identifican con azul (fase 1), negro (fase 2) y rojo (fase 3); el neutro con blanco y la tierra de protección con verde o verde/amarillo. En una instalación monofásica el rojo es el color habitual de la fase, acompañado de un conductor blanco para el neutro. Respetar el código de colores es obligatorio y fundamental para la seguridad del instalador y del usuario."}},
 {"@type":"Question","name":"¿Hacen envíos a regiones?","acceptedAnswer":{"@type":"Answer","text":"Sí, despachamos a todo Chile. Escríbenos por WhatsApp indicando tu comuna y la cantidad de rollos que necesitas y te cotizamos el envío. Para obras y proyectos eléctricos cotizamos precios por volumen."}}
 ]
 }
@@ -325,7 +325,7 @@ try{var c=document.cookie.match(/(?:^|;\s*)rel_consent=([^;]+)/);if(c&&c[1]==='g
 <tr><td>Tensión nominal</td><td>450/750 V</td></tr>
 <tr><td>Capacidad de corriente</td><td>Hasta 20 A en canalización empotrada (método B1, RIC)</td></tr>
 <tr><td>Temperatura de servicio</td><td>–15 °C a +70 °C</td></tr>
-<tr><td>Color de aislación</td><td>Rojo (identifica fase según NCh Elec 4/2003)</td></tr>
+<tr><td>Color de aislación</td><td>Rojo (identifica fase según NCh Elec 4/2003, 8.0.4.15)</td></tr>
 <tr><td>Longitud del rollo</td><td>100 metros</td></tr>
 <tr><td>Resistencia al fuego</td><td>No propagador de llama (IEC 60332-1)</td></tr>
 <tr><td>Emisión de humo</td><td>Baja opacidad (IEC 61034-1/2)</td></tr>
@@ -431,7 +431,7 @@ try{var c=document.cookie.match(/(?:^|;\s*)rel_consent=([^;]+)/);if(c&&c[1]==='g
   <li><strong>Canalización:</strong> usar ductos de PVC eléctrico o bandeja portacable. El cable H07Z1-K es compatible con ductos de 20 mm y 25 mm según la cantidad de conductores.</li>
   <li><strong>Radio de curvatura:</strong> mínimo 4 veces el diámetro exterior del cable para no dañar la aislación.</li>
   <li><strong>Empalmes:</strong> usar conectores tipo resorte (tipo Wago) o terminales de compresión. No hacer empalmes con cinta aisladora dentro de canalizaciones.</li>
-  <li><strong>Identificación:</strong> rojo para fase, azul para neutro, verde/amarillo para tierra de protección, según NCh Elec 4/2003.</li>
+  <li><strong>Identificación:</strong> rojo para fase, blanco para neutro y verde o verde/amarillo para tierra de protección, según NCh Elec 4/2003 (8.0.4.15). Para el neutro usa nuestro <a href="/producto/cable-neutro-blanco-2-5-mm2-libre-halogenos-100m">cable neutro blanco 2,5 mm² libre de halógenos</a>.</li>
   <li><strong>Protección:</strong> cada circuito de 2,5 mm² debe estar protegido con un <strong>interruptor automático de 16 A curva C</strong> y un <strong>interruptor diferencial de 30 mA</strong> aguas arriba.</li>
 </ul>
 
@@ -463,7 +463,7 @@ try{var c=document.cookie.match(/(?:^|;\s*)rel_consent=([^;]+)/);if(c&&c[1]==='g
 
 <details>
   <summary>¿El cable rojo siempre va en la fase?</summary>
-  <p>En Chile, según la NCh Elec 4/2003 y el pliego técnico RIC N°10, el color rojo se utiliza para identificar el conductor de fase en instalaciones monofásicas. Azul para neutro y verde/amarillo para tierra de protección.</p>
+  <p>Sí. Según el numeral 8.0.4.15 de la NCh Elec 4/2003, las fases se identifican con azul, negro y rojo; el neutro con blanco y la tierra de protección con verde o verde/amarillo. En una instalación monofásica el rojo es el color habitual de la fase.</p>
 </details>
 
 <details>
@@ -513,6 +513,7 @@ try{var c=document.cookie.match(/(?:^|;\s*)rel_consent=([^;]+)/);if(c&&c[1]==='g
   <div class="card">
     <h2>Productos relacionados</h2>
     <ul class="mini-list">
+      <li><a href="/producto/cable-neutro-blanco-2-5-mm2-libre-halogenos-100m">Cable neutro blanco 2,5 mm² libre de halógenos 100 m</a></li>
       <li><a href="/producto/interruptor-automatico-20-a">Interruptor automático 20 A LEXO</a></li>
       <li><a href="/producto/interruptor-diferencial-25a-easy9">Interruptor diferencial 25 A Easy9</a></li>
       <li><a href="/producto/interruptor-diferencial-40-a">Interruptor diferencial 40 A</a></li>

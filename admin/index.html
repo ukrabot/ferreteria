@@ -182,7 +182,7 @@ tr:hover td{background:rgba(15,23,42,.3)}
     <div class="tab-content active" id="tab-products">
       <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px;flex-wrap:wrap">
         <div class="search-box" style="flex:1;min-width:200px;margin-bottom:0">
-          <input type="text" id="prod-search" placeholder="Buscar producto por nombre, slug o categoría…" autocomplete="off">
+          <input type="text" id="prod-search" placeholder="Buscar producto por nombre, SKU, slug o categoría…" autocomplete="off">
         </div>
         <button class="btn-small" style="background:#a97b23;color:#fff;padding:10px 18px;font-size:.85rem" onclick="showAddProduct()">+ Agregar Producto</button>
       </div>
@@ -198,6 +198,7 @@ tr:hover td{background:rgba(15,23,42,.3)}
             <tr>
               <th></th>
               <th>Producto</th>
+              <th>SKU</th>
               <th>Categoría</th>
               <th>Precio</th>
               <th>Estado</th>
@@ -205,7 +206,7 @@ tr:hover td{background:rgba(15,23,42,.3)}
             </tr>
           </thead>
           <tbody id="products-body">
-            <tr><td colspan="6" class="empty-msg">Cargando…</td></tr>
+            <tr><td colspan="7" class="empty-msg">Cargando…</td></tr>
           </tbody>
         </table>
       </div>
@@ -348,14 +349,14 @@ tr:hover td{background:rgba(15,23,42,.3)}
 
   async function loadProducts() {
     const body = $('products-body');
-    body.innerHTML = '<tr><td colspan="6" class="empty-msg">Cargando…</td></tr>';
+    body.innerHTML = '<tr><td colspan="7" class="empty-msg">Cargando…</td></tr>';
     try {
       const res = await apiFetch('/api/admin/products');
       const d = await res.json();
       allProducts = d.products || [];
       renderProducts();
     } catch {
-      body.innerHTML = '<tr><td colspan="6" class="empty-msg">Error al cargar productos</td></tr>';
+      body.innerHTML = '<tr><td colspan="7" class="empty-msg">Error al cargar productos</td></tr>';
     }
   }
 
@@ -367,12 +368,13 @@ tr:hover td{background:rgba(15,23,42,.3)}
       filtered = filtered.filter(p =>
         (p.name || '').toLowerCase().includes(q) ||
         (p.slug || '').toLowerCase().includes(q) ||
+        (p.sku || '').toLowerCase().includes(q) ||
         (p.category || '').toLowerCase().includes(q)
       );
     }
 
     if (!filtered.length) {
-      body.innerHTML = '<tr><td colspan="6" class="empty-msg">No hay productos</td></tr>';
+      body.innerHTML = '<tr><td colspan="7" class="empty-msg">No hay productos</td></tr>';
       return;
     }
 
@@ -383,6 +385,12 @@ tr:hover td{background:rgba(15,23,42,.3)}
         <td>
           <div class="prod-name" title="${esc(p.name)}">${esc(p.name)}</div>
           <a href="/producto/${esc(p.slug)}" target="_blank" style="font-size:.7rem;color:#64748b">${esc(p.slug)}</a>
+        </td>
+        <td>
+          <div class="inline-edit">
+            <input type="text" id="sku-${esc(p.slug)}" value="${esc(p.sku)}" placeholder="—" style="width:110px;text-align:left">
+            <button class="save-btn" onclick="saveSku('${esc(p.slug)}')">Guardar</button>
+          </div>
         </td>
         <td><span class="prod-cat">${esc(p.category)}</span></td>
         <td>
@@ -422,6 +430,26 @@ tr:hover td{background:rgba(15,23,42,.3)}
         const idx = allProducts.findIndex(p => p.slug === slug);
         if (idx >= 0) allProducts[idx] = updated;
         toast(`Precio actualizado: ${fmt(price)}`);
+      } else {
+        const e = await res.json();
+        toast(e.error || 'Error', true);
+      }
+    } catch { toast('Error de conexión', true); }
+  };
+
+  window.saveSku = async function(slug) {
+    const sku = $('sku-' + slug).value.trim();
+    try {
+      const res = await apiFetch(`/api/admin/products/${slug}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sku }),
+      });
+      if (res.ok) {
+        const updated = await res.json();
+        const idx = allProducts.findIndex(p => p.slug === slug);
+        if (idx >= 0) allProducts[idx] = updated;
+        toast(sku ? `SKU actualizado: ${sku}` : 'SKU eliminado');
       } else {
         const e = await res.json();
         toast(e.error || 'Error', true);
@@ -601,6 +629,8 @@ tr:hover td{background:rgba(15,23,42,.3)}
         <label for="ap-slug">Slug (URL) *</label>
         <input id="ap-slug" type="text" required placeholder="cable-libre-halogenos-lsoh-2-5-mm2-100m" oninput="updateSlugPreview()">
         <div class="slug-preview" id="ap-slug-preview">/producto/...</div>
+        <label for="ap-sku">SKU</label>
+        <input id="ap-sku" type="text" placeholder="Ej: 113215940">
         <div class="row2">
           <div>
             <label for="ap-price">Precio CLP *</label>
@@ -654,6 +684,7 @@ tr:hover td{background:rgba(15,23,42,.3)}
       image: $('ap-image').value.trim(),
       category: $('ap-category').value.trim(),
       status: $('ap-status').value,
+      sku: $('ap-sku').value.trim(),
     };
 
     try {

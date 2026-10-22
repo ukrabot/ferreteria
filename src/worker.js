@@ -389,7 +389,7 @@ async function handleAdminProducts(request, env) {
   if (!checkAdmin(request, env)) return err('No autorizado', 401);
 
   const rows = await env.DB.prepare(
-    `SELECT id, slug, name, price, image, category, status, updated_at FROM products ORDER BY name`
+    `SELECT id, slug, name, price, image, category, status, sku, updated_at FROM products ORDER BY name`
   ).all();
 
   return json({ products: rows.results });
@@ -438,6 +438,11 @@ async function handleAdminUpdateProduct(request, env, slug) {
     values.push(data.name.trim());
   }
 
+  if (data.sku !== undefined) {
+    updates.push('sku = ?');
+    values.push(String(data.sku).trim());
+  }
+
   if (!updates.length) return err('No hay campos para actualizar');
 
   updates.push("updated_at = strftime('%Y-%m-%dT%H:%M:%SZ','now')");
@@ -449,7 +454,7 @@ async function handleAdminUpdateProduct(request, env, slug) {
 
   // Return updated product
   const updated = await env.DB.prepare(
-    `SELECT id, slug, name, price, image, category, status, updated_at FROM products WHERE slug = ?`
+    `SELECT id, slug, name, price, image, category, status, sku, updated_at FROM products WHERE slug = ?`
   ).bind(slug).first();
 
   return json(updated);
@@ -486,7 +491,7 @@ async function handleAdminCreateProduct(request, env) {
     return err('JSON inválido');
   }
 
-  const { slug, name, price, image, category, status } = data;
+  const { slug, name, price, image, category, status, sku } = data;
   if (!slug || !name || !price) {
     return err('Campos obligatorios: slug, name, price');
   }
@@ -501,25 +506,26 @@ async function handleAdminCreateProduct(request, env) {
   if (isNaN(parsedPrice) || parsedPrice < 0) return err('Precio inválido');
 
   await env.DB.prepare(
-    `INSERT INTO products (slug, name, price, image, category, status)
-     VALUES (?, ?, ?, ?, ?, ?)`
+    `INSERT INTO products (slug, name, price, image, category, status, sku)
+     VALUES (?, ?, ?, ?, ?, ?, ?)`
   ).bind(
     slug.trim(),
     name.trim(),
     parsedPrice,
     (image || '').trim(),
     (category || '').trim(),
-    status || 'available'
+    status || 'available',
+    String(sku || '').trim()
   ).run();
 
   const created = await env.DB.prepare(
-    `SELECT id, slug, name, price, image, category, status, updated_at FROM products WHERE slug = ?`
+    `SELECT id, slug, name, price, image, category, status, sku, updated_at FROM products WHERE slug = ?`
   ).bind(slug.trim()).first();
 
   return json(created, 201);
 }
 
-// ── One-time product seed (runs once, then remove) ──────────────────
+// ── Schema migration + product seed (runs once per isolate) ─────────
 
 const SEED_PRODUCTS = [
   {
@@ -529,27 +535,47 @@ const SEED_PRODUCTS = [
     image: '/producto/cable-libre-halogenos-lsoh-2-5-mm2-100m.webp',
     category: 'Material Eléctrico',
     status: 'available',
+    sku: '113214489',
+  },
+  {
+    slug: 'cable-neutro-blanco-2-5-mm2-libre-halogenos-100m',
+    name: 'Cable Neutro Blanco 2,5 mm² Libre de Halógenos H07Z1-K 100 m MADECO',
+    price: 89990,
+    image: '/producto/cable-neutro-blanco-2-5-mm2-libre-halogenos-100m.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '113215940',
   },
 ];
 
-async function seedProducts(env) {
+async function ensureSchema(env) {
+  // Add sku column if missing (ALTER fails harmlessly when it already exists)
+  try { await env.DB.prepare('ALTER TABLE products ADD COLUMN sku TEXT').run(); } catch {}
+
   for (const p of SEED_PRODUCTS) {
-    const exists = await env.DB.prepare('SELECT id FROM products WHERE slug = ?').bind(p.slug).first();
-    if (!exists) {
+    const row = await env.DB.prepare('SELECT id, sku FROM products WHERE slug = ?').bind(p.slug).first();
+    if (!row) {
       await env.DB.prepare(
-        'INSERT INTO products (slug, name, price, image, category, status) VALUES (?, ?, ?, ?, ?, ?)'
-      ).bind(p.slug, p.name, p.price, p.image, p.category, p.status).run();
+        'INSERT INTO products (slug, name, price, image, category, status, sku) VALUES (?, ?, ?, ?, ?, ?, ?)'
+      ).bind(p.slug, p.name, p.price, p.image, p.category, p.status, p.sku).run();
       console.log('Seeded product:', p.slug);
+    } else if (!row.sku && p.sku) {
+      await env.DB.prepare('UPDATE products SET sku = ? WHERE slug = ?').bind(p.sku, p.slug).run();
     }
   }
 }
+
+let schemaReady = null;
 
 // ── Main router ──────────────────────────────────────────────────────
 
 export default {
   async fetch(request, env, ctx) {
-    // Seed products on first request (lightweight check)
-    ctx.waitUntil(seedProducts(env));
+    // Run migration/seed once per isolate, before handling any route
+    if (!schemaReady) {
+      schemaReady = ensureSchema(env).catch(e => { console.error('Schema error:', e); schemaReady = null; });
+    }
+    await schemaReady;
 
     const url = new URL(request.url);
     // Normalize: strip trailing slash (except root) so /api/flow/return/ matches /api/flow/return
