@@ -16,7 +16,7 @@
     {
       "binding": "DB",
       "database_name": "ferreteria-orders",
-      "database_id": "REPLACE_WITH_D1_DATABASE_ID"
+      "database_id": "bf4b8931-081a-4de5-b945-204165e47dd9"
     }
   ],
   "vars": {
