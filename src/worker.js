@@ -638,6 +638,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '136951085',
   },
+  {
+    slug: 'adaptador-triple-schuko-bipaso-halux',
+    name: 'Adaptador Triple Schuko con Tomas Bipaso Halux OB1040A',
+    price: 5590,
+    image: '/producto/adaptador-triple-schuko-bipaso-halux.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '121205296',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
