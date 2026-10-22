@@ -583,6 +583,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '113360933',
   },
+  {
+    slug: 'adaptador-enchufe-americano-a-chileno-halux',
+    name: 'Adaptador Enchufe Americano a Chileno 10 A Blanco Halux',
+    price: 4490,
+    image: '/producto/adaptador-enchufe-americano-a-chileno-halux.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110222597',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
