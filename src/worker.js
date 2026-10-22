@@ -574,6 +574,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110251053',
   },
+  {
+    slug: 'adaptador-schuko-a-enchufe-chileno-10a',
+    name: 'Adaptador Schuko a Enchufe Chileno 10 A Blanco Halux',
+    price: 5890,
+    image: '/producto/adaptador-schuko-a-enchufe-chileno-10a.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '113360933',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
