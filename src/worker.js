@@ -546,6 +546,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '113215940',
   },
+  {
+    slug: 'cable-tierra-verde-2-5-mm2-libre-halogenos-100m',
+    name: 'Cable Tierra Verde 2,5 mm² Libre de Halógenos H07Z1-K 100 m MADECO',
+    price: 89990,
+    image: '/producto/cable-tierra-verde-2-5-mm2-libre-halogenos-100m.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '113217447',
+  },
 ];
 
 async function ensureSchema(env) {
