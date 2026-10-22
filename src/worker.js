@@ -567,7 +567,7 @@ const SEED_PRODUCTS = [
   },
   {
     slug: 'adaptador-schuko-bipaso-16a-bticino',
-    name: 'Adaptador Schuko Bipaso 2P+T 16 A Blanco Bticino',
+    name: 'Adaptador Enchufe Chileno a Schuko Bticino S3625D 16 A',
     price: 22390,
     image: '/producto/adaptador-schuko-bipaso-16a-bticino.webp',
     category: 'Material Eléctrico',
