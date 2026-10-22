@@ -338,7 +338,11 @@ tr:hover td{background:rgba(15,23,42,.3)}
   };
 
   function apiFetch(url, opts = {}) {
-    return fetch(url, { ...opts, headers: { 'Authorization': 'Bearer ' + token, ...opts.headers } });
+    // 15 s timeout so a slow server shows an error instead of "Cargando…" forever
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), 15000);
+    return fetch(url, { ...opts, signal: ctrl.signal, headers: { 'Authorization': 'Bearer ' + token, ...opts.headers } })
+      .finally(() => clearTimeout(t));
   }
 
   async function showDashboard() {
@@ -437,7 +441,7 @@ tr:hover td{background:rgba(15,23,42,.3)}
       allProducts = d.products || [];
       renderProducts();
     } catch {
-      body.innerHTML = '<tr><td colspan="7" class="empty-msg">Error al cargar productos</td></tr>';
+      body.innerHTML = '<tr><td colspan="7" class="empty-msg">Error al cargar productos. Recarga la página.</td></tr>';
     }
   }
 

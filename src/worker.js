@@ -679,37 +679,48 @@ async function handleAdminSettings(request, env) {
 }
 
 async function ensureSchema(env) {
-  await env.DB.prepare(
-    `CREATE TABLE IF NOT EXISTS settings (key TEXT PRIMARY KEY, value TEXT NOT NULL)`
-  ).run();
-
-  // Add sku column if missing (ALTER fails harmlessly when it already exists)
+  // Add sku column if missing. Separate from the batch because it fails
+  // (harmlessly) once the column exists, and a failed batch rolls back.
   try { await env.DB.prepare('ALTER TABLE products ADD COLUMN sku TEXT').run(); } catch {}
 
+  // Everything else is idempotent and goes in ONE round trip.
+  const stmts = [
+    env.DB.prepare(`CREATE TABLE IF NOT EXISTS settings (key TEXT PRIMARY KEY, value TEXT NOT NULL)`),
+  ];
   for (const p of SEED_PRODUCTS) {
-    const row = await env.DB.prepare('SELECT id, sku FROM products WHERE slug = ?').bind(p.slug).first();
-    if (!row) {
-      await env.DB.prepare(
-        'INSERT INTO products (slug, name, price, image, category, status, sku) VALUES (?, ?, ?, ?, ?, ?, ?)'
-      ).bind(p.slug, p.name, p.price, p.image, p.category, p.status, p.sku).run();
-      console.log('Seeded product:', p.slug);
-    } else if (!row.sku && p.sku) {
-      await env.DB.prepare('UPDATE products SET sku = ? WHERE slug = ?').bind(p.sku, p.slug).run();
-    }
+    stmts.push(env.DB.prepare(
+      'INSERT OR IGNORE INTO products (slug, name, price, image, category, status, sku) VALUES (?, ?, ?, ?, ?, ?, ?)'
+    ).bind(p.slug, p.name, p.price, p.image, p.category, p.status, p.sku));
+    stmts.push(env.DB.prepare(
+      `UPDATE products SET sku = ? WHERE slug = ? AND (sku IS NULL OR sku = '')`
+    ).bind(p.sku, p.slug));
   }
+  await env.DB.batch(stmts);
 }
 
-let schemaReady = null;
+// Set once a request in this isolate has completed the migration. Each request
+// runs its own migration (never awaits another request's promise: Workers can
+// hang when a request waits on I/O started by a different request).
+let schemaDone = false;
+
+async function ensureSchemaOnce(env) {
+  if (schemaDone) return;
+  const timeout = new Promise(resolve => setTimeout(resolve, 3000, 'timeout'));
+  try {
+    const r = await Promise.race([ensureSchema(env).then(() => 'ok'), timeout]);
+    if (r === 'ok') schemaDone = true;
+    else console.warn('Schema migration slow; continuing without waiting');
+  } catch (e) {
+    console.error('Schema error:', e);
+  }
+}
 
 // ── Main router ──────────────────────────────────────────────────────
 
 export default {
   async fetch(request, env, ctx) {
-    // Run migration/seed once per isolate, before handling any route
-    if (!schemaReady) {
-      schemaReady = ensureSchema(env).catch(e => { console.error('Schema error:', e); schemaReady = null; });
-    }
-    await schemaReady;
+    // Run migration/seed once per isolate (per-request, bounded by a timeout)
+    await ensureSchemaOnce(env);
 
     const url = new URL(request.url);
     // Normalize: strip trailing slash (except root) so /api/flow/return/ matches /api/flow/return
