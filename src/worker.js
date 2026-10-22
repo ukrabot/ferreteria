@@ -629,6 +629,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110251437',
   },
+  {
+    slug: 'adaptador-triple-plano-16a-gewiss',
+    name: 'Adaptador Triple Plano 16 A Gewiss GW28419 Blanco',
+    price: 20990,
+    image: '/producto/adaptador-triple-plano-16a-gewiss.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '136951085',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
