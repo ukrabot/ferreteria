@@ -130,7 +130,7 @@
 
   // ── Product page: parse JSON-LD and add button ────────────────────
 
-  function initProductPage() {
+  async function initProductPage() {
     const scripts = document.querySelectorAll('script[type="application/ld+json"]');
     let product = null;
     for (const s of scripts) {
@@ -141,59 +141,86 @@
     }
     if (!product) return;
 
+    const slug = window.location.pathname.split('/').filter(Boolean).pop();
     const info = {
-      slug: window.location.pathname.split('/').filter(Boolean).pop(),
+      slug,
       name: product.name,
       price: parseInt(product.offers?.price || 0),
       image: Array.isArray(product.image) ? product.image[0] : product.image,
     };
     if (!info.price) return;
 
-    // Add "Agregar al carrito" buttons next to existing WhatsApp buttons
-    document.querySelectorAll('.action-row, .buy-box').forEach(container => {
-      if (container.querySelector('.btn-cart')) return;
+    // Check availability from API
+    let dbStatus = 'available';
+    try {
+      const res = await fetch(`/api/products?slug=${slug}`);
+      if (res.ok) {
+        const dbProd = await res.json();
+        dbStatus = dbProd.status || 'available';
+        if (dbProd.price) info.price = dbProd.price; // Use DB price
+      }
+    } catch {}
+
+    const isAvailable = dbStatus === 'available';
+
+    function createCartBtn(fullWidth) {
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'btn btn-cart';
-      btn.innerHTML = '🛒 Agregar al carrito';
-      Object.assign(btn.style, {
-        background: '#1e1b15', color: '#fff', border: 'none', cursor: 'pointer',
-        display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-        gap: '8px', padding: '13px 22px', borderRadius: '999px',
-        fontWeight: '700', fontSize: '.88rem', transition: '.2s',
-      });
-      btn.onmouseenter = () => { btn.style.background = '#333'; btn.style.transform = 'translateY(-1px)'; };
-      btn.onmouseleave = () => { btn.style.background = '#1e1b15'; btn.style.transform = 'none'; };
-      btn.onclick = (e) => { e.preventDefault(); addToCart(info); };
-      // Insert after last button
-      container.appendChild(btn);
+      if (isAvailable) {
+        btn.innerHTML = '🛒 Agregar al carrito';
+        Object.assign(btn.style, {
+          background: '#1e1b15', color: '#fff', border: 'none', cursor: 'pointer',
+          display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+          gap: '8px', padding: '13px 22px', borderRadius: '999px',
+          fontWeight: '700', fontSize: '.88rem', transition: '.2s',
+        });
+        if (fullWidth) btn.style.width = '100%', btn.style.marginTop = '10px';
+        btn.onmouseenter = () => { btn.style.background = '#333'; btn.style.transform = 'translateY(-1px)'; };
+        btn.onmouseleave = () => { btn.style.background = '#1e1b15'; btn.style.transform = 'none'; };
+        btn.onclick = (e) => { e.preventDefault(); addToCart(info); };
+      } else {
+        const label = dbStatus === 'agotado' ? '🔴 Producto Agotado' : '⚫ No Disponible';
+        btn.innerHTML = label;
+        btn.disabled = true;
+        Object.assign(btn.style, {
+          background: '#94a3b8', color: '#fff', border: 'none', cursor: 'not-allowed',
+          display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+          gap: '8px', padding: '13px 22px', borderRadius: '999px',
+          fontWeight: '700', fontSize: '.88rem', opacity: '.7',
+        });
+        if (fullWidth) btn.style.width = '100%', btn.style.marginTop = '10px';
+      }
+      return btn;
+    }
+
+    // Add buttons next to existing WhatsApp buttons
+    document.querySelectorAll('.action-row, .buy-box').forEach(container => {
+      if (container.querySelector('.btn-cart')) return;
+      container.appendChild(createCartBtn(false));
     });
 
-    // Also add to the sidebar card buy button area
+    // Sidebar card buy area
     document.querySelectorAll('.card .btn-wa').forEach(waBtn => {
       const card = waBtn.closest('.card');
       if (!card || card.querySelector('.btn-cart')) return;
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'btn btn-cart';
-      btn.innerHTML = '🛒 Agregar al carrito';
-      Object.assign(btn.style, {
-        width: '100%', marginTop: '10px', background: '#1e1b15', color: '#fff',
-        border: 'none', cursor: 'pointer', display: 'inline-flex',
-        alignItems: 'center', justifyContent: 'center', gap: '8px',
-        padding: '13px 22px', borderRadius: '999px',
-        fontWeight: '700', fontSize: '.88rem', transition: '.2s',
-      });
-      btn.onmouseenter = () => { btn.style.background = '#333'; };
-      btn.onmouseleave = () => { btn.style.background = '#1e1b15'; };
-      btn.onclick = (e) => { e.preventDefault(); addToCart(info); };
-      card.appendChild(btn);
+      card.appendChild(createCartBtn(true));
     });
   }
 
   // ── Catalog page: add mini-cart buttons to product cards ───────────
 
-  function initCatalogPage() {
+  async function initCatalogPage() {
+    // Fetch all products status from DB
+    let dbProducts = {};
+    try {
+      const res = await fetch('/api/products');
+      if (res.ok) {
+        const data = await res.json();
+        (data.products || []).forEach(p => { dbProducts[p.slug] = p; });
+      }
+    } catch {}
+
     document.querySelectorAll('.card-prod').forEach(card => {
       const link = card.querySelector('.card-prod-title a');
       const priceEl = card.querySelector('.card-prod-price');
@@ -202,36 +229,54 @@
 
       const name = link.textContent.trim();
       const slug = link.getAttribute('href').split('/').filter(Boolean).pop();
-      const priceText = priceEl.textContent.replace(/[^\d]/g, '');
-      const price = parseInt(priceText);
+      const dbProd = dbProducts[slug];
+      const price = dbProd ? dbProd.price : parseInt(priceEl.textContent.replace(/[^\d]/g, ''));
       const image = imgEl ? imgEl.getAttribute('src') : '';
+      const status = dbProd ? dbProd.status : 'available';
       if (!price) return;
 
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'card-prod-cart-btn';
-      btn.innerHTML = '🛒';
-      btn.title = 'Agregar al carrito';
-      Object.assign(btn.style, {
-        position: 'absolute', top: '8px', right: '8px', zIndex: '5',
-        width: '36px', height: '36px', borderRadius: '50%',
-        background: '#a97b23', color: '#fff', border: 'none',
-        fontSize: '1rem', cursor: 'pointer', display: 'flex',
-        alignItems: 'center', justifyContent: 'center',
-        boxShadow: '0 2px 8px rgba(0,0,0,.15)', transition: '.2s',
-      });
-      btn.onmouseenter = () => btn.style.transform = 'scale(1.1)';
-      btn.onmouseleave = () => btn.style.transform = 'scale(1)';
-      btn.onclick = (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        addToCart({ slug, name, price, image });
-      };
+      // Update displayed price if different from DB
+      if (dbProd && dbProd.price) {
+        priceEl.textContent = fmt(dbProd.price);
+      }
 
       const media = card.querySelector('.card-prod-media');
-      if (media) {
-        media.style.position = 'relative';
+      if (!media) return;
+      media.style.position = 'relative';
+
+      if (status === 'available') {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'card-prod-cart-btn';
+        btn.innerHTML = '🛒';
+        btn.title = 'Agregar al carrito';
+        Object.assign(btn.style, {
+          position: 'absolute', top: '8px', right: '8px', zIndex: '5',
+          width: '36px', height: '36px', borderRadius: '50%',
+          background: '#a97b23', color: '#fff', border: 'none',
+          fontSize: '1rem', cursor: 'pointer', display: 'flex',
+          alignItems: 'center', justifyContent: 'center',
+          boxShadow: '0 2px 8px rgba(0,0,0,.15)', transition: '.2s',
+        });
+        btn.onmouseenter = () => btn.style.transform = 'scale(1.1)';
+        btn.onmouseleave = () => btn.style.transform = 'scale(1)';
+        btn.onclick = (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          addToCart({ slug, name, price, image });
+        };
         media.appendChild(btn);
+      } else {
+        // Show "Agotado" badge
+        const badge = document.createElement('span');
+        badge.textContent = status === 'agotado' ? 'Agotado' : 'No disponible';
+        Object.assign(badge.style, {
+          position: 'absolute', top: '8px', right: '8px', zIndex: '5',
+          background: status === 'agotado' ? '#ef4444' : '#64748b',
+          color: '#fff', padding: '4px 12px', borderRadius: '999px',
+          fontSize: '.72rem', fontWeight: '700', textTransform: 'uppercase',
+        });
+        media.appendChild(badge);
       }
     });
   }
@@ -308,7 +353,9 @@
           customer_name: form.customer_name.value.trim(),
           customer_email: form.customer_email.value.trim(),
           customer_phone: form.customer_phone.value.trim(),
+          customer_address: form.customer_address ? form.customer_address.value.trim() : '',
           customer_comuna: form.customer_comuna.value.trim(),
+          customer_region: form.customer_region ? form.customer_region.value.trim() : '',
           items: cart,
         };
 

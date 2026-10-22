@@ -1,6 +1,6 @@
 /**
  * Ferretería Ukra — Worker API
- * Handles checkout (Flow payments), order management, and admin panel API.
+ * Handles checkout (Flow payments), order management, product management, and admin panel API.
  * Static assets are served automatically by Cloudflare Workers Static Assets.
  */
 
@@ -89,6 +89,27 @@ async function flowGetStatus(env, token) {
   return res.json();
 }
 
+// ── Route: GET /api/products (public) ───────────────────────────────
+
+async function handleGetProducts(request, env, url) {
+  const slug = url.searchParams.get('slug');
+
+  if (slug) {
+    // Single product
+    const row = await env.DB.prepare(
+      `SELECT slug, name, price, image, category, status FROM products WHERE slug = ?`
+    ).bind(slug).first();
+    if (!row) return err('Producto no encontrado', 404);
+    return json(row);
+  }
+
+  // All products
+  const rows = await env.DB.prepare(
+    `SELECT slug, name, price, image, category, status FROM products ORDER BY name`
+  ).all();
+  return json({ products: rows.results });
+}
+
 // ── Route: POST /api/checkout ────────────────────────────────────────
 
 async function handleCheckout(request, env) {
@@ -99,7 +120,7 @@ async function handleCheckout(request, env) {
     return err('JSON inválido');
   }
 
-  const { customer_name, customer_email, customer_phone, customer_comuna, items } = data;
+  const { customer_name, customer_email, customer_phone, customer_comuna, customer_address, customer_region, items } = data;
   if (!customer_name || !customer_email || !items?.length) {
     return err('Faltan campos obligatorios: nombre, email y productos');
   }
@@ -114,7 +135,28 @@ async function handleCheckout(request, env) {
     }
   }
 
-  const total = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
+  // Validate product availability and get real prices from DB
+  const validatedItems = [];
+  let total = 0;
+  for (const item of items) {
+    const dbProduct = await env.DB.prepare(
+      `SELECT slug, name, price, status FROM products WHERE slug = ?`
+    ).bind(item.slug).first();
+
+    if (dbProduct) {
+      if (dbProduct.status !== 'available') {
+        return err(`El producto "${dbProduct.name}" no está disponible actualmente`);
+      }
+      // Use DB price (authoritative)
+      validatedItems.push({ ...item, price: dbProduct.price, name: dbProduct.name });
+      total += dbProduct.price * item.quantity;
+    } else {
+      // Product not in DB yet, use submitted price
+      validatedItems.push(item);
+      total += item.price * item.quantity;
+    }
+  }
+
   if (total < 350) { // Flow minimum is 350 CLP
     return err('El monto mínimo de compra es $350 CLP');
   }
@@ -123,15 +165,17 @@ async function handleCheckout(request, env) {
 
   // Insert order into D1
   await env.DB.prepare(
-    `INSERT INTO orders (order_number, customer_name, customer_email, customer_phone, customer_comuna, products, total)
-     VALUES (?, ?, ?, ?, ?, ?, ?)`
+    `INSERT INTO orders (order_number, customer_name, customer_email, customer_phone, customer_comuna, customer_address, customer_region, products, total)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`
   ).bind(
     order_number,
     customer_name.trim(),
     customer_email.trim().toLowerCase(),
     (customer_phone || '').trim(),
     (customer_comuna || '').trim(),
-    JSON.stringify(items),
+    (customer_address || '').trim(),
+    (customer_region || '').trim(),
+    JSON.stringify(validatedItems),
     total
   ).run();
 
@@ -295,7 +339,7 @@ async function handleAdminOrders(request, env, url) {
 
   const rows = await env.DB.prepare(
     `SELECT id, order_number, customer_name, customer_email, customer_phone, customer_comuna,
-            products, total, status, flow_order, payment_method, created_at, paid_at
+            customer_address, customer_region, products, total, status, flow_order, payment_method, created_at, paid_at
      FROM orders ${where} ORDER BY created_at DESC LIMIT ? OFFSET ?`
   ).bind(...binds, limit, offset).all();
 
@@ -330,6 +374,78 @@ async function handleAdminStats(request, env) {
   });
 }
 
+// ── Route: GET /api/admin/products ───────────────────────────────────
+
+async function handleAdminProducts(request, env) {
+  if (!checkAdmin(request, env)) return err('No autorizado', 401);
+
+  const rows = await env.DB.prepare(
+    `SELECT id, slug, name, price, image, category, status, updated_at FROM products ORDER BY name`
+  ).all();
+
+  return json({ products: rows.results });
+}
+
+// ── Route: PUT /api/admin/products/:slug ─────────────────────────────
+
+async function handleAdminUpdateProduct(request, env, slug) {
+  if (!checkAdmin(request, env)) return err('No autorizado', 401);
+
+  let data;
+  try {
+    data = await request.json();
+  } catch {
+    return err('JSON inválido');
+  }
+
+  // Check product exists
+  const existing = await env.DB.prepare(
+    `SELECT id FROM products WHERE slug = ?`
+  ).bind(slug).first();
+
+  if (!existing) return err('Producto no encontrado', 404);
+
+  // Build update query dynamically
+  const updates = [];
+  const values = [];
+
+  if (data.price !== undefined) {
+    const price = parseInt(data.price);
+    if (isNaN(price) || price < 0) return err('Precio inválido');
+    updates.push('price = ?');
+    values.push(price);
+  }
+
+  if (data.status !== undefined) {
+    if (!['available', 'agotado', 'no_disponible'].includes(data.status)) {
+      return err('Estado inválido. Usar: available, agotado, no_disponible');
+    }
+    updates.push('status = ?');
+    values.push(data.status);
+  }
+
+  if (data.name !== undefined) {
+    updates.push('name = ?');
+    values.push(data.name.trim());
+  }
+
+  if (!updates.length) return err('No hay campos para actualizar');
+
+  updates.push("updated_at = strftime('%Y-%m-%dT%H:%M:%SZ','now')");
+  values.push(slug);
+
+  await env.DB.prepare(
+    `UPDATE products SET ${updates.join(', ')} WHERE slug = ?`
+  ).bind(...values).run();
+
+  // Return updated product
+  const updated = await env.DB.prepare(
+    `SELECT id, slug, name, price, image, category, status, updated_at FROM products WHERE slug = ?`
+  ).bind(slug).first();
+
+  return json(updated);
+}
+
 // ── Main router ──────────────────────────────────────────────────────
 
 export default {
@@ -344,22 +460,31 @@ export default {
         return new Response(null, {
           headers: {
             'Access-Control-Allow-Origin': env.SITE_URL,
-            'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+            'Access-Control-Allow-Methods': 'GET, POST, PUT, OPTIONS',
             'Access-Control-Allow-Headers': 'Content-Type, Authorization',
           },
         });
       }
 
-      // API routes
+      // Public API routes
+      if (path === '/api/products' && method === 'GET') return handleGetProducts(request, env, url);
       if (path === '/api/checkout' && method === 'POST') return handleCheckout(request, env);
       if (path === '/api/flow/confirm' && method === 'POST') return handleFlowConfirm(request, env);
       if (path === '/api/flow/return' && method === 'GET') return handleFlowReturn(request, env, url);
       if (path === '/api/order-status' && method === 'GET') return handleOrderStatus(request, env, url);
+
+      // Admin API routes
       if (path === '/api/admin/orders' && method === 'GET') return handleAdminOrders(request, env, url);
       if (path === '/api/admin/stats' && method === 'GET') return handleAdminStats(request, env);
+      if (path === '/api/admin/products' && method === 'GET') return handleAdminProducts(request, env);
 
-      // Not an API route — assets middleware already handled static files,
-      // so if we're here, the path doesn't match any file.
+      // Admin product update: PUT /api/admin/products/SLUG
+      const productMatch = path.match(/^\/api\/admin\/products\/([a-z0-9-]+)$/);
+      if (productMatch && method === 'PUT') {
+        return handleAdminUpdateProduct(request, env, productMatch[1]);
+      }
+
+      // Not an API route — assets middleware already handled static files
       return new Response('Not Found', { status: 404 });
     } catch (e) {
       console.error('Worker error:', e);
