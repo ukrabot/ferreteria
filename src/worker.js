@@ -610,6 +610,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110223343',
   },
+  {
+    slug: 'adaptador-schuko-16a-bticino-toma-universal',
+    name: 'Adaptador Schuko 16 A Bticino S3624D Toma Universal',
+    price: 13290,
+    image: '/producto/adaptador-schuko-16a-bticino-toma-universal.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '114482856',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
