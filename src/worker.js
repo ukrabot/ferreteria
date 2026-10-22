@@ -565,6 +565,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '113217447',
   },
+  {
+    slug: 'adaptador-schuko-bipaso-16a-bticino',
+    name: 'Adaptador Schuko Bipaso 2P+T 16 A Blanco Bticino',
+    price: 22390,
+    image: '/producto/adaptador-schuko-bipaso-16a-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110251053',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
