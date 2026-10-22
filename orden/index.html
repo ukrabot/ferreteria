@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Estado de Orden — Ferretería Ukra</title>
+<meta name="description" content="Consulta el estado de tu orden en Ferretería Ukra Chile.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#f6f4ee">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;background:#f6f4ee;color:#1e1b15;line-height:1.6}
+a{color:#a97b23;text-decoration:none}
+a:hover{text-decoration:underline}
+
+.topbar{background:#1e1b15;color:#fff;font-size:.75rem;text-align:center;padding:6px 16px}
+.topbar a{color:#d4a94b}
+header{background:#fff;border-bottom:1px solid #e2e0d8;padding:12px 16px;display:flex;align-items:center;gap:12px}
+header .logo{font-size:1.3rem;font-weight:800;color:#1e1b15}
+header .logo span{color:#a97b23}
+header nav{margin-left:auto;display:flex;gap:16px;font-size:.85rem;font-weight:600}
+header nav a{color:#1e1b15}
+
+.container{max-width:700px;margin:0 auto;padding:40px 16px}
+
+/* Order status */
+.order-status{text-align:center;padding:40px 20px;background:#fff;border-radius:16px;border:1px solid #e2e0d8;margin-bottom:24px}
+.order-icon{font-size:3rem;display:block;margin-bottom:8px}
+.order-status h2{font-size:1.5rem;font-weight:800;margin-bottom:4px}
+.order-num{color:#64748b;font-size:.9rem}
+.order-status.success{border-color:#bbf7d0;background:#f0fdf4}
+.order-status.success h2{color:#166534}
+.order-status.warning{border-color:#fed7aa;background:#fffbeb}
+.order-status.warning h2{color:#92400e}
+.order-status.error{border-color:#fecaca;background:#fef2f2}
+.order-status.error h2{color:#991b1b}
+
+/* Products list */
+.order-products{background:#fff;border-radius:12px;border:1px solid #e2e0d8;padding:20px;margin-bottom:16px}
+.order-products h3{font-size:1rem;font-weight:700;margin-bottom:12px;color:#475569}
+.order-product-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f1f5f9;font-size:.9rem}
+.order-product-row:last-of-type{border-bottom:none}
+.order-total-row{display:flex;justify-content:space-between;padding:12px 0 0;border-top:2px solid #e2e0d8;margin-top:8px;font-size:1.05rem;font-weight:800}
+
+.order-info{background:#fff;border-radius:12px;border:1px solid #e2e0d8;padding:16px 20px;font-size:.85rem;color:#64748b;margin-bottom:12px}
+.success-msg{color:#166534;font-weight:600;border-color:#bbf7d0;background:#f0fdf4}
+
+.btn-back{display:inline-block;background:#1e1b15;color:#fff;padding:13px 28px;border-radius:999px;font-weight:700;font-size:.9rem;margin-top:20px;transition:.2s}
+.btn-back:hover{background:#333;text-decoration:none}
+
+.loading{text-align:center;padding:60px 20px;color:#64748b}
+.loading::after{content:'';display:block;width:32px;height:32px;border:3px solid #e2e0d8;border-top-color:#a97b23;border-radius:50%;animation:spin .8s linear infinite;margin:16px auto 0}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+footer{background:#1e1b15;color:#ccc;text-align:center;padding:24px 16px;margin-top:48px;font-size:.8rem}
+footer a{color:#d4a94b}
+</style>
+</head>
+<body>
+<div class="topbar">📞 <a href="tel:+56993514970">+56 9 9351 4970</a> · <a href="mailto:contacto@ferreteriaukra.cl">contacto@ferreteriaukra.cl</a></div>
+<header>
+  <a href="/" class="logo">Ferretería <span>Ukra</span></a>
+  <nav>
+    <a href="/productos/">Productos</a>
+    <a href="/blog/">Blog</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div id="order-detail">
+    <div class="loading">Cargando información de tu orden…</div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2024 Ferretería Ukra Chile · <a href="/productos/">Productos</a> · <a href="/blog/">Blog</a></p>
+  <p style="margin-top:4px"><a href="https://wa.me/56993514970">WhatsApp</a> · contacto@ferreteriaukra.cl</p>
+</footer>
+
+<script src="/assets/cart.js"></script>
+</body>
+</html>

@@ -2,6 +2,7 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "ferreteria",
   "compatibility_date": "2026-07-28",
+  "main": "src/worker.js",
   "observability": {
     "enabled": true
   },
@@ -10,5 +11,18 @@
   },
   "compatibility_flags": [
     "nodejs_compat"
-  ]
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ferreteria-orders",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID"
+    }
+  ],
+  "vars": {
+    "SITE_URL": "https://www.ferreteriaukra.cl",
+    "FLOW_API_KEY": "39CFBD23-56D6-49AE-AC15-41FAL44CB601",
+    "FLOW_SECRET_KEY": "6de74db92d811cc1cd312fccafcad44948fc0db1",
+    "ADMIN_PASSWORD": "ukra-admin-2026-secure"
+  }
 }
