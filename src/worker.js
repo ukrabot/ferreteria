@@ -5,8 +5,8 @@
  */
 
 const FLOW_API = 'https://www.flow.cl/api';
-const FREE_SHIPPING_MIN = 19990; // envío gratis desde este subtotal (CLP)
-const SHIPPING_COST = 3990;      // envío bajo ese monto (CLP)
+// Default shipping settings (editable from /admin/, stored in the settings table)
+const DEFAULT_SHIPPING = { shipping_cost: 3990, free_shipping_min: 19990 };
 
 // ── Helpers ──────────────────────────────────────────────────────────
 
@@ -164,10 +164,10 @@ async function handleCheckout(request, env) {
     return err('El monto mínimo de compra es $350 CLP');
   }
 
-  // Shipping: free from FREE_SHIPPING_MIN, flat SHIPPING_COST below it.
-  // Stored as an order line so admin and the order page show it.
+  // Shipping from admin settings. Stored as an order line so admin and the
+  // order page show it.
   const subtotal = total;
-  const shipping = subtotal >= FREE_SHIPPING_MIN ? 0 : SHIPPING_COST;
+  const shipping = shippingFor(subtotal, await getShippingSettings(env));
   validatedItems.push({ slug: 'envio', name: shipping ? 'Envío' : 'Envío gratis', price: shipping, quantity: 1 });
   total = subtotal + shipping;
 
@@ -567,7 +567,58 @@ const SEED_PRODUCTS = [
   },
 ];
 
+// ── Shipping settings ────────────────────────────────────────────────
+
+async function getShippingSettings(env) {
+  const rows = await env.DB.prepare(
+    `SELECT key, value FROM settings WHERE key IN ('shipping_cost', 'free_shipping_min')`
+  ).all();
+  const out = { ...DEFAULT_SHIPPING };
+  for (const r of rows.results || []) {
+    const n = parseInt(r.value);
+    if (!isNaN(n) && n >= 0) out[r.key] = n;
+  }
+  return out;
+}
+
+// free_shipping_min = 0 means free shipping is not offered
+function shippingFor(subtotal, cfg) {
+  if (cfg.free_shipping_min > 0 && subtotal >= cfg.free_shipping_min) return 0;
+  return cfg.shipping_cost;
+}
+
+// GET /api/shipping (public): used by the checkout to show the right amounts
+async function handleGetShipping(env) {
+  return json(await getShippingSettings(env));
+}
+
+// GET|PUT /api/admin/settings
+async function handleAdminSettings(request, env) {
+  if (!checkAdmin(request, env)) return err('No autorizado', 401);
+  if (request.method === 'GET') return json(await getShippingSettings(env));
+
+  let data;
+  try { data = await request.json(); } catch { return err('JSON inválido'); }
+  const updates = [];
+  for (const key of ['shipping_cost', 'free_shipping_min']) {
+    if (data[key] === undefined) continue;
+    const n = parseInt(data[key]);
+    if (isNaN(n) || n < 0 || n > 10000000) return err('Monto inválido');
+    updates.push(env.DB.prepare(
+      `INSERT INTO settings (key, value) VALUES (?, ?)
+       ON CONFLICT(key) DO UPDATE SET value = excluded.value`
+    ).bind(key, String(n)));
+  }
+  if (!updates.length) return err('No hay campos para actualizar');
+  await env.DB.batch(updates);
+  return json(await getShippingSettings(env));
+}
+
 async function ensureSchema(env) {
+  await env.DB.prepare(
+    `CREATE TABLE IF NOT EXISTS settings (key TEXT PRIMARY KEY, value TEXT NOT NULL)`
+  ).run();
+
   // Add sku column if missing (ALTER fails harmlessly when it already exists)
   try { await env.DB.prepare('ALTER TABLE products ADD COLUMN sku TEXT').run(); } catch {}
 
@@ -615,6 +666,7 @@ export default {
       }
 
       // Public API routes
+      if (path === '/api/shipping' && method === 'GET') return handleGetShipping(env);
       if (path === '/api/products' && method === 'GET') return handleGetProducts(request, env, url);
       if (path === '/api/checkout' && method === 'POST') return handleCheckout(request, env);
       if (path === '/api/flow/confirm' && method === 'POST') return handleFlowConfirm(request, env);
@@ -624,6 +676,7 @@ export default {
       // Admin API routes
       if (path === '/api/admin/orders' && method === 'GET') return handleAdminOrders(request, env, url);
       if (path === '/api/admin/stats' && method === 'GET') return handleAdminStats(request, env);
+      if (path === '/api/admin/settings' && (method === 'GET' || method === 'PUT')) return handleAdminSettings(request, env);
       if (path === '/api/admin/products' && method === 'GET') return handleAdminProducts(request, env);
       if (path === '/api/admin/products' && method === 'POST') return handleAdminCreateProduct(request, env);
 

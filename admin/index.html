@@ -129,6 +129,10 @@ tr:hover td{background:rgba(15,23,42,.3)}
 .add-form .submit-btn{width:100%;padding:12px;background:#a97b23;color:#fff;border:none;border-radius:999px;font-weight:700;font-size:.95rem;cursor:pointer;transition:.2s;margin-top:4px}
 .add-form .submit-btn:hover{background:#8c6419}
 .add-form .submit-btn:disabled{opacity:.5;cursor:not-allowed}
+.settings-card{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:24px;max-width:560px}
+.settings-card h2{font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:6px}
+.settings-help{font-size:.82rem;color:#94a3b8;margin-bottom:16px}
+.settings-preview{background:#0f172a;border:1px solid #334155;border-radius:8px;padding:12px 14px;font-size:.85rem;color:#cbd5e1;margin-bottom:12px}
 .add-form .slug-preview{font-size:.72rem;color:#64748b;margin:-8px 0 12px;word-break:break-all}
 
 @media(max-width:700px){
@@ -176,6 +180,7 @@ tr:hover td{background:rgba(15,23,42,.3)}
     <div class="tabs">
       <button class="tab-btn active" data-tab="products">📦 Productos</button>
       <button class="tab-btn" data-tab="orders">🧾 Órdenes</button>
+      <button class="tab-btn" data-tab="shipping">🚚 Envío</button>
     </div>
 
     <!-- PRODUCTS TAB -->
@@ -209,6 +214,29 @@ tr:hover td{background:rgba(15,23,42,.3)}
             <tr><td colspan="7" class="empty-msg">Cargando…</td></tr>
           </tbody>
         </table>
+      </div>
+    </div>
+
+    <!-- SHIPPING TAB -->
+    <div class="tab-content" id="tab-shipping">
+      <div class="settings-card">
+        <h2>Precio de envío</h2>
+        <p class="settings-help">Estos valores se aplican al instante en el checkout y en el monto que se cobra en Flow.</p>
+        <form class="add-form" onsubmit="return saveShipping(event)">
+          <div class="row2">
+            <div>
+              <label for="set-cost">Costo de envío (CLP)</label>
+              <input id="set-cost" type="number" min="0" step="10" required placeholder="3990">
+            </div>
+            <div>
+              <label for="set-free">Envío gratis desde (CLP)</label>
+              <input id="set-free" type="number" min="0" step="10" required placeholder="19990">
+            </div>
+          </div>
+          <p class="settings-help">Pon <strong>0</strong> en "Envío gratis desde" para no ofrecer envío gratis, o <strong>0</strong> en "Costo de envío" para que todo despacho sea gratis.</p>
+          <div class="settings-preview" id="set-preview"></div>
+          <button type="submit" class="submit-btn" id="set-submit">Guardar</button>
+        </form>
       </div>
     </div>
 
@@ -316,8 +344,61 @@ tr:hover td{background:rgba(15,23,42,.3)}
   async function showDashboard() {
     $('login-screen').style.display = 'none';
     $('dashboard').style.display = 'block';
-    await Promise.all([loadStats(), loadProducts(), loadOrders()]);
+    await Promise.all([loadStats(), loadProducts(), loadOrders(), loadShipping()]);
   }
+
+  // ── Shipping settings ─────────────────────────────────────────────
+
+  function updateShippingPreview() {
+    const c = parseInt($('set-cost').value), m = parseInt($('set-free').value);
+    let txt;
+    if (isNaN(c) || isNaN(m)) txt = '';
+    else if (c === 0) txt = 'Todos los envíos serán gratis.';
+    else if (m === 0) txt = `Todas las compras pagan ${fmt(c)} de envío.`;
+    else txt = `Compras desde ${fmt(m)}: envío gratis. Compras menores: ${fmt(c)} de envío.`;
+    $('set-preview').textContent = txt;
+    $('set-preview').style.display = txt ? 'block' : 'none';
+  }
+  $('set-cost').addEventListener('input', updateShippingPreview);
+  $('set-free').addEventListener('input', updateShippingPreview);
+
+  async function loadShipping() {
+    try {
+      const res = await apiFetch('/api/admin/settings');
+      if (!res.ok) return;
+      const d = await res.json();
+      $('set-cost').value = d.shipping_cost;
+      $('set-free').value = d.free_shipping_min;
+      updateShippingPreview();
+    } catch {}
+  }
+
+  window.saveShipping = async function(e) {
+    e.preventDefault();
+    const shipping_cost = parseInt($('set-cost').value);
+    const free_shipping_min = parseInt($('set-free').value);
+    if (isNaN(shipping_cost) || shipping_cost < 0 || isNaN(free_shipping_min) || free_shipping_min < 0) {
+      toast('Montos inválidos', true); return false;
+    }
+    const btn = $('set-submit');
+    btn.disabled = true; btn.textContent = 'Guardando…';
+    try {
+      const res = await apiFetch('/api/admin/settings', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ shipping_cost, free_shipping_min }),
+      });
+      const d = await res.json();
+      if (res.ok) {
+        $('set-cost').value = d.shipping_cost;
+        $('set-free').value = d.free_shipping_min;
+        updateShippingPreview();
+        toast('Precio de envío actualizado');
+      } else toast(d.error || 'Error al guardar', true);
+    } catch { toast('Error de conexión', true); }
+    btn.disabled = false; btn.textContent = 'Guardar';
+    return false;
+  };
 
   // ── Tabs ──────────────────────────────────────────────────────────
 

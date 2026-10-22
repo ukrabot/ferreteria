@@ -52,11 +52,12 @@
     updateBadge();
   }
 
-  // Must match FREE_SHIPPING_MIN / SHIPPING_COST in src/worker.js (server is authoritative)
-  const FREE_SHIPPING_MIN = 19990;
-  const SHIPPING_COST = 3990;
+  // Shipping settings: defaults, replaced by /api/shipping (set in /admin/).
+  // The server recalculates shipping at checkout, so these only drive the display.
+  const shippingCfg = { shipping_cost: 3990, free_shipping_min: 19990 };
   function shippingFor(subtotal) {
-    return subtotal >= FREE_SHIPPING_MIN ? 0 : SHIPPING_COST;
+    if (shippingCfg.free_shipping_min > 0 && subtotal >= shippingCfg.free_shipping_min) return 0;
+    return shippingCfg.shipping_cost;
   }
 
   function cartTotal() {
@@ -307,6 +308,15 @@
     const contentEl = document.getElementById('checkout-content');
     if (!container) return;
 
+    fetch('/api/shipping').then(r => r.ok ? r.json() : null).then(cfg => {
+      if (!cfg) return;
+      for (const k of ['shipping_cost', 'free_shipping_min']) {
+        const n = parseInt(cfg[k]);
+        if (!isNaN(n) && n >= 0) shippingCfg[k] = n;
+      }
+      render();
+    }).catch(() => {});
+
     function render() {
       const cart = getCart();
       if (!cart.length) {
@@ -341,10 +351,19 @@
       const hintEl = document.getElementById('ship-hint');
       if (subEl) subEl.textContent = fmt(subtotal);
       if (shipEl) shipEl.innerHTML = shipping ? fmt(shipping) : '<span class="free">Gratis</span>';
+      const noteEl = document.getElementById('ship-note');
+      if (noteEl) {
+        const { shipping_cost: c, free_shipping_min: m } = shippingCfg;
+        noteEl.textContent = !c ? 'Envío gratis en todas las compras.'
+          : m > 0 ? `Envío gratis en compras desde ${fmt(m)}. Bajo ese monto, el envío cuesta ${fmt(c)}.`
+          : `Envío a todo Chile: ${fmt(c)}.`;
+      }
       if (hintEl) {
-        if (shipping) {
-          const missing = FREE_SHIPPING_MIN - subtotal;
-          const pct = Math.min(100, Math.round(subtotal / FREE_SHIPPING_MIN * 100));
+        const offersFree = shippingCfg.free_shipping_min > 0;
+        hintEl.style.display = (shipping && !offersFree) ? 'none' : '';
+        if (shipping && offersFree) {
+          const missing = shippingCfg.free_shipping_min - subtotal;
+          const pct = Math.min(100, Math.round(subtotal / shippingCfg.free_shipping_min * 100));
           hintEl.className = 'ship-hint pending';
           hintEl.innerHTML = `Te faltan <strong>${fmt(missing)}</strong> para tener envío gratis<div class="ship-bar"><span style="width:${pct}%"></span></div>`;
         } else {
