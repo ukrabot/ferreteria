@@ -138,7 +138,17 @@
 
   // ── Product page: parse JSON-LD and add button ────────────────────
 
-  async function initProductPage() {
+  // fetch with a timeout so a slow API never blocks the page
+  function fetchJSON(url, ms = 6000) {
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), ms);
+    return fetch(url, { signal: ctrl.signal })
+      .then(r => (r.ok ? r.json() : null))
+      .catch(() => null)
+      .finally(() => clearTimeout(t));
+  }
+
+  function initProductPage() {
     const scripts = document.querySelectorAll('script[type="application/ld+json"]');
     let product = null;
     for (const s of scripts) {
@@ -158,20 +168,6 @@
     };
     if (!info.price) return;
 
-    // Check availability and real price from API
-    let dbStatus = 'available';
-    try {
-      const res = await fetch(`/api/products?slug=${slug}`);
-      if (res.ok) {
-        const dbProd = await res.json();
-        dbStatus = dbProd.status || 'available';
-        if (dbProd.price) {
-          info.price = dbProd.price; // Use DB price for cart
-          showPrice(dbProd.price);
-        }
-      }
-    } catch {}
-
     function showPrice(price) {
       // Update displayed price on the page
       const priceStrong = document.querySelector('.price-panel strong');
@@ -182,7 +178,7 @@
       });
     }
 
-    function createCartBtn(fullWidth, status = dbStatus) {
+    function createCartBtn(fullWidth, status) {
       const isAvailable = status === 'available';
       const btn = document.createElement('button');
       btn.type = 'button';
@@ -198,7 +194,7 @@
         if (fullWidth) btn.style.width = '100%', btn.style.marginTop = '10px';
         btn.onmouseenter = () => { btn.style.background = '#333'; btn.style.transform = 'translateY(-1px)'; };
         btn.onmouseleave = () => { btn.style.background = '#1e1b15'; btn.style.transform = 'none'; };
-        btn.onclick = (e) => { e.preventDefault(); addToCart(info); };
+        btn.onclick = (e) => { e.preventDefault(); addToCart({ ...info }); };
       } else {
         const label = status === 'agotado' ? '🔴 Producto Agotado' : '⚫ No Disponible';
         btn.innerHTML = label;
@@ -214,62 +210,67 @@
       return btn;
     }
 
-    // Add buttons next to existing WhatsApp buttons
+    function setStatus(status) {
+      document.querySelectorAll('.btn-cart').forEach(old => {
+        old.replaceWith(createCartBtn(old.style.width === '100%', status));
+      });
+    }
+
+    // 1) Show the cart buttons right away (assume available); the API only refines them.
     document.querySelectorAll('.action-row, .buy-box').forEach(container => {
       if (container.querySelector('.btn-cart')) return;
-      container.appendChild(createCartBtn(false));
+      container.appendChild(createCartBtn(false, 'available'));
     });
-
-    // Sidebar card buy area
     document.querySelectorAll('.card .btn-wa').forEach(waBtn => {
       const card = waBtn.closest('.card');
       if (!card || card.querySelector('.btn-cart')) return;
-      card.appendChild(createCartBtn(true));
+      card.appendChild(createCartBtn(true, 'available'));
     });
 
-    // Color/variant picker. Markup: <button class="variant-btn" data-slug data-name
+    // 2) Refresh price/status of the currently selected product from the DB.
+    let reqId = 0;
+    function refreshFromDB() {
+      const id = ++reqId;
+      const forSlug = info.slug;
+      fetchJSON(`/api/products?slug=${encodeURIComponent(forSlug)}`).then(d => {
+        if (!d || id !== reqId || info.slug !== forSlug) return; // stale or failed: keep defaults
+        if (d.price) { info.price = d.price; showPrice(d.price); }
+        setStatus(d.status || 'available');
+      });
+    }
+
+    // 3) Color/variant picker. Markup: <button class="variant-btn" data-slug data-name
     // data-image data-price data-param data-alt>. Each variant is its own DB product
     // (own SKU, price, status) but shares this page, so there is no duplicate URL.
     const vbtns = document.querySelectorAll('.variant-btn');
-    if (vbtns.length) {
-      async function selectVariant(b, updateUrl) {
-        vbtns.forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));
-        info.slug = b.dataset.slug;
-        info.name = b.dataset.name;
-        info.image = b.dataset.image;
-        info.price = parseInt(b.dataset.price) || info.price;
-        let status = 'available';
-        try {
-          const r = await fetch(`/api/products?slug=${info.slug}`);
-          if (r.ok) {
-            const d = await r.json();
-            status = d.status || 'available';
-            if (d.price) info.price = d.price;
-          }
-        } catch {}
-        showPrice(info.price);
-        document.querySelectorAll('.btn-cart').forEach(old => {
-          old.replaceWith(createCartBtn(old.style.width === '100%', status));
-        });
-        const main = document.getElementById('mainShot');
-        if (main && b.dataset.image) {
-          main.src = b.dataset.image;
-          if (b.dataset.alt) main.alt = b.dataset.alt;
-          document.querySelectorAll('.thumbs button').forEach(t =>
-            t.setAttribute('aria-current', t.dataset.src === b.dataset.image ? 'true' : 'false'));
-        }
-        const label = document.getElementById('variant-label');
-        if (label) label.textContent = b.textContent.trim();
-        if (updateUrl) {
-          const url = b.dataset.param ? `?color=${b.dataset.param}` : location.pathname;
-          history.replaceState(null, '', url);
-        }
+    function selectVariant(b, updateUrl) {
+      vbtns.forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));
+      info.slug = b.dataset.slug;
+      info.name = b.dataset.name;
+      info.image = b.dataset.image;
+      info.price = parseInt(b.dataset.price) || info.price;
+      showPrice(info.price);
+      setStatus('available');
+      const main = document.getElementById('mainShot');
+      if (main && b.dataset.image) {
+        main.src = b.dataset.image;
+        if (b.dataset.alt) main.alt = b.dataset.alt;
+        document.querySelectorAll('.thumbs button').forEach(t =>
+          t.setAttribute('aria-current', t.dataset.src === b.dataset.image ? 'true' : 'false'));
       }
-      vbtns.forEach(b => b.addEventListener('click', () => selectVariant(b, true)));
-      const wanted = new URLSearchParams(location.search).get('color');
-      const pre = [...vbtns].find(b => b.dataset.param && b.dataset.param === wanted);
-      if (pre) selectVariant(pre, false);
+      const label = document.getElementById('variant-label');
+      if (label) label.textContent = b.textContent.trim();
+      if (updateUrl) {
+        const url = b.dataset.param ? `?color=${b.dataset.param}` : location.pathname;
+        history.replaceState(null, '', url);
+      }
+      refreshFromDB();
     }
+    vbtns.forEach(b => b.addEventListener('click', () => selectVariant(b, true)));
+    const wanted = new URLSearchParams(location.search).get('color');
+    const pre = [...vbtns].find(b => b.dataset.param && b.dataset.param === wanted);
+    if (pre) selectVariant(pre, false);
+    else refreshFromDB();
   }
 
   // ── Catalog page: add mini-cart buttons to product cards ───────────
@@ -277,13 +278,8 @@
   async function initCatalogPage() {
     // Fetch all products status from DB
     let dbProducts = {};
-    try {
-      const res = await fetch('/api/products');
-      if (res.ok) {
-        const data = await res.json();
-        (data.products || []).forEach(p => { dbProducts[p.slug] = p; });
-      }
-    } catch {}
+    const data = await fetchJSON('/api/products');
+    if (data) (data.products || []).forEach(p => { dbProducts[p.slug] = p; });
 
     document.querySelectorAll('.card-prod').forEach(card => {
       const link = card.querySelector('.card-prod-title a');

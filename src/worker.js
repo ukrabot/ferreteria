@@ -729,7 +729,12 @@ async function ensureSchemaOnce(env) {
 export default {
   async fetch(request, env, ctx) {
     // Run migration/seed once per isolate (per-request, bounded by a timeout)
-    await ensureSchemaOnce(env);
+    // Only routes that depend on the migration wait for it; public product
+    // lookups never block on it (they fall back to the page's own price).
+    const reqPath = new URL(request.url).pathname;
+    if (reqPath.startsWith('/api/admin') || reqPath.startsWith('/api/checkout')) {
+      await ensureSchemaOnce(env);
+    }
 
     const url = new URL(request.url);
     // Normalize: strip trailing slash (except root) so /api/flow/return/ matches /api/flow/return
