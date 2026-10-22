@@ -5,6 +5,8 @@
  */
 
 const FLOW_API = 'https://www.flow.cl/api';
+const FREE_SHIPPING_MIN = 19990; // envío gratis desde este subtotal (CLP)
+const SHIPPING_COST = 3990;      // envío bajo ese monto (CLP)
 
 // ── Helpers ──────────────────────────────────────────────────────────
 
@@ -130,6 +132,7 @@ async function handleCheckout(request, env) {
   }
   // Validate items
   for (const item of items) {
+    if (item.slug === 'envio') return err('Producto inválido en el carrito');
     if (!item.name || !item.price || !item.quantity || item.quantity < 1) {
       return err('Producto inválido en el carrito');
     }
@@ -160,6 +163,13 @@ async function handleCheckout(request, env) {
   if (total < 350) { // Flow minimum is 350 CLP
     return err('El monto mínimo de compra es $350 CLP');
   }
+
+  // Shipping: free from FREE_SHIPPING_MIN, flat SHIPPING_COST below it.
+  // Stored as an order line so admin and the order page show it.
+  const subtotal = total;
+  const shipping = subtotal >= FREE_SHIPPING_MIN ? 0 : SHIPPING_COST;
+  validatedItems.push({ slug: 'envio', name: shipping ? 'Envío' : 'Envío gratis', price: shipping, quantity: 1 });
+  total = subtotal + shipping;
 
   const order_number = generateOrderNumber();
 
@@ -193,7 +203,7 @@ async function handleCheckout(request, env) {
     ).bind(flow.token, order_number).run();
 
     const paymentUrl = `${flow.url}?token=${flow.token}`;
-    return json({ paymentUrl, orderNumber: order_number });
+    return json({ paymentUrl, orderNumber: order_number, subtotal, shipping, total });
   } catch (e) {
     console.error('Checkout error:', e);
     // Mark order as failed

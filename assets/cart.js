@@ -52,6 +52,13 @@
     updateBadge();
   }
 
+  // Must match FREE_SHIPPING_MIN / SHIPPING_COST in src/worker.js (server is authoritative)
+  const FREE_SHIPPING_MIN = 19990;
+  const SHIPPING_COST = 3990;
+  function shippingFor(subtotal) {
+    return subtotal >= FREE_SHIPPING_MIN ? 0 : SHIPPING_COST;
+  }
+
   function cartTotal() {
     return getCart().reduce((s, i) => s + i.price * i.quantity, 0);
   }
@@ -326,7 +333,25 @@
         </div>
       `).join('');
 
-      if (totalEl) totalEl.textContent = fmt(cartTotal());
+      const subtotal = cartTotal();
+      const shipping = shippingFor(subtotal);
+      if (totalEl) totalEl.textContent = fmt(subtotal + shipping);
+      const subEl = document.getElementById('checkout-subtotal');
+      const shipEl = document.getElementById('checkout-shipping');
+      const hintEl = document.getElementById('ship-hint');
+      if (subEl) subEl.textContent = fmt(subtotal);
+      if (shipEl) shipEl.innerHTML = shipping ? fmt(shipping) : '<span class="free">Gratis</span>';
+      if (hintEl) {
+        if (shipping) {
+          const missing = FREE_SHIPPING_MIN - subtotal;
+          const pct = Math.min(100, Math.round(subtotal / FREE_SHIPPING_MIN * 100));
+          hintEl.className = 'ship-hint pending';
+          hintEl.innerHTML = `Te faltan <strong>${fmt(missing)}</strong> para tener envío gratis<div class="ship-bar"><span style="width:${pct}%"></span></div>`;
+        } else {
+          hintEl.className = 'ship-hint';
+          hintEl.textContent = '🚚 ¡Tu compra tiene envío gratis!';
+        }
+      }
 
       // Bind controls
       container.querySelectorAll('.qty-btn').forEach(btn => {
@@ -440,8 +465,8 @@
             <h3>Productos</h3>
             ${data.products.map(p => `
               <div class="order-product-row">
-                <span>${p.name} × ${p.quantity}</span>
-                <strong>${fmt(p.price * p.quantity)}</strong>
+                <span>${p.slug === 'envio' ? p.name : `${p.name} × ${p.quantity}`}</span>
+                <strong>${p.slug === 'envio' && !p.price ? 'Gratis' : fmt(p.price * p.quantity)}</strong>
               </div>
             `).join('')}
             <div class="order-total-row">
