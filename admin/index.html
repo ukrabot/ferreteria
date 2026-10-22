@@ -76,6 +76,13 @@ tr:hover td{background:rgba(15,23,42,.3)}
 .prod-name{font-weight:600;max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .prod-cat{font-size:.72rem;color:#64748b}
 
+/* Search */
+.search-box{margin-bottom:16px}
+.search-box input{width:100%;padding:10px 14px 10px 38px;border:1px solid #334155;border-radius:10px;background:#0f172a;color:#e2e8f0;font-size:.88rem;font-family:inherit}
+.search-box input:focus{outline:none;border-color:#a97b23;box-shadow:0 0 0 3px rgba(169,123,35,.12)}
+.search-box{position:relative}
+.search-box::before{content:'🔍';position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:.85rem;pointer-events:none}
+
 /* Inline edit */
 .inline-edit{display:inline-flex;align-items:center;gap:4px}
 .inline-edit input{width:90px;padding:4px 8px;border:1px solid #334155;border-radius:6px;background:#0f172a;color:#e2e8f0;font-size:.82rem;font-family:inherit;text-align:right}
@@ -105,6 +112,9 @@ tr:hover td{background:rgba(15,23,42,.3)}
 .section-title{margin:16px 0 8px;font-size:.72rem;color:#64748b;text-transform:uppercase;font-weight:700;letter-spacing:.04em}
 .close-btn{display:block;width:100%;margin-top:20px;padding:10px;background:#334155;color:#e2e8f0;border:none;border-radius:10px;font-weight:600;cursor:pointer;font-size:.9rem}
 .close-btn:hover{background:#475569}
+.delete-btn{display:block;width:100%;margin-top:8px;padding:10px;background:#7f1d1d;color:#fca5a5;border:none;border-radius:10px;font-weight:600;cursor:pointer;font-size:.9rem;transition:.15s}
+.delete-btn:hover{background:#991b1b;color:#fff}
+.delete-btn:disabled{opacity:.5;cursor:not-allowed}
 
 /* Toast */
 .toast{position:fixed;bottom:24px;right:24px;z-index:200;background:#064e3b;color:#6ee7b7;padding:12px 20px;border-radius:10px;font-size:.85rem;font-weight:600;transform:translateY(20px);opacity:0;transition:all .3s;pointer-events:none}
@@ -160,6 +170,9 @@ tr:hover td{background:rgba(15,23,42,.3)}
 
     <!-- PRODUCTS TAB -->
     <div class="tab-content active" id="tab-products">
+      <div class="search-box">
+        <input type="text" id="prod-search" placeholder="Buscar producto por nombre, slug o categoría…" autocomplete="off">
+      </div>
       <div class="filters" id="prod-filters">
         <button class="filter-btn active" data-status="all">Todos</button>
         <button class="filter-btn" data-status="available">Disponibles</button>
@@ -233,6 +246,7 @@ tr:hover td{background:rgba(15,23,42,.3)}
   let orderStatus = 'all';
   let orderPage = 1;
   let prodFilter = 'all';
+  let prodSearch = '';
   let allProducts = [];
 
   const $ = id => document.getElementById(id);
@@ -334,7 +348,15 @@ tr:hover td{background:rgba(15,23,42,.3)}
 
   function renderProducts() {
     const body = $('products-body');
-    const filtered = prodFilter === 'all' ? allProducts : allProducts.filter(p => p.status === prodFilter);
+    let filtered = prodFilter === 'all' ? allProducts : allProducts.filter(p => p.status === prodFilter);
+    if (prodSearch) {
+      const q = prodSearch.toLowerCase();
+      filtered = filtered.filter(p =>
+        (p.name || '').toLowerCase().includes(q) ||
+        (p.slug || '').toLowerCase().includes(q) ||
+        (p.category || '').toLowerCase().includes(q)
+      );
+    }
 
     if (!filtered.length) {
       body.innerHTML = '<tr><td colspan="6" class="empty-msg">No hay productos</td></tr>';
@@ -422,6 +444,12 @@ tr:hover td{background:rgba(15,23,42,.3)}
       prodFilter = btn.dataset.status;
       renderProducts();
     };
+  });
+
+  // Product search
+  $('prod-search').addEventListener('input', function() {
+    prodSearch = this.value.trim();
+    renderProducts();
   });
 
   // ── Orders ────────────────────────────────────────────────────────
@@ -514,8 +542,25 @@ tr:hover td{background:rgba(15,23,42,.3)}
       ${o.flow_order ? `<div class="detail-row"><span class="lbl">Flow Order</span><span class="val">${esc(o.flow_order)}</span></div>` : ''}
 
       <button class="close-btn" onclick="closeModal()">Cerrar</button>
+      <button class="delete-btn" onclick="deleteOrder(${o.id}, '${esc(o.order_number)}')">🗑️ Eliminar orden</button>
     `;
     $('modal-overlay').style.display = 'flex';
+  };
+
+  window.deleteOrder = async function(id, orderNum) {
+    if (!confirm('¿Estás seguro de eliminar la orden ' + orderNum + '? Esta acción no se puede deshacer.')) return;
+    try {
+      const res = await apiFetch('/api/admin/orders/' + id, { method: 'DELETE' });
+      if (res.ok) {
+        toast('Orden ' + orderNum + ' eliminada');
+        closeModal();
+        loadOrders();
+        loadStats();
+      } else {
+        const e = await res.json();
+        toast(e.error || 'Error al eliminar', true);
+      }
+    } catch { toast('Error de conexión', true); }
   };
 
   window.closeModal = function(e) {

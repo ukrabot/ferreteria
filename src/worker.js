@@ -446,6 +446,25 @@ async function handleAdminUpdateProduct(request, env, slug) {
   return json(updated);
 }
 
+// ── Route: DELETE /api/admin/orders/:id ─────────────────────────────
+
+async function handleAdminDeleteOrder(request, env, orderId) {
+  if (!checkAdmin(request, env)) return err('No autorizado', 401);
+
+  const id = parseInt(orderId);
+  if (isNaN(id)) return err('ID de orden inválido');
+
+  const existing = await env.DB.prepare(
+    `SELECT id, order_number FROM orders WHERE id = ?`
+  ).bind(id).first();
+
+  if (!existing) return err('Orden no encontrada', 404);
+
+  await env.DB.prepare(`DELETE FROM orders WHERE id = ?`).bind(id).run();
+
+  return json({ deleted: true, order_number: existing.order_number });
+}
+
 // ── Main router ──────────────────────────────────────────────────────
 
 export default {
@@ -460,7 +479,7 @@ export default {
         return new Response(null, {
           headers: {
             'Access-Control-Allow-Origin': env.SITE_URL,
-            'Access-Control-Allow-Methods': 'GET, POST, PUT, OPTIONS',
+            'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
             'Access-Control-Allow-Headers': 'Content-Type, Authorization',
           },
         });
@@ -482,6 +501,12 @@ export default {
       const productMatch = path.match(/^\/api\/admin\/products\/([a-z0-9-]+)$/);
       if (productMatch && method === 'PUT') {
         return handleAdminUpdateProduct(request, env, productMatch[1]);
+      }
+
+      // Admin order delete: DELETE /api/admin/orders/ID
+      const orderDeleteMatch = path.match(/^\/api\/admin\/orders\/(\d+)$/);
+      if (orderDeleteMatch && method === 'DELETE') {
+        return handleAdminDeleteOrder(request, env, orderDeleteMatch[1]);
       }
 
       // Not an API route — assets middleware already handled static files
