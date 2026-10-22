@@ -592,6 +592,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110222597',
   },
+  {
+    slug: 'enchufe-triple-salvaespacio-halux',
+    name: 'Enchufe Triple Salvaespacio 10 A Blanco Halux',
+    price: 7690,
+    image: '/producto/enchufe-triple-salvaespacio-halux.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110227676',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
