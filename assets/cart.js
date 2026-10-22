@@ -150,14 +150,23 @@
     };
     if (!info.price) return;
 
-    // Check availability from API
+    // Check availability and real price from API
     let dbStatus = 'available';
     try {
       const res = await fetch(`/api/products?slug=${slug}`);
       if (res.ok) {
         const dbProd = await res.json();
         dbStatus = dbProd.status || 'available';
-        if (dbProd.price) info.price = dbProd.price; // Use DB price
+        if (dbProd.price) {
+          info.price = dbProd.price; // Use DB price for cart
+          // Update displayed price on the page
+          const priceStrong = document.querySelector('.price-panel strong');
+          if (priceStrong) priceStrong.innerHTML = fmt(dbProd.price) + ' <small>CLP</small>';
+          // Update buy-box price if present
+          document.querySelectorAll('.buy-box p strong').forEach(el => {
+            if (/\$[\d.,]+/.test(el.textContent)) el.textContent = fmt(dbProd.price) + ' CLP';
+          });
+        }
       }
     } catch {}
 

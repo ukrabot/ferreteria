@@ -51,7 +51,7 @@ async function flowCreatePayment(env, order) {
   const params = {
     apiKey: env.FLOW_API_KEY,
     commerceOrder: order.order_number,
-    subject: `Ferretería Ukra — Orden ${order.order_number}`,
+    subject: `Ferreteria Ukra - Orden ${order.order_number}`,
     currency: 'CLP',
     amount: String(order.total),
     email: order.customer_email,
@@ -70,7 +70,7 @@ async function flowCreatePayment(env, order) {
   if (!res.ok) {
     const text = await res.text();
     console.error('Flow create error:', res.status, text);
-    throw new Error(`Flow API error: ${res.status}`);
+    throw new Error(`Flow ${res.status}: ${text.substring(0, 200)}`);
   }
   return res.json();
 }
@@ -200,7 +200,7 @@ async function handleCheckout(request, env) {
     await env.DB.prepare(
       `UPDATE orders SET status = 'error' WHERE order_number = ?`
     ).bind(order_number).run();
-    return err('Error al crear el pago en Flow. Intenta de nuevo.', 502);
+    return err(`Error al crear el pago: ${e.message || 'Error desconocido'}. Intenta de nuevo.`, 502);
   }
 }
 
