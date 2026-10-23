@@ -656,6 +656,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '116275874',
   },
+  {
+    slug: 'adaptador-proteccion-sobretension-fusible-halux',
+    name: 'Adaptador con Protección de Sobretensión y Fusible 10 A Halux',
+    price: 6590,
+    image: '/producto/adaptador-proteccion-sobretension-fusible-halux.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '133501276',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
