@@ -546,6 +546,66 @@
       });
   }
 
+  // ── AdSense on product pages / catalog (toggled from /admin/) ─────
+
+  const ADS_CLIENT = 'ca-pub-7032484018692343';
+  const ADS_SLOT = '7434550690';
+
+  function makeAdSlot() {
+    const wrap = document.createElement('div');
+    wrap.className = 'ukra-ad';
+    wrap.setAttribute('role', 'region');
+    wrap.setAttribute('aria-label', 'Publicidad');
+    wrap.style.cssText = 'margin:28px 0;min-height:280px;text-align:center;clear:both';
+    wrap.innerHTML = `<ins class="adsbygoogle" style="display:block" data-ad-client="${ADS_CLIENT}" data-ad-slot="${ADS_SLOT}" data-ad-format="auto" data-full-width-responsive="true"></ins>`;
+    return wrap;
+  }
+
+  async function initAds() {
+    const cfg = await fetchJSON('/api/site-config', 4000);
+    if (!cfg || !cfg.adsense_products) return;
+    if (document.querySelector('.ukra-ad')) return;
+
+    // Where to place up to 3 ad units
+    const spots = [];
+    const prose = document.querySelector('article.prose');
+    if (prose) {
+      // Product page: after the table of contents, before the first buy box, before the FAQ
+      const toc = prose.querySelector('.toc');
+      if (toc) spots.push(['after', toc]);
+      const buy = prose.querySelector('.buy-box');
+      if (buy) spots.push(['before', buy]);
+      const faq = prose.querySelector('#preguntas') || prose.querySelector('.sources') || prose.querySelector('.disclosure');
+      if (faq) spots.push(['before', faq]);
+    } else {
+      // Catalog: before the grid, between the two grids, after the last grid
+      const g1 = document.getElementById('prodGrid');
+      const g2 = document.getElementById('prodGrid2');
+      if (g1) spots.push(['before', g1]);
+      if (g2) spots.push(['before', g2]);
+      const last = g2 || g1;
+      if (last) spots.push(['after', last]);
+    }
+    if (!spots.length) return;
+
+    spots.slice(0, 3).forEach(([where, el]) => {
+      const ad = makeAdSlot();
+      if (where === 'after') el.insertAdjacentElement('afterend', ad);
+      else el.insertAdjacentElement('beforebegin', ad);
+    });
+
+    if (!document.querySelector('script[src*="adsbygoogle.js"]')) {
+      const sc = document.createElement('script');
+      sc.async = true;
+      sc.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_CLIENT}`;
+      sc.crossOrigin = 'anonymous';
+      document.head.appendChild(sc);
+    }
+    document.querySelectorAll('.ukra-ad ins.adsbygoogle').forEach(() => {
+      try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch {}
+    });
+  }
+
   // ── Init ──────────────────────────────────────────────────────────
 
   function init() {
@@ -553,6 +613,7 @@
     const path = window.location.pathname;
     if (path.startsWith('/producto/')) initProductPage();
     if (path.startsWith('/productos')) initCatalogPage();
+    if (path.startsWith('/producto/') || path.startsWith('/productos')) initAds();
     if (path.startsWith('/checkout')) initCheckoutPage();
     if (path.startsWith('/orden')) initOrderPage();
   }

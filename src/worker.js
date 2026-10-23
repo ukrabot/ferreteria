@@ -710,14 +710,43 @@ async function handleGetShipping(env) {
   return json(await getShippingSettings(env));
 }
 
+// ── Site config (AdSense on product pages) ──────────────────────────
+
+async function getSiteConfig(env) {
+  try {
+    const row = await env.DB.prepare(`SELECT value FROM settings WHERE key = 'adsense_products'`).first();
+    return { adsense_products: row?.value === '1' };
+  } catch {
+    return { adsense_products: false }; // settings table not created yet
+  }
+}
+
+// GET /api/site-config (public): product pages and /productos/ read it to
+// decide whether to show AdSense. Short cache so admin changes apply fast.
+async function handleGetSiteConfig(env) {
+  const res = json(await getSiteConfig(env));
+  res.headers.set('Cache-Control', 'public, max-age=60');
+  return res;
+}
+
+async function getAdminSettings(env) {
+  return { ...(await getShippingSettings(env)), ...(await getSiteConfig(env)) };
+}
+
 // GET|PUT /api/admin/settings
 async function handleAdminSettings(request, env) {
   if (!checkAdmin(request, env)) return err('No autorizado', 401);
-  if (request.method === 'GET') return json(await getShippingSettings(env));
+  if (request.method === 'GET') return json(await getAdminSettings(env));
 
   let data;
   try { data = await request.json(); } catch { return err('JSON inválido'); }
   const updates = [];
+  if (data.adsense_products !== undefined) {
+    updates.push(env.DB.prepare(
+      `INSERT INTO settings (key, value) VALUES ('adsense_products', ?)
+       ON CONFLICT(key) DO UPDATE SET value = excluded.value`
+    ).bind(data.adsense_products ? '1' : '0'));
+  }
   for (const key of ['shipping_cost', 'free_shipping_min']) {
     if (data[key] === undefined) continue;
     const n = parseInt(data[key]);
@@ -729,7 +758,7 @@ async function handleAdminSettings(request, env) {
   }
   if (!updates.length) return err('No hay campos para actualizar');
   await env.DB.batch(updates);
-  return json(await getShippingSettings(env));
+  return json(await getAdminSettings(env));
 }
 
 async function ensureSchema(env) {
@@ -801,6 +830,7 @@ export default {
 
       // Public API routes
       if (path === '/api/shipping' && method === 'GET') return handleGetShipping(env);
+      if (path === '/api/site-config' && method === 'GET') return handleGetSiteConfig(env);
       if (path === '/api/products' && method === 'GET') return handleGetProducts(request, env, url);
       if (path === '/api/checkout' && method === 'POST') return handleCheckout(request, env);
       if (path === '/api/flow/confirm' && method === 'POST') return handleFlowConfirm(request, env);

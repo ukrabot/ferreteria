@@ -132,6 +132,14 @@ tr:hover td{background:rgba(15,23,42,.3)}
 .settings-card{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:24px;max-width:560px}
 .settings-card h2{font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:6px}
 .settings-help{font-size:.82rem;color:#94a3b8;margin-bottom:16px}
+.switch-row{display:flex;align-items:center;gap:14px;cursor:pointer;font-weight:700;color:#e2e8f0}
+.switch{position:relative;display:inline-block;width:52px;height:28px;flex-shrink:0}
+.switch input{opacity:0;width:0;height:0}
+.slider{position:absolute;inset:0;background:#475569;border-radius:999px;transition:.2s}
+.slider::before{content:'';position:absolute;width:22px;height:22px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.2s}
+.switch input:checked + .slider{background:#16a34a}
+.switch input:checked + .slider::before{transform:translateX(24px)}
+.switch input:focus-visible + .slider{outline:2px solid #a97b23;outline-offset:2px}
 .settings-preview{background:#0f172a;border:1px solid #334155;border-radius:8px;padding:12px 14px;font-size:.85rem;color:#cbd5e1;margin-bottom:12px}
 .add-form .slug-preview{font-size:.72rem;color:#64748b;margin:-8px 0 12px;word-break:break-all}
 
@@ -180,7 +188,7 @@ tr:hover td{background:rgba(15,23,42,.3)}
     <div class="tabs">
       <button class="tab-btn active" data-tab="products">📦 Productos</button>
       <button class="tab-btn" data-tab="orders">🧾 Órdenes</button>
-      <button class="tab-btn" data-tab="shipping">🚚 Envío</button>
+      <button class="tab-btn" data-tab="shipping">⚙️ Ajustes</button>
     </div>
 
     <!-- PRODUCTS TAB -->
@@ -237,6 +245,19 @@ tr:hover td{background:rgba(15,23,42,.3)}
           <div class="settings-preview" id="set-preview"></div>
           <button type="submit" class="submit-btn" id="set-submit">Guardar</button>
         </form>
+      </div>
+
+      <div class="settings-card" style="margin-top:16px">
+        <h2>Publicidad Google AdSense</h2>
+        <p class="settings-help">Muestra u oculta los anuncios en <strong>/productos/</strong> y en todas las <strong>páginas de producto</strong>. El blog no se ve afectado: mantiene sus anuncios siempre.</p>
+        <label class="switch-row">
+          <span class="switch">
+            <input type="checkbox" id="set-adsense" onchange="saveAdsense(this.checked)">
+            <span class="slider"></span>
+          </span>
+          <span id="adsense-label">Cargando…</span>
+        </label>
+        <p class="settings-help" style="margin-top:12px;margin-bottom:0">Los cambios se aplican en hasta 1 minuto. Con AdSense activo se muestran 3 anuncios por página, respetando el aviso de cookies.</p>
       </div>
     </div>
 
@@ -374,8 +395,39 @@ tr:hover td{background:rgba(15,23,42,.3)}
       $('set-cost').value = d.shipping_cost;
       $('set-free').value = d.free_shipping_min;
       updateShippingPreview();
+      setAdsenseUI(!!d.adsense_products);
     } catch {}
   }
+
+  function setAdsenseUI(on) {
+    $('set-adsense').checked = on;
+    $('adsense-label').textContent = on ? 'Anuncios activados en productos' : 'Anuncios desactivados en productos';
+    $('adsense-label').style.color = on ? '#4ade80' : '#94a3b8';
+  }
+
+  window.saveAdsense = async function(on) {
+    const box = $('set-adsense');
+    box.disabled = true;
+    try {
+      const res = await apiFetch('/api/admin/settings', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ adsense_products: on }),
+      });
+      const d = await res.json();
+      if (res.ok) {
+        setAdsenseUI(!!d.adsense_products);
+        toast(d.adsense_products ? 'AdSense activado en productos' : 'AdSense desactivado en productos');
+      } else {
+        setAdsenseUI(!on);
+        toast(d.error || 'Error al guardar', true);
+      }
+    } catch {
+      setAdsenseUI(!on);
+      toast('Error de conexión', true);
+    }
+    box.disabled = false;
+  };
 
   window.saveShipping = async function(e) {
     e.preventDefault();
