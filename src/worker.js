@@ -665,6 +665,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '133501276',
   },
+  {
+    slug: 'triple-estandar-3-tomas-con-tierra-halux',
+    name: 'Triple Estándar 10 A con 3 Tomas con Tierra Halux',
+    price: 3890,
+    image: '/producto/triple-estandar-3-tomas-con-tierra-halux.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110264364',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
