@@ -683,6 +683,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110243364',
   },
+  {
+    slug: 'enchufe-triple-con-toma-schuko-halux',
+    name: 'Enchufe Triple con Toma Schuko 10 A Halux OB1110',
+    price: 8990,
+    image: '/producto/enchufe-triple-con-toma-schuko-halux.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '121262389',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
