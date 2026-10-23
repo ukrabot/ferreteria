@@ -647,6 +647,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '121205296',
   },
+  {
+    slug: 'enchufe-triple-proteccion-sobrecarga-bticino',
+    name: 'Enchufe Triple con Protección de Sobrecarga Bticino Schuko + 2 Bipaso',
+    price: 14990,
+    image: '/producto/enchufe-triple-proteccion-sobrecarga-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '116275874',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
