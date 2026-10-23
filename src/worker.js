@@ -674,6 +674,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110264364',
   },
+  {
+    slug: 'enchufe-triple-2p-t-10a-rema',
+    name: 'Enchufe Triple 10 A 2P+T REMA Modelo 9091',
+    price: 7990,
+    image: '/producto/enchufe-triple-2p-t-10a-rema.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110243364',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
