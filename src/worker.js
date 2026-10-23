@@ -692,6 +692,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '121262389',
   },
+  {
+    slug: 'enchufe-industrial-hembra-16a-2p-t-220v-lexo',
+    name: 'Enchufe Industrial Hembra Volante 16 A 2P+T 220 V LEXO',
+    price: 6390,
+    image: '/producto/enchufe-industrial-hembra-16a-2p-t-220v-lexo.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110223097',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
