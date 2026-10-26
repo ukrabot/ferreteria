@@ -701,6 +701,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110223097',
   },
+  {
+    slug: 'enchufe-macho-volante-articulado-10a-bticino',
+    name: 'Enchufe Macho Volante Articulado 10 A 2P+T Bticino Gris',
+    price: 4390,
+    image: '/producto/enchufe-macho-volante-articulado-10a-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110254780',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
