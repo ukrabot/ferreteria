@@ -249,7 +249,8 @@ tr:hover td{background:rgba(15,23,42,.3)}
 
       <div class="settings-card" style="margin-top:16px">
         <h2>Publicidad Google AdSense</h2>
-        <p class="settings-help">Muestra u oculta los anuncios en <strong>/productos/</strong> y en todas las <strong>páginas de producto</strong>. El blog no se ve afectado: mantiene sus anuncios siempre.</p>
+        <p class="settings-help">Activa o desactiva los anuncios por separado en la tienda y en el blog.</p>
+        <p class="settings-help" style="margin-bottom:6px"><strong>Productos:</strong> /productos/ y todas las páginas de producto.</p>
         <label class="switch-row">
           <span class="switch">
             <input type="checkbox" id="set-adsense" onchange="saveAdsense(this.checked)">
@@ -257,7 +258,15 @@ tr:hover td{background:rgba(15,23,42,.3)}
           </span>
           <span id="adsense-label">Cargando…</span>
         </label>
-        <p class="settings-help" style="margin-top:12px;margin-bottom:0">Los cambios se aplican en hasta 1 minuto. Con AdSense activo se muestran 3 anuncios por página, respetando el aviso de cookies.</p>
+        <p class="settings-help" style="margin:14px 0 6px"><strong>Blog:</strong> todos los artículos de /blog/.</p>
+        <label class="switch-row">
+          <span class="switch">
+            <input type="checkbox" id="set-adsense-blog" onchange="saveAdsenseBlog(this.checked)">
+            <span class="slider"></span>
+          </span>
+          <span id="adsense-blog-label">Cargando…</span>
+        </label>
+        <p class="settings-help" style="margin-top:12px;margin-bottom:0">Los cambios se aplican en hasta 1 minuto. En productos, AdSense muestra 3 anuncios por página; en el blog se usan los anuncios que ya tiene cada artículo.</p>
       </div>
 
       <div class="settings-card" style="margin-top:16px">
@@ -402,6 +411,7 @@ tr:hover td{background:rgba(15,23,42,.3)}
       $('set-free').value = d.free_shipping_min;
       updateShippingPreview();
       setAdsenseUI(!!d.adsense_products);
+      setAdsenseBlogUI(d.adsense_blog !== false);
     } catch {}
   }
 
@@ -476,6 +486,36 @@ tr:hover td{background:rgba(15,23,42,.3)}
       }
     } catch {
       setAdsenseUI(!on);
+      toast('Error de conexión', true);
+    }
+    box.disabled = false;
+  };
+
+  function setAdsenseBlogUI(on) {
+    $('set-adsense-blog').checked = on;
+    $('adsense-blog-label').textContent = on ? 'Anuncios activados en el blog' : 'Anuncios desactivados en el blog';
+    $('adsense-blog-label').style.color = on ? '#4ade80' : '#94a3b8';
+  }
+
+  window.saveAdsenseBlog = async function(on) {
+    const box = $('set-adsense-blog');
+    box.disabled = true;
+    try {
+      const res = await apiFetch('/api/admin/settings', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ adsense_blog: on }),
+      });
+      const d = await res.json();
+      if (res.ok) {
+        setAdsenseBlogUI(d.adsense_blog !== false);
+        toast(d.adsense_blog !== false ? 'AdSense activado en el blog' : 'AdSense desactivado en el blog');
+      } else {
+        setAdsenseBlogUI(!on);
+        toast(d.error || 'Error al guardar', true);
+      }
+    } catch {
+      setAdsenseBlogUI(!on);
       toast('Error de conexión', true);
     }
     box.disabled = false;

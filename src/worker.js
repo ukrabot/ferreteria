@@ -977,11 +977,43 @@ async function handleGetShipping(env) {
 
 async function getSiteConfig(env) {
   try {
-    const row = await env.DB.prepare(`SELECT value FROM settings WHERE key = 'adsense_products'`).first();
-    return { adsense_products: row?.value === '1' };
+    const rows = await env.DB.prepare(
+      `SELECT key, value FROM settings WHERE key IN ('adsense_products', 'adsense_blog')`
+    ).all();
+    const v = Object.fromEntries((rows.results || []).map(r => [r.key, r.value]));
+    // Products: off unless enabled. Blog: on unless disabled (it always had ads).
+    return { adsense_products: v.adsense_products === '1', adsense_blog: v.adsense_blog !== '0' };
   } catch {
-    return { adsense_products: false }; // settings table not created yet
+    return { adsense_products: false, adsense_blog: true }; // settings table not created yet
   }
+}
+
+// ── Blog pages: strip AdSense when disabled in /admin/ ──────────────
+// Blog HTML is static with the ad code inline; with run_worker_first the
+// Worker serves it from ASSETS and removes the loader script and ad units.
+
+let blogAdsCache = { value: true, at: 0 };
+async function blogAdsEnabled(env) {
+  if (Date.now() - blogAdsCache.at < 30000) return blogAdsCache.value;
+  const timeout = new Promise(resolve => setTimeout(resolve, 1500, null));
+  const cfg = await Promise.race([getSiteConfig(env), timeout]);
+  if (cfg) blogAdsCache = { value: cfg.adsense_blog, at: Date.now() };
+  return cfg ? cfg.adsense_blog : blogAdsCache.value;
+}
+
+async function serveBlog(request, env) {
+  const res = await env.ASSETS.fetch(request);
+  const type = res.headers.get('Content-Type') || '';
+  if (!type.includes('text/html') || await blogAdsEnabled(env)) return res;
+  const remove = { element(el) { el.remove(); } };
+  const out = new HTMLRewriter()
+    .on('script[src*="adsbygoogle"]', remove)
+    .on('ins.adsbygoogle', remove)
+    .transform(res);
+  const headers = new Headers(out.headers);
+  headers.set('Cache-Control', 'public, max-age=0, must-revalidate');
+  headers.delete('ETag');
+  return new Response(out.body, { status: out.status, statusText: out.statusText, headers });
 }
 
 // GET /api/site-config (public): product pages and /productos/ read it to
@@ -1004,6 +1036,13 @@ async function handleAdminSettings(request, env) {
   let data;
   try { data = await request.json(); } catch { return err('JSON inválido'); }
   const updates = [];
+  if (data.adsense_blog !== undefined) {
+    updates.push(env.DB.prepare(
+      `INSERT INTO settings (key, value) VALUES ('adsense_blog', ?)
+       ON CONFLICT(key) DO UPDATE SET value = excluded.value`
+    ).bind(data.adsense_blog ? '1' : '0'));
+    blogAdsCache = { value: !!data.adsense_blog, at: Date.now() };
+  }
   if (data.adsense_products !== undefined) {
     updates.push(env.DB.prepare(
       `INSERT INTO settings (key, value) VALUES ('adsense_products', ?)
@@ -1091,6 +1130,9 @@ export default {
           },
         });
       }
+
+      // Blog articles (run_worker_first): AdSense on/off from /admin/
+      if (rawPath === '/blog' || rawPath.startsWith('/blog/')) return serveBlog(request, env);
 
       // Public API routes
       if (path === '/api/shipping' && method === 'GET') return handleGetShipping(env);
