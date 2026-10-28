@@ -129,6 +129,11 @@ tr:hover td{background:rgba(15,23,42,.3)}
 .add-form .submit-btn{width:100%;padding:12px;background:#a97b23;color:#fff;border:none;border-radius:999px;font-weight:700;font-size:.95rem;cursor:pointer;transition:.2s;margin-top:4px}
 .add-form .submit-btn:hover{background:#8c6419}
 .add-form .submit-btn:disabled{opacity:.5;cursor:not-allowed}
+.mini-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:#a97b23;color:#fff;border:none;border-radius:999px;font-weight:700;font-size:.85rem;cursor:pointer;transition:.2s}
+.mini-btn:hover{background:#8c6419}
+.mini-btn.secondary{background:#334155;color:#e2e8f0}
+.mini-btn.secondary:hover{background:#475569}
+.mini-btn:disabled{opacity:.5;cursor:not-allowed}
 .settings-card{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:24px;max-width:560px}
 .settings-card h2{font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:6px}
 .settings-help{font-size:.82rem;color:#94a3b8;margin-bottom:16px}
@@ -417,12 +422,15 @@ tr:hover td{background:rgba(15,23,42,.3)}
 
   // ── Digital products (file upload) ───────────────────────────────
 
+  let digitalSlugs = {};  // slug -> uploaded (for the order detail download button)
+
   async function loadDigital() {
     const box = $('digital-list');
     try {
       const res = await apiFetch('/api/admin/digital');
       if (!res.ok) throw new Error();
       const d = await res.json();
+      digitalSlugs = Object.fromEntries(d.files.map(f => [f.slug, f.uploaded]));
       box.innerHTML = d.files.map(f => `
         <div class="digital-row" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;padding:12px 0;border-top:1px solid #334155">
           <div>
@@ -431,15 +439,43 @@ tr:hover td{background:rgba(15,23,42,.3)}
               ? `Archivo cargado · ${(f.size / 1048576).toFixed(2)} MB · ${new Date(f.updated_at).toLocaleString('es-CL')}`
               : 'Falta subir el archivo: las compras no podrán descargarse'}</small>
           </div>
-          <label class="submit-btn" style="cursor:pointer;margin:0">
-            ${f.uploaded ? 'Reemplazar .zip' : 'Subir .zip'}
-            <input type="file" accept=".zip,application/zip" style="display:none" onchange="uploadDigital('${esc(f.slug)}', this)">
-          </label>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            ${f.uploaded ? `<button type="button" class="mini-btn secondary" onclick="downloadDigital('${esc(f.slug)}', this)">⬇️ Descargar .zip</button>` : ''}
+            <label class="mini-btn">
+              ${f.uploaded ? 'Reemplazar .zip' : 'Subir .zip'}
+              <input type="file" accept=".zip,application/zip" style="display:none" onchange="uploadDigital('${esc(f.slug)}', this)">
+            </label>
+          </div>
         </div>`).join('');
     } catch {
       box.innerHTML = '<p class="settings-help">No se pudo cargar. Recarga la página.</p>';
     }
   }
+
+  // Download with the admin token and save it locally (to send it to a customer by email/WhatsApp)
+  window.downloadDigital = async function(slug, btn) {
+    const label = btn ? btn.textContent : '';
+    if (btn) { btn.disabled = true; btn.textContent = 'Descargando…'; }
+    try {
+      const res = await fetch('/api/admin/digital/' + encodeURIComponent(slug), { headers: { 'Authorization': 'Bearer ' + token } });
+      if (!res.ok) {
+        const d = await res.json().catch(() => ({}));
+        toast(d.error || 'No se pudo descargar', true);
+      } else {
+        const blob = await res.blob();
+        const m = /filename="([^"]+)"/.exec(res.headers.get('Content-Disposition') || '');
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = m ? m[1] : slug + '.zip';
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+        toast('Archivo descargado');
+      }
+    } catch {
+      toast('Error de conexión', true);
+    }
+    if (btn) { btn.disabled = false; btn.textContent = label; }
+  };
 
   window.uploadDigital = async function(slug, input) {
     const file = input.files && input.files[0];
@@ -814,8 +850,13 @@ tr:hover td{background:rgba(15,23,42,.3)}
       <div class="section-title">Descarga digital</div>
       <div class="detail-row"><span class="lbl">Descargas</span><span class="val">${Number(o.download_count || 0)}</span></div>
       <div class="detail-row" style="flex-wrap:wrap;gap:8px"><span class="lbl">Enlace privado</span>
-        <button type="button" class="submit-btn" style="margin:0;padding:6px 12px" onclick="navigator.clipboard.writeText('${esc(o.download_url)}').then(() => toast('Enlace copiado'))">Copiar enlace</button></div>
+        <button type="button" class="mini-btn" onclick="navigator.clipboard.writeText('${esc(o.download_url)}').then(() => toast('Enlace copiado'))">Copiar enlace</button></div>
       <p class="settings-help" style="margin:6px 0 0">Funciona solo si la orden está pagada. Puedes reenviarlo al cliente por WhatsApp o email.</p>` : ''}
+      ${o.products.filter(p => p.slug in digitalSlugs).map(p => `
+      <div class="detail-row" style="flex-wrap:wrap;gap:8px"><span class="lbl">Archivo: ${esc(p.name)}</span>
+        ${digitalSlugs[p.slug]
+          ? `<button type="button" class="mini-btn secondary" onclick="downloadDigital('${esc(p.slug)}', this)">⬇️ Descargar .zip</button>`
+          : '<span class="val" style="color:#fbbf24">Falta subir el archivo en Ajustes</span>'}</div>`).join('')}
 
       <button class="close-btn" onclick="closeModal()">Cerrar</button>
       <button class="delete-btn" onclick="deleteOrder(${o.id}, '${esc(o.order_number)}')">🗑️ Eliminar orden</button>

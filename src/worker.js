@@ -564,6 +564,22 @@ async function handleAdminDigitalList(request, env) {
   });
 }
 
+// GET /api/admin/digital/:slug — the admin downloads the file to send it manually
+async function handleAdminDigitalDownload(request, env, slug) {
+  if (!checkAdmin(request, env)) return err('No autorizado', 401);
+  if (!isDigital(slug)) return err('Producto digital no encontrado', 404);
+  await ensureDownloadColumns(env);
+  const file = await readDigitalFile(env, slug);
+  if (!file) return err('Este producto aún no tiene archivo cargado', 404);
+  return new Response(file.bytes, {
+    headers: {
+      'Content-Type': 'application/zip',
+      'Content-Disposition': `attachment; filename="${file.filename}"`,
+      'Cache-Control': 'private, no-store',
+    },
+  });
+}
+
 async function handleAdminDigitalUpload(request, env, slug) {
   if (!checkAdmin(request, env)) return err('No autorizado', 401);
   if (!isDigital(slug)) return err('Producto digital no encontrado', 404);
@@ -1192,6 +1208,7 @@ export default {
       if (path === '/api/admin/digital' && method === 'GET') return handleAdminDigitalList(request, env);
       const digitalMatch = path.match(/^\/api\/admin\/digital\/([a-z0-9-]+)$/);
       if (digitalMatch && method === 'PUT') return handleAdminDigitalUpload(request, env, digitalMatch[1]);
+      if (digitalMatch && method === 'GET') return handleAdminDigitalDownload(request, env, digitalMatch[1]);
 
       // Admin product update: PUT /api/admin/products/SLUG
       const productMatch = path.match(/^\/api\/admin\/products\/([a-z0-9-]+)$/);
