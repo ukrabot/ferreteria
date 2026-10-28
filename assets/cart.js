@@ -7,7 +7,7 @@
 
   const CART_KEY = 'ukra_cart';
   // Digital products: no shipping, delivered by a download link after payment.
-  const DIGITAL = new Set(['pack-cuadro-de-cargas-unilineal-checklist-te1', 'pack-codigo-de-colores-etiquetas-tablero-ric']);
+  const DIGITAL = new Set(['pack-cuadro-de-cargas-unilineal-checklist-te1', 'pack-codigo-de-colores-etiquetas-tablero-ric', 'pack-calculadora-techo-de-zinc-excel']);
   const isDigital = slug => DIGITAL.has(slug);
 
   function esc(s) {
