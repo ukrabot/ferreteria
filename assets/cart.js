@@ -461,6 +461,28 @@
 
     render();
 
+    // Payment methods: Mercado Pago shows up only when it's configured.
+    let gateway = 'flow';
+    const payBox = document.getElementById('pay-methods');
+    const payBtn = form ? form.querySelector('button[type="submit"]') : null;
+    const payNote = document.getElementById('secure-note-text');
+    const setGateway = g => {
+      gateway = g;
+      if (payBtn && !payBtn.disabled) payBtn.textContent = g === 'mercadopago' ? 'Pagar con Mercado Pago' : 'Pagar con Flow';
+      if (payNote) payNote.textContent = g === 'mercadopago'
+        ? 'Pago seguro procesado por Mercado Pago — Tarjetas de crédito, débito, saldo en Mercado Pago y cuotas'
+        : 'Pago seguro procesado por Flow.cl — Aceptamos tarjetas de crédito, débito y transferencia';
+    };
+    if (payBox && form) {
+      fetch('/api/payment-methods').then(r => r.ok ? r.json() : null).then(m => {
+        if (!m || !m.mercadopago) return;
+        payBox.classList.add('on');
+        const checked = form.querySelector('input[name="payment_method"]:checked');
+        setGateway(checked ? checked.value : 'mercadopago');
+        form.querySelectorAll('input[name="payment_method"]').forEach(r => { r.onchange = () => setGateway(r.value); });
+      }).catch(() => {});
+    }
+
     // Form submit
     if (form) {
       form.onsubmit = async (e) => {
@@ -481,6 +503,7 @@
           customer_comuna: form.customer_comuna.value.trim(),
           customer_region: form.customer_region ? form.customer_region.value.trim() : '',
           items: cart,
+          payment_method: gateway,
         };
 
         try {
@@ -495,7 +518,7 @@
             throw new Error(data.error || 'Error al procesar la compra');
           }
 
-          // Clear cart and redirect to Flow payment
+          // Clear cart and redirect to the payment page (Flow or Mercado Pago)
           clearCart();
           window.location.href = data.paymentUrl;
         } catch (err) {
@@ -591,7 +614,7 @@
     }
     if (data.status === 'pending') {
       return `<div style="${box};border-color:#f59e0b;background:#fffbeb"><strong>Descarga en espera</strong>
-        <p style="margin:8px 0 14px">Tu descarga se habilita apenas Flow confirme el pago. Guarda esta página y vuelve a intentarlo en unos minutos.</p>
+        <p style="margin:8px 0 14px">Tu descarga se habilita apenas se confirme el pago. Guarda esta página y vuelve a intentarlo en unos minutos.</p>
         <a href="${href}" style="display:inline-block;background:#1e1b15;color:#fff;padding:11px 20px;border-radius:999px;font-weight:700;text-decoration:none">Intentar descarga</a></div>`;
     }
     return '';

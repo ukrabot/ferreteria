@@ -1,10 +1,13 @@
 /**
  * Ferretería Ukra — Worker API
- * Handles checkout (Flow payments), order management, product management, and admin panel API.
+ * Handles checkout (Flow and Mercado Pago), order management, product management, and admin panel API.
  * Static assets are served automatically by Cloudflare Workers Static Assets.
  */
 
 const FLOW_API = 'https://www.flow.cl/api';
+// Mercado Pago (Checkout Pro). Enabled when the MP_ACCESS_TOKEN secret exists.
+// The token is a Cloudflare secret: never put it in wrangler.jsonc (public repo).
+const MP_API = 'https://api.mercadopago.com';
 
 // Digital products: delivered by a private download link after payment.
 // The file is uploaded from /admin/ and stored in D1 (the repo is public, so
@@ -89,6 +92,16 @@ async function ensureDownloadColumns(env) {
       data BLOB NOT NULL, PRIMARY KEY (slug, idx))`),
   ]);
   downloadColsDone = true;
+}
+
+// Columns for Mercado Pago orders. Each ALTER fails harmlessly once it exists.
+let mpColsDone = false;
+async function ensureMpColumns(env) {
+  if (mpColsDone) return;
+  try { await env.DB.prepare('ALTER TABLE orders ADD COLUMN gateway TEXT').run(); } catch {}
+  try { await env.DB.prepare('ALTER TABLE orders ADD COLUMN mp_payment_id TEXT').run(); } catch {}
+  try { await env.DB.prepare('ALTER TABLE orders ADD COLUMN mp_preference_id TEXT').run(); } catch {}
+  mpColsDone = true;
 }
 
 function toBytes(v) {
@@ -179,6 +192,107 @@ async function flowGetStatus(env, token) {
   return res.json();
 }
 
+// ── Mercado Pago API calls ───────────────────────────────────────────
+
+const MP_STATUS = {
+  approved: 'paid', authorized: 'pending', pending: 'pending', in_process: 'pending', in_mediation: 'pending',
+  rejected: 'rejected', cancelled: 'cancelled', refunded: 'cancelled', charged_back: 'cancelled',
+};
+const MP_TYPES = {
+  credit_card: 'tarjeta de crédito', debit_card: 'tarjeta de débito', prepaid_card: 'tarjeta prepago',
+  account_money: 'dinero en cuenta', bank_transfer: 'transferencia', ticket: 'efectivo', atm: 'cajero',
+};
+
+async function mpRequest(env, path, init = {}) {
+  const res = await fetch(`${MP_API}${path}`, {
+    ...init,
+    headers: { Authorization: `Bearer ${env.MP_ACCESS_TOKEN}`, 'Content-Type': 'application/json', ...(init.headers || {}) },
+  });
+  const text = await res.text();
+  if (!res.ok) {
+    console.error('Mercado Pago error:', res.status, path, text.substring(0, 300));
+    throw new Error(`Mercado Pago ${res.status}`);
+  }
+  return text ? JSON.parse(text) : {};
+}
+
+async function mpCreatePreference(env, order) {
+  const lines = order.items.filter(i => i.price > 0);
+  const body = {
+    items: lines.map(i => ({
+      id: String(i.slug).substring(0, 250),
+      title: String(i.name).substring(0, 250),
+      quantity: Number(i.quantity),
+      unit_price: Math.round(Number(i.price)),
+      currency_id: 'CLP',
+    })),
+    payer: { email: order.customer_email, name: order.customer_name },
+    external_reference: order.order_number,
+    back_urls: {
+      success: `${env.SITE_URL}/api/mp/return?r=success`,
+      pending: `${env.SITE_URL}/api/mp/return?r=pending`,
+      failure: `${env.SITE_URL}/api/mp/return?r=failure`,
+    },
+    auto_return: 'approved',
+    notification_url: `${env.SITE_URL}/api/mp/webhook`,
+    statement_descriptor: 'FERRETERIA UKRA',
+  };
+  return mpRequest(env, '/checkout/preferences', {
+    method: 'POST',
+    headers: { 'X-Idempotency-Key': order.order_number },
+    body: JSON.stringify(body),
+  });
+}
+
+// Reads the payment from Mercado Pago (never trusts query strings or webhook
+// bodies) and updates the order. Returns the order status.
+async function mpSyncOrder(env, orderNumber, paymentId) {
+  await ensureMpColumns(env);
+  const order = await env.DB.prepare(`SELECT total, status FROM orders WHERE order_number = ?`).bind(orderNumber).first();
+  if (!order) return null;
+  let payment = null;
+  if (paymentId && /^\d+$/.test(String(paymentId))) {
+    try {
+      const p = await mpRequest(env, `/v1/payments/${paymentId}`);
+      if (p.external_reference === orderNumber) payment = p;
+    } catch {}
+  }
+  if (!payment) {
+    const r = await mpRequest(env, `/v1/payments/search?external_reference=${encodeURIComponent(orderNumber)}&sort=date_created&criteria=desc`);
+    const list = r.results || [];
+    payment = list.find(p => p.status === 'approved') || list[0] || null;
+  }
+  if (!payment) return order.status;
+
+  let status = MP_STATUS[payment.status] || 'pending';
+  if (status === 'paid' && (payment.currency_id !== 'CLP' || Number(payment.transaction_amount) < Number(order.total))) {
+    console.error('Mercado Pago amount mismatch', orderNumber, payment.transaction_amount, order.total);
+    status = 'pending';
+  }
+  // A paid order only goes back if the payment was refunded or charged back.
+  if (order.status === 'paid' && status !== 'paid' && status !== 'cancelled') status = 'paid';
+  const method = `Mercado Pago · ${MP_TYPES[payment.payment_type_id] || payment.payment_type_id || ''}`.replace(/ · $/, '');
+  await env.DB.prepare(
+    `UPDATE orders SET status = ?, mp_payment_id = ?, payment_method = ?,
+       paid_at = CASE WHEN ? = 'paid' THEN COALESCE(paid_at, ?) ELSE paid_at END
+     WHERE order_number = ?`
+  ).bind(status, String(payment.id), method, status, new Date().toISOString(), orderNumber).run();
+  return status;
+}
+
+// x-signature: "ts=...,v1=..." = HMAC-SHA256(secret, "id:<data.id>;request-id:<x-request-id>;ts:<ts>;")
+async function mpSignatureValid(request, env, dataId) {
+  const sig = request.headers.get('x-signature');
+  if (!env.MP_WEBHOOK_SECRET || !sig) return null;
+  const parts = Object.fromEntries(sig.split(',').map(p => p.trim().split('=').map(x => (x || '').trim())));
+  const reqId = request.headers.get('x-request-id');
+  let manifest = '';
+  if (dataId) manifest += `id:${String(dataId).toLowerCase()};`;
+  if (reqId) manifest += `request-id:${reqId};`;
+  if (parts.ts) manifest += `ts:${parts.ts};`;
+  return safeEqual(await hmacSHA256(env.MP_WEBHOOK_SECRET, manifest), parts.v1 || '');
+}
+
 // ── Route: GET /api/products (public) ───────────────────────────────
 
 async function handleGetProducts(request, env, url) {
@@ -211,6 +325,7 @@ async function handleCheckout(request, env) {
   }
 
   const { customer_name, customer_email, customer_phone, customer_comuna, customer_address, customer_region, items } = data;
+  const gateway = data.payment_method === 'mercadopago' && env.MP_ACCESS_TOKEN ? 'mercadopago' : 'flow';
   if (!customer_name || !customer_email || !Array.isArray(items) || !items.length) {
     return err('Faltan campos obligatorios: nombre, email y productos');
   }
@@ -290,6 +405,26 @@ async function handleCheckout(request, env) {
     await ensureDownloadColumns(env);
     await env.DB.prepare(`UPDATE orders SET download_token = ? WHERE order_number = ?`)
       .bind(randomToken(), order_number).run();
+  }
+
+  if (gateway === 'mercadopago') {
+    await ensureMpColumns(env);
+    try {
+      const pref = await mpCreatePreference(env, {
+        order_number, items: validatedItems,
+        customer_email: customer_email.trim().toLowerCase(), customer_name: customer_name.trim(),
+      });
+      await env.DB.prepare(`UPDATE orders SET gateway = 'mercadopago', mp_preference_id = ? WHERE order_number = ?`)
+        .bind(String(pref.id || ''), order_number).run();
+      const test = String(env.MP_ACCESS_TOKEN).startsWith('TEST-');
+      const paymentUrl = (test && pref.sandbox_init_point) || pref.init_point;
+      if (!paymentUrl) throw new Error('sin enlace de pago');
+      return json({ paymentUrl, orderNumber: order_number, subtotal, shipping, total });
+    } catch (e) {
+      console.error('Mercado Pago checkout error:', e);
+      await env.DB.prepare(`UPDATE orders SET status = 'error' WHERE order_number = ?`).bind(order_number).run();
+      return err('No pudimos abrir Mercado Pago. Intenta de nuevo o paga con Flow.', 502);
+    }
   }
 
   // Create Flow payment
@@ -414,6 +549,57 @@ async function handleFlowReturn(request, env, url) {
   }
 }
 
+// ── Route: GET /api/mp/return (back_urls) ───────────────────────────
+
+async function handleMpReturn(request, env, url) {
+  const orderNum = url.searchParams.get('external_reference') || '';
+  if (!/^UKRA-\d{8}-[A-Z0-9]{1,8}$/.test(orderNum)) {
+    return Response.redirect(`${env.SITE_URL}/orden/?error=no_token`, 302);
+  }
+  const paymentId = url.searchParams.get('payment_id') || url.searchParams.get('collection_id');
+  let status = 'pending';
+  try {
+    status = (await mpSyncOrder(env, orderNum, paymentId)) || 'pending';
+    // Came back from "Volver al sitio" without paying.
+    if (status === 'pending' && url.searchParams.get('r') === 'failure' && !/^\d+$/.test(paymentId || '')) {
+      await env.DB.prepare(`UPDATE orders SET status = 'cancelled' WHERE order_number = ? AND status = 'pending'`).bind(orderNum).run();
+      status = 'cancelled';
+    }
+  } catch (e) {
+    console.error('Mercado Pago return error:', e);
+  }
+  let row = null;
+  try { row = await env.DB.prepare(`SELECT download_token FROM orders WHERE order_number = ?`).bind(orderNum).first(); } catch {}
+  const dl = row?.download_token ? `&dl=${row.download_token}` : '';
+  return Response.redirect(`${env.SITE_URL}/orden/?order=${encodeURIComponent(orderNum)}&status=${status}${dl}`, 302);
+}
+
+// ── Route: POST /api/mp/webhook ─────────────────────────────────────
+
+async function handleMpWebhook(request, env, url) {
+  if (!env.MP_ACCESS_TOKEN) return new Response('OK');
+  let body = {};
+  try { body = await request.json(); } catch {}
+  const type = url.searchParams.get('type') || url.searchParams.get('topic') || body.type || body.topic || '';
+  const id = url.searchParams.get('data.id') || url.searchParams.get('id') || body.data?.id || '';
+  const valid = await mpSignatureValid(request, env, url.searchParams.get('data.id') || body.data?.id);
+  if (valid === false) console.warn('Mercado Pago webhook: firma no coincide', type, id);
+  // Safe either way: the order is only updated with data read from the API.
+  try {
+    if (type === 'payment' && /^\d+$/.test(String(id))) {
+      const p = await mpRequest(env, `/v1/payments/${id}`);
+      if (p.external_reference) await mpSyncOrder(env, p.external_reference, p.id);
+    } else if (type === 'merchant_order' && /^\d+$/.test(String(id))) {
+      const mo = await mpRequest(env, `/merchant_orders/${id}`);
+      if (mo.external_reference) await mpSyncOrder(env, mo.external_reference);
+    }
+  } catch (e) {
+    console.error('Mercado Pago webhook error:', e);
+    return new Response('Error', { status: 500 }); // Mercado Pago retries
+  }
+  return new Response('OK');
+}
+
 // ── Route: GET /api/order-status ─────────────────────────────────────
 
 async function handleOrderStatus(request, env, url) {
@@ -455,9 +641,10 @@ async function handleDownload(request, env, url) {
     return downloadPage('Enlace no válido', 'El enlace de descarga está incompleto. Usa el enlace de tu página de compra.', 400);
   }
   let row;
+  await ensureMpColumns(env);
   try {
     row = await env.DB.prepare(
-      `SELECT order_number, products, status, flow_token, download_token, download_count FROM orders WHERE order_number = ?`
+      `SELECT order_number, products, status, flow_token, gateway, download_token, download_count FROM orders WHERE order_number = ?`
     ).bind(orderNum).first();
   } catch {
     row = null;
@@ -468,7 +655,9 @@ async function handleDownload(request, env, url) {
 
   // Payment may still be pending if Flow's confirmation hasn't arrived: re-check it.
   let status = row.status;
-  if (status !== 'paid' && row.flow_token) {
+  if (status !== 'paid' && row.gateway === 'mercadopago' && env.MP_ACCESS_TOKEN) {
+    try { status = (await mpSyncOrder(env, row.order_number)) || status; } catch (e) { console.error('Download MP check error:', e); }
+  } else if (status !== 'paid' && row.flow_token) {
     try {
       const payment = await flowGetStatus(env, row.flow_token);
       const statusMap = { 1: 'pending', 2: 'paid', 3: 'rejected', 4: 'cancelled' };
@@ -484,7 +673,7 @@ async function handleDownload(request, env, url) {
     }
   }
   if (status !== 'paid') {
-    return downloadPage('Pago aún no confirmado', 'Tu descarga se habilita apenas Flow confirme el pago. Vuelve a abrir este enlace en unos minutos.', 403);
+    return downloadPage('Pago aún no confirmado', 'Tu descarga se habilita apenas se confirme el pago. Vuelve a abrir este enlace en unos minutos.', 403);
   }
 
   const item = JSON.parse(row.products).find(p => isDigital(p.slug));
@@ -1175,6 +1364,7 @@ async function ensureSchema(env) {
   // (harmlessly) once the column exists, and a failed batch rolls back.
   try { await env.DB.prepare('ALTER TABLE products ADD COLUMN sku TEXT').run(); } catch {}
   await ensureDownloadColumns(env);
+  await ensureMpColumns(env);
 
   // Everything else is idempotent and goes in ONE round trip.
   const stmts = [
@@ -1248,6 +1438,9 @@ export default {
       if (path === '/api/checkout' && method === 'POST') return handleCheckout(request, env);
       if (path === '/api/flow/confirm' && method === 'POST') return handleFlowConfirm(request, env);
       if (path === '/api/flow/return' && (method === 'GET' || method === 'POST')) return handleFlowReturn(request, env, url);
+      if (path === '/api/payment-methods' && method === 'GET') return json({ flow: true, mercadopago: !!env.MP_ACCESS_TOKEN });
+      if (path === '/api/mp/return' && method === 'GET') return handleMpReturn(request, env, url);
+      if (path === '/api/mp/webhook' && (method === 'POST' || method === 'GET')) return handleMpWebhook(request, env, url);
       if (path === '/api/order-status' && method === 'GET') return handleOrderStatus(request, env, url);
       if (path === '/api/download' && method === 'GET') return handleDownload(request, env, url);
 
