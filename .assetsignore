@@ -1,0 +1,12 @@
+# Not public: source, config, data and private downloads
+.git
+.wrangler
+node_modules
+private
+src
+scripts
+wrangler.jsonc
+wrangler.toml
+*.sql
+*.md
+.assetsignore

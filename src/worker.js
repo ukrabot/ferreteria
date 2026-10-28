@@ -5,6 +5,21 @@
  */
 
 const FLOW_API = 'https://www.flow.cl/api';
+
+// Digital products: delivered by a private download link after payment.
+// The file is uploaded from /admin/ and stored in D1 (the repo is public, so
+// paid files must never be committed). Stored in chunks to stay well under
+// D1's per-value size limit.
+const DIGITAL_PRODUCTS = {
+  'pack-cuadro-de-cargas-unilineal-checklist-te1': {
+    name: 'Pack Tablero Eléctrico RIC',
+    filename: 'Pack-Tablero-Electrico-RIC-Ferreteria-Ukra.zip',
+  },
+};
+const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
+const MAX_FILE = 20 * 1024 * 1024;
+const MAX_DOWNLOADS = 25;
+const isDigital = slug => Object.prototype.hasOwnProperty.call(DIGITAL_PRODUCTS, slug);
 // Default shipping settings (editable from /admin/, stored in the settings table)
 const DEFAULT_SHIPPING = { shipping_cost: 3990, free_shipping_min: 19990 };
 
@@ -19,6 +34,51 @@ function json(data, status = 200) {
 
 function err(message, status = 400) {
   return json({ error: message }, status);
+}
+
+function randomToken(bytes = 24) {
+  const a = crypto.getRandomValues(new Uint8Array(bytes));
+  return Array.from(a, b => b.toString(16).padStart(2, '0')).join('');
+}
+
+function safeEqual(a, b) {
+  if (typeof a !== 'string' || typeof b !== 'string' || a.length !== b.length) return false;
+  let diff = 0;
+  for (let i = 0; i < a.length; i++) diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  return diff === 0;
+}
+
+// Columns/tables for digital delivery. Each ALTER fails harmlessly once it exists.
+let downloadColsDone = false;
+async function ensureDownloadColumns(env) {
+  if (downloadColsDone) return;
+  try { await env.DB.prepare('ALTER TABLE orders ADD COLUMN download_token TEXT').run(); } catch {}
+  try { await env.DB.prepare('ALTER TABLE orders ADD COLUMN download_count INTEGER DEFAULT 0').run(); } catch {}
+  await env.DB.batch([
+    env.DB.prepare(`CREATE TABLE IF NOT EXISTS digital_files (slug TEXT PRIMARY KEY, filename TEXT NOT NULL,
+      size INTEGER NOT NULL, chunks INTEGER NOT NULL, updated_at TEXT NOT NULL)`),
+    env.DB.prepare(`CREATE TABLE IF NOT EXISTS digital_file_chunks (slug TEXT NOT NULL, idx INTEGER NOT NULL,
+      data BLOB NOT NULL, PRIMARY KEY (slug, idx))`),
+  ]);
+  downloadColsDone = true;
+}
+
+function toBytes(v) {
+  if (v instanceof ArrayBuffer) return new Uint8Array(v);
+  if (ArrayBuffer.isView(v)) return new Uint8Array(v.buffer, v.byteOffset, v.byteLength);
+  return Uint8Array.from(v || []);
+}
+
+async function readDigitalFile(env, slug) {
+  const meta = await env.DB.prepare(`SELECT filename, size, chunks FROM digital_files WHERE slug = ?`).bind(slug).first();
+  if (!meta) return null;
+  const rows = await env.DB.prepare(`SELECT idx, data FROM digital_file_chunks WHERE slug = ? ORDER BY idx`).bind(slug).all();
+  const parts = (rows.results || []).map(r => toBytes(r.data));
+  if (parts.length !== meta.chunks) return null;
+  const out = new Uint8Array(meta.size);
+  let off = 0;
+  for (const p of parts) { out.set(p, off); off += p.length; }
+  return off === meta.size ? { bytes: out, filename: meta.filename } : null;
 }
 
 function generateOrderNumber() {
@@ -123,7 +183,7 @@ async function handleCheckout(request, env) {
   }
 
   const { customer_name, customer_email, customer_phone, customer_comuna, customer_address, customer_region, items } = data;
-  if (!customer_name || !customer_email || !items?.length) {
+  if (!customer_name || !customer_email || !Array.isArray(items) || !items.length) {
     return err('Faltan campos obligatorios: nombre, email y productos');
   }
   // Validate email
@@ -166,9 +226,18 @@ async function handleCheckout(request, env) {
 
   // Shipping from admin settings. Stored as an order line so admin and the
   // order page show it.
+  // Digital products don't ship: shipping is computed on physical items only.
   const subtotal = total;
-  const shipping = shippingFor(subtotal, await getShippingSettings(env));
-  validatedItems.push({ slug: 'envio', name: shipping ? 'Envío' : 'Envío gratis', price: shipping, quantity: 1 });
+  const physicalItems = validatedItems.filter(i => !isDigital(i.slug));
+  const hasDigital = physicalItems.length < validatedItems.length;
+  const physicalSubtotal = physicalItems.reduce((s, i) => s + i.price * i.quantity, 0);
+  let shipping = 0;
+  if (physicalItems.length) {
+    shipping = shippingFor(physicalSubtotal, await getShippingSettings(env));
+    validatedItems.push({ slug: 'envio', name: shipping ? 'Envío' : 'Envío gratis', price: shipping, quantity: 1 });
+  } else {
+    validatedItems.push({ slug: 'envio', name: 'Descarga digital (sin envío)', price: 0, quantity: 1 });
+  }
   total = subtotal + shipping;
 
   const order_number = generateOrderNumber();
@@ -188,6 +257,12 @@ async function handleCheckout(request, env) {
     JSON.stringify(validatedItems),
     total
   ).run();
+
+  if (hasDigital) {
+    await ensureDownloadColumns(env);
+    await env.DB.prepare(`UPDATE orders SET download_token = ? WHERE order_number = ?`)
+      .bind(randomToken(), order_number).run();
+  }
 
   // Create Flow payment
   try {
@@ -290,13 +365,21 @@ async function handleFlowReturn(request, env, url) {
       token
     ).run();
 
-    // Find order number
-    const row = await env.DB.prepare(
-      `SELECT order_number FROM orders WHERE flow_token = ?`
-    ).bind(token).first();
+    // Find order number (and the private download token for digital products)
+    let row;
+    try {
+      row = await env.DB.prepare(
+        `SELECT order_number, download_token FROM orders WHERE flow_token = ?`
+      ).bind(token).first();
+    } catch {
+      row = await env.DB.prepare(
+        `SELECT order_number FROM orders WHERE flow_token = ?`
+      ).bind(token).first();
+    }
 
-    const orderNum = row?.order_number || '';
-    return Response.redirect(`${env.SITE_URL}/orden/?order=${orderNum}&status=${status}`, 302);
+    const orderNum = encodeURIComponent(row?.order_number || '');
+    const dl = row?.download_token ? `&dl=${row.download_token}` : '';
+    return Response.redirect(`${env.SITE_URL}/orden/?order=${orderNum}&status=${status}${dl}`, 302);
   } catch (e) {
     console.error('Flow return error:', e);
     return Response.redirect(`${env.SITE_URL}/orden/?error=payment_error`, 302);
@@ -316,14 +399,85 @@ async function handleOrderStatus(request, env, url) {
 
   if (!row) return err('Orden no encontrada', 404);
 
+  const products = JSON.parse(row.products);
   return json({
     order_number: row.order_number,
     customer_name: row.customer_name,
-    products: JSON.parse(row.products),
+    has_digital: products.some(p => isDigital(p.slug)),
+    has_physical: products.some(p => p.slug !== 'envio' && !isDigital(p.slug)),
+    products,
     total: row.total,
     status: row.status,
     created_at: row.created_at,
     paid_at: row.paid_at,
+  });
+}
+
+// ── Route: GET /api/download (digital products) ─────────────────────
+
+function downloadPage(title, message, status) {
+  const html = `<!DOCTYPE html><html lang="es-CL"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>${title} | Ferretería Ukra</title><style>body{font-family:Inter,system-ui,sans-serif;background:#F8FAFC;color:#0F172A;display:grid;place-items:center;min-height:100vh;margin:0;padding:16px}main{max-width:460px;background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:28px;text-align:center}h1{font-size:1.25rem}p{color:#475569;line-height:1.6}a{color:#D9381E;font-weight:700}</style></head><body><main><h1>${title}</h1><p>${message}</p><p><a href="https://wa.me/56993514970">Escríbenos por WhatsApp</a> · <a href="/">Volver a la tienda</a></p></main></body></html>`;
+  return new Response(html, { status, headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' } });
+}
+
+async function handleDownload(request, env, url) {
+  const orderNum = url.searchParams.get('order') || '';
+  const token = url.searchParams.get('token') || '';
+  if (!orderNum || !/^[a-f0-9]{48}$/.test(token)) {
+    return downloadPage('Enlace no válido', 'El enlace de descarga está incompleto. Usa el enlace de tu página de compra.', 400);
+  }
+  let row;
+  try {
+    row = await env.DB.prepare(
+      `SELECT order_number, products, status, flow_token, download_token, download_count FROM orders WHERE order_number = ?`
+    ).bind(orderNum).first();
+  } catch {
+    row = null;
+  }
+  if (!row || !safeEqual(row.download_token || '', token)) {
+    return downloadPage('Enlace no válido', 'No encontramos una compra asociada a este enlace.', 404);
+  }
+
+  // Payment may still be pending if Flow's confirmation hasn't arrived: re-check it.
+  let status = row.status;
+  if (status !== 'paid' && row.flow_token) {
+    try {
+      const payment = await flowGetStatus(env, row.flow_token);
+      const statusMap = { 1: 'pending', 2: 'paid', 3: 'rejected', 4: 'cancelled' };
+      status = statusMap[payment.status] || status;
+      if (status !== row.status) {
+        await env.DB.prepare(
+          `UPDATE orders SET status = ?, flow_order = ?, payment_method = ?, paid_at = ? WHERE order_number = ?`
+        ).bind(status, String(payment.flowOrder || ''), payment.paymentData?.media || '',
+          status === 'paid' ? new Date().toISOString() : null, row.order_number).run();
+      }
+    } catch (e) {
+      console.error('Download status check error:', e);
+    }
+  }
+  if (status !== 'paid') {
+    return downloadPage('Pago aún no confirmado', 'Tu descarga se habilita apenas Flow confirme el pago. Vuelve a abrir este enlace en unos minutos.', 403);
+  }
+
+  const item = JSON.parse(row.products).find(p => isDigital(p.slug));
+  if (!item) return downloadPage('Sin descarga', 'Esta compra no incluye productos digitales.', 404);
+  if ((row.download_count || 0) >= MAX_DOWNLOADS) {
+    return downloadPage('Límite de descargas', 'Este enlace alcanzó el máximo de descargas. Escríbenos y te habilitamos uno nuevo.', 429);
+  }
+  const file = await readDigitalFile(env, item.slug);
+  if (!file) {
+    return downloadPage('Archivo en preparación', 'Tu pago está confirmado, pero el archivo no está disponible en este momento. Escríbenos y te lo enviamos de inmediato.', 503);
+  }
+  await env.DB.prepare(
+    `UPDATE orders SET download_count = COALESCE(download_count, 0) + 1 WHERE order_number = ?`
+  ).bind(row.order_number).run();
+  return new Response(file.bytes, {
+    headers: {
+      'Content-Type': 'application/zip',
+      'Content-Disposition': `attachment; filename="${file.filename}"`,
+      'Cache-Control': 'private, no-store',
+      'X-Robots-Tag': 'noindex',
+    },
   });
 }
 
@@ -356,18 +510,73 @@ async function handleAdminOrders(request, env, url) {
     `SELECT COUNT(*) as c FROM orders ${where}`
   ).bind(...binds).first();
 
-  const rows = await env.DB.prepare(
-    `SELECT id, order_number, customer_name, customer_email, customer_phone, customer_comuna,
-            customer_address, customer_region, products, total, status, flow_order, payment_method, created_at, paid_at
-     FROM orders ${where} ORDER BY created_at DESC LIMIT ? OFFSET ?`
-  ).bind(...binds, limit, offset).all();
+  const cols = `id, order_number, customer_name, customer_email, customer_phone, customer_comuna,
+            customer_address, customer_region, products, total, status, flow_order, payment_method, created_at, paid_at`;
+  let rows;
+  try {
+    rows = await env.DB.prepare(
+      `SELECT ${cols}, download_token, download_count FROM orders ${where} ORDER BY created_at DESC LIMIT ? OFFSET ?`
+    ).bind(...binds, limit, offset).all();
+  } catch {
+    rows = await env.DB.prepare(
+      `SELECT ${cols} FROM orders ${where} ORDER BY created_at DESC LIMIT ? OFFSET ?`
+    ).bind(...binds, limit, offset).all();
+  }
 
   return json({
-    orders: rows.results.map(r => ({ ...r, products: JSON.parse(r.products) })),
+    orders: rows.results.map(r => ({
+      ...r,
+      products: JSON.parse(r.products),
+      download_url: r.download_token
+        ? `${env.SITE_URL}/api/download?order=${encodeURIComponent(r.order_number)}&token=${r.download_token}`
+        : null,
+    })),
     total: countRow.c,
     page,
     pages: Math.ceil(countRow.c / limit),
   });
+}
+
+// ── Routes: GET /api/admin/digital, PUT /api/admin/digital/:slug ─────
+
+async function handleAdminDigitalList(request, env) {
+  if (!checkAdmin(request, env)) return err('No autorizado', 401);
+  await ensureDownloadColumns(env);
+  const rows = await env.DB.prepare(`SELECT slug, filename, size, updated_at FROM digital_files`).all();
+  const bySlug = Object.fromEntries((rows.results || []).map(r => [r.slug, r]));
+  return json({
+    files: Object.entries(DIGITAL_PRODUCTS).map(([slug, p]) => ({
+      slug, name: p.name, uploaded: !!bySlug[slug],
+      size: bySlug[slug]?.size || 0, updated_at: bySlug[slug]?.updated_at || null,
+    })),
+  });
+}
+
+async function handleAdminDigitalUpload(request, env, slug) {
+  if (!checkAdmin(request, env)) return err('No autorizado', 401);
+  if (!isDigital(slug)) return err('Producto digital no encontrado', 404);
+  const buf = new Uint8Array(await request.arrayBuffer());
+  if (!buf.length) return err('Archivo vacío');
+  if (buf.length > MAX_FILE) return err('Archivo demasiado grande (máx. 20 MB)');
+  if (buf[0] !== 0x50 || buf[1] !== 0x4b) return err('El archivo debe ser un .zip');
+  await ensureDownloadColumns(env);
+  const chunks = Math.ceil(buf.length / FILE_CHUNK);
+  const stmts = [
+    env.DB.prepare(`DELETE FROM digital_file_chunks WHERE slug = ?`).bind(slug),
+  ];
+  for (let i = 0; i < chunks; i++) {
+    const part = buf.slice(i * FILE_CHUNK, (i + 1) * FILE_CHUNK);
+    stmts.push(env.DB.prepare(`INSERT INTO digital_file_chunks (slug, idx, data) VALUES (?, ?, ?)`).bind(slug, i, part.buffer));
+  }
+  stmts.push(env.DB.prepare(
+    `INSERT INTO digital_files (slug, filename, size, chunks, updated_at) VALUES (?, ?, ?, ?, ?)
+     ON CONFLICT(slug) DO UPDATE SET filename = excluded.filename, size = excluded.size,
+       chunks = excluded.chunks, updated_at = excluded.updated_at`
+  ).bind(slug, DIGITAL_PRODUCTS[slug].filename, buf.length, chunks, new Date().toISOString()));
+  await env.DB.batch(stmts);
+  const check = await readDigitalFile(env, slug);
+  if (!check || check.bytes.length !== buf.length) return err('El archivo no se guardó completo. Intenta de nuevo.', 500);
+  return json({ slug, size: buf.length, chunks });
 }
 
 // ── Route: GET /api/admin/stats ──────────────────────────────────────
@@ -710,6 +919,33 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110254780',
   },
+  {
+    slug: 'kit-tablero-electrico-monofasico-8-modulos',
+    name: 'Kit Tablero Eléctrico Monofásico 8 Módulos',
+    price: 51890,
+    image: '/producto/kit-tablero-electrico-monofasico-8-modulos.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'KIT-TDA-8M',
+  },
+  {
+    slug: 'kit-tablero-electrico-monofasico-12-modulos',
+    name: 'Kit Tablero Eléctrico Monofásico 12 Módulos',
+    price: 83790,
+    image: '/producto/kit-tablero-electrico-monofasico-12-modulos.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'KIT-TDA-12M',
+  },
+  {
+    slug: 'pack-cuadro-de-cargas-unilineal-checklist-te1',
+    name: 'Pack Tablero Eléctrico RIC: Cuadro de Cargas Excel + Unilineal + Checklist TE1',
+    price: 9990,
+    image: '/producto/pack-cuadro-de-cargas-unilineal-checklist-te1.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-RIC-TDA',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
@@ -792,6 +1028,7 @@ async function ensureSchema(env) {
   // Add sku column if missing. Separate from the batch because it fails
   // (harmlessly) once the column exists, and a failed batch rolls back.
   try { await env.DB.prepare('ALTER TABLE products ADD COLUMN sku TEXT').run(); } catch {}
+  await ensureDownloadColumns(env);
 
   // Everything else is idempotent and goes in ONE round trip.
   const stmts = [
@@ -863,6 +1100,7 @@ export default {
       if (path === '/api/flow/confirm' && method === 'POST') return handleFlowConfirm(request, env);
       if (path === '/api/flow/return' && (method === 'GET' || method === 'POST')) return handleFlowReturn(request, env, url);
       if (path === '/api/order-status' && method === 'GET') return handleOrderStatus(request, env, url);
+      if (path === '/api/download' && method === 'GET') return handleDownload(request, env, url);
 
       // Admin API routes
       if (path === '/api/admin/orders' && method === 'GET') return handleAdminOrders(request, env, url);
@@ -870,6 +1108,9 @@ export default {
       if (path === '/api/admin/settings' && (method === 'GET' || method === 'PUT')) return handleAdminSettings(request, env);
       if (path === '/api/admin/products' && method === 'GET') return handleAdminProducts(request, env);
       if (path === '/api/admin/products' && method === 'POST') return handleAdminCreateProduct(request, env);
+      if (path === '/api/admin/digital' && method === 'GET') return handleAdminDigitalList(request, env);
+      const digitalMatch = path.match(/^\/api\/admin\/digital\/([a-z0-9-]+)$/);
+      if (digitalMatch && method === 'PUT') return handleAdminDigitalUpload(request, env, digitalMatch[1]);
 
       // Admin product update: PUT /api/admin/products/SLUG
       const productMatch = path.match(/^\/api\/admin\/products\/([a-z0-9-]+)$/);

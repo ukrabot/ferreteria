@@ -259,6 +259,12 @@ tr:hover td{background:rgba(15,23,42,.3)}
         </label>
         <p class="settings-help" style="margin-top:12px;margin-bottom:0">Los cambios se aplican en hasta 1 minuto. Con AdSense activo se muestran 3 anuncios por página, respetando el aviso de cookies.</p>
       </div>
+
+      <div class="settings-card" style="margin-top:16px">
+        <h2>Productos digitales</h2>
+        <p class="settings-help">Sube aquí el archivo .zip que recibe el cliente. Se guarda en la base de datos (no en el sitio público) y se entrega con un enlace privado solo cuando Flow confirma el pago.</p>
+        <div id="digital-list"><p class="settings-help">Cargando…</p></div>
+      </div>
     </div>
 
     <!-- ORDERS TAB -->
@@ -369,7 +375,7 @@ tr:hover td{background:rgba(15,23,42,.3)}
   async function showDashboard() {
     $('login-screen').style.display = 'none';
     $('dashboard').style.display = 'block';
-    await Promise.all([loadStats(), loadProducts(), loadOrders(), loadShipping()]);
+    await Promise.all([loadStats(), loadProducts(), loadOrders(), loadShipping(), loadDigital()]);
   }
 
   // ── Shipping settings ─────────────────────────────────────────────
@@ -398,6 +404,52 @@ tr:hover td{background:rgba(15,23,42,.3)}
       setAdsenseUI(!!d.adsense_products);
     } catch {}
   }
+
+  // ── Digital products (file upload) ───────────────────────────────
+
+  async function loadDigital() {
+    const box = $('digital-list');
+    try {
+      const res = await apiFetch('/api/admin/digital');
+      if (!res.ok) throw new Error();
+      const d = await res.json();
+      box.innerHTML = d.files.map(f => `
+        <div class="digital-row" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;padding:12px 0;border-top:1px solid #334155">
+          <div>
+            <strong>${esc(f.name)}</strong><br>
+            <small style="color:${f.uploaded ? '#4ade80' : '#fbbf24'}">${f.uploaded
+              ? `Archivo cargado · ${(f.size / 1048576).toFixed(2)} MB · ${new Date(f.updated_at).toLocaleString('es-CL')}`
+              : 'Falta subir el archivo: las compras no podrán descargarse'}</small>
+          </div>
+          <label class="submit-btn" style="cursor:pointer;margin:0">
+            ${f.uploaded ? 'Reemplazar .zip' : 'Subir .zip'}
+            <input type="file" accept=".zip,application/zip" style="display:none" onchange="uploadDigital('${esc(f.slug)}', this)">
+          </label>
+        </div>`).join('');
+    } catch {
+      box.innerHTML = '<p class="settings-help">No se pudo cargar. Recarga la página.</p>';
+    }
+  }
+
+  window.uploadDigital = async function(slug, input) {
+    const file = input.files && input.files[0];
+    if (!file) return;
+    if (!/\.zip$/i.test(file.name)) { toast('El archivo debe ser .zip', true); return; }
+    toast('Subiendo archivo…');
+    try {
+      const res = await fetch('/api/admin/digital/' + encodeURIComponent(slug), {
+        method: 'PUT',
+        headers: { 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/zip' },
+        body: file,
+      });
+      const d = await res.json().catch(() => ({}));
+      if (res.ok) toast('Archivo guardado'); else toast(d.error || 'Error al subir', true);
+    } catch {
+      toast('Error de conexión', true);
+    }
+    input.value = '';
+    loadDigital();
+  };
 
   function setAdsenseUI(on) {
     $('set-adsense').checked = on;
@@ -718,6 +770,12 @@ tr:hover td{background:rgba(15,23,42,.3)}
       ${o.paid_at ? `<div class="detail-row"><span class="lbl">Pagado</span><span class="val">${new Date(o.paid_at).toLocaleString('es-CL')}</span></div>` : ''}
       ${o.payment_method ? `<div class="detail-row"><span class="lbl">Método</span><span class="val">${esc(o.payment_method)}</span></div>` : ''}
       ${o.flow_order ? `<div class="detail-row"><span class="lbl">Flow Order</span><span class="val">${esc(o.flow_order)}</span></div>` : ''}
+      ${o.download_url ? `
+      <div class="section-title">Descarga digital</div>
+      <div class="detail-row"><span class="lbl">Descargas</span><span class="val">${Number(o.download_count || 0)}</span></div>
+      <div class="detail-row" style="flex-wrap:wrap;gap:8px"><span class="lbl">Enlace privado</span>
+        <button type="button" class="submit-btn" style="margin:0;padding:6px 12px" onclick="navigator.clipboard.writeText('${esc(o.download_url)}').then(() => toast('Enlace copiado'))">Copiar enlace</button></div>
+      <p class="settings-help" style="margin:6px 0 0">Funciona solo si la orden está pagada. Puedes reenviarlo al cliente por WhatsApp o email.</p>` : ''}
 
       <button class="close-btn" onclick="closeModal()">Cerrar</button>
       <button class="delete-btn" onclick="deleteOrder(${o.id}, '${esc(o.order_number)}')">🗑️ Eliminar orden</button>

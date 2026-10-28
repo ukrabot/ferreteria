@@ -6,6 +6,13 @@
   'use strict';
 
   const CART_KEY = 'ukra_cart';
+  // Digital products: no shipping, delivered by a download link after payment.
+  const DIGITAL = new Set(['pack-cuadro-de-cargas-unilineal-checklist-te1']);
+  const isDigital = slug => DIGITAL.has(slug);
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
 
   // ── Cart data ─────────────────────────────────────────────────────
 
@@ -62,6 +69,11 @@
 
   function cartTotal() {
     return getCart().reduce((s, i) => s + i.price * i.quantity, 0);
+  }
+
+  // Shipping only applies to physical products
+  function physicalTotal() {
+    return getCart().filter(i => !isDigital(i.slug)).reduce((s, i) => s + i.price * i.quantity, 0);
   }
 
   function cartCount() {
@@ -371,10 +383,10 @@
       if (contentEl) contentEl.style.display = 'block';
 
       container.innerHTML = cart.map(item => `
-        <div class="cart-item" data-slug="${item.slug}">
-          <img src="${item.image}" alt="${item.name}" width="80" height="80" style="object-fit:contain;background:#fff;border-radius:8px;border:1px solid #e2e8f0">
+        <div class="cart-item" data-slug="${esc(item.slug)}">
+          <img src="${esc(item.image)}" alt="${esc(item.name)}" width="80" height="80" style="object-fit:contain;background:#fff;border-radius:8px;border:1px solid #e2e8f0">
           <div class="cart-item-info">
-            <strong>${item.name}</strong>
+            <strong>${esc(item.name)}</strong>${isDigital(item.slug) ? ' <small style="color:#16a34a;font-weight:700">· Descarga digital</small>' : ''}
             <span class="cart-item-price">${fmt(item.price)} × ${item.quantity} = ${fmt(item.price * item.quantity)}</span>
             <div class="cart-item-controls">
               <button type="button" class="qty-btn" data-action="minus">−</button>
@@ -387,26 +399,42 @@
       `).join('');
 
       const subtotal = cartTotal();
-      const shipping = shippingFor(subtotal);
+      const physical = cart.filter(i => !isDigital(i.slug));
+      const digitalOnly = physical.length === 0;
+      const physSub = physicalTotal();
+      const shipping = digitalOnly ? 0 : shippingFor(physSub);
+      // Digital-only orders don't need a delivery address
+      ['customer_address', 'customer_comuna', 'customer_region'].forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        const group = el.closest('.form-group');
+        if (group) group.style.display = digitalOnly ? 'none' : '';
+        el.required = !digitalOnly;
+      });
       if (totalEl) totalEl.textContent = fmt(subtotal + shipping);
       const subEl = document.getElementById('checkout-subtotal');
       const shipEl = document.getElementById('checkout-shipping');
       const hintEl = document.getElementById('ship-hint');
       if (subEl) subEl.textContent = fmt(subtotal);
-      if (shipEl) shipEl.innerHTML = shipping ? fmt(shipping) : '<span class="free">Gratis</span>';
+      if (shipEl) shipEl.innerHTML = digitalOnly ? '<span class="free">No aplica</span>' : shipping ? fmt(shipping) : '<span class="free">Gratis</span>';
       const noteEl = document.getElementById('ship-note');
-      if (noteEl) {
+      if (noteEl && digitalOnly) {
+        noteEl.textContent = 'Producto digital: recibes el enlace de descarga apenas se confirme el pago.';
+      } else if (noteEl) {
         const { shipping_cost: c, free_shipping_min: m } = shippingCfg;
         noteEl.textContent = !c ? 'Envío gratis en todas las compras.'
           : m > 0 ? `Envío gratis en compras desde ${fmt(m)}. Bajo ese monto, el envío cuesta ${fmt(c)}.`
           : `Envío a todo Chile: ${fmt(c)}.`;
       }
-      if (hintEl) {
+      if (hintEl && digitalOnly) {
+        hintEl.className = 'ship-hint';
+        hintEl.textContent = '⬇️ Descarga inmediata después del pago';
+      } else if (hintEl) {
         const offersFree = shippingCfg.free_shipping_min > 0;
         hintEl.style.display = (shipping && !offersFree) ? 'none' : '';
         if (shipping && offersFree) {
-          const missing = shippingCfg.free_shipping_min - subtotal;
-          const pct = Math.min(100, Math.round(subtotal / shippingCfg.free_shipping_min * 100));
+          const missing = shippingCfg.free_shipping_min - physSub;
+          const pct = Math.min(100, Math.round(physSub / shippingCfg.free_shipping_min * 100));
           hintEl.className = 'ship-hint pending';
           hintEl.innerHTML = `Te faltan <strong>${fmt(missing)}</strong> para tener envío gratis<div class="ship-bar"><span style="width:${pct}%"></span></div>`;
         } else {
@@ -489,6 +517,7 @@
     const orderNum = params.get('order');
     const status = params.get('status');
     const error = params.get('error');
+    const dl = params.get('dl');
 
     if (error) {
       container.innerHTML = `<div class="order-status error"><h2>Error en el pago</h2><p>No pudimos procesar tu pago. Por favor intenta de nuevo o contáctanos por WhatsApp.</p><a href="/checkout/" class="btn-back">Volver al carrito</a></div>`;
@@ -521,13 +550,14 @@
           <div class="order-status ${s.cls}">
             <span class="order-icon">${s.icon}</span>
             <h2>${s.text}</h2>
-            <p class="order-num">Orden: <strong>${data.order_number}</strong></p>
+            <p class="order-num">Orden: <strong>${esc(data.order_number)}</strong></p>
           </div>
+          ${data.has_digital ? downloadBox(data, dl) : ''}
           <div class="order-products">
             <h3>Productos</h3>
             ${data.products.map(p => `
               <div class="order-product-row">
-                <span>${p.slug === 'envio' ? p.name : `${p.name} × ${p.quantity}`}</span>
+                <span>${p.slug === 'envio' ? esc(p.name) : `${esc(p.name)} × ${p.quantity}`}</span>
                 <strong>${p.slug === 'envio' && !p.price ? 'Gratis' : fmt(p.price * p.quantity)}</strong>
               </div>
             `).join('')}
@@ -536,14 +566,50 @@
               <strong>${fmt(data.total)}</strong>
             </div>
           </div>
-          <p class="order-info">Cliente: ${data.customer_name}<br>Fecha: ${new Date(data.created_at).toLocaleDateString('es-CL', { year:'numeric', month:'long', day:'numeric', hour:'2-digit', minute:'2-digit' })}</p>
-          ${data.status === 'paid' ? '<p class="order-info success-msg">Te contactaremos por email para coordinar el envío.</p>' : ''}
+          <p class="order-info">Cliente: ${esc(data.customer_name)}<br>Fecha: ${new Date(data.created_at).toLocaleDateString('es-CL', { year:'numeric', month:'long', day:'numeric', hour:'2-digit', minute:'2-digit' })}</p>
+          ${data.status === 'paid' && data.has_physical !== false ? '<p class="order-info success-msg">Te contactaremos por email para coordinar el envío.</p>' : ''}
           <a href="/productos/" class="btn-back">Seguir comprando</a>
         `;
       })
       .catch(() => {
         container.innerHTML = `<p>No se pudo cargar la orden. Intenta recargar la página.</p>`;
       });
+  }
+
+  function downloadBox(data, dl) {
+    const box = 'margin:18px 0;padding:18px;border-radius:14px;border:2px solid #16a34a;background:#f0fdf4;text-align:center';
+    if (!dl) {
+      return `<div style="${box}"><strong>Descarga digital</strong><p style="margin:8px 0 0">Si no ves tu enlace de descarga, escríbenos por <a href="https://wa.me/56993514970">WhatsApp</a> con tu número de orden y te lo enviamos.</p></div>`;
+    }
+    const href = `/api/download?order=${encodeURIComponent(data.order_number)}&token=${encodeURIComponent(dl)}`;
+    if (data.status === 'paid') {
+      return `<div style="${box}"><strong style="font-size:1.05rem">Tu Pack está listo</strong>
+        <p style="margin:8px 0 14px">Descarga el archivo .zip con la planilla Excel, los diagramas unilineales (DXF y PDF) y el checklist SEC.</p>
+        <a href="${href}" style="display:inline-block;background:#16a34a;color:#fff;padding:13px 24px;border-radius:999px;font-weight:800;text-decoration:none">⬇️ Descargar Pack (.zip)</a>
+        <p style="margin:12px 0 0;font-size:.85rem;color:#475569">Guarda esta página en favoritos: el enlace es personal y puedes volver a usarlo.</p></div>`;
+    }
+    if (data.status === 'pending') {
+      return `<div style="${box};border-color:#f59e0b;background:#fffbeb"><strong>Descarga en espera</strong>
+        <p style="margin:8px 0 14px">Tu descarga se habilita apenas Flow confirme el pago. Guarda esta página y vuelve a intentarlo en unos minutos.</p>
+        <a href="${href}" style="display:inline-block;background:#1e1b15;color:#fff;padding:11px 20px;border-radius:999px;font-weight:700;text-decoration:none">Intentar descarga</a></div>`;
+    }
+    return '';
+  }
+
+  // ── "Agregar al carrito" buttons on any page (blog boxes, landings) ──
+  // Markup: <button data-add-cart data-slug data-name data-price data-image>
+  function initAddCartButtons() {
+    document.querySelectorAll('[data-add-cart]').forEach(btn => {
+      if (btn._ukraBound) return;
+      btn._ukraBound = true;
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        const price = parseInt(btn.dataset.price);
+        if (!btn.dataset.slug || !price) return;
+        addToCart({ slug: btn.dataset.slug, name: btn.dataset.name, price, image: btn.dataset.image || '' });
+        if (btn.dataset.goCheckout !== undefined) setTimeout(() => { location.href = '/checkout/'; }, 400);
+      });
+    });
   }
 
   // ── AdSense on product pages / catalog (toggled from /admin/) ─────
@@ -610,6 +676,7 @@
 
   function init() {
     createBadge();
+    initAddCartButtons();
     const path = window.location.pathname;
     if (path.startsWith('/producto/')) initProductPage();
     if (path.startsWith('/productos')) initCatalogPage();
