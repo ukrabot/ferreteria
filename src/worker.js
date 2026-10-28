@@ -39,6 +39,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Regularización Ley del Mono',
     filename: 'Pack-Regularizacion-Ley-del-Mono-Ferreteria-Ukra.zip',
   },
+  'pack-calculadora-cemento-y-ladrillos-muro-excel': {
+    name: 'Pack Calculadora de Cemento para Muros',
+    filename: 'Pack-Calculadora-de-Cemento-para-Muros-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1039,6 +1043,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-LEY-MONO',
+  },
+  {
+    slug: 'pack-calculadora-cemento-y-ladrillos-muro-excel',
+    name: 'Pack Calculadora de Cemento para Muros: Excel de Ladrillos, Pega y Estuco + Tabla Rápida + Guía de Mezcla',
+    price: 7990,
+    image: '/producto/pack-calculadora-cemento-y-ladrillos-muro-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-MURO',
   },
 ];
 
