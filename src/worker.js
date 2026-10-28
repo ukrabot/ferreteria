@@ -23,6 +23,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Calculadora de Techo de Zinc',
     filename: 'Pack-Calculadora-Techo-de-Zinc-Ferreteria-Ukra.zip',
   },
+  'pack-calculadora-consumo-soldadora-excel': {
+    name: 'Pack Calculadora Soldadora',
+    filename: 'Pack-Calculadora-Soldadora-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -971,6 +975,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-TECHO-ZINC',
+  },
+  {
+    slug: 'pack-calculadora-consumo-soldadora-excel',
+    name: 'Pack Calculadora Soldadora: Excel de Consumo, Costo y Circuito + Tabla Rápida + Checklist',
+    price: 7990,
+    image: '/producto/pack-calculadora-consumo-soldadora-excel.webp',
+    category: 'Herramientas',
+    status: 'available',
+    sku: 'PACK-SOLDADORA',
   },
 ];
 
