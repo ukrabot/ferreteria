@@ -31,6 +31,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Soldadura con Estaño',
     filename: 'Pack-Soldadura-con-Estano-Ferreteria-Ukra.zip',
   },
+  'pack-calculadora-de-pastelones-excel': {
+    name: 'Pack Calculadora de Pastelones',
+    filename: 'Pack-Calculadora-de-Pastelones-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1013,6 +1017,15 @@ const SEED_PRODUCTS = [
     category: 'Herramientas',
     status: 'available',
     sku: 'PACK-ESTANO',
+  },
+  {
+    slug: 'pack-calculadora-de-pastelones-excel',
+    name: 'Pack Calculadora de Pastelones: Excel de Piezas, Base, Arena y Fragüe + Plantilla de Medición + Corte de Capas',
+    price: 7990,
+    image: '/producto/pack-calculadora-de-pastelones-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-PASTELONES',
   },
 ];
 
