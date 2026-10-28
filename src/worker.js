@@ -27,6 +27,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Calculadora Soldadora',
     filename: 'Pack-Calculadora-Soldadora-Ferreteria-Ukra.zip',
   },
+  'pack-soldadura-con-estano-guia-visual-pdf': {
+    name: 'Pack Soldadura con Estaño',
+    filename: 'Pack-Soldadura-con-Estano-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1000,6 +1004,15 @@ const SEED_PRODUCTS = [
     category: 'Herramientas',
     status: 'available',
     sku: 'PACK-SOLDADORA',
+  },
+  {
+    slug: 'pack-soldadura-con-estano-guia-visual-pdf',
+    name: 'Pack Soldadura con Estaño: Guía Visual de Defectos + Tabla de Temperaturas + Plan de Práctica + Checklist',
+    price: 7990,
+    image: '/producto/pack-soldadura-con-estano-guia-visual-pdf.webp',
+    category: 'Herramientas',
+    status: 'available',
+    sku: 'PACK-ESTANO',
   },
 ];
 
