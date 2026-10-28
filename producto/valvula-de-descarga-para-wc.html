@@ -529,7 +529,7 @@ try{var c=document.cookie.match(/(?:^|;\s*)rel_consent=([^;]+)/);if(c&&c[1]==='g
 <script>
 (function(){var b=document.getElementById('rel-consent');if(!document.cookie.match(/(?:^|;\s*)rel_consent=/))b.hidden=false;function set(v){document.cookie='rel_consent='+v+';max-age=15552000;path=/;SameSite=Lax';gtag('consent','update',{'ad_storage':v==='granted'?'granted':'denied','ad_user_data':v==='granted'?'granted':'denied','ad_personalization':v==='granted'?'granted':'denied','analytics_storage':v==='granted'?'granted':'denied'});b.hidden=true}document.getElementById('consent-yes').onclick=function(){set('granted')};document.getElementById('consent-no').onclick=function(){set('denied')}})();
 </script>
-<script src="/assets/cart.js?v=20261028a"></script>
+<script src="/assets/cart.js?v=20261028b"></script>
 <script>
 var m=document.getElementById('menuToggle'),n=document.getElementById('mainNav');
 m.addEventListener('click',function(){var o=n.classList.toggle('active');this.setAttribute('aria-expanded',o);this.innerHTML=o?'\u2715':'\u2630'});
