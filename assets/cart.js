@@ -7,7 +7,7 @@
 
   const CART_KEY = 'ukra_cart';
   // Digital products: no shipping, delivered by a download link after payment.
-  const DIGITAL = new Set(['pack-cuadro-de-cargas-unilineal-checklist-te1']);
+  const DIGITAL = new Set(['pack-cuadro-de-cargas-unilineal-checklist-te1', 'pack-codigo-de-colores-etiquetas-tablero-ric']);
   const isDigital = slug => DIGITAL.has(slug);
 
   function esc(s) {
@@ -583,9 +583,10 @@
     }
     const href = `/api/download?order=${encodeURIComponent(data.order_number)}&token=${encodeURIComponent(dl)}`;
     if (data.status === 'paid') {
-      return `<div style="${box}"><strong style="font-size:1.05rem">Tu Pack está listo</strong>
-        <p style="margin:8px 0 14px">Descarga el archivo .zip con la planilla Excel, los diagramas unilineales (DXF y PDF) y el checklist SEC.</p>
-        <a href="${href}" style="display:inline-block;background:#16a34a;color:#fff;padding:13px 24px;border-radius:999px;font-weight:800;text-decoration:none">⬇️ Descargar Pack (.zip)</a>
+      const names = data.products.filter(p => isDigital(p.slug)).map(p => esc(p.name)).join(' · ');
+      return `<div style="${box}"><strong style="font-size:1.05rem">Tu descarga está lista</strong>
+        <p style="margin:8px 0 14px">${names}</p>
+        <a href="${href}" style="display:inline-block;background:#16a34a;color:#fff;padding:13px 24px;border-radius:999px;font-weight:800;text-decoration:none">⬇️ Descargar (.zip)</a>
         <p style="margin:12px 0 0;font-size:.85rem;color:#475569">Guarda esta página en favoritos: el enlace es personal y puedes volver a usarlo.</p></div>`;
     }
     if (data.status === 'pending') {
@@ -604,9 +605,17 @@
       btn._ukraBound = true;
       btn.addEventListener('click', e => {
         e.preventDefault();
-        const price = parseInt(btn.dataset.price);
-        if (!btn.dataset.slug || !price) return;
-        addToCart({ slug: btn.dataset.slug, name: btn.dataset.name, price, image: btn.dataset.image || '' });
+        if (btn.dataset.items) {
+          // Bundle button: data-items='[{"slug","name","price","image"}, ...]'
+          let items = [];
+          try { items = JSON.parse(btn.dataset.items); } catch {}
+          items.filter(i => i.slug && parseInt(i.price)).forEach(i => addToCart({ slug: i.slug, name: i.name, price: parseInt(i.price), image: i.image || '' }));
+          if (items.length) showToast(`${items.length} productos agregados al carrito`);
+        } else {
+          const price = parseInt(btn.dataset.price);
+          if (!btn.dataset.slug || !price) return;
+          addToCart({ slug: btn.dataset.slug, name: btn.dataset.name, price, image: btn.dataset.image || '' });
+        }
         if (btn.dataset.goCheckout !== undefined) setTimeout(() => { location.href = '/checkout/'; }, 400);
       });
     });

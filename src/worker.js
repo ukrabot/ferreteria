@@ -15,6 +15,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Tablero Eléctrico RIC',
     filename: 'Pack-Tablero-Electrico-RIC-Ferreteria-Ukra.zip',
   },
+  'pack-codigo-de-colores-etiquetas-tablero-ric': {
+    name: 'Pack Identificación Eléctrica RIC',
+    filename: 'Pack-Identificacion-Electrica-RIC-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -945,6 +949,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-RIC-TDA',
+  },
+  {
+    slug: 'pack-codigo-de-colores-etiquetas-tablero-ric',
+    name: 'Pack Identificación Eléctrica RIC: Lámina Código de Colores + Etiquetas + Tabla de Circuitos',
+    price: 7990,
+    image: '/producto/pack-codigo-de-colores-etiquetas-tablero-ric.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-RIC-COLORES',
   },
 ];
 
