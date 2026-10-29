@@ -78,6 +78,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Enchufe Seguro',
     filename: 'Pack-Enchufe-Seguro-Ferreteria-Ukra.zip',
   },
+  'pack-galpon-metalico-dimensiones-cotizaciones-excel': {
+    name: 'Pack Galpón Metálico',
+    filename: 'Pack-Galpon-Metalico-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1345,6 +1349,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-ENCHUFE',
+  },
+  {
+    slug: 'pack-galpon-metalico-dimensiones-cotizaciones-excel',
+    name: 'Pack Galpón Metálico: Planilla Excel de Dimensiones, Cantidades y Costo + Comparador de Cotizaciones + Checklist de Obra',
+    price: 7990,
+    image: '/producto/pack-galpon-metalico-dimensiones-cotizaciones-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-GALPON',
   },
 ];
 
