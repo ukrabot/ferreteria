@@ -90,6 +90,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Tabique Metalcon',
     filename: 'Pack-Tabique-Metalcon-Ferreteria-Ukra.zip',
   },
+  'pack-ducha-electrica-circuito-seguro-excel': {
+    name: 'Pack Ducha Eléctrica',
+    filename: 'Pack-Ducha-Electrica-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1384,6 +1388,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-TABIQUE',
+  },
+  {
+    slug: 'pack-ducha-electrica-circuito-seguro-excel',
+    name: 'Pack Ducha Eléctrica: Calculadora Excel de Cable, Automático, Caída de Tensión y Consumo + Guía de Instalación + Diagnóstico de Fallas',
+    price: 7990,
+    image: '/producto/pack-ducha-electrica-circuito-seguro-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-DUCHA',
   },
 ];
 
