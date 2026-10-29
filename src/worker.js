@@ -98,6 +98,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Hongos y Humedad',
     filename: 'Pack-Hongos-y-Humedad-Ferreteria-Ukra.zip',
   },
+  'pack-muro-contencion-drenaje-supervision-excel': {
+    name: 'Pack Muro de Contención',
+    filename: 'Pack-Muro-de-Contencion-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1410,6 +1414,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-HONGOS',
+  },
+  {
+    slug: 'pack-muro-contencion-drenaje-supervision-excel',
+    name: 'Pack Muro de Contención: Planilla Excel de Empuje, Cubicación y Comparador de Cotizaciones + Checklist de Supervisión + Inspección',
+    price: 7990,
+    image: '/producto/pack-muro-contencion-drenaje-supervision-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-MURO',
   },
 ];
 
