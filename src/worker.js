@@ -62,6 +62,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Fosa Séptica',
     filename: 'Pack-Fosa-Septica-Ferreteria-Ukra.zip',
   },
+  'pack-calculadora-radier-armado-malla-excel': {
+    name: 'Pack Radier Armado',
+    filename: 'Pack-Radier-Armado-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1293,6 +1297,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-FOSA',
+  },
+  {
+    slug: 'pack-calculadora-radier-armado-malla-excel',
+    name: 'Pack Radier Armado: Calculadora Excel de Hormigón, Malla y Sillas + Guía de Armado + Calendario de Curado',
+    price: 7990,
+    image: '/producto/pack-calculadora-radier-armado-malla-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-RADIER',
   },
 ];
 
