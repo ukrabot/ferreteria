@@ -74,6 +74,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Bomba que No Corta',
     filename: 'Pack-Bomba-No-Corta-Ferreteria-Ukra.zip',
   },
+  'pack-enchufe-seguro-carga-circuito-excel': {
+    name: 'Pack Enchufe Seguro',
+    filename: 'Pack-Enchufe-Seguro-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1332,6 +1336,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-BOMBA',
+  },
+  {
+    slug: 'pack-enchufe-seguro-carga-circuito-excel',
+    name: 'Pack Enchufe Seguro: Planilla Excel de Carga del Circuito y Punto Nuevo + Checklist de Conexión + Pruebas y Fallas',
+    price: 7990,
+    image: '/producto/pack-enchufe-seguro-carga-circuito-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-ENCHUFE',
   },
 ];
 
