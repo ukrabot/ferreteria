@@ -46,6 +46,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Calculadora de Cemento para Muros',
     filename: 'Pack-Calculadora-de-Cemento-para-Muros-Ferreteria-Ukra.zip',
   },
+  'pack-dilucion-acido-muriatico-ladrillo-visto-excel': {
+    name: 'Pack Limpieza de Ladrillo Visto',
+    filename: 'Pack-Limpieza-Ladrillo-Visto-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1241,6 +1245,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-MURO',
+  },
+  {
+    slug: 'pack-dilucion-acido-muriatico-ladrillo-visto-excel',
+    name: 'Pack Limpieza de Ladrillo Visto: Calculadora de Dilución de Ácido Muriático + Tabla Segura + Diagnóstico de Manchas',
+    price: 7990,
+    image: '/producto/pack-dilucion-acido-muriatico-ladrillo-visto-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-LADRILLO',
   },
 ];
 
