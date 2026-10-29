@@ -86,6 +86,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Fase y Neutro',
     filename: 'Pack-Fase-y-Neutro-Ferreteria-Ukra.zip',
   },
+  'pack-calculadora-tabique-metalcon-excel': {
+    name: 'Pack Tabique Metalcon',
+    filename: 'Pack-Tabique-Metalcon-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1371,6 +1375,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-FASE',
+  },
+  {
+    slug: 'pack-calculadora-tabique-metalcon-excel',
+    name: 'Pack Tabique Metalcon: Calculadora Excel de Canales, Montantes, Placas y Presupuesto + Guía de Armado + Despiece y Hoja de Terreno',
+    price: 7990,
+    image: '/producto/pack-calculadora-tabique-metalcon-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-TABIQUE',
   },
 ];
 
