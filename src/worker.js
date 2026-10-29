@@ -58,6 +58,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Remaches POP',
     filename: 'Pack-Remaches-POP-Ferreteria-Ukra.zip',
   },
+  'pack-planilla-fosa-septica-test-percolacion-excel': {
+    name: 'Pack Fosa Séptica',
+    filename: 'Pack-Fosa-Septica-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1280,6 +1284,15 @@ const SEED_PRODUCTS = [
     category: 'Herramientas',
     status: 'available',
     sku: 'PACK-REMACHES',
+  },
+  {
+    slug: 'pack-planilla-fosa-septica-test-percolacion-excel',
+    name: 'Pack Fosa Séptica: Planilla Excel de Volumen y Dren + Hoja de Test de Percolación + Checklist de Instalación y Mantención',
+    price: 7990,
+    image: '/producto/pack-planilla-fosa-septica-test-percolacion-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-FOSA',
   },
 ];
 
