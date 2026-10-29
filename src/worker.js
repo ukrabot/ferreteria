@@ -66,6 +66,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Radier Armado',
     filename: 'Pack-Radier-Armado-Ferreteria-Ukra.zip',
   },
+  'pack-presupuesto-construccion-casa-excel': {
+    name: 'Pack Presupuesto de Casa',
+    filename: 'Pack-Presupuesto-Casa-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1306,6 +1310,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-RADIER',
+  },
+  {
+    slug: 'pack-presupuesto-construccion-casa-excel',
+    name: 'Pack Presupuesto de Casa: Planilla Excel por Partidas, Cubicación y Flujo de Caja + Checklist de Permisos + Guía para Cotizar',
+    price: 7990,
+    image: '/producto/pack-presupuesto-construccion-casa-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-CASA',
   },
 ];
 
