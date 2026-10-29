@@ -54,6 +54,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Comparador de Ladrillos',
     filename: 'Pack-Comparador-de-Ladrillos-Ferreteria-Ukra.zip',
   },
+  'pack-selector-remaches-pop-excel': {
+    name: 'Pack Remaches POP',
+    filename: 'Pack-Remaches-POP-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1267,6 +1271,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-LADRILLOS',
+  },
+  {
+    slug: 'pack-selector-remaches-pop-excel',
+    name: 'Pack Remaches POP: Selector en Excel de Diámetro, Broca y Largo + Tabla de Remaches + Defectos y Checklist',
+    price: 7990,
+    image: '/producto/pack-selector-remaches-pop-excel.webp',
+    category: 'Herramientas',
+    status: 'available',
+    sku: 'PACK-REMACHES',
   },
 ];
 
