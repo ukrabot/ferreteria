@@ -94,6 +94,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Ducha Eléctrica',
     filename: 'Pack-Ducha-Electrica-Ferreteria-Ukra.zip',
   },
+  'pack-hongos-humedad-diagnostico-repintado-excel': {
+    name: 'Pack Hongos y Humedad',
+    filename: 'Pack-Hongos-y-Humedad-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1397,6 +1401,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-DUCHA',
+  },
+  {
+    slug: 'pack-hongos-humedad-diagnostico-repintado-excel',
+    name: 'Pack Hongos y Humedad: Planilla Excel de Diagnóstico, Registro de Humedad y Materiales de Repintado + Protocolo de Limpieza + Hoja de Terreno',
+    price: 7990,
+    image: '/producto/pack-hongos-humedad-diagnostico-repintado-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-HONGOS',
   },
 ];
 
