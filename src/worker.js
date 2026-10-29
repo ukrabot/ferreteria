@@ -70,6 +70,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Presupuesto de Casa',
     filename: 'Pack-Presupuesto-Casa-Ferreteria-Ukra.zip',
   },
+  'pack-diagnostico-bomba-agua-no-corta-excel': {
+    name: 'Pack Bomba que No Corta',
+    filename: 'Pack-Bomba-No-Corta-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1319,6 +1323,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-CASA',
+  },
+  {
+    slug: 'pack-diagnostico-bomba-agua-no-corta-excel',
+    name: 'Pack Bomba que No Corta: Diagnóstico en Excel, Presostato y Tanque Hidroneumático + 6 Pruebas + Guía de Ajuste',
+    price: 7990,
+    image: '/producto/pack-diagnostico-bomba-agua-no-corta-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-BOMBA',
   },
 ];
 
