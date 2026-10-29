@@ -82,6 +82,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Galpón Metálico',
     filename: 'Pack-Galpon-Metalico-Ferreteria-Ukra.zip',
   },
+  'pack-revision-enchufes-fase-neutro-tierra-excel': {
+    name: 'Pack Fase y Neutro',
+    filename: 'Pack-Fase-y-Neutro-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1358,6 +1362,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-GALPON',
+  },
+  {
+    slug: 'pack-revision-enchufes-fase-neutro-tierra-excel',
+    name: 'Pack Fase y Neutro: Planilla Excel de Revisión de Enchufes con Diagnóstico + Guía de Medición + Hoja de Terreno',
+    price: 7990,
+    image: '/producto/pack-revision-enchufes-fase-neutro-tierra-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-FASE',
   },
 ];
 
