@@ -50,6 +50,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Limpieza de Ladrillo Visto',
     filename: 'Pack-Limpieza-Ladrillo-Visto-Ferreteria-Ukra.zip',
   },
+  'pack-comparador-ladrillo-fiscal-princesa-hormigon-celular-excel': {
+    name: 'Pack Comparador de Ladrillos',
+    filename: 'Pack-Comparador-de-Ladrillos-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1254,6 +1258,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-LADRILLO',
+  },
+  {
+    slug: 'pack-comparador-ladrillo-fiscal-princesa-hormigon-celular-excel',
+    name: 'Pack Comparador de Ladrillos: Fiscal, Princesa y Hormigón Celular en Excel + Guía de Zonas Térmicas + Checklist',
+    price: 7990,
+    image: '/producto/pack-comparador-ladrillo-fiscal-princesa-hormigon-celular-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-LADRILLOS',
   },
 ];
 
