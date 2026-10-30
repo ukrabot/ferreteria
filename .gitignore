@@ -7,3 +7,4 @@
 
 # Fotos originales del generador de productos (las webp finales sí se suben)
 scripts/productos/fotos/
+__pycache__/
