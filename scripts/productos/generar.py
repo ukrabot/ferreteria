@@ -143,11 +143,31 @@ def plano(t: str) -> str:
 
 
 # ── validación de la ficha ─────────────────────────────────────────────
+def precio_con_margen(f: dict) -> int:
+    """precio_referencia × (1 + margen/100), redondeado hacia arriba al siguiente
+    número terminado en 990. Ej.: 5690 con 40 % → 7966 → 7990."""
+    import math
+    ref, mg = f.get("precio_referencia"), f.get("margen")
+    if not isinstance(ref, int) or not (100 <= ref <= 10_000_000):
+        raise FichaError("precio_referencia: número entero en pesos, sin puntos (ej. 5690), precio normal sin oferta")
+    if not isinstance(mg, (int, float)) or isinstance(mg, bool) or not (0 <= mg <= 300):
+        raise FichaError("margen: porcentaje de ganancia entre 0 y 300 (ej. 40)")
+    bruto = ref * (1 + mg / 100)
+    return max(990, math.ceil((bruto - 990) / 1000) * 1000 + 990)
+
+
 def cargar_ficha(path: Path, actualizar: bool) -> dict:
     try:
         f = json.loads(leer(path))
     except json.JSONDecodeError as e:
         raise FichaError(f"El JSON no es válido: {e}")
+    if "precio" not in f and "precio_referencia" in f:
+        f["precio"] = precio_con_margen(f)
+    elif "precio_referencia" in f or "margen" in f:
+        esperado = precio_con_margen(f)
+        if f.get("precio") != esperado:
+            raise FichaError(f"precio: con precio_referencia {f.get('precio_referencia')} y margen {f.get('margen')} % debe ser {esperado}. "
+                             "Quita «precio» y deja que el generador lo calcule")
     req = ["slug", "nombre", "titulo_h1", "titulo_corto", "marca", "sku", "precio", "categoria", "subcategoria",
            "seo_titulo", "meta_descripcion", "og_descripcion", "descripcion", "lede", "fotos", "especificaciones",
            "confianza", "secciones", "faq", "lateral", "tarjeta"]

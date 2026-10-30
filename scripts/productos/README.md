@@ -40,7 +40,9 @@ python3 scripts/productos/generar.py --verificar <slug>
 | `titulo_corto` | para migas, redes y WhatsApp | 8–70 |
 | `marca` | marca | 2–40 |
 | `sku` | código del producto | único en la tienda |
-| `precio` | precio en pesos, entero | ej. `5890` (sin puntos) |
+| `precio` | precio en pesos, entero | ej. `5890` (sin puntos). Omítelo si usas `precio_referencia` + `margen` |
+| `precio_referencia` | opcional: precio normal de referencia (sin oferta), entero | ej. `5690` |
+| `margen` | opcional: % de ganancia sobre la referencia | ej. `40`. El generador calcula `precio` = referencia × (1 + margen/100), redondeado hacia arriba al siguiente número terminado en 990: 5690 con 40 % → 7966 → **7990** |
 | `categoria` | filtro del catálogo | `herramientas`, `electricidad`, `bombas`, `gasfiteria`, `otros` |
 | `subcategoria` | texto bajo la categoría | ej. «Adaptadores de enchufe» |
 | `color` | opcional | |

@@ -36,7 +36,10 @@ actualizar fichas de productos físicos con el generador**. Nada más.
 - **Datos reales**: especificaciones solo del fabricante, del empaque o del
   dueño. Si un dato no está confirmado, no lo pongas. No inventes
   certificaciones, garantías ni plazos.
-- **Precio**: lo entrega el dueño. Si no lo tienes, pregunta.
+- **Precio**: lo entrega el dueño, o te da un **margen**. Con margen, pon en la
+  ficha `precio_referencia` (precio normal, no el de oferta ni el de tarjeta)
+  y `margen`, y **no pongas `precio`**: el generador lo calcula y lo redondea a
+  terminación 990. Si no tienes precio ni margen, pregunta.
 - **Textos originales**: escribe en español de Chile, tuteando, con frases
   claras. No copies descripciones de otras tiendas (Sodimac, Easy, etc.) ni las
   menciones; puedes usar sus datos técnicos como referencia y redactar con tus
