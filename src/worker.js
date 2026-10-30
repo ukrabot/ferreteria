@@ -122,6 +122,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Calefont',
     filename: 'Pack-Calefont-Ferreteria-Ukra.zip',
   },
+  'pack-malla-raschel-calculadora-estructura-excel': {
+    name: 'Pack Malla Raschel',
+    filename: 'Pack-Malla-Raschel-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1489,6 +1493,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-CALEFONT',
+  },
+  {
+    slug: 'pack-malla-raschel-calculadora-estructura-excel',
+    name: 'Pack Malla Raschel: Calculadora Excel de Malla, Postes, Cable y Presupuesto + Instalación Paso a Paso + Lista de Compra y Mantención',
+    price: 7990,
+    image: '/producto/pack-malla-raschel-calculadora-estructura-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-RASCHEL',
   },
 ];
 
