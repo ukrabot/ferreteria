@@ -110,6 +110,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Goteras en Techo de Zinc',
     filename: 'Pack-Goteras-Techo-de-Zinc-Ferreteria-Ukra.zip',
   },
+  'pack-tablero-transferencia-ats-generador-excel': {
+    name: 'Pack Tablero ATS',
+    filename: 'Pack-Tablero-ATS-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1449,6 +1453,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-GOTERAS',
+  },
+  {
+    slug: 'pack-tablero-transferencia-ats-generador-excel',
+    name: 'Pack Tablero ATS: Planilla Excel de Cargas, Generador, ATS, Cable y Combustible + Checklist de Puesta en Marcha + Mantención y Registro',
+    price: 7990,
+    image: '/producto/pack-tablero-transferencia-ats-generador-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-ATS',
   },
 ];
 
