@@ -9,8 +9,9 @@
   "assets": {
     "directory": ".",
     "binding": "ASSETS",
-    // Blog pages go through the Worker so AdSense can be turned off from /admin/
-    "run_worker_first": ["/blog/*"]
+    // Blog pages go through the Worker so AdSense can be turned off from /admin/;
+    // pages that show prices go through it so they use the price set in /admin/
+    "run_worker_first": ["/blog/*", "/", "/index.html", "/producto/*", "!/producto/*.webp", "/productos/*", "/productos-digitales/*"]
   },
   "compatibility_flags": [
     "nodejs_compat"

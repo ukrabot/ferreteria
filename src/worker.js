@@ -981,6 +981,7 @@ async function handleAdminUpdateProduct(request, env, slug) {
     `SELECT id, slug, name, price, image, category, status, sku, updated_at FROM products WHERE slug = ?`
   ).bind(slug).first();
 
+  dbPriceCache = { map: null, at: 0 }; // static pages pick up the new price right away
   return json(updated);
 }
 
@@ -1534,16 +1535,128 @@ async function blogAdsEnabled(env) {
 async function serveBlog(request, env) {
   const res = await env.ASSETS.fetch(request);
   const type = res.headers.get('Content-Type') || '';
-  if (!type.includes('text/html') || await blogAdsEnabled(env)) return res;
+  if (request.method !== 'GET' || !res.ok || !type.includes('text/html')) return res;
+  const priced = await withDbPrices(res, request, env, null);
+  if (await blogAdsEnabled(env)) return priced;
   const remove = { element(el) { el.remove(); } };
   const out = new HTMLRewriter()
     .on('script[src*="adsbygoogle"]', remove)
     .on('ins.adsbygoogle', remove)
-    .transform(res);
-  const headers = new Headers(out.headers);
+    .transform(priced);
+  return new Response(out.body, { status: out.status, statusText: out.statusText, headers: priced.headers });
+}
+
+// ── Prices from D1 on static pages ──────────────────────────────────
+// Product pages, catalogs, the home page and the product boxes in blog
+// articles are static HTML with the price written in (text, WhatsApp links,
+// JSON-LD, data-price). When a price is changed in /admin/, the Worker
+// rewrites those amounts on the way out, so the whole page shows the new one.
+
+let dbPriceCache = { map: null, at: 0 };
+async function dbPrices(env) {
+  if (dbPriceCache.map && Date.now() - dbPriceCache.at < 10000) return dbPriceCache.map;
+  const query = env.DB.prepare('SELECT slug, price FROM products').all()
+    .then(r => new Map((r.results || []).map(p => [p.slug, Number(p.price)])))
+    .catch(() => null);
+  const map = await Promise.race([query, new Promise(resolve => setTimeout(resolve, 1500, null))]);
+  if (map) dbPriceCache = { map, at: Date.now() };
+  return map || dbPriceCache.map;
+}
+
+// Prices written in a product page: its color variants (data-slug + data-price)
+// and, for the page's own product, the first JSON-LD price.
+function pagePrices(html, slug) {
+  const out = new Map();
+  for (const m of html.matchAll(/class="variant-btn"[^>]*?data-slug="([a-z0-9-]+)"[^>]*?data-price="(\d+)"/g)) out.set(m[1], Number(m[2]));
+  if (!out.has(slug)) {
+    const m = html.match(/"price"\s*:\s*"?(\d+)/);
+    if (m) out.set(slug, Number(m[1]));
+  }
+  return out;
+}
+
+// Static (deployed) price of products linked from other pages. Assets only
+// change with a deploy, which starts new isolates, so this cache never goes stale.
+const staticPriceCache = new Map();
+async function staticPrice(env, origin, slug) {
+  if (!staticPriceCache.has(slug)) {
+    let prices = new Map();
+    try {
+      const r = await env.ASSETS.fetch(new Request(`${origin}/producto/${slug}`));
+      if (r.ok && (r.headers.get('Content-Type') || '').includes('text/html')) prices = pagePrices(await r.text(), slug);
+    } catch {}
+    staticPriceCache.set(slug, prices);
+  }
+  return staticPriceCache.get(slug).get(slug);
+}
+
+const fmtCLP = n => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+
+async function applyDbPrices(html, env, origin, ownSlug) {
+  const db = await dbPrices(env);
+  if (!db || !db.size) return html;
+  const refsOf = h => [...h.matchAll(/(?:href="\/producto\/|data-slug=")([a-z0-9-]+)/g)].map(m => [m.index, m[1]]);
+  const own = ownSlug ? pagePrices(html, ownSlug) : new Map();
+  const old = new Map(own);
+  for (const s of new Set(refsOf(html).map(r => r[1]))) {
+    if (old.has(s) || !db.has(s)) continue;
+    const p = await staticPrice(env, origin, s);
+    if (p) old.set(s, p);
+  }
+  const changed = new Set([...old].filter(([s, p]) => db.get(s) > 0 && db.get(s) !== p).map(([s]) => s));
+  if (!changed.size) return html;
+
+  // Which product an amount belongs to: the nearest link to a product whose
+  // written price is that amount; far from any link, the page's own product.
+  const WINDOW = 1500;
+  const owner = (refs, pos, amount) => {
+    let best = null, bestD = WINDOW + 1;
+    for (const [i, s] of refs) {
+      const d = Math.abs(i - pos);
+      if (d < bestD && old.get(s) === amount) { best = s; bestD = d; }
+    }
+    if (!best) {
+      const mine = [...own].filter(([, p]) => p === amount);
+      if (mine.length === 1) best = mine[0][0];
+    }
+    return best && changed.has(best) ? db.get(best) : null;
+  };
+
+  let refs = refsOf(html);
+  html = html.replace(/(\$\s?|%24)(\d{1,3}(?:\.\d{3})+)(?![\d]|\.\d)/g, (m, pre, num, pos) => {
+    const n = owner(refs, pos, Number(num.replace(/\./g, '')));
+    return n ? pre + fmtCLP(n) : m;
+  });
+  html = html.replace(/(data-slug="([a-z0-9-]+)"[^>]*?data-price=")(\d+)"/g, (m, pre, s, p) =>
+    changed.has(s) && Number(p) === old.get(s) ? `${pre}${db.get(s)}"` : m);
+  if (ownSlug) {
+    refs = refsOf(html);
+    html = html.replace(/("price"\s*:\s*"?|product:price:amount" content=")(\d+)/g, (m, pre, p, pos) => {
+      const n = owner(refs, pos, Number(p));
+      return n ? pre + n : m;
+    });
+  }
+  return html;
+}
+
+async function withDbPrices(res, request, env, ownSlug) {
+  const html = await res.text();
+  let out = html;
+  try { out = await applyDbPrices(html, env, new URL(request.url).origin, ownSlug); } catch (e) { console.error('prices', e); }
+  const headers = new Headers(res.headers);
   headers.set('Cache-Control', 'public, max-age=0, must-revalidate');
   headers.delete('ETag');
-  return new Response(out.body, { status: out.status, statusText: out.statusText, headers });
+  headers.delete('Content-Length');
+  return new Response(out, { status: res.status, statusText: res.statusText, headers });
+}
+
+// Home, /productos/, /productos-digitales/ and /producto/* (run_worker_first)
+async function servePriced(request, env, rawPath) {
+  const res = await env.ASSETS.fetch(request);
+  const type = res.headers.get('Content-Type') || '';
+  if (request.method !== 'GET' || !res.ok || !type.includes('text/html')) return res;
+  const m = rawPath.match(/^\/producto\/([a-z0-9-]+?)(?:\.html)?\/?$/);
+  return withDbPrices(res, request, env, m ? m[1] : null);
 }
 
 // GET /api/site-config (public): product pages and /productos/ read it to
@@ -1664,6 +1777,10 @@ export default {
 
       // Blog articles (run_worker_first): AdSense on/off from /admin/
       if (rawPath === '/blog' || rawPath.startsWith('/blog/')) return serveBlog(request, env);
+      // Static pages that show prices (run_worker_first): use the price from /admin/
+      if (rawPath === '/' || rawPath === '/index.html' || rawPath.startsWith('/producto/') || rawPath.startsWith('/productos')) {
+        return servePriced(request, env, rawPath);
+      }
 
       // Public API routes
       if (path === '/api/shipping' && method === 'GET') return handleGetShipping(env);
