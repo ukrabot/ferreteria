@@ -475,6 +475,37 @@ def descargar_foto(url: str, carpeta: Path, i: int) -> Path:
     return dest
 
 
+def tiene_qr(ruta: Path) -> bool:
+    """True si la foto contiene un código QR (no se publican fotos con QR)."""
+    try:
+        import cv2
+        import numpy as np
+        from PIL import Image
+    except ImportError:
+        raise FichaError("Falta OpenCV para revisar códigos QR: pip install opencv-python-headless")
+    with Image.open(ruta) as im:
+        im = im.convert("RGB")
+        im.thumbnail((1600, 1600))
+        arr = cv2.cvtColor(np.array(im), cv2.COLOR_RGB2BGR)
+    # Solo cuenta como QR si se puede leer: la sola detección da falsos positivos
+    # con fotos de productos (bordes, rejillas, textos).
+    det = cv2.QRCodeDetector()
+    for img in (arr, cv2.resize(arr, None, fx=2, fy=2, interpolation=cv2.INTER_CUBIC)):
+        try:
+            ok, textos, _, _ = det.detectAndDecodeMulti(img)
+            if ok and any(t for t in textos):
+                return True
+        except (cv2.error, AttributeError):
+            pass
+        try:
+            t, _, _ = det.detectAndDecode(img)
+            if t:
+                return True
+        except cv2.error:
+            pass
+    return False
+
+
 def fotos_webp(f: dict, prueba: bool) -> list[Path]:
     try:
         from PIL import Image
@@ -485,6 +516,8 @@ def fotos_webp(f: dict, prueba: bool) -> list[Path]:
         dest = ROOT / "producto" / f"{f['slug']}{'' if i == 0 else f'-{i + 1:02d}'}.webp"
         im = Image.open(ft["_ruta"])
         im.load()
+        if tiene_qr(ft["_ruta"]):
+            raise FichaError(f"fotos[{i + 1}] ({ft['archivo']}): tiene un código QR. No se publican fotos con QR: quítala o usa otra")
         if min(im.size) < 500:
             raise FichaError(f"{ft['archivo']}: muy pequeña ({im.size[0]}×{im.size[1]}); mínimo 500 px por lado")
         if im.mode in ("RGBA", "LA", "P"):

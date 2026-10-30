@@ -15,7 +15,7 @@ scripts/productos/
 ## Uso
 
 ```bash
-pip install pillow                     # una vez
+pip install pillow opencv-python-headless   # una vez
 cp scripts/productos/ejemplo.json scripts/productos/fichas/<slug>.json
 # editar la ficha y poner las fotos en scripts/productos/fotos/<slug>/
 python3 scripts/productos/generar.py scripts/productos/fichas/<slug>.json --prueba
@@ -82,7 +82,8 @@ foto no salga borrosa. Si la descarga falla, guarda la foto a mano en la
 carpeta y usa `archivo`.
 
 Los textos (`alt`, descripciones, etc.) no pueden nombrar a otras tiendas: el
-generador los rechaza.
+generador los rechaza. Tampoco se publican fotos con **código QR**: el
+generador las detecta y rechaza la ficha; quita esa foto o usa otra.
 
 ```json
 "fotos": [
