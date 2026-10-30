@@ -114,6 +114,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Tablero ATS',
     filename: 'Pack-Tablero-ATS-Ferreteria-Ukra.zip',
   },
+  'pack-tornillos-para-madera-calculadora-excel': {
+    name: 'Pack Tornillos para Madera',
+    filename: 'Pack-Tornillos-para-Madera-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1462,6 +1466,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-ATS',
+  },
+  {
+    slug: 'pack-tornillos-para-madera-calculadora-excel',
+    name: 'Pack Tornillos para Madera: Calculadora Excel de Largo, Broca y Material + Guía de Selección + Tabla de Largos y Checklist de Taller',
+    price: 7990,
+    image: '/producto/pack-tornillos-para-madera-calculadora-excel.webp',
+    category: 'Herramientas',
+    status: 'available',
+    sku: 'PACK-TORNILLOS',
   },
 ];
 
