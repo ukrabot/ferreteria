@@ -102,6 +102,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Muro de Contención',
     filename: 'Pack-Muro-de-Contencion-Ferreteria-Ukra.zip',
   },
+  'pack-impermeabilizacion-radier-capilaridad-excel': {
+    name: 'Pack Radier sin Humedad',
+    filename: 'Pack-Radier-sin-Humedad-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1423,6 +1427,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-MURO',
+  },
+  {
+    slug: 'pack-impermeabilizacion-radier-capilaridad-excel',
+    name: 'Pack Radier sin Humedad: Calculadora Excel de Barreras contra Capilaridad, Presupuesto y Secado + Checklist de Obra + Diagnóstico y Retrofit',
+    price: 7990,
+    image: '/producto/pack-impermeabilizacion-radier-capilaridad-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-CAPILAR',
   },
 ];
 
