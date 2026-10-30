@@ -1,0 +1,175 @@
+{
+  "slug": "llave-de-paso-1-2-so-bronce-stretto",
+  "nombre": "Llave de paso 1/2 pulgada SO bronce para soldar Stretto",
+  "titulo_h1": "Llave de Paso 1/2\" SO Bronce para Soldar Stretto",
+  "titulo_corto": "Llave de Paso 1/2\" SO Bronce Stretto",
+  "marca": "Stretto",
+  "sku": "110233967",
+  "precio": 7990,
+  "categoria": "gasfiteria",
+  "subcategoria": "Llaves de paso y válvulas",
+  "color": "Bronce / Azul",
+  "disponible": true,
+
+  "seo_titulo": "Llave de Paso 1/2\" SO Bronce Stretto",
+  "meta_descripcion": "Compra la llave de paso de 1/2 pulgada SO en bronce Stretto a {precio}. Conexión para soldar a cañería de cobre en agua fría y caliente. Envíos a todo Chile.",
+  "og_descripcion": "Llave de paso de 1/2\" SO en bronce Stretto para soldar a cañería de cobre. Corte seguro para redes de agua potable. Envíos a todo Chile.",
+  "descripcion": "Llave de paso de 1/2 pulgada con terminales SO-SO para soldar directamente a cañerías de cobre de 1/2\". Fabricada en bronce de alta resistencia con volante ergonómico azul para apertura y cierre manual. Diseñada para redes de agua potable fría y caliente en instalaciones domiciliarias o comerciales, garantizando un corte de flujo hermético y duradero. Marca Stretto, garantía del fabricante de 6 meses.",
+  "lede": "Si estás renovando la instalación de agua de tu casa o necesitas independizar un sector como el baño o la cocina, esta **llave de paso Stretto de 1/2\" SO en bronce** te da un corte seguro y firme. Viene con **terminales para soldar (SO-SO)** directamente a cañería de cobre, cuerpo macizo resistente a la corrosión y un **volante azul** de fácil giro para cortar el paso de agua potable cuando necesites hacer mantenciones o reparaciones.",
+
+  "fotos": [
+    {
+      "url": "https://media.falabella.com/sodimacCL/752371_01/w=1200,h=1200,fit=cover",
+      "alt": "Llave de paso de bronce 1/2 pulgada SO Stretto para soldar vista completa",
+      "miniatura": "Ver llave completa"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/752371_21/w=1200,h=1200,fit=cover",
+      "alt": "Detalle del volante azul y vástago de la llave de paso de bronce",
+      "miniatura": "Ver volante y vástago"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/752371_26/w=1200,h=1200,fit=cover",
+      "alt": "Llave de paso de 1/2 pulgada con escala dimensional y conexión para soldar",
+      "miniatura": "Ver medidas y escala"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+
+  "especificaciones": [
+    ["Marca", "Stretto"],
+    ["Tipo de válvula", "Llave de paso de corte manual"],
+    ["Diámetro nominal", "1/2 pulgada"],
+    ["Tipo de conexión", "Terminal SO-SO (para soldar)"],
+    ["Material del cuerpo", "Bronce"],
+    ["Material de la válvula", "Bronce"],
+    ["Color", "Bronce con volante azul"],
+    ["Uso recomendado", "Redes de agua potable fría y caliente"],
+    ["Garantía", "6 meses (fabricante)"]
+  ],
+  "confianza": [
+    {
+      "titulo": "🚰 Bronce resistente",
+      "detalle": "Cuerpo macizo anticorrosión"
+    },
+    {
+      "titulo": "🔥 Conexión para soldar",
+      "detalle": "Terminal SO-SO para cañería de 1/2\""
+    },
+    {
+      "titulo": "🚚 Envío a todo Chile",
+      "detalle": "Despacho a domicilio o retiro"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Respaldo oficial Stretto"
+    }
+  ],
+
+  "secciones": [
+    {
+      "id": "donde-usar",
+      "titulo": "¿Dónde se instala una llave de paso de 1/2\" SO?",
+      "indice": "¿Dónde se instala?",
+      "bloques": [
+        {
+          "p": "Esta llave de paso está pensada para intercalarse en tramos de **cañería de cobre de 1/2 pulgada**, permitiendo aislar circuitos de agua sin tener que cortar el suministro general de toda la casa."
+        },
+        {
+          "lista": [
+            "Entradas de agua a baños para cortar lavamanos, WC o duchas",
+            "Líneas de alimentación en cocinas y lavaderos",
+            "Empalmes hacia calefont o termos de agua caliente",
+            "Arranques de riego o llaves de jardín independientes"
+          ]
+        },
+        {
+          "p": "Si vas a soldar la cañería tú mismo, te sugerimos revisar nuestra guía sobre [cómo soldar con estaño](/blog/como-soldar-con-estano-guia-paso-a-paso/) para asegurar uniones limpias y sin filtraciones."
+        }
+      ]
+    },
+    {
+      "id": "instalacion-segura",
+      "titulo": "Consejos para una instalación correcta y segura",
+      "indice": "Instalación segura",
+      "bloques": [
+        {
+          "p": "Al ser una válvula con **terminales para soldar (SO)**, debes tomar precauciones durante el proceso de soldadura para cuidar los componentes internos de la llave."
+        },
+        {
+          "pasos": [
+            "Corta el agua de la matriz principal y drena las cañerías antes de intervenir.",
+            "Limpia y lija bien las puntas del tubo de cobre y el interior del cuerpo de bronce antes de aplicar pasta decapante.",
+            "Desmonta el vástago o deja la llave completamente abierta mientras aplicas calor con el soplete, para no dañar el empaque ni los sellos internos.",
+            "Aplica soldadura de estaño en la unión y deja enfriar de forma natural, sin mojar con agua fría de golpe.",
+            "Abre el suministro de agua y verifica que no existan microfugas antes de tapar muros o canalizaciones."
+          ]
+        },
+        {
+          "advertencia": "Si no cuentas con experiencia en soldadura con soplete en cañerías de cobre, contacta a un gasfíter calificado para evitar quemaduras o filtraciones ocultas."
+        },
+        {
+          "p": "Para más detalles sobre el montaje completo, puedes leer nuestra guía práctica sobre [cómo instalar una llave de paso paso a paso](/blog/como-instalar-una-llave-de-paso-paso-a-paso/)."
+        }
+      ]
+    }
+  ],
+
+  "faq": [
+    {
+      "pregunta": "¿Qué significa que la llave de paso sea SO?",
+      "respuesta": "Significa que sus terminales son para soldar (Soldar-Soldar). Están dimensionados para recibir directamente cañería de cobre de 1/2 pulgada mediante soldadura de estaño y calor de soplete."
+    },
+    {
+      "pregunta": "¿Sirve tanto para agua fría como para agua caliente?",
+      "respuesta": "Sí. Al tener cuerpo y mecanismo de bronce, resiste perfectamente la temperatura y presión de líneas de agua fría y agua caliente domiciliaria."
+    },
+    {
+      "pregunta": "¿Tiene sentido desarmar la llave antes de soldar?",
+      "respuesta": "Es muy recomendable abrirla por completo o desmontar el cabezal superior antes de aplicar el soplete, evitando que el calor excesivo queme la empaquetadura o los sellos de goma."
+    },
+    {
+      "pregunta": "¿Qué garantía tiene este producto?",
+      "respuesta": "Cuenta con 6 meses de garantía legal y del fabricante Stretto ante cualquier defecto de fabricación."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo el país a través de Starken, Blue Express o Correos de Chile. Puedes comprar directamente o escribirnos por WhatsApp."
+    }
+  ],
+  "aviso_final": "Los precios incluyen IVA. Recomendamos que las modificaciones en redes de agua potable sean realizadas o supervisadas por un gasfíter certificado.",
+
+  "lateral": {
+    "etiqueta": "Gasfitería",
+    "titulo": "Llave de paso 1/2\" SO bronce Stretto",
+    "texto": "Válvula de corte para cañería de cobre de 1/2 pulgada. Fabricación en bronce duradero con manilla azul para control manual confiable."
+  },
+  "relacionados": [
+    "llave-de-paso-3-4-so-so-metal",
+    "cortador-de-tubos",
+    "valvula-de-descarga-para-wc"
+  ],
+  "guias": [
+    {
+      "url": "/blog/como-instalar-una-llave-de-paso-paso-a-paso/",
+      "texto": "Cómo instalar una llave de paso"
+    },
+    {
+      "url": "/blog/como-reparar-fuga-en-llave-de-paso-chile/",
+      "texto": "Reparar fugas en llaves de paso"
+    },
+    {
+      "url": "/blog/como-soldar-con-estano-guia-paso-a-paso/",
+      "texto": "Guía para soldar con estaño"
+    }
+  ],
+  "tarjeta": {
+    "titulo": "Llave de Paso 1/2\" SO Bronce Stretto",
+    "extracto": "Corte de agua seguro para cañería de cobre de 1/2\". Cuerpo de bronce macizo para soldar y volante azul ergonómico.",
+    "alt": "Llave de paso 1/2 pulgada SO en bronce Stretto con volante azul",
+    "etiqueta": "Gasfitería"
+  }
+}
