@@ -130,6 +130,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Ruido en Bomba de Agua',
     filename: 'Pack-Ruido-en-Bomba-de-Agua-Ferreteria-Ukra.zip',
   },
+  'pack-luces-led-interior-auto-fusible-excel': {
+    name: 'Pack Luces LED Interior del Auto',
+    filename: 'Pack-Luces-LED-Interior-Auto-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1515,6 +1519,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-RUIDO-BOMBA',
+  },
+  {
+    slug: 'pack-luces-led-interior-auto-fusible-excel',
+    name: 'Pack Luces LED Interior del Auto: Calculadora Excel de Consumo, Fusible, Cable y Batería + Instalación Paso a Paso + Checklist y Solución de Problemas',
+    price: 7990,
+    image: '/producto/pack-luces-led-interior-auto-fusible-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-LED-AUTO',
   },
 ];
 
