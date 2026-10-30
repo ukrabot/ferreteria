@@ -506,6 +506,22 @@ def tiene_qr(ruta: Path) -> bool:
     return False
 
 
+def es_foto_escala(ruta: Path) -> bool:
+    """True si es la foto de «escala» con silueta gris y manos (formato propio de
+    otra tienda): fondo de silueta gris 234 en gran parte y manos gris 193."""
+    from PIL import Image
+    with Image.open(ruta) as im:
+        im = im.convert("RGB")
+        im.thumbnail((400, 400))
+        raw = im.tobytes()
+    px = [raw[k:k + 3] for k in range(0, len(raw), 3)]
+    n = len(px) or 1
+    gris = lambda c, v, t: abs(c[0] - c[1]) <= 4 and abs(c[1] - c[2]) <= 4 and abs(c[0] - v) <= t
+    silueta = sum(1 for c in px if gris(c, 234, 5)) / n
+    manos = sum(1 for c in px if gris(c, 193, 6)) / n
+    return silueta >= 0.40 and manos >= 0.06
+
+
 def fotos_webp(f: dict, prueba: bool) -> list[Path]:
     try:
         from PIL import Image
@@ -516,6 +532,8 @@ def fotos_webp(f: dict, prueba: bool) -> list[Path]:
         dest = ROOT / "producto" / f"{f['slug']}{'' if i == 0 else f'-{i + 1:02d}'}.webp"
         im = Image.open(ft["_ruta"])
         im.load()
+        if es_foto_escala(ft["_ruta"]):
+            raise FichaError(f"fotos[{i + 1}] ({ft['archivo']}): es una foto de escala con silueta gris y manos. No se publican: quítala de la ficha")
         if tiene_qr(ft["_ruta"]):
             raise FichaError(f"fotos[{i + 1}] ({ft['archivo']}): tiene un código QR. No se publican fotos con QR: quítala o usa otra")
         if min(im.size) < 500:
@@ -709,18 +727,24 @@ def main() -> int:
         fotos = fotos_webp(f, prueba=True)  # valida las fotos antes de escribir
         rel = lambda p: p.relative_to(ROOT).as_posix()
         archivos = [f"producto/{f['slug']}.html"] + [rel(p) for p in fotos] + ["productos/index.html", "sitemap.xml"]
+        # Fotos de una versión anterior que ya no están en la ficha
+        sobrantes = [p for p in (ROOT / "producto").glob(f"{f['slug']}-[0-9][0-9].webp") if p not in fotos]
         if not a.actualizar:
             archivos.append("src/worker.js")
         if a.prueba:
             print("✔ Ficha válida. Se escribirían:")
             for x in archivos:
                 print("  -", x)
+            for p in sobrantes:
+                print("  - (se borraría)", rel(p))
             return 0
         # Respaldo de todo lo que se va a tocar: si algo falla, se restaura.
-        tocar = [ROOT / x for x in archivos]
+        tocar = [ROOT / x for x in archivos] + sobrantes
         respaldo = {p: (p.read_bytes() if p.exists() else None) for p in tocar}
         try:
             fotos_webp(f, prueba=False)
+            for p in sobrantes:
+                p.unlink()
             (ROOT / "producto" / f"{f['slug']}.html").write_text(page, encoding="utf-8")
             (ROOT / "productos" / "index.html").write_text(cat, encoding="utf-8")
             (ROOT / "src" / "worker.js").write_text(wjs, encoding="utf-8")
@@ -741,6 +765,8 @@ def main() -> int:
         print(f"✔ {'Actualizado' if a.actualizar else 'Publicado'} {f['slug']}. Archivos para el commit:")
         for x in archivos + [rel(Path(a.ficha).resolve())]:
             print("  -", x)
+        for p in sobrantes:
+            print("  - (borrada, inclúyela en el commit con git rm)", rel(p))
         return 0
     except FichaError as e:
         print("✘", e)

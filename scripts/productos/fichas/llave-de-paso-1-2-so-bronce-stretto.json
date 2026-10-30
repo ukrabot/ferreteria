@@ -10,13 +10,11 @@
   "subcategoria": "Llaves de paso y válvulas",
   "color": "Bronce / Azul",
   "disponible": true,
-
   "seo_titulo": "Llave de Paso 1/2\" SO Bronce Stretto",
   "meta_descripcion": "Compra la llave de paso de 1/2 pulgada SO en bronce Stretto a {precio}. Conexión para soldar a cañería de cobre en agua fría y caliente. Envíos a todo Chile.",
   "og_descripcion": "Llave de paso de 1/2\" SO en bronce Stretto para soldar a cañería de cobre. Corte seguro para redes de agua potable. Envíos a todo Chile.",
   "descripcion": "Llave de paso de 1/2 pulgada con terminales SO-SO para soldar directamente a cañerías de cobre de 1/2\". Fabricada en bronce de alta resistencia con volante ergonómico azul para apertura y cierre manual. Diseñada para redes de agua potable fría y caliente en instalaciones domiciliarias o comerciales, garantizando un corte de flujo hermético y duradero. Marca Stretto, garantía del fabricante de 6 meses.",
   "lede": "Si estás renovando la instalación de agua de tu casa o necesitas independizar un sector como el baño o la cocina, esta **llave de paso Stretto de 1/2\" SO en bronce** te da un corte seguro y firme. Viene con **terminales para soldar (SO-SO)** directamente a cañería de cobre, cuerpo macizo resistente a la corrosión y un **volante azul** de fácil giro para cortar el paso de agua potable cuando necesites hacer mantenciones o reparaciones.",
-
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/752371_01/w=1200,h=1200,fit=cover",
@@ -27,28 +25,49 @@
       "url": "https://media.falabella.com/sodimacCL/752371_21/w=1200,h=1200,fit=cover",
       "alt": "Detalle del volante azul y vástago de la llave de paso de bronce",
       "miniatura": "Ver volante y vástago"
-    },
-    {
-      "url": "https://media.falabella.com/sodimacCL/752371_26/w=1200,h=1200,fit=cover",
-      "alt": "Llave de paso de 1/2 pulgada con escala dimensional y conexión para soldar",
-      "miniatura": "Ver medidas y escala"
     }
   ],
   "stock": {
     "titulo": "En stock",
     "detalle": "Despacho en 24-48 h hábiles"
   },
-
   "especificaciones": [
-    ["Marca", "Stretto"],
-    ["Tipo de válvula", "Llave de paso de corte manual"],
-    ["Diámetro nominal", "1/2 pulgada"],
-    ["Tipo de conexión", "Terminal SO-SO (para soldar)"],
-    ["Material del cuerpo", "Bronce"],
-    ["Material de la válvula", "Bronce"],
-    ["Color", "Bronce con volante azul"],
-    ["Uso recomendado", "Redes de agua potable fría y caliente"],
-    ["Garantía", "6 meses (fabricante)"]
+    [
+      "Marca",
+      "Stretto"
+    ],
+    [
+      "Tipo de válvula",
+      "Llave de paso de corte manual"
+    ],
+    [
+      "Diámetro nominal",
+      "1/2 pulgada"
+    ],
+    [
+      "Tipo de conexión",
+      "Terminal SO-SO (para soldar)"
+    ],
+    [
+      "Material del cuerpo",
+      "Bronce"
+    ],
+    [
+      "Material de la válvula",
+      "Bronce"
+    ],
+    [
+      "Color",
+      "Bronce con volante azul"
+    ],
+    [
+      "Uso recomendado",
+      "Redes de agua potable fría y caliente"
+    ],
+    [
+      "Garantía",
+      "6 meses (fabricante)"
+    ]
   ],
   "confianza": [
     {
@@ -68,7 +87,6 @@
       "detalle": "Garantía del fabricante"
     }
   ],
-
   "secciones": [
     {
       "id": "donde-usar",
@@ -117,7 +135,6 @@
       ]
     }
   ],
-
   "faq": [
     {
       "pregunta": "¿Qué significa que la llave de paso sea SO?",
@@ -141,7 +158,6 @@
     }
   ],
   "aviso_final": "Los precios incluyen IVA. Recomendamos que las modificaciones en redes de agua potable sean realizadas o supervisadas por un gasfíter certificado.",
-
   "lateral": {
     "etiqueta": "Gasfitería",
     "titulo": "Llave de paso 1/2\" SO bronce Stretto",

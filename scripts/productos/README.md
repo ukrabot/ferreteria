@@ -82,8 +82,11 @@ foto no salga borrosa. Si la descarga falla, guarda la foto a mano en la
 carpeta y usa `archivo`.
 
 Los textos (`alt`, descripciones, etc.) no pueden nombrar a otras tiendas: el
-generador los rechaza. Tampoco se publican fotos con **código QR**: el
-generador las detecta y rechaza la ficha; quita esa foto o usa otra.
+generador los rechaza. Tampoco se publican fotos con **código QR** ni las fotos de
+**«escala» con silueta gris y manos**: el generador las detecta y rechaza la
+ficha; quita esa foto de la lista. Si con `--actualizar` una ficha queda con
+menos fotos, el generador borra las sobrantes y te dice cuáles incluir en el
+commit con `git rm`.
 
 ```json
 "fotos": [

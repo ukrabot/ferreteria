@@ -46,8 +46,8 @@ actualizar fichas de productos físicos con el generador**. Nada más.
   página) y el generador las descarga y convierte. También sirven fotos propias
   con `fotos[].archivo`. Usa solo fotos del producto exacto (mismo modelo y
   color), máximo 6, la primera de frente y con fondo blanco. **No uses fotos
-  con código QR** (el generador las rechaza), logos de otras tiendas, sellos
-  de oferta ni texto encima.
+  con código QR ni fotos de «escala» con silueta gris y manos** (el generador
+  rechaza ambas), logos de otras tiendas, sellos de oferta ni texto encima.
 - **Seguridad**: en productos eléctricos, de gas o de agua, incluye cómo
   usarlos de forma segura y cuándo llamar a un profesional (SEC cuando
   corresponda).
