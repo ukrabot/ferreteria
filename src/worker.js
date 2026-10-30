@@ -118,6 +118,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Tornillos para Madera',
     filename: 'Pack-Tornillos-para-Madera-Ferreteria-Ukra.zip',
   },
+  'pack-calefont-no-enciende-diagnostico-mantencion-excel': {
+    name: 'Pack Calefont',
+    filename: 'Pack-Calefont-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1476,6 +1480,15 @@ const SEED_PRODUCTS = [
     category: 'Herramientas',
     status: 'available',
     sku: 'PACK-TORNILLOS',
+  },
+  {
+    slug: 'pack-calefont-no-enciende-diagnostico-mantencion-excel',
+    name: 'Pack Calefont: Planilla Excel de Diagnóstico por Síntoma, Reparar o Reemplazar y Presión de Agua + Diagnóstico Paso a Paso + Mantención y Seguridad',
+    price: 7990,
+    image: '/producto/pack-calefont-no-enciende-diagnostico-mantencion-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-CALEFONT',
   },
 ];
 
