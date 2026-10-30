@@ -1,0 +1,80 @@
+{
+  "slug": "adaptador-schuko-a-enchufe-chileno-10a",
+  "nombre": "Adaptador Schuko a enchufe chileno 10 A blanco Halux",
+  "titulo_h1": "Adaptador Schuko a Enchufe Chileno 10 A Blanco",
+  "titulo_corto": "Adaptador Schuko a Enchufe Chileno 10 A",
+  "marca": "HALUX",
+  "sku": "113360933",
+  "precio": 5890,
+  "categoria": "electricidad",
+  "subcategoria": "Adaptadores de enchufe",
+  "color": "Blanco",
+  "disponible": true,
+
+  "seo_titulo": "Adaptador Schuko a Enchufe Chileno 10 A",
+  "meta_descripcion": "Compra el adaptador Schuko a enchufe chileno Halux a {precio}. Conecta artefactos con enchufe europeo a enchufes chilenos de 10 A, con tierra. Envío a todo Chile.",
+  "og_descripcion": "Usa tus artefactos con enchufe europeo Schuko en enchufes chilenos de 10 A, con conexión a tierra. Envíos a todo Chile.",
+  "descripcion": "Adaptador con toma Schuko (enchufe europeo) y enchufe chileno de 3 patas de 10 A, para conectar artefactos con enchufe europeo a enchufes de pared chilenos. Con protección contra sobrecargas de rearme manual. 10 A, 220 V, garantía de 1 año.",
+  "lede": "¿Tu cafetera, freidora de aire o herramienta trae **enchufe europeo Schuko** y no entra en el enchufe de tu casa? Este adaptador te deja conectarla a cualquier **enchufe chileno de 10 A**, sin cortar el cable y manteniendo la **conexión a tierra**.",
+
+  "fotos": [
+    {"archivo": "1.jpg", "alt": "Adaptador de enchufe Schuko europeo a enchufe chileno 10 A: toma Schuko con contactos de tierra", "miniatura": "Ver foto de la toma Schuko"},
+    {"archivo": "2.jpg", "alt": "Enchufe chileno de 3 patas del adaptador, con aislación en la base", "miniatura": "Ver foto del enchufe chileno"}
+  ],
+  "stock": {"titulo": "En stock", "detalle": "Despacho en 24-48 h hábiles"},
+
+  "especificaciones": [
+    ["Marca", "Halux"],
+    ["Toma (hembra)", "Schuko, para enchufes europeos tipo F"],
+    ["Enchufe (macho)", "Chileno de 3 patas en línea, 10 A"],
+    ["Corriente", "10 A"],
+    ["Tensión", "220 V"],
+    ["Potencia máxima", "2.200 W a 220 V"],
+    ["Garantía", "1 año"]
+  ],
+  "confianza": [
+    {"titulo": "🔌 Europeo → chileno", "detalle": "Toma Schuko, enchufe chileno 10 A"},
+    {"titulo": "⚡ Protección de sobrecarga", "detalle": "Corta si el consumo es excesivo"},
+    {"titulo": "🚚 Envío a todo Chile", "detalle": "Despacho a domicilio o retiro"},
+    {"titulo": "🛡️ Garantía 1 año", "detalle": "Garantía del fabricante"}
+  ],
+
+  "secciones": [
+    {
+      "id": "para-que-sirve",
+      "titulo": "¿Para qué sirve un adaptador Schuko a enchufe chileno?",
+      "indice": "¿Para qué sirve?",
+      "bloques": [
+        {"p": "Muchos electrodomésticos importados traen **enchufe europeo Schuko**, que no entra en el enchufe chileno de tres patas en línea."},
+        {"lista": ["Cafeteras espresso y freidoras de aire", "Herramientas eléctricas importadas", "Aspiradoras y hervidores"]}
+      ]
+    },
+    {
+      "id": "seguridad",
+      "titulo": "Uso seguro del adaptador",
+      "indice": "Uso seguro",
+      "bloques": [
+        {"tabla": {"cabecera": ["Artefacto", "Potencia típica", "¿Sirve?"], "filas": [["Cafetera", "1.000–1.500 W", "Sí"], ["Estufa eléctrica", "2.000 W", "Con precaución"]]}},
+        {"advertencia": "No conectes artefactos de más de 2.200 W. Para uso continuo, no pases de unos 1.800 W."},
+        {"p": "Si necesitas más tomas, mira el [enchufe triple con toma Schuko](/producto/enchufe-triple-con-toma-schuko-halux)."}
+      ]
+    }
+  ],
+
+  "faq": [
+    {"pregunta": "¿Cómo enchufo un artefacto con enchufe europeo en Chile?", "respuesta": "Con este adaptador: el enchufe europeo entra en la toma Schuko y el adaptador va a tu enchufe de pared chileno. No necesitas transformador."},
+    {"pregunta": "¿Cuánta potencia soporta?", "respuesta": "10 A, es decir 2.200 W en 220 V. Para artefactos que funcionan por horas, no pases de unos 1.800 W."},
+    {"pregunta": "¿Hacen envíos a regiones?", "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."}
+  ],
+  "aviso_final": "Los precios incluyen IVA. Las potencias de los artefactos son referenciales: revisa siempre la etiqueta de tu equipo.",
+
+  "lateral": {"etiqueta": "Adaptador Schuko", "titulo": "Enchufe europeo a chileno 10 A", "texto": "Para usar en Chile artefactos con enchufe Schuko. Con tierra y protección contra sobrecargas, garantía 1 año."},
+  "relacionados": ["enchufe-triple-con-toma-schuko-halux", {"slug": "adaptador-schuko-bipaso-16a-bticino", "texto": "Adaptador chileno a Schuko Bticino"}],
+  "guias": [{"url": "/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/", "texto": "Código de colores de cables"}],
+  "tarjeta": {
+    "titulo": "Adaptador Schuko a Enchufe Chileno 10 A",
+    "extracto": "Usa en Chile cafeteras, freidoras de aire y herramientas con enchufe europeo Schuko. Con tierra y protección de sobrecarga, 10 A.",
+    "alt": "Adaptador de enchufe Schuko europeo a enchufe chileno 10 A blanco",
+    "etiqueta": "Material Eléctrico"
+  }
+}
