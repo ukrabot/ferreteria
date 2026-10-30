@@ -1529,6 +1529,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: 'PACK-LED-AUTO',
   },
+  {
+    slug: 'llave-de-paso-1-2-so-bronce-stretto',
+    name: 'Llave de paso 1/2 pulgada SO bronce para soldar Stretto',
+    price: 7990,
+    image: '/producto/llave-de-paso-1-2-so-bronce-stretto.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: '110233967',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
