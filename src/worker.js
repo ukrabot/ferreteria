@@ -126,6 +126,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Malla Raschel',
     filename: 'Pack-Malla-Raschel-Ferreteria-Ukra.zip',
   },
+  'pack-ruido-bomba-agua-diagnostico-succion-excel': {
+    name: 'Pack Ruido en Bomba de Agua',
+    filename: 'Pack-Ruido-en-Bomba-de-Agua-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1502,6 +1506,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-RASCHEL',
+  },
+  {
+    slug: 'pack-ruido-bomba-agua-diagnostico-succion-excel',
+    name: 'Pack Ruido en Bomba de Agua: Planilla Excel de Diagnóstico por Sonido, Succión (NPSH) y Tanque Hidroneumático + Diagnóstico por Sonido + Succión, Tanque y Montaje',
+    price: 7990,
+    image: '/producto/pack-ruido-bomba-agua-diagnostico-succion-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-RUIDO-BOMBA',
   },
 ];
 
