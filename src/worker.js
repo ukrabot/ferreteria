@@ -106,6 +106,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Radier sin Humedad',
     filename: 'Pack-Radier-sin-Humedad-Ferreteria-Ukra.zip',
   },
+  'pack-goteras-techo-zinc-reparacion-mantencion-excel': {
+    name: 'Pack Goteras en Techo de Zinc',
+    filename: 'Pack-Goteras-Techo-de-Zinc-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1436,6 +1440,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-CAPILAR',
+  },
+  {
+    slug: 'pack-goteras-techo-zinc-reparacion-mantencion-excel',
+    name: 'Pack Goteras en Techo de Zinc: Planilla Excel de Mapa de Daños, Materiales, Reparar o Cambiar y Mantención + Guía de Reparación + Hoja de Inspección',
+    price: 7990,
+    image: '/producto/pack-goteras-techo-zinc-reparacion-mantencion-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-GOTERAS',
   },
 ];
 
