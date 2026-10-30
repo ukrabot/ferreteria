@@ -65,7 +65,7 @@
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
-      "detalle": "Respaldo oficial Stretto"
+      "detalle": "Garantía del fabricante"
     }
   ],
 
@@ -87,7 +87,7 @@
           ]
         },
         {
-          "p": "Si vas a soldar la cañería tú mismo, te sugerimos revisar nuestra guía sobre [cómo soldar con estaño](/blog/como-soldar-con-estano-guia-paso-a-paso/) para asegurar uniones limpias y sin filtraciones."
+          "p": "Si vas a soldar la cañería tú mismo, revisa nuestra guía de [herramientas básicas de gasfitería](/blog/herramientas-basicas-de-gasfiteria-todo-lo-que-necesitas-saber/) para tener a mano soplete, pasta decapante y soldadura para cobre."
         }
       ]
     },
@@ -104,7 +104,7 @@
             "Corta el agua de la matriz principal y drena las cañerías antes de intervenir.",
             "Limpia y lija bien las puntas del tubo de cobre y el interior del cuerpo de bronce antes de aplicar pasta decapante.",
             "Desmonta el vástago o deja la llave completamente abierta mientras aplicas calor con el soplete, para no dañar el empaque ni los sellos internos.",
-            "Aplica soldadura de estaño en la unión y deja enfriar de forma natural, sin mojar con agua fría de golpe.",
+            "Aplica soldadura para cobre (estaño-plata o 50/50) en la unión y deja enfriar de forma natural, sin mojar con agua fría de golpe.",
             "Abre el suministro de agua y verifica que no existan microfugas antes de tapar muros o canalizaciones."
           ]
         },
@@ -125,7 +125,7 @@
     },
     {
       "pregunta": "¿Sirve tanto para agua fría como para agua caliente?",
-      "respuesta": "Sí. Al tener cuerpo y mecanismo de bronce, resiste perfectamente la temperatura y presión de líneas de agua fría y agua caliente domiciliaria."
+      "respuesta": "Sí. Al tener cuerpo y mecanismo de bronce, resiste la temperatura y la presión de las redes domiciliarias de agua fría y caliente."
     },
     {
       "pregunta": "¿Tiene sentido desarmar la llave antes de soldar?",
@@ -133,11 +133,11 @@
     },
     {
       "pregunta": "¿Qué garantía tiene este producto?",
-      "respuesta": "Cuenta con 6 meses de garantía legal y del fabricante Stretto ante cualquier defecto de fabricación."
+      "respuesta": "Tiene 6 meses de garantía ante defectos de fabricación."
     },
     {
       "pregunta": "¿Hacen envíos a regiones de Chile?",
-      "respuesta": "Sí, despachamos a todo el país a través de Starken, Blue Express o Correos de Chile. Puedes comprar directamente o escribirnos por WhatsApp."
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
     }
   ],
   "aviso_final": "Los precios incluyen IVA. Recomendamos que las modificaciones en redes de agua potable sean realizadas o supervisadas por un gasfíter certificado.",
@@ -162,8 +162,8 @@
       "texto": "Reparar fugas en llaves de paso"
     },
     {
-      "url": "/blog/como-soldar-con-estano-guia-paso-a-paso/",
-      "texto": "Guía para soldar con estaño"
+      "url": "/blog/herramientas-basicas-de-gasfiteria-todo-lo-que-necesitas-saber/",
+      "texto": "Herramientas básicas de gasfitería"
     }
   ],
   "tarjeta": {
