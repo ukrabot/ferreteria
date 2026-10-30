@@ -8,7 +8,9 @@ actualizar fichas de productos físicos con el generador**. Nada más.
 
 1. Crear `scripts/productos/fichas/<slug>.json` siguiendo
    `scripts/productos/README.md` y `scripts/productos/ejemplo.json`.
-2. Poner las fotos en `scripts/productos/fotos/<slug>/` (no se suben a git).
+2. Fotos: enlaces directos a las imágenes en `fotos[].url` (se descargan
+   solas) o archivos en `scripts/productos/fotos/<slug>/`. Las originales no
+   se suben a git; las webp finales sí.
 3. Ejecutar el generador:
    ```bash
    python3 scripts/productos/generar.py scripts/productos/fichas/<slug>.json --prueba
@@ -39,8 +41,11 @@ actualizar fichas de productos físicos con el generador**. Nada más.
   claras. No copies descripciones de otras tiendas (Sodimac, Easy, etc.) ni las
   menciones; puedes usar sus datos técnicos como referencia y redactar con tus
   palabras.
-- **Fotos**: solo fotos propias del dueño o del fabricante con permiso. No
-  descargues fotos de otras tiendas.
+- **Fotos**: el dueño autoriza usar las fotos de la ficha del mismo producto en
+  Sodimac. Pon el enlace directo de cada imagen en `fotos[].url` (no el de la
+  página) y el generador las descarga y convierte. También sirven fotos propias
+  con `fotos[].archivo`. Usa solo fotos del producto exacto (mismo modelo y
+  color), máximo 6, la primera de frente y con fondo blanco.
 - **Seguridad**: en productos eléctricos, de gas o de agua, incluye cómo
   usarlos de forma segura y cuándo llamar a un profesional (SEC cuando
   corresponda).

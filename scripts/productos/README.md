@@ -50,7 +50,7 @@ python3 scripts/productos/generar.py --verificar <slug>
 | `og_descripcion` | descripción al compartir | 40–160 |
 | `descripcion` | descripción técnica para Google | 80–600 |
 | `lede` | párrafo de entrada | 120–600, admite formato |
-| `fotos` | lista de `{archivo, alt, miniatura}` | 1–6 fotos de al menos 500 px; la primera es la principal |
+| `fotos` | lista de `{url o archivo, alt, miniatura}` | 1–6 fotos de al menos 500 px; la primera es la principal |
 | `stock` | opcional `{titulo, detalle}` | por defecto «En stock / Despacho en 24-48 h hábiles» |
 | `especificaciones` | filas `[nombre, valor]` | al menos 4 e incluir «Marca» |
 | `confianza` | 4 `{titulo, detalle}` bajo la foto | exactamente 4 |
@@ -63,6 +63,33 @@ python3 scripts/productos/generar.py --verificar <slug>
 | `tarjeta` | `{titulo, extracto, alt, etiqueta}` para /productos/ | |
 | `whatsapp` | opcional, texto del mensaje | por defecto «Hola, quiero comprar … a $…» |
 | `microcopy` | opcional, línea bajo los botones | |
+
+### Fotos desde un enlace
+
+Cada foto lleva **una** de estas dos claves:
+
+- `"url": "https://…"`: enlace directo a la imagen. El generador la descarga
+  a `scripts/productos/fotos/<slug>/`, revisa que sea una imagen y la
+  convierte a webp de 1200 × 1200 con fondo blanco.
+- `"archivo": "1.jpg"`: foto que ya está en `scripts/productos/fotos/<slug>/`.
+
+Para sacar el enlace de una foto de Sodimac: abre la ficha del producto, haz
+clic en la foto para verla grande, clic derecho sobre ella y **Copiar
+dirección de la imagen**. Debe terminar en la imagen (por ejemplo
+`…/is/image/SodimacCL/113360933?…`), no en la página del producto. Si el
+enlace trae un tamaño como `wid=` o `hei=`, súbelo a 1200 o más para que la
+foto no salga borrosa. Si la descarga falla, guarda la foto a mano en la
+carpeta y usa `archivo`.
+
+Los textos (`alt`, descripciones, etc.) no pueden nombrar a otras tiendas: el
+generador los rechaza.
+
+```json
+"fotos": [
+  {"url": "https://…/foto-frente.jpg", "alt": "Adaptador Schuko a enchufe chileno visto de frente", "miniatura": "Ver de frente"},
+  {"url": "https://…/foto-lado.jpg", "alt": "Enchufe chileno de 3 patas del adaptador", "miniatura": "Ver el enchufe"}
+]
+```
 
 ### Bloques de una sección
 

@@ -183,11 +183,15 @@ def cargar_ficha(path: Path, actualizar: bool) -> dict:
         raise FichaError("fotos: entre 1 y 6")
     carpeta = HERE / "fotos" / slug
     for i, ft in enumerate(fotos, 1):
-        if not isinstance(ft, dict) or "archivo" not in ft or "alt" not in ft:
-            raise FichaError(f"fotos[{i}]: necesita «archivo» y «alt»")
-        p = carpeta / ft["archivo"]
-        if not p.is_file():
-            raise FichaError(f"fotos[{i}]: no encuentro {p.relative_to(ROOT)}")
+        if not isinstance(ft, dict) or "alt" not in ft or (("archivo" in ft) == ("url" in ft)):
+            raise FichaError(f"fotos[{i}]: necesita «alt» y una de dos: «archivo» (foto local) o «url» (foto en internet)")
+        if "url" in ft:
+            p = descargar_foto(ft["url"], carpeta, i)
+            ft["archivo"] = p.name
+        else:
+            p = carpeta / ft["archivo"]
+            if not p.is_file():
+                raise FichaError(f"fotos[{i}]: no encuentro {p.relative_to(ROOT)}")
         ft["_ruta"] = p
         ft["alt"] = texto(ft["alt"], f"fotos[{i}].alt", 15, 160)
         ft["miniatura"] = texto(ft.get("miniatura", f"Ver foto {i}"), f"fotos[{i}].miniatura", 5, 80)
@@ -427,6 +431,48 @@ def render(f: dict, cart_v: str) -> str:
            "BODY": body, "ASIDE_BUY": aside, "RELATED": related, "GUIAS": guias, "CART_V": cart_v}
     out = re.sub(r"\{\{([A-Z0-9_]+)\}\}", lambda m: rep[m.group(1)], tpl)
     return out.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + MARCA + "\n", 1)
+
+
+FOTO_MAX = 15 * 1024 * 1024
+
+
+def descargar_foto(url: str, carpeta: Path, i: int) -> Path:
+    """Descarga una foto de internet a scripts/productos/fotos/<slug>/ (no va a git).
+
+    Si ya se descargó antes, reutiliza el archivo. Verifica que sea una imagen."""
+    import hashlib
+    import urllib.request
+    from urllib.parse import urlparse
+    if not isinstance(url, str) or urlparse(url).scheme not in ("https", "http") or not urlparse(url).netloc:
+        raise FichaError(f"fotos[{i}].url: debe ser un enlace http(s) completo a la imagen")
+    carpeta.mkdir(parents=True, exist_ok=True)
+    nombre = f"{i:02d}-{hashlib.sha1(url.encode()).hexdigest()[:10]}.img"
+    dest = carpeta / nombre
+    if not dest.is_file():
+        req = urllib.request.Request(url, headers={
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+            "Accept": "image/avif,image/webp,image/apng,image/*,*/*;q=0.8"})
+        try:
+            with urllib.request.urlopen(req, timeout=40) as r:
+                tipo = r.headers.get("Content-Type", "")
+                datos = r.read(FOTO_MAX + 1)
+        except Exception as e:  # noqa: BLE001
+            raise FichaError(f"fotos[{i}].url: no pude descargarla ({e}). Revisa el enlace o descárgala a mano y usa «archivo».")
+        if len(datos) > FOTO_MAX:
+            raise FichaError(f"fotos[{i}].url: la imagen pesa más de 15 MB")
+        if tipo and not tipo.startswith("image/"):
+            raise FichaError(f"fotos[{i}].url: el enlace no es una imagen (tipo {tipo}); copia la dirección de la imagen, no la de la página")
+        dest.write_bytes(datos)
+    try:
+        from PIL import Image
+        with Image.open(dest) as im:
+            im.verify()
+    except ImportError:
+        raise FichaError("Falta Pillow: pip install pillow")
+    except Exception:  # noqa: BLE001
+        dest.unlink(missing_ok=True)
+        raise FichaError(f"fotos[{i}].url: el archivo descargado no es una imagen válida")
+    return dest
 
 
 def fotos_webp(f: dict, prueba: bool) -> list[Path]:
