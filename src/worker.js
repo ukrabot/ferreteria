@@ -138,6 +138,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Llave de Paso',
     filename: 'Pack-Llave-de-Paso-Ferreteria-Ukra.zip',
   },
+  'pack-destapar-canerias-diagnostico-mantencion-excel': {
+    name: 'Pack Destape de Cañerías',
+    filename: 'Pack-Destape-Canerias-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1541,6 +1545,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-LLAVE-PASO',
+  },
+  {
+    slug: 'pack-destapar-canerias-diagnostico-mantencion-excel',
+    name: 'Pack Destape de Cañerías: Planilla Excel de Diagnóstico por Artefacto, Seguridad de Químicos y Registro + Guía Paso a Paso + Rutina Preventiva',
+    price: 7990,
+    image: '/producto/pack-destapar-canerias-diagnostico-mantencion-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-DESTAPE',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
