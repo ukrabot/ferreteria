@@ -134,6 +134,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Luces LED Interior del Auto',
     filename: 'Pack-Luces-LED-Interior-Auto-Ferreteria-Ukra.zip',
   },
+  'pack-llave-de-paso-instalacion-materiales-excel': {
+    name: 'Pack Llave de Paso',
+    filename: 'Pack-Llave-de-Paso-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1528,6 +1532,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-LED-AUTO',
+  },
+  {
+    slug: 'pack-llave-de-paso-instalacion-materiales-excel',
+    name: 'Pack Llave de Paso: Planilla Excel de Selección, Materiales y Medida de Corte + Instalación Paso a Paso + Mapa de Llaves de la Casa',
+    price: 7990,
+    image: '/producto/pack-llave-de-paso-instalacion-materiales-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-LLAVE-PASO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',

@@ -122,7 +122,7 @@
             "Corta el agua de la matriz principal y drena las cañerías antes de intervenir.",
             "Limpia y lija bien las puntas del tubo de cobre y el interior del cuerpo de bronce antes de aplicar pasta decapante.",
             "Desmonta el vástago o deja la llave completamente abierta mientras aplicas calor con el soplete, para no dañar el empaque ni los sellos internos.",
-            "Aplica soldadura para cobre (estaño-plata o 50/50) en la unión y deja enfriar de forma natural, sin mojar con agua fría de golpe.",
+            "Aplica soldadura sin plomo (estaño-plata), la apta para agua potable, en la unión y deja enfriar de forma natural, sin mojar con agua fría de golpe.",
             "Abre el suministro de agua y verifica que no existan microfugas antes de tapar muros o canalizaciones."
           ]
         },
@@ -138,7 +138,7 @@
   "faq": [
     {
       "pregunta": "¿Qué significa que la llave de paso sea SO?",
-      "respuesta": "Significa que sus terminales son para soldar (Soldar-Soldar). Están dimensionados para recibir directamente cañería de cobre de 1/2 pulgada mediante soldadura de estaño y calor de soplete."
+      "respuesta": "Significa que sus terminales son para soldar (Soldar-Soldar). Están dimensionados para recibir directamente cañería de cobre de 1/2 pulgada mediante soldadura sin plomo y calor de soplete."
     },
     {
       "pregunta": "¿Sirve tanto para agua fría como para agua caliente?",
