@@ -606,7 +606,17 @@ def tarjeta_html(f: dict, n: int) -> str:
 '''
 
 
+def contar_catalogo(d: str) -> str:
+    """Actualiza «N productos disponibles» con el número real de tarjetas."""
+    n = len(re.findall(r'<article class="card-prod"', d))
+    return re.sub(r'(<span class="badge-count">)\d+ productos disponibles', rf"\g<1>{n} productos disponibles", d, count=1)
+
+
 def catalogo(f: dict, actualizar: bool) -> str:
+    return contar_catalogo(_catalogo(f, actualizar))
+
+
+def _catalogo(f: dict, actualizar: bool) -> str:
     p = ROOT / "productos" / "index.html"
     d = leer(p)
     slug = f["slug"]
