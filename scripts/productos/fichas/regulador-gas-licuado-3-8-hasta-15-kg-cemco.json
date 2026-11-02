@@ -13,9 +13,9 @@
   "disponible": true,
   "seo_titulo": "Regulador Gas Licuado 3/8\" hasta 15 kg Cemco",
   "meta_descripcion": "Compra el regulador de gas licuado 3/8\" Cemco para balones de hasta 15 kg a {precio}. Conexión segura HE para cocinas y calefonts. Despacho a todo Chile.",
-  "og_descripcion": "Regulador de gas licuado GLP Cemco con salida 3/8\" HE para cilindros de 5, 11 y 15 kg. Presión estable y corte seguro para tu hogar.",
-  "descripcion": "Regulador de presión para gas licuado (GLP) de uso doméstico, compatible con cilindros o balones tradicionales de 5, 11 y 15 kg. Cuenta con conector de salida con rosca HE de 3/8 de pulgada para conexión directa a flexibles normalizados. Fabricación robusta con membrana de alta durabilidad para mantener una presión constante y segura en cocinas, estufas y calefonts. Marca Cemco, garantía del fabricante de 10 años.",
-  "lede": "Para conectar tu cocina, estufa o calefont a un cilindro de gas con total tranquilidad, este **regulador de gas licuado Cemco de 3/8\"** entrega un flujo continuo y estable. Diseñado para balones de **5, 11 y 15 kg**, incluye conector macho con **rosca HE de 3/8 pulgada** y sellos reforzados para evitar fugas y proteger la instalación de tu hogar.",
+  "og_descripcion": "Regulador de gas licuado Cemco RD-10055 con salida 3/8\" HE para cilindros de 5, 11 y 15 kg. Hasta 2 kg/h de GLP, hecho en Chile.",
+  "descripcion": "Regulador de baja presión para gas licuado (GLP) de uso doméstico, para cilindros de 5, 11 y 15 kg. Modelo Cemco RD-10055, hecho en Chile. Según su etiqueta entrega hasta 2 kg/h de GLP con una presión de salida de 29 mbar y tiene una vida útil de 10 años. Salida con rosca macho (HE) de 3/8 de pulgada para conectar la manguera o el flexible de gas de cocinas, estufas y calefonts.",
+  "lede": "Para conectar tu cocina, estufa o calefont al balón de gas, este **regulador de gas licuado Cemco de 3/8\"** baja la presión del cilindro a la que usan los artefactos. Sirve para balones de **5, 11 y 15 kg**, entrega hasta **2 kg/h de GLP** y tiene salida con **rosca HE de 3/8 de pulgada**. Hecho en Chile.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/506486_01/w=1200,h=1200,fit=cover",
@@ -38,19 +38,64 @@
     "detalle": "Despacho en 24-48 h hábiles"
   },
   "especificaciones": [
-    ["Marca", "Cemco"],
-    ["Tipo de producto", "Regulador de baja presión"],
-    ["Tipo de gas", "Gas licuado de petróleo (GLP)"],
-    ["Capacidad de cilindro", "Balones de 5 kg, 11 kg y 15 kg"],
-    ["Diámetro de conexión", "3/8 de pulgada HE"],
-    ["País de origen", "Chile"],
-    ["Garantía", "10 años (fabricante)"]
+    [
+      "Marca",
+      "Cemco"
+    ],
+    [
+      "Modelo",
+      "RD-10055"
+    ],
+    [
+      "Tipo de producto",
+      "Regulador de baja presión"
+    ],
+    [
+      "Tipo de gas",
+      "Gas licuado de petróleo (GLP)"
+    ],
+    [
+      "Capacidad de cilindro",
+      "Balones de 5 kg, 11 kg y 15 kg"
+    ],
+    [
+      "Caudal",
+      "Hasta 2 kg/h de GLP (según etiqueta)"
+    ],
+    [
+      "Presión de salida",
+      "29 mbar (según etiqueta)"
+    ],
+    [
+      "Diámetro de conexión",
+      "3/8 de pulgada HE"
+    ],
+    [
+      "Vida útil",
+      "10 años (según etiqueta)"
+    ],
+    [
+      "País de origen",
+      "Chile"
+    ]
   ],
   "confianza": [
-    {"titulo": "🔒 Conexión estanca", "detalle": "Rosca HE 3/8\" con sello hermético"},
-    {"titulo": "🔥 Apto GLP", "detalle": "Para balones de 5, 11 y 15 kg"},
-    {"titulo": "🚚 Envío a todo Chile", "detalle": "Despacho rápido a domicilio"},
-    {"titulo": "🛡️ Garantía 10 años", "detalle": "Garantía oficial del fabricante"}
+    {
+      "titulo": "🔥 Apto GLP",
+      "detalle": "Para balones de 5, 11 y 15 kg"
+    },
+    {
+      "titulo": "⚙️ Hasta 2 kg/h",
+      "detalle": "Caudal indicado en la etiqueta"
+    },
+    {
+      "titulo": "🚚 Envío a todo Chile",
+      "detalle": "Despacho a domicilio"
+    },
+    {
+      "titulo": "⏳ Vida útil 10 años",
+      "detalle": "Indicada en la etiqueta"
+    }
   ],
   "secciones": [
     {
@@ -58,9 +103,23 @@
       "titulo": "¿Con qué artefactos y balones es compatible?",
       "indice": "Compatibilidad",
       "bloques": [
-        {"p": "Este regulador está diseñado para trabajar con **cilindros tradicionales de gas licuado** (GLP) de 5 kg, 11 kg y 15 kg en redes domiciliarias."},
-        {"lista": ["Cocinas a gas domésticas y encimeras", "Calefonts de tiro natural o forzado compatibles con GLP", "Estufas móviles o fijas de gas licuado", "Hornos y parrillas a gas en quinchos"]},
-        {"p": "Si quieres conocer más sobre el funcionamiento de estos equipos, puedes leer nuestra guía sobre [qué es un regulador para gas y para qué sirve](/blog/que-es-un-regulador-para-gas-y-para-que-sirve/)."}
+        {
+          "p": "Este regulador está diseñado para trabajar con **cilindros tradicionales de gas licuado** (GLP) de 5 kg, 11 kg y 15 kg en redes domiciliarias."
+        },
+        {
+          "lista": [
+            "Cocinas a gas domésticas y encimeras",
+            "Calefonts de tiro natural o forzado compatibles con GLP",
+            "Estufas móviles o fijas de gas licuado",
+            "Hornos y parrillas a gas en quinchos"
+          ]
+        },
+        {
+          "p": "Suma el consumo de los artefactos que vas a usar a la vez: el regulador entrega hasta **2 kg/h**. Un calefont grande junto con la cocina puede necesitar más, y en ese caso conviene que un instalador de gas revise la instalación."
+        },
+        {
+          "p": "Si quieres conocer más sobre el funcionamiento de estos equipos, puedes leer nuestra guía sobre [qué es un regulador para gas y para qué sirve](/blog/que-es-un-regulador-para-gas-y-para-que-sirve/)."
+        }
       ]
     },
     {
@@ -68,29 +127,49 @@
       "titulo": "Consejos de instalación y seguridad en el hogar",
       "indice": "Seguridad y montaje",
       "bloques": [
-        {"p": "El cambio de regulador es una maniobra sencilla, pero requiere atención estricta para evitar escapes de gas en recintos cerrados."},
-        {"pasos": [
-          "Cierra la llave de paso del artefacto y la válvula del cilindro antes de desconectar.",
-          "Verifica que el anillo de goma (o-ring) del conector esté limpio, flexible y sin cortes.",
-          "Acopla firmemente el regulador a la válvula del cilindro presionando hasta escuchar el calce correcto.",
-          "Conecta el flexible de gas a la rosca HE de 3/8\" usando pasta sellante para gas o teflón para gas (amarillo).",
-          "Aplica agua jabonosa con esponja en las uniones: si no hay burbujas, la unión está completamente hermética."
-        ]},
-        {"advertencia": "Jamás uses fósforos o encendedores para buscar fugas de gas. Si sientes olor a gas, ventila de inmediato y revisa nuestra guía sobre [fuga de gas y monóxido en el hogar](/blog/fuga-de-gas-y-monoxido-como-detectar-y-que-hacer-chile/)."},
-        {"p": "Toda instalación fija o modificación de cañerías de gas debe cumplir con la normativa y ser realizada por un instalador autorizado con [inspección y sello verde SEC](/blog/sello-verde-gas-inspeccion-periodica-sello-amarillo-rojo-chile/)."}
+        {
+          "p": "El cambio de regulador es una maniobra sencilla, pero requiere atención estricta para evitar escapes de gas en recintos cerrados."
+        },
+        {
+          "pasos": [
+            "Cierra las llaves de los artefactos y deja el regulador en posición cerrada antes de sacarlo o ponerlo.",
+            "Revisa que la goma de sello de la válvula del cilindro esté limpia y sin cortes.",
+            "Acopla el regulador a la válvula del cilindro según las instrucciones del fabricante y comprueba que quede firme antes de abrir.",
+            "Conecta a la salida una manguera o flexible para gas licuado con certificación SEC y la conexión que corresponda a la rosca de 3/8\".",
+            "Aplica agua jabonosa con esponja en las uniones: si no salen burbujas, no hay fuga."
+          ]
+        },
+        {
+          "advertencia": "Jamás uses fósforos o encendedores para buscar fugas de gas. Si sientes olor a gas, ventila de inmediato y revisa nuestra guía sobre [fuga de gas y monóxido en el hogar](/blog/fuga-de-gas-y-monoxido-como-detectar-y-que-hacer-chile/)."
+        },
+        {
+          "p": "Toda instalación fija o modificación de cañerías de gas debe cumplir con la normativa y ser realizada por un instalador autorizado con [inspección y sello verde SEC](/blog/sello-verde-gas-inspeccion-periodica-sello-amarillo-rojo-chile/)."
+        }
       ]
     }
   ],
   "faq": [
-    {"pregunta": "¿Sirve para balones de 45 kg?", "respuesta": "No. Este regulador está calibrado para cilindros de 5 kg, 11 kg y 15 kg. Para tubos de 45 kg se requiere un regulador de alta presión o de dos etapas con conexión específica."},
-    {"pregunta": "¿Qué tipo de flexible debo usar con este regulador?", "respuesta": "Debes usar un flexible certificado por la SEC para gas licuado con tuerca de 3/8 de pulgada HI compatible con la salida HE del regulador."},
-    {"pregunta": "¿Cuándo se debe cambiar un regulador de gas?", "respuesta": "La recomendación técnica es renovarlo cada 5 a 10 años, o antes si la manilla se traba, presenta corrosión evidente o el sello de goma está reseco."},
-    {"pregunta": "¿Hacen envíos a regiones de Chile?", "respuesta": "Sí, despachamos a todo Chile. Puedes realizar la compra en línea o coordinar tu pedido por WhatsApp."}
+    {
+      "pregunta": "¿Sirve para balones de 45 kg?",
+      "respuesta": "No. Es para cilindros de 5, 11 y 15 kg. Los cilindros de 45 kg usan otra válvula y otro tipo de regulador, que debe elegir e instalar un instalador de gas autorizado."
+    },
+    {
+      "pregunta": "¿Qué tipo de flexible debo usar con este regulador?",
+      "respuesta": "Una manguera o flexible para gas licuado con certificación SEC, con conexión compatible con la salida de 3/8\" HE del regulador. Cámbiala si está reseca, agrietada o vencida."
+    },
+    {
+      "pregunta": "¿Cuándo se debe cambiar un regulador de gas?",
+      "respuesta": "Su etiqueta indica una vida útil de 10 años. Cámbialo al cumplirla, o antes si la palanca se traba, hay olor a gas, tiene corrosión o la llama de los artefactos cambia."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
+    }
   ],
   "lateral": {
     "etiqueta": "Gasfitería",
     "titulo": "Regulador gas licuado 3/8\" Cemco",
-    "texto": "Para balones de 5, 11 y 15 kg. Salida HE 3/8\" con sello hermético, cuerpo reforzado y garantía de 10 años."
+    "texto": "Para balones de 5, 11 y 15 kg. Hasta 2 kg/h de GLP, salida HE 3/8\" y vida útil indicada de 10 años. Hecho en Chile."
   },
   "relacionados": [
     "llave-de-paso-1-2-so-bronce-stretto",
@@ -98,13 +177,22 @@
     "valvula-de-descarga-para-wc"
   ],
   "guias": [
-    {"url": "/blog/que-es-un-regulador-para-gas-y-para-que-sirve/", "texto": "Qué es un regulador para gas y para qué sirve"},
-    {"url": "/blog/fuga-de-gas-y-monoxido-como-detectar-y-que-hacer-chile/", "texto": "Fugas de gas y monóxido: cómo detectarlas"},
-    {"url": "/blog/sello-verde-gas-inspeccion-periodica-sello-amarillo-rojo-chile/", "texto": "Inspección de gas y sello verde SEC"}
+    {
+      "url": "/blog/que-es-un-regulador-para-gas-y-para-que-sirve/",
+      "texto": "Qué es un regulador para gas y para qué sirve"
+    },
+    {
+      "url": "/blog/fuga-de-gas-y-monoxido-como-detectar-y-que-hacer-chile/",
+      "texto": "Fugas de gas y monóxido: cómo detectarlas"
+    },
+    {
+      "url": "/blog/sello-verde-gas-inspeccion-periodica-sello-amarillo-rojo-chile/",
+      "texto": "Inspección de gas y sello verde SEC"
+    }
   ],
   "tarjeta": {
     "titulo": "Regulador Gas Licuado 3/8\" GLP Cemco",
-    "extracto": "Regulador para balones de gas licuado de 5, 11 y 15 kg con salida HE de 3/8\". Flujo estable y sello seguro.",
+    "extracto": "Regulador para balones de gas licuado de 5, 11 y 15 kg con salida HE de 3/8\". Hasta 2 kg/h de GLP, hecho en Chile.",
     "alt": "Regulador de gas licuado GLP Cemco de 3/8 pulgada para cilindros de 15 kg",
     "etiqueta": "Gasfitería"
   }

@@ -507,8 +507,16 @@ def tiene_qr(ruta: Path) -> bool:
         im = im.convert("RGB")
         im.thumbnail((1600, 1600))
         arr = cv2.cvtColor(np.array(im), cv2.COLOR_RGB2BGR)
-    # Solo cuenta como QR si se puede leer: la sola detección da falsos positivos
-    # con fotos de productos (bordes, rejillas, textos).
+    # El detector Aruco encuentra QR aunque no se puedan leer (envases con film o
+    # reflejos) y no da falsos positivos en fotos de productos.
+    if hasattr(cv2, "QRCodeDetectorAruco"):
+        try:
+            if cv2.QRCodeDetectorAruco().detect(arr)[0]:
+                return True
+        except cv2.error:
+            pass
+    # Detector clásico: solo cuenta si el QR se puede leer, porque la sola detección
+    # da falsos positivos con fotos de productos (bordes, rejillas, textos).
     det = cv2.QRCodeDetector()
     for img in (arr, cv2.resize(arr, None, fx=2, fy=2, interpolation=cv2.INTER_CUBIC)):
         try:

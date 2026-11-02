@@ -86,7 +86,8 @@ carpeta y usa `archivo`.
 Los textos (`alt`, descripciones, etc.) no pueden nombrar a otras tiendas: el
 generador los rechaza. Tampoco se publican fotos con **código QR** ni las fotos de
 **«escala» con silueta gris y manos**: el generador las detecta y rechaza la
-ficha; quita esa foto de la lista. Si con `--actualizar` una ficha queda con
+ficha; quita esa foto de la lista. El detector encuentra el QR aunque esté
+tapado por un reflejo o un film. Tampoco uses fotos del envase o la caja. Si con `--actualizar` una ficha queda con
 menos fotos, el generador borra las sobrantes y te dice cuáles incluir en el
 commit con `git rm`.
 

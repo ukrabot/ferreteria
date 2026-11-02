@@ -35,7 +35,12 @@ actualizar fichas de productos físicos con el generador**. Nada más.
 
 - **Datos reales**: especificaciones solo del fabricante, del empaque o del
   dueño. Si un dato no está confirmado, no lo pongas. No inventes
-  certificaciones, garantías ni plazos.
+  certificaciones, garantías ni plazos. Normas, presiones, temperaturas y
+  garantías van solo si aparecen en la ficha de Sodimac, en el envase o en la
+  etiqueta (y entonces di de dónde salen, p. ej. «según envase»).
+- **Coincide con las fotos**: antes de terminar, mira las fotos y revisa que el
+  texto calce: color, tipo de manilla (palanca, volante o mariposa), material
+  y tipo de válvula. Si la foto muestra una etiqueta o envase con datos, úsalos.
 - **Precio**: lo entrega el dueño, o te da un **margen**. Con margen, pon en la
   ficha `precio_referencia` (precio normal, no el de oferta ni el de tarjeta)
   y `margen`, y **no pongas `precio`**: el generador lo calcula y lo redondea a
@@ -50,10 +55,13 @@ actualizar fichas de productos físicos con el generador**. Nada más.
   con `fotos[].archivo`. Usa solo fotos del producto exacto (mismo modelo y
   color), máximo 6, la primera de frente y con fondo blanco. **No uses fotos
   con código QR ni fotos de «escala» con silueta gris y manos** (el generador
-  rechaza ambas), logos de otras tiendas, sellos de oferta ni texto encima.
+  rechaza ambas), fotos del envase o la caja, logos de otras tiendas, sellos
+  de oferta ni texto encima.
 - **Seguridad**: en productos eléctricos, de gas o de agua, incluye cómo
   usarlos de forma segura y cuándo llamar a un profesional (SEC cuando
-  corresponda).
+  corresponda). En gas, la instalación de llaves y cañerías la hace un
+  instalador de gas autorizado por la SEC: no escribas pasos para que el
+  cliente la haga solo; explica qué revisar.
 - Relaciona el producto con fichas y guías existentes cuando aporten.
 
 ## Flujo de publicación

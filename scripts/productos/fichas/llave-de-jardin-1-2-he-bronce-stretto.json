@@ -9,28 +9,28 @@
   "margen": 50,
   "categoria": "gasfiteria",
   "subcategoria": "Llaves de jardín y riego",
-  "color": "Bronce",
+  "color": "Niquelado con palanca roja",
   "disponible": true,
   "seo_titulo": "Llave de Jardín 1/2\" HE Bronce Stretto",
-  "meta_descripcion": "Compra la llave de jardín 1/2\" HE de bronce Stretto a {precio}. Salida para manguera de riego exterior, patio y lavadero. Envíos a todo Chile.",
-  "og_descripcion": "Llave de jardín 1/2\" HE Stretto en bronce resistente a intemperie. Conexión a muro y boquilla estriada para mangueras de riego.",
-  "descripcion": "Llave de paso exterior para jardín y patio fabricada en bronce macizo por Stretto. Cuenta con hilo macho (HE) de 1/2 pulgada para montaje en muros o terminales de cañería, y boquilla estriada de salida para conexión directa de mangueras de riego de 1/2 pulgada o acoples rápidos. Mecanismo de compresión con volante de fácil agarre para regular el caudal de agua con suavidad. Marca Stretto, garantía del fabricante de 6 meses.",
-  "lede": "Si buscas una llave firme para regar el pasto, lavar el auto o limpiar tu terraza, esta **llave de jardín Stretto de 1/2\\\" HE en bronce** resiste la intemperie sin problemas de oxidación. Viene con **rosca macho de 1/2 pulgada** para empalmar a muro y una **boquilla estriada** que calza perfecto con mangueras de riego de jardín.",
+  "meta_descripcion": "Compra la llave de jardín 1/2\" HE Stretto a {precio}. Palanca de cuarto de vuelta y salida con espiga para manguera de riego. Envíos a todo Chile.",
+  "og_descripcion": "Llave de jardín 1/2\" HE Stretto con palanca roja de cuarto de vuelta y salida con espiga para manguera de riego.",
+  "descripcion": "Llave de jardín Stretto de 1/2 pulgada con rosca macho (HE) para el terminal del muro, palanca roja de cuarto de vuelta y salida con espiga para manguera unida con tuerca. Cuerpo metálico con acabado niquelado. Para riego, patio, terraza o lavado exterior.",
+  "lede": "Para regar el pasto, lavar el auto o limpiar la terraza, esta **llave de jardín Stretto de 1/2\" HE** se abre y cierra con un **cuarto de vuelta de su palanca roja**. Se enrosca al terminal del muro con su **rosca macho de 1/2 pulgada** y tiene **salida con espiga** para la manguera.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/637866_01/w=1200,h=1200,fit=cover",
-      "alt": "Llave de jardín de 1/2 pulgada HE en bronce Stretto con volante y boquilla de salida",
-      "miniatura": "Ver vista frontal"
+      "alt": "Llave de jardín de 1/2 pulgada HE Stretto con palanca roja y salida para manguera",
+      "miniatura": "Ver llave completa"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/637866_21/w=1200,h=1200,fit=cover",
-      "alt": "Vista lateral de la llave de jardín mostrando la boquilla estriada para manguera",
-      "miniatura": "Ver boquilla de manguera"
+      "alt": "Detalle de la palanca roja de cuarto de vuelta de la llave de jardín Stretto",
+      "miniatura": "Ver palanca"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/637866_22/w=1200,h=1200,fit=cover",
-      "alt": "Detalle de la rosca macho HE de 1/2 pulgada para fijación en pared",
-      "miniatura": "Ver rosca macho"
+      "alt": "Salida de la llave de jardín con tuerca y espiga para manguera",
+      "miniatura": "Ver salida para manguera"
     }
   ],
   "stock": {
@@ -38,20 +38,52 @@
     "detalle": "Despacho en 24-48 h hábiles"
   },
   "especificaciones": [
-    ["Marca", "Stretto"],
-    ["Tipo de válvula", "Llave de jardín para exterior"],
-    ["Diámetro nominal", "1/2 pulgada"],
-    ["Tipo de conexión de entrada", "Terminal HE (rosca macho 1/2\")"],
-    ["Tipo de salida", "Boquilla estriada para manguera"],
-    ["Material del cuerpo", "Bronce macizo"],
-    ["Uso recomendado", "Riego de jardín, terrazas, patios y logias"],
-    ["Garantía", "6 meses (fabricante)"]
+    [
+      "Marca",
+      "Stretto"
+    ],
+    [
+      "Tipo de llave",
+      "Llave de jardín de palanca (cuarto de vuelta)"
+    ],
+    [
+      "Diámetro nominal",
+      "1/2 pulgada"
+    ],
+    [
+      "Conexión de entrada",
+      "Rosca macho (HE) 1/2\""
+    ],
+    [
+      "Salida",
+      "Espiga para manguera, con tuerca"
+    ],
+    [
+      "Acabado",
+      "Niquelado"
+    ],
+    [
+      "Uso recomendado",
+      "Riego de jardín, terrazas, patios y logias"
+    ]
   ],
   "confianza": [
-    {"titulo": "🌧️ Bronce intemperie", "detalle": "Resistente a sol, lluvia y humedad"},
-    {"titulo": "🌱 Apta riego", "detalle": "Boquilla estriada para manguera"},
-    {"titulo": "🚚 Envío a todo Chile", "detalle": "Despacho rápido a domicilio"},
-    {"titulo": "🛡️ Garantía 6 meses", "detalle": "Garantía oficial del fabricante"}
+    {
+      "titulo": "🔴 Cuarto de vuelta",
+      "detalle": "Abre y cierra con la palanca"
+    },
+    {
+      "titulo": "🌱 Apta riego",
+      "detalle": "Salida con espiga para manguera"
+    },
+    {
+      "titulo": "🚚 Envío a todo Chile",
+      "detalle": "Despacho rápido a domicilio"
+    },
+    {
+      "titulo": "🔧 Rosca HE 1/2\"",
+      "detalle": "Se enrosca al terminal del muro"
+    }
   ],
   "secciones": [
     {
@@ -59,14 +91,20 @@
       "titulo": "¿Dónde instalar una llave de jardín de 1/2 pulgada?",
       "indice": "Usos y aplicaciones",
       "bloques": [
-        {"p": "Gracias a su fabricación metálica robusta, esta llave es la opción clásica para salidas de agua exteriores en casas y condominios:"},
-        {"lista": [
-          "Arranques de agua en antejardines y patios traseros",
-          "Conexión a carretes porta manguera y mangueras tradicionales de jardín",
-          "Alimentación para programadores de riego y circuitos de riego por goteo",
-          "Puntos de lavado exterior en logias, estacionamientos y quinchos"
-        ]},
-        {"p": "Si vas a instalar un sistema automatizado en tus plantas, echa un vistazo a nuestra guía sobre [cómo instalar riego por goteo en casa](/blog/como-instalar-riego-por-goteo-en-casa-guia-chile/)."}
+        {
+          "p": "Es la llave típica para las salidas de agua exteriores en casas y condominios:"
+        },
+        {
+          "lista": [
+            "Arranques de agua en antejardines y patios traseros",
+            "Conexión a carretes porta manguera y mangueras tradicionales de jardín",
+            "Alimentación para programadores de riego y circuitos de riego por goteo",
+            "Puntos de lavado exterior en logias, estacionamientos y quinchos"
+          ]
+        },
+        {
+          "p": "Si vas a instalar un sistema automatizado en tus plantas, echa un vistazo a nuestra guía sobre [cómo instalar riego por goteo en casa](/blog/como-instalar-riego-por-goteo-en-casa-guia-chile/)."
+        }
       ]
     },
     {
@@ -74,29 +112,49 @@
       "titulo": "Instalación en muro y cuidados frente a heladas",
       "indice": "Montaje y cuidados",
       "bloques": [
-        {"p": "La instalación en el terminal de salida de muro es rápida y solo requiere sellar la rosca macho con teflón:"},
-        {"pasos": [
-          "Cierra el agua del circuito exterior y limpia el terminal de muro.",
-          "Coloca entre 6 y 8 capas de cinta de teflón en la rosca HE de la llave en sentido horario.",
-          "Enrosca con la mano hasta el tope y alinea verticalmente el volante con la ayuda de una llave francesa o alicate de presión cubierto con un paño para no rayar el bronce.",
-          "Conecta la manguera a la boquilla ajustando con una abrazadera metálica de cremallera.",
-          "Abre el agua y confirma que no existan goteos en el muro."
-        ]},
-        {"p": "Revisa los detalles técnicos en nuestra guía sobre [selladores de rosca: teflón vs estopa](/blog/selladores-de-rosca-teflon-vs-estopa-cual-elegir/)."},
-        {"aviso": "En invierno y zonas con heladas intensas, deja la llave ligeramente purgada o protégela con aislación térmica para evitar que el agua congelada en su interior fracture el cuerpo de bronce."}
+        {
+          "p": "La instalación en el terminal de salida de muro es rápida y solo requiere sellar la rosca macho con teflón:"
+        },
+        {
+          "pasos": [
+            "Cierra el agua del circuito exterior y limpia el terminal del muro.",
+            "Coloca entre 6 y 8 vueltas de cinta teflón en la rosca HE de la llave, en sentido horario.",
+            "Enrosca a mano hasta el tope y termina con llave francesa, con un paño para no rayar el acabado, dejando la salida hacia abajo y la palanca accesible.",
+            "Conecta la manguera a la espiga y asegúrala con una abrazadera.",
+            "Abre el agua y confirma que no gotee en el muro."
+          ]
+        },
+        {
+          "p": "Revisa los detalles técnicos en nuestra guía sobre [selladores de rosca: teflón vs estopa](/blog/selladores-de-rosca-teflon-vs-estopa-cual-elegir/)."
+        },
+        {
+          "aviso": "En zonas con heladas, en invierno corta el paso a la llave exterior si tienes una llave interior, ábrela para vaciarla o protégela con aislación: el agua congelada puede romperla."
+        }
       ]
     }
   ],
   "faq": [
-    {"pregunta": "¿Qué diámetro de manguera le sirve a la boquilla?", "respuesta": "La boquilla estriada está dimensionada para mangueras comunes de riego de jardín de 1/2 pulgada (aproximadamente 12,7 mm de diámetro interior)."},
-    {"pregunta": "¿Se le puede colocar un acople rápido para manguera?", "respuesta": "Sí, existen adaptadores de acople rápido para boquilla que se fijan con abrazadera o por encaje a presión, permitiendo conectar y desconectar la manguera en un clic."},
-    {"pregunta": "¿Resiste estar al sol directo todo el año?", "respuesta": "Sí, al estar fabricada íntegramente en bronce de calidad, resiste la radiación solar y la humedad sin oxidarse ni deformarse."},
-    {"pregunta": "¿Hacen envíos a regiones de Chile?", "respuesta": "Sí, realizamos envíos a todo Chile continental. Puedes comprar directamente en la tienda o comunicarte a nuestro WhatsApp de atención."}
+    {
+      "pregunta": "¿Qué manguera le sirve?",
+      "respuesta": "La espiga es para manguera de riego de jardín de 1/2 pulgada. Asegúrala con una abrazadera para que no se suelte con la presión."
+    },
+    {
+      "pregunta": "¿Se le puede colocar un acople rápido para manguera?",
+      "respuesta": "Sí, existen acoples rápidos para manguera que permiten conectar y desconectar en un clic. Revisa que el acople calce con la salida de la llave."
+    },
+    {
+      "pregunta": "¿Resiste estar al sol directo todo el año?",
+      "respuesta": "Sí, es metálica y está hecha para exterior. Con los años el acabado puede perder brillo; lo que más la daña son las heladas, así que protégela en invierno."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
+    }
   ],
   "lateral": {
     "etiqueta": "Gasfitería",
     "titulo": "Llave de jardín 1/2\" Stretto",
-    "texto": "Bronce anticorrosión con boquilla para manguera. Ideal para riego de antejardín, patio y lavado exterior."
+    "texto": "Llave de jardín con palanca de cuarto de vuelta y salida con espiga para manguera. Para riego, patio y lavado exterior."
   },
   "relacionados": [
     "llave-de-paso-1-2-he-bronce-nibsa",
@@ -104,14 +162,23 @@
     "cortador-de-tubos"
   ],
   "guias": [
-    {"url": "/blog/como-instalar-riego-por-goteo-en-casa-guia-chile/", "texto": "Cómo instalar riego por goteo en casa"},
-    {"url": "/blog/riego-por-aspersion-para-cesped-como-disenar-e-instalar-chile/", "texto": "Riego por aspersión: diseño e instalación"},
-    {"url": "/blog/selladores-de-rosca-teflon-vs-estopa-cual-elegir/", "texto": "Selladores de rosca: teflón vs estopa"}
+    {
+      "url": "/blog/como-instalar-riego-por-goteo-en-casa-guia-chile/",
+      "texto": "Cómo instalar riego por goteo en casa"
+    },
+    {
+      "url": "/blog/riego-por-aspersion-para-cesped-como-disenar-e-instalar-chile/",
+      "texto": "Riego por aspersión: diseño e instalación"
+    },
+    {
+      "url": "/blog/selladores-de-rosca-teflon-vs-estopa-cual-elegir/",
+      "texto": "Selladores de rosca: teflón vs estopa"
+    }
   ],
   "tarjeta": {
     "titulo": "Llave de Jardín 1/2\" HE Bronce Stretto",
-    "extracto": "Llave de exterior en bronce con rosca macho 1/2\" y boquilla estriada para manguera. Resistente a la intemperie y heladas.",
-    "alt": "Llave de jardín de 1/2 pulgada HE en bronce Stretto con boquilla de riego",
+    "extracto": "Llave de exterior con rosca macho 1/2\", palanca roja de cuarto de vuelta y salida con espiga para manguera.",
+    "alt": "Llave de jardín de 1/2 pulgada HE Stretto con palanca roja y salida para manguera",
     "etiqueta": "Gasfitería"
   }
 }

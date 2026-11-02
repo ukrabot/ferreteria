@@ -13,9 +13,9 @@
   "disponible": true,
   "seo_titulo": "Llave de Paso para Gas 1/2\" HI-HE Nibsa",
   "meta_descripcion": "Compra la llave de paso para gas 1/2\" HI-HE de bronce Nibsa a {precio}. Corte rápido de seguridad para cocinas, calefonts y estufas. Envíos a todo Chile.",
-  "og_descripcion": "Llave de paso para gas 1/2\" HI-HE Nibsa en bronce con manilla mariposa amarilla. Corte seguro y estanco para redes de gas domésticas.",
-  "descripcion": "Válvula de corte para instalaciones de gas de uso domiciliario con conexiones roscadas HI-HE de 1/2 pulgada. Fabricada en bronce de alta densidad con manilla tipo mariposa en color amarillo reglamentario para identificación visual inmediata. Diseñada para aislar rápidamente el paso de gas licuado (GLP) o gas natural en empalmes hacia cocinas, encimeras, estufas o calefonts. Marca Nibsa, garantía del fabricante de 6 meses.",
-  "lede": "La seguridad en las conexiones de gas de tu hogar parte por contar con llaves de corte confiables. Esta **llave de paso para gas Nibsa de 1/2\\\" HI-HE en bronce** te permite suspender el flujo de forma rápida ante mantenciones o emergencias. Su **manilla mariposa amarilla** identifica de inmediato la línea de combustible y su cuerpo macizo garantiza estanqueidad absoluta.",
+  "og_descripcion": "Llave de paso para gas 1/2\" HI-HE Nibsa de bronce con manilla mariposa amarilla. Para gas licuado y natural, con certificación SEC.",
+  "descripcion": "Llave de paso de bola para gas, con conexiones roscadas de 1/2 pulgada hembra-macho (HI-HE), cuerpo de bronce y manilla tipo mariposa amarilla. Según su envase sirve para gas licuado, gas natural y gas de ciudad hasta 500 kPa, trae certificación SEC y garantía Nibsa de 5 años. Fabricada en Chile, para cortar el gas de cocinas, encimeras, estufas o calefonts.",
+  "lede": "Cada artefacto a gas necesita una llave de corte a mano. Esta **llave de paso para gas Nibsa de 1/2\" HI-HE** es de bola: con **un cuarto de vuelta** de su **manilla mariposa amarilla** cortas el gas para una mantención o una emergencia. Cuerpo de **bronce** y **certificación SEC** indicada en su envase.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/2975246_01/w=1200,h=1200,fit=cover",
@@ -23,14 +23,9 @@
       "miniatura": "Ver vista frontal"
     },
     {
-      "url": "https://media.falabella.com/sodimacCL/2975246_12/w=1200,h=1200,fit=cover",
-      "alt": "Vista lateral de la llave de gas Nibsa mostrando el cuerpo de bronce y roscas",
-      "miniatura": "Ver cuerpo lateral"
-    },
-    {
       "url": "https://media.falabella.com/sodimacCL/2975246_21/w=1200,h=1200,fit=cover",
-      "alt": "Detalle superior de la manilla tipo mariposa amarilla para accionamiento manual",
-      "miniatura": "Ver manilla mariposa"
+      "alt": "Detalle de la rosca macho y la manilla mariposa amarilla de la llave de gas Nibsa",
+      "miniatura": "Ver detalle"
     }
   ],
   "stock": {
@@ -38,19 +33,64 @@
     "detalle": "Despacho en 24-48 h hábiles"
   },
   "especificaciones": [
-    ["Marca", "Nibsa"],
-    ["Tipo de válvula", "Llave de corte para gas (tipo mariposa)"],
-    ["Diámetro nominal", "1/2 pulgada"],
-    ["Tipo de conexión", "Terminal HI-HE (hembra - macho)"],
-    ["Material del cuerpo", "Bronce"],
-    ["Uso recomendado", "Instalaciones de gas licuado (GLP) y gas natural"],
-    ["Garantía", "6 meses (fabricante)"]
+    [
+      "Marca",
+      "Nibsa"
+    ],
+    [
+      "Tipo de válvula",
+      "Llave de bola para gas, manilla mariposa"
+    ],
+    [
+      "Diámetro nominal",
+      "1/2 pulgada"
+    ],
+    [
+      "Tipo de conexión",
+      "HI-HE (hembra - macho)"
+    ],
+    [
+      "Material",
+      "Cuerpo de bronce, esfera cromada y asiento de teflón (según envase)"
+    ],
+    [
+      "Uso",
+      "Gas licuado, natural y de ciudad (según envase)"
+    ],
+    [
+      "Presión máxima",
+      "500 kPa (según envase)"
+    ],
+    [
+      "Certificación",
+      "SEC (indicada en el envase)"
+    ],
+    [
+      "País de fabricación",
+      "Chile"
+    ],
+    [
+      "Garantía",
+      "5 años Nibsa (según envase)"
+    ]
   ],
   "confianza": [
-    {"titulo": "🟡 Gas normalizado", "detalle": "Manilla amarilla reglamentaria"},
-    {"titulo": "🔒 Cierre estanco", "detalle": "Sellos especiales para gas"},
-    {"titulo": "🚚 Envío a todo Chile", "detalle": "Despacho rápido a domicilio"},
-    {"titulo": "🛡️ Garantía 6 meses", "detalle": "Garantía oficial del fabricante"}
+    {
+      "titulo": "🟡 Manilla amarilla",
+      "detalle": "Identifica la línea de gas"
+    },
+    {
+      "titulo": "✅ Certificación SEC",
+      "detalle": "Indicada en el envase"
+    },
+    {
+      "titulo": "🚚 Envío a todo Chile",
+      "detalle": "Despacho a domicilio"
+    },
+    {
+      "titulo": "🛡️ Garantía 5 años",
+      "detalle": "Garantía Nibsa según el envase"
+    }
   ],
   "secciones": [
     {
@@ -58,44 +98,70 @@
       "titulo": "¿En qué puntos se debe instalar esta llave de gas?",
       "indice": "Puntos de uso",
       "bloques": [
-        {"p": "La normativa chilena exige que cada artefacto a gas cuente con su propia **llave de corte individual a la vista** y accesible:"},
-        {"lista": [
-          "Línea de alimentación a cocinas de piso y hornos empotrados",
-          "Arranque hacia calefonts de pared o calderas murales",
-          "Empalme hacia estufas fijas de gas licuado o gas natural",
-          "Ramales de distribución en logias y terrazas de departamentos"
-        ]},
-        {"p": "Combínala con el [regulador de gas licuado 3/8\" Cemco](/producto/regulador-gas-licuado-3-8-hasta-15-kg-cemco) si estás equipando la conexión de tu balón de gas."}
+        {
+          "p": "En una instalación de gas, cada artefacto lleva su propia **llave de paso**, en un lugar accesible para cerrarla rápido:"
+        },
+        {
+          "lista": [
+            "Línea de alimentación a cocinas de piso y hornos empotrados",
+            "Arranque hacia calefonts de pared o calderas murales",
+            "Empalme hacia estufas fijas de gas licuado o gas natural",
+            "Ramales de distribución en logias y terrazas de departamentos"
+          ]
+        },
+        {
+          "p": "Combínala con el [regulador de gas licuado 3/8\" Cemco](/producto/regulador-gas-licuado-3-8-hasta-15-kg-cemco) si estás equipando la conexión de tu balón de gas."
+        }
       ]
     },
     {
       "id": "normativa-y-seguridad",
-      "titulo": "Normativa SEC y buenas prácticas de gasfitería",
-      "indice": "Seguridad y normativa",
+      "titulo": "Quién la instala y qué revisar",
+      "indice": "Instalación y seguridad",
       "bloques": [
-        {"p": "Las líneas de gas no admiten margen de error. Sigue siempre estas precauciones en la instalación:"},
-        {"pasos": [
-          "Corta el suministro general en el medidor o en el cilindro antes de desmontar cualquier unión.",
-          "Utiliza únicamente cinta teflón para gas (de alta densidad, color amarillo) o pasta sellante homologada para hidrocarburos. Nunca uses teflón blanco estándar de agua.",
-          "Enrosca el extremo HI o HE al flexible metálico corrugado certificado SEC, apretando con firmeza pero sin deformar la tuerca.",
-          "Verifica hermeticidad aplicando agua con jabón en cada junta. Si aparecen burbujas, reaprieta o rehabilita el sellante de inmediato.",
-          "Mantén la llave siempre en un punto de fácil acceso manual, nunca detrás de muebles fijos sin ventilación."
-        ]},
-        {"advertencia": "Cualquier intervención mayor en cañerías rígidas de cobre para gas debe ser efectuada o certificada por un instalador autorizado para mantener la vigencia del [sello verde SEC](/blog/sello-verde-gas-inspeccion-periodica-sello-amarillo-rojo-chile/)."},
-        {"p": "Si sospechas de un escape, revisa nuestra guía paso a paso sobre [cómo detectar y actuar ante una fuga de gas en casa](/blog/fuga-de-gas-y-monoxido-como-detectar-y-que-hacer-chile/)."}
+        {
+          "p": "En Chile, las instalaciones interiores de gas las ejecuta un **instalador de gas autorizado por la SEC**. Si te instalan esta llave, revisa que:"
+        },
+        {
+          "pasos": [
+            "Se corte el gas en el medidor o en el cilindro antes de desarmar cualquier unión.",
+            "Las roscas se sellen con cinta o pasta para gas, no con el teflón delgado que se usa en agua.",
+            "La llave quede accesible, nunca detrás de un mueble fijo.",
+            "Se pruebe cada unión con agua jabonosa: si salen burbujas, hay fuga.",
+            "Con la manilla cruzada al tubo la llave está cerrada; en línea con el tubo, abierta."
+          ]
+        },
+        {
+          "advertencia": "Cualquier intervención mayor en cañerías rígidas de cobre para gas debe ser efectuada o certificada por un instalador autorizado para mantener la vigencia del [sello verde SEC](/blog/sello-verde-gas-inspeccion-periodica-sello-amarillo-rojo-chile/)."
+        },
+        {
+          "p": "Si sospechas de un escape, revisa nuestra guía paso a paso sobre [cómo detectar y actuar ante una fuga de gas en casa](/blog/fuga-de-gas-y-monoxido-como-detectar-y-que-hacer-chile/)."
+        }
       ]
     }
   ],
   "faq": [
-    {"pregunta": "¿Sirve tanto para gas de cañería como para balón?", "respuesta": "Sí, está construida y certificada para operar con gas licuado de petróleo (GLP en balones o cilindros) y con gas natural de red."},
-    {"pregunta": "¿Por qué la manilla es de color amarillo?", "respuesta": "El color amarillo es la convención normativa para identificar visualmente que la válvula controla el paso de gas combustible y no de agua potable."},
-    {"pregunta": "¿Se puede usar teflón común de agua en esta llave?", "respuesta": "No. En uniones para gas debes usar teflón para gas (color amarillo o cinta de alta densidad) o pasta para sellado de gas, ya que el gas licuado degrada el teflón fino convencional."},
-    {"pregunta": "¿Hacen despachos a regiones?", "respuesta": "Sí, despachamos a todo el territorio nacional con seguimiento en línea y soporte directo por WhatsApp."}
+    {
+      "pregunta": "¿Sirve tanto para gas de cañería como para balón?",
+      "respuesta": "Sí. Su envase indica uso con gas licuado, gas natural y gas de ciudad, con una presión máxima de 500 kPa."
+    },
+    {
+      "pregunta": "¿Por qué la manilla es de color amarillo?",
+      "respuesta": "El amarillo es el color con que se identifica la línea de gas, para no confundir esta llave con una de agua."
+    },
+    {
+      "pregunta": "¿Se puede usar teflón común de agua en esta llave?",
+      "respuesta": "No. En uniones de gas se usa cinta o pasta para gas, hecha para ese uso. El teflón delgado de agua no está pensado para sellar gas."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
+    }
   ],
   "lateral": {
     "etiqueta": "Gasfitería",
     "titulo": "Llave para gas 1/2\" HI-HE Nibsa",
-    "texto": "Corte de seguridad para gas domiciliario en bronce con manilla mariposa amarilla. Conexión roscada 1/2\" para cocina o calefont."
+    "texto": "Llave de bola para gas en bronce con manilla mariposa amarilla, rosca 1/2\" HI-HE y certificación SEC según su envase."
   },
   "relacionados": [
     "regulador-gas-licuado-3-8-hasta-15-kg-cemco",
@@ -103,13 +169,22 @@
     "llave-de-paso-1-2-so-bronce-stretto"
   ],
   "guias": [
-    {"url": "/blog/fuga-de-gas-y-monoxido-como-detectar-y-que-hacer-chile/", "texto": "Fugas de gas y monóxido en casa"},
-    {"url": "/blog/sello-verde-gas-inspeccion-periodica-sello-amarillo-rojo-chile/", "texto": "Inspección periódica y sello verde SEC"},
-    {"url": "/blog/selladores-de-rosca-teflon-vs-estopa-cual-elegir/", "texto": "Selladores de rosca: teflón vs estopa"}
+    {
+      "url": "/blog/fuga-de-gas-y-monoxido-como-detectar-y-que-hacer-chile/",
+      "texto": "Fugas de gas y monóxido en casa"
+    },
+    {
+      "url": "/blog/sello-verde-gas-inspeccion-periodica-sello-amarillo-rojo-chile/",
+      "texto": "Inspección periódica y sello verde SEC"
+    },
+    {
+      "url": "/blog/selladores-de-rosca-teflon-vs-estopa-cual-elegir/",
+      "texto": "Selladores de rosca: teflón vs estopa"
+    }
   ],
   "tarjeta": {
     "titulo": "Llave de Gas 1/2\" HI-HE Bronce Nibsa",
-    "extracto": "Válvula de corte para gas en bronce con rosca HI-HE 1/2\" y manilla mariposa amarilla. Seguridad y rapidez de corte.",
+    "extracto": "Llave de bola para gas en bronce con rosca HI-HE 1/2\" y manilla mariposa amarilla. Corte en un cuarto de vuelta.",
     "alt": "Llave de paso para gas de 1/2 pulgada HI-HE en bronce con manilla mariposa amarilla Nibsa",
     "etiqueta": "Gasfitería"
   }
