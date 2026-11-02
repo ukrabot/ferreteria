@@ -83,6 +83,10 @@ enlace trae un tamaño como `wid=` o `hei=`, súbelo a 1200 o más para que la
 foto no salga borrosa. Si la descarga falla, guarda la foto a mano en la
 carpeta y usa `archivo`.
 
+**Garantía**: la de la tienda es siempre **6 meses**. El generador agrega la fila
+«Garantía: 6 meses» en las especificaciones y rechaza cualquier texto con otro
+plazo de garantía.
+
 Los textos (`alt`, descripciones, etc.) no pueden nombrar a otras tiendas: el
 generador los rechaza. Tampoco se publican fotos con **código QR** ni las fotos de
 **«escala» con silueta gris y manos**: el generador las detecta y rechaza la

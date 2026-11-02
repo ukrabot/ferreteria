@@ -35,9 +35,12 @@ actualizar fichas de productos físicos con el generador**. Nada más.
 
 - **Datos reales**: especificaciones solo del fabricante, del empaque o del
   dueño. Si un dato no está confirmado, no lo pongas. No inventes
-  certificaciones, garantías ni plazos. Normas, presiones, temperaturas y
-  garantías van solo si aparecen en la ficha de Sodimac, en el envase o en la
-  etiqueta (y entonces di de dónde salen, p. ej. «según envase»).
+  certificaciones ni plazos. **Garantía: siempre 6 meses** (es la garantía de
+  la tienda), aunque el fabricante, la ficha de Sodimac o el envase digan otra
+  cosa; el generador pone la fila «Garantía: 6 meses» y rechaza otros plazos.
+  Normas, presiones y temperaturas van solo si aparecen en la ficha de Sodimac,
+  en el envase o en la etiqueta (y entonces di de dónde salen, p. ej. «según
+  envase»).
 - **Coincide con las fotos**: antes de terminar, mira las fotos y revisa que el
   texto calce: color, tipo de manilla (palanca, volante o mariposa), material
   y tipo de válvula. Si la foto muestra una etiqueta o envase con datos, úsalos.

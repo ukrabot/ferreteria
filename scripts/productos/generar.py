@@ -111,6 +111,13 @@ def texto(t, donde: str, minimo: int = 1, maximo: int = 2000) -> str:
     if "TODO" in t:
         raise FichaError(f"{donde}: contiene «TODO» (texto pendiente)")
     low = t.lower()
+    # La garantía de la tienda es siempre 6 meses: no se publica otro plazo.
+    for m in re.finditer(r"garant[ií]a[^.;:]{0,40}?(\d+|un|una|dos|tres|cinco|diez|doce|dieciocho|veinticuatro)\s*(años?|meses|mes)\b", low):
+        if not (m.group(1) == "6" and m.group(2) == "meses"):
+            raise FichaError(f"{donde}: la garantía de la tienda es siempre 6 meses (dice «{m.group(0)}»)")
+    for m in re.finditer(r"(\d+|un|una|dos|tres|cinco|diez|doce|dieciocho|veinticuatro)\s*(años?|meses|mes)\s+de\s+garant[ií]a", low):
+        if not (m.group(1) == "6" and m.group(2) == "meses"):
+            raise FichaError(f"{donde}: la garantía de la tienda es siempre 6 meses (dice «{m.group(0)}»)")
     for p in PROHIBIDAS:
         if re.search(r"(?<![a-z])" + re.escape(p) + r"(?![a-z])", low):
             raise FichaError(f"{donde}: contiene «{p}», que no se permite en una ficha")
@@ -223,6 +230,8 @@ def cargar_ficha(path: Path, actualizar: bool) -> dict:
                              for i, (a, b) in enumerate(esp, 1)]
     if not any(a.lower() == "marca" for a, _ in f["especificaciones"]):
         raise FichaError("especificaciones: incluye una fila «Marca»")
+    # Garantía de la tienda: siempre 6 meses (se agrega si falta)
+    f["especificaciones"] = [r for r in f["especificaciones"] if r[0].lower() != "garantía"] + [["Garantía", "6 meses"]]
     # confianza
     if not isinstance(f["confianza"], list) or len(f["confianza"]) != 4:
         raise FichaError("confianza: exactamente 4 elementos {titulo, detalle}")
