@@ -9,13 +9,13 @@
   "margen": 50,
   "categoria": "gasfiteria",
   "subcategoria": "Válvulas esféricas y de bola",
-  "color": "Gris oscuro con manilla azul",
+  "color": "Gris oscuro con palanca azul",
   "disponible": true,
   "seo_titulo": "Válvula de Bola 1\" HI Simple Unión PVC NM Duke",
   "meta_descripcion": "Compra la válvula de bola 1\" HI simple unión de PVC NM Duke a {precio}. Tuerca unión para mantención rápida en redes de agua y piscinas. Envíos a todo Chile.",
   "og_descripcion": "Válvula de bola 1\" en PVC gris con simple unión y manilla azul NM Duke. Corte rápido de 1/4 de vuelta para sistemas de agua y riego. Despacho a todo Chile.",
-  "descripcion": "Válvula de corte esférica de 1 pulgada fabricada en PVC rígido de alta densidad con extremo rosca hembra (HI) y tuerca de unión americana desmontable. Su diseño de simple unión permite desacoplar tramos de tubería para limpieza o reemplazo de bombas y filtros sin cortar la cañería. Cuenta con manilla ergonómica de color azul de un cuarto de vuelta para una apertura fluida. Diseñada para redes de agua potable, riego y piscinas. Marca NM Duke, garantía de 6 meses (según ficha técnica).",
-  "lede": "Para instalar o mantener circuitos de agua potable, riego tecnificado o sistemas de piscinas sin complicaciones, esta **válvula de bola NM Duke de 1 pulgada en PVC** incorpora una práctica **tuerca de simple unión**. Su cuerpo de **PVC gris oscuro** resiste químicos y humedad sin corroerse, mientras su **manilla azul** entrega un corte rápido de un cuarto de vuelta.",
+  "descripcion": "Válvula de bola de 1 pulgada en PVC, con rosca hembra (HI) y tuerca de unión desmontable (simple unión). La tuerca permite separar la válvula para limpiar o cambiar una bomba o un filtro sin cortar la cañería. Se abre y cierra con un cuarto de vuelta de su palanca azul. Para agua fría, riego y piscinas. Marca NM Duke, garantía de 6 meses (según ficha técnica).",
+  "lede": "Para circuitos de agua fría, riego o piscina, esta **válvula de bola NM Duke de 1 pulgada en PVC** trae una **tuerca de simple unión** que permite desmontarla sin cortar la cañería. Su **palanca azul** abre y cierra con **un cuarto de vuelta**, y el PVC no se oxida.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/12270_01/w=1200,h=1200,fit=cover",
@@ -38,20 +38,56 @@
     "detalle": "Despacho en 24-48 h hábiles"
   },
   "especificaciones": [
-    ["Marca", "NM Duke"],
-    ["Tipo de válvula", "Válvula de bola / esfera simple unión (según ficha técnica)"],
-    ["Diámetro nominal", "1 pulgada (según ficha técnica)"],
-    ["Material del cuerpo", "PVC hidráulico rígido (según ficha técnica)"],
-    ["Tipo de conexión", "Rosca hembra (HI) con unión americana (según ficha técnica)"],
-    ["Accionamiento", "Manilla mariposa 1/4 de vuelta color azul (según producto)"],
-    ["Uso recomendado", "Agua, riego, filtración y piscinas (según ficha técnica)"],
-    ["Garantía", "6 meses (según ficha técnica)"]
+    [
+      "Marca",
+      "NM Duke"
+    ],
+    [
+      "Tipo de válvula",
+      "Válvula de bola / esfera simple unión (según ficha técnica)"
+    ],
+    [
+      "Diámetro nominal",
+      "1 pulgada (según ficha técnica)"
+    ],
+    [
+      "Material del cuerpo",
+      "PVC hidráulico rígido (según ficha técnica)"
+    ],
+    [
+      "Tipo de conexión",
+      "Rosca hembra (HI) con unión americana (según ficha técnica)"
+    ],
+    [
+      "Accionamiento",
+      "Palanca azul, cuarto de vuelta"
+    ],
+    [
+      "Uso recomendado",
+      "Agua, riego, filtración y piscinas (según ficha técnica)"
+    ],
+    [
+      "Garantía",
+      "6 meses (según ficha técnica)"
+    ]
   ],
   "confianza": [
-    {"titulo": "💧 PVC anticorrosión", "detalle": "Inmune a sarro, óxido y cal"},
-    {"titulo": "🔄 Simple unión", "detalle": "Desmontable para mantenciones"},
-    {"titulo": "🚚 Envío a todo Chile", "detalle": "Despacho a domicilio o retiro"},
-    {"titulo": "🛡️ Garantía 6 meses", "detalle": "Garantía oficial (según ficha técnica)"}
+    {
+      "titulo": "💧 Cuerpo de PVC",
+      "detalle": "No se oxida"
+    },
+    {
+      "titulo": "🔄 Simple unión",
+      "detalle": "Desmontable para mantenciones"
+    },
+    {
+      "titulo": "🚚 Envío a todo Chile",
+      "detalle": "Despacho a domicilio o retiro"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Garantía oficial (según ficha técnica)"
+    }
   ],
   "secciones": [
     {
@@ -59,14 +95,19 @@
       "titulo": "¿Por qué elegir una válvula de PVC con simple unión?",
       "indice": "Simple unión",
       "bloques": [
-        {"p": "En circuitos con bombas de agua, filtros de arena o líneas matrices de PVC, la **tuerca de unión americana** marca una gran diferencia al momento de hacer mantenciones:"},
-        {"lista": [
-          "Permite desmontar la bomba o el filtro aflojando la tuerca manualmente sin cortar tubos",
-          "El cuerpo de PVC no se sulfata ni sufre picaduras por cloro o fertilizantes disueltos",
-          "Paso de agua de baja resistencia que aprovecha la potencia de impulsión de la electrobomba",
-          "Cierre hermético con empaquetadura interna de goma elastomérica"
-        ]},
-        {"p": "Para saber qué tipo de tubería plástica utilizar en tu red, revisa nuestra comparativa de [diferencias entre tuberías PVC y PPR](/blog/diferencias-entre-tuberias-pvc-y-ppr-guia-completa-para-elegir-la-mejor-opcion/)."}
+        {
+          "p": "En circuitos con bombas de agua, filtros de arena o líneas matrices de PVC, la **tuerca de unión americana** marca una gran diferencia al momento de hacer mantenciones:"
+        },
+        {
+          "lista": [
+            "Permite desmontar la bomba o el filtro aflojando la tuerca a mano, sin cortar tubos",
+            "El PVC no se oxida y resiste el agua con cloro de piscina",
+            "Cierre y apertura en un cuarto de vuelta"
+          ]
+        },
+        {
+          "p": "Para saber qué tipo de tubería plástica utilizar en tu red, revisa nuestra comparativa de [diferencias entre tuberías PVC y PPR](/blog/diferencias-entre-tuberias-pvc-y-ppr-guia-completa-para-elegir-la-mejor-opcion/)."
+        }
       ]
     },
     {
@@ -74,28 +115,48 @@
       "titulo": "Recomendaciones para el apriete y sellado en 1 pulgada",
       "indice": "Instalación y sellado",
       "bloques": [
-        {"p": "Para asegurar un acople firme sin dañar los hilos de PVC:"},
-        {"pasos": [
-          "Verifica que el o-ring o sello de goma de la tuerca unión esté correctamente posicionado en su ranura antes de apretar.",
-          "En el terminal con hilo HI de 1 pulgada, aplica cinta teflón en las vueltas del macho sin sobrecargar para no abrir la rosca plástica.",
-          "Aprieta la tuerca unión principalmente con la mano; si usas llave de correa o llave francesa grande, hazlo con suavidad sin forzar el tope plástico.",
-          "Abre el paso del agua y verifica la ausencia de gotas en la unión."
-        ]},
-        {"p": "Para elegir el sellante adecuado para hilos plásticos, consulta nuestra guía sobre [selladores de rosca: teflón vs estopa](/blog/selladores-de-rosca-teflon-vs-estopa-cual-elegir/)."},
-        {"aviso": "No utilices grasas minerales ni lubricantes derivados del petróleo sobre el o-ring de goma de la válvula, ya que degradan el elastómero; usa vaselina pura o silicona para sellos si requieres lubricar."}
+        {
+          "p": "Para asegurar un acople firme sin dañar los hilos de PVC:"
+        },
+        {
+          "pasos": [
+            "Verifica que el o-ring o sello de goma de la tuerca unión esté correctamente posicionado en su ranura antes de apretar.",
+            "En el terminal con hilo HI de 1 pulgada, aplica cinta teflón en las vueltas del macho sin sobrecargar para no abrir la rosca plástica.",
+            "Aprieta la tuerca unión principalmente con la mano; si usas llave de correa o llave francesa grande, hazlo con suavidad sin forzar el tope plástico.",
+            "Abre el paso del agua y verifica la ausencia de gotas en la unión."
+          ]
+        },
+        {
+          "p": "Para elegir el sellante adecuado para hilos plásticos, consulta nuestra guía sobre [selladores de rosca: teflón vs estopa](/blog/selladores-de-rosca-teflon-vs-estopa-cual-elegir/)."
+        },
+        {
+          "aviso": "Si necesitas lubricar el sello de la tuerca, usa grasa de silicona. No uses aceites ni vaselina, que dañan la goma."
+        }
       ]
     }
   ],
   "faq": [
-    {"pregunta": "¿Qué ventaja tiene que sea de simple unión?", "respuesta": "La tuerca unión permite separar la cañería en ese punto con solo desenroscar la tuerca con la mano, sin necesidad de cortar tubos ni rehacer pegaduras durante revisiones de bombas o filtros."},
-    {"pregunta": "¿Sirve para agua con cloro de piscina?", "respuesta": "Sí, el PVC es altamente resistente al cloro, alguicidas y productos químicos habituales en el tratamiento de piscinas y sistemas de regadío."},
-    {"pregunta": "¿Soporta agua caliente de calefont?", "respuesta": "No, el PVC estándar está diseñado para agua fría o a temperatura ambiente. Para agua caliente sanitaria se deben utilizar válvulas metálicas de bronce o sistemas en PPR."},
-    {"pregunta": "¿Hacen envíos a todo Chile?", "respuesta": "Sí, enviamos a todas las regiones de Chile con opción de despacho a domicilio o retiro."}
+    {
+      "pregunta": "¿Qué ventaja tiene que sea de simple unión?",
+      "respuesta": "La tuerca unión permite separar la cañería en ese punto con solo desenroscar la tuerca con la mano, sin necesidad de cortar tubos ni rehacer pegaduras durante revisiones de bombas o filtros."
+    },
+    {
+      "pregunta": "¿Sirve para agua con cloro de piscina?",
+      "respuesta": "Sí, el PVC resiste el agua con cloro de piscina y de riego."
+    },
+    {
+      "pregunta": "¿Soporta agua caliente de calefont?",
+      "respuesta": "No, el PVC estándar está diseñado para agua fría o a temperatura ambiente. Para agua caliente sanitaria se deben utilizar válvulas metálicas de bronce o sistemas en PPR."
+    },
+    {
+      "pregunta": "¿Hacen envíos a todo Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
+    }
   ],
   "lateral": {
     "etiqueta": "Gasfitería",
     "titulo": "Válvula bola 1\" PVC NM Duke",
-    "texto": "PVC gris con tuerca de simple unión y manilla azul. Cierre 1/4 de vuelta para bombas, piscinas y riego."
+    "texto": "PVC gris con tuerca de simple unión y palanca azul. Cierre en un cuarto de vuelta para bombas, piscinas y riego."
   },
   "relacionados": [
     "valvula-bola-paso-estandar-1-2-genebre",
@@ -103,13 +164,22 @@
     "cortador-de-tubos"
   ],
   "guias": [
-    {"url": "/blog/diferencias-entre-tuberias-pvc-y-ppr-guia-completa-para-elegir-la-mejor-opcion/", "texto": "Diferencias entre tuberías PVC y PPR"},
-    {"url": "/blog/selladores-de-rosca-teflon-vs-estopa-cual-elegir/", "texto": "Selladores de rosca: teflón vs estopa"},
-    {"url": "/blog/como-instalar-riego-por-goteo-en-casa-guia-chile/", "texto": "Cómo instalar riego por goteo en casa"}
+    {
+      "url": "/blog/diferencias-entre-tuberias-pvc-y-ppr-guia-completa-para-elegir-la-mejor-opcion/",
+      "texto": "Diferencias entre tuberías PVC y PPR"
+    },
+    {
+      "url": "/blog/selladores-de-rosca-teflon-vs-estopa-cual-elegir/",
+      "texto": "Selladores de rosca: teflón vs estopa"
+    },
+    {
+      "url": "/blog/como-instalar-riego-por-goteo-en-casa-guia-chile/",
+      "texto": "Cómo instalar riego por goteo en casa"
+    }
   ],
   "tarjeta": {
     "titulo": "Válvula Bola 1\" HI Simple Unión PVC NM Duke",
-    "extracto": "Válvula de bola en PVC gris con tuerca de simple unión y manilla azul de 1/4 de vuelta. Desmontable, apta para bombas y riego.",
+    "extracto": "Válvula de bola en PVC gris con tuerca de simple unión y palanca azul de cuarto de vuelta. Desmontable, para bombas y riego.",
     "alt": "Válvula de bola 1 pulgada HI simple unión en PVC gris NM Duke",
     "etiqueta": "Gasfitería"
   }

@@ -13,9 +13,9 @@
   "disponible": true,
   "seo_titulo": "Llave de Paso 1/2\" SO Bronce Humboldt",
   "meta_descripcion": "Compra la llave de paso de 1/2\" SO en bronce Humboldt a {precio}. Terminales para soldar en cañerías de cobre y volante rojo. Envíos a todo Chile.",
-  "og_descripcion": "Llave de paso 1/2\" SO en bronce Humboldt para soldar en cañería de cobre. Corte manual seguro para agua potable con volante rojo. Despacho a todo Chile.",
-  "descripcion": "Llave de paso manual de 1/2 pulgada fabricada en bronce fundido con extremos SO para unión por soldadura a cañerías de cobre de agua potable. Cuenta con volante superior lobulado en color rojo brillante para una apertura y cierre ergonómico, prensaestopas hexagonal de latón pulido y una presión máxima de trabajo de 1,6 bar (según ficha técnica). Diseñada para aislar ramales de agua fría y caliente en viviendas. Marca Humboldt, garantía de 6 meses (según ficha técnica).",
-  "lede": "Para independizar el paso de agua en baños, cocinas o ramales de cañería de cobre, esta **llave de paso Humboldt de 1/2\" SO en bronce** ofrece un corte hermético y duradero. Su cuerpo de **bronce fundido macizo** está diseñado para **soldar directamente al cobre** y su **volante metálico rojo** asegura un giro cómodo y visible.",
+  "og_descripcion": "Llave de paso 1/2\" SO en bronce Humboldt para soldar en cañería de cobre. Corte manual para agua potable con volante rojo. Despacho a todo Chile.",
+  "descripcion": "Llave de paso de 1/2 pulgada en bronce con extremos SO para unir por soldadura a cañería de cobre de agua potable. Tiene volante rojo y prensaestopa hexagonal para reapretar si gotea por el vástago. Sirve para aislar ramales de agua fría y caliente en viviendas. Marca Humboldt, garantía de 6 meses (según ficha técnica).",
+  "lede": "Para independizar el agua de un baño, la cocina o un ramal de cañería de cobre, esta **llave de paso Humboldt de 1/2\" SO en bronce** corta el paso con su **volante rojo**. Sus extremos son **para soldar directamente al cobre** de 1/2 pulgada.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/2855380_01/w=1200,h=1200,fit=cover",
@@ -33,21 +33,56 @@
     "detalle": "Despacho en 24-48 h hábiles"
   },
   "especificaciones": [
-    ["Marca", "Humboldt"],
-    ["Tipo de válvula", "Llave de paso de corte manual (según ficha técnica)"],
-    ["Diámetro nominal", "1/2 pulgada (según ficha técnica)"],
-    ["Tipo de conexión", "Terminales SO para soldar cañería de cobre (según ficha técnica)"],
-    ["Material del cuerpo", "Bronce (según ficha técnica)"],
-    ["Volante de accionamiento", "Metálico esmaltado color rojo (según producto)"],
-    ["Presión máxima", "1,6 bar (según ficha técnica)"],
-    ["Uso recomendado", "Agua potable fría y caliente (según ficha técnica)"],
-    ["Garantía", "6 meses (según ficha técnica)"]
+    [
+      "Marca",
+      "Humboldt"
+    ],
+    [
+      "Tipo de válvula",
+      "Llave de paso de corte manual (según ficha técnica)"
+    ],
+    [
+      "Diámetro nominal",
+      "1/2 pulgada (según ficha técnica)"
+    ],
+    [
+      "Tipo de conexión",
+      "Terminales SO para soldar cañería de cobre (según ficha técnica)"
+    ],
+    [
+      "Material del cuerpo",
+      "Bronce (según ficha técnica)"
+    ],
+    [
+      "Volante de accionamiento",
+      "Rojo"
+    ],
+    [
+      "Uso recomendado",
+      "Agua potable fría y caliente (según ficha técnica)"
+    ],
+    [
+      "Garantía",
+      "6 meses (según ficha técnica)"
+    ]
   ],
   "confianza": [
-    {"titulo": "🚰 Bronce macizo", "detalle": "Resistente a corrosión e intemperie"},
-    {"titulo": "🔥 Conexión SO", "detalle": "Para soldar en cañería de cobre"},
-    {"titulo": "🚚 Envío a todo Chile", "detalle": "Despacho a domicilio o retiro"},
-    {"titulo": "🛡️ Garantía 6 meses", "detalle": "Garantía oficial (según ficha técnica)"}
+    {
+      "titulo": "🚰 Cuerpo de bronce",
+      "detalle": "Para agua fría y caliente"
+    },
+    {
+      "titulo": "🔥 Conexión SO",
+      "detalle": "Para soldar en cañería de cobre"
+    },
+    {
+      "titulo": "🚚 Envío a todo Chile",
+      "detalle": "Despacho a domicilio o retiro"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Garantía oficial (según ficha técnica)"
+    }
   ],
   "secciones": [
     {
@@ -55,14 +90,20 @@
       "titulo": "¿Dónde conviene instalar una llave de paso SO para soldar?",
       "indice": "Aplicaciones",
       "bloques": [
-        {"p": "Las llaves con **terminales para soldar (SO)** quedan unidas de forma permanente a la cañería de cobre, siendo la opción estándar para instalaciones empotradas o a la vista en tabiques:"},
-        {"lista": [
-          "Corte seccional en la entrada de agua a baños para aislar lavamanos, bidet y ducha",
-          "Líneas de alimentación en cocinas antes de derivaciones a lavaplatos y lavavajillas",
-          "Empalmes de agua fría hacia calefonts y termos eléctricos",
-          "Circuitos de logia o lavadero para mantenciones sin cortar el medidor general"
-        ]},
-        {"p": "Si necesitas herramientas para cortar el tubo a medida antes de montar, mira nuestro [cortador de tubos](/producto/cortador-de-tubos)."}
+        {
+          "p": "Las llaves con **terminales para soldar (SO)** quedan unidas de forma permanente a la cañería de cobre, siendo la opción estándar para instalaciones empotradas o a la vista en tabiques:"
+        },
+        {
+          "lista": [
+            "Corte seccional en la entrada de agua a baños para aislar lavamanos, bidet y ducha",
+            "Líneas de alimentación en cocinas antes de derivaciones a lavaplatos y lavavajillas",
+            "Empalmes de agua fría hacia calefonts y termos eléctricos",
+            "Circuitos de logia o lavadero para mantenciones sin cortar el medidor general"
+          ]
+        },
+        {
+          "p": "Si necesitas herramientas para cortar el tubo a medida antes de montar, mira nuestro [cortador de tubos](/producto/cortador-de-tubos)."
+        }
       ]
     },
     {
@@ -70,29 +111,45 @@
       "titulo": "Recomendaciones para soldar la llave sin dañar sus sellos",
       "indice": "Montaje y soldadura",
       "bloques": [
-        {"p": "Al soldar una llave de paso con soplete a gas, el calor aplicado sobre el bronce se transfiere con rapidez:"},
-        {"pasos": [
-          "Corta el agua general y asegúrate de que la tubería esté completamente vacía de agua antes de aplicar fuego.",
-          "Limpia y lija las bocas de la llave y los extremos del tubo de cobre con lija para metal hasta dejarlos brillantes.",
-          "Abre totalmente el volante de la llave o desmonta el cabezal superior antes de soldar para proteger la empaquetadura interna de goma del calor excesivo.",
-          "Aplica pasta fundente y soldadura de estaño sin plomo, apta para consumo humano según normativa chilena.",
-          "Deja enfriar a temperatura ambiente sin mojar con agua fría para no provocar choque térmico en el bronce."
-        ]},
-        {"advertencia": "Si no cuentas con experiencia en soldadura con soplete, recurre a un gasfíter calificado para evitar quemaduras o filtraciones en los empalmes."},
-        {"p": "Para una guía paso a paso completa, consulta [cómo instalar una llave de paso](/blog/como-instalar-una-llave-de-paso-paso-a-paso/) y [cómo reparar fugas en llaves de paso](/blog/como-reparar-fuga-en-llave-de-paso-chile/)."}
+        {
+          "p": "Al soldar una llave de paso con soplete a gas, el calor aplicado sobre el bronce se transfiere con rapidez:"
+        },
+        {
+          "pasos": [
+            "Corta el agua general y asegúrate de que la tubería esté completamente vacía de agua antes de aplicar fuego.",
+            "Limpia y lija las bocas de la llave y los extremos del tubo de cobre con lija para metal hasta dejarlos brillantes.",
+            "Abre totalmente el volante de la llave o desmonta el cabezal superior antes de soldar para proteger la empaquetadura interna de goma del calor excesivo.",
+            "Aplica pasta decapante y soldadura sin plomo (estaño-plata), la apta para agua potable.",
+            "Deja enfriar a temperatura ambiente sin mojar con agua fría para no provocar choque térmico en el bronce."
+          ]
+        },
+        {
+          "advertencia": "Si no cuentas con experiencia en soldadura con soplete, recurre a un gasfíter calificado para evitar quemaduras o filtraciones en los empalmes."
+        },
+        {
+          "p": "Para una guía paso a paso completa, consulta [cómo instalar una llave de paso](/blog/como-instalar-una-llave-de-paso-paso-a-paso/) y [cómo reparar fugas en llaves de paso](/blog/como-reparar-fuga-en-llave-de-paso-chile/)."
+        }
       ]
     }
   ],
   "faq": [
-    {"pregunta": "¿Qué significa que la conexión sea SO?", "respuesta": "Significa soldar-soldar (socket para soldadura capilar). Sus bocas reciben directamente cañería de cobre de 1/2 pulgada para fijarse con soldadura de estaño y soplete."},
-    {"pregunta": "¿Por qué el volante es de color rojo?", "respuesta": "El volante esmaltado en rojo permite una rápida identificación visual del corte de agua y facilita un agarre firme incluso con las manos húmedas."},
-    {"pregunta": "¿Qué presión soporta esta llave?", "respuesta": "Soporta una presión máxima de trabajo de 1,6 bar según las especificaciones técnicas del fabricante."},
-    {"pregunta": "¿Hacen envíos a regiones de Chile?", "respuesta": "Sí, despachamos a todo el país. Puedes comprar en línea de manera segura o escribirnos por WhatsApp."}
+    {
+      "pregunta": "¿Qué significa que la conexión sea SO?",
+      "respuesta": "Significa soldar-soldar (socket para soldadura capilar). Sus bocas reciben directamente cañería de cobre de 1/2 pulgada para fijarse con soldadura de estaño y soplete."
+    },
+    {
+      "pregunta": "¿Qué hago si gotea por el vástago?",
+      "respuesta": "Aprieta un poco la tuerca prensaestopa (la hexagonal bajo el volante). Si sigue goteando, cambia la empaquetadura con el agua cortada."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
+    }
   ],
   "lateral": {
     "etiqueta": "Gasfitería",
     "titulo": "Llave de paso 1/2\" SO Humboldt",
-    "texto": "Corte de agua en bronce para soldar a cañería de cobre de 1/2\". Volante lobulado rojo y presión 1,6 bar (según ficha técnica)."
+    "texto": "Corte de agua en bronce para soldar a cañería de cobre de 1/2\". Volante rojo y prensaestopa para reapretar."
   },
   "relacionados": [
     "llave-de-paso-1-2-he-bronce-nibsa",
@@ -100,13 +157,22 @@
     "llave-de-paso-1-2-so-bronce-stretto"
   ],
   "guias": [
-    {"url": "/blog/como-instalar-una-llave-de-paso-paso-a-paso/", "texto": "Cómo instalar una llave de paso paso a paso"},
-    {"url": "/blog/como-reparar-fuga-en-llave-de-paso-chile/", "texto": "Reparar fugas en llaves de paso"},
-    {"url": "/blog/herramientas-basicas-de-gasfiteria-todo-lo-que-necesitas-saber/", "texto": "Herramientas básicas de gasfitería"}
+    {
+      "url": "/blog/como-instalar-una-llave-de-paso-paso-a-paso/",
+      "texto": "Cómo instalar una llave de paso paso a paso"
+    },
+    {
+      "url": "/blog/como-reparar-fuga-en-llave-de-paso-chile/",
+      "texto": "Reparar fugas en llaves de paso"
+    },
+    {
+      "url": "/blog/herramientas-basicas-de-gasfiteria-todo-lo-que-necesitas-saber/",
+      "texto": "Herramientas básicas de gasfitería"
+    }
   ],
   "tarjeta": {
     "titulo": "Llave de Paso 1/2\" SO Bronce Humboldt",
-    "extracto": "Llave de paso de bronce con bocas para soldar a cañería de cobre de 1/2\" y volante rojo. Presión 1,6 bar (según ficha).",
+    "extracto": "Llave de paso de bronce con bocas para soldar a cañería de cobre de 1/2\" y volante rojo. Para agua fría y caliente.",
     "alt": "Llave de paso de 1/2 pulgada SO en bronce Humboldt con volante rojo",
     "etiqueta": "Gasfitería"
   }
