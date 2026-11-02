@@ -1,0 +1,117 @@
+{
+  "slug": "regulador-gas-alta-presion-45-kg-providus",
+  "nombre": "Regulador de gas licuado dos etapas para cilindros de 45 kg Providus",
+  "titulo_h1": "Regulador de Gas GLP Dos Etapas 45 kg Providus",
+  "titulo_corto": "Regulador Gas 45 kg Providus",
+  "marca": "Providus",
+  "sku": "110289362",
+  "precio_referencia": 36250,
+  "margen": 50,
+  "categoria": "gasfiteria",
+  "subcategoria": "Reguladores y accesorios de gas",
+  "color": "Gris grafito y plateado",
+  "disponible": true,
+  "seo_titulo": "Regulador de Gas Dos Etapas 45 kg Providus",
+  "meta_descripcion": "Compra el regulador de gas licuado GLP Providus para cilindros de 45 kg a {precio}. Sistema de dos etapas y capacidad de 2,3 kg/h. Despacho a todo Chile.",
+  "og_descripcion": "Regulador de gas Providus para tubos de 45 kg con doble etapa y capacidad de 2,3 kg/h. Conexión segura bajo norma NCh 1902. Despacho a todo Chile.",
+  "descripcion": "Regulador de gas licuado (GLP) de dos etapas diseñado exclusivamente para baterías y cilindros de 45 kg. Su mecanismo de doble diafragma estabiliza la presión de salida a 29 mbar (según etiqueta del producto) con una capacidad de flujo de 2,3 kg/h (según ficha técnica), optimizando el rendimiento de calderas, calefonts de alto litraje y cocinas comerciales. Fabricado bajo norma chilena NCh 1902.of 2010 (según etiqueta del producto). Marca Providus, garantía de 2 años (según ficha técnica).",
+  "lede": "Para alimentar redes domiciliarias o comerciales con cilindros grandes de 45 kg, este **regulador de gas licuado Providus de dos etapas** entrega una presión continua y segura. Con carcasa en **gris grafito mate**, cúpula plateada y conector en T de latón, su sistema de doble etapa reduce la presión en dos fases sucesivas, aprovechando al máximo la carga de gas del balón sin congelamientos.",
+  "fotos": [
+    {
+      "url": "https://media.falabella.com/sodimacCL/5666112_01/w=1200,h=1200,fit=cover",
+      "alt": "Regulador de gas licuado GLP Providus dos etapas para cilindros de 45 kg vista frontal",
+      "miniatura": "Ver vista frontal"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/5666112_21/w=1200,h=1200,fit=cover",
+      "alt": "Vista en perspectiva del regulador Providus mostrando el cuerpo gris y cúpula plateada",
+      "miniatura": "Ver vista lateral"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/5666112_22/w=1200,h=1200,fit=cover",
+      "alt": "Detalle del conector de latón y etiqueta técnica del regulador de gas 45 kg Providus",
+      "miniatura": "Ver conector y etiqueta"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    ["Marca", "Providus"],
+    ["Tipo de regulador", "Dos etapas para GLP (según ficha técnica)"],
+    ["Cilindro compatible", "Exclusivo para cilindros de 45 kg (según ficha técnica)"],
+    ["Capacidad de flujo", "2,3 kg/h (según ficha técnica y etiqueta)"],
+    ["Presión nominal de salida", "29 mbar (según etiqueta del producto)"],
+    ["Conexión de entrada", "Roscada H.9 7/16\" hilo izquierdo (según ficha técnica)"],
+    ["Norma chilena", "NCh 1902.of 2010 (según etiqueta del producto)"],
+    ["País de origen", "Turquía (según etiqueta del producto)"],
+    ["Garantía", "2 años (según ficha técnica)"]
+  ],
+  "confianza": [
+    {"titulo": "🔥 Doble etapa", "detalle": "Presión estable 29 mbar (según etiqueta)"},
+    {"titulo": "⚖️ Cilindros 45 kg", "detalle": "Capacidad 2,3 kg/h (según ficha)"},
+    {"titulo": "🚚 Envío a todo Chile", "detalle": "Despacho a domicilio o retiro"},
+    {"titulo": "🛡️ Garantía 2 años", "detalle": "Garantía oficial (según ficha técnica)"}
+  ],
+  "secciones": [
+    {
+      "id": "beneficios-y-rendimiento",
+      "titulo": "¿Por qué se utiliza un regulador de dos etapas en cilindros de 45 kg?",
+      "indice": "Doble etapa",
+      "bloques": [
+        {"p": "En instalaciones con cilindros de 45 kg, la presión interior del gas varía fuertemente con la temperatura ambiente y el nivel de carga. El sistema de **dos etapas** reduce la presión en dos fases independientes para asegurar un caudal parejo de 2,3 kg/h (según ficha técnica)."},
+        {"lista": [
+          "Evita caídas de presión bruscas cuando funcionan varios artefactos a la vez",
+          "Reduce el riesgo de congelamiento del regulador en días de invierno",
+          "Permite aprovechar hasta el último remanente de gas del cilindro",
+          "Adecuado para viviendas con caldera, calefacción central o calefont de alto litraje"
+        ]},
+        {"p": "Para más detalles sobre la función de estos equipos en el hogar, puedes revisar nuestra guía sobre [qué es un regulador para gas y para qué sirve](/blog/que-es-un-regulador-para-gas-y-para-que-sirve/)."}
+      ]
+    },
+    {
+      "id": "normativa-sec-e-instalacion",
+      "titulo": "Instalación reglamentaria SEC y qué debes revisar como usuario",
+      "indice": "Instalación y revisión",
+      "bloques": [
+        {"p": "Por exigencia de la Superintendencia de Electricidad y Combustibles (SEC), **la conexión de reguladores para cilindros de 45 kg, manifolds e inversores de gas debe ser ejecutada obligatoriamente por un instalador autorizado SEC** con licencia vigente. No intentes instalarlo por tu cuenta."},
+        {"subtitulo": "¿Qué debes revisar como usuario una vez instalado?"},
+        {"lista": [
+          "Verifica que el técnico efectúe la prueba de hermeticidad con detector de fugas o agua jabonosa en todas las uniones roscadas.",
+          "Comprueba que el regulador quede fijado en un nicho ventilado para gas, protegido del sol directo y la lluvia.",
+          "Revisa que los flexibles de alta presión (pigtails) de cobre o goma cuenten con sello de certificación SEC y fecha vigente.",
+          "Asegúrate de que la instalación conserve o gestione la certificación periódica con [inspección y sello verde SEC](/blog/sello-verde-gas-inspeccion-periodica-sello-amarillo-rojo-chile/)."
+        ]},
+        {"advertencia": "Si en algún momento percibes olor a gas en el nicho de los cilindros, cierra de inmediato las válvulas de los tubos, no acciones interruptores eléctricos y consulta las medidas inmediatas en nuestra guía sobre [fuga de gas y monóxido en casa](/blog/fuga-de-gas-y-monoxido-como-detectar-y-que-hacer-chile/)."}
+      ]
+    }
+  ],
+  "faq": [
+    {"pregunta": "¿Sirve para balones de 5, 11 o 15 kg?", "respuesta": "No. Este regulador está calibrado y diseñado exclusivamente para cilindros de 45 kg debido a su tipo de conexión y caudal de dos etapas."},
+    {"pregunta": "¿Qué capacidad de gas entrega este modelo?", "respuesta": "Tiene una capacidad de flujo de 2,3 kg/h con presión nominal de salida de 29 mbar, según indican la ficha técnica y la etiqueta del producto."},
+    {"pregunta": "¿Puede el cliente instalar este regulador solo?", "respuesta": "No. En Chile la normativa SEC establece que las instalaciones de gas licuado para cilindros de 45 kg deben ser efectuadas por un instalador de gas certificado."},
+    {"pregunta": "¿Hacen envíos a regiones de Chile?", "respuesta": "Sí, despachamos a todo Chile. Puedes realizar la compra en línea o escribirnos por WhatsApp para coordinar tu despacho."}
+  ],
+  "lateral": {
+    "etiqueta": "Gasfitería",
+    "titulo": "Regulador gas 45 kg Providus",
+    "texto": "Dos etapas para cilindros de 45 kg. Flujo de 2,3 kg/h y salida 29 mbar (según etiqueta). Instalación por instalador SEC."
+  },
+  "relacionados": [
+    "regulador-gas-licuado-3-8-hasta-15-kg-cemco",
+    "llave-de-paso-gas-1-2-hi-he-bronce-nibsa",
+    "llave-de-paso-1-2-he-bronce-nibsa"
+  ],
+  "guias": [
+    {"url": "/blog/que-es-un-regulador-para-gas-y-para-que-sirve/", "texto": "Qué es un regulador para gas y para qué sirve"},
+    {"url": "/blog/sello-verde-gas-inspeccion-periodica-sello-amarillo-rojo-chile/", "texto": "Inspección de gas y sello verde SEC"},
+    {"url": "/blog/fuga-de-gas-y-monoxido-como-detectar-y-que-hacer-chile/", "texto": "Fugas de gas y monóxido en casa"}
+  ],
+  "tarjeta": {
+    "titulo": "Regulador de Gas 45 kg Dos Etapas Providus",
+    "extracto": "Regulador de dos etapas para cilindros de 45 kg. Caudal 2,3 kg/h y presión 29 mbar (según etiqueta). Norma NCh 1902.",
+    "alt": "Regulador de gas licuado GLP Providus de dos etapas para cilindros de 45 kg",
+    "etiqueta": "Gasfitería"
+  }
+}

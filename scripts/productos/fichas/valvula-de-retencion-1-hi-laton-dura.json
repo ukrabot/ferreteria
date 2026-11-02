@@ -1,0 +1,117 @@
+{
+  "slug": "valvula-de-retencion-1-hi-laton-dura",
+  "nombre": "Válvula de retención 1 pulgada HI latón resorte Dura",
+  "titulo_h1": "Válvula de Retención 1\" HI Latón con Resorte Dura",
+  "titulo_corto": "Válvula Retención 1\" Dura",
+  "marca": "Dura",
+  "sku": "110273431",
+  "precio_referencia": 11990,
+  "margen": 50,
+  "categoria": "gasfiteria",
+  "subcategoria": "Válvulas de retención y filtros",
+  "color": "Dorado latón",
+  "disponible": true,
+  "seo_titulo": "Válvula de Retención 1\" HI Latón Dura",
+  "meta_descripcion": "Compra la válvula de retención de 1\" HI en latón Dura a {precio}. Evita el retorno de agua en bombas, estanques y redes sanitarias. Envíos a todo Chile.",
+  "og_descripcion": "Válvula de retención 1\" HI Dura en latón con resorte interior. Protección contra reflujo para electrobombas e impulsión de agua. Despacho a todo Chile.",
+  "descripcion": "Válvula de retención unidireccional (check) de 1 pulgada con extremos roscados hembra (HI-HI) bajo norma BSP, fabricada en latón forjado por Dura. Incorpora obturador interior accionado por resorte de acero inoxidable con guía plástica blanca para un cierre estanco instantáneo ante el cese de flujo. Impide el descebe de bombas de agua, el vaciado de líneas de impulsión y golpes de ariete por retorno de líquido. Marca Dura, garantía de 6 meses (según ficha técnica).",
+  "lede": "Para evitar que el agua retroceda y descebe tu bomba o vacíe tus estanques, esta **válvula de retención Dura de 1 pulgada en latón** actúa como un seguro automático en la cañería. Su cuerpo cilíndrico de **latón macizo** incorpora un **mecanismo de resorte interno con obturador**, asegurando un cierre estanco e instantáneo tan pronto se detiene el flujo.",
+  "fotos": [
+    {
+      "url": "https://media.falabella.com/sodimacCL/3280780_01/w=1200,h=1200,fit=cover",
+      "alt": "Válvula de retención de 1 pulgada HI en latón con resorte Dura vista frontal",
+      "miniatura": "Ver vista frontal"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/3280780_12/w=1200,h=1200,fit=cover",
+      "alt": "Vista en perspectiva de la válvula check de latón mostrando caras hexagonales y rosca",
+      "miniatura": "Ver rosca y cuerpo"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/3280780_21/w=1200,h=1200,fit=cover",
+      "alt": "Detalle interior de la válvula de retención con vástago blanco y resorte de acero",
+      "miniatura": "Ver vástago interior"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    ["Marca", "Dura"],
+    ["Tipo de válvula", "Válvula de retención / antirretorno (según ficha técnica)"],
+    ["Diámetro nominal", "1 pulgada (según ficha técnica)"],
+    ["Tipo de conexión", "Terminal rosca BSP hembra-hembra HI-HI (según ficha técnica)"],
+    ["Material del cuerpo", "Latón (según ficha técnica)"],
+    ["Mecanismo interno", "Obturador con resorte y guía técnica (según producto)"],
+    ["Uso recomendado", "Agua, líneas de impulsión y bombas (según ficha técnica)"],
+    ["Garantía", "6 meses (según ficha técnica)"]
+  ],
+  "confianza": [
+    {"titulo": "🚫 Cero retorno", "detalle": "Obturador con resorte de precisión"},
+    {"titulo": "⚙️ Latón mecanizado", "detalle": "Cuerpo robusto con rosca BSP"},
+    {"titulo": "🚚 Envío a todo Chile", "detalle": "Despacho a domicilio o retiro"},
+    {"titulo": "🛡️ Garantía 6 meses", "detalle": "Garantía oficial (según ficha técnica)"}
+  ],
+  "secciones": [
+    {
+      "id": "para-que-sirve-la-valvula-check",
+      "titulo": "¿Para qué sirve una válvula de retención en tu instalación?",
+      "indice": "Función técnica",
+      "bloques": [
+        {"p": "Una **válvula de retención o válvula check** permite que el agua viaje libremente en una sola dirección, cerrándose automáticamente en cuanto el flujo intenta devolverse:"},
+        {"lista": [
+          "Evita que una electrobomba o hidropack pierda el cebado cada vez que se apaga el motor",
+          "Impide que el agua de un estanque elevado se vacíe por gravedad hacia la red pública",
+          "Protege contadores y matrices contra sobrepresiones y golpes de ariete producidos por retornos bruscos",
+          "Funciona tanto en posición horizontal como vertical gracias a su resorte de cierre asistido"
+        ]},
+        {"p": "Si estás experimentando problemas con tu sistema de bombeo, revisa nuestra guía sobre [qué hacer si la bomba de agua no corta](/blog/que-hacer-si-la-bomba-de-agua-no-corta-guia-completa-para-solucionar-problemas/)."}
+      ]
+    },
+    {
+      "id": "instalacion-y-sentido-de-flujo",
+      "titulo": "Recomendaciones para instalar respetando el sentido del flujo",
+      "indice": "Instalación y flecha",
+      "bloques": [
+        {"p": "El detalle más importante al montar una válvula de retención es orientarla de acuerdo al paso de agua deseado:"},
+        {"pasos": [
+          "Ubica la flecha en relieve moldeada en el cuerpo de latón de la válvula: el agua debe ingresar por la cola de la flecha y salir por la punta.",
+          "Aplica cinta teflón en las roscas macho que acoplarán a los extremos HI de 1 pulgada.",
+          "Sujeta firmemente las tuercas hexagonales de los extremos con llave francesa al enroscar para no deformar el cuerpo torneado central.",
+          "En instalaciones de bombas periféricas o centrífugas, instálala en la succión o en la descarga según la configuración de tu estanque.",
+          "Abre el paso del fluido y purga la bomba para asegurar una marcha continua sin burbujas de aire."
+        ]},
+        {"p": "Para evitar ruidos y cavitación en la tubería, consulta también [ruido excesivo en bomba de agua: causas y soluciones](/blog/ruido-excesivo-en-bomba-de-agua-causas-y-soluciones-que-debes-conocer/)."},
+        {"advertencia": "Si instalas la válvula en sentido contrario a la flecha, el paso de agua quedará completamente bloqueado y la bomba podría recalentarse al trabajar en seco."}
+      ]
+    }
+  ],
+  "faq": [
+    {"pregunta": "¿Cómo sé en qué sentido instalar la válvula?", "respuesta": "El cuerpo de latón tiene moldeada una flecha que indica el sentido en que debe circular el agua. La flecha siempre debe apuntar hacia donde quieres que avance el fluido."},
+    {"pregunta": "¿Funciona en tuberías verticales?", "respuesta": "Sí, al contar con resorte interno de compresión, sella perfectamente tanto en tuberías horizontales como en montajes verticales ascendentes."},
+    {"pregunta": "¿Por qué tiene el interior con un vástago blanco?", "respuesta": "El vástago de material sintético de alta resistencia guía el plato obturador para un asiento hermético y silencioso, libre de incrustaciones de sarro."},
+    {"pregunta": "¿Hacen envíos a regiones de Chile?", "respuesta": "Sí, realizamos despachos rápidos a todo el país. Puedes realizar tu pedido en línea o coordinarlo a través de WhatsApp."}
+  ],
+  "lateral": {
+    "etiqueta": "Gasfitería",
+    "titulo": "Válvula retención 1\" Dura",
+    "texto": "Latón forjado con resorte interior. Evita el retroceso de agua y descebe de bombas. Rosca BSP 1\" HI-HI."
+  },
+  "relacionados": [
+    "valvula-compuerta-1-2-hi-bronce-pn10-stretto",
+    "valvula-bola-1-hi-simple-union-pvc-nm-duke",
+    "valvula-bola-paso-estandar-1-2-genebre"
+  ],
+  "guias": [
+    {"url": "/blog/que-hacer-si-la-bomba-de-agua-no-corta-guia-completa-para-solucionar-problemas/", "texto": "Qué hacer si la bomba de agua no corta"},
+    {"url": "/blog/ruido-excesivo-en-bomba-de-agua-causas-y-soluciones-que-debes-conocer/", "texto": "Ruido excesivo en bombas de agua"},
+    {"url": "/blog/selladores-de-rosca-teflon-vs-estopa-cual-elegir/", "texto": "Selladores de rosca: teflón vs estopa"}
+  ],
+  "tarjeta": {
+    "titulo": "Válvula de Retención 1\" HI Latón con Resorte Dura",
+    "extracto": "Válvula antirretorno en latón con resorte interior y rosca 1\" HI-HI. Cierre hermético para bombas de agua y estanques.",
+    "alt": "Válvula de retención de 1 pulgada HI en latón con resorte Dura",
+    "etiqueta": "Gasfitería"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "slug": "valvula-compuerta-1-2-hi-bronce-pn10-stretto",
+  "nombre": "Válvula compuerta 1/2 pulgada HI bronce PN10 Stretto",
+  "titulo_h1": "Válvula Compuerta 1/2\" HI Bronce PN10 Stretto",
+  "titulo_corto": "Válvula Compuerta 1/2\" Stretto",
+  "marca": "Stretto",
+  "sku": "110229651",
+  "precio_referencia": 4290,
+  "margen": 50,
+  "categoria": "gasfiteria",
+  "subcategoria": "Llaves de paso y válvulas",
+  "color": "Bronce con volante rojo",
+  "disponible": true,
+  "seo_titulo": "Válvula Compuerta 1/2\" HI Bronce Stretto",
+  "meta_descripcion": "Compra la válvula de compuerta 1/2\" HI de bronce Stretto PN10 a {precio}. Cierre gradual bidireccional para agua potable fría y caliente. Envíos a todo Chile.",
+  "og_descripcion": "Válvula compuerta 1/2\" HI Stretto en bronce macizo PN10. Corte bidireccional suave con volante rojo para instalaciones domiciliarias. Despacho a todo Chile.",
+  "descripcion": "Válvula de compuerta manual de 1/2 pulgada con rosca interior hembra-hembra (HI-HI) fabricada en bronce fundido por Stretto. Presenta grabado en relieve PN10 (según cuerpo de la válvula) que certifica una presión de trabajo de hasta 10 bar. Su mecanismo de cuña interior permite regular o interrumpir el flujo en ambos sentidos sin provocar golpes de ariete. Equipada con volante metálico lobulado de color rojo para accionamiento suave. Marca Stretto, garantía de 6 meses (según ficha técnica).",
+  "lede": "Para controlar el flujo de agua en líneas matrices o circuitos sanitarios con un cierre gradual y sin vibraciones, esta **válvula de compuerta Stretto de 1/2\" HI en bronce** ofrece robustez y durabilidad. Con **presión nominal PN10** grabada en el metal, cuerpo de bronce forjado y un **volante rojo ergonómico**, resiste altas exigencias en agua fría y caliente.",
+  "fotos": [
+    {
+      "url": "https://media.falabella.com/sodimacCL/411094_01/w=1200,h=1200,fit=cover",
+      "alt": "Válvula de compuerta 1/2 pulgada HI en bronce Stretto con volante rojo vista frontal",
+      "miniatura": "Ver vista frontal"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/411094_21/w=1200,h=1200,fit=cover",
+      "alt": "Vista en perspectiva de la válvula compuerta Stretto mostrando relieve PN10 y bocas hexagonales",
+      "miniatura": "Ver vista lateral"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/411094_22/w=1200,h=1200,fit=cover",
+      "alt": "Detalle de la conexión roscada hembra de 1/2 pulgada y volante de accionamiento rojo",
+      "miniatura": "Ver rosca y volante"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    ["Marca", "Stretto"],
+    ["Tipo de válvula", "Válvula de compuerta bidireccional (según ficha técnica)"],
+    ["Diámetro nominal", "1/2 pulgada (según ficha técnica)"],
+    ["Tipo de conexión", "Roscada hembra-hembra HI-HI (según ficha técnica)"],
+    ["Material del cuerpo", "Bronce fundido (según ficha técnica)"],
+    ["Presión nominal", "PN 10 bar (según relieve en el cuerpo de la válvula)"],
+    ["Volante de control", "Metálico circular lobulado color rojo (según producto)"],
+    ["Uso recomendado", "Agua potable fría y caliente (según ficha técnica)"],
+    ["Garantía", "6 meses (según ficha técnica)"]
+  ],
+  "confianza": [
+    {"titulo": "🚰 Bronce PN10", "detalle": "Presión 10 bar (según cuerpo válvula)"},
+    {"titulo": "🔄 Bidireccional", "detalle": "Corte de flujo en ambos sentidos"},
+    {"titulo": "🚚 Envío a todo Chile", "detalle": "Despacho a domicilio o retiro"},
+    {"titulo": "🛡️ Garantía 6 meses", "detalle": "Garantía oficial (según ficha técnica)"}
+  ],
+  "secciones": [
+    {
+      "id": "funcionamiento-de-compuerta",
+      "titulo": "¿Cuándo se recomienda una válvula de compuerta frente a una de esfera?",
+      "indice": "Funcionamiento",
+      "bloques": [
+        {"p": "A diferencia de las llaves de bola de un cuarto de vuelta, la **válvula de compuerta** baja una cuña de bronce mediante múltiples giros del volante:"},
+        {"lista": [
+          "Permite un cierre progresivo y suave que amortigua el golpe de ariete en cañerías largas",
+          "Actúa en ambos sentidos de flujo (bidireccional) sin alterar la circulación del agua",
+          "Paso totalmente recto cuando está 100% abierta, minimizando la turbulencia interior",
+          "Muy utilizada en matrices generales de casas, condominios y salas de bombas"
+        ]},
+        {"p": "Si vas a conectar terminales con hilo, revisa nuestra guía comparativa de [selladores de rosca: teflón vs estopa](/blog/selladores-de-rosca-teflon-vs-estopa-cual-elegir/)."}
+      ]
+    },
+    {
+      "id": "instalacion-en-lineas-de-agua",
+      "titulo": "Recomendaciones para el montaje y apriete de las conexiones HI",
+      "indice": "Montaje y apriete",
+      "bloques": [
+        {"p": "Para montar la válvula en terminales macho de cobre, bronce o planza sin fugar:"},
+        {"pasos": [
+          "Verifica que las roscas macho estén limpias y sin rebabas.",
+          "Aplica entre 6 y 8 vueltas de cinta teflón en las roscas macho en sentido horario.",
+          "Sujeta firmemente las caras hexagonales del extremo de la válvula con una llave fija mientras aprietas el terminal.",
+          "Evita forzar el volante más allá de su tope superior o inferior para no deformar el vástago interno.",
+          "Presuriza la línea lentamente para purgar el aire acumulado."
+        ]},
+        {"p": "Para más detalles sobre la correcta instalación en el hogar, lee [cómo instalar una llave de paso paso a paso](/blog/como-instalar-una-llave-de-paso-paso-a-paso/)."},
+        {"aviso": "Las válvulas de compuerta están diseñadas para trabajar completamente abiertas o completamente cerradas; no se aconseja dejarlas a medio abrir por períodos prolongados."}
+      ]
+    }
+  ],
+  "faq": [
+    {"pregunta": "¿Qué presión soporta esta válvula?", "respuesta": "Tiene grabado en el cuerpo metálico la indicación PN10, lo que corresponde a una presión nominal de trabajo de hasta 10 bar."},
+    {"pregunta": "¿Es apta para agua caliente de calefont o caldera?", "respuesta": "Sí, al estar fabricada completamente en bronce macizo, resiste sin problemas las temperaturas del agua caliente sanitaria."},
+    {"pregunta": "¿Qué ventaja tiene el cierre por volante frente a la palanca?", "respuesta": "El volante permite un cierre gradual que previene el golpe de ariete (ruidos y vibraciones bruscas en las cañerías) al cortar el agua."},
+    {"pregunta": "¿Hacen envíos a regiones de Chile?", "respuesta": "Sí, despachamos a todo el país. Puedes comprar en línea o pedir asistencia directa por WhatsApp."}
+  ],
+  "lateral": {
+    "etiqueta": "Gasfitería",
+    "titulo": "Válvula compuerta 1/2\" Stretto",
+    "texto": "Bronce fundido PN10 (10 bar) con rosca HI-HI 1/2\" y volante rojo. Cierre gradual bidireccional para agua potable."
+  },
+  "relacionados": [
+    "llave-de-paso-1-2-he-bronce-nibsa",
+    "valvula-bola-paso-estandar-1-2-genebre",
+    "llave-de-paso-1-2-so-bronce-stretto"
+  ],
+  "guias": [
+    {"url": "/blog/como-instalar-una-llave-de-paso-paso-a-paso/", "texto": "Cómo instalar una llave de paso paso a paso"},
+    {"url": "/blog/selladores-de-rosca-teflon-vs-estopa-cual-elegir/", "texto": "Selladores de rosca: teflón vs estopa"},
+    {"url": "/blog/como-reparar-fuga-en-llave-de-paso-chile/", "texto": "Cómo reparar fugas en llaves de paso"}
+  ],
+  "tarjeta": {
+    "titulo": "Válvula Compuerta 1/2\" HI Bronce PN10 Stretto",
+    "extracto": "Válvula de compuerta en bronce macizo PN10 (10 bar) con rosca 1/2\" HI-HI y volante rojo. Cierre gradual bidireccional.",
+    "alt": "Válvula de compuerta 1/2 pulgada HI en bronce PN10 Stretto con volante rojo",
+    "etiqueta": "Gasfitería"
+  }
+}
