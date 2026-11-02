@@ -1,0 +1,119 @@
+{
+  "slug": "valvula-bola-paso-estandar-1-2-genebre",
+  "nombre": "Válvula de bola paso estándar 1/2 pulgada Genebre",
+  "titulo_h1": "Válvula de Bola Paso Estándar 1/2\" HI-HI Genebre",
+  "titulo_corto": "Válvula Bola 1/2\" Genebre",
+  "marca": "Genebre",
+  "sku": "110219742",
+  "precio_referencia": 5590,
+  "margen": 50,
+  "categoria": "gasfiteria",
+  "subcategoria": "Válvulas esféricas y de bola",
+  "color": "Cromado con palanca roja",
+  "disponible": true,
+  "seo_titulo": "Válvula de Bola Paso Estándar 1/2\" Genebre",
+  "meta_descripcion": "Compra la válvula de bola paso estándar 1/2\" HI-HI Genebre a {precio}. Cuerpo de latón cromado PN25 para agua potable y riego. Despacho a todo Chile.",
+  "og_descripcion": "Válvula de esfera 1/2\" Genebre en latón cromado con palanca de acero. Presión máxima PN25 para agua potable e instalaciones sanitarias.",
+  "descripcion": "Válvula de corte esférica (bola) de 1/2 pulgada con paso estándar fabricada en latón forjado cromado según norma UNE-EN 12165 por Genebre. Extremos con rosca hembra (BSP) ISO 228/1, asientos de teflón puro (PTFE) y accionamiento mediante palanca de acero niquelado con funda roja protectora. Soporta hasta 25 bar de presión (PN25) y un rango térmico de -20 °C a 110 °C. Apta para instalaciones sanitarias, agua potable y circuitos de riego. Marca Genebre, garantía del fabricante de 6 meses.",
+  "lede": "Cuando requieres un corte de agua instantáneo de un cuarto de vuelta con mínima pérdida de presión, esta **válvula de bola Genebre de 1/2\\\" en latón cromado** entrega máxima confiabilidad. Fabricada bajo estrictas normas europeas con **asientos de PTFE y presión nominal PN25**, cuenta con **palanca de acero ergonómica** para abrir o cerrar el paso en un solo movimiento.",
+  "fotos": [
+    {
+      "url": "https://media.falabella.com/sodimacCL/664952_01/w=1200,h=1200,fit=cover",
+      "alt": "Válvula de bola 1/2 pulgada paso estándar Genebre en latón cromado con palanca roja",
+      "miniatura": "Ver vista frontal"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/664952_12/w=1200,h=1200,fit=cover",
+      "alt": "Vista lateral del cuerpo de latón cromado y rosca hembra de la válvula Genebre",
+      "miniatura": "Ver vista lateral"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/664952_21/w=1200,h=1200,fit=cover",
+      "alt": "Detalle en perspectiva de la palanca roja de accionamiento y la esfera interna",
+      "miniatura": "Ver palanca y esfera"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    ["Marca", "Genebre"],
+    ["Tipo de válvula", "Válvula de esfera (bola) paso estándar"],
+    ["Diámetro nominal", "1/2 pulgada"],
+    ["Tipo de conexión", "Extremos hembra-hembra (HI-HI) rosca BSP ISO 228/1"],
+    ["Material del cuerpo", "Latón forjado cromado UNE-EN 12165"],
+    ["Presión nominal", "PN 25 bar (362 psi)"],
+    ["Rango de temperatura", "-20 °C a 110 °C"],
+    ["Material de asientos", "PTFE (teflón puro)"],
+    ["Accionamiento", "Palanca de acero con funda plástica roja"],
+    ["Garantía", "6 meses (fabricante)"]
+  ],
+  "confianza": [
+    {"titulo": "💪 Presión PN25", "detalle": "Soporta hasta 25 bar de presión"},
+    {"titulo": "⚡ Cierre 1/4 de vuelta", "detalle": "Apertura y corte instantáneo"},
+    {"titulo": "🚚 Envío a todo Chile", "detalle": "Despacho a domicilio o retiro"},
+    {"titulo": "🛡️ Garantía 6 meses", "detalle": "Garantía oficial del fabricante"}
+  ],
+  "secciones": [
+    {
+      "id": "ventajas-de-la-valvula-esferica",
+      "titulo": "¿Por qué elegir una válvula de bola frente a una llave tradicional?",
+      "indice": "Ventajas del sistema",
+      "bloques": [
+        {"p": "Las válvulas de bola o esfera son la opción preferida por gasfíteres e instaladores profesionales por su rapidez y durabilidad:"},
+        {"lista": [
+          "Apertura y cierre inmediato con un simple giro de 90 grados (1/4 de vuelta)",
+          "Menor caída de presión gracias a su paso directo que no frena el caudal",
+          "Asientos de teflón que evitan adherencia de cal y sarro con el tiempo",
+          "Indicación visual clara: si la palanca está en línea con el tubo, está abierta; si está cruzada, está cerrada"
+        ]},
+        {"p": "Para saber cómo instalarla en tramos de cañería domiciliaria, revisa nuestra guía paso a paso sobre [cómo instalar una llave de paso](/blog/como-instalar-una-llave-de-paso-paso-a-paso/)."}
+      ]
+    },
+    {
+      "id": "recomendaciones-de-montaje",
+      "titulo": "Instalación hermética y recomendaciones de uso",
+      "indice": "Montaje hermético",
+      "bloques": [
+        {"p": "Al instalar esta válvula en tuberías de agua potable, calefacción o riego, ten presente las siguientes recomendaciones:"},
+        {"pasos": [
+          "Verifica el sentido del caudal si bien las válvulas de esfera son bidireccionales, procura orientar la palanca en el ángulo de más fácil accionamiento.",
+          "Aplica cinta teflón o pasta sellante en los hilos macho que ingresarán a la válvula.",
+          "Sujeta el cuerpo de la válvula con la llave fija en el mismo extremo donde estás enroscando, evitando ejercer torsión que desalinee el cuerpo central.",
+          "No utilices extensiones de palanca para forzar el cierre; el diseño de la manilla ofrece la fuerza adecuada para un cierre hermético suave.",
+          "Verifica la presión del circuito abriendo el suministro gradualmente para evitar golpes de ariete."
+        ]},
+        {"p": "Para más detalles sobre los sellantes indicados, consulta [selladores de rosca: teflón vs estopa](/blog/selladores-de-rosca-teflon-vs-estopa-cual-elegir/)."},
+        {"advertencia": "Evita dejar la palanca a medio abrir de forma permanente para regular caudal fino, ya que los fluidos a alta velocidad pueden erosionar los asientos de teflón; para regulación gradual se recomienda una llave de globo."}
+      ]
+    }
+  ],
+  "faq": [
+    {"pregunta": "¿Qué tipo de rosca tienen los extremos?", "respuesta": "Tiene roscas interiores hembra (HI-HI) de 1/2 pulgada bajo norma estándar BSP (ISO 228/1), compatibles con terminales y niples de gasfitería en Chile."},
+    {"pregunta": "¿Sirve para agua fría y caliente?", "respuesta": "Sí, soporta un rango de temperatura entre -20 °C y 110 °C, por lo que es totalmente apta para agua potable fría y circuitos de agua caliente sanitaria."},
+    {"pregunta": "¿Cuál es la diferencia entre paso total y paso estándar?", "respuesta": "El paso estándar tiene un diámetro interior de la esfera ligeramente menor al tubo (aproximadamente un 80-90% del diámetro nominal), ofreciendo excelente caudal a un precio más accesible."},
+    {"pregunta": "¿Hacen envíos a regiones de Chile?", "respuesta": "Sí, despachamos a todo el país. Puedes realizar tu compra en la tienda online o solicitar cotización directa por WhatsApp."}
+  ],
+  "lateral": {
+    "etiqueta": "Gasfitería",
+    "titulo": "Válvula de bola 1/2\" Genebre",
+    "texto": "Corte de esfera 1/4 de vuelta en latón cromado PN25. Asientos de teflón y palanca roja para control rápido y hermético de agua."
+  },
+  "relacionados": [
+    "llave-de-paso-1-2-he-bronce-nibsa",
+    "llave-de-jardin-1-2-he-bronce-stretto",
+    "llave-de-paso-1-2-so-bronce-stretto"
+  ],
+  "guias": [
+    {"url": "/blog/como-instalar-una-llave-de-paso-paso-a-paso/", "texto": "Cómo instalar una llave de paso paso a paso"},
+    {"url": "/blog/selladores-de-rosca-teflon-vs-estopa-cual-elegir/", "texto": "Selladores de rosca: teflón vs estopa"},
+    {"url": "/blog/como-detectar-y-reparar-fugas-de-agua-en-casa/", "texto": "Cómo detectar y reparar fugas de agua"}
+  ],
+  "tarjeta": {
+    "titulo": "Válvula de Bola Paso Estándar 1/2\" Genebre",
+    "extracto": "Válvula de esfera en latón cromado PN25 de 1/2\" HI-HI con palanca roja. Corte rápido de un cuarto de vuelta para agua potable.",
+    "alt": "Válvula de esfera paso estándar 1/2 pulgada Genebre con palanca roja",
+    "etiqueta": "Gasfitería"
+  }
+}
