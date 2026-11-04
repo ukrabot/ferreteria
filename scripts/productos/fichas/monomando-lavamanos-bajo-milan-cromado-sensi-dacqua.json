@@ -1,0 +1,176 @@
+{
+  "slug": "monomando-lavamanos-bajo-milan-cromado-sensi-dacqua",
+  "nombre": "Monomando para lavamanos bajo Milán cromado Sensi Dacqua",
+  "titulo_h1": "Monomando para Lavamanos Bajo Milán Cromado Sensi Dacqua",
+  "titulo_corto": "Monomando Bajo Milán Sensi Dacqua",
+  "marca": "Sensi Dacqua",
+  "sku": "110153906",
+  "precio_referencia": 23990,
+  "margen": 50,
+  "categoria": "gasfiteria",
+  "subcategoria": "Grifería de lavamanos",
+  "color": "Cromado",
+  "disponible": true,
+  "seo_titulo": "Monomando Lavamanos Milán Cromado Sensi Dacqua",
+  "meta_descripcion": "Compra el monomando para lavamanos bajo Milán Sensi Dacqua a {precio}. Latón cromado, cartucho cerámico, aireador Neoperl y flexibles. Envíos a todo Chile.",
+  "og_descripcion": "Grifería monomando para lavamanos colección Milán de Sensi Dacqua. Cuerpo de latón cromado con aireador Neoperl y flexibles certificados.",
+  "descripcion": "Grifería monomando de caño bajo colección Milán de Sensi Dacqua para lavamanos tradicionales o vanitorios. Estructura de latón en acabado cromado brillante, cartucho cerámico duradero, aireador Neoperl Coin Slot desmontable con una moneda y flexibles vinílicos certificados.",
+  "lede": "¿Buscas una grifería clásica y duradera para el lavamanos de tu baño? El **monomando bajo Milán de Sensi Dacqua** combina un cuerpo macizo de **latón en acabado cromado**, cartucho cerámico, **aireador Neoperl Coin Slot** y flexibles vinílicos certificados.",
+  "fotos": [
+    {
+      "url": "https://media.falabella.com/sodimacCL/3241955_01/w=1200,h=1200,fit=cover",
+      "alt": "Monomando bajo para lavamanos Milán Sensi Dacqua en latón cromado visto de frente",
+      "miniatura": "Ver grifo de frente"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/3241955_02/w=1200,h=1200,fit=cover",
+      "alt": "Vista de perfil del monomando Milán mostrando la curvatura del caño y manilla lever",
+      "miniatura": "Ver perfil lateral"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/3241955_05/w=1200,h=1200,fit=cover",
+      "alt": "Vista en ángulo tres cuartos del monomando cromado Milán",
+      "miniatura": "Ver ángulo tres cuartos"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/3241955_12/w=1200,h=1200,fit=cover",
+      "alt": "Detalle del caño con aireador Neoperl Coin Slot desmontable con moneda",
+      "miniatura": "Ver aireador Neoperl"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/3241955_17/w=1200,h=1200,fit=cover",
+      "alt": "Flexibles vinílicos certificados y herradura de anclaje para lavamanos",
+      "miniatura": "Ver flexibles y anclaje"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    [
+      "Marca",
+      "Sensi Dacqua"
+    ],
+    [
+      "Colección",
+      "Milán"
+    ],
+    [
+      "Material",
+      "Latón (según ficha técnica)"
+    ],
+    [
+      "Acabado",
+      "Cromado brillante"
+    ],
+    [
+      "Aireador",
+      "Neoperl Coin Slot"
+    ],
+    [
+      "Cartucho cerámico",
+      "Sí"
+    ],
+    [
+      "Tipo de altura",
+      "Baja"
+    ],
+    [
+      "Garantía",
+      "6 meses"
+    ]
+  ],
+  "confianza": [
+    {
+      "titulo": "🏛️ Estructura de latón",
+      "detalle": "Material sólido y resistente a la corrosión"
+    },
+    {
+      "titulo": "🪙 Aireador Coin Slot",
+      "detalle": "Desarmable fácilmente usando una moneda"
+    },
+    {
+      "titulo": "💧 Cartucho cerámico",
+      "detalle": "Suavidad de giro y cierre estanco"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Garantía de nuestra tienda"
+    }
+  ],
+  "secciones": [
+    {
+      "id": "calidad-y-funcionalidad",
+      "titulo": "¿Qué ventajas ofrece la grifería Milán de Sensi Dacqua?",
+      "indice": "Ventajas",
+      "bloques": [
+        {
+          "p": "La serie **Milán de Sensi Dacqua** es una de las más elegidas para baños residenciales gracias a su forma redondeada atemporal que combina con cualquier estilo de lavamanos."
+        },
+        {
+          "p": "Incorpora un **aireador Neoperl Coin Slot** que se desenrosca cómodamente usando solo una moneda corriente, facilitando la limpieza periódica del sarro acumulado sin rayar el cromo con herramientas metálicas."
+        },
+        {
+          "lista": [
+            "Qué incluye el kit: monomando bajo Milán, flexibles vinílicos certificados, aireador Neoperl y fijaciones",
+            "Qué se compra por separado: la válvula de desagüe para el lavamanos y el sifón de descarga",
+            "Cuerpo de latón con recubrimiento de cromo multicapa que previene el desgaste prematuro"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "instalacion-en-el-bano",
+      "titulo": "Recomendaciones para el montaje y apriete",
+      "indice": "Instalación",
+      "bloques": [
+        {
+          "p": "Inserta los flexibles por el orificio del lavamanos y fija la placa de herradura desde abajo apretando la tuerca hasta que la base quede firme."
+        },
+        {
+          "aviso": "No utilices teflón en los extremos de los flexibles que llevan sello de goma cónico; el apriete correcto garantiza el sellado."
+        },
+        {
+          "p": "Si vas a revisar cañerías o conexiones generales de agua, consulta nuestra guía sobre [cómo instalar una llave de paso](/blog/como-instalar-una-llave-de-paso-paso-a-paso/)."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Cómo se limpia el aireador si baja el caudal?",
+      "respuesta": "Colocas una moneda en la ranura frontal del aireador Neoperl Coin Slot y giras hacia la izquierda para retirarlo y lavar la rejilla bajo el agua."
+    },
+    {
+      "pregunta": "¿Vienen incluidos los flexibles de agua fría y caliente?",
+      "respuesta": "Sí, el conjunto trae sus dos flexibles vinílicos certificados listos para conectar a las tomas de agua del muro."
+    },
+    {
+      "pregunta": "¿Para qué tipo de lavamanos está recomendado?",
+      "respuesta": "Por su caño bajo, está pensado para lavamanos estándar empotrados, de sobreponer en loza o integrados en vanitorios (no sobrepuestos tipo bowl alto)."
+    }
+  ],
+  "aviso_final": "Los precios incluyen IVA. Se recomienda limpiar con jabón neutro y paño de microfibra.",
+  "lateral": {
+    "etiqueta": "Línea Clásica",
+    "titulo": "Milán Sensi Dacqua",
+    "texto": "Monomando bajo de latón cromado con aireador Neoperl Coin Slot y flexibles certificados. Garantía de 6 meses."
+  },
+  "relacionados": [
+    "monomando-lavamanos-modena-eco-cromado-stretto",
+    "monomando-lavamanos-bajo-vittorio-cromado-sensi-dacqua"
+  ],
+  "guias": [
+    {
+      "url": "/blog/como-instalar-una-llave-de-paso-paso-a-paso/",
+      "texto": "Cómo instalar una llave de paso"
+    }
+  ],
+  "tarjeta": {
+    "titulo": "Monomando para Lavamanos Bajo Milán Cromado Sensi Dacqua",
+    "extracto": "Grifería monomando de caño bajo en latón cromado con aireador Neoperl Coin Slot y flexibles vinílicos.",
+    "alt": "Monomando para lavamanos bajo Milán Sensi Dacqua cromado",
+    "etiqueta": "Gasfitería"
+  }
+}
