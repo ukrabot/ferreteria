@@ -178,6 +178,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Quincho con Parrilla',
     filename: 'Pack-Quincho-Parrilla-Ferreteria-Ukra.zip',
   },
+  'pack-ventanas-termopanel-medicion-valor-u-excel': {
+    name: 'Pack Ventanas Termopanel',
+    filename: 'Pack-Ventanas-Termopanel-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1671,6 +1675,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-QUINCHO',
+  },
+  {
+    slug: 'pack-ventanas-termopanel-medicion-valor-u-excel',
+    name: 'Pack Ventanas Termopanel: Planilla Excel de Medición de Vanos, Valor U de la Ventana Completa, Condensación y Cotizaciones + Guía de Compra + Hoja de Medición e Instalación',
+    price: 7990,
+    image: '/producto/pack-ventanas-termopanel-medicion-valor-u-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-TERMOPANEL',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
