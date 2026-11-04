@@ -1,0 +1,166 @@
+{
+  "slug": "monomando-lavamanos-atlanta-cromado-karson",
+  "nombre": "Monomando para lavamanos Atlanta cromado Karson",
+  "titulo_h1": "Monomando para Lavamanos Atlanta Cromado Karson",
+  "titulo_corto": "Monomando Atlanta Cromado Karson",
+  "marca": "Karson",
+  "sku": "127111927",
+  "precio_referencia": 13990,
+  "margen": 50,
+  "categoria": "gasfiteria",
+  "subcategoria": "Grifería de lavamanos",
+  "color": "Cromado",
+  "disponible": true,
+  "seo_titulo": "Monomando Lavamanos Atlanta Cromado Karson",
+  "meta_descripcion": "Compra el monomando para lavamanos Atlanta Karson cromado a {precio}. Apertura en frío, cartucho cerámico, 2 flexibles M10 x 1/2 y fijación. Envíos a todo Chile.",
+  "og_descripcion": "Grifería monomando para lavamanos Karson Atlanta en acabado cromado brillante. Tecnología de apertura en frío y flexibles incluidos.",
+  "descripcion": "Grifería monomando para lavamanos modelo Atlanta de Karson. Cuenta con cuerpo de polímero ABS cromado libre de plomo, cartucho cerámico para control de agua fría y caliente, apertura en frío para ahorro de energía, 2 flexibles M10 x 1/2 HI y anclaje por herradura.",
+  "lede": "¿Buscas una grifería moderna y accesible que te ayude a ahorrar gas en el baño? El **monomando Atlanta de Karson** cuenta con **apertura en frío**, cartucho cerámico, cuerpo cromado libre de plomo y **2 flexibles de conexión incluidos**.",
+  "fotos": [
+    {
+      "url": "https://media.falabella.com/sodimacCL/7465262_01/w=1200,h=1200,fit=cover",
+      "alt": "Monomando de lavamanos Karson Atlanta en acabado cromado brillante visto de frente",
+      "miniatura": "Ver grifo de frente"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/7465262_21/w=1200,h=1200,fit=cover",
+      "alt": "Detalle superior de la manilla lever y el cuerpo cromado Karson Atlanta",
+      "miniatura": "Ver manilla lever"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/7465262_22/w=1200,h=1200,fit=cover",
+      "alt": "Vista lateral del monomando Karson Atlanta mostrando la inclinación del caño",
+      "miniatura": "Ver perfil lateral"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    [
+      "Marca",
+      "Karson"
+    ],
+    [
+      "Modelo",
+      "Atlanta"
+    ],
+    [
+      "Material",
+      "Polímero ABS (según ficha técnica)"
+    ],
+    [
+      "Acabado",
+      "Cromado brillante"
+    ],
+    [
+      "Sistema de ahorro",
+      "Apertura en frío"
+    ],
+    [
+      "Cartucho cerámico",
+      "Sí"
+    ],
+    [
+      "Consumo declarado",
+      "9 l/min (según ficha técnica)"
+    ],
+    [
+      "Garantía",
+      "6 meses"
+    ]
+  ],
+  "confianza": [
+    {
+      "titulo": "❄️ Apertura en frío",
+      "detalle": "Agua fría al centro sin encender el calefont"
+    },
+    {
+      "titulo": "💧 Cartucho cerámico",
+      "detalle": "Giro suave y cierre hermético duradero"
+    },
+    {
+      "titulo": "🔧 Kit de instalación",
+      "detalle": "Incluye 2 flexibles y fijación por herradura"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Garantía de nuestra tienda"
+    }
+  ],
+  "secciones": [
+    {
+      "id": "ahorro-y-construccion",
+      "titulo": "¿Cómo ayuda la línea Atlanta a reducir el consumo en casa?",
+      "indice": "Ahorro de gas y agua",
+      "bloques": [
+        {
+          "p": "El monomando **Atlanta de Karson** está equipado con apertura en frío en la posición central de la manilla, lo que evita que el calefont prenda de manera innecesaria cuando solo necesitas lavarte las manos o cepillarte los dientes."
+        },
+        {
+          "p": "Su cuerpo de **polímero ABS de alta resistencia con terminación cromada** no se pica por la humedad y garantiza una conducción de agua potable libre de plomo."
+        },
+        {
+          "lista": [
+            "Qué incluye el kit: cuerpo monomando Atlanta, 2 flexibles M10 x 1/2 pulgada HI, set de herradura y 2 aireadores",
+            "Qué se compra por separado: la válvula de desagüe para el lavamanos y el sifón corrugado o rígido",
+            "Consumo moderado de 9 litros por minuto (según ficha técnica) con chorro aireado y uniforme"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "instalacion-sencilla",
+      "titulo": "Fijación sobre cubierta o loza sanitaria",
+      "indice": "Instalación",
+      "bloques": [
+        {
+          "p": "Calza en orificios estándar de lavamanos y vanitorios, sujetándose firmemente mediante su perno roscado y arandela de herradura por debajo del mueble."
+        },
+        {
+          "aviso": "Cierra las llaves de paso antes de desinstalar la grifería antigua y comprueba el estado de las gomas de los flexibles."
+        },
+        {
+          "p": "Encuentra más recomendaciones de gasfitería doméstica en nuestra guía sobre [cómo instalar una llave de paso](/blog/como-instalar-una-llave-de-paso-paso-a-paso/)."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Qué significa que tenga apertura en frío?",
+      "respuesta": "Significa que al levantar la palanca en el centro solo sale agua fría; para activar el agua caliente debes girar la manilla hacia la izquierda, evitando consumos innecesarios de gas."
+    },
+    {
+      "pregunta": "¿Viene con los flexibles incluidos?",
+      "respuesta": "Sí, el conjunto trae 2 flexibles con rosca M10 para el grifo y tuerca de 1/2 pulgada HI para las llaves del muro."
+    },
+    {
+      "pregunta": "¿El desagüe viene en la caja?",
+      "respuesta": "No, el kit incluye el grifo monomando y sus fijaciones. La válvula de desagüe y el sifón se compran por separado según el modelo de lavamanos."
+    }
+  ],
+  "aviso_final": "Los precios incluyen IVA. Se aconseja limpiar con un paño de microfibra sin limpiadores abrasivos.",
+  "lateral": {
+    "etiqueta": "Económico y Eficiente",
+    "titulo": "Atlanta Karson",
+    "texto": "Monomando cromado con apertura en frío, cartucho cerámico y flexibles de conexión. Garantía de 6 meses."
+  },
+  "relacionados": [
+    "monomando-lavamanos-cromado-karson",
+    "monomando-lavamanos-modena-eco-cromado-stretto"
+  ],
+  "guias": [
+    {
+      "url": "/blog/como-instalar-una-llave-de-paso-paso-a-paso/",
+      "texto": "Cómo instalar una llave de paso"
+    }
+  ],
+  "tarjeta": {
+    "titulo": "Monomando para Lavamanos Atlanta Cromado Karson",
+    "extracto": "Grifería de lavamanos cromada con apertura en frío para ahorro de gas. Incluye 2 flexibles y cartucho cerámico.",
+    "alt": "Monomando para lavamanos Atlanta Karson cromado",
+    "etiqueta": "Gasfitería"
+  }
+}
