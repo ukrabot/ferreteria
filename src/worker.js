@@ -162,6 +162,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Cubierta de Cocina',
     filename: 'Pack-Cubierta-de-Cocina-Ferreteria-Ukra.zip',
   },
+  'pack-grosor-cable-extension-seccion-caida-excel': {
+    name: 'Pack Grosor de Cable para Extensión',
+    filename: 'Pack-Grosor-Cable-Extension-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1619,6 +1623,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-CUBIERTA',
+  },
+  {
+    slug: 'pack-grosor-cable-extension-seccion-caida-excel',
+    name: 'Pack Grosor de Cable para Extensión: Planilla Excel de Sección por Corriente y Caída de Tensión, Enchufe y Tipo de Cordón + Tabla Rápida + Armar y Revisar una Extensión',
+    price: 7990,
+    image: '/producto/pack-grosor-cable-extension-seccion-caida-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-EXTENSION',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
