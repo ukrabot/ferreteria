@@ -19,18 +19,18 @@
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/7465262_01/w=1200,h=1200,fit=cover",
-      "alt": "Monomando de lavamanos Karson Atlanta en acabado cromado brillante visto de frente",
-      "miniatura": "Ver grifo de frente"
+      "alt": "Monomando para lavamanos Atlanta Karson cromado, vista de frente",
+      "miniatura": "Ver de frente"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7465262_21/w=1200,h=1200,fit=cover",
-      "alt": "Detalle superior de la manilla lever y el cuerpo cromado Karson Atlanta",
-      "miniatura": "Ver manilla lever"
+      "alt": "Detalle del caño del monomando Atlanta Karson",
+      "miniatura": "Ver el caño"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7465262_22/w=1200,h=1200,fit=cover",
-      "alt": "Vista lateral del monomando Karson Atlanta mostrando la inclinación del caño",
-      "miniatura": "Ver perfil lateral"
+      "alt": "Detalle de la manilla y la indicación de agua fría y caliente del monomando Atlanta",
+      "miniatura": "Ver la manilla"
     }
   ],
   "stock": {
@@ -99,7 +99,7 @@
           "p": "El monomando **Atlanta de Karson** está equipado con apertura en frío en la posición central de la manilla, lo que evita que el calefont prenda de manera innecesaria cuando solo necesitas lavarte las manos o cepillarte los dientes."
         },
         {
-          "p": "Su cuerpo de **polímero ABS de alta resistencia con terminación cromada** no se pica por la humedad y garantiza una conducción de agua potable libre de plomo."
+          "p": "Su cuerpo es de **polímero ABS con terminación cromada** (según ficha técnica): es liviano y no se oxida. Para que el cromado dure, límpialo con paño húmedo y jabón neutro, sin abrasivos."
         },
         {
           "lista": [
@@ -152,6 +152,10 @@
     "monomando-lavamanos-modena-eco-cromado-stretto"
   ],
   "guias": [
+    {
+      "url": "/blog/instalar-llave-mezcladora/",
+      "texto": "Cómo instalar una llave mezcladora"
+    },
     {
       "url": "/blog/como-instalar-una-llave-de-paso-paso-a-paso/",
       "texto": "Cómo instalar una llave de paso"

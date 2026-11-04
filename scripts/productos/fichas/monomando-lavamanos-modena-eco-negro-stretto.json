@@ -19,23 +19,23 @@
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/7465130_01/w=1200,h=1200,fit=cover",
-      "alt": "Monomando de lavamanos Stretto Modena Eco en acabado negro mate visto de frente",
-      "miniatura": "Ver grifo de frente"
+      "alt": "Monomando para lavamanos Modena Eco Stretto negro mate, vista de frente",
+      "miniatura": "Ver de frente"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7465130_04/w=1200,h=1200,fit=cover",
-      "alt": "Vista lateral del monomando Stretto Modena Eco negro mostrando el caño curvo y manilla lever",
-      "miniatura": "Ver perfil lateral"
+      "alt": "Monomando Modena Eco negro instalado en un vanitorio",
+      "miniatura": "Ver en un baño"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7465130_05/w=1200,h=1200,fit=cover",
-      "alt": "Vista en ángulo tres cuartos del monomando negro mate Stretto Modena Eco",
-      "miniatura": "Ver vista en ángulo"
+      "alt": "Monomando Modena Eco negro sobre un lavamanos",
+      "miniatura": "Ver instalado"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7465130_02/w=1200,h=1200,fit=cover",
-      "alt": "Detalle superior de la manilla lever metálica en negro mate Stretto",
-      "miniatura": "Ver detalle manilla"
+      "alt": "Monomando Modena Eco negro mate, vista de lado",
+      "miniatura": "Ver de lado"
     }
   ],
   "stock": {
@@ -134,8 +134,8 @@
   ],
   "faq": [
     {
-      "pregunta": "¿El color negro se sale con el uso?",
-      "respuesta": "No, cuenta con un recubrimiento especial de alta adherencia diseñado para resistir la humedad del baño; solo debes evitar esponjas abrasivas al limpiarlo."
+      "pregunta": "¿Cómo cuido el color negro?",
+      "respuesta": "Límpialo solo con un paño húmedo y jabón neutro. Evita esponjas abrasivas, cloro y antisarro fuertes, que pueden dañar la terminación mate."
     },
     {
       "pregunta": "¿Incluye los flexibles de conexión?",
@@ -157,6 +157,10 @@
     "monomando-lavamanos-bajo-vittorio-cromado-sensi-dacqua"
   ],
   "guias": [
+    {
+      "url": "/blog/instalar-llave-mezcladora/",
+      "texto": "Cómo instalar una llave mezcladora"
+    },
     {
       "url": "/blog/como-instalar-una-llave-de-paso-paso-a-paso/",
       "texto": "Cómo instalar una llave de paso"

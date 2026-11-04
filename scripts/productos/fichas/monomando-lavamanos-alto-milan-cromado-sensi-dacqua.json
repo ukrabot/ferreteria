@@ -19,28 +19,28 @@
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/3241963_01/w=1200,h=1200,fit=cover",
-      "alt": "Monomando de caño alto Milán Sensi Dacqua en latón cromado visto de frente",
-      "miniatura": "Ver grifo de frente"
+      "alt": "Monomando de caño alto Milán Sensi Dacqua cromado, vista de frente",
+      "miniatura": "Ver de frente"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/3241963_02/w=1200,h=1200,fit=cover",
-      "alt": "Vista lateral del monomando alto Milán mostrando la altura del cuerpo y caída del agua",
-      "miniatura": "Ver perfil lateral"
+      "alt": "Monomando alto Milán instalado sobre un lavamanos de vidrio tipo bowl en un vanitorio",
+      "miniatura": "Ver en un baño"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/3241963_03/w=1200,h=1200,fit=cover",
-      "alt": "Vista en ángulo tres cuartos del monomando alto cromado Milán",
-      "miniatura": "Ver ángulo tres cuartos"
+      "alt": "Monomando alto Milán cromado junto a un lavamanos sobre cubierta",
+      "miniatura": "Ver instalado"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/3241963_12/w=1200,h=1200,fit=cover",
-      "alt": "Detalle del caño elevado con aireador Neoperl Coin Slot desmontable con moneda",
-      "miniatura": "Ver caño y aireador"
+      "alt": "Monomando alto Milán cromado, otra vista",
+      "miniatura": "Ver otra vista"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/3241963_17/w=1200,h=1200,fit=cover",
-      "alt": "Flexibles vinílicos certificados y set de fijación tipo herradura para cubierta",
-      "miniatura": "Ver flexibles y fijación"
+      "alt": "Flexibles de conexión y fijación tipo herradura del monomando Milán",
+      "miniatura": "Ver lo que incluye"
     }
   ],
   "stock": {
@@ -78,7 +78,7 @@
     ],
     [
       "Consumo declarado",
-      "11.09 l/min (según ficha técnica)"
+      "11,09 l/min (según ficha técnica)"
     ],
     [
       "Garantía",
@@ -166,6 +166,10 @@
     "monomando-lavamanos-bajo-vittorio-cromado-sensi-dacqua"
   ],
   "guias": [
+    {
+      "url": "/blog/instalar-llave-mezcladora/",
+      "texto": "Cómo instalar una llave mezcladora"
+    },
     {
       "url": "/blog/como-instalar-una-llave-de-paso-paso-a-paso/",
       "texto": "Cómo instalar una llave de paso"

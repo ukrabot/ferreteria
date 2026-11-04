@@ -19,28 +19,28 @@
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/3241912_01/w=1200,h=1200,fit=cover",
-      "alt": "Monomando para lavamanos Perugia Sensi Dacqua en latón cromado visto de frente",
-      "miniatura": "Ver grifo de frente"
+      "alt": "Monomando para lavamanos Perugia Sensi Dacqua cromado, vista de frente",
+      "miniatura": "Ver de frente"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/3241912_03/w=1200,h=1200,fit=cover",
-      "alt": "Vista lateral del monomando Perugia mostrando el caño corto y manilla lever superior",
-      "miniatura": "Ver perfil lateral"
+      "alt": "Monomando Perugia instalado en un lavamanos",
+      "miniatura": "Ver instalado"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/3241912_04/w=1200,h=1200,fit=cover",
-      "alt": "Vista en ángulo superior del monomando cromado Perugia",
-      "miniatura": "Ver ángulo superior"
+      "alt": "Monomando Perugia sobre un lavamanos en un baño",
+      "miniatura": "Ver en un baño"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/3241912_12/w=1200,h=1200,fit=cover",
-      "alt": "Detalle del aireador Neoperl Coin Slot desmontable en el caño del grifo",
-      "miniatura": "Ver aireador Neoperl"
+      "alt": "Monomando Perugia cromado, vista en ángulo",
+      "miniatura": "Ver en ángulo"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/3241912_17/w=1200,h=1200,fit=cover",
-      "alt": "Flexibles vinílicos certificados y herrajes de fijación para lavamanos",
-      "miniatura": "Ver flexibles y herrajes"
+      "alt": "Monomando Perugia cromado, vista de lado",
+      "miniatura": "Ver de lado"
     }
   ],
   "stock": {
@@ -74,7 +74,7 @@
     ],
     [
       "Consumo declarado",
-      "11.4 l/min (según ficha técnica)"
+      "11,4 l/min (según ficha técnica)"
     ],
     [
       "Garantía",
@@ -162,6 +162,10 @@
     "monomando-lavamanos-new-barcelona-cepillado-fanaloza"
   ],
   "guias": [
+    {
+      "url": "/blog/instalar-llave-mezcladora/",
+      "texto": "Cómo instalar una llave mezcladora"
+    },
     {
       "url": "/blog/como-instalar-una-llave-de-paso-paso-a-paso/",
       "texto": "Cómo instalar una llave de paso"

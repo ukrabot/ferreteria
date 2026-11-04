@@ -19,23 +19,23 @@
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/746519X_01/w=1200,h=1200,fit=cover",
-      "alt": "Monomando de lavamanos Modena Eco Stretto en acabado cromado brillante visto de frente",
-      "miniatura": "Ver grifo de frente"
+      "alt": "Monomando para lavamanos Modena Eco Stretto cromado, vista de frente",
+      "miniatura": "Ver de frente"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/746519X_04/w=1200,h=1200,fit=cover",
-      "alt": "Vista lateral del monomando Stretto Modena Eco mostrando la curvatura del caño y manilla lever",
-      "miniatura": "Ver perfil lateral"
+      "alt": "Monomando Modena Eco cromado instalado en un vanitorio",
+      "miniatura": "Ver en un baño"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/746519X_03/w=1200,h=1200,fit=cover",
-      "alt": "Vista en ángulo tres cuartos del monomando cromado Stretto Modena Eco",
-      "miniatura": "Ver vista en ángulo"
+      "alt": "Monomando Modena Eco cromado, vista de lado",
+      "miniatura": "Ver de lado"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/746519X_21/w=1200,h=1200,fit=cover",
-      "alt": "Detalle superior de la manilla lever metálica y cuerpo cromado Stretto",
-      "miniatura": "Ver detalle manilla"
+      "alt": "Detalle de la manilla del monomando Modena Eco cromado",
+      "miniatura": "Ver la manilla"
     }
   ],
   "stock": {
@@ -157,6 +157,10 @@
     "monomando-lavamanos-cromado-karson"
   ],
   "guias": [
+    {
+      "url": "/blog/instalar-llave-mezcladora/",
+      "texto": "Cómo instalar una llave mezcladora"
+    },
     {
       "url": "/blog/como-instalar-una-llave-de-paso-paso-a-paso/",
       "texto": "Cómo instalar una llave de paso"

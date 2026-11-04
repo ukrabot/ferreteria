@@ -19,18 +19,18 @@
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/7458983_01/w=1200,h=1200,fit=cover",
-      "alt": "Monomando de lavamanos Fanaloza New Barcelona en acero inoxidable cepillado visto de frente",
-      "miniatura": "Ver grifo de frente"
+      "alt": "Monomando para lavamanos New Barcelona Fanaloza acero cepillado, vista de frente",
+      "miniatura": "Ver de frente"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7458983_21/w=1200,h=1200,fit=cover",
-      "alt": "Vista lateral del monomando New Barcelona mostrando la curvatura del caño y manilla lever",
-      "miniatura": "Ver perfil lateral"
+      "alt": "Detalle del cuerpo y la manilla del monomando New Barcelona",
+      "miniatura": "Ver la manilla"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7458983_22/w=1200,h=1200,fit=cover",
-      "alt": "Detalle del caño y textura de acero inoxidable cepillado Fanaloza",
-      "miniatura": "Ver textura cepillada"
+      "alt": "Detalle del caño en acero cepillado del monomando New Barcelona",
+      "miniatura": "Ver el caño"
     }
   ],
   "stock": {
@@ -152,6 +152,10 @@
     "monomando-lavamanos-modena-eco-cromado-stretto"
   ],
   "guias": [
+    {
+      "url": "/blog/instalar-llave-mezcladora/",
+      "texto": "Cómo instalar una llave mezcladora"
+    },
     {
       "url": "/blog/como-instalar-una-llave-de-paso-paso-a-paso/",
       "texto": "Cómo instalar una llave de paso"

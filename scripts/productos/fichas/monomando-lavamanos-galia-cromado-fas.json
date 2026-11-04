@@ -19,28 +19,28 @@
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/269803X_01/w=1200,h=1200,fit=cover",
-      "alt": "Monomando para lavamanos Galia FAS en latón cromado brillante visto de frente",
-      "miniatura": "Ver grifo de frente"
+      "alt": "Monomando para lavamanos Galia FAS cromado, vista de frente",
+      "miniatura": "Ver de frente"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/269803X_02/w=1200,h=1200,fit=cover",
-      "alt": "Vista lateral del monomando FAS Galia mostrando la manilla lever y el caño curvo",
-      "miniatura": "Ver perfil lateral"
+      "alt": "Monomando Galia FAS instalado en un lavamanos",
+      "miniatura": "Ver instalado"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/269803X_11/w=1200,h=1200,fit=cover",
-      "alt": "Vista en ángulo tres cuartos del monomando cromado Galia FAS",
-      "miniatura": "Ver ángulo tres cuartos"
+      "alt": "Monomando Galia FAS sobre un lavamanos de loza",
+      "miniatura": "Ver en un baño"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/269803X_12/w=1200,h=1200,fit=cover",
-      "alt": "Detalle del caño y boquilla aireadora del monomando FAS Galia",
-      "miniatura": "Ver detalle caño"
+      "alt": "Monomando Galia FAS cromado, vista en ángulo",
+      "miniatura": "Ver en ángulo"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/269803X_17/w=1200,h=1200,fit=cover",
-      "alt": "Flexibles de conexión y pernos de fijación para lavamanos incluidos con FAS Galia",
-      "miniatura": "Ver flexibles y pernos"
+      "alt": "Monomando Galia FAS cromado, vista posterior",
+      "miniatura": "Ver por detrás"
     }
   ],
   "stock": {
@@ -155,13 +155,17 @@
   "lateral": {
     "etiqueta": "Marca FAS",
     "titulo": "Galia FAS Cromado",
-    "texto": "Monomando de latón cromado con cartucho cerámico y ahorro de agua certificado. Garantía de 6 meses."
+    "texto": "Monomando de latón cromado con cartucho cerámico y aireador que ahorra entre 35 y 55 % de agua según ficha. Garantía de 6 meses."
   },
   "relacionados": [
     "monomando-lavamanos-perugia-cromado-sensi-dacqua",
     "monomando-lavamanos-bajo-milan-cromado-sensi-dacqua"
   ],
   "guias": [
+    {
+      "url": "/blog/instalar-llave-mezcladora/",
+      "texto": "Cómo instalar una llave mezcladora"
+    },
     {
       "url": "/blog/como-instalar-una-llave-de-paso-paso-a-paso/",
       "texto": "Cómo instalar una llave de paso"

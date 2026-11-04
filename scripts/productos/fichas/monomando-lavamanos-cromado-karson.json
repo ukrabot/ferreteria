@@ -95,7 +95,7 @@
           "lista": [
             "Qué incluye el kit: cuerpo monomando cromado, 2 flexibles M10 x 1/2 pulgada HI y set de fijación tipo herradura",
             "Qué se compra por separado: la válvula de desagüe (tapón o pop-up) y el sifón de conexión al desagüe",
-            "Cuerpo de polímero ABS cromado de peso ligero que evita problemas de óxido en ambientes húmedos"
+            "Cuerpo de polímero ABS cromado (según ficha técnica), liviano y que no se oxida"
           ]
         }
       ]
@@ -142,6 +142,10 @@
     "llave-de-jardin-1-2-he-bronce-stretto"
   ],
   "guias": [
+    {
+      "url": "/blog/instalar-llave-mezcladora/",
+      "texto": "Cómo instalar una llave mezcladora"
+    },
     {
       "url": "/blog/como-instalar-una-llave-de-paso-paso-a-paso/",
       "texto": "Cómo instalar una llave de paso"
