@@ -1,0 +1,171 @@
+{
+  "slug": "kit-porton-electrico-new-1200-kg-veloti",
+  "nombre": "Kit Portón Eléctrico Corredizo New 1.200 kg Veloti",
+  "titulo_h1": "Kit Portón Eléctrico Corredizo New 1.200 kg Veloti",
+  "titulo_corto": "Kit Portón Eléctrico 1.200 kg Veloti",
+  "marca": "Veloti",
+  "sku": "152278051",
+  "precio_referencia": 156990,
+  "margen": 50,
+  "categoria": "otros",
+  "subcategoria": "Automatización de portones",
+  "color": "Azul",
+  "disponible": true,
+  "seo_titulo": "Kit Portón Eléctrico New 1.200 kg Veloti",
+  "meta_descripcion": "Compra el kit de motor para portón eléctrico corredizo New 1.200 kg Veloti a {precio}. Motor rápido, 2 controles remotos y llaves de destrabe. Envío a todo Chile.",
+  "og_descripcion": "Automatiza tu portón corredizo de hasta 1.200 kg con el motor rápido Veloti. Incluye controles y destrabe manual.",
+  "descripcion": "Kit de automatización para portón corredizo residencial o de condominio pequeño de hasta 1.200 kg. Motor Veloti con piñón de acero, apertura rápida en aproximadamente 9 segundos, 2 controles remotos y llaves de destrabe manual ante cortes de energía.",
+  "lede": "¿Buscas automatizar el acceso de tu casa o comunidad con un motor resistente y de apertura ágil? Este **kit para portón corredizo Veloti de 1.200 kg** te entrega potencia para hojas pesadas, apertura en unos **9 segundos** (según ficha técnica) y **destrabe manual con llave** ante cortes de luz.",
+  "fotos": [
+    {
+      "url": "https://media.falabella.com/sodimacCL/7873565_01/w=1200,h=1200,fit=cover",
+      "alt": "Motor para portón eléctrico corredizo Veloti New 1.200 kg en color azul y gris visto de frente",
+      "miniatura": "Ver motor de frente"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/7873565_14/w=1200,h=1200,fit=cover",
+      "alt": "Kit motor de portón Veloti con controles remotos, llaves de destrabe y pernos de anclaje",
+      "miniatura": "Ver componentes del kit"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/7873565_12/w=1200,h=1200,fit=cover",
+      "alt": "Vista lateral del motor Veloti mostrando el piñón de tracción para cremallera",
+      "miniatura": "Ver piñón de tracción"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/7873565_13/w=1200,h=1200,fit=cover",
+      "alt": "Base de fijación y chasis metálico del motor corredizo Veloti",
+      "miniatura": "Ver base de fijación"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    [
+      "Marca",
+      "Veloti"
+    ],
+    [
+      "Modelo",
+      "New 1.200 kg"
+    ],
+    [
+      "Capacidad máxima",
+      "1.200 kg (según ficha técnica)"
+    ],
+    [
+      "Tipo de apertura",
+      "Corredizo"
+    ],
+    [
+      "Tiempo de apertura",
+      "Aprox. 9 segundos (según ficha técnica)"
+    ],
+    [
+      "Color",
+      "Azul y gris"
+    ],
+    [
+      "Tensión eléctrica",
+      "220 V CA"
+    ],
+    [
+      "Garantía",
+      "6 meses"
+    ]
+  ],
+  "confianza": [
+    {
+      "titulo": "⚡ Apertura rápida",
+      "detalle": "Aprox. 9 segundos de apertura"
+    },
+    {
+      "titulo": "🚪 Hasta 1.200 kg",
+      "detalle": "Apto para portones pesados"
+    },
+    {
+      "titulo": "🔑 Destrabe manual",
+      "detalle": "Llaves incluidas ante corte de luz"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Garantía de nuestra tienda"
+    }
+  ],
+  "secciones": [
+    {
+      "id": "rendimiento-y-uso",
+      "titulo": "¿Qué incluye el kit y para qué portones sirve?",
+      "indice": "Rendimiento y uso",
+      "bloques": [
+        {
+          "p": "Este kit de automatización está diseñado para **portones corredizos de hasta 1.200 kg**, ideal para accesos residenciales, comerciales o condominios pequeños que requieren un tránsito frecuente y seguro."
+        },
+        {
+          "p": "El equipo incorpora un **piñón de arrastre metálico** preparado para engranar en cremalleras estándar, y viene con dos controles remotos programables y topes magnéticos de fin de carrera para detener el movimiento en la posición exacta."
+        },
+        {
+          "lista": [
+            "Capacidad de arrastre de hasta 1.200 kg para estructuras de fierro o madera pesadas",
+            "Maniobra de apertura rápida en aproximadamente 9 segundos para menor espera al entrar",
+            "Destrabe mecánico con llave de seguridad en la tapa frontal para mover el portón a mano si se corta la electricidad"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "instalacion-segura",
+      "titulo": "Recomendaciones de instalación y conexión eléctrica",
+      "indice": "Instalación",
+      "bloques": [
+        {
+          "p": "Para un funcionamiento suave y prolongar la vida útil del motor, el portón debe deslizarse libremente sobre su riel sin rozamientos excesivos antes de acoplar la cremallera."
+        },
+        {
+          "aviso": "La conexión eléctrica debe realizarse desde un circuito protegido con disyuntor y diferencial adecuado, verificando siempre la puesta a tierra del chasis."
+        },
+        {
+          "p": "Si vas a tender cables para la alimentación exterior del motor, revisa el [código de colores de cables en Chile](/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/) para una instalación ordenada y segura."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Qué pasa si se corta la energía eléctrica?",
+      "respuesta": "El motor cuenta con una compuerta frontal con cerradura que se abre con las llaves incluidas. Al girar el mecanismo, el motor queda en modo manual para que puedas deslizar la hoja con la mano sin forzar el engranaje."
+    },
+    {
+      "pregunta": "¿Viene listo con controles remotos?",
+      "respuesta": "Sí, el kit incluye 2 controles remotos inalámbricos de fábrica listos para configurar según las instrucciones del manual."
+    },
+    {
+      "pregunta": "¿Hasta qué peso de portón soporta?",
+      "respuesta": "Soporta hojas correderas de hasta 1.200 kg de peso total (según ficha técnica), lo que cubre la mayoría de los portones residenciales reforzados y comunitarios."
+    }
+  ],
+  "aviso_final": "Los precios incluyen IVA. El tiempo de apertura es referencial según hoja estándar de 3 metros y depende del peso y nivelación de la estructura.",
+  "lateral": {
+    "etiqueta": "Portón Corredizo",
+    "titulo": "Motor Veloti 1.200 kg",
+    "texto": "Potencia y rapidez para portones pesados. Incluye controles, llaves de destrabe y garantía de 6 meses."
+  },
+  "relacionados": [
+    "alargador-4-tomas-sin-cable-halux",
+    "cable-concentrico-2x4-mm2-madeco"
+  ],
+  "guias": [
+    {
+      "url": "/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/",
+      "texto": "Código de colores de cables en Chile"
+    }
+  ],
+  "tarjeta": {
+    "titulo": "Kit Portón Eléctrico New 1.200 kg Veloti",
+    "extracto": "Motor corredizo rápido para portones de hasta 1.200 kg. Incluye 2 controles remotos, llaves de destrabe y garantía de 6 meses.",
+    "alt": "Kit motor portón eléctrico corredizo Veloti 1.200 kg",
+    "etiqueta": "Portones"
+  }
+}
