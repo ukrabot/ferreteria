@@ -1,0 +1,147 @@
+{
+  "slug": "cordon-h05vv-f-3x1-mm2-blanco-10m-elfle",
+  "nombre": "Cordón H05VV-F 3x1 mm² Blanco 10 m ELFLE",
+  "titulo_h1": "Cordón H05VV-F 3x1 mm² Blanco 10 m ELFLE",
+  "titulo_corto": "Cordón H05VV-F 3x1 mm² Blanco 10 m",
+  "marca": "ELFLE",
+  "sku": "142855850",
+  "precio_referencia": 18990,
+  "margen": 50,
+  "categoria": "electricidad",
+  "subcategoria": "Cordones y extensiones",
+  "color": "Blanco",
+  "disponible": true,
+
+  "seo_titulo": "Cordón H05VV-F 3x1 mm² Blanco 10 m ELFLE",
+  "meta_descripcion": "Compra cordón H05VV-F 3x1 mm² blanco de 10 m ELFLE a {precio}. Cable flexible con tierra de protección para alargadores estéticos de 10 A. Envíos a todo Chile.",
+  "og_descripcion": "Cordón H05VV-F 3x1 mm² blanco de 10 m ELFLE con tierra de protección. Acabado blanco para extensiones interiores y electrodomésticos. Certificado SEC oficial.",
+  "descripcion": "Cordón eléctrico flexible H05VV-F de 3x1,0 mm² y 10 metros en color blanco marca ELFLE. Diseñado para extensiones residenciales y electrodomésticos con conexión a tierra que requieran una presencia discreta sobre pisos o paredes claras, con capacidad de 10 A y 2.200 W a 220 V.",
+  "lede": "¿Quieres armar un alargador con tierra para tu living u oficina que combine con tus muros sin cables oscuros a la vista? Este **cordón H05VV-F 3x1 mm² blanco de 10 metros ELFLE** brinda **tres vías con tierra**, cubierta redonda de PVC blanco y certificación SEC oficial para una instalación impecable.",
+
+  "fotos": [
+    {
+      "url": "https://media.sodimac.cl/sodimacCL/7713037_01/public",
+      "alt": "Rollo de cordón eléctrico H05VV-F 3x1 mm² blanco de 10 metros sobre fondo blanco",
+      "miniatura": "Ver rollo blanco 10 m"
+    },
+    {
+      "url": "https://media.sodimac.cl/sodimacCL/7713037_03/public",
+      "alt": "Extremo pelado del cordón blanco 3x1 mm² mostrando los hilos de cobre y aislación interna",
+      "miniatura": "Ver detalle de conductores"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+
+  "especificaciones": [
+    ["Marca", "ELFLE"],
+    ["Modelo", "H05VV-F flexible con tierra"],
+    ["Número de conductores", "3 (fase, neutro y tierra de protección)"],
+    ["Sección del conductor", "1,0 mm²"],
+    ["Largo", "10 metros"],
+    ["Material conductor", "Cobre electrolítico multifilar clase 5"],
+    ["Aislamiento y cubierta", "PVC flexible blanco resistente"],
+    ["Tensión nominal", "300/500 V (servicio 220 V)"],
+    ["Capacidad eléctrica", "10 A / 2.200 W según rotulación"],
+    ["Certificación SEC", "E-013-14-13244 según etiqueta"]
+  ],
+  "confianza": [
+    {
+      "titulo": "⚡ Acabado blanco",
+      "detalle": "Discreto en muros, pisos y mobiliario claro"
+    },
+    {
+      "titulo": "🛡️ Puesta a tierra",
+      "detalle": "Protección efectiva para electrodomésticos metálicos"
+    },
+    {
+      "titulo": "🚚 Envío a todo Chile",
+      "detalle": "Despacho rápido a domicilio o retiro"
+    },
+    {
+      "titulo": "🔒 Garantía 6 meses",
+      "detalle": "Garantía legal directa de Ferretería Ukra"
+    }
+  ],
+
+  "secciones": [
+    {
+      "id": "ventajas-del-cordon-blanco-con-tierra",
+      "titulo": "Estética y seguridad en alargadores domiciliarios",
+      "indice": "¿Por qué cordón blanco?",
+      "bloques": [
+        {
+          "p": "Muchos alargadores comerciales utilizan cable negro que desentona en dormitorios, oficinas y zonas sociales. Este cordón **H05VV-F de 3x1 mm² en blanco** permite armar alargadores a la medida exacta con zapatillas o bases múltiples blancas, manteniendo la obligatoria puesta a tierra de protección."
+        },
+        {
+          "lista": [
+            "Conexión de puestos de trabajo de oficina, impresoras y estaciones de computación.",
+            "Alimentación de electrodomésticos de cocina con acabado blanco o acero inoxidable.",
+            "Tendido temporal sobre zócalos o piso flotante en remodelaciones interiores."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "montaje-y-accesorios-compatibles",
+      "titulo": "Cómo conectar los terminales correctamente",
+      "indice": "Montaje de accesorios",
+      "bloques": [
+        {
+          "p": "Para un acabado prolijo, combina este cable con un [enchufe macho de 10 A blanco con tierra](/producto/enchufe-macho-volante-2p-t-blanco-halux) y una [hembra volante blanca](/producto/enchufe-hembra-volante-2p-t-blanco-halux). Pela los conductores con cuidado de no mellar los filamentos de cobre y aprieta con firmeza los bornes prisioneros."
+        },
+        {
+          "advertencia": "Verifica que el conductor central de tierra quede conectado a la espiga central de ambos enchufes para asegurar la continuidad de protección ante derivaciones."
+        },
+        {
+          "p": "Revisa nuestra guía sobre [cómo instalar un enchufe en Chile de forma segura](/blog/como-instalar-un-enchufe-en-chile-guia-segura/) para ver el diagrama de polaridad correcto."
+        }
+      ]
+    }
+  ],
+
+  "faq": [
+    {
+      "pregunta": "¿Cuántos artefactos puedo conectar a este cable a la vez?",
+      "respuesta": "Puedes conectar varios artefactos siempre que la suma de sus potencias no supere 2.200 W (o 10 A a 220 V), que es el límite térmico del conductor de 1 mm² y del enchufe de pared."
+    },
+    {
+      "pregunta": "¿El color de la cubierta afecta sus propiedades eléctricas?",
+      "respuesta": "No, las propiedades de aislación, rigidez dieléctrica y resistencia mecánica son exactamente idénticas a la versión en color negro, variando únicamente el pigmento del PVC."
+    },
+    {
+      "pregunta": "¿Sirve para herramientas pesadas de obra?",
+      "respuesta": "Para herramientas pesadas de faena continua (soldadoras, compresores o trompos) se recomienda cordón de 1,5 mm² o 2,5 mm²; este modelo de 1 mm² está pensado para uso doméstico o de taller liviano."
+    }
+  ],
+
+  "lateral": {
+    "etiqueta": "Cordón con tierra",
+    "titulo": "ELFLE H05VV-F 3x1 mm² Blanco",
+    "texto": "Cordón flexible blanco de 3 vías con tierra para electrodomésticos y extensiones limpias de hasta 2.200 W. Certificación SEC oficial E-013-14-13244."
+  },
+
+  "relacionados": [
+    "enchufe-macho-volante-2p-t-blanco-halux",
+    "enchufe-hembra-volante-2p-t-blanco-halux",
+    "cordon-h05vv-f-3x1-mm2-negro-10m-elfle"
+  ],
+  "guias": [
+    {
+      "url": "/blog/como-elegir-el-grosor-del-cable-para-una-extension-guia-completa/",
+      "texto": "Cómo elegir el grosor de cable para extensión"
+    },
+    {
+      "url": "/blog/como-instalar-un-enchufe-en-chile-guia-segura/",
+      "texto": "Guía de instalación de enchufes seguros"
+    }
+  ],
+  "tarjeta": {
+    "titulo": "Cordón H05VV-F 3x1 mm² Blanco 10 m ELFLE",
+    "extracto": "Cordón flexible de 3 vías blanco con tierra para extensiones decorativas. 10 A / 2.200 W, 10 metros, certificación SEC E-013-14-13244.",
+    "alt": "Cordón eléctrico flexible H05VV-F 3x1 mm² blanco de 10 metros ELFLE",
+    "etiqueta": "Material Eléctrico"
+  }
+}
