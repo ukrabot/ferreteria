@@ -150,6 +150,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Puesta a Tierra',
     filename: 'Pack-Puesta-a-Tierra-Ferreteria-Ukra.zip',
   },
+  'pack-membrana-asfaltica-techo-materiales-excel': {
+    name: 'Pack Membrana Asfáltica',
+    filename: 'Pack-Membrana-Asfaltica-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1580,6 +1584,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-TIERRA',
+  },
+  {
+    slug: 'pack-membrana-asfaltica-techo-materiales-excel',
+    name: 'Pack Membrana Asfáltica: Planilla Excel de Tipo, Materiales por Sector, Pendiente y Presupuesto + Paso a Paso + Checklist de Control y Mantención',
+    price: 7990,
+    image: '/producto/pack-membrana-asfaltica-techo-materiales-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-MEMBRANA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
