@@ -174,6 +174,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Ascensor y Salvaescaleras',
     filename: 'Pack-Ascensor-Salvaescaleras-Ferreteria-Ukra.zip',
   },
+  'pack-quincho-parrilla-dimensiones-materiales-excel': {
+    name: 'Pack Quincho con Parrilla',
+    filename: 'Pack-Quincho-Parrilla-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1658,6 +1662,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-ASCENSOR',
+  },
+  {
+    slug: 'pack-quincho-parrilla-dimensiones-materiales-excel',
+    name: 'Pack Quincho con Parrilla: Planilla Excel de Dimensiones, Tiraje del Conducto, Ladrillos, Radier, Cubierta y Presupuesto + Guía de Diseño + Checklist de Obra y Permisos',
+    price: 7990,
+    image: '/producto/pack-quincho-parrilla-dimensiones-materiales-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-QUINCHO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
