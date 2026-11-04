@@ -1,36 +1,36 @@
 {
   "slug": "tomacorriente-10-a-blanco-halux",
-  "nombre": "Tomacorriente 10 A Blanco Halux",
-  "titulo_h1": "Tomacorriente 10 A Blanco Halux",
-  "titulo_corto": "Tomacorriente 10 A Blanco Halux",
   "marca": "Halux",
   "sku": "110216942",
   "precio_referencia": 15990,
   "margen": 50,
   "categoria": "electricidad",
-  "subcategoria": "Material eléctrico",
+  "nombre": "Adaptador de enchufe 10 A con botón de encendido blanco Halux",
+  "titulo_h1": "Adaptador de enchufe 10 A con botón de encendido blanco Halux",
+  "titulo_corto": "Adaptador de enchufe 10 A con botón de encendido blanco Halux",
+  "subcategoria": "Adaptadores",
   "color": "Blanco",
   "disponible": true,
-  "seo_titulo": "Tomacorriente 10 A Blanco Halux",
-  "meta_descripcion": "Compra Tomacorriente 10 A Blanco marca Halux a {precio}. Conexión segura, despacho rápido a todo Chile y garantía legal de 6 meses en Ferretería Ukra.",
-  "og_descripcion": "Tomacorriente 10 A Blanco Halux para instalaciones eléctricas seguras y confiables. Despacho a todo Chile.",
-  "descripcion": "Tomacorriente 10 A Blanco marca Halux en color blanco. Diseñado para brindar conexiones firmes y seguras en circuitos eléctricos domiciliarios y de taller. Fabricado en materiales resistentes, cumple con exigencias de seguridad para uso continuo con garantía de 6 meses.",
-  "lede": "Para tus trabajos de armado, mantención o extensión eléctrica, este **tomacorriente 10 a blanco** de marca **Halux** ofrece una conexión firme, cuerpo resistente en color **blanco** y terminales interiores diseñados para un montaje seguro y duradero.",
+  "seo_titulo": "Adaptador de enchufe 10 A con botón de encendido blanco",
+  "meta_descripcion": "Compra adaptador de enchufe 10 A con botón de encendido blanco Halux a {precio}. Adaptador con toma chilena de 10 A y botón de encendido para cortar el artefacto sin.",
+  "og_descripcion": "Adaptador con toma chilena de 10 A y botón de encendido para cortar el artefacto sin desenchufar.",
+  "descripcion": "Adaptador de enchufe marca Halux, color blanco, con toma chilena de 10 A y botón de encendido y apagado en el costado. Se conecta a la toma de pared y permite cortar el artefacto sin desenchufarlo. Garantía de 6 meses.",
+  "lede": "Este adaptador **Halux** de **10 A** va entre la toma de pared y el artefacto, y trae un **botón de encendido y apagado** para cortar la corriente sin desenchufar.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/563878X_01/w=1200,h=1200,fit=cover",
-      "alt": "Tomacorriente 10 A Blanco Halux vista 1",
-      "miniatura": "Ver de frente"
+      "alt": "Adaptador de enchufe 10 A con botón de encendido blanco Halux, vista principal",
+      "miniatura": "Ver vista principal"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/563878X_21/w=1200,h=1200,fit=cover",
-      "alt": "Tomacorriente 10 A Blanco Halux vista 2",
-      "miniatura": "Vista 2"
+      "alt": "Adaptador de enchufe 10 A con botón de encendido blanco Halux, otra vista",
+      "miniatura": "Ver otra vista"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/563878X_22/w=1200,h=1200,fit=cover",
-      "alt": "Tomacorriente 10 A Blanco Halux vista 3",
-      "miniatura": "Vista 3"
+      "alt": "Adaptador de enchufe 10 A con botón de encendido blanco Halux, detalle",
+      "miniatura": "Ver detalle"
     }
   ],
   "stock": {
@@ -43,46 +43,38 @@
       "Halux"
     ],
     [
-      "Cantidad de paquetes",
-      "1.0 (según ficha técnica)"
+      "Tipo",
+      "Adaptador de enchufe con botón"
     ],
     [
-      "Material",
-      "plástico (según ficha técnica)"
+      "Clavija y toma",
+      "Tipo chileno"
     ],
     [
-      "Tipo de divisor",
-      "Tomacorriente mixto (según ficha técnica)"
+      "Corriente",
+      "10 A"
+    ],
+    [
+      "Tensión",
+      "220 V"
     ],
     [
       "Color",
-      "Blanco (según ficha técnica)"
-    ],
-    [
-      "Voltaje",
-      "220 V (según ficha técnica)"
-    ],
-    [
-      "Amperaje",
-      "10 A (según ficha técnica)"
-    ],
-    [
-      "Garantía",
-      "6 meses"
+      "Blanco"
     ]
   ],
   "confianza": [
     {
-      "titulo": "🔌 Marca Halux",
-      "detalle": "Calidad en material eléctrico"
+      "titulo": "🔘 Botón de encendido",
+      "detalle": "Corta sin desenchufar"
     },
     {
-      "titulo": "⚡ Conexión segura",
-      "detalle": "Terminales interiores resistentes"
+      "titulo": "🔌 10 A",
+      "detalle": "Toma chilena"
     },
     {
       "titulo": "🚚 Envío a todo Chile",
-      "detalle": "Despacho a domicilio o retiro"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -91,86 +83,71 @@
   ],
   "secciones": [
     {
-      "id": "aplicaciones-tomacorriente-10-a-blanco",
-      "titulo": "¿Dónde utilizar este accesorio eléctrico?",
-      "indice": "Aplicaciones",
+      "id": "uso",
+      "titulo": "Cómo usarlo",
+      "indice": "Cómo usarlo",
       "bloques": [
         {
-          "p": "El **tomacorriente 10 a blanco** Halux está diseñado para resolver necesidades de conexión eléctrica tanto en el hogar como en entornos de trabajo:"
-        },
-        {
           "lista": [
-            "Armado y reparación de conexiones en artefactos eléctricos y herramientas.",
-            "Montaje en extensiones y alargadores para distribución de energía.",
-            "Instalaciones que requieren contactos firmes y seguros para evitar falso contacto."
+            "Conéctalo a la toma de pared y enchufa el artefacto en él.",
+            "Usa el botón para cortar la corriente sin tirar del cable.",
+            "No pases de 10 A (unos 2.200 W)."
           ]
-        },
-        {
-          "p": "Para revisar cómo conectar tus cables según la normativa chilena, consulta nuestra guía de [código de colores de cables eléctricos](/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/)."
         }
       ]
     },
     {
-      "id": "seguridad-tomacorriente-10-a-blanco",
-      "titulo": "Recomendaciones para una instalación segura",
-      "indice": "Instalación y seguridad",
+      "id": "seguridad",
+      "titulo": "Seguridad",
+      "indice": "Seguridad",
       "bloques": [
         {
-          "pasos": [
-            "Corta siempre el suministro eléctrico general antes de manipular cables o contactos.",
-            "Pela los conductores a la medida indicada sin cortar los hilos interiores de cobre.",
-            "Fija cada conductor firmemente en su borne correspondiente verificando la polaridad.",
-            "Asegura el prensacable o carcasa para evitar que tirones accidentales suelten las conexiones."
+          "lista": [
+            "No conectes estufas grandes ni hervidores de alto consumo.",
+            "No lo conectes en otro adaptador."
           ]
-        },
-        {
-          "advertencia": "Si la instalación requiere trabajos en tableros principales o modificaciones complejas, recurre a un instalador eléctrico autorizado por la SEC."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿El producto cuenta con garantía?",
-      "respuesta": "Sí, en Ferretería Ukra todos nuestros productos cuentan con 6 meses de garantía legal por defectos de fabricación."
+      "pregunta": "¿Para qué sirve el botón?",
+      "respuesta": "Para cortar la corriente del artefacto sin desenchufarlo, por ejemplo para no dejar en espera un televisor o un microondas."
     },
     {
-      "pregunta": "¿Sirve para uso doméstico y de taller?",
-      "respuesta": "Sí, este accesorio eléctrico Halux es apto para circuitos eléctricos correspondientes a su capacidad nominal indicada en la ficha técnica."
+      "pregunta": "¿Cuánto soporta?",
+      "respuesta": "Hasta 10 A, unos 2.200 W a 220 V."
     },
     {
-      "pregunta": "¿Hacen envíos a todo Chile?",
-      "respuesta": "Sí, despachamos a todas las regiones de Chile mediante empresas de logística certificadas y opciones de entrega oportuna."
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
     }
   ],
   "lateral": {
-    "etiqueta": "Material Eléctrico",
-    "titulo": "Tomacorriente 10 A Blanco Halux",
-    "texto": "Tomacorriente 10 A Blanco Halux en color blanco para conexiones eléctricas confiables y duraderas."
+    "etiqueta": "Material eléctrico",
+    "titulo": "Adaptador de enchufe 10 A con botón de encendido blanco",
+    "texto": "Adaptador con toma chilena de 10 A y botón de encendido para cortar el artefacto sin desenchufar."
   },
-  "relacionados": [
-    "adaptador-schuko-a-enchufe-chileno-10a",
-    "adaptador-schuko-bipaso-16a-bticino",
-    "enchufe-macho-volante-articulado-10a-bticino"
-  ],
+  "tarjeta": {
+    "titulo": "Adaptador de enchufe 10 A con botón de encendido blanco Halux",
+    "extracto": "Adaptador con toma chilena de 10 A y botón de encendido para cortar el artefacto sin desenchufar.",
+    "alt": "Adaptador de enchufe 10 A con botón de encendido blanco Halux",
+    "etiqueta": "Material eléctrico"
+  },
+  "relacionados": [],
   "guias": [
     {
       "url": "/blog/como-instalar-un-enchufe-en-chile-guia-segura/",
-      "texto": "Cómo instalar un enchufe en Chile paso a paso"
+      "texto": "Cómo instalar un enchufe en Chile"
     },
     {
-      "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
-      "texto": "Cómo identificar fase y neutro en un enchufe"
+      "url": "/blog/las-mejores-marcas-de-alargadores-electricos-guia-completa-para-elegir/",
+      "texto": "Cómo elegir un alargador eléctrico"
     },
     {
-      "url": "/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/",
-      "texto": "Código de colores de cables eléctricos"
+      "url": "/blog/por-que-salta-el-diferencial-como-encontrar-la-fuga-guia-chile/",
+      "texto": "Por qué salta el diferencial"
     }
-  ],
-  "tarjeta": {
-    "titulo": "Tomacorriente 10 A Blanco Halux",
-    "extracto": "Tomacorriente 10 A Blanco Halux en color blanco para instalaciones y armado eléctrico seguro.",
-    "alt": "Tomacorriente 10 A Blanco Halux blanco",
-    "etiqueta": "Material Eléctrico"
-  }
+  ]
 }

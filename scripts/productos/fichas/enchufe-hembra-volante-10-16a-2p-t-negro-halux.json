@@ -1,31 +1,31 @@
 {
   "slug": "enchufe-hembra-volante-10-16a-2p-t-negro-halux",
-  "nombre": "Enchufe hembra volante 10/16A 2P+T Negro Halux Halux",
-  "titulo_h1": "Enchufe hembra volante 10/16A 2P+T Negro Halux Halux",
-  "titulo_corto": "Enchufe hembra volante 10/16A 2P+T Negro Halux",
   "marca": "Halux",
   "sku": "135833115",
   "precio_referencia": 2590,
   "margen": 50,
   "categoria": "electricidad",
-  "subcategoria": "Enchufes y tomas hembra",
+  "nombre": "Enchufe hembra volante 10/16 A 2P+T negro Halux",
+  "titulo_h1": "Enchufe hembra volante 10/16 A 2P+T negro Halux",
+  "titulo_corto": "Enchufe hembra volante 10/16 A 2P+T negro Halux",
+  "subcategoria": "Enchufes hembra",
   "color": "Negro",
   "disponible": true,
-  "seo_titulo": "Enchufe hembra volante 10/16A 2P+T Halux",
-  "meta_descripcion": "Compra Enchufe hembra volante 10/16A 2P+T Negro Halux marca Halux a {precio}. Conexión eléctrica segura, despacho a todo Chile y 6 meses de garantía.",
-  "og_descripcion": "Enchufe hembra volante 10/16A 2P+T Negro Halux Halux para instalaciones eléctricas seguras y confiables. Despacho a todo Chile.",
-  "descripcion": "Enchufe hembra volante 10/16A 2P+T Negro Halux marca Halux en color negro. Diseñado para brindar conexiones firmes y seguras en circuitos eléctricos domiciliarios y de taller. Fabricado en materiales resistentes, cumple con exigencias de seguridad para uso continuo con garantía de 6 meses.",
-  "lede": "Para tus trabajos de armado, mantención o extensión eléctrica, este **enchufe hembra volante 10/16a 2p+t negro halux** de marca **Halux** ofrece una conexión firme, cuerpo resistente en color **negro** y terminales interiores diseñados para un montaje seguro y duradero.",
+  "seo_titulo": "Enchufe hembra volante 10/16 A 2P+T negro Halux",
+  "meta_descripcion": "Compra enchufe hembra volante 10/16 A 2P+T negro Halux a {precio}. Enchufe hembra volante 2P+T de 10/16 A tipo chileno para cable. Con tierra al centro.",
+  "og_descripcion": "Enchufe hembra volante 2P+T de 10/16 A tipo chileno para cable. Con tierra al centro.",
+  "descripcion": "Enchufe hembra volante 2P+T de 10 y 16 A (bipaso) para cable, tipo chileno, marca Halux, color negro. Recibe enchufes macho de 10 y 16 A con tierra. Sirve para armar alargadores a medida o reemplazar una hembra dañada. Garantía de 6 meses.",
+  "lede": "Para armar un alargador a medida o reemplazar una hembra rota, este **enchufe hembra volante 2P+T** Halux recibe enchufes de **10 y 16 A (bipaso)**. Tiene contacto de **tierra al centro**, como las tomas chilenas.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/7602642_01/w=1200,h=1200,fit=cover",
-      "alt": "Enchufe hembra volante 10/16A 2P+T Negro Halux Halux vista 1",
-      "miniatura": "Ver de frente"
+      "alt": "Enchufe hembra volante 10/16 A 2P+T negro Halux, vista principal",
+      "miniatura": "Ver vista principal"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7602642_21/w=1200,h=1200,fit=cover",
-      "alt": "Enchufe hembra volante 10/16A 2P+T Negro Halux Halux vista 2",
-      "miniatura": "Vista 2"
+      "alt": "Enchufe hembra volante 10/16 A 2P+T negro Halux, otra vista",
+      "miniatura": "Ver otra vista"
     }
   ],
   "stock": {
@@ -38,46 +38,42 @@
       "Halux"
     ],
     [
-      "Alimentación",
-      "Eléctrica (según ficha técnica)"
+      "Tipo",
+      "Enchufe hembra volante (para cable)"
     ],
     [
-      "Tipo de divisor",
-      "Otro (según ficha técnica)"
+      "Norma de clavija",
+      "Tipo chileno (L)"
+    ],
+    [
+      "Polos",
+      "2P+T"
+    ],
+    [
+      "Corriente",
+      "10 y 16 A (bipaso)"
+    ],
+    [
+      "Tensión",
+      "220 V"
     ],
     [
       "Color",
-      "Negro (según ficha técnica)"
-    ],
-    [
-      "Voltaje",
-      "250 V (según ficha técnica)"
-    ],
-    [
-      "Cantidad de salidas",
-      "1 (según ficha técnica)"
-    ],
-    [
-      "Amperaje",
-      "10 A (según ficha técnica)"
-    ],
-    [
-      "Garantía",
-      "6 meses"
+      "Negro"
     ]
   ],
   "confianza": [
     {
-      "titulo": "🔌 Marca Halux",
-      "detalle": "Calidad en material eléctrico"
+      "titulo": "🔌 2P+T 10/16 A",
+      "detalle": "Clavija tipo chileno"
     },
     {
-      "titulo": "⚡ Conexión segura",
-      "detalle": "Terminales interiores resistentes"
+      "titulo": "⏚ Con tierra",
+      "detalle": "Contacto central de tierra"
     },
     {
       "titulo": "🚚 Envío a todo Chile",
-      "detalle": "Despacho a domicilio o retiro"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -86,86 +82,88 @@
   ],
   "secciones": [
     {
-      "id": "aplicaciones-enchufe-hembra-volante-10",
-      "titulo": "¿Dónde utilizar este enchufe hembra volante?",
-      "indice": "Aplicaciones",
+      "id": "para-que-sirve",
+      "titulo": "¿Para qué sirve este enchufe hembra?",
+      "indice": "Para qué sirve",
       "bloques": [
         {
-          "p": "El **enchufe hembra volante 10/16a 2p+t negro halux** Halux está diseñado para resolver necesidades de conexión eléctrica tanto en el hogar como en entornos de trabajo:"
+          "p": "Para el extremo de un alargador hecho a medida o para reemplazar una hembra rota."
         },
         {
           "lista": [
-            "Armado y reparación de conexiones en artefactos eléctricos y herramientas.",
-            "Montaje en extensiones y alargadores para distribución de energía.",
-            "Instalaciones que requieren contactos firmes y seguros para evitar falso contacto."
+            "Recibe enchufes macho de 10 y 16 A.",
+            "Para alargadores, usa cable de la sección adecuada y no superes la corriente de la hembra.",
+            "No es para dejar a la intemperie: protégela de la lluvia."
           ]
-        },
-        {
-          "p": "Para revisar cómo conectar tus cables según la normativa chilena, consulta nuestra guía de [código de colores de cables eléctricos](/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/)."
         }
       ]
     },
     {
-      "id": "seguridad-enchufe-hembra-volante-10",
-      "titulo": "Recomendaciones para una instalación segura",
-      "indice": "Instalación y seguridad",
+      "id": "como-armarlo",
+      "titulo": "Cómo conectarlo al cable",
+      "indice": "Cómo armarlo",
       "bloques": [
         {
           "pasos": [
-            "Corta siempre el suministro eléctrico general antes de manipular cables o contactos.",
-            "Pela los conductores a la medida indicada sin cortar los hilos interiores de cobre.",
-            "Fija cada conductor firmemente en su borne correspondiente verificando la polaridad.",
-            "Asegura el prensacable o carcasa para evitar que tirones accidentales suelten las conexiones."
+            "Corta la luz desde el tablero o desenchufa el cable antes de armarlo.",
+            "Pela unos 8 mm de cada conductor sin cortar los hilos de cobre. Para 16 A, usa cable flexible de al menos 1,5 mm².",
+            "Conecta el café o negro (fase) y el azul (neutro) en los bornes laterales, y el verde/amarillo (tierra) en el borne central.",
+            "Aprieta bien cada tornillo y cierra la abrazadera sobre la cubierta del cable, no sobre los conductores.",
+            "Cierra la carcasa y tira suavemente del cable: no debe moverse."
           ]
         },
         {
-          "advertencia": "Si la instalación requiere trabajos en tableros principales o modificaciones complejas, recurre a un instalador eléctrico autorizado por la SEC."
+          "advertencia": "Si el cable está dañado o el artefacto tiene una falla, no lo conectes. Las instalaciones fijas (tomas de pared, circuitos) las hace un electricista autorizado SEC."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿El producto cuenta con garantía?",
-      "respuesta": "Sí, en Ferretería Ukra todos nuestros productos cuentan con 6 meses de garantía legal por defectos de fabricación."
+      "pregunta": "¿Qué cable uso?",
+      "respuesta": "Cable flexible de al menos 1,5 mm² para 16 A, con tres conductores: fase, neutro y tierra."
     },
     {
-      "pregunta": "¿Sirve para uso doméstico y de taller?",
-      "respuesta": "Sí, este enchufe hembra volante Halux es apto para circuitos eléctricos correspondientes a su capacidad nominal indicada en la ficha técnica."
+      "pregunta": "¿Dónde va la tierra?",
+      "respuesta": "En los enchufes chilenos la tierra es la pata (o el agujero) del centro. Conecta ahí el conductor verde/amarillo."
     },
     {
-      "pregunta": "¿Hacen envíos a todo Chile?",
-      "respuesta": "Sí, despachamos a todas las regiones de Chile mediante empresas de logística certificadas y opciones de entrega oportuna."
+      "pregunta": "¿Qué es 10/16 A bipaso?",
+      "respuesta": "Que recibe enchufes chilenos de 10 A (patas delgadas) y de 16 A (patas gruesas)."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
     }
   ],
   "lateral": {
-    "etiqueta": "Material Eléctrico",
-    "titulo": "Enchufe hembra volante 10/16A 2P+T Halux",
-    "texto": "Enchufe hembra volante 10/16A 2P+T Negro Halux Halux en color negro para conexiones eléctricas confiables y duraderas."
+    "etiqueta": "Material eléctrico",
+    "titulo": "Enchufe hembra volante 10/16 A 2P+T negro Halux",
+    "texto": "Enchufe hembra volante 2P+T de 10/16 A tipo chileno para cable. Con tierra al centro."
+  },
+  "tarjeta": {
+    "titulo": "Enchufe hembra volante 10/16 A 2P+T negro Halux",
+    "extracto": "Enchufe hembra volante 2P+T de 10/16 A tipo chileno para cable. Con tierra al centro.",
+    "alt": "Enchufe hembra volante 10/16 A 2P+T negro Halux",
+    "etiqueta": "Material eléctrico"
   },
   "relacionados": [
-    "adaptador-schuko-a-enchufe-chileno-10a",
-    "adaptador-schuko-bipaso-16a-bticino",
-    "enchufe-macho-volante-articulado-10a-bticino"
+    "enchufe-hembra-volante-10-16a-2p-t-blanco-halux",
+    "enchufe-hembra-volante-10a-blanco-bticino",
+    "enchufe-hembra-volante-2p-t-10-a-16-a-blanco-gewis"
   ],
   "guias": [
     {
       "url": "/blog/como-instalar-un-enchufe-en-chile-guia-segura/",
-      "texto": "Cómo instalar un enchufe en Chile paso a paso"
-    },
-    {
-      "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
-      "texto": "Cómo identificar fase y neutro en un enchufe"
+      "texto": "Cómo instalar un enchufe en Chile"
     },
     {
       "url": "/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/",
-      "texto": "Código de colores de cables eléctricos"
+      "texto": "Código de colores de cables"
+    },
+    {
+      "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
+      "texto": "Cómo identificar fase y neutro"
     }
-  ],
-  "tarjeta": {
-    "titulo": "Enchufe hembra volante 10/16A 2P+T Negro Halux",
-    "extracto": "Enchufe hembra volante 10/16A 2P+T Negro Halux Halux en color negro para instalaciones y armado eléctrico seguro.",
-    "alt": "Enchufe hembra volante 10/16A 2P+T Negro Halux Halux negro",
-    "etiqueta": "Material Eléctrico"
-  }
+  ]
 }

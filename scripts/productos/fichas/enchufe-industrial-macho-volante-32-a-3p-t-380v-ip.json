@@ -1,51 +1,51 @@
 {
   "slug": "enchufe-industrial-macho-volante-32-a-3p-t-380v-ip",
-  "nombre": "Enchufe industrial macho volante 32 A 3P+T 380V IP44 Lexo",
-  "titulo_h1": "Enchufe industrial macho volante 32 A 3P+T 380V IP44 Lexo",
-  "titulo_corto": "Enchufe industrial macho volante 32 A 3P Lexo",
   "marca": "Lexo",
   "sku": "110242928",
   "precio_referencia": 7290,
   "margen": 50,
   "categoria": "electricidad",
-  "subcategoria": "Tomas y enchufes industriales",
+  "nombre": "Enchufe industrial macho volante IP44 32 A 3P+T 380 V Lexo",
+  "titulo_h1": "Enchufe industrial macho volante IP44 32 A 3P+T 380 V Lexo",
+  "titulo_corto": "Enchufe industrial macho volante IP44 32 A 3P+T 380 V Lexo",
+  "subcategoria": "Enchufes industriales",
   "color": "Rojo",
   "disponible": true,
-  "seo_titulo": "Enchufe industrial macho volante 32 Lexo",
-  "meta_descripcion": "Compra Enchufe industrial macho volante 32 A 3P+T 380V IP44 marca Lexo a {precio}. Conexión eléctrica segura, despacho a todo Chile y 6 meses de garantía.",
-  "og_descripcion": "Enchufe industrial macho volante 32 A 3P+T 380V IP44 Lexo para instalaciones eléctricas seguras y confiables. Despacho a todo Chile.",
-  "descripcion": "Enchufe industrial macho volante 32 A 3P+T 380V IP44 marca Lexo en color rojo. Diseñado para brindar conexiones firmes y seguras en circuitos eléctricos domiciliarios y de taller. Fabricado en materiales resistentes, cumple con exigencias de seguridad para uso continuo con garantía de 6 meses.",
-  "lede": "Para tus trabajos de armado, mantención o extensión eléctrica, este **enchufe industrial macho volante 32 a 3p+t 380v ip44** de marca **Lexo** ofrece una conexión firme, cuerpo resistente en color **rojo** y terminales interiores diseñados para un montaje seguro y duradero.",
+  "seo_titulo": "Enchufe industrial macho volante IP44 32 A 3P+T 380 V Lexo",
+  "meta_descripcion": "Compra enchufe industrial macho volante IP44 32 A 3P+T 380 V Lexo a {precio}. Enchufe industrial macho 32 A 380 V 3P+T IP44, formato rojo.",
+  "og_descripcion": "Enchufe industrial macho 32 A 380 V 3P+T IP44, formato rojo.",
+  "descripcion": "Enchufe industrial macho (clavija) de 32 A y 380 V, 3P+T (4 contactos), marca Lexo. Formato industrial de color rojo, grado de protección IP44, protegido contra salpicaduras de agua. Para conectar equipos trifásicos como soldadoras, compresores, betoneras o tableros de faena. Garantía de 6 meses.",
+  "lede": "Para conectar equipos de taller y obra, este **enchufe industrial macho de 32 A, 380 V** Lexo es del formato industrial **rojo** con **3P+T (4 contactos)** y protección **IP44**. El color y la posición de la llave impiden conectarlo a una tensión equivocada.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/18005X_01/w=1200,h=1200,fit=cover",
-      "alt": "Enchufe industrial macho volante 32 A 3P+T 380V IP44 Lexo vista 1",
-      "miniatura": "Ver de frente"
+      "alt": "Enchufe industrial macho volante IP44 32 A 3P+T 380 V Lexo, vista principal",
+      "miniatura": "Ver vista principal"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/18005X_1/w=1200,h=1200,fit=cover",
-      "alt": "Enchufe industrial macho volante 32 A 3P+T 380V IP44 Lexo vista 2",
-      "miniatura": "Vista 2"
+      "alt": "Enchufe industrial macho volante IP44 32 A 3P+T 380 V Lexo, otra vista",
+      "miniatura": "Ver otra vista"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/18005X_12/w=1200,h=1200,fit=cover",
-      "alt": "Enchufe industrial macho volante 32 A 3P+T 380V IP44 Lexo vista 3",
-      "miniatura": "Vista 3"
+      "alt": "Enchufe industrial macho volante IP44 32 A 3P+T 380 V Lexo, detalle",
+      "miniatura": "Ver detalle"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/18005X_13/w=1200,h=1200,fit=cover",
-      "alt": "Enchufe industrial macho volante 32 A 3P+T 380V IP44 Lexo vista 4",
-      "miniatura": "Vista 4"
+      "alt": "Enchufe industrial macho volante IP44 32 A 3P+T 380 V Lexo, vista lateral",
+      "miniatura": "Ver vista lateral"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/18005X_21/w=1200,h=1200,fit=cover",
-      "alt": "Enchufe industrial macho volante 32 A 3P+T 380V IP44 Lexo vista 5",
-      "miniatura": "Vista 5"
+      "alt": "Enchufe industrial macho volante IP44 32 A 3P+T 380 V Lexo, detalle de conexión",
+      "miniatura": "Ver detalle de conexión"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/18005X_22/w=1200,h=1200,fit=cover",
-      "alt": "Enchufe industrial macho volante 32 A 3P+T 380V IP44 Lexo vista 6",
-      "miniatura": "Vista 6"
+      "alt": "Enchufe industrial macho volante IP44 32 A 3P+T 380 V Lexo, vista posterior",
+      "miniatura": "Ver vista posterior"
     }
   ],
   "stock": {
@@ -58,50 +58,46 @@
       "Lexo"
     ],
     [
-      "Cantidad de paquetes",
-      "1.0 (según ficha técnica)"
+      "Tipo",
+      "Enchufe industrial macho (clavija)"
     ],
     [
-      "Alimentación",
-      "Eléctrica (según ficha técnica)"
+      "Formato",
+      "Industrial (IEC 60309), color rojo"
     ],
     [
-      "Tipo de divisor",
-      "Otro (según ficha técnica)"
+      "Corriente",
+      "32 A"
+    ],
+    [
+      "Tensión",
+      "380 V"
+    ],
+    [
+      "Polos",
+      "3P+T (4 contactos)"
+    ],
+    [
+      "Grado de protección",
+      "IP44"
     ],
     [
       "Color",
-      "Rojo (según ficha técnica)"
-    ],
-    [
-      "Voltaje",
-      "380V (según ficha técnica)"
-    ],
-    [
-      "Cantidad de salidas",
-      "1 (según ficha técnica)"
-    ],
-    [
-      "Amperaje",
-      "32 A (según ficha técnica)"
-    ],
-    [
-      "Garantía",
-      "6 meses"
+      "Rojo"
     ]
   ],
   "confianza": [
     {
-      "titulo": "🔌 Marca Lexo",
-      "detalle": "Calidad en material eléctrico"
+      "titulo": "⚡ 32 A · 380 V",
+      "detalle": "Formato industrial rojo"
     },
     {
-      "titulo": "⚡ Conexión segura",
-      "detalle": "Terminales interiores resistentes"
+      "titulo": "💧 IP44",
+      "detalle": "Protección contra agua y polvo"
     },
     {
       "titulo": "🚚 Envío a todo Chile",
-      "detalle": "Despacho a domicilio o retiro"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -110,86 +106,87 @@
   ],
   "secciones": [
     {
-      "id": "aplicaciones-enchufe-industrial-macho-",
-      "titulo": "¿Dónde utilizar este enchufe industrial?",
-      "indice": "Aplicaciones",
+      "id": "como-elegir",
+      "titulo": "Cómo saber si calza con tu equipo",
+      "indice": "Compatibilidad",
       "bloques": [
         {
-          "p": "El **enchufe industrial macho volante 32 a 3p+t 380v ip44** Lexo está diseñado para resolver necesidades de conexión eléctrica tanto en el hogar como en entornos de trabajo:"
+          "p": "Los enchufes industriales se distinguen por color, corriente y número de contactos. Azul es 220 V monofásico y rojo es 380 V trifásico; además, 16 y 32 A tienen tamaños distintos y no se mezclan."
         },
         {
           "lista": [
-            "Armado y reparación de conexiones en artefactos eléctricos y herramientas.",
-            "Montaje en extensiones y alargadores para distribución de energía.",
-            "Instalaciones que requieren contactos firmes y seguros para evitar falso contacto."
+            "Debe calzar con un enchufe hembra industrial rojo de 32 A y 4 contactos.",
+            "No sirve para tomas domiciliarias chilenas ni Schuko.",
+            "El grado IP44 se cumple solo con la tapa cerrada y el cable bien apretado en el prensacable."
           ]
-        },
-        {
-          "p": "Para revisar cómo conectar tus cables según la normativa chilena, consulta nuestra guía de [código de colores de cables eléctricos](/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/)."
         }
       ]
     },
     {
-      "id": "seguridad-enchufe-industrial-macho-",
-      "titulo": "Recomendaciones para una instalación segura",
-      "indice": "Instalación y seguridad",
+      "id": "instalacion",
+      "titulo": "Instalación y seguridad",
+      "indice": "Instalación",
       "bloques": [
         {
           "pasos": [
-            "Corta siempre el suministro eléctrico general antes de manipular cables o contactos.",
-            "Pela los conductores a la medida indicada sin cortar los hilos interiores de cobre.",
-            "Fija cada conductor firmemente en su borne correspondiente verificando la polaridad.",
-            "Asegura el prensacable o carcasa para evitar que tirones accidentales suelten las conexiones."
+            "Corta la luz desde el tablero o desenchufa el cable antes de armarlo.",
+            "Usa cable flexible de la sección que corresponda a 32 A: 4 o 6 mm² (consulta con un electricista según el largo).",
+            "Conecta el verde/amarillo al borne de tierra (marcado ⏚), el neutro al borne N y cada fase a L1, L2 y L3.",
+            "Aprieta el prensacable sobre la cubierta del cable para que no se suelte con un tirón."
           ]
         },
         {
-          "advertencia": "Si la instalación requiere trabajos en tableros principales o modificaciones complejas, recurre a un instalador eléctrico autorizado por la SEC."
+          "advertencia": "Los circuitos trifásicos y las tomas fijas de 32 A los instala un electricista autorizado SEC, con su protección en el tablero."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿El producto cuenta con garantía?",
-      "respuesta": "Sí, en Ferretería Ukra todos nuestros productos cuentan con 6 meses de garantía legal por defectos de fabricación."
+      "pregunta": "¿Qué diferencia hay entre el azul y el rojo?",
+      "respuesta": "Azul es para 200 a 250 V (monofásico, como la red de una casa) y rojo para 380 a 415 V (trifásico). No se pueden conectar entre sí."
     },
     {
-      "pregunta": "¿Sirve para uso doméstico y de taller?",
-      "respuesta": "Sí, este enchufe industrial Lexo es apto para circuitos eléctricos correspondientes a su capacidad nominal indicada en la ficha técnica."
+      "pregunta": "¿Qué cable uso?",
+      "respuesta": "Cable flexible de 4 o 6 mm² (consulta con un electricista según el largo) para 32 A, con cinco conductores si es 3P+N+T o cuatro si es 3P+T."
     },
     {
-      "pregunta": "¿Hacen envíos a todo Chile?",
-      "respuesta": "Sí, despachamos a todas las regiones de Chile mediante empresas de logística certificadas y opciones de entrega oportuna."
+      "pregunta": "¿Qué significa IP44?",
+      "respuesta": "Que está protegido contra objetos de más de 1 mm y contra salpicaduras de agua desde cualquier dirección, con la tapa cerrada."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
     }
   ],
   "lateral": {
-    "etiqueta": "Material Eléctrico",
-    "titulo": "Enchufe industrial macho volante 32 Lexo",
-    "texto": "Enchufe industrial macho volante 32 A 3P+T 380V IP44 Lexo en color rojo para conexiones eléctricas confiables y duraderas."
+    "etiqueta": "Material eléctrico",
+    "titulo": "Enchufe industrial macho volante IP44 32 A 3P+T 380 V Lexo",
+    "texto": "Enchufe industrial macho 32 A 380 V 3P+T IP44, formato rojo."
+  },
+  "tarjeta": {
+    "titulo": "Enchufe industrial macho volante IP44 32 A 3P+T 380 V Lexo",
+    "extracto": "Enchufe industrial macho 32 A 380 V 3P+T IP44, formato rojo.",
+    "alt": "Enchufe industrial macho volante IP44 32 A 3P+T 380 V Lexo",
+    "etiqueta": "Material eléctrico"
   },
   "relacionados": [
-    "adaptador-schuko-a-enchufe-chileno-10a",
-    "adaptador-schuko-bipaso-16a-bticino",
-    "enchufe-macho-volante-articulado-10a-bticino"
+    "enchufe-industrial-macho-volante-16-a-2p-t-220v-ip",
+    "enchufe-industrial-macho-volante-16-a-2p-t-220v-le",
+    "enchufe-industrial-macho-volante-32-a-2p-t-220v-ip"
   ],
   "guias": [
     {
-      "url": "/blog/como-instalar-un-enchufe-en-chile-guia-segura/",
-      "texto": "Cómo instalar un enchufe en Chile paso a paso"
+      "url": "/blog/como-calcular-el-consumo-electrico-de-una-soldadora-domestica-guia-completa/",
+      "texto": "Consumo eléctrico de una soldadora"
     },
     {
-      "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
-      "texto": "Cómo identificar fase y neutro en un enchufe"
+      "url": "/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/",
+      "texto": "Cómo armar un tablero eléctrico"
     },
     {
       "url": "/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/",
-      "texto": "Código de colores de cables eléctricos"
+      "texto": "Código de colores de cables"
     }
-  ],
-  "tarjeta": {
-    "titulo": "Enchufe industrial macho volante 32 A 3P Lexo",
-    "extracto": "Enchufe industrial macho volante 32 A 3P+T 380V IP44 Lexo en color rojo para instalaciones y armado eléctrico seguro.",
-    "alt": "Enchufe industrial macho volante 32 A 3P+T 380V IP44 Lexo rojo",
-    "etiqueta": "Material Eléctrico"
-  }
+  ]
 }

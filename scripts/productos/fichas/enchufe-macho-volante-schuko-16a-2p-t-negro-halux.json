@@ -1,31 +1,31 @@
 {
   "slug": "enchufe-macho-volante-schuko-16a-2p-t-negro-halux",
-  "nombre": "Enchufe macho volante schuko 16A 2P+T Negro Halux Halux",
-  "titulo_h1": "Enchufe macho volante schuko 16A 2P+T Negro Halux Halux",
-  "titulo_corto": "Enchufe macho volante schuko 16A 2P+T Ne Halux",
   "marca": "Halux",
   "sku": "135792899",
   "precio_referencia": 3990,
   "margen": 50,
   "categoria": "electricidad",
-  "subcategoria": "Enchufes y clavijas macho",
+  "nombre": "Enchufe macho Schuko 16 A 2P+T negro Halux",
+  "titulo_h1": "Enchufe macho Schuko 16 A 2P+T negro Halux",
+  "titulo_corto": "Enchufe macho Schuko 16 A 2P+T negro Halux",
+  "subcategoria": "Enchufes macho",
   "color": "Negro",
   "disponible": true,
-  "seo_titulo": "Enchufe macho volante schuko 16A 2P Halux",
-  "meta_descripcion": "Compra Enchufe macho volante schuko 16A 2P+T Negro Halux marca Halux a {precio}. Conexión eléctrica segura, despacho a todo Chile y 6 meses de garantía.",
-  "og_descripcion": "Enchufe macho volante schuko 16A 2P+T Negro Halux Halux para instalaciones eléctricas seguras y confiables. Despacho a todo Chile.",
-  "descripcion": "Enchufe macho volante schuko 16A 2P+T Negro Halux marca Halux en color negro. Diseñado para brindar conexiones firmes y seguras en circuitos eléctricos domiciliarios y de taller. Fabricado en materiales resistentes, cumple con exigencias de seguridad para uso continuo con garantía de 6 meses.",
-  "lede": "Para tus trabajos de armado, mantención o extensión eléctrica, este **enchufe macho volante schuko 16a 2p+t negro halux** de marca **Halux** ofrece una conexión firme, cuerpo resistente en color **negro** y terminales interiores diseñados para un montaje seguro y duradero.",
+  "seo_titulo": "Enchufe macho Schuko 16 A 2P+T negro Halux",
+  "meta_descripcion": "Compra enchufe macho Schuko 16 A 2P+T negro Halux a {precio}. Enchufe macho Schuko de 16 A para cable, con tierra en los contactos laterales. Para tomas Schuko o mixtas.",
+  "og_descripcion": "Enchufe macho Schuko de 16 A para cable, con tierra en los contactos laterales. Para tomas Schuko o mixtas.",
+  "descripcion": "Enchufe macho Schuko de 16 A para cable, marca Halux, color negro. Tiene dos patas redondas y contactos de tierra laterales. Sirve para tomas Schuko (redondas) o mixtas que aceptan Schuko. Garantía de 6 meses.",
+  "lede": "Si tu artefacto o tu toma es **Schuko** (la redonda con contactos de tierra a los lados), este **enchufe macho Schuko de 16 A** Halux te permite armar o reparar el cable. La tierra va por **los contactos laterales**, no por una pata.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/7602634_01/w=1200,h=1200,fit=cover",
-      "alt": "Enchufe macho volante schuko 16A 2P+T Negro Halux Halux vista 1",
-      "miniatura": "Ver de frente"
+      "alt": "Enchufe macho Schuko 16 A 2P+T negro Halux, vista principal",
+      "miniatura": "Ver vista principal"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7602634_21/w=1200,h=1200,fit=cover",
-      "alt": "Enchufe macho volante schuko 16A 2P+T Negro Halux Halux vista 2",
-      "miniatura": "Vista 2"
+      "alt": "Enchufe macho Schuko 16 A 2P+T negro Halux, otra vista",
+      "miniatura": "Ver otra vista"
     }
   ],
   "stock": {
@@ -38,46 +38,42 @@
       "Halux"
     ],
     [
-      "Alimentación",
-      "Eléctrica enchufable (según ficha técnica)"
+      "Tipo",
+      "Enchufe macho volante (para cable)"
     ],
     [
-      "Tipo de divisor",
-      "Otro (según ficha técnica)"
+      "Norma de clavija",
+      "Schuko (CEE 7/7)"
+    ],
+    [
+      "Polos",
+      "2P+T"
+    ],
+    [
+      "Corriente",
+      "16 A"
+    ],
+    [
+      "Tensión",
+      "250 V"
     ],
     [
       "Color",
-      "Negro (según ficha técnica)"
-    ],
-    [
-      "Voltaje",
-      "250 V (según ficha técnica)"
-    ],
-    [
-      "Cantidad de salidas",
-      "1 (según ficha técnica)"
-    ],
-    [
-      "Amperaje",
-      "16 A (según ficha técnica)"
-    ],
-    [
-      "Garantía",
-      "6 meses"
+      "Negro"
     ]
   ],
   "confianza": [
     {
-      "titulo": "🔌 Marca Halux",
-      "detalle": "Calidad en material eléctrico"
+      "titulo": "🔌 Schuko 16 A",
+      "detalle": "Patas redondas"
     },
     {
-      "titulo": "⚡ Conexión segura",
-      "detalle": "Terminales interiores resistentes"
+      "titulo": "⏚ Con tierra",
+      "detalle": "Contactos laterales"
     },
     {
       "titulo": "🚚 Envío a todo Chile",
-      "detalle": "Despacho a domicilio o retiro"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -86,86 +82,86 @@
   ],
   "secciones": [
     {
-      "id": "aplicaciones-enchufe-macho-volante-sch",
-      "titulo": "¿Dónde utilizar este enchufe macho volante?",
-      "indice": "Aplicaciones",
+      "id": "para-que-sirve",
+      "titulo": "¿Para qué sirve un enchufe Schuko?",
+      "indice": "Para qué sirve",
       "bloques": [
         {
-          "p": "El **enchufe macho volante schuko 16a 2p+t negro halux** Halux está diseñado para resolver necesidades de conexión eléctrica tanto en el hogar como en entornos de trabajo:"
+          "p": "El Schuko es el enchufe europeo redondo. En Chile se usa en algunas tomas modernas o mixtas y en artefactos importados."
         },
         {
           "lista": [
-            "Armado y reparación de conexiones en artefactos eléctricos y herramientas.",
-            "Montaje en extensiones y alargadores para distribución de energía.",
-            "Instalaciones que requieren contactos firmes y seguros para evitar falso contacto."
+            "Encaja en tomas Schuko y en tomas mixtas que lo aceptan.",
+            "No entra en una toma chilena común de tres agujeros en línea: para eso necesitas un adaptador.",
+            "Para artefactos de hasta 16 A (unos 3.500 W a 220 V)."
           ]
-        },
-        {
-          "p": "Para revisar cómo conectar tus cables según la normativa chilena, consulta nuestra guía de [código de colores de cables eléctricos](/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/)."
         }
       ]
     },
     {
-      "id": "seguridad-enchufe-macho-volante-sch",
-      "titulo": "Recomendaciones para una instalación segura",
-      "indice": "Instalación y seguridad",
+      "id": "como-armarlo",
+      "titulo": "Cómo conectarlo al cable",
+      "indice": "Cómo armarlo",
       "bloques": [
         {
           "pasos": [
-            "Corta siempre el suministro eléctrico general antes de manipular cables o contactos.",
-            "Pela los conductores a la medida indicada sin cortar los hilos interiores de cobre.",
-            "Fija cada conductor firmemente en su borne correspondiente verificando la polaridad.",
-            "Asegura el prensacable o carcasa para evitar que tirones accidentales suelten las conexiones."
+            "Corta la luz desde el tablero o desenchufa el cable antes de armarlo.",
+            "Pela unos 8 mm de cada conductor. Para 16 A usa cable flexible de al menos 1,5 mm².",
+            "Conecta fase y neutro en los bornes de las patas, y el verde/amarillo en el borne de tierra (marcado ⏚), que va a los contactos laterales.",
+            "Aprieta la abrazadera sobre la cubierta del cable y cierra la carcasa."
           ]
         },
         {
-          "advertencia": "Si la instalación requiere trabajos en tableros principales o modificaciones complejas, recurre a un instalador eléctrico autorizado por la SEC."
+          "advertencia": "No cortes el enchufe original de un artefacto nuevo si no es necesario: puedes perder la garantía del artefacto. Para usarlo en una toma chilena, existen adaptadores con tierra."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿El producto cuenta con garantía?",
-      "respuesta": "Sí, en Ferretería Ukra todos nuestros productos cuentan con 6 meses de garantía legal por defectos de fabricación."
+      "pregunta": "¿Funciona en los enchufes de pared chilenos?",
+      "respuesta": "Solo en tomas Schuko o mixtas. En una toma chilena común de tres agujeros en línea no entra: usa un adaptador Schuko a enchufe chileno con tierra."
     },
     {
-      "pregunta": "¿Sirve para uso doméstico y de taller?",
-      "respuesta": "Sí, este enchufe macho volante Halux es apto para circuitos eléctricos correspondientes a su capacidad nominal indicada en la ficha técnica."
+      "pregunta": "¿Dónde va la tierra en un Schuko?",
+      "respuesta": "En el borne marcado ⏚, que se une a los contactos metálicos de los costados. Ahí va el conductor verde/amarillo."
     },
     {
-      "pregunta": "¿Hacen envíos a todo Chile?",
-      "respuesta": "Sí, despachamos a todas las regiones de Chile mediante empresas de logística certificadas y opciones de entrega oportuna."
+      "pregunta": "¿Qué cable uso?",
+      "respuesta": "Cable flexible de tres conductores de al menos 1,5 mm² para 16 A."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
     }
   ],
   "lateral": {
-    "etiqueta": "Material Eléctrico",
-    "titulo": "Enchufe macho volante schuko 16A 2P Halux",
-    "texto": "Enchufe macho volante schuko 16A 2P+T Negro Halux Halux en color negro para conexiones eléctricas confiables y duraderas."
+    "etiqueta": "Material eléctrico",
+    "titulo": "Enchufe macho Schuko 16 A 2P+T negro Halux",
+    "texto": "Enchufe macho Schuko de 16 A para cable, con tierra en los contactos laterales. Para tomas Schuko o mixtas."
+  },
+  "tarjeta": {
+    "titulo": "Enchufe macho Schuko 16 A 2P+T negro Halux",
+    "extracto": "Enchufe macho Schuko de 16 A para cable, con tierra en los contactos laterales. Para tomas Schuko o mixtas.",
+    "alt": "Enchufe macho Schuko 16 A 2P+T negro Halux",
+    "etiqueta": "Material eléctrico"
   },
   "relacionados": [
-    "adaptador-schuko-a-enchufe-chileno-10a",
-    "adaptador-schuko-bipaso-16a-bticino",
-    "enchufe-macho-volante-articulado-10a-bticino"
+    "enchufe-macho-volante-schuko-16a-2p-t-blanco-halux",
+    "enchufe-macho-volante-schuko-2p-t-16-a-negro-btici"
   ],
   "guias": [
     {
       "url": "/blog/como-instalar-un-enchufe-en-chile-guia-segura/",
-      "texto": "Cómo instalar un enchufe en Chile paso a paso"
-    },
-    {
-      "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
-      "texto": "Cómo identificar fase y neutro en un enchufe"
+      "texto": "Cómo instalar un enchufe en Chile"
     },
     {
       "url": "/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/",
-      "texto": "Código de colores de cables eléctricos"
+      "texto": "Código de colores de cables"
+    },
+    {
+      "url": "/blog/puesta-a-tierra-domiciliaria-como-hacerla-y-medirla-chile/",
+      "texto": "Puesta a tierra domiciliaria"
     }
-  ],
-  "tarjeta": {
-    "titulo": "Enchufe macho volante schuko 16A 2P+T Ne Halux",
-    "extracto": "Enchufe macho volante schuko 16A 2P+T Negro Halux Halux en color negro para instalaciones y armado eléctrico seguro.",
-    "alt": "Enchufe macho volante schuko 16A 2P+T Negro Halux Halux negro",
-    "etiqueta": "Material Eléctrico"
-  }
+  ]
 }

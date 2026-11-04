@@ -1,31 +1,31 @@
 {
   "slug": "adaptador-industrial-ip44-2x-2p-t-10-16a-250v-lexo",
-  "nombre": "Adaptador industrial IP44 2X 2P+T 10/16A 250V Lexo",
-  "titulo_h1": "Adaptador industrial IP44 2X 2P+T 10/16A 250V Lexo",
-  "titulo_corto": "Adaptador industrial IP44 2X 2P+T 10/16A Lexo",
   "marca": "Lexo",
   "sku": "136642046",
   "precio_referencia": 14990,
   "margen": 50,
   "categoria": "electricidad",
-  "subcategoria": "Tomas y enchufes industriales",
-  "color": "Blanco",
+  "nombre": "Adaptador industrial IP44 a 2 tomas 2P+T 10/16 A 250 V Lexo",
+  "titulo_h1": "Adaptador industrial IP44 a 2 tomas 2P+T 10/16 A 250 V Lexo",
+  "titulo_corto": "Adaptador industrial IP44 a 2 tomas 2P+T 10/16 A 250 V Lexo",
+  "subcategoria": "Adaptadores",
+  "color": "Blanco y azul",
   "disponible": true,
-  "seo_titulo": "Adaptador industrial IP44 2X 2P+T 1 Lexo",
-  "meta_descripcion": "Compra Adaptador industrial IP44 2X 2P+T 10/16A 250V marca Lexo a {precio}. Conexión segura, despacho rápido a todo Chile y garantía legal de 6 meses en Ferretería Ukra.",
-  "og_descripcion": "Adaptador industrial IP44 2X 2P+T 10/16A 250V Lexo para instalaciones eléctricas seguras y confiables. Despacho a todo Chile.",
-  "descripcion": "Adaptador industrial IP44 2X 2P+T 10/16A 250V marca Lexo en color blanco. Diseñado para brindar conexiones firmes y seguras en circuitos eléctricos domiciliarios y de taller. Fabricado en materiales resistentes, cumple con exigencias de seguridad para uso continuo con garantía de 6 meses.",
-  "lede": "Para tus trabajos de armado, mantención o extensión eléctrica, este **adaptador industrial ip44 2x 2p+t 10/16a 250v** de marca **Lexo** ofrece una conexión firme, cuerpo resistente en color **blanco** y terminales interiores diseñados para un montaje seguro y duradero.",
+  "seo_titulo": "Adaptador industrial IP44 a 2 tomas 2P+T 10/16 A 250 V Lexo",
+  "meta_descripcion": "Compra adaptador industrial IP44 a 2 tomas 2P+T 10/16 A 250 V Lexo a {precio}. Adaptador de enchufe industrial azul 16 A a 2 tomas chilenas 2P+T bipaso, con tapa IP44 para.",
+  "og_descripcion": "Adaptador de enchufe industrial azul 16 A a 2 tomas chilenas 2P+T bipaso, con tapa IP44 para faena.",
+  "descripcion": "Adaptador con enchufe industrial azul de 16 A y 2 tomas domiciliarias chilenas 2P+T de 10/16 A (bipaso), con tapa, grado de protección IP44. Marca Lexo. Para conectar herramientas y artefactos comunes en una toma industrial de faena. Garantía de 6 meses.",
+  "lede": "Para usar herramientas con enchufe común en una **toma industrial azul de 16 A**, este adaptador Lexo tiene **2 tomas chilenas 2P+T bipaso** con **tapa IP44**. Útil en obras y faenas.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/7615361_01/w=1200,h=1200,fit=cover",
-      "alt": "Adaptador industrial IP44 2X 2P+T 10/16A 250V Lexo vista 1",
-      "miniatura": "Ver de frente"
+      "alt": "Adaptador industrial IP44 a 2 tomas 2P+T 10/16 A 250 V Lexo, vista principal",
+      "miniatura": "Ver vista principal"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7615361_21/w=1200,h=1200,fit=cover",
-      "alt": "Adaptador industrial IP44 2X 2P+T 10/16A 250V Lexo vista 2",
-      "miniatura": "Vista 2"
+      "alt": "Adaptador industrial IP44 a 2 tomas 2P+T 10/16 A 250 V Lexo, otra vista",
+      "miniatura": "Ver otra vista"
     }
   ],
   "stock": {
@@ -38,42 +38,38 @@
       "Lexo"
     ],
     [
-      "Alimentación",
-      "Eléctrica enchufable (según ficha técnica)"
+      "Entrada",
+      "Enchufe industrial azul 16 A 2P+T"
     ],
     [
-      "Tipo de divisor",
-      "Otro (según ficha técnica)"
+      "Salidas",
+      "2 tomas chilenas 2P+T 10/16 A"
+    ],
+    [
+      "Tensión",
+      "250 V"
+    ],
+    [
+      "Grado de protección",
+      "IP44 (con tapa cerrada)"
     ],
     [
       "Color",
-      "Blanco (según ficha técnica)"
-    ],
-    [
-      "Cantidad de salidas",
-      "2 (según ficha técnica)"
-    ],
-    [
-      "Amperaje",
-      "10 A (según ficha técnica)"
-    ],
-    [
-      "Garantía",
-      "6 meses"
+      "Blanco y azul"
     ]
   ],
   "confianza": [
     {
-      "titulo": "🔌 Marca Lexo",
-      "detalle": "Calidad en material eléctrico"
+      "titulo": "🔌 2 tomas bipaso",
+      "detalle": "Reciben enchufes de 10 y 16 A"
     },
     {
-      "titulo": "⚡ Conexión segura",
-      "detalle": "Terminales interiores resistentes"
+      "titulo": "💧 IP44",
+      "detalle": "Tapa contra salpicaduras"
     },
     {
       "titulo": "🚚 Envío a todo Chile",
-      "detalle": "Despacho a domicilio o retiro"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -82,86 +78,84 @@
   ],
   "secciones": [
     {
-      "id": "aplicaciones-adaptador-industrial-ip44",
-      "titulo": "¿Dónde utilizar este enchufe industrial?",
-      "indice": "Aplicaciones",
+      "id": "para-que-sirve",
+      "titulo": "¿Para qué sirve este adaptador industrial?",
+      "indice": "Para qué sirve",
       "bloques": [
         {
-          "p": "El **adaptador industrial ip44 2x 2p+t 10/16a 250v** Lexo está diseñado para resolver necesidades de conexión eléctrica tanto en el hogar como en entornos de trabajo:"
+          "p": "En obras, talleres y faenas las tomas suelen ser industriales. Este adaptador permite conectar ahí herramientas y artefactos con enchufe chileno."
         },
         {
           "lista": [
-            "Armado y reparación de conexiones en artefactos eléctricos y herramientas.",
-            "Montaje en extensiones y alargadores para distribución de energía.",
-            "Instalaciones que requieren contactos firmes y seguros para evitar falso contacto."
+            "Entra en tomas industriales azules de 16 A (220 V).",
+            "La suma de lo que conectes no debe pasar de 16 A, unos 3.500 W.",
+            "Mantén la tapa cerrada en las tomas que no uses."
           ]
-        },
-        {
-          "p": "Para revisar cómo conectar tus cables según la normativa chilena, consulta nuestra guía de [código de colores de cables eléctricos](/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/)."
         }
       ]
     },
     {
-      "id": "seguridad-adaptador-industrial-ip44",
-      "titulo": "Recomendaciones para una instalación segura",
-      "indice": "Instalación y seguridad",
+      "id": "seguridad",
+      "titulo": "Uso seguro",
+      "indice": "Seguridad",
       "bloques": [
         {
-          "pasos": [
-            "Corta siempre el suministro eléctrico general antes de manipular cables o contactos.",
-            "Pela los conductores a la medida indicada sin cortar los hilos interiores de cobre.",
-            "Fija cada conductor firmemente en su borne correspondiente verificando la polaridad.",
-            "Asegura el prensacable o carcasa para evitar que tirones accidentales suelten las conexiones."
+          "lista": [
+            "No conectes otro adaptador en sus tomas.",
+            "Revisa que la toma industrial tenga protección diferencial.",
+            "Si el adaptador se calienta, desconéctalo: estás pasando su capacidad."
           ]
         },
         {
-          "advertencia": "Si la instalación requiere trabajos en tableros principales o modificaciones complejas, recurre a un instalador eléctrico autorizado por la SEC."
+          "advertencia": "Las tomas industriales fijas las instala un electricista autorizado SEC."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿El producto cuenta con garantía?",
-      "respuesta": "Sí, en Ferretería Ukra todos nuestros productos cuentan con 6 meses de garantía legal por defectos de fabricación."
+      "pregunta": "¿Sirve en una toma industrial roja?",
+      "respuesta": "No. Es para tomas azules de 16 A (220 V). Las rojas son trifásicas de 380 V."
     },
     {
-      "pregunta": "¿Sirve para uso doméstico y de taller?",
-      "respuesta": "Sí, este enchufe industrial Lexo es apto para circuitos eléctricos correspondientes a su capacidad nominal indicada en la ficha técnica."
+      "pregunta": "¿Cuánto puedo conectar a la vez?",
+      "respuesta": "Hasta 16 A en total, unos 3.500 W a 220 V. Suma las potencias de lo que conectes."
     },
     {
-      "pregunta": "¿Hacen envíos a todo Chile?",
-      "respuesta": "Sí, despachamos a todas las regiones de Chile mediante empresas de logística certificadas y opciones de entrega oportuna."
+      "pregunta": "¿Puedo dejarlo a la intemperie?",
+      "respuesta": "Es IP44: resiste salpicaduras con la tapa cerrada, pero no lluvia directa ni charcos."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
     }
   ],
   "lateral": {
-    "etiqueta": "Material Eléctrico",
-    "titulo": "Adaptador industrial IP44 2X 2P+T 1 Lexo",
-    "texto": "Adaptador industrial IP44 2X 2P+T 10/16A 250V Lexo en color blanco para conexiones eléctricas confiables y duraderas."
+    "etiqueta": "Material eléctrico",
+    "titulo": "Adaptador industrial IP44 a 2 tomas 2P+T 10/16 A 250 V Lexo",
+    "texto": "Adaptador de enchufe industrial azul 16 A a 2 tomas chilenas 2P+T bipaso, con tapa IP44 para faena."
+  },
+  "tarjeta": {
+    "titulo": "Adaptador industrial IP44 a 2 tomas 2P+T 10/16 A 250 V Lexo",
+    "extracto": "Adaptador de enchufe industrial azul 16 A a 2 tomas chilenas 2P+T bipaso, con tapa IP44 para faena.",
+    "alt": "Adaptador industrial IP44 a 2 tomas 2P+T 10/16 A 250 V Lexo",
+    "etiqueta": "Material eléctrico"
   },
   "relacionados": [
-    "adaptador-schuko-a-enchufe-chileno-10a",
-    "adaptador-schuko-bipaso-16a-bticino",
-    "enchufe-macho-volante-articulado-10a-bticino"
+    "adaptador-industrial-ip44-3x-2p-t-10-16a-250v-lexo"
   ],
   "guias": [
     {
-      "url": "/blog/como-instalar-un-enchufe-en-chile-guia-segura/",
-      "texto": "Cómo instalar un enchufe en Chile paso a paso"
+      "url": "/blog/como-calcular-el-consumo-electrico-de-una-soldadora-domestica-guia-completa/",
+      "texto": "Consumo eléctrico de una soldadora"
     },
     {
-      "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
-      "texto": "Cómo identificar fase y neutro en un enchufe"
+      "url": "/blog/las-mejores-marcas-de-alargadores-electricos-guia-completa-para-elegir/",
+      "texto": "Cómo elegir un alargador eléctrico"
     },
     {
-      "url": "/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/",
-      "texto": "Código de colores de cables eléctricos"
+      "url": "/blog/por-que-salta-el-diferencial-como-encontrar-la-fuga-guia-chile/",
+      "texto": "Por qué salta el diferencial"
     }
-  ],
-  "tarjeta": {
-    "titulo": "Adaptador industrial IP44 2X 2P+T 10/16A Lexo",
-    "extracto": "Adaptador industrial IP44 2X 2P+T 10/16A 250V Lexo en color blanco para instalaciones y armado eléctrico seguro.",
-    "alt": "Adaptador industrial IP44 2X 2P+T 10/16A 250V Lexo blanco",
-    "etiqueta": "Material Eléctrico"
-  }
+  ]
 }

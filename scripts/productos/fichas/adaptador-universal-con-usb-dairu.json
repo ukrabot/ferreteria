@@ -1,41 +1,41 @@
 {
   "slug": "adaptador-universal-con-usb-dairu",
-  "nombre": "Adaptador universal con USB Dairu",
-  "titulo_h1": "Adaptador universal con USB Dairu",
-  "titulo_corto": "Adaptador universal con USB Dairu",
   "marca": "Dairu",
   "sku": "126865335",
   "precio_referencia": 7990,
   "margen": 50,
   "categoria": "electricidad",
-  "subcategoria": "Adaptadores de enchufe",
+  "nombre": "Adaptador universal de viaje con USB Dairu",
+  "titulo_h1": "Adaptador universal de viaje con USB Dairu",
+  "titulo_corto": "Adaptador universal de viaje con USB Dairu",
+  "subcategoria": "Adaptadores",
   "color": "Negro",
   "disponible": true,
-  "seo_titulo": "Adaptador universal con USB Dairu",
-  "meta_descripcion": "Compra Adaptador universal con USB marca Dairu a {precio}. Conexión segura, despacho rápido a todo Chile y garantía legal de 6 meses en Ferretería Ukra.",
-  "og_descripcion": "Adaptador universal con USB Dairu para instalaciones eléctricas seguras y confiables. Despacho a todo Chile.",
-  "descripcion": "Adaptador universal con USB marca Dairu en color negro. Diseñado para brindar conexiones firmes y seguras en circuitos eléctricos domiciliarios y de taller. Fabricado en materiales resistentes, cumple con exigencias de seguridad para uso continuo con garantía de 6 meses.",
-  "lede": "Para tus trabajos de armado, mantención o extensión eléctrica, este **adaptador universal con usb** de marca **Dairu** ofrece una conexión firme, cuerpo resistente en color **negro** y terminales interiores diseñados para un montaje seguro y duradero.",
+  "seo_titulo": "Adaptador universal de viaje con USB Dairu",
+  "meta_descripcion": "Compra adaptador universal de viaje con USB Dairu a {precio}. Adaptador universal de viaje con USB, para enchufes de distintos países. 100-230 V, máximo 1440 W.",
+  "og_descripcion": "Adaptador universal de viaje con USB, para enchufes de distintos países. 100-230 V, máximo 1440 W.",
+  "descripcion": "Adaptador universal de viaje marca Dairu, color negro, con puertos USB, para usar artefactos en enchufes de distintos países. Funciona entre 100 y 230 V, con potencia máxima de 1440 W. Garantía de 6 meses.",
+  "lede": "Para viajar con tus cargadores y artefactos, este **adaptador universal** Dairu trae **patas para distintos países** y **puertos USB** para cargar el celular sin cargador. Ojo: **adapta el enchufe, no cambia el voltaje**.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/9001344_01/w=1200,h=1200,fit=cover",
-      "alt": "Adaptador universal con USB Dairu vista 1",
-      "miniatura": "Ver de frente"
+      "alt": "Adaptador universal de viaje con USB Dairu, vista principal",
+      "miniatura": "Ver vista principal"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/9001344_12/w=1200,h=1200,fit=cover",
-      "alt": "Adaptador universal con USB Dairu vista 2",
-      "miniatura": "Vista 2"
+      "alt": "Adaptador universal de viaje con USB Dairu, otra vista",
+      "miniatura": "Ver otra vista"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/9001344_13/w=1200,h=1200,fit=cover",
-      "alt": "Adaptador universal con USB Dairu vista 3",
-      "miniatura": "Vista 3"
+      "alt": "Adaptador universal de viaje con USB Dairu, detalle",
+      "miniatura": "Ver detalle"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/9001344_14/w=1200,h=1200,fit=cover",
-      "alt": "Adaptador universal con USB Dairu vista 4",
-      "miniatura": "Vista 4"
+      "alt": "Adaptador universal de viaje con USB Dairu, vista lateral",
+      "miniatura": "Ver vista lateral"
     }
   ],
   "stock": {
@@ -48,50 +48,38 @@
       "Dairu"
     ],
     [
-      "Plazo de disponibilidad de repuestos",
-      "1 año(s) (según ficha técnica)"
+      "Tipo",
+      "Adaptador universal de viaje"
     ],
     [
-      "Duración en condiciones previsibles d...",
-      "1 año(s) (según ficha técnica)"
+      "Puertos USB",
+      "Sí"
     ],
     [
-      "Plazo de disponibilidad de servicio t...",
-      "1 año(s) (según ficha técnica)"
+      "Tensión",
+      "100 a 230 V"
     ],
     [
-      "Cantidad de entradas",
-      "1 (según ficha técnica)"
-    ],
-    [
-      "Potencia",
-      "1440 W (según ficha técnica)"
+      "Potencia máxima",
+      "1440 W"
     ],
     [
       "Color",
-      "Negro (según ficha técnica)"
-    ],
-    [
-      "Voltaje",
-      "100 V,230 V (según ficha técnica)"
-    ],
-    [
-      "Garantía",
-      "6 meses"
+      "Negro"
     ]
   ],
   "confianza": [
     {
-      "titulo": "🔌 Marca Dairu",
-      "detalle": "Calidad en material eléctrico"
+      "titulo": "🌍 Universal",
+      "detalle": "Patas para distintos países"
     },
     {
-      "titulo": "⚡ Conexión segura",
-      "detalle": "Terminales interiores resistentes"
+      "titulo": "🔋 Con USB",
+      "detalle": "Carga sin cargador aparte"
     },
     {
       "titulo": "🚚 Envío a todo Chile",
-      "detalle": "Despacho a domicilio o retiro"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -100,86 +88,75 @@
   ],
   "secciones": [
     {
-      "id": "aplicaciones-adaptador-universal-con-u",
-      "titulo": "¿Dónde utilizar este adaptador de enchufe?",
-      "indice": "Aplicaciones",
+      "id": "como-funciona",
+      "titulo": "Cómo funciona un adaptador de viaje",
+      "indice": "Cómo funciona",
       "bloques": [
         {
-          "p": "El **adaptador universal con usb** Dairu está diseñado para resolver necesidades de conexión eléctrica tanto en el hogar como en entornos de trabajo:"
+          "p": "Cambia la forma del enchufe para que tu artefacto entre en la toma de otro país. No transforma el voltaje."
         },
         {
           "lista": [
-            "Armado y reparación de conexiones en artefactos eléctricos y herramientas.",
-            "Montaje en extensiones y alargadores para distribución de energía.",
-            "Instalaciones que requieren contactos firmes y seguros para evitar falso contacto."
+            "Revisa que tu artefacto diga 100-240 V en su etiqueta: la mayoría de los cargadores lo dice.",
+            "Un secador o plancha de 220 V no sirve en países de 110 V aunque tengas adaptador.",
+            "No pases de 1440 W."
           ]
-        },
-        {
-          "p": "Para revisar cómo conectar tus cables según la normativa chilena, consulta nuestra guía de [código de colores de cables eléctricos](/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/)."
         }
       ]
     },
     {
-      "id": "seguridad-adaptador-universal-con-u",
-      "titulo": "Recomendaciones para una instalación segura",
-      "indice": "Instalación y seguridad",
+      "id": "seguridad",
+      "titulo": "Uso seguro",
+      "indice": "Seguridad",
       "bloques": [
         {
-          "pasos": [
-            "Corta siempre el suministro eléctrico general antes de manipular cables o contactos.",
-            "Pela los conductores a la medida indicada sin cortar los hilos interiores de cobre.",
-            "Fija cada conductor firmemente en su borne correspondiente verificando la polaridad.",
-            "Asegura el prensacable o carcasa para evitar que tirones accidentales suelten las conexiones."
+          "lista": [
+            "Úsalo para cargadores y artefactos pequeños.",
+            "No conectes artefactos que calientan de alto consumo.",
+            "Desconéctalo cuando no lo uses."
           ]
-        },
-        {
-          "advertencia": "Si la instalación requiere trabajos en tableros principales o modificaciones complejas, recurre a un instalador eléctrico autorizado por la SEC."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿El producto cuenta con garantía?",
-      "respuesta": "Sí, en Ferretería Ukra todos nuestros productos cuentan con 6 meses de garantía legal por defectos de fabricación."
+      "pregunta": "¿Cambia el voltaje?",
+      "respuesta": "No. Solo adapta la forma del enchufe. Tu artefacto debe aceptar el voltaje del país: revisa su etiqueta."
     },
     {
-      "pregunta": "¿Sirve para uso doméstico y de taller?",
-      "respuesta": "Sí, este adaptador de enchufe Dairu es apto para circuitos eléctricos correspondientes a su capacidad nominal indicada en la ficha técnica."
+      "pregunta": "¿Sirve para el secador de pelo?",
+      "respuesta": "Solo si el secador acepta el voltaje del país y consume menos de 1440 W. Muchos secadores consumen más."
     },
     {
-      "pregunta": "¿Hacen envíos a todo Chile?",
-      "respuesta": "Sí, despachamos a todas las regiones de Chile mediante empresas de logística certificadas y opciones de entrega oportuna."
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
     }
   ],
   "lateral": {
-    "etiqueta": "Material Eléctrico",
-    "titulo": "Adaptador universal con USB Dairu",
-    "texto": "Adaptador universal con USB Dairu en color negro para conexiones eléctricas confiables y duraderas."
+    "etiqueta": "Material eléctrico",
+    "titulo": "Adaptador universal de viaje con USB Dairu",
+    "texto": "Adaptador universal de viaje con USB, para enchufes de distintos países. 100-230 V, máximo 1440 W."
   },
-  "relacionados": [
-    "adaptador-schuko-a-enchufe-chileno-10a",
-    "adaptador-schuko-bipaso-16a-bticino",
-    "enchufe-macho-volante-articulado-10a-bticino"
-  ],
+  "tarjeta": {
+    "titulo": "Adaptador universal de viaje con USB Dairu",
+    "extracto": "Adaptador universal de viaje con USB, para enchufes de distintos países. 100-230 V, máximo 1440 W.",
+    "alt": "Adaptador universal de viaje con USB Dairu",
+    "etiqueta": "Material eléctrico"
+  },
+  "relacionados": [],
   "guias": [
     {
       "url": "/blog/como-instalar-un-enchufe-en-chile-guia-segura/",
-      "texto": "Cómo instalar un enchufe en Chile paso a paso"
+      "texto": "Cómo instalar un enchufe en Chile"
+    },
+    {
+      "url": "/blog/las-mejores-marcas-de-alargadores-electricos-guia-completa-para-elegir/",
+      "texto": "Cómo elegir un alargador eléctrico"
     },
     {
       "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
-      "texto": "Cómo identificar fase y neutro en un enchufe"
-    },
-    {
-      "url": "/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/",
-      "texto": "Código de colores de cables eléctricos"
+      "texto": "Cómo identificar fase y neutro"
     }
-  ],
-  "tarjeta": {
-    "titulo": "Adaptador universal con USB Dairu",
-    "extracto": "Adaptador universal con USB Dairu en color negro para instalaciones y armado eléctrico seguro.",
-    "alt": "Adaptador universal con USB Dairu negro",
-    "etiqueta": "Material Eléctrico"
-  }
+  ]
 }

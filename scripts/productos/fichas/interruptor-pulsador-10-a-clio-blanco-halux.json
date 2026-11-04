@@ -1,36 +1,36 @@
 {
   "slug": "interruptor-pulsador-10-a-clio-blanco-halux",
-  "nombre": "Interruptor pulsador 10 A Clio Blanco Halux",
-  "titulo_h1": "Interruptor pulsador 10 A Clio Blanco Halux",
-  "titulo_corto": "Interruptor pulsador 10 A Clio Blanco Halux",
   "marca": "Halux",
   "sku": "110250640",
   "precio_referencia": 2390,
   "margen": 50,
   "categoria": "electricidad",
-  "subcategoria": "Módulos e interruptores",
+  "nombre": "Pulsador de timbre 10 A línea Clio blanco Halux",
+  "titulo_h1": "Pulsador de timbre 10 A línea Clio blanco Halux",
+  "titulo_corto": "Pulsador de timbre 10 A línea Clio blanco Halux",
+  "subcategoria": "Interruptores y módulos",
   "color": "Blanco",
   "disponible": true,
-  "seo_titulo": "Interruptor pulsador 10 A Clio Blan Halux",
-  "meta_descripcion": "Compra Interruptor pulsador 10 A Clio Blanco marca Halux a {precio}. Conexión segura, despacho rápido a todo Chile y garantía legal de 6 meses en Ferretería Ukra.",
-  "og_descripcion": "Interruptor pulsador 10 A Clio Blanco Halux para instalaciones eléctricas seguras y confiables. Despacho a todo Chile.",
-  "descripcion": "Interruptor pulsador 10 A Clio Blanco marca Halux en color blanco. Diseñado para brindar conexiones firmes y seguras en circuitos eléctricos domiciliarios y de taller. Fabricado en materiales resistentes, cumple con exigencias de seguridad para uso continuo con garantía de 6 meses.",
-  "lede": "Para tus trabajos de armado, mantención o extensión eléctrica, este **interruptor pulsador 10 a clio blanco** de marca **Halux** ofrece una conexión firme, cuerpo resistente en color **blanco** y terminales interiores diseñados para un montaje seguro y duradero.",
+  "seo_titulo": "Pulsador de timbre 10 A línea Clio blanco Halux",
+  "meta_descripcion": "Compra pulsador de timbre 10 A línea Clio blanco Halux a {precio}. Pulsador de timbre de 10 A de la línea Clio, color blanco, con símbolo de campana.",
+  "og_descripcion": "Pulsador de timbre de 10 A de la línea Clio, color blanco, con símbolo de campana.",
+  "descripcion": "Pulsador de timbre de 10 A de la línea Clio, marca Halux, color blanco, con símbolo de campana. Se instala en la pared con su placa para accionar el timbre de la casa. Garantía de 6 meses.",
+  "lede": "Este **pulsador de timbre** de la línea **Clio** de Halux acciona el timbre mientras lo presionas y vuelve solo a su posición. Trae el **símbolo de campana** y soporta **10 A**.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/2730308_01/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor pulsador 10 A Clio Blanco Halux vista 1",
-      "miniatura": "Ver de frente"
+      "alt": "Pulsador de timbre 10 A línea Clio blanco Halux, vista principal",
+      "miniatura": "Ver vista principal"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/2730308_12/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor pulsador 10 A Clio Blanco Halux vista 2",
-      "miniatura": "Vista 2"
+      "alt": "Pulsador de timbre 10 A línea Clio blanco Halux, otra vista",
+      "miniatura": "Ver otra vista"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/2730308_24/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor pulsador 10 A Clio Blanco Halux vista 3",
-      "miniatura": "Vista 3"
+      "alt": "Pulsador de timbre 10 A línea Clio blanco Halux, detalle",
+      "miniatura": "Ver detalle"
     }
   ],
   "stock": {
@@ -43,46 +43,38 @@
       "Halux"
     ],
     [
-      "Material",
-      "Plástico (según ficha técnica)"
-    ],
-    [
-      "Tipo de divisor",
-      "Pulsador (según ficha técnica)"
-    ],
-    [
-      "Color",
-      "Blanco (según ficha técnica)"
-    ],
-    [
-      "Voltaje",
-      "220 V (según ficha técnica)"
-    ],
-    [
-      "Amperaje",
-      "10 A (según ficha técnica)"
+      "Tipo",
+      "Pulsador de timbre"
     ],
     [
       "Línea",
-      "Clio (según ficha técnica)"
+      "Clio"
     ],
     [
-      "Garantía",
-      "6 meses"
+      "Corriente",
+      "10 A"
+    ],
+    [
+      "Tensión",
+      "220 V"
+    ],
+    [
+      "Color",
+      "Blanco"
     ]
   ],
   "confianza": [
     {
-      "titulo": "🔌 Marca Halux",
-      "detalle": "Calidad en material eléctrico"
+      "titulo": "🔔 Para timbre",
+      "detalle": "Con símbolo de campana"
     },
     {
-      "titulo": "⚡ Conexión segura",
-      "detalle": "Terminales interiores resistentes"
+      "titulo": "⚡ 10 A · 220 V",
+      "detalle": "Línea Clio"
     },
     {
       "titulo": "🚚 Envío a todo Chile",
-      "detalle": "Despacho a domicilio o retiro"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -91,86 +83,72 @@
   ],
   "secciones": [
     {
-      "id": "aplicaciones-interruptor-pulsador-10-a",
-      "titulo": "¿Dónde utilizar este módulo interruptor?",
-      "indice": "Aplicaciones",
+      "id": "como-funciona",
+      "titulo": "¿Cómo funciona un pulsador?",
+      "indice": "Cómo funciona",
       "bloques": [
         {
-          "p": "El **interruptor pulsador 10 a clio blanco** Halux está diseñado para resolver necesidades de conexión eléctrica tanto en el hogar como en entornos de trabajo:"
-        },
-        {
-          "lista": [
-            "Armado y reparación de conexiones en artefactos eléctricos y herramientas.",
-            "Montaje en extensiones y alargadores para distribución de energía.",
-            "Instalaciones que requieren contactos firmes y seguros para evitar falso contacto."
-          ]
-        },
-        {
-          "p": "Para revisar cómo conectar tus cables según la normativa chilena, consulta nuestra guía de [código de colores de cables eléctricos](/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/)."
+          "p": "A diferencia de un interruptor, el pulsador cierra el circuito solo mientras lo presionas. Por eso se usa para timbres."
         }
       ]
     },
     {
-      "id": "seguridad-interruptor-pulsador-10-a",
-      "titulo": "Recomendaciones para una instalación segura",
-      "indice": "Instalación y seguridad",
+      "id": "instalacion",
+      "titulo": "Instalación",
+      "indice": "Instalación",
       "bloques": [
         {
           "pasos": [
-            "Corta siempre el suministro eléctrico general antes de manipular cables o contactos.",
-            "Pela los conductores a la medida indicada sin cortar los hilos interiores de cobre.",
-            "Fija cada conductor firmemente en su borne correspondiente verificando la polaridad.",
-            "Asegura el prensacable o carcasa para evitar que tirones accidentales suelten las conexiones."
+            "Corta el automático del circuito del timbre.",
+            "Conecta los dos cables del timbre a los bornes del pulsador.",
+            "Fíjalo a la caja y pon la placa.",
+            "Da la luz y prueba."
           ]
         },
         {
-          "advertencia": "Si la instalación requiere trabajos en tableros principales o modificaciones complejas, recurre a un instalador eléctrico autorizado por la SEC."
+          "advertencia": "Si el timbre es de 220 V y no tienes experiencia, llama a un electricista autorizado SEC."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿El producto cuenta con garantía?",
-      "respuesta": "Sí, en Ferretería Ukra todos nuestros productos cuentan con 6 meses de garantía legal por defectos de fabricación."
+      "pregunta": "¿Sirve como interruptor de luz?",
+      "respuesta": "No. Un pulsador vuelve solo a su posición: la luz solo quedaría encendida mientras lo presionas."
     },
     {
-      "pregunta": "¿Sirve para uso doméstico y de taller?",
-      "respuesta": "Sí, este módulo interruptor Halux es apto para circuitos eléctricos correspondientes a su capacidad nominal indicada en la ficha técnica."
+      "pregunta": "¿Sirve para un timbre a pilas?",
+      "respuesta": "Los timbres a pilas o inalámbricos traen su propio botón. Este pulsador es para timbres cableados."
     },
     {
-      "pregunta": "¿Hacen envíos a todo Chile?",
-      "respuesta": "Sí, despachamos a todas las regiones de Chile mediante empresas de logística certificadas y opciones de entrega oportuna."
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
     }
   ],
   "lateral": {
-    "etiqueta": "Material Eléctrico",
-    "titulo": "Interruptor pulsador 10 A Clio Blan Halux",
-    "texto": "Interruptor pulsador 10 A Clio Blanco Halux en color blanco para conexiones eléctricas confiables y duraderas."
+    "etiqueta": "Material eléctrico",
+    "titulo": "Pulsador de timbre 10 A línea Clio blanco Halux",
+    "texto": "Pulsador de timbre de 10 A de la línea Clio, color blanco, con símbolo de campana."
   },
-  "relacionados": [
-    "adaptador-schuko-a-enchufe-chileno-10a",
-    "adaptador-schuko-bipaso-16a-bticino",
-    "enchufe-macho-volante-articulado-10a-bticino"
-  ],
+  "tarjeta": {
+    "titulo": "Pulsador de timbre 10 A línea Clio blanco Halux",
+    "extracto": "Pulsador de timbre de 10 A de la línea Clio, color blanco, con símbolo de campana.",
+    "alt": "Pulsador de timbre 10 A línea Clio blanco Halux",
+    "etiqueta": "Material eléctrico"
+  },
+  "relacionados": [],
   "guias": [
     {
-      "url": "/blog/como-instalar-un-enchufe-en-chile-guia-segura/",
-      "texto": "Cómo instalar un enchufe en Chile paso a paso"
+      "url": "/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/",
+      "texto": "Código de colores de cables"
     },
     {
       "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
-      "texto": "Cómo identificar fase y neutro en un enchufe"
+      "texto": "Cómo identificar fase y neutro"
     },
     {
-      "url": "/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/",
-      "texto": "Código de colores de cables eléctricos"
+      "url": "/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/",
+      "texto": "Cómo armar un tablero eléctrico"
     }
-  ],
-  "tarjeta": {
-    "titulo": "Interruptor pulsador 10 A Clio Blanco Halux",
-    "extracto": "Interruptor pulsador 10 A Clio Blanco Halux en color blanco para instalaciones y armado eléctrico seguro.",
-    "alt": "Interruptor pulsador 10 A Clio Blanco Halux blanco",
-    "etiqueta": "Material Eléctrico"
-  }
+  ]
 }

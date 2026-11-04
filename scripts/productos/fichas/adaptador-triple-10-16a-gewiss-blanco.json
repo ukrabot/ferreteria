@@ -1,36 +1,36 @@
 {
   "slug": "adaptador-triple-10-16a-gewiss-blanco",
-  "nombre": "Adaptador Triple 10/16A Gewiss Blanco Gewiss",
-  "titulo_h1": "Adaptador Triple 10/16A Gewiss Blanco Gewiss",
-  "titulo_corto": "Adaptador Triple 10/16A Gewiss Blanco Gewiss",
   "marca": "Gewiss",
   "sku": "136916400",
   "precio_referencia": 7990,
   "margen": 50,
   "categoria": "electricidad",
-  "subcategoria": "Adaptadores de enchufe",
+  "nombre": "Adaptador triple 10/16 A blanco Gewiss",
+  "titulo_h1": "Adaptador triple 10/16 A blanco Gewiss",
+  "titulo_corto": "Adaptador triple 10/16 A blanco Gewiss",
+  "subcategoria": "Adaptadores",
   "color": "Blanco",
   "disponible": true,
-  "seo_titulo": "Adaptador Triple 10/16A Gewiss Blan Gewiss",
-  "meta_descripcion": "Compra Adaptador Triple 10/16A Gewiss Blanco marca Gewiss a {precio}. Conexión segura, despacho rápido a todo Chile y garantía legal de 6 meses en Ferretería Ukra.",
-  "og_descripcion": "Adaptador Triple 10/16A Gewiss Blanco Gewiss para instalaciones eléctricas seguras y confiables. Despacho a todo Chile.",
-  "descripcion": "Adaptador Triple 10/16A Gewiss Blanco marca Gewiss en color blanco. Diseñado para brindar conexiones firmes y seguras en circuitos eléctricos domiciliarios y de taller. Fabricado en materiales resistentes, cumple con exigencias de seguridad para uso continuo con garantía de 6 meses.",
-  "lede": "Para tus trabajos de armado, mantención o extensión eléctrica, este **adaptador triple 10/16a gewiss blanco** de marca **Gewiss** ofrece una conexión firme, cuerpo resistente en color **blanco** y terminales interiores diseñados para un montaje seguro y duradero.",
+  "seo_titulo": "Adaptador triple 10/16 A blanco Gewiss",
+  "meta_descripcion": "Compra adaptador triple 10/16 A blanco Gewiss a {precio}. Adaptador triple de tres tomas bipaso. Envíos a todo Chile.",
+  "og_descripcion": "Adaptador triple Gewiss de tres tomas bipaso para enchufes de 10 y 16 A.",
+  "descripcion": "Adaptador triple marca Gewiss, color blanco: se conecta a una toma chilena y entrega tres tomas bipaso (10 y 16 A). Garantía de 6 meses.",
+  "lede": "Cuando te falta un enchufe, este **adaptador triple** Gewiss convierte una toma en **tres**. Recibe enchufes de **10 y 16 A**. Ojo: la suma de lo que conectes no debe pasar de la capacidad de la toma.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/7621345_01/w=1200,h=1200,fit=cover",
-      "alt": "Adaptador Triple 10/16A Gewiss Blanco Gewiss vista 1",
-      "miniatura": "Ver de frente"
+      "alt": "Adaptador triple 10/16 A blanco Gewiss, vista principal",
+      "miniatura": "Ver vista principal"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7621345_21/w=1200,h=1200,fit=cover",
-      "alt": "Adaptador Triple 10/16A Gewiss Blanco Gewiss vista 2",
-      "miniatura": "Vista 2"
+      "alt": "Adaptador triple 10/16 A blanco Gewiss, otra vista",
+      "miniatura": "Ver otra vista"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7621345_22/w=1200,h=1200,fit=cover",
-      "alt": "Adaptador Triple 10/16A Gewiss Blanco Gewiss vista 3",
-      "miniatura": "Vista 3"
+      "alt": "Adaptador triple 10/16 A blanco Gewiss, detalle",
+      "miniatura": "Ver detalle"
     }
   ],
   "stock": {
@@ -43,50 +43,38 @@
       "Gewiss"
     ],
     [
-      "Plazo de disponibilidad de repuestos",
-      "6 mes(es) (según ficha técnica)"
+      "Tipo",
+      "Adaptador triple"
     ],
     [
-      "Duración en condiciones previsibles d...",
-      "1 año(s) (según ficha técnica)"
+      "Tomas",
+      "3 bipaso"
     ],
     [
-      "Plazo de disponibilidad de servicio t...",
-      "6 mes(es) (según ficha técnica)"
+      "Corriente",
+      "10/16 A"
     ],
     [
-      "Cantidad de entradas",
-      "1 (según ficha técnica)"
+      "Tensión",
+      "250 V"
     ],
     [
       "Color",
-      "Blanco (según ficha técnica)"
-    ],
-    [
-      "Voltaje",
-      "250 V (según ficha técnica)"
-    ],
-    [
-      "Amperaje",
-      "16 (según ficha técnica)"
-    ],
-    [
-      "Garantía",
-      "6 meses"
+      "Blanco"
     ]
   ],
   "confianza": [
     {
-      "titulo": "🔌 Marca Gewiss",
-      "detalle": "Calidad en material eléctrico"
+      "titulo": "🔌 3 tomas",
+      "detalle": "Bipaso 10 y 16 A"
     },
     {
-      "titulo": "⚡ Conexión segura",
-      "detalle": "Terminales interiores resistentes"
+      "titulo": "⚡ No lo sobrecargues",
+      "detalle": "Suma la potencia conectada"
     },
     {
       "titulo": "🚚 Envío a todo Chile",
-      "detalle": "Despacho a domicilio o retiro"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -95,86 +83,80 @@
   ],
   "secciones": [
     {
-      "id": "aplicaciones-adaptador-triple-10-16a-g",
-      "titulo": "¿Dónde utilizar este adaptador de enchufe?",
-      "indice": "Aplicaciones",
+      "id": "uso",
+      "titulo": "Cómo usarlo sin sobrecargar el enchufe",
+      "indice": "Uso correcto",
       "bloques": [
         {
-          "p": "El **adaptador triple 10/16a gewiss blanco** Gewiss está diseñado para resolver necesidades de conexión eléctrica tanto en el hogar como en entornos de trabajo:"
+          "p": "Un adaptador no aumenta la capacidad del enchufe de pared: reparte la misma corriente entre lo que conectes."
         },
         {
           "lista": [
-            "Armado y reparación de conexiones en artefactos eléctricos y herramientas.",
-            "Montaje en extensiones y alargadores para distribución de energía.",
-            "Instalaciones que requieren contactos firmes y seguros para evitar falso contacto."
+            "Suma la potencia de los artefactos (viene en su etiqueta, en watts).",
+            "No conectes juntos artefactos que calientan: estufa, hervidor, plancha o secador.",
+            "No conectes un adaptador dentro de otro.",
+            "Si el adaptador o el enchufe se calientan, desconéctalo."
           ]
-        },
-        {
-          "p": "Para revisar cómo conectar tus cables según la normativa chilena, consulta nuestra guía de [código de colores de cables eléctricos](/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/)."
         }
       ]
     },
     {
-      "id": "seguridad-adaptador-triple-10-16a-g",
-      "titulo": "Recomendaciones para una instalación segura",
-      "indice": "Instalación y seguridad",
+      "id": "seguridad",
+      "titulo": "Cuándo conviene una toma nueva",
+      "indice": "Seguridad",
       "bloques": [
         {
-          "pasos": [
-            "Corta siempre el suministro eléctrico general antes de manipular cables o contactos.",
-            "Pela los conductores a la medida indicada sin cortar los hilos interiores de cobre.",
-            "Fija cada conductor firmemente en su borne correspondiente verificando la polaridad.",
-            "Asegura el prensacable o carcasa para evitar que tirones accidentales suelten las conexiones."
-          ]
-        },
-        {
-          "advertencia": "Si la instalación requiere trabajos en tableros principales o modificaciones complejas, recurre a un instalador eléctrico autorizado por la SEC."
+          "p": "Si usas adaptadores en forma permanente en el mismo lugar, es mejor agregar una toma. Esa instalación la hace un electricista autorizado SEC."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿El producto cuenta con garantía?",
-      "respuesta": "Sí, en Ferretería Ukra todos nuestros productos cuentan con 6 meses de garantía legal por defectos de fabricación."
+      "pregunta": "¿Cuánto puedo conectar?",
+      "respuesta": "Hasta la capacidad del enchufe de pared (16 A, unos 3520 W a 220 V). Suma los watts de cada artefacto antes de conectarlo."
     },
     {
-      "pregunta": "¿Sirve para uso doméstico y de taller?",
-      "respuesta": "Sí, este adaptador de enchufe Gewiss es apto para circuitos eléctricos correspondientes a su capacidad nominal indicada en la ficha técnica."
+      "pregunta": "¿Puedo conectar una estufa?",
+      "respuesta": "Una estufa eléctrica consume mucho: conéctala sola, directo a la toma de pared, no en un adaptador junto a otros artefactos."
     },
     {
-      "pregunta": "¿Hacen envíos a todo Chile?",
-      "respuesta": "Sí, despachamos a todas las regiones de Chile mediante empresas de logística certificadas y opciones de entrega oportuna."
+      "pregunta": "¿Puedo conectar un adaptador en otro?",
+      "respuesta": "No. Encadenar adaptadores sobrecarga el enchufe y aumenta el riesgo de calentamiento."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
     }
   ],
   "lateral": {
-    "etiqueta": "Material Eléctrico",
-    "titulo": "Adaptador Triple 10/16A Gewiss Blan Gewiss",
-    "texto": "Adaptador Triple 10/16A Gewiss Blanco Gewiss en color blanco para conexiones eléctricas confiables y duraderas."
+    "etiqueta": "Material eléctrico",
+    "titulo": "Adaptador triple 10/16 A blanco Gewiss",
+    "texto": "Adaptador triple de tres tomas bipaso."
+  },
+  "tarjeta": {
+    "titulo": "Adaptador triple 10/16 A blanco Gewiss",
+    "extracto": "Adaptador triple de tres tomas bipaso para enchufes de 10 y 16 A. Envíos a todo Chile.",
+    "alt": "Adaptador triple 10/16 A blanco Gewiss",
+    "etiqueta": "Material eléctrico"
   },
   "relacionados": [
-    "adaptador-schuko-a-enchufe-chileno-10a",
-    "adaptador-schuko-bipaso-16a-bticino",
-    "enchufe-macho-volante-articulado-10a-bticino"
+    "adaptador-triple-2p-t-10-a-blanco-bticino",
+    "adaptador-triple-2p-t-10-a-gris-bticino",
+    "triple-estandar-halux"
   ],
   "guias": [
     {
+      "url": "/blog/las-mejores-marcas-de-alargadores-electricos-guia-completa-para-elegir/",
+      "texto": "Cómo elegir un alargador eléctrico"
+    },
+    {
       "url": "/blog/como-instalar-un-enchufe-en-chile-guia-segura/",
-      "texto": "Cómo instalar un enchufe en Chile paso a paso"
+      "texto": "Cómo instalar un enchufe en Chile"
     },
     {
-      "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
-      "texto": "Cómo identificar fase y neutro en un enchufe"
-    },
-    {
-      "url": "/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/",
-      "texto": "Código de colores de cables eléctricos"
+      "url": "/blog/por-que-salta-el-diferencial-como-encontrar-la-fuga-guia-chile/",
+      "texto": "Por qué salta el diferencial"
     }
-  ],
-  "tarjeta": {
-    "titulo": "Adaptador Triple 10/16A Gewiss Blanco Gewiss",
-    "extracto": "Adaptador Triple 10/16A Gewiss Blanco Gewiss en color blanco para instalaciones y armado eléctrico seguro.",
-    "alt": "Adaptador Triple 10/16A Gewiss Blanco Gewiss blanco",
-    "etiqueta": "Material Eléctrico"
-  }
+  ]
 }

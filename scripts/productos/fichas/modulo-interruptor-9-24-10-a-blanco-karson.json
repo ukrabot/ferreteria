@@ -1,46 +1,46 @@
 {
   "slug": "modulo-interruptor-9-24-10-a-blanco-karson",
-  "nombre": "Módulo interruptor 9/24 10 A Blanco Karson",
-  "titulo_h1": "Módulo interruptor 9/24 10 A Blanco Karson",
-  "titulo_corto": "Módulo interruptor 9/24 10 A Blanco Karson",
   "marca": "Karson",
   "sku": "110237515",
   "precio_referencia": 990,
   "margen": 50,
   "categoria": "electricidad",
-  "subcategoria": "Módulos e interruptores",
+  "nombre": "Módulo interruptor conmutador 9/24 10 A blanco Karson",
+  "titulo_h1": "Módulo interruptor conmutador 9/24 10 A blanco Karson",
+  "titulo_corto": "Módulo interruptor conmutador 9/24 10 A blanco Karson",
+  "subcategoria": "Interruptores y módulos",
   "color": "Blanco",
   "disponible": true,
-  "seo_titulo": "Módulo interruptor 9/24 10 A Blanco Karson",
-  "meta_descripcion": "Compra Módulo interruptor 9/24 10 A Blanco marca Karson a {precio}. Conexión segura, despacho rápido a todo Chile y garantía legal de 6 meses en Ferretería Ukra.",
-  "og_descripcion": "Módulo interruptor 9/24 10 A Blanco Karson para instalaciones eléctricas seguras y confiables. Despacho a todo Chile.",
-  "descripcion": "Módulo interruptor 9/24 10 A Blanco marca Karson en color blanco. Diseñado para brindar conexiones firmes y seguras en circuitos eléctricos domiciliarios y de taller. Fabricado en materiales resistentes, cumple con exigencias de seguridad para uso continuo con garantía de 6 meses.",
-  "lede": "Para tus trabajos de armado, mantención o extensión eléctrica, este **módulo interruptor 9/24 10 a blanco** de marca **Karson** ofrece una conexión firme, cuerpo resistente en color **blanco** y terminales interiores diseñados para un montaje seguro y duradero.",
+  "seo_titulo": "Módulo interruptor conmutador 9/24 10 A blanco Karson",
+  "meta_descripcion": "Compra módulo interruptor conmutador 9/24 10 A blanco Karson a {precio}. Módulo interruptor conmutador 9/24 de 10 A para placa, color blanco.",
+  "og_descripcion": "Módulo interruptor conmutador 9/24 de 10 A para placa, color blanco.",
+  "descripcion": "Módulo interruptor conmutador 9/24 de 10 A, color blanco, marca Karson, para montar en placa. Se usa en pares para encender y apagar una misma luz desde dos lugares, como una escalera o un pasillo. Garantía de 6 meses.",
+  "lede": "Este **módulo 9/24** Karson es un interruptor **conmutador de 10 A** para placa. Se usa **en pares** para manejar una luz desde **dos lugares**.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/3272532_01/w=1200,h=1200,fit=cover",
-      "alt": "Módulo interruptor 9/24 10 A Blanco Karson vista 1",
-      "miniatura": "Ver de frente"
+      "alt": "Módulo interruptor conmutador 9/24 10 A blanco Karson, vista principal",
+      "miniatura": "Ver vista principal"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/3272532_12/w=1200,h=1200,fit=cover",
-      "alt": "Módulo interruptor 9/24 10 A Blanco Karson vista 2",
-      "miniatura": "Vista 2"
+      "alt": "Módulo interruptor conmutador 9/24 10 A blanco Karson, otra vista",
+      "miniatura": "Ver otra vista"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/3272532_13/w=1200,h=1200,fit=cover",
-      "alt": "Módulo interruptor 9/24 10 A Blanco Karson vista 3",
-      "miniatura": "Vista 3"
+      "alt": "Módulo interruptor conmutador 9/24 10 A blanco Karson, detalle",
+      "miniatura": "Ver detalle"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/3272532_14/w=1200,h=1200,fit=cover",
-      "alt": "Módulo interruptor 9/24 10 A Blanco Karson vista 4",
-      "miniatura": "Vista 4"
+      "alt": "Módulo interruptor conmutador 9/24 10 A blanco Karson, vista lateral",
+      "miniatura": "Ver vista lateral"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/3272532_15/w=1200,h=1200,fit=cover",
-      "alt": "Módulo interruptor 9/24 10 A Blanco Karson vista 5",
-      "miniatura": "Vista 5"
+      "alt": "Módulo interruptor conmutador 9/24 10 A blanco Karson, detalle de conexión",
+      "miniatura": "Ver detalle de conexión"
     }
   ],
   "stock": {
@@ -53,42 +53,42 @@
       "Karson"
     ],
     [
-      "Material",
-      "Plástico (según ficha técnica)"
+      "Tipo",
+      "Módulo interruptor conmutador (escalera)"
     ],
     [
-      "Tipo de divisor",
-      "Módulo para placa (según ficha técnica)"
+      "Nomenclatura",
+      "9/24"
+    ],
+    [
+      "Corriente",
+      "10 A"
+    ],
+    [
+      "Tensión",
+      "220 V"
+    ],
+    [
+      "Montaje",
+      "Módulo para placa"
     ],
     [
       "Color",
-      "Blanco (según ficha técnica)"
-    ],
-    [
-      "Voltaje",
-      "250 V (según ficha técnica)"
-    ],
-    [
-      "Amperaje",
-      "10 A (según ficha técnica)"
-    ],
-    [
-      "Garantía",
-      "6 meses"
+      "Blanco"
     ]
   ],
   "confianza": [
     {
-      "titulo": "🔌 Marca Karson",
-      "detalle": "Calidad en material eléctrico"
+      "titulo": "💡 9/24",
+      "detalle": "Conmutador para dos puntos"
     },
     {
-      "titulo": "⚡ Conexión segura",
-      "detalle": "Terminales interiores resistentes"
+      "titulo": "🔲 Para placa",
+      "detalle": "Módulo de reemplazo"
     },
     {
       "titulo": "🚚 Envío a todo Chile",
-      "detalle": "Despacho a domicilio o retiro"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -97,86 +97,78 @@
   ],
   "secciones": [
     {
-      "id": "aplicaciones-modulo-interruptor-9-24-1",
-      "titulo": "¿Dónde utilizar este módulo interruptor?",
-      "indice": "Aplicaciones",
+      "id": "cual-elegir",
+      "titulo": "¿9/12 o 9/24?",
+      "indice": "Cuál elegir",
       "bloques": [
         {
-          "p": "El **módulo interruptor 9/24 10 a blanco** Karson está diseñado para resolver necesidades de conexión eléctrica tanto en el hogar como en entornos de trabajo:"
-        },
-        {
           "lista": [
-            "Armado y reparación de conexiones en artefactos eléctricos y herramientas.",
-            "Montaje en extensiones y alargadores para distribución de energía.",
-            "Instalaciones que requieren contactos firmes y seguros para evitar falso contacto."
+            "9/12: interruptor simple, una luz desde un punto.",
+            "9/24: conmutador, una luz desde dos puntos (se usan dos).",
+            "Revisa que el módulo calce con tu placa y bastidor."
           ]
-        },
-        {
-          "p": "Para revisar cómo conectar tus cables según la normativa chilena, consulta nuestra guía de [código de colores de cables eléctricos](/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/)."
         }
       ]
     },
     {
-      "id": "seguridad-modulo-interruptor-9-24-1",
-      "titulo": "Recomendaciones para una instalación segura",
-      "indice": "Instalación y seguridad",
+      "id": "instalacion",
+      "titulo": "Cambio del módulo",
+      "indice": "Instalación",
       "bloques": [
         {
           "pasos": [
-            "Corta siempre el suministro eléctrico general antes de manipular cables o contactos.",
-            "Pela los conductores a la medida indicada sin cortar los hilos interiores de cobre.",
-            "Fija cada conductor firmemente en su borne correspondiente verificando la polaridad.",
-            "Asegura el prensacable o carcasa para evitar que tirones accidentales suelten las conexiones."
+            "Corta el automático del circuito en el tablero y comprueba que no haya tensión.",
+            "Saca la placa y fíjate en qué borne va cada cable (toma una foto).",
+            "Conecta los cables al módulo nuevo en la misma posición y aprieta bien.",
+            "Arma la placa y vuelve a dar la luz."
           ]
         },
         {
-          "advertencia": "Si la instalación requiere trabajos en tableros principales o modificaciones complejas, recurre a un instalador eléctrico autorizado por la SEC."
+          "advertencia": "Si no tienes experiencia o los cables están dañados, llama a un electricista autorizado SEC."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿El producto cuenta con garantía?",
-      "respuesta": "Sí, en Ferretería Ukra todos nuestros productos cuentan con 6 meses de garantía legal por defectos de fabricación."
+      "pregunta": "¿Qué significa 9/12 y 9/24?",
+      "respuesta": "Es la nomenclatura chilena: 9/12 es el interruptor simple y 9/24 el conmutador, que se usa en pares para manejar una luz desde dos lugares."
     },
     {
-      "pregunta": "¿Sirve para uso doméstico y de taller?",
-      "respuesta": "Sí, este módulo interruptor Karson es apto para circuitos eléctricos correspondientes a su capacidad nominal indicada en la ficha técnica."
+      "pregunta": "¿Sirve para cualquier placa?",
+      "respuesta": "Es un módulo para placa: revisa que calce con el bastidor y la línea de tu placa antes de comprarlo."
     },
     {
-      "pregunta": "¿Hacen envíos a todo Chile?",
-      "respuesta": "Sí, despachamos a todas las regiones de Chile mediante empresas de logística certificadas y opciones de entrega oportuna."
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
     }
   ],
   "lateral": {
-    "etiqueta": "Material Eléctrico",
-    "titulo": "Módulo interruptor 9/24 10 A Blanco Karson",
-    "texto": "Módulo interruptor 9/24 10 A Blanco Karson en color blanco para conexiones eléctricas confiables y duraderas."
+    "etiqueta": "Material eléctrico",
+    "titulo": "Módulo interruptor conmutador 9/24 10 A blanco Karson",
+    "texto": "Módulo interruptor conmutador 9/24 de 10 A para placa, color blanco."
+  },
+  "tarjeta": {
+    "titulo": "Módulo interruptor conmutador 9/24 10 A blanco Karson",
+    "extracto": "Módulo interruptor conmutador 9/24 de 10 A para placa, color blanco.",
+    "alt": "Módulo interruptor conmutador 9/24 10 A blanco Karson",
+    "etiqueta": "Material eléctrico"
   },
   "relacionados": [
-    "adaptador-schuko-a-enchufe-chileno-10a",
-    "adaptador-schuko-bipaso-16a-bticino",
-    "enchufe-macho-volante-articulado-10a-bticino"
+    "modulo-interruptor-9-12-10-a-blanco-karson"
   ],
   "guias": [
     {
-      "url": "/blog/como-instalar-un-enchufe-en-chile-guia-segura/",
-      "texto": "Cómo instalar un enchufe en Chile paso a paso"
+      "url": "/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/",
+      "texto": "Código de colores de cables"
     },
     {
       "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
-      "texto": "Cómo identificar fase y neutro en un enchufe"
+      "texto": "Cómo identificar fase y neutro"
     },
     {
-      "url": "/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/",
-      "texto": "Código de colores de cables eléctricos"
+      "url": "/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/",
+      "texto": "Cómo armar un tablero eléctrico"
     }
-  ],
-  "tarjeta": {
-    "titulo": "Módulo interruptor 9/24 10 A Blanco Karson",
-    "extracto": "Módulo interruptor 9/24 10 A Blanco Karson en color blanco para instalaciones y armado eléctrico seguro.",
-    "alt": "Módulo interruptor 9/24 10 A Blanco Karson blanco",
-    "etiqueta": "Material Eléctrico"
-  }
+  ]
 }

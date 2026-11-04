@@ -1,36 +1,36 @@
 {
   "slug": "enchufe-acople-macho-hembra-autostyle-gris-para-el",
-  "nombre": "Enchufe Acople Macho Hembra Autostyle gris para Electricidad Autostyle",
-  "titulo_h1": "Enchufe Acople Macho Hembra Autostyle gris para Electricidad Autostyle",
-  "titulo_corto": "Enchufe Acople Macho Hembra Autostyle gr Autostyle",
   "marca": "Autostyle",
   "sku": "110127719",
   "precio_referencia": 15990,
   "margen": 50,
-  "categoria": "electricidad",
-  "subcategoria": "Enchufes y tomas hembra",
+  "categoria": "otros",
+  "nombre": "Enchufe de remolque macho y hembra 12 V Autostyle",
+  "titulo_h1": "Enchufe de remolque macho y hembra 12 V Autostyle",
+  "titulo_corto": "Enchufe de remolque macho y hembra 12 V Autostyle",
+  "subcategoria": "Accesorios para vehículos",
   "color": "Gris",
   "disponible": true,
-  "seo_titulo": "Enchufe Acople Macho Hembra Autosty Autostyle",
-  "meta_descripcion": "Compra Enchufe Acople Macho Hembra Autostyle gris para Electricidad marca Autostyle a {precio}. Conexión eléctrica segura, despacho a todo Chile y 6 meses de garantía.",
-  "og_descripcion": "Enchufe Acople Macho Hembra Autostyle gris para Electricidad Autostyle para instalaciones eléctricas seguras y confiables. Despacho a todo Chile.",
-  "descripcion": "Enchufe Acople Macho Hembra Autostyle gris para Electricidad marca Autostyle en color gris. Diseñado para brindar conexiones firmes y seguras en circuitos eléctricos domiciliarios y de taller. Fabricado en materiales resistentes, cumple con exigencias de seguridad para uso continuo con garantía de 6 meses.",
-  "lede": "Para tus trabajos de armado, mantención o extensión eléctrica, este **enchufe acople macho hembra autostyle gris para electricidad** de marca **Autostyle** ofrece una conexión firme, cuerpo resistente en color **gris** y terminales interiores diseñados para un montaje seguro y duradero.",
+  "seo_titulo": "Enchufe de remolque macho y hembra 12 V Autostyle",
+  "meta_descripcion": "Compra enchufe de remolque macho y hembra 12 V Autostyle a {precio}. Juego de enchufe macho y hembra de 7 contactos para las luces de un remolque, sistema de 12 V.",
+  "og_descripcion": "Juego de enchufe macho y hembra de 7 contactos para las luces de un remolque, sistema de 12 V.",
+  "descripcion": "Juego de enchufe macho y hembra de 7 contactos para conectar las luces de un remolque o carro de arrastre al vehículo, sistema de 12 V. Marca Autostyle, color gris. Garantía de 6 meses.",
+  "lede": "Para conectar las **luces de un remolque o carro** al auto, este juego **Autostyle** trae **enchufe macho y hembra de 7 contactos** para el sistema de **12 V** del vehículo.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/468185_01/w=1200,h=1200,fit=cover",
-      "alt": "Enchufe Acople Macho Hembra Autostyle gris para Electricidad Autostyle vista 1",
-      "miniatura": "Ver de frente"
+      "alt": "Enchufe de remolque macho y hembra 12 V Autostyle, vista principal",
+      "miniatura": "Ver vista principal"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/468185_2/w=1200,h=1200,fit=cover",
-      "alt": "Enchufe Acople Macho Hembra Autostyle gris para Electricidad Autostyle vista 2",
-      "miniatura": "Vista 2"
+      "alt": "Enchufe de remolque macho y hembra 12 V Autostyle, otra vista",
+      "miniatura": "Ver otra vista"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/468185_3/w=1200,h=1200,fit=cover",
-      "alt": "Enchufe Acople Macho Hembra Autostyle gris para Electricidad Autostyle vista 3",
-      "miniatura": "Vista 3"
+      "alt": "Enchufe de remolque macho y hembra 12 V Autostyle, detalle",
+      "miniatura": "Ver detalle"
     }
   ],
   "stock": {
@@ -43,42 +43,38 @@
       "Autostyle"
     ],
     [
-      "Cantidad de paquetes",
-      "1.0 (según ficha técnica)"
+      "Tipo",
+      "Enchufe de remolque macho y hembra"
     ],
     [
-      "Tipo de divisor",
-      "Otro (según ficha técnica)"
+      "Contactos",
+      "7 (según foto)"
     ],
     [
-      "Alimentación",
-      "Eléctrica enchufable (según ficha técnica)"
+      "Tensión",
+      "12 V (vehículo)"
+    ],
+    [
+      "Uso",
+      "Luces de remolque o carro de arrastre"
     ],
     [
       "Color",
-      "Gris (según ficha técnica)"
-    ],
-    [
-      "Voltaje",
-      "12 V Automóvil (según ficha técnica)"
-    ],
-    [
-      "Garantía",
-      "6 meses"
+      "Gris"
     ]
   ],
   "confianza": [
     {
-      "titulo": "🔌 Marca Autostyle",
-      "detalle": "Calidad en material eléctrico"
+      "titulo": "🚗 Para remolque",
+      "detalle": "Luces del carro al vehículo"
     },
     {
-      "titulo": "⚡ Conexión segura",
-      "detalle": "Terminales interiores resistentes"
+      "titulo": "🔌 7 contactos",
+      "detalle": "Sistema de 12 V"
     },
     {
       "titulo": "🚚 Envío a todo Chile",
-      "detalle": "Despacho a domicilio o retiro"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -87,86 +83,64 @@
   ],
   "secciones": [
     {
-      "id": "aplicaciones-enchufe-acople-macho-hemb",
-      "titulo": "¿Dónde utilizar este enchufe hembra volante?",
-      "indice": "Aplicaciones",
+      "id": "para-que-sirve",
+      "titulo": "¿Para qué sirve?",
+      "indice": "Para qué sirve",
       "bloques": [
         {
-          "p": "El **enchufe acople macho hembra autostyle gris para electricidad** Autostyle está diseñado para resolver necesidades de conexión eléctrica tanto en el hogar como en entornos de trabajo:"
+          "p": "La hembra va en el vehículo, junto al enganche, y el macho en el cable del remolque. Así el carro recibe las luces de freno, posición y señalizadores."
         },
         {
           "lista": [
-            "Armado y reparación de conexiones en artefactos eléctricos y herramientas.",
-            "Montaje en extensiones y alargadores para distribución de energía.",
-            "Instalaciones que requieren contactos firmes y seguros para evitar falso contacto."
+            "Es para el sistema de 12 V del vehículo, no para la red de 220 V de una casa.",
+            "Revisa que tu remolque use conector de 7 contactos."
           ]
-        },
-        {
-          "p": "Para revisar cómo conectar tus cables según la normativa chilena, consulta nuestra guía de [código de colores de cables eléctricos](/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/)."
         }
       ]
     },
     {
-      "id": "seguridad-enchufe-acople-macho-hemb",
-      "titulo": "Recomendaciones para una instalación segura",
-      "indice": "Instalación y seguridad",
+      "id": "instalacion",
+      "titulo": "Instalación",
+      "indice": "Instalación",
       "bloques": [
         {
-          "pasos": [
-            "Corta siempre el suministro eléctrico general antes de manipular cables o contactos.",
-            "Pela los conductores a la medida indicada sin cortar los hilos interiores de cobre.",
-            "Fija cada conductor firmemente en su borne correspondiente verificando la polaridad.",
-            "Asegura el prensacable o carcasa para evitar que tirones accidentales suelten las conexiones."
+          "lista": [
+            "Conecta cada cable según el esquema del fabricante y del vehículo.",
+            "Protege las uniones de la humedad.",
+            "Prueba todas las luces antes de salir."
           ]
         },
         {
-          "advertencia": "Si la instalación requiere trabajos en tableros principales o modificaciones complejas, recurre a un instalador eléctrico autorizado por la SEC."
+          "advertencia": "Si el vehículo tiene electrónica compleja o está en garantía, hazlo con un electricista automotriz."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿El producto cuenta con garantía?",
-      "respuesta": "Sí, en Ferretería Ukra todos nuestros productos cuentan con 6 meses de garantía legal por defectos de fabricación."
+      "pregunta": "¿Sirve para enchufes de la casa?",
+      "respuesta": "No. Es para el sistema eléctrico de 12 V de un vehículo y su remolque."
     },
     {
-      "pregunta": "¿Sirve para uso doméstico y de taller?",
-      "respuesta": "Sí, este enchufe hembra volante Autostyle es apto para circuitos eléctricos correspondientes a su capacidad nominal indicada en la ficha técnica."
+      "pregunta": "¿Viene el macho y la hembra?",
+      "respuesta": "Sí, es un juego de enchufe macho y hembra, como se ve en las fotos."
     },
     {
-      "pregunta": "¿Hacen envíos a todo Chile?",
-      "respuesta": "Sí, despachamos a todas las regiones de Chile mediante empresas de logística certificadas y opciones de entrega oportuna."
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
     }
   ],
   "lateral": {
-    "etiqueta": "Material Eléctrico",
-    "titulo": "Enchufe Acople Macho Hembra Autosty Autostyle",
-    "texto": "Enchufe Acople Macho Hembra Autostyle gris para Electricidad Autostyle en color gris para conexiones eléctricas confiables y duraderas."
+    "etiqueta": "Vehículos",
+    "titulo": "Enchufe de remolque macho y hembra 12 V Autostyle",
+    "texto": "Juego de enchufe macho y hembra de 7 contactos para las luces de un remolque, sistema de 12 V."
   },
-  "relacionados": [
-    "adaptador-schuko-a-enchufe-chileno-10a",
-    "adaptador-schuko-bipaso-16a-bticino",
-    "enchufe-macho-volante-articulado-10a-bticino"
-  ],
-  "guias": [
-    {
-      "url": "/blog/como-instalar-un-enchufe-en-chile-guia-segura/",
-      "texto": "Cómo instalar un enchufe en Chile paso a paso"
-    },
-    {
-      "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
-      "texto": "Cómo identificar fase y neutro en un enchufe"
-    },
-    {
-      "url": "/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/",
-      "texto": "Código de colores de cables eléctricos"
-    }
-  ],
   "tarjeta": {
-    "titulo": "Enchufe Acople Macho Hembra Autostyle gr Autostyle",
-    "extracto": "Enchufe Acople Macho Hembra Autostyle gris para Electricidad Autostyle en color gris para instalaciones y armado eléctrico seguro.",
-    "alt": "Enchufe Acople Macho Hembra Autostyle gris para Electricidad Autostyle gris",
-    "etiqueta": "Material Eléctrico"
-  }
+    "titulo": "Enchufe de remolque macho y hembra 12 V Autostyle",
+    "extracto": "Juego de enchufe macho y hembra de 7 contactos para las luces de un remolque, sistema de 12 V.",
+    "alt": "Enchufe de remolque macho y hembra 12 V Autostyle",
+    "etiqueta": "Vehículos"
+  },
+  "relacionados": [],
+  "guias": []
 }

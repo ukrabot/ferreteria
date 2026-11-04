@@ -1,26 +1,26 @@
 {
   "slug": "adaptador-10-16-negro-rema",
-  "nombre": "Adaptador 10/16 negro Rema",
-  "titulo_h1": "Adaptador 10/16 negro Rema",
-  "titulo_corto": "Adaptador 10/16 negro Rema",
   "marca": "Rema",
   "sku": "116035731",
   "precio_referencia": 6400,
   "margen": 50,
   "categoria": "electricidad",
-  "subcategoria": "Adaptadores de enchufe",
+  "nombre": "Adaptador 10/16 con fusible negro Rema",
+  "titulo_h1": "Adaptador 10/16 con fusible negro Rema",
+  "titulo_corto": "Adaptador 10/16 con fusible negro Rema",
+  "subcategoria": "Adaptadores",
   "color": "Negro",
   "disponible": true,
-  "seo_titulo": "Adaptador 10/16 negro Rema",
-  "meta_descripcion": "Compra Adaptador 10/16 negro marca Rema a {precio}. Conexión segura, despacho rápido a todo Chile y garantía legal de 6 meses en Ferretería Ukra.",
-  "og_descripcion": "Adaptador 10/16 negro Rema para instalaciones eléctricas seguras y confiables. Despacho a todo Chile.",
-  "descripcion": "Adaptador 10/16 negro marca Rema en color negro. Diseñado para brindar conexiones firmes y seguras en circuitos eléctricos domiciliarios y de taller. Fabricado en materiales resistentes, cumple con exigencias de seguridad para uso continuo con garantía de 6 meses.",
-  "lede": "Para tus trabajos de armado, mantención o extensión eléctrica, este **adaptador 10/16 negro** de marca **Rema** ofrece una conexión firme, cuerpo resistente en color **negro** y terminales interiores diseñados para un montaje seguro y duradero.",
+  "seo_titulo": "Adaptador 10/16 con fusible negro Rema",
+  "meta_descripcion": "Compra adaptador 10/16 con fusible negro Rema a {precio}. Adaptador 10/16 con toma bipaso y fusible, máximo 2200 W.",
+  "og_descripcion": "Adaptador 10/16 con toma bipaso y fusible, máximo 2200 W.",
+  "descripcion": "Adaptador de enchufe 10/16 marca Rema, color negro, con toma bipaso y fusible. Según su etiqueta: 10 A, 250 V, máximo 2200 W, y no se puede conectar en otro adaptador. Garantía de 6 meses.",
+  "lede": "Para conectar un enchufe de 16 A en una toma de 10 A, o al revés, este **adaptador 10/16** Rema tiene **toma bipaso** y **fusible**. Su etiqueta indica **10 A, máximo 2200 W**.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/7286902_01/w=1200,h=1200,fit=cover",
-      "alt": "Adaptador 10/16 negro Rema vista 1",
-      "miniatura": "Ver de frente"
+      "alt": "Adaptador 10/16 con fusible negro Rema, vista principal",
+      "miniatura": "Ver vista principal"
     }
   ],
   "stock": {
@@ -33,50 +33,42 @@
       "Rema"
     ],
     [
-      "Plazo de disponibilidad de repuestos",
-      "6 mes(es) (según ficha técnica)"
+      "Tipo",
+      "Adaptador 10/16 con toma bipaso"
     ],
     [
-      "Duración en condiciones previsibles d...",
-      "1 año(s) (según ficha técnica)"
+      "Corriente",
+      "10 A (según etiqueta)"
     ],
     [
-      "Plazo de disponibilidad de servicio t...",
-      "6 mes(es) (según ficha técnica)"
+      "Potencia máxima",
+      "2200 W (según etiqueta)"
     ],
     [
-      "Potencia",
-      "2200 W (según ficha técnica)"
+      "Tensión",
+      "250 V"
+    ],
+    [
+      "Protección",
+      "Con fusible (según etiqueta)"
     ],
     [
       "Color",
-      "Negro (según ficha técnica)"
-    ],
-    [
-      "Voltaje",
-      "250 V (según ficha técnica)"
-    ],
-    [
-      "Cantidad de puertos USB",
-      "0 (según ficha técnica)"
-    ],
-    [
-      "Garantía",
-      "6 meses"
+      "Negro"
     ]
   ],
   "confianza": [
     {
-      "titulo": "🔌 Marca Rema",
-      "detalle": "Calidad en material eléctrico"
+      "titulo": "🔌 Toma bipaso",
+      "detalle": "Enchufes de 10 y 16 A"
     },
     {
-      "titulo": "⚡ Conexión segura",
-      "detalle": "Terminales interiores resistentes"
+      "titulo": "⚡ Máximo 2200 W",
+      "detalle": "Con fusible"
     },
     {
       "titulo": "🚚 Envío a todo Chile",
-      "detalle": "Despacho a domicilio o retiro"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -85,86 +77,78 @@
   ],
   "secciones": [
     {
-      "id": "aplicaciones-adaptador-10-16-negro-rem",
-      "titulo": "¿Dónde utilizar este adaptador de enchufe?",
-      "indice": "Aplicaciones",
+      "id": "uso",
+      "titulo": "Cómo usarlo sin sobrecargar el enchufe",
+      "indice": "Uso correcto",
       "bloques": [
         {
-          "p": "El **adaptador 10/16 negro** Rema está diseñado para resolver necesidades de conexión eléctrica tanto en el hogar como en entornos de trabajo:"
+          "p": "Un adaptador no aumenta la capacidad del enchufe de pared: reparte la misma corriente entre lo que conectes."
         },
         {
           "lista": [
-            "Armado y reparación de conexiones en artefactos eléctricos y herramientas.",
-            "Montaje en extensiones y alargadores para distribución de energía.",
-            "Instalaciones que requieren contactos firmes y seguros para evitar falso contacto."
+            "Suma la potencia de los artefactos (viene en su etiqueta, en watts).",
+            "No conectes juntos artefactos que calientan: estufa, hervidor, plancha o secador.",
+            "No conectes un adaptador dentro de otro.",
+            "Si el adaptador o el enchufe se calientan, desconéctalo."
           ]
-        },
-        {
-          "p": "Para revisar cómo conectar tus cables según la normativa chilena, consulta nuestra guía de [código de colores de cables eléctricos](/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/)."
         }
       ]
     },
     {
-      "id": "seguridad-adaptador-10-16-negro-rem",
-      "titulo": "Recomendaciones para una instalación segura",
-      "indice": "Instalación y seguridad",
+      "id": "seguridad",
+      "titulo": "Cuándo conviene una toma nueva",
+      "indice": "Seguridad",
       "bloques": [
         {
-          "pasos": [
-            "Corta siempre el suministro eléctrico general antes de manipular cables o contactos.",
-            "Pela los conductores a la medida indicada sin cortar los hilos interiores de cobre.",
-            "Fija cada conductor firmemente en su borne correspondiente verificando la polaridad.",
-            "Asegura el prensacable o carcasa para evitar que tirones accidentales suelten las conexiones."
-          ]
-        },
-        {
-          "advertencia": "Si la instalación requiere trabajos en tableros principales o modificaciones complejas, recurre a un instalador eléctrico autorizado por la SEC."
+          "p": "Si usas adaptadores en forma permanente en el mismo lugar, es mejor agregar una toma. Esa instalación la hace un electricista autorizado SEC."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿El producto cuenta con garantía?",
-      "respuesta": "Sí, en Ferretería Ukra todos nuestros productos cuentan con 6 meses de garantía legal por defectos de fabricación."
+      "pregunta": "¿Cuánto puedo conectar?",
+      "respuesta": "Hasta 2200 W en total. Suma los watts de cada artefacto antes de conectarlo."
     },
     {
-      "pregunta": "¿Sirve para uso doméstico y de taller?",
-      "respuesta": "Sí, este adaptador de enchufe Rema es apto para circuitos eléctricos correspondientes a su capacidad nominal indicada en la ficha técnica."
+      "pregunta": "¿Puedo conectar una estufa?",
+      "respuesta": "Una estufa eléctrica consume mucho: conéctala sola, directo a la toma de pared, no en un adaptador junto a otros artefactos."
     },
     {
-      "pregunta": "¿Hacen envíos a todo Chile?",
-      "respuesta": "Sí, despachamos a todas las regiones de Chile mediante empresas de logística certificadas y opciones de entrega oportuna."
+      "pregunta": "¿Puedo conectar un adaptador en otro?",
+      "respuesta": "No. Encadenar adaptadores sobrecarga el enchufe y aumenta el riesgo de calentamiento."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
     }
   ],
   "lateral": {
-    "etiqueta": "Material Eléctrico",
-    "titulo": "Adaptador 10/16 negro Rema",
-    "texto": "Adaptador 10/16 negro Rema en color negro para conexiones eléctricas confiables y duraderas."
+    "etiqueta": "Material eléctrico",
+    "titulo": "Adaptador 10/16 con fusible negro Rema",
+    "texto": "Adaptador 10/16 con toma bipaso y fusible, máximo 2200 W."
+  },
+  "tarjeta": {
+    "titulo": "Adaptador 10/16 con fusible negro Rema",
+    "extracto": "Adaptador 10/16 con toma bipaso y fusible, máximo 2200 W. Envíos a todo Chile.",
+    "alt": "Adaptador 10/16 con fusible negro Rema",
+    "etiqueta": "Material eléctrico"
   },
   "relacionados": [
-    "adaptador-schuko-a-enchufe-chileno-10a",
-    "adaptador-schuko-bipaso-16a-bticino",
-    "enchufe-macho-volante-articulado-10a-bticino"
+    "adaptador-10-16-blanco-rema"
   ],
   "guias": [
     {
+      "url": "/blog/las-mejores-marcas-de-alargadores-electricos-guia-completa-para-elegir/",
+      "texto": "Cómo elegir un alargador eléctrico"
+    },
+    {
       "url": "/blog/como-instalar-un-enchufe-en-chile-guia-segura/",
-      "texto": "Cómo instalar un enchufe en Chile paso a paso"
+      "texto": "Cómo instalar un enchufe en Chile"
     },
     {
-      "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
-      "texto": "Cómo identificar fase y neutro en un enchufe"
-    },
-    {
-      "url": "/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/",
-      "texto": "Código de colores de cables eléctricos"
+      "url": "/blog/por-que-salta-el-diferencial-como-encontrar-la-fuga-guia-chile/",
+      "texto": "Por qué salta el diferencial"
     }
-  ],
-  "tarjeta": {
-    "titulo": "Adaptador 10/16 negro Rema",
-    "extracto": "Adaptador 10/16 negro Rema en color negro para instalaciones y armado eléctrico seguro.",
-    "alt": "Adaptador 10/16 negro Rema negro",
-    "etiqueta": "Material Eléctrico"
-  }
+  ]
 }

@@ -1,31 +1,31 @@
 {
   "slug": "enchufe-macho-volante-16a-2p-t-blanco-halux",
-  "nombre": "Enchufe macho volante 16A 2P+T Blanco Halux",
-  "titulo_h1": "Enchufe macho volante 16A 2P+T Blanco Halux",
-  "titulo_corto": "Enchufe macho volante 16A 2P+T Blanco Halux",
   "marca": "Halux",
   "sku": "135792839",
   "precio_referencia": 2490,
   "margen": 50,
   "categoria": "electricidad",
-  "subcategoria": "Enchufes y clavijas macho",
+  "nombre": "Enchufe macho volante 16 A 2P+T blanco Halux",
+  "titulo_h1": "Enchufe macho volante 16 A 2P+T blanco Halux",
+  "titulo_corto": "Enchufe macho volante 16 A 2P+T blanco Halux",
+  "subcategoria": "Enchufes macho",
   "color": "Blanco",
   "disponible": true,
-  "seo_titulo": "Enchufe macho volante 16A 2P+T Blan Halux",
-  "meta_descripcion": "Compra Enchufe macho volante 16A 2P+T Blanco marca Halux a {precio}. Conexión segura, despacho rápido a todo Chile y garantía legal de 6 meses en Ferretería Ukra.",
-  "og_descripcion": "Enchufe macho volante 16A 2P+T Blanco Halux para instalaciones eléctricas seguras y confiables. Despacho a todo Chile.",
-  "descripcion": "Enchufe macho volante 16A 2P+T Blanco marca Halux en color blanco. Diseñado para brindar conexiones firmes y seguras en circuitos eléctricos domiciliarios y de taller. Fabricado en materiales resistentes, cumple con exigencias de seguridad para uso continuo con garantía de 6 meses.",
-  "lede": "Para tus trabajos de armado, mantención o extensión eléctrica, este **enchufe macho volante 16a 2p+t blanco** de marca **Halux** ofrece una conexión firme, cuerpo resistente en color **blanco** y terminales interiores diseñados para un montaje seguro y duradero.",
+  "seo_titulo": "Enchufe macho volante 16 A 2P+T blanco Halux",
+  "meta_descripcion": "Compra enchufe macho volante 16 A 2P+T blanco Halux a {precio}. Enchufe macho volante 2P+T de 16 A tipo chileno para cable. Con tierra al centro.",
+  "og_descripcion": "Enchufe macho volante 2P+T de 16 A tipo chileno para cable. Con tierra al centro.",
+  "descripcion": "Enchufe macho volante 2P+T de 16 A para cable, tipo chileno, marca Halux, color blanco. Tiene pata central de tierra. Se conecta en tomas chilenas de 16 A. Garantía de 6 meses.",
+  "lede": "Para armar o reparar el cable de un artefacto, una herramienta o un alargador, este **enchufe macho 2P+T de 16 A** Halux se conecta en **tomas chilenas de 16 A**. Su **pata central es la tierra**, que protege ante fallas de aislación.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/7602618_01/w=1200,h=1200,fit=cover",
-      "alt": "Enchufe macho volante 16A 2P+T Blanco Halux vista 1",
-      "miniatura": "Ver de frente"
+      "alt": "Enchufe macho volante 16 A 2P+T blanco Halux, vista principal",
+      "miniatura": "Ver vista principal"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7602618_21/w=1200,h=1200,fit=cover",
-      "alt": "Enchufe macho volante 16A 2P+T Blanco Halux vista 2",
-      "miniatura": "Vista 2"
+      "alt": "Enchufe macho volante 16 A 2P+T blanco Halux, otra vista",
+      "miniatura": "Ver otra vista"
     }
   ],
   "stock": {
@@ -38,46 +38,42 @@
       "Halux"
     ],
     [
-      "Alimentación",
-      "Eléctrica enchufable (según ficha técnica)"
+      "Tipo",
+      "Enchufe macho volante (para cable)"
     ],
     [
-      "Tipo de divisor",
-      "Otro (según ficha técnica)"
+      "Norma de clavija",
+      "Tipo chileno (L)"
+    ],
+    [
+      "Polos",
+      "2P+T"
+    ],
+    [
+      "Corriente",
+      "16 A"
+    ],
+    [
+      "Tensión",
+      "220 V"
     ],
     [
       "Color",
-      "Blanco (según ficha técnica)"
-    ],
-    [
-      "Voltaje",
-      "250V (según ficha técnica)"
-    ],
-    [
-      "Cantidad de salidas",
-      "1 (según ficha técnica)"
-    ],
-    [
-      "Amperaje",
-      "16A (según ficha técnica)"
-    ],
-    [
-      "Garantía",
-      "6 meses"
+      "Blanco"
     ]
   ],
   "confianza": [
     {
-      "titulo": "🔌 Marca Halux",
-      "detalle": "Calidad en material eléctrico"
+      "titulo": "🔌 2P+T 16 A",
+      "detalle": "Clavija tipo chileno"
     },
     {
-      "titulo": "⚡ Conexión segura",
-      "detalle": "Terminales interiores resistentes"
+      "titulo": "⏚ Con tierra",
+      "detalle": "Contacto central de tierra"
     },
     {
       "titulo": "🚚 Envío a todo Chile",
-      "detalle": "Despacho a domicilio o retiro"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -86,86 +82,88 @@
   ],
   "secciones": [
     {
-      "id": "aplicaciones-enchufe-macho-volante-16a",
-      "titulo": "¿Dónde utilizar este enchufe macho volante?",
-      "indice": "Aplicaciones",
+      "id": "para-que-sirve",
+      "titulo": "¿Para qué sirve este enchufe macho?",
+      "indice": "Para qué sirve",
       "bloques": [
         {
-          "p": "El **enchufe macho volante 16a 2p+t blanco** Halux está diseñado para resolver necesidades de conexión eléctrica tanto en el hogar como en entornos de trabajo:"
+          "p": "Para armar o reparar el cable de un artefacto, una herramienta o un alargador."
         },
         {
           "lista": [
-            "Armado y reparación de conexiones en artefactos eléctricos y herramientas.",
-            "Montaje en extensiones y alargadores para distribución de energía.",
-            "Instalaciones que requieren contactos firmes y seguros para evitar falso contacto."
+            "Encaja en tomas chilenas de 16 A.",
+            "Con tierra: úsalo en artefactos con carcasa metálica, herramientas y alargadores.",
+            "No sirve para tomas Schuko (redondas) ni industriales."
           ]
-        },
-        {
-          "p": "Para revisar cómo conectar tus cables según la normativa chilena, consulta nuestra guía de [código de colores de cables eléctricos](/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/)."
         }
       ]
     },
     {
-      "id": "seguridad-enchufe-macho-volante-16a",
-      "titulo": "Recomendaciones para una instalación segura",
-      "indice": "Instalación y seguridad",
+      "id": "como-armarlo",
+      "titulo": "Cómo conectarlo al cable",
+      "indice": "Cómo armarlo",
       "bloques": [
         {
           "pasos": [
-            "Corta siempre el suministro eléctrico general antes de manipular cables o contactos.",
-            "Pela los conductores a la medida indicada sin cortar los hilos interiores de cobre.",
-            "Fija cada conductor firmemente en su borne correspondiente verificando la polaridad.",
-            "Asegura el prensacable o carcasa para evitar que tirones accidentales suelten las conexiones."
+            "Corta la luz desde el tablero o desenchufa el cable antes de armarlo.",
+            "Pela unos 8 mm de cada conductor sin cortar los hilos de cobre. Para 16 A, usa cable flexible de al menos 1,5 mm².",
+            "Conecta el café o negro (fase) y el azul (neutro) en los bornes laterales, y el verde/amarillo (tierra) en el borne central.",
+            "Aprieta bien cada tornillo y cierra la abrazadera sobre la cubierta del cable, no sobre los conductores.",
+            "Cierra la carcasa y tira suavemente del cable: no debe moverse."
           ]
         },
         {
-          "advertencia": "Si la instalación requiere trabajos en tableros principales o modificaciones complejas, recurre a un instalador eléctrico autorizado por la SEC."
+          "advertencia": "Si el cable está dañado o el artefacto tiene una falla, no lo conectes. Las instalaciones fijas (tomas de pared, circuitos) las hace un electricista autorizado SEC."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿El producto cuenta con garantía?",
-      "respuesta": "Sí, en Ferretería Ukra todos nuestros productos cuentan con 6 meses de garantía legal por defectos de fabricación."
+      "pregunta": "¿Qué cable uso?",
+      "respuesta": "Cable flexible de al menos 1,5 mm² para 16 A, con tres conductores: fase, neutro y tierra."
     },
     {
-      "pregunta": "¿Sirve para uso doméstico y de taller?",
-      "respuesta": "Sí, este enchufe macho volante Halux es apto para circuitos eléctricos correspondientes a su capacidad nominal indicada en la ficha técnica."
+      "pregunta": "¿Dónde va la tierra?",
+      "respuesta": "En los enchufes chilenos la tierra es la pata (o el agujero) del centro. Conecta ahí el conductor verde/amarillo."
     },
     {
-      "pregunta": "¿Hacen envíos a todo Chile?",
-      "respuesta": "Sí, despachamos a todas las regiones de Chile mediante empresas de logística certificadas y opciones de entrega oportuna."
+      "pregunta": "¿Sirve para un artefacto de más de 16 A?",
+      "respuesta": "No. Suma la potencia: a 220 V, 16 A son unos 3520 W. Si tu artefacto consume más, usa un enchufe de mayor corriente."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
     }
   ],
   "lateral": {
-    "etiqueta": "Material Eléctrico",
-    "titulo": "Enchufe macho volante 16A 2P+T Blan Halux",
-    "texto": "Enchufe macho volante 16A 2P+T Blanco Halux en color blanco para conexiones eléctricas confiables y duraderas."
+    "etiqueta": "Material eléctrico",
+    "titulo": "Enchufe macho volante 16 A 2P+T blanco Halux",
+    "texto": "Enchufe macho volante 2P+T de 16 A tipo chileno para cable. Con tierra al centro."
+  },
+  "tarjeta": {
+    "titulo": "Enchufe macho volante 16 A 2P+T blanco Halux",
+    "extracto": "Enchufe macho volante 2P+T de 16 A tipo chileno para cable. Con tierra al centro.",
+    "alt": "Enchufe macho volante 16 A 2P+T blanco Halux",
+    "etiqueta": "Material eléctrico"
   },
   "relacionados": [
-    "adaptador-schuko-a-enchufe-chileno-10a",
-    "adaptador-schuko-bipaso-16a-bticino",
-    "enchufe-macho-volante-articulado-10a-bticino"
+    "enchufe-macho-volante-10a-blanco-convertible-salva",
+    "enchufe-macho-volante-16a-2p-t-negro-halux",
+    "enchufe-macho-volante-2p-blanco-halux"
   ],
   "guias": [
     {
       "url": "/blog/como-instalar-un-enchufe-en-chile-guia-segura/",
-      "texto": "Cómo instalar un enchufe en Chile paso a paso"
-    },
-    {
-      "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
-      "texto": "Cómo identificar fase y neutro en un enchufe"
+      "texto": "Cómo instalar un enchufe en Chile"
     },
     {
       "url": "/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/",
-      "texto": "Código de colores de cables eléctricos"
+      "texto": "Código de colores de cables"
+    },
+    {
+      "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
+      "texto": "Cómo identificar fase y neutro"
     }
-  ],
-  "tarjeta": {
-    "titulo": "Enchufe macho volante 16A 2P+T Blanco Halux",
-    "extracto": "Enchufe macho volante 16A 2P+T Blanco Halux en color blanco para instalaciones y armado eléctrico seguro.",
-    "alt": "Enchufe macho volante 16A 2P+T Blanco Halux blanco",
-    "etiqueta": "Material Eléctrico"
-  }
+  ]
 }

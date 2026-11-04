@@ -1,41 +1,41 @@
 {
   "slug": "derivador-para-enchufe-3-hembras-16a-220v-lexo",
-  "nombre": "Derivador Para Enchufe 3 Hembras 16A 220V Lexo",
-  "titulo_h1": "Derivador Para Enchufe 3 Hembras 16A 220V Lexo",
-  "titulo_corto": "Derivador Para Enchufe 3 Hembras 16A 220 Lexo",
   "marca": "Lexo",
   "sku": "142665332",
   "precio_referencia": 6990,
   "margen": 50,
   "categoria": "electricidad",
-  "subcategoria": "Adaptadores de enchufe",
-  "color": "Azul",
+  "nombre": "Derivador industrial 1 macho a 3 hembras 16 A 220 V Lexo",
+  "titulo_h1": "Derivador industrial 1 macho a 3 hembras 16 A 220 V Lexo",
+  "titulo_corto": "Derivador industrial 1 macho a 3 hembras 16 A 220 V Lexo",
+  "subcategoria": "Adaptadores",
+  "color": "Azul y blanco",
   "disponible": true,
-  "seo_titulo": "Derivador Para Enchufe 3 Hembras 16 Lexo",
-  "meta_descripcion": "Compra Derivador Para Enchufe 3 Hembras 16A 220V marca Lexo a {precio}. Conexión segura, despacho rápido a todo Chile y garantía legal de 6 meses en Ferretería Ukra.",
-  "og_descripcion": "Derivador Para Enchufe 3 Hembras 16A 220V Lexo para instalaciones eléctricas seguras y confiables. Despacho a todo Chile.",
-  "descripcion": "Derivador Para Enchufe 3 Hembras 16A 220V marca Lexo en color azul. Diseñado para brindar conexiones firmes y seguras en circuitos eléctricos domiciliarios y de taller. Fabricado en materiales resistentes, cumple con exigencias de seguridad para uso continuo con garantía de 6 meses.",
-  "lede": "Para tus trabajos de armado, mantención o extensión eléctrica, este **derivador para enchufe 3 hembras 16a 220v** de marca **Lexo** ofrece una conexión firme, cuerpo resistente en color **azul** y terminales interiores diseñados para un montaje seguro y duradero.",
+  "seo_titulo": "Derivador industrial 1 macho a 3 hembras 16 A 220 V Lexo",
+  "meta_descripcion": "Compra derivador industrial 1 macho a 3 hembras 16 A 220 V Lexo a {precio}. Derivador industrial azul de 16 A, 220 V: un macho a tres hembras para equipos de faena.",
+  "og_descripcion": "Derivador industrial azul de 16 A, 220 V: un macho a tres hembras para equipos de faena.",
+  "descripcion": "Derivador industrial con un enchufe macho azul de 16 A y tres enchufes hembra azules de 16 A, 220 V. Marca Lexo. Permite conectar tres equipos con enchufe industrial a una sola toma. Garantía de 6 meses.",
+  "lede": "Para conectar varios equipos de faena a una sola **toma industrial azul de 16 A**, este **derivador Lexo** tiene **un macho y tres hembras industriales de 16 A**. La suma de lo conectado no debe pasar de 16 A.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/2258285_01/w=1200,h=1200,fit=cover",
-      "alt": "Derivador Para Enchufe 3 Hembras 16A 220V Lexo vista 1",
-      "miniatura": "Ver de frente"
+      "alt": "Derivador industrial 1 macho a 3 hembras 16 A 220 V Lexo, vista principal",
+      "miniatura": "Ver vista principal"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/2258285_12/w=1200,h=1200,fit=cover",
-      "alt": "Derivador Para Enchufe 3 Hembras 16A 220V Lexo vista 2",
-      "miniatura": "Vista 2"
+      "alt": "Derivador industrial 1 macho a 3 hembras 16 A 220 V Lexo, otra vista",
+      "miniatura": "Ver otra vista"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/2258285_21/w=1200,h=1200,fit=cover",
-      "alt": "Derivador Para Enchufe 3 Hembras 16A 220V Lexo vista 3",
-      "miniatura": "Vista 3"
+      "alt": "Derivador industrial 1 macho a 3 hembras 16 A 220 V Lexo, detalle",
+      "miniatura": "Ver detalle"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/2258285_22/w=1200,h=1200,fit=cover",
-      "alt": "Derivador Para Enchufe 3 Hembras 16A 220V Lexo vista 4",
-      "miniatura": "Vista 4"
+      "alt": "Derivador industrial 1 macho a 3 hembras 16 A 220 V Lexo, vista lateral",
+      "miniatura": "Ver vista lateral"
     }
   ],
   "stock": {
@@ -48,46 +48,34 @@
       "Lexo"
     ],
     [
-      "Alimentación",
-      "Eléctrica enchufable (según ficha técnica)"
+      "Entrada",
+      "1 enchufe macho industrial azul 16 A"
     ],
     [
-      "Tipo de divisor",
-      "Otro (según ficha técnica)"
+      "Salidas",
+      "3 enchufes hembra industriales azules 16 A"
+    ],
+    [
+      "Tensión",
+      "220 V"
     ],
     [
       "Color",
-      "Azul (según ficha técnica)"
-    ],
-    [
-      "Voltaje",
-      "220V (según ficha técnica)"
-    ],
-    [
-      "Cantidad de salidas",
-      "3 (según ficha técnica)"
-    ],
-    [
-      "Amperaje",
-      "16 A (según ficha técnica)"
-    ],
-    [
-      "Garantía",
-      "6 meses"
+      "Azul y blanco"
     ]
   ],
   "confianza": [
     {
-      "titulo": "🔌 Marca Lexo",
-      "detalle": "Calidad en material eléctrico"
+      "titulo": "🔌 1 a 3 salidas",
+      "detalle": "Industrial azul 16 A"
     },
     {
-      "titulo": "⚡ Conexión segura",
-      "detalle": "Terminales interiores resistentes"
+      "titulo": "⚡ Máximo 16 A",
+      "detalle": "Suma de lo conectado"
     },
     {
       "titulo": "🚚 Envío a todo Chile",
-      "detalle": "Despacho a domicilio o retiro"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -96,86 +84,75 @@
   ],
   "secciones": [
     {
-      "id": "aplicaciones-derivador-para-enchufe-3-",
-      "titulo": "¿Dónde utilizar este adaptador de enchufe?",
-      "indice": "Aplicaciones",
+      "id": "para-que-sirve",
+      "titulo": "¿Para qué sirve un derivador industrial?",
+      "indice": "Para qué sirve",
       "bloques": [
         {
-          "p": "El **derivador para enchufe 3 hembras 16a 220v** Lexo está diseñado para resolver necesidades de conexión eléctrica tanto en el hogar como en entornos de trabajo:"
+          "p": "Reparte una toma industrial azul de 16 A en tres salidas del mismo tipo, para equipos de obra o taller."
         },
         {
           "lista": [
-            "Armado y reparación de conexiones en artefactos eléctricos y herramientas.",
-            "Montaje en extensiones y alargadores para distribución de energía.",
-            "Instalaciones que requieren contactos firmes y seguros para evitar falso contacto."
+            "Para equipos con enchufe industrial azul de 16 A.",
+            "La suma de las corrientes no puede pasar de 16 A (unos 3.500 W a 220 V).",
+            "No sirve para equipos con enchufe rojo (380 V)."
           ]
-        },
-        {
-          "p": "Para revisar cómo conectar tus cables según la normativa chilena, consulta nuestra guía de [código de colores de cables eléctricos](/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/)."
         }
       ]
     },
     {
-      "id": "seguridad-derivador-para-enchufe-3-",
-      "titulo": "Recomendaciones para una instalación segura",
-      "indice": "Instalación y seguridad",
+      "id": "seguridad",
+      "titulo": "Uso seguro",
+      "indice": "Seguridad",
       "bloques": [
         {
-          "pasos": [
-            "Corta siempre el suministro eléctrico general antes de manipular cables o contactos.",
-            "Pela los conductores a la medida indicada sin cortar los hilos interiores de cobre.",
-            "Fija cada conductor firmemente en su borne correspondiente verificando la polaridad.",
-            "Asegura el prensacable o carcasa para evitar que tirones accidentales suelten las conexiones."
+          "lista": [
+            "No conectes al mismo tiempo dos equipos de alto consumo, como una soldadora y un compresor.",
+            "Revisa que la toma tenga protección diferencial.",
+            "Si se calienta, desconéctalo."
           ]
-        },
-        {
-          "advertencia": "Si la instalación requiere trabajos en tableros principales o modificaciones complejas, recurre a un instalador eléctrico autorizado por la SEC."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿El producto cuenta con garantía?",
-      "respuesta": "Sí, en Ferretería Ukra todos nuestros productos cuentan con 6 meses de garantía legal por defectos de fabricación."
+      "pregunta": "¿Puedo conectar tres equipos de 16 A?",
+      "respuesta": "No al mismo tiempo. La suma de lo que conectes no debe pasar de 16 A, que es lo que entrega la toma."
     },
     {
-      "pregunta": "¿Sirve para uso doméstico y de taller?",
-      "respuesta": "Sí, este adaptador de enchufe Lexo es apto para circuitos eléctricos correspondientes a su capacidad nominal indicada en la ficha técnica."
+      "pregunta": "¿Sirve para enchufes chilenos comunes?",
+      "respuesta": "No. Sus salidas son industriales azules de 16 A. Para enchufes comunes existen adaptadores industriales con tomas chilenas."
     },
     {
-      "pregunta": "¿Hacen envíos a todo Chile?",
-      "respuesta": "Sí, despachamos a todas las regiones de Chile mediante empresas de logística certificadas y opciones de entrega oportuna."
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
     }
   ],
   "lateral": {
-    "etiqueta": "Material Eléctrico",
-    "titulo": "Derivador Para Enchufe 3 Hembras 16 Lexo",
-    "texto": "Derivador Para Enchufe 3 Hembras 16A 220V Lexo en color azul para conexiones eléctricas confiables y duraderas."
+    "etiqueta": "Material eléctrico",
+    "titulo": "Derivador industrial 1 macho a 3 hembras 16 A 220 V Lexo",
+    "texto": "Derivador industrial azul de 16 A, 220 V: un macho a tres hembras para equipos de faena."
   },
-  "relacionados": [
-    "adaptador-schuko-a-enchufe-chileno-10a",
-    "adaptador-schuko-bipaso-16a-bticino",
-    "enchufe-macho-volante-articulado-10a-bticino"
-  ],
+  "tarjeta": {
+    "titulo": "Derivador industrial 1 macho a 3 hembras 16 A 220 V Lexo",
+    "extracto": "Derivador industrial azul de 16 A, 220 V: un macho a tres hembras para equipos de faena.",
+    "alt": "Derivador industrial 1 macho a 3 hembras 16 A 220 V Lexo",
+    "etiqueta": "Material eléctrico"
+  },
+  "relacionados": [],
   "guias": [
     {
-      "url": "/blog/como-instalar-un-enchufe-en-chile-guia-segura/",
-      "texto": "Cómo instalar un enchufe en Chile paso a paso"
+      "url": "/blog/como-calcular-el-consumo-electrico-de-una-soldadora-domestica-guia-completa/",
+      "texto": "Consumo eléctrico de una soldadora"
     },
     {
-      "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
-      "texto": "Cómo identificar fase y neutro en un enchufe"
+      "url": "/blog/por-que-salta-el-diferencial-como-encontrar-la-fuga-guia-chile/",
+      "texto": "Por qué salta el diferencial"
     },
     {
-      "url": "/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/",
-      "texto": "Código de colores de cables eléctricos"
+      "url": "/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/",
+      "texto": "Cómo armar un tablero eléctrico"
     }
-  ],
-  "tarjeta": {
-    "titulo": "Derivador Para Enchufe 3 Hembras 16A 220 Lexo",
-    "extracto": "Derivador Para Enchufe 3 Hembras 16A 220V Lexo en color azul para instalaciones y armado eléctrico seguro.",
-    "alt": "Derivador Para Enchufe 3 Hembras 16A 220V Lexo azul",
-    "etiqueta": "Material Eléctrico"
-  }
+  ]
 }

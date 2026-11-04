@@ -1,41 +1,36 @@
 {
   "slug": "alargador-4-tomas-sin-cable-halux",
-  "nombre": "Alargador 4 tomas sin cable Halux",
-  "titulo_h1": "Alargador 4 tomas sin cable Halux",
-  "titulo_corto": "Alargador 4 tomas sin cable Halux",
   "marca": "Halux",
   "sku": "110222831",
   "precio_referencia": 7692,
   "margen": 50,
   "categoria": "electricidad",
+  "nombre": "Alargador 4 tomas sin cable con interruptor Halux",
+  "titulo_h1": "Alargador 4 tomas sin cable con interruptor Halux",
+  "titulo_corto": "Alargador 4 tomas sin cable con interruptor Halux",
   "subcategoria": "Alargadores y extensiones",
   "color": "Blanco",
   "disponible": true,
-  "seo_titulo": "Alargador 4 tomas sin cable Halux",
-  "meta_descripcion": "Compra Alargador 4 tomas sin cable marca Halux a {precio}. Conexión segura, despacho rápido a todo Chile y garantía legal de 6 meses en Ferretería Ukra.",
-  "og_descripcion": "Alargador 4 tomas sin cable Halux para instalaciones eléctricas seguras y confiables. Despacho a todo Chile.",
-  "descripcion": "Alargador 4 tomas sin cable marca Halux en color blanco. Diseñado para brindar conexiones firmes y seguras en circuitos eléctricos domiciliarios y de taller. Fabricado en materiales resistentes, cumple con exigencias de seguridad para uso continuo con garantía de 6 meses.",
-  "lede": "Para tus trabajos de armado, mantención o extensión eléctrica, este **alargador 4 tomas sin cable** de marca **Halux** ofrece una conexión firme, cuerpo resistente en color **blanco** y terminales interiores diseñados para un montaje seguro y duradero.",
+  "seo_titulo": "Alargador 4 tomas sin cable con interruptor Halux",
+  "meta_descripcion": "Compra alargador 4 tomas sin cable con interruptor Halux a {precio}. Regleta de 4 tomas con interruptor, sin cable para armar a tu medida. Máximo 2000 W.",
+  "og_descripcion": "Regleta de 4 tomas con interruptor, sin cable para armar a tu medida. Máximo 2000 W.",
+  "descripcion": "Regleta de 4 tomas chilenas con interruptor, marca Halux, color blanco, que viene sin cable para que le pongas el largo que necesites. Potencia máxima 2000 W, 220 V. Garantía de 6 meses.",
+  "lede": "Si necesitas un alargador con el **largo justo**, esta **regleta de 4 tomas** Halux viene **sin cable**: le pones tú el cable y el enchufe macho. Trae **interruptor** y soporta hasta **2000 W**.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/3949222_01/w=1200,h=1200,fit=cover",
-      "alt": "Alargador 4 tomas sin cable Halux vista 1",
-      "miniatura": "Ver de frente"
-    },
-    {
-      "url": "https://media.falabella.com/sodimacCL/3949222_18/w=1200,h=1200,fit=cover",
-      "alt": "Alargador 4 tomas sin cable Halux vista 2",
-      "miniatura": "Vista 2"
+      "alt": "Alargador 4 tomas sin cable con interruptor Halux, vista principal",
+      "miniatura": "Ver vista principal"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/3949222_21/w=1200,h=1200,fit=cover",
-      "alt": "Alargador 4 tomas sin cable Halux vista 3",
-      "miniatura": "Vista 3"
+      "alt": "Alargador 4 tomas sin cable con interruptor Halux, otra vista",
+      "miniatura": "Ver otra vista"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/3949222_22/w=1200,h=1200,fit=cover",
-      "alt": "Alargador 4 tomas sin cable Halux vista 4",
-      "miniatura": "Vista 4"
+      "alt": "Alargador 4 tomas sin cable con interruptor Halux, detalle",
+      "miniatura": "Ver detalle"
     }
   ],
   "stock": {
@@ -48,50 +43,42 @@
       "Halux"
     ],
     [
-      "Plazo de disponibilidad de repuestos",
-      "6 mes(es) (según ficha técnica)"
+      "Tipo",
+      "Regleta sin cable (para armar)"
     ],
     [
-      "Duración en condiciones previsibles d...",
-      "1 año(s) (según ficha técnica)"
+      "Tomas",
+      "4"
     ],
     [
-      "Plazo de disponibilidad de servicio t...",
-      "6 mes(es) (según ficha técnica)"
+      "Interruptor",
+      "Sí"
     ],
     [
-      "Potencia",
-      "2000 W (según ficha técnica)"
+      "Potencia máxima",
+      "2000 W"
+    ],
+    [
+      "Tensión",
+      "220 V"
     ],
     [
       "Color",
-      "Blanco (según ficha técnica)"
-    ],
-    [
-      "Voltaje",
-      "220 V (según ficha técnica)"
-    ],
-    [
-      "Cantidad de puertos USB",
-      "0 (según ficha técnica)"
-    ],
-    [
-      "Garantía",
-      "6 meses"
+      "Blanco"
     ]
   ],
   "confianza": [
     {
-      "titulo": "🔌 Marca Halux",
-      "detalle": "Calidad en material eléctrico"
+      "titulo": "🔌 4 tomas",
+      "detalle": "Con interruptor"
     },
     {
-      "titulo": "⚡ Conexión segura",
-      "detalle": "Terminales interiores resistentes"
+      "titulo": "📏 Largo a tu medida",
+      "detalle": "Le pones el cable que necesites"
     },
     {
       "titulo": "🚚 Envío a todo Chile",
-      "detalle": "Despacho a domicilio o retiro"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -100,86 +87,80 @@
   ],
   "secciones": [
     {
-      "id": "aplicaciones-alargador-4-tomas-sin-cab",
-      "titulo": "¿Dónde utilizar este alargador multicontacto?",
-      "indice": "Aplicaciones",
+      "id": "como-armarla",
+      "titulo": "Cómo armar tu alargador",
+      "indice": "Cómo armarla",
       "bloques": [
         {
-          "p": "El **alargador 4 tomas sin cable** Halux está diseñado para resolver necesidades de conexión eléctrica tanto en el hogar como en entornos de trabajo:"
-        },
-        {
-          "lista": [
-            "Armado y reparación de conexiones en artefactos eléctricos y herramientas.",
-            "Montaje en extensiones y alargadores para distribución de energía.",
-            "Instalaciones que requieren contactos firmes y seguros para evitar falso contacto."
+          "pasos": [
+            "Elige cable flexible de tres conductores de al menos 1 mm² (1,5 mm² si es largo o para más carga).",
+            "Conecta el cable a los bornes de la regleta: fase, neutro y el verde/amarillo en tierra.",
+            "Arma el otro extremo con un enchufe macho 2P+T.",
+            "Cierra la regleta, aprieta la abrazadera y prueba con el interruptor."
           ]
         },
         {
-          "p": "Para revisar cómo conectar tus cables según la normativa chilena, consulta nuestra guía de [código de colores de cables eléctricos](/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/)."
+          "advertencia": "Respeta los 2000 W: no conectes juntos artefactos que calientan, como estufas o hervidores."
         }
       ]
     },
     {
-      "id": "seguridad-alargador-4-tomas-sin-cab",
-      "titulo": "Recomendaciones para una instalación segura",
-      "indice": "Instalación y seguridad",
+      "id": "uso",
+      "titulo": "Uso seguro",
+      "indice": "Uso seguro",
       "bloques": [
         {
-          "pasos": [
-            "Corta siempre el suministro eléctrico general antes de manipular cables o contactos.",
-            "Pela los conductores a la medida indicada sin cortar los hilos interiores de cobre.",
-            "Fija cada conductor firmemente en su borne correspondiente verificando la polaridad.",
-            "Asegura el prensacable o carcasa para evitar que tirones accidentales suelten las conexiones."
+          "lista": [
+            "Desenrolla el cable por completo cuando lo uses.",
+            "No lo pases bajo alfombras ni lo apriete una puerta.",
+            "No conectes un alargador en otro."
           ]
-        },
-        {
-          "advertencia": "Si la instalación requiere trabajos en tableros principales o modificaciones complejas, recurre a un instalador eléctrico autorizado por la SEC."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿El producto cuenta con garantía?",
-      "respuesta": "Sí, en Ferretería Ukra todos nuestros productos cuentan con 6 meses de garantía legal por defectos de fabricación."
+      "pregunta": "¿Por qué viene sin cable?",
+      "respuesta": "Para que le pongas el largo que necesitas. Se arma con cable flexible y un enchufe macho."
     },
     {
-      "pregunta": "¿Sirve para uso doméstico y de taller?",
-      "respuesta": "Sí, este alargador multicontacto Halux es apto para circuitos eléctricos correspondientes a su capacidad nominal indicada en la ficha técnica."
+      "pregunta": "¿Qué cable le pongo?",
+      "respuesta": "Cable flexible de tres conductores de al menos 1 mm²; si es largo o vas a conectar más carga, mejor 1,5 mm²."
     },
     {
-      "pregunta": "¿Hacen envíos a todo Chile?",
-      "respuesta": "Sí, despachamos a todas las regiones de Chile mediante empresas de logística certificadas y opciones de entrega oportuna."
+      "pregunta": "¿Cuánto puedo conectar?",
+      "respuesta": "Hasta 2000 W en total. Suma los watts de lo que conectes."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
     }
   ],
   "lateral": {
-    "etiqueta": "Material Eléctrico",
-    "titulo": "Alargador 4 tomas sin cable Halux",
-    "texto": "Alargador 4 tomas sin cable Halux en color blanco para conexiones eléctricas confiables y duraderas."
+    "etiqueta": "Material eléctrico",
+    "titulo": "Alargador 4 tomas sin cable con interruptor Halux",
+    "texto": "Regleta de 4 tomas con interruptor, sin cable para armar a tu medida. Máximo 2000 W."
   },
-  "relacionados": [
-    "adaptador-schuko-a-enchufe-chileno-10a",
-    "adaptador-schuko-bipaso-16a-bticino",
-    "enchufe-macho-volante-articulado-10a-bticino"
-  ],
+  "tarjeta": {
+    "titulo": "Alargador 4 tomas sin cable con interruptor Halux",
+    "extracto": "Regleta de 4 tomas con interruptor, sin cable para armar a tu medida. Máximo 2000 W.",
+    "alt": "Alargador 4 tomas sin cable con interruptor Halux",
+    "etiqueta": "Material eléctrico"
+  },
+  "relacionados": [],
   "guias": [
     {
-      "url": "/blog/como-instalar-un-enchufe-en-chile-guia-segura/",
-      "texto": "Cómo instalar un enchufe en Chile paso a paso"
-    },
-    {
-      "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
-      "texto": "Cómo identificar fase y neutro en un enchufe"
+      "url": "/blog/las-mejores-marcas-de-alargadores-electricos-guia-completa-para-elegir/",
+      "texto": "Cómo elegir un alargador eléctrico"
     },
     {
       "url": "/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/",
-      "texto": "Código de colores de cables eléctricos"
+      "texto": "Código de colores de cables"
+    },
+    {
+      "url": "/blog/como-instalar-un-enchufe-en-chile-guia-segura/",
+      "texto": "Cómo instalar un enchufe en Chile"
     }
-  ],
-  "tarjeta": {
-    "titulo": "Alargador 4 tomas sin cable Halux",
-    "extracto": "Alargador 4 tomas sin cable Halux en color blanco para instalaciones y armado eléctrico seguro.",
-    "alt": "Alargador 4 tomas sin cable Halux blanco",
-    "etiqueta": "Material Eléctrico"
-  }
+  ]
 }

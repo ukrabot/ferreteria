@@ -1,31 +1,31 @@
 {
   "slug": "enchufe-industrial-macho-volante-ip67-16a-220v-2p",
-  "nombre": "Enchufe industrial macho volante IP67, 16A, 220V, 2P+T Lexo",
-  "titulo_h1": "Enchufe industrial macho volante IP67, 16A, 220V, 2P+T Lexo",
-  "titulo_corto": "Enchufe industrial macho volante IP67, 1 Lexo",
   "marca": "Lexo",
   "sku": "136642096",
   "precio_referencia": 4990,
   "margen": 50,
   "categoria": "electricidad",
-  "subcategoria": "Tomas y enchufes industriales",
+  "nombre": "Enchufe industrial macho volante IP67 16 A 2P+T 220 V Lexo",
+  "titulo_h1": "Enchufe industrial macho volante IP67 16 A 2P+T 220 V Lexo",
+  "titulo_corto": "Enchufe industrial macho volante IP67 16 A 2P+T 220 V Lexo",
+  "subcategoria": "Enchufes industriales",
   "color": "Azul",
   "disponible": true,
-  "seo_titulo": "Enchufe industrial macho volante IP Lexo",
-  "meta_descripcion": "Compra Enchufe industrial macho volante IP67, 16A, 220V, 2P+T marca Lexo a {precio}. Conexión eléctrica segura, despacho a todo Chile y 6 meses de garantía.",
-  "og_descripcion": "Enchufe industrial macho volante IP67, 16A, 220V, 2P+T Lexo para instalaciones eléctricas seguras y confiables. Despacho a todo Chile.",
-  "descripcion": "Enchufe industrial macho volante IP67, 16A, 220V, 2P+T marca Lexo en color azul. Diseñado para brindar conexiones firmes y seguras en circuitos eléctricos domiciliarios y de taller. Fabricado en materiales resistentes, cumple con exigencias de seguridad para uso continuo con garantía de 6 meses.",
-  "lede": "Para tus trabajos de armado, mantención o extensión eléctrica, este **enchufe industrial macho volante ip67, 16a, 220v, 2p+t** de marca **Lexo** ofrece una conexión firme, cuerpo resistente en color **azul** y terminales interiores diseñados para un montaje seguro y duradero.",
+  "seo_titulo": "Enchufe industrial macho volante IP67 16 A 2P+T 220 V Lexo",
+  "meta_descripcion": "Compra enchufe industrial macho volante IP67 16 A 2P+T 220 V Lexo a {precio}. Enchufe industrial macho 16 A 220 V 2P+T IP67, formato azul.",
+  "og_descripcion": "Enchufe industrial macho 16 A 220 V 2P+T IP67, formato azul.",
+  "descripcion": "Enchufe industrial macho (clavija) de 16 A y 220 V, 2P+T (3 contactos), marca Lexo. Formato industrial de color azul, grado de protección IP67, hermético al polvo y resistente a inmersión temporal. Para conectar equipos monofásicos como soldadoras, compresores, betoneras o tableros de faena. Garantía de 6 meses.",
+  "lede": "Para conectar equipos de taller y obra, este **enchufe industrial macho de 16 A, 220 V** Lexo es del formato industrial **azul** con **2P+T (3 contactos)** y protección **IP67**. El color y la posición de la llave impiden conectarlo a una tensión equivocada.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/7615418_01/w=1200,h=1200,fit=cover",
-      "alt": "Enchufe industrial macho volante IP67, 16A, 220V, 2P+T Lexo vista 1",
-      "miniatura": "Ver de frente"
+      "alt": "Enchufe industrial macho volante IP67 16 A 2P+T 220 V Lexo, vista principal",
+      "miniatura": "Ver vista principal"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7615418_21/w=1200,h=1200,fit=cover",
-      "alt": "Enchufe industrial macho volante IP67, 16A, 220V, 2P+T Lexo vista 2",
-      "miniatura": "Vista 2"
+      "alt": "Enchufe industrial macho volante IP67 16 A 2P+T 220 V Lexo, otra vista",
+      "miniatura": "Ver otra vista"
     }
   ],
   "stock": {
@@ -38,46 +38,46 @@
       "Lexo"
     ],
     [
-      "Alimentación",
-      "Eléctrica enchufable (según ficha técnica)"
+      "Tipo",
+      "Enchufe industrial macho (clavija)"
     ],
     [
-      "Tipo de divisor",
-      "Otro (según ficha técnica)"
+      "Formato",
+      "Industrial (IEC 60309), color azul"
+    ],
+    [
+      "Corriente",
+      "16 A"
+    ],
+    [
+      "Tensión",
+      "220 V"
+    ],
+    [
+      "Polos",
+      "2P+T (3 contactos)"
+    ],
+    [
+      "Grado de protección",
+      "IP67"
     ],
     [
       "Color",
-      "Azul (según ficha técnica)"
-    ],
-    [
-      "Voltaje",
-      "220V (según ficha técnica)"
-    ],
-    [
-      "Cantidad de salidas",
-      "1 (según ficha técnica)"
-    ],
-    [
-      "Amperaje",
-      "16 A (según ficha técnica)"
-    ],
-    [
-      "Garantía",
-      "6 meses"
+      "Azul"
     ]
   ],
   "confianza": [
     {
-      "titulo": "🔌 Marca Lexo",
-      "detalle": "Calidad en material eléctrico"
+      "titulo": "⚡ 16 A · 220 V",
+      "detalle": "Formato industrial azul"
     },
     {
-      "titulo": "⚡ Conexión segura",
-      "detalle": "Terminales interiores resistentes"
+      "titulo": "💧 IP67",
+      "detalle": "Protección contra agua y polvo"
     },
     {
       "titulo": "🚚 Envío a todo Chile",
-      "detalle": "Despacho a domicilio o retiro"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -86,86 +86,87 @@
   ],
   "secciones": [
     {
-      "id": "aplicaciones-enchufe-industrial-macho-",
-      "titulo": "¿Dónde utilizar este enchufe industrial?",
-      "indice": "Aplicaciones",
+      "id": "como-elegir",
+      "titulo": "Cómo saber si calza con tu equipo",
+      "indice": "Compatibilidad",
       "bloques": [
         {
-          "p": "El **enchufe industrial macho volante ip67, 16a, 220v, 2p+t** Lexo está diseñado para resolver necesidades de conexión eléctrica tanto en el hogar como en entornos de trabajo:"
+          "p": "Los enchufes industriales se distinguen por color, corriente y número de contactos. Azul es 220 V monofásico y rojo es 380 V trifásico; además, 16 y 32 A tienen tamaños distintos y no se mezclan."
         },
         {
           "lista": [
-            "Armado y reparación de conexiones en artefactos eléctricos y herramientas.",
-            "Montaje en extensiones y alargadores para distribución de energía.",
-            "Instalaciones que requieren contactos firmes y seguros para evitar falso contacto."
+            "Debe calzar con un enchufe hembra industrial azul de 16 A y 3 contactos.",
+            "No sirve para tomas domiciliarias chilenas ni Schuko.",
+            "El grado IP67 se cumple solo con la tapa cerrada y el cable bien apretado en el prensacable."
           ]
-        },
-        {
-          "p": "Para revisar cómo conectar tus cables según la normativa chilena, consulta nuestra guía de [código de colores de cables eléctricos](/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/)."
         }
       ]
     },
     {
-      "id": "seguridad-enchufe-industrial-macho-",
-      "titulo": "Recomendaciones para una instalación segura",
-      "indice": "Instalación y seguridad",
+      "id": "instalacion",
+      "titulo": "Instalación y seguridad",
+      "indice": "Instalación",
       "bloques": [
         {
           "pasos": [
-            "Corta siempre el suministro eléctrico general antes de manipular cables o contactos.",
-            "Pela los conductores a la medida indicada sin cortar los hilos interiores de cobre.",
-            "Fija cada conductor firmemente en su borne correspondiente verificando la polaridad.",
-            "Asegura el prensacable o carcasa para evitar que tirones accidentales suelten las conexiones."
+            "Corta la luz desde el tablero o desenchufa el cable antes de armarlo.",
+            "Usa cable flexible de la sección que corresponda a 16 A: 1,5 mm².",
+            "Conecta el verde/amarillo al borne de tierra (marcado ⏚) y fase y neutro a los otros dos bornes.",
+            "Aprieta el prensacable sobre la cubierta del cable para que no se suelte con un tirón."
           ]
         },
         {
-          "advertencia": "Si la instalación requiere trabajos en tableros principales o modificaciones complejas, recurre a un instalador eléctrico autorizado por la SEC."
+          "advertencia": "Si vas a instalar una toma fija, hazlo con un electricista autorizado SEC y con protección en el tablero."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿El producto cuenta con garantía?",
-      "respuesta": "Sí, en Ferretería Ukra todos nuestros productos cuentan con 6 meses de garantía legal por defectos de fabricación."
+      "pregunta": "¿Qué diferencia hay entre el azul y el rojo?",
+      "respuesta": "Azul es para 200 a 250 V (monofásico, como la red de una casa) y rojo para 380 a 415 V (trifásico). No se pueden conectar entre sí."
     },
     {
-      "pregunta": "¿Sirve para uso doméstico y de taller?",
-      "respuesta": "Sí, este enchufe industrial Lexo es apto para circuitos eléctricos correspondientes a su capacidad nominal indicada en la ficha técnica."
+      "pregunta": "¿Qué cable uso?",
+      "respuesta": "Cable flexible de 1,5 mm² para 16 A, con tres conductores: fase, neutro y tierra."
     },
     {
-      "pregunta": "¿Hacen envíos a todo Chile?",
-      "respuesta": "Sí, despachamos a todas las regiones de Chile mediante empresas de logística certificadas y opciones de entrega oportuna."
+      "pregunta": "¿Qué significa IP67?",
+      "respuesta": "Que es hermético al polvo y resiste una inmersión temporal en agua, siempre con la tapa y el prensacable bien cerrados."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
     }
   ],
   "lateral": {
-    "etiqueta": "Material Eléctrico",
-    "titulo": "Enchufe industrial macho volante IP Lexo",
-    "texto": "Enchufe industrial macho volante IP67, 16A, 220V, 2P+T Lexo en color azul para conexiones eléctricas confiables y duraderas."
+    "etiqueta": "Material eléctrico",
+    "titulo": "Enchufe industrial macho volante IP67 16 A 2P+T 220 V Lexo",
+    "texto": "Enchufe industrial macho 16 A 220 V 2P+T IP67, formato azul."
+  },
+  "tarjeta": {
+    "titulo": "Enchufe industrial macho volante IP67 16 A 2P+T 220 V Lexo",
+    "extracto": "Enchufe industrial macho 16 A 220 V 2P+T IP67, formato azul.",
+    "alt": "Enchufe industrial macho volante IP67 16 A 2P+T 220 V Lexo",
+    "etiqueta": "Material eléctrico"
   },
   "relacionados": [
-    "adaptador-schuko-a-enchufe-chileno-10a",
-    "adaptador-schuko-bipaso-16a-bticino",
-    "enchufe-macho-volante-articulado-10a-bticino"
+    "enchufe-industrial-macho-volante-16-a-2p-t-220v-ip",
+    "enchufe-industrial-macho-volante-16-a-2p-t-220v-le",
+    "enchufe-industrial-macho-volante-32-a-2p-t-220v-ip"
   ],
   "guias": [
     {
-      "url": "/blog/como-instalar-un-enchufe-en-chile-guia-segura/",
-      "texto": "Cómo instalar un enchufe en Chile paso a paso"
+      "url": "/blog/como-calcular-el-consumo-electrico-de-una-soldadora-domestica-guia-completa/",
+      "texto": "Consumo eléctrico de una soldadora"
     },
     {
-      "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
-      "texto": "Cómo identificar fase y neutro en un enchufe"
+      "url": "/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/",
+      "texto": "Cómo armar un tablero eléctrico"
     },
     {
       "url": "/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/",
-      "texto": "Código de colores de cables eléctricos"
+      "texto": "Código de colores de cables"
     }
-  ],
-  "tarjeta": {
-    "titulo": "Enchufe industrial macho volante IP67, 1 Lexo",
-    "extracto": "Enchufe industrial macho volante IP67, 16A, 220V, 2P+T Lexo en color azul para instalaciones y armado eléctrico seguro.",
-    "alt": "Enchufe industrial macho volante IP67, 16A, 220V, 2P+T Lexo azul",
-    "etiqueta": "Material Eléctrico"
-  }
+  ]
 }

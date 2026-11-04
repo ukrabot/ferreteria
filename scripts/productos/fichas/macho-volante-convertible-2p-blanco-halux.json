@@ -1,36 +1,36 @@
 {
   "slug": "macho-volante-convertible-2p-blanco-halux",
-  "nombre": "Macho volante convertible 2P blanco Halux",
-  "titulo_h1": "Macho volante convertible 2P blanco Halux",
-  "titulo_corto": "Macho volante convertible 2P blanco Halux",
   "marca": "Halux",
   "sku": "122850046",
   "precio_referencia": 1990,
   "margen": 50,
   "categoria": "electricidad",
-  "subcategoria": "Enchufes y clavijas macho",
+  "nombre": "Enchufe macho volante convertible 2P 10 A blanco Halux",
+  "titulo_h1": "Enchufe macho volante convertible 2P 10 A blanco Halux",
+  "titulo_corto": "Enchufe macho volante convertible 2P 10 A blanco Halux",
+  "subcategoria": "Enchufes macho",
   "color": "Blanco",
   "disponible": true,
-  "seo_titulo": "Macho volante convertible 2P blanco Halux",
-  "meta_descripcion": "Compra Macho volante convertible 2P blanco marca Halux a {precio}. Conexión segura, despacho rápido a todo Chile y garantía legal de 6 meses en Ferretería Ukra.",
-  "og_descripcion": "Macho volante convertible 2P blanco Halux para instalaciones eléctricas seguras y confiables. Despacho a todo Chile.",
-  "descripcion": "Macho volante convertible 2P blanco marca Halux en color blanco. Diseñado para brindar conexiones firmes y seguras en circuitos eléctricos domiciliarios y de taller. Fabricado en materiales resistentes, cumple con exigencias de seguridad para uso continuo con garantía de 6 meses.",
-  "lede": "Para tus trabajos de armado, mantención o extensión eléctrica, este **macho volante convertible 2p blanco** de marca **Halux** ofrece una conexión firme, cuerpo resistente en color **blanco** y terminales interiores diseñados para un montaje seguro y duradero.",
+  "seo_titulo": "Enchufe macho volante convertible 2P 10 A blanco Halux",
+  "meta_descripcion": "Compra enchufe macho volante convertible 2P 10 A blanco Halux a {precio}. Enchufe macho volante 2P de 10 A tipo chileno para cable. Sin tierra, para doble aislación.",
+  "og_descripcion": "Enchufe macho volante 2P de 10 A tipo chileno para cable. Sin tierra, para doble aislación.",
+  "descripcion": "Enchufe macho volante 2P de 10 A para cable, tipo chileno, marca Halux, color blanco. Tiene dos patas, sin tierra: úsalo solo en artefactos de doble aislación. Con cuerpo convertible que permite sacar el cable recto o en ángulo. Se conecta en tomas chilenas de 10 A. Garantía de 6 meses.",
+  "lede": "Para armar o reparar el cable de un artefacto, una herramienta o un alargador, este **enchufe macho 2P de 10 A** Halux se conecta en **tomas chilenas de 10 A**. Es de **dos patas, sin tierra**: sirve para artefactos de doble aislación, como cargadores o lámparas. Tiene **cuerpo convertible que permite sacar el cable recto o en ángulo**.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/7400861_01/w=1200,h=1200,fit=cover",
-      "alt": "Macho volante convertible 2P blanco Halux vista 1",
-      "miniatura": "Ver de frente"
+      "alt": "Enchufe macho volante convertible 2P 10 A blanco Halux, vista principal",
+      "miniatura": "Ver vista principal"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7400861_21/w=1200,h=1200,fit=cover",
-      "alt": "Macho volante convertible 2P blanco Halux vista 2",
-      "miniatura": "Vista 2"
+      "alt": "Enchufe macho volante convertible 2P 10 A blanco Halux, otra vista",
+      "miniatura": "Ver otra vista"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7400861_22/w=1200,h=1200,fit=cover",
-      "alt": "Macho volante convertible 2P blanco Halux vista 3",
-      "miniatura": "Vista 3"
+      "alt": "Enchufe macho volante convertible 2P 10 A blanco Halux, detalle",
+      "miniatura": "Ver detalle"
     }
   ],
   "stock": {
@@ -43,46 +43,46 @@
       "Halux"
     ],
     [
-      "Alimentación",
-      "Eléctrica (según ficha técnica)"
+      "Tipo",
+      "Enchufe macho volante (para cable)"
     ],
     [
-      "Tipo de divisor",
-      "Otro (según ficha técnica)"
+      "Norma de clavija",
+      "Tipo chileno (L)"
+    ],
+    [
+      "Polos",
+      "2P"
+    ],
+    [
+      "Corriente",
+      "10 A"
+    ],
+    [
+      "Tensión",
+      "220 V"
     ],
     [
       "Color",
-      "BLANCO (según ficha técnica)"
+      "Blanco"
     ],
     [
-      "Voltaje",
-      "250 V (según ficha técnica)"
-    ],
-    [
-      "Cantidad de salidas",
-      "1 (según ficha técnica)"
-    ],
-    [
-      "Amperaje",
-      "10 A (según ficha técnica)"
-    ],
-    [
-      "Garantía",
-      "6 meses"
+      "Formato",
+      "Convertible"
     ]
   ],
   "confianza": [
     {
-      "titulo": "🔌 Marca Halux",
-      "detalle": "Calidad en material eléctrico"
+      "titulo": "🔌 2P 10 A",
+      "detalle": "Clavija tipo chileno"
     },
     {
-      "titulo": "⚡ Conexión segura",
-      "detalle": "Terminales interiores resistentes"
+      "titulo": "⚠️ Sin tierra",
+      "detalle": "Solo artefactos de doble aislación"
     },
     {
       "titulo": "🚚 Envío a todo Chile",
-      "detalle": "Despacho a domicilio o retiro"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -91,86 +91,88 @@
   ],
   "secciones": [
     {
-      "id": "aplicaciones-macho-volante-convertible",
-      "titulo": "¿Dónde utilizar este enchufe macho volante?",
-      "indice": "Aplicaciones",
+      "id": "para-que-sirve",
+      "titulo": "¿Para qué sirve este enchufe macho?",
+      "indice": "Para qué sirve",
       "bloques": [
         {
-          "p": "El **macho volante convertible 2p blanco** Halux está diseñado para resolver necesidades de conexión eléctrica tanto en el hogar como en entornos de trabajo:"
+          "p": "Para armar o reparar el cable de un artefacto, una herramienta o un alargador."
         },
         {
           "lista": [
-            "Armado y reparación de conexiones en artefactos eléctricos y herramientas.",
-            "Montaje en extensiones y alargadores para distribución de energía.",
-            "Instalaciones que requieren contactos firmes y seguros para evitar falso contacto."
+            "Encaja en tomas chilenas de 10 A.",
+            "Sin tierra: no lo uses en artefactos que traen enchufe con tierra.",
+            "No sirve para tomas Schuko (redondas) ni industriales."
           ]
-        },
-        {
-          "p": "Para revisar cómo conectar tus cables según la normativa chilena, consulta nuestra guía de [código de colores de cables eléctricos](/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/)."
         }
       ]
     },
     {
-      "id": "seguridad-macho-volante-convertible",
-      "titulo": "Recomendaciones para una instalación segura",
-      "indice": "Instalación y seguridad",
+      "id": "como-armarlo",
+      "titulo": "Cómo conectarlo al cable",
+      "indice": "Cómo armarlo",
       "bloques": [
         {
           "pasos": [
-            "Corta siempre el suministro eléctrico general antes de manipular cables o contactos.",
-            "Pela los conductores a la medida indicada sin cortar los hilos interiores de cobre.",
-            "Fija cada conductor firmemente en su borne correspondiente verificando la polaridad.",
-            "Asegura el prensacable o carcasa para evitar que tirones accidentales suelten las conexiones."
+            "Corta la luz desde el tablero o desenchufa el cable antes de armarlo.",
+            "Pela unos 8 mm de cada conductor sin cortar los hilos de cobre. Para 10 A, usa cable flexible de al menos 1 mm².",
+            "Conecta el café o negro (fase) y el azul (neutro) en los bornes laterales.",
+            "Aprieta bien cada tornillo y cierra la abrazadera sobre la cubierta del cable, no sobre los conductores.",
+            "Cierra la carcasa y tira suavemente del cable: no debe moverse."
           ]
         },
         {
-          "advertencia": "Si la instalación requiere trabajos en tableros principales o modificaciones complejas, recurre a un instalador eléctrico autorizado por la SEC."
+          "advertencia": "Si el cable está dañado o el artefacto tiene una falla, no lo conectes. Las instalaciones fijas (tomas de pared, circuitos) las hace un electricista autorizado SEC."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿El producto cuenta con garantía?",
-      "respuesta": "Sí, en Ferretería Ukra todos nuestros productos cuentan con 6 meses de garantía legal por defectos de fabricación."
+      "pregunta": "¿Qué cable uso?",
+      "respuesta": "Cable flexible de al menos 1 mm² para 10 A, de dos conductores."
     },
     {
-      "pregunta": "¿Sirve para uso doméstico y de taller?",
-      "respuesta": "Sí, este enchufe macho volante Halux es apto para circuitos eléctricos correspondientes a su capacidad nominal indicada en la ficha técnica."
+      "pregunta": "¿Puedo usarlo en un artefacto con tierra?",
+      "respuesta": "No. Si el artefacto trae enchufe de tres patas, usa un enchufe 2P+T para no perder la protección de la tierra."
     },
     {
-      "pregunta": "¿Hacen envíos a todo Chile?",
-      "respuesta": "Sí, despachamos a todas las regiones de Chile mediante empresas de logística certificadas y opciones de entrega oportuna."
+      "pregunta": "¿Sirve para un artefacto de más de 10 A?",
+      "respuesta": "No. Suma la potencia: a 220 V, 10 A son unos 2200 W. Si tu artefacto consume más, usa un enchufe de mayor corriente."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
     }
   ],
   "lateral": {
-    "etiqueta": "Material Eléctrico",
-    "titulo": "Macho volante convertible 2P blanco Halux",
-    "texto": "Macho volante convertible 2P blanco Halux en color blanco para conexiones eléctricas confiables y duraderas."
+    "etiqueta": "Material eléctrico",
+    "titulo": "Enchufe macho volante convertible 2P 10 A blanco Halux",
+    "texto": "Enchufe macho volante 2P de 10 A tipo chileno para cable. Sin tierra, para doble aislación."
+  },
+  "tarjeta": {
+    "titulo": "Enchufe macho volante convertible 2P 10 A blanco Halux",
+    "extracto": "Enchufe macho volante 2P de 10 A tipo chileno para cable. Sin tierra, para doble aislación.",
+    "alt": "Enchufe macho volante convertible 2P 10 A blanco Halux",
+    "etiqueta": "Material eléctrico"
   },
   "relacionados": [
-    "adaptador-schuko-a-enchufe-chileno-10a",
-    "adaptador-schuko-bipaso-16a-bticino",
-    "enchufe-macho-volante-articulado-10a-bticino"
+    "enchufe-macho-volante-10a-blanco-convertible-salva",
+    "enchufe-macho-volante-16a-2p-t-blanco-halux",
+    "enchufe-macho-volante-16a-2p-t-negro-halux"
   ],
   "guias": [
     {
       "url": "/blog/como-instalar-un-enchufe-en-chile-guia-segura/",
-      "texto": "Cómo instalar un enchufe en Chile paso a paso"
-    },
-    {
-      "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
-      "texto": "Cómo identificar fase y neutro en un enchufe"
+      "texto": "Cómo instalar un enchufe en Chile"
     },
     {
       "url": "/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/",
-      "texto": "Código de colores de cables eléctricos"
+      "texto": "Código de colores de cables"
+    },
+    {
+      "url": "/blog/puesta-a-tierra-domiciliaria-como-hacerla-y-medirla-chile/",
+      "texto": "Puesta a tierra domiciliaria"
     }
-  ],
-  "tarjeta": {
-    "titulo": "Macho volante convertible 2P blanco Halux",
-    "extracto": "Macho volante convertible 2P blanco Halux en color blanco para instalaciones y armado eléctrico seguro.",
-    "alt": "Macho volante convertible 2P blanco Halux blanco",
-    "etiqueta": "Material Eléctrico"
-  }
+  ]
 }
