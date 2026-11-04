@@ -52,6 +52,7 @@ actualizar fichas de productos físicos con el generador**. Nada más.
   10 A; 1,5 mm² → 16 A). Los cordones de PVC (H05VV-F, paralelos) no son para
   intemperie ni para instalación fija; no los recomiendes para soldadoras.
   La sección de una acometida la define la distribuidora.
+- **Flexibles**: revisa en las fotos qué extremos trae (tuerca hembra o terminal macho) y que calce con HI-HI o HI-HE del nombre; si una foto muestra otro extremo, no la uses y avísale al dueño. No repitas dos fotos casi iguales. En flexibles de gas, las franjas amarillas solo lo identifican: no digas que son «normadas» ni que «certifican»; pide revisar el **sello de certificación SEC** y no escribas fechas de vencimiento ni normas que no veas. No prometas «antitorsión», «no se oxida» o «no acumula sarro» si el fabricante no lo dice.
 - **«Según ficha técnica»** solo si el dato aparece de verdad en la ficha o en
   una foto con datos del fabricante; si no, no lo pongas (velocidades, ciclos,
   módulos de cremallera, sistemas antiaplastamiento, backset, «acero

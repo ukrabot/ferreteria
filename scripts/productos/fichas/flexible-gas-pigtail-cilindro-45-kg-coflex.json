@@ -12,19 +12,19 @@
   "color": "Amarillo y negro",
   "disponible": true,
   "seo_titulo": "Flexible Gas Pigtail Cilindro 45 kg Coflex",
-  "meta_descripcion": "Compra el flexible pigtail para gas cilindros de 45 kg Coflex a {precio}. Malla de acero con franja amarilla, volante manual y largo de 60 cm. Envíos a todo Chile.",
+  "meta_descripcion": "Compra el flexible pigtail para cilindros de gas de 45 kg Coflex a {precio}. Malla de acero con franjas amarillas, volante manual y 60 cm de largo. Envíos a todo Chile.",
   "og_descripcion": "Flexible trenzado pigtail de alta resistencia para conexión de cilindros de gas licuado de 45 kilos a reguladores y colectores. Marca Coflex.",
-  "descripcion": "Flexible de conexión tipo pigtail para gas licuado de 60 cm de largo, diseñado exclusivamente para conectar cilindros de 45 kg al colector múltiple o regulador de gas. Incorpora volante de apriete manual para la válvula del cilindro, conector macho de 7/16 y malla trenzada con distintivo amarillo.",
-  "lede": "¿Necesitas conectar o reponer el chicote de tus cilindros de gas de 45 kg? Este **flexible pigtail Coflex de 60 cm** está diseñado específicamente para **cilindros de gas licuado de 45 kilos**, incorporando **volante de ajuste manual** y malla metálica con distintivo amarillo para gas.",
+  "descripcion": "Flexible tipo pigtail para gas licuado, de 60 cm, para conectar cilindros de 45 kg al colector o regulador de la batería. Tiene volante para apretar a mano en la válvula del cilindro, terminal macho de 7/16 hacia el colector y malla trenzada con franjas amarillas.",
+  "lede": "¿Hay que reponer el pigtail (chicote) de la batería de cilindros de 45 kg? Este **flexible pigtail Coflex de 60 cm** tiene **volante para apretar a mano** en el cilindro y malla con franjas amarillas de gas. La batería la instala un instalador de gas autorizado por la SEC.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/415545_01/w=1200,h=1200,fit=cover",
-      "alt": "Flexible pigtail para cilindros de gas de 45 kg Coflex curvado con volante negro",
+      "alt": "Flexible pigtail Coflex de 60 cm con malla de franjas amarillas, volante negro y terminales de bronce",
       "miniatura": "Ver flexible completo"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/415545_21/w=1200,h=1200,fit=cover",
-      "alt": "Detalle del volante ergonómico negro de apriete manual y terminal de conexión Coflex",
+      "alt": "Detalle del volante negro y del terminal de bronce que va al cilindro",
       "miniatura": "Ver volante y terminal"
     }
   ],
@@ -39,7 +39,7 @@
     ],
     [
       "Uso",
-      "Exclusivo para cilindros de gas de 45 kilos (según ficha técnica)"
+      "Cilindros de gas licuado de 45 kg"
     ],
     [
       "Largo",
@@ -60,8 +60,8 @@
   ],
   "confianza": [
     {
-      "titulo": "⛽ Especial 45 kg",
-      "detalle": "Conexión normada para cilindros de gas licuado"
+      "titulo": "⛽ Para cilindros de 45 kg",
+      "detalle": "Une el cilindro al colector"
     },
     {
       "titulo": "✋ Volante manual",
@@ -90,9 +90,9 @@
         },
         {
           "lista": [
-            "Qué incluye: 1 flexible pigtail de 60 cm con terminal de apriete manual para cilindro de 45 kg y tuerca macho 7/16 pulgada",
-            "Qué se compra por separado: regulador de gas, válvula inversora o múltiple colector de cilindros",
-            "Malla trenzada de acero inoxidable con hebras amarillas para alta resistencia y durabilidad a la intemperie"
+            "Qué incluye: 1 flexible pigtail de 60 cm con volante para el cilindro y terminal macho de 7/16 pulgada",
+            "Qué se compra por separado: el regulador, la válvula de cambio automático o el colector",
+            "Malla trenzada con franjas amarillas que lo identifican como flexible de gas"
           ]
         }
       ]
@@ -106,10 +106,10 @@
           "p": "Las instalaciones de gas licuado en cilindros de 45 kg operan a alta presión antes del regulador, por lo que toda instalación o modificación debe ser realizada por un **instalador de gas autorizado por la SEC**."
         },
         {
-          "advertencia": "No manipules las conexiones de alta presión del colector de gas por cuenta propia. Comprueba siempre que el orificio del cilindro y el sello del pigtail estén limpios y libres de tierra."
+          "advertencia": "No intervengas el colector ni el regulador por tu cuenta. Al cambiar un cilindro, cierra su válvula antes de soltar el volante, revisa que el asiento esté limpio y prueba con agua jabonosa (nunca con fuego)."
         },
         {
-          "p": "El usuario debe verificar periódicamente que el flexible no esté aplastado, doblado en ángulos agudos ni rozando muros ásperos, y revisar la fecha de vencimiento reglamentaria del chicote."
+          "p": "Revisa de vez en cuando que el flexible no esté aplastado, doblado en ángulo ni rozando el muro, y cámbialo si la malla está dañada, oxidada o reseca. Antes de comprar, confirma que tenga **sello de certificación SEC**."
         },
         {
           "p": "Conoce los tipos de reguladores y etapas en nuestra guía sobre [qué es un regulador para gas y para qué sirve](/blog/que-es-un-regulador-para-gas-y-para-que-sirve/)."
@@ -123,8 +123,8 @@
       "respuesta": "No, está diseñado exclusivamente para la válvula de salida de cilindros de 45 kilos, que utiliza un tipo de conexión y presión distinta a los balones de 11 o 15 kg."
     },
     {
-      "pregunta": "¿Se aprieta con llave inglesa o con la mano?",
-      "respuesta": "El extremo del cilindro cuenta con un volante plástico anatómico para apretar firmemente con la mano asegurando el contacto del sello; el extremo opuesto hacia el regulador se fija con llave."
+      "pregunta": "¿Se aprieta con llave o con la mano?",
+      "respuesta": "El extremo del cilindro tiene volante y se aprieta a mano. El otro extremo, hacia el colector, lo conecta el instalador con llave."
     },
     {
       "pregunta": "¿Quién debe instalar o revisar la batería de 45 kg?",
@@ -135,7 +135,7 @@
   "lateral": {
     "etiqueta": "Pigtail 45 kg",
     "titulo": "Flexible Pigtail Coflex",
-    "texto": "Chicote de alta presión para cilindros de 45 kg con volante manual y malla de acero. Garantía de 6 meses."
+    "texto": "Pigtail de 60 cm para cilindros de 45 kg con volante manual y malla de acero. Garantía de 6 meses."
   },
   "relacionados": [
     "regulador-gas-alta-presion-45-kg-providus",

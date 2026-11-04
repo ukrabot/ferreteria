@@ -19,18 +19,8 @@
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/1201301_01/w=1200,h=1200,fit=cover",
-      "alt": "Flexible para agua trenzado Humboldt 1/2 pulgada HI-HI de 30 cm curvado",
+      "alt": "Flexible para agua trenzado Humboldt de 30 cm con dos tuercas hembra de 1/2 pulgada",
       "miniatura": "Ver flexible completo"
-    },
-    {
-      "url": "https://media.falabella.com/sodimacCL/1201301_12/w=1200,h=1200,fit=cover",
-      "alt": "Detalle de la tuerca hembra hexagonal de 1/2 pulgada con empaquetadura interior",
-      "miniatura": "Ver tuerca y empaquetadura"
-    },
-    {
-      "url": "https://media.falabella.com/sodimacCL/1201301_21/w=1200,h=1200,fit=cover",
-      "alt": "Vista en ángulo del casquillo de compresión metálico y malla de acero",
-      "miniatura": "Ver casquillo y malla"
     }
   ],
   "stock": {
@@ -97,7 +87,7 @@
           "lista": [
             "Qué incluye: 1 flexible trenzado de 30 cm con 2 tuercas hembra de 1/2 pulgada y sus empaquetaduras de goma planas",
             "Qué se compra por separado: llave angular de paso o adaptadores en caso de conexiones no estándar",
-            "Malla trenzada de acero que resiste los golpes de presión normales de la red domiciliaria"
+            "Malla trenzada de acero que protege la manguera interior"
           ]
         }
       ]
@@ -125,15 +115,15 @@
       "respuesta": "Sí, siempre que la válvula de entrada del estanque tenga hilo macho exterior de 1/2 pulgada (o cuente con terminal correspondiente)."
     },
     {
-      "pregunta": "¿El largo de 30 cm incluye las tuercas?",
-      "respuesta": "Sí, la medida nominal de 30 cm se mide entre los extremos de las conexiones para estimar la distancia entre artefacto y llave."
+      "pregunta": "¿Cómo sé si me sirve el de 30 cm?",
+      "respuesta": "Mide la distancia entre la salida de la llave de paso y la entrada del artefacto. El flexible debe llegar con una curva suave, sin quedar tirante; si la distancia se acerca a 30 cm, elige uno más largo."
     },
     {
-      "pregunta": "¿Soporta agua caliente de calefont o termo?",
-      "respuesta": "Sí, su tubo interior y malla están diseñados para operar con agua fría y caliente sanitaria."
+      "pregunta": "¿Sirve para agua caliente?",
+      "respuesta": "Los flexibles trenzados de agua se usan en agua fría y caliente domiciliaria. Para la salida de un calefont o termo, revisa que el flexible quede lejos de partes calientes y sin curvas forzadas."
     }
   ],
-  "aviso_final": "Los precios incluyen IVA. Se recomienda no doblar el flexible en radios menores a 3 cm.",
+  "aviso_final": "Los precios incluyen IVA. No dobles el flexible junto a las tuercas ni en curvas cerradas.",
   "lateral": {
     "etiqueta": "Medida Corta",
     "titulo": "Flexible Humboldt 30 cm",

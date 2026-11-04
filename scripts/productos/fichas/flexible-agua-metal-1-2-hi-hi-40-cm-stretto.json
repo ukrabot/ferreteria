@@ -15,22 +15,22 @@
   "meta_descripcion": "Compra el flexible metálico para agua 1/2 HI-HI de 40 cm Stretto a {precio}. Malla trenzada de acero, tuercas hembra de 1/2 pulgada y sellos. Envíos a todo Chile.",
   "og_descripcion": "Flexible para agua 1/2 pulgada HI-HI de 40 cm Stretto. Malla metálica reforzada con tuercas hexagonales y empaquetaduras de sellado.",
   "descripcion": "Flexible metálico trenzado para agua potable marca Stretto de 40 cm de largo con conexiones de 1/2 pulgada hembra a hembra (HI-HI). Diseñado para conectar lavamanos, lavaplatos o estanques de inodoro con total seguridad contra filtraciones.",
-  "lede": "¿Buscas una conexión de agua confiable con la calidad comprobada de Stretto? Este **flexible metálico de 40 cm Stretto** cuenta con **tuercas hembra de 1/2 pulgada (HI-HI)**, malla trenzada de acero de alta resistencia y empaquetaduras de goma planas incorporadas.",
+  "lede": "¿Vas a cambiar el flexible del lavamanos, lavaplatos o estanque? Este **flexible Stretto de 40 cm** tiene **tuercas hembra de 1/2 pulgada (HI-HI)**, malla trenzada de acero y empaquetaduras de goma incluidas.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/1961_01/w=1200,h=1200,fit=cover",
-      "alt": "Flexible metálico de agua Stretto 1/2 pulgada HI-HI de 40 cm curvado en U",
+      "alt": "Flexible de agua Stretto de 40 cm con malla trenzada de franjas verdes y dos tuercas hembra de 1/2 pulgada",
       "miniatura": "Ver flexible completo"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/1961_21/w=1200,h=1200,fit=cover",
-      "alt": "Detalle de la tuerca hexagonal hembra de 1/2 pulgada con empaquetadura interior y núcleo de bronce",
-      "miniatura": "Ver tuerca y empaquetadura"
+      "alt": "Detalle de la tuerca hexagonal hembra de 1/2 pulgada con interior de bronce",
+      "miniatura": "Ver la tuerca"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/1961_22/w=1200,h=1200,fit=cover",
-      "alt": "Detalle del casquillo de compresión metálico y malla con traza verde distintiva Stretto",
-      "miniatura": "Ver casquillo y malla"
+      "alt": "Detalle de la malla trenzada con franjas verdes del flexible Stretto",
+      "miniatura": "Ver la malla"
     }
   ],
   "stock": {
@@ -44,7 +44,7 @@
     ],
     [
       "Tipo de fluido",
-      "Agua (según ficha técnica)"
+      "Agua"
     ],
     [
       "Largo",
@@ -60,7 +60,7 @@
     ],
     [
       "Material",
-      "Metal (según ficha técnica)"
+      "Malla trenzada de acero"
     ],
     [
       "Garantía",
@@ -70,7 +70,7 @@
   "confianza": [
     {
       "titulo": "🏷️ Marca Stretto",
-      "detalle": "Respaldo y durabilidad en grifería y sanitarios"
+      "detalle": "Malla trenzada con franja verde"
     },
     {
       "titulo": "📏 Medida 40 cm",
@@ -95,7 +95,7 @@
           "p": "El largo de **40 cm** es la distancia más habitual en baños y cocinas residenciales, alcanzando con comodidad la distancia entre las llaves de escuadra del muro y las entradas de grifos o estanques de inodoro."
         },
         {
-          "p": "Su estructura con **malla metálica exterior y tubo interior flexible** absorbe las variaciones de presión de la red sin dilatarse ni perder estanqueidad."
+          "p": "La **malla metálica exterior** protege la manguera interior de roces y golpes bajo el mueble."
         },
         {
           "lista": [
@@ -129,8 +129,8 @@
       "respuesta": "Solo una llave fija o ajustable del tamaño de la tuerca hexagonal. Se enrosca a mano y se da un último apriete moderado con la llave."
     },
     {
-      "pregunta": "¿Sirve para el agua caliente del calefont?",
-      "respuesta": "Sí, su núcleo interno y malla metálica están diseñados para operar con agua caliente sanitaria a presiones domiciliarias normales."
+      "pregunta": "¿Sirve para agua caliente?",
+      "respuesta": "Sí, para agua fría y caliente sanitaria. Déjalo sin curvas forzadas y lejos de partes calientes."
     },
     {
       "pregunta": "¿Viene listo con sus empaquetaduras?",
@@ -141,7 +141,7 @@
   "lateral": {
     "etiqueta": "Medida Estándar",
     "titulo": "Flexible Stretto 40 cm",
-    "texto": "Terminales hembra 1/2 HI-HI con malla de acero y sellos de goma incluidos. Calidad garantizada por 6 meses."
+    "texto": "Terminales hembra 1/2 HI-HI con malla de acero y sellos de goma incluidos. Garantía de 6 meses."
   },
   "relacionados": [
     "flexible-agua-1-2-hi-hi-50-cm-humboldt",

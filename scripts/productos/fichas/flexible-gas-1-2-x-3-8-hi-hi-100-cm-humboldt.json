@@ -15,22 +15,22 @@
   "meta_descripcion": "Compra el flexible para gas 1/2 x 3/8 HI-HI de 100 cm Humboldt a {precio}. Tuercas de bronce, distintivo amarillo de gas y malla de acero. Envíos a todo Chile.",
   "og_descripcion": "Flexible para gas 1/2 x 3/8 pulgada HI-HI de 100 cm Humboldt. Conexión mixta con tuercas de bronce para artefactos a gas.",
   "descripcion": "Flexible trenzado de seguridad para gas con reducción integrada: tuerca de 1/2 pulgada hembra en un extremo y tuerca de 3/8 pulgada hembra en el otro (HI-HI), con 100 cm de largo. Especialmente concebido para conectar artefactos de gas con entrada de 3/8 a llaves de paso de 1/2 sin adaptadores adicionales.",
-  "lede": "¿Tu cocina o calefont trae entrada de 3/8 y la llave del muro es de 1/2? Este **flexible para gas Humboldt de 100 cm** soluciona el empalme directo gracias a sus **tuercas de bronce de 1/2 y 3/8 pulgada (HI-HI)** y su malla metálica con distintivo amarillo para gas.",
+  "lede": "¿La entrada de gas de tu cocina es de 3/8 y la llave del muro es de 1/2? Este **flexible para gas Humboldt de 100 cm** trae **una tuerca de 1/2 y otra de 3/8 pulgada (HI-HI)**, de bronce, y malla con franjas amarillas de gas. Lo conecta un instalador de gas autorizado por la SEC.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/296774X_01/w=1200,h=1200,fit=cover",
-      "alt": "Flexible para gas Humboldt 1/2 x 3/8 HI-HI de 100 cm enrollado con tuercas de bronce",
+      "alt": "Flexible para gas Humboldt de 100 cm con malla de franjas amarillas y tuercas de bronce de 1/2 y 3/8 pulgada",
       "miniatura": "Ver flexible completo"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/296774X_21/w=1200,h=1200,fit=cover",
-      "alt": "Detalle de la tuerca hembra de bronce y casquillo de compresión para gas",
+      "alt": "Detalle de una tuerca hembra de bronce del flexible para gas Humboldt",
       "miniatura": "Ver tuerca de bronce"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/296774X_22/w=1200,h=1200,fit=cover",
-      "alt": "Vista en ángulo del terminal y empaquetadura interior para gas Humboldt",
-      "miniatura": "Ver terminal y sello"
+      "alt": "Detalle de la otra tuerca hembra de bronce del flexible",
+      "miniatura": "Ver la otra tuerca"
     }
   ],
   "stock": {
@@ -44,7 +44,7 @@
     ],
     [
       "Uso",
-      "Instalaciones de gas (según ficha técnica)"
+      "Gas licuado o gas natural"
     ],
     [
       "Largo",
@@ -60,7 +60,7 @@
     ],
     [
       "Material tuercas",
-      "Bronce (según ficha técnica)"
+      "Bronce"
     ],
     [
       "Garantía",
@@ -73,12 +73,12 @@
       "detalle": "Empalme directo sin bujes reductores"
     },
     {
-      "titulo": "🥉 Tuercas de bronce",
-      "detalle": "Resistencia mecánica y química al gas"
+      "titulo": "🟤 Tuercas de bronce",
+      "detalle": "1/2 y 3/8 pulgada"
     },
     {
-      "titulo": "🟡 Distintivo de gas",
-      "detalle": "Trazas amarillas de seguridad visible"
+      "titulo": "🟡 Franjas amarillas",
+      "detalle": "Identifican el flexible de gas"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -92,10 +92,10 @@
       "indice": "Conexión mixta",
       "bloques": [
         {
-          "p": "En Chile, muchas cocinas, encimeras y calefones incorporan una entrada de gas con hilo macho de 3/8 de pulgada, mientras que la llave de corte del muro o la salida del regulador es de 1/2 pulgada."
+          "p": "Algunas cocinas y encimeras traen la entrada de gas en 3/8 de pulgada, mientras la llave de paso del muro es de 1/2. Revisa la medida de tu artefacto en su manual antes de comprar."
         },
         {
-          "p": "Este flexible Humboldt resuelve la diferencia de medida en una sola pieza con sus **tuercas de bronce de 1/2 y 3/8 pulgada**, evitando el uso de bujes o coplas reductoras intermedias que puedan transformarse en puntos de fuga."
+          "p": "Este flexible Humboldt resuelve esa diferencia en una sola pieza, con **tuercas de 1/2 y 3/8 pulgada**, sin agregar reducciones que suman uniones."
         },
         {
           "lista": [
@@ -118,7 +118,7 @@
           "advertencia": "Nunca realices intervenciones ni empalmes de gas por cuenta propia. Las fugas de gas licuado o natural conllevan graves riesgos de asfixia e inflamación."
         },
         {
-          "p": "El cliente debe verificar que el instalador realice la prueba de hermeticidad correspondiente y compruebe que el flexible quede holgado sin contacto con zonas calientes."
+          "p": "Antes de instalarlo, revisa que el flexible tenga **sello de certificación SEC**. Lo conecta un **instalador de gas autorizado por la SEC**: tú solo revisa que pruebe la hermeticidad con agua jabonosa o detector (nunca con fuego), que el flexible quede con una curva suave, sin tocar partes calientes del artefacto ni pasar por muros, y que la llave de paso quede accesible."
         },
         {
           "p": "Para más detalles sobre los componentes del sistema, consulta nuestra guía sobre [qué es un regulador para gas y para qué sirve](/blog/que-es-un-regulador-para-gas-y-para-que-sirve/)."
@@ -128,23 +128,23 @@
   ],
   "faq": [
     {
-      "pregunta": "¿Qué artefactos usan conexión de 3/8 pulgada?",
-      "respuesta": "Es muy común en cocinas de pie, anafes y encimeras domésticas importadas o nacionales que traen codo de entrada de gas en 3/8 pulgada."
+      "pregunta": "¿Cómo sé si mi cocina es de 3/8?",
+      "respuesta": "Revisa el manual o la placa del artefacto, o pregúntale al instalador. Si la entrada y la llave son de 1/2, usa un flexible 1/2 HI-HI."
     },
     {
       "pregunta": "¿Requiere un instalador para colocarlo?",
       "respuesta": "Sí, toda conexión a artefactos de gas debe ser realizada por un técnico instalador de gas certificado por la SEC."
     },
     {
-      "pregunta": "¿Viene con las empaquetaduras de gas?",
-      "respuesta": "Sí, incluye los sellos elastoméricos aptos para gas alojados en el interior de cada una de las tuercas de bronce."
+      "pregunta": "¿Viene con las empaquetaduras?",
+      "respuesta": "Las tuercas traen su sello interior. Igual, el instalador debe revisar que estén en su lugar y probar la hermeticidad antes de usar el artefacto."
     }
   ],
   "aviso_final": "Los precios incluyen IVA. No someter el flexible a torsión ni curvas cerradas menores a su radio natural.",
   "lateral": {
     "etiqueta": "Reducción 1/2 a 3/8",
     "titulo": "Flexible Gas Humboldt",
-    "texto": "Tuercas de bronce 1/2 x 3/8 HI-HI con malla de acero y distintivo amarillo. Seguridad con 6 meses de garantía."
+    "texto": "Tuercas de bronce 1/2 x 3/8 HI-HI con malla de acero y franjas amarillas. Garantía de 6 meses."
   },
   "relacionados": [
     "flexible-gas-1-2-hi-hi-100-cm-comisa",
@@ -158,7 +158,7 @@
   ],
   "tarjeta": {
     "titulo": "Flexible para Gas 1/2 x 3/8 HI-HI 100 cm Humboldt",
-    "extracto": "Flexible para gas de 1 metro con reducción 1/2 a 3/8 HI-HI, tuercas de bronce y malla con distintivo amarillo.",
+    "extracto": "Flexible para gas de 1 metro con tuercas de bronce de 1/2 y 3/8 pulgada y malla con franjas amarillas.",
     "alt": "Flexible para gas 1/2 x 3/8 HI-HI 100 cm Humboldt",
     "etiqueta": "Gasfitería"
   }

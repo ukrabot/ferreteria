@@ -12,30 +12,30 @@
   "color": "Negro mate",
   "disponible": true,
   "seo_titulo": "Flexible Ducha PVC Negro 1,5 m Sensi Dacqua",
-  "meta_descripcion": "Compra el flexible de ducha en PVC negro mate de 1,5 m Sensi Dacqua a {precio}. Superficie lisa antitorsión, tuerca cónica y tuerca de 1/2 pulgada. Envíos a todo Chile.",
-  "og_descripcion": "Flexible para ducha teléfono en PVC negro mate de 1,5 metros Sensi Dacqua. Superficie lisa antitorsión fácil de limpiar.",
-  "descripcion": "Flexible para ducha teléfono de 1,5 metros fabricado en PVC de alta resistencia con acabado negro mate liso. Su superficie continua previene rayaduras en la tina, evita acumulaciones de sarro y facilita la limpieza diaria, incorporando tuerca cónica universal y tuerca de conexión de 1/2 pulgada.",
-  "lede": "¿Renovaste la grifería de tu baño a negro mate y buscas una manguera que no raye la tina ni acumule sarro? Este **flexible de ducha Sensi Dacqua en PVC negro mate de 1,5 m** ofrece **superficie lisa antitorsión**, tuerca cónica universal y acabado homogéneo.",
+  "meta_descripcion": "Compra el flexible de ducha en PVC negro mate de 1,5 m Sensi Dacqua a {precio}. Superficie lisa fácil de limpiar, tuerca cónica y tuerca de 1/2 pulgada. Envíos a todo Chile.",
+  "og_descripcion": "Flexible para ducha teléfono en PVC negro mate de 1,5 metros Sensi Dacqua. Superficie lisa fácil de limpiar.",
+  "descripcion": "Flexible para ducha teléfono de 1,5 metros en PVC negro mate liso, marca Sensi Dacqua. Su superficie lisa se limpia fácil y no tiene ranuras donde se junte el jabón. Tuerca cónica para el mango y tuerca de 1/2 pulgada para la grifería, ambas negras.",
+  "lede": "¿Renovaste la grifería del baño a negro mate? Este **flexible de ducha Sensi Dacqua en PVC negro mate de 1,5 m** tiene **superficie lisa fácil de limpiar** y tuercas negras a juego.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/9081364_01/w=1200,h=1200,fit=cover",
-      "alt": "Flexible de ducha en PVC negro mate Sensi Dacqua de 1,5 metros enrollado",
+      "alt": "Flexible de ducha negro mate Sensi Dacqua de 1,5 m enrollado",
       "miniatura": "Ver flexible completo"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/9081364_21/w=1200,h=1200,fit=cover",
-      "alt": "Detalle de la tuerca cónica en acabado negro mate para mango de ducha",
-      "miniatura": "Ver tuerca cónica"
+      "alt": "Detalle de la tuerca hexagonal negra con su empaquetadura blanca",
+      "miniatura": "Ver tuerca y empaquetadura"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/9081364_22/w=1200,h=1200,fit=cover",
-      "alt": "Detalle de la tuerca hexagonal negra de conexión a la grifería",
-      "miniatura": "Ver tuerca hexagonal"
+      "alt": "Tuerca hexagonal negra del flexible, vista de lado",
+      "miniatura": "Ver tuerca de lado"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/9081364_23/w=1200,h=1200,fit=cover",
-      "alt": "Vista en ángulo de la textura lisa antitorsión de PVC negro mate",
-      "miniatura": "Ver textura lisa"
+      "alt": "Detalle del extremo cónico negro que va al mango de ducha",
+      "miniatura": "Ver extremo cónico"
     }
   ],
   "stock": {
@@ -83,11 +83,11 @@
     },
     {
       "titulo": "🧼 Fácil de limpiar",
-      "detalle": "Superficie lisa que no acumula sarro"
+      "detalle": "Superficie lisa, sin ranuras"
     },
     {
-      "titulo": "🔄 Antitorsión",
-      "detalle": "Giro libre sin estrangular el caudal"
+      "titulo": "🔩 Rosca 1/2",
+      "detalle": "Conexión estándar a grifería y mango"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -101,10 +101,10 @@
       "indice": "Ventajas del PVC",
       "bloques": [
         {
-          "p": "A diferencia de los flexibles metálicos con ranuras espiraladas donde el agua y el jabón se estancan formando sarro difícil de remover, el **PVC liso** se limpia con una sola pasada de paño húmedo."
+          "p": "Los flexibles metálicos tienen ranuras en el espiral donde se juntan el jabón y el sarro. El **PVC liso** se limpia con una pasada de paño húmedo."
         },
         {
-          "p": "Además, su material plástico reforzado es suave al tacto y no raya las superficies acrílicas ni esmaltadas de la tina o el receptáculo al caer o frotarse."
+          "p": "Al ser plástico, es más suave si cae sobre la tina o el receptáculo."
         },
         {
           "lista": [
@@ -134,23 +134,23 @@
   ],
   "faq": [
     {
-      "pregunta": "¿El color negro se pela con el agua caliente?",
-      "respuesta": "No, el PVC negro cuenta con pigmentación homogénea y resistencia térmica para el uso diario con agua caliente."
+      "pregunta": "¿Aguanta el agua caliente de la ducha?",
+      "respuesta": "Sí, es para el uso normal de ducha con agua caliente. Evita dejarlo apretado o doblado contra la grifería caliente."
     },
     {
-      "pregunta": "¿Es compatible con cualquier soporte de ducha?",
-      "respuesta": "Sí, la tuerca cónica tiene el diámetro y ángulo estándar universal de 1/2 pulgada para encajar en soportes fijos o barras regulables."
+      "pregunta": "¿Es compatible con cualquier mango de ducha?",
+      "respuesta": "Sirve para los mangos y griferías con conexión estándar de 1/2 pulgada, que son la mayoría."
     },
     {
       "pregunta": "¿Qué ventaja tiene sobre el flexible metálico?",
-      "respuesta": "No tiene ranuras donde se acumule sarro o moho, es muy higiénico de limpiar y no raya la tina al moverse."
+      "respuesta": "No tiene ranuras donde se acumulen jabón y sarro, así que es más fácil de limpiar, y es más suave si cae sobre la tina."
     }
   ],
   "aviso_final": "Los precios incluyen IVA. Se recomienda limpiar con un paño de microfibra y jabón suave.",
   "lateral": {
     "etiqueta": "Diseño Negro",
     "titulo": "Flexible PVC Negro",
-    "texto": "Manguera de ducha lisa en PVC negro mate de 1,5 m antitorsión y fácil de limpiar. Garantía de 6 meses."
+    "texto": "Manguera de ducha lisa en PVC negro mate de 1,5 m, fácil de limpiar. Garantía de 6 meses."
   },
   "relacionados": [
     "flexible-ducha-metal-1-5-m-sensi-dacqua",
@@ -164,7 +164,7 @@
   ],
   "tarjeta": {
     "titulo": "Flexible de Ducha PVC Negro Mate 1,5 m Sensi Dacqua",
-    "extracto": "Manguera de ducha lisa en PVC negro mate de 1,5 metros. Antitorsión, no raya la tina y fácil de limpiar.",
+    "extracto": "Manguera de ducha lisa en PVC negro mate de 1,5 metros, fácil de limpiar, con tuercas negras.",
     "alt": "Flexible de ducha PVC negro mate 1,5 m Sensi Dacqua",
     "etiqueta": "Gasfitería"
   }

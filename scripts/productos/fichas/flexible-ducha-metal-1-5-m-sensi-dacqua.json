@@ -12,30 +12,25 @@
   "color": "Cromado",
   "disponible": true,
   "seo_titulo": "Flexible Ducha Metálico 1,5 m Sensi Dacqua",
-  "meta_descripcion": "Compra el flexible de ducha metálico de 1,5 m Sensi Dacqua a {precio}. Espiral metálico cromado, tuerca cónica universal y tuerca de 1/2 pulgada. Envíos a todo Chile.",
+  "meta_descripcion": "Compra el flexible de ducha metálico de 1,5 m Sensi Dacqua a {precio}. Espiral metálico cromado, tuerca cónica para el mango y conexión de 1/2 pulgada. Envíos a todo Chile.",
   "og_descripcion": "Flexible para ducha teléfono metálico de 1,5 metros Sensi Dacqua. Espiral cromado resistente con conexiones estándar de 1/2 pulgada.",
-  "descripcion": "Flexible metálico para ducha de mano o tina de 1,5 metros de longitud marca Sensi Dacqua. Cuenta con espiral metálico cromado de alta flexibilidad, tuerca cónica con textura estriada para acoplar al mango teléfono y tuerca de 1/2 pulgada para la grifería de muro.",
+  "descripcion": "Flexible metálico para ducha de mano o tina de 1,5 metros, marca Sensi Dacqua. Espiral metálico cromado, tuerca cónica moleteada para el mango y conexión de 1/2 pulgada para la grifería.",
   "lede": "¿Necesitas reemplazar la manguera de tu ducha teléfono por una opción metálica, flexible y resistente? El **flexible de ducha Sensi Dacqua de 1,5 metros** cuenta con **espiral metálico cromado**, tuerca cónica universal y empaquetaduras de sellado.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/322175X_01/w=1200,h=1200,fit=cover",
-      "alt": "Flexible metálico de ducha Sensi Dacqua de 1,5 metros enrollado con tuerca cónica",
+      "alt": "Flexible de ducha metálico Sensi Dacqua de 1,5 m enrollado",
       "miniatura": "Ver flexible completo"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/322175X_21/w=1200,h=1200,fit=cover",
-      "alt": "Detalle de la tuerca cónica estriada para mango de ducha Sensi Dacqua",
-      "miniatura": "Ver tuerca cónica"
-    },
-    {
-      "url": "https://media.falabella.com/sodimacCL/322175X_22/w=1200,h=1200,fit=cover",
-      "alt": "Detalle de la tuerca hexagonal cromada para la salida de agua de la grifería",
-      "miniatura": "Ver tuerca de conexión"
+      "alt": "Detalle del extremo cromado con su empaquetadura blanca",
+      "miniatura": "Ver extremo y empaquetadura"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/322175X_23/w=1200,h=1200,fit=cover",
-      "alt": "Vista en ángulo de los eslabones del espiral metálico flexible cromado",
-      "miniatura": "Ver espiral metálico"
+      "alt": "Detalle de la tuerca cónica moleteada para el mango de ducha",
+      "miniatura": "Ver tuerca cónica"
     }
   ],
   "stock": {
@@ -82,8 +77,8 @@
       "detalle": "Flexibilidad continua sin torceduras"
     },
     {
-      "titulo": "🔩 Rosca 1/2 universal",
-      "detalle": "Calce directo en cualquier grifería"
+      "titulo": "🔩 Rosca 1/2",
+      "detalle": "Conexión estándar a grifería y mango"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -97,10 +92,10 @@
       "indice": "Rendimiento",
       "bloques": [
         {
-          "p": "El largo de **1,5 metros** es el estándar más extendido para duchas y tinas domiciliarias, entregando una caída cómoda del cable sin arrastrarse por el suelo del receptáculo."
+          "p": "El largo de **1,5 metros** es el más común para duchas y tinas: deja usar la ducha de mano con comodidad sin que la manguera arrastre por el piso."
         },
         {
-          "p": "Su cuerpo de **metal entrelazado con acabado cromado brillante** resiste el movimiento constante al tomar el mango de ducha, evitando rajaduras por fatiga de material."
+          "p": "Su **espiral metálico cromado** aguanta mejor el uso diario que una manguera plástica simple."
         },
         {
           "lista": [
@@ -130,16 +125,16 @@
   ],
   "faq": [
     {
-      "pregunta": "¿Sirve para cualquier tipo de grifería de ducha?",
-      "respuesta": "Sí, utiliza rosca universal de 1/2 pulgada estándar en la tuerca de conexión a la grifería de tina o ducha."
+      "pregunta": "¿Sirve para cualquier grifería de ducha?",
+      "respuesta": "Sirve para las griferías y mangos con conexión estándar de 1/2 pulgada, que son la mayoría. Revisa la rosca si tu grifería es importada o antigua."
     },
     {
       "pregunta": "¿Viene con el mango de ducha?",
       "respuesta": "No, es el repuesto del flexible de ducha; el mango teléfono se compra por separado si necesitas cambiarlo también."
     },
     {
-      "pregunta": "¿El espiral metálico se oxida?",
-      "respuesta": "No, su acabado cromado y construcción metálica están diseñados para resistir la humedad continua y el contacto con agua caliente."
+      "pregunta": "¿Cómo lo cuido?",
+      "respuesta": "Límpialo con un paño húmedo y jabón neutro, sin antisarro fuertes ni esponjas abrasivas, y sécalo de vez en cuando para que no se acumule sarro en el espiral."
     }
   ],
   "aviso_final": "Los precios incluyen IVA. Se recomienda secar periódicamente para evitar depósitos de sarro sobre el cromo.",

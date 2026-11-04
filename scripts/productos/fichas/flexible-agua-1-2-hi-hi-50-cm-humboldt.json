@@ -19,18 +19,13 @@
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/1201328_01/w=1200,h=1200,fit=cover",
-      "alt": "Flexible para agua trenzado Humboldt 1/2 pulgada HI-HI de 50 cm curvado",
+      "alt": "Flexible para agua trenzado Humboldt de 50 cm con tuercas hembra de 1/2 pulgada y etiqueta del fabricante",
       "miniatura": "Ver flexible completo"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/1201328_21/w=1200,h=1200,fit=cover",
-      "alt": "Detalle de la tuerca hexagonal hembra de 1/2 pulgada con empaquetadura de goma interior",
-      "miniatura": "Ver tuerca y empaquetadura"
-    },
-    {
-      "url": "https://media.falabella.com/sodimacCL/1201328_22/w=1200,h=1200,fit=cover",
-      "alt": "Detalle del casquillo de engaste y malla metálica trenzada del flexible Humboldt",
-      "miniatura": "Ver casquillo y malla"
+      "alt": "Detalle de la tuerca hexagonal hembra de 1/2 pulgada del flexible Humboldt",
+      "miniatura": "Ver la tuerca"
     }
   ],
   "stock": {
@@ -97,7 +92,7 @@
           "lista": [
             "Qué incluye: 1 flexible trenzado de 50 cm con 2 tuercas hembra de 1/2 pulgada y sus empaquetaduras de goma",
             "Qué se compra por separado: llave angular de paso al muro o niples de unión en caso de empalme directo",
-            "Malla trenzada exterior que protege la manguera interna contra dilataciones por presión de red"
+            "Malla trenzada de acero que protege la manguera interior"
           ]
         }
       ]
@@ -130,7 +125,7 @@
     },
     {
       "pregunta": "¿Sirve para agua caliente?",
-      "respuesta": "Sí, está fabricado para soportar las temperaturas y presiones normales de las redes de agua potable fría y caliente domiciliarias."
+      "respuesta": "Los flexibles trenzados de agua se usan en agua fría y caliente domiciliaria. Déjalo lejos de partes calientes y sin curvas forzadas."
     }
   ],
   "aviso_final": "Los precios incluyen IVA. Se aconseja revisar periódicamente que las tuercas de los flexibles no presenten signos de humedad.",

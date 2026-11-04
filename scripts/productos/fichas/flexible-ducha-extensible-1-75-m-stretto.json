@@ -19,17 +19,17 @@
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/82716_01/w=1200,h=1200,fit=cover",
-      "alt": "Flexible de ducha extensible metálico Stretto de 1,75 metros enrollado con tuerca cónica",
+      "alt": "Flexible de ducha metálico Stretto de 1,75 m enrollado, con sus dos tuercas",
       "miniatura": "Ver flexible completo"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/82716_21/w=1200,h=1200,fit=cover",
-      "alt": "Detalle de la tuerca cónica estriada con rosca de bronce para mango de ducha",
+      "alt": "Detalle de la tuerca cónica moleteada para el mango de ducha",
       "miniatura": "Ver tuerca cónica"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/82716_22/w=1200,h=1200,fit=cover",
-      "alt": "Detalle de la tuerca hexagonal cromada para conexión a la grifería de tina o ducha",
+      "alt": "Detalle de la tuerca hexagonal cromada que va a la grifería",
       "miniatura": "Ver tuerca hexagonal"
     }
   ],
@@ -92,7 +92,7 @@
       "indice": "Ventajas",
       "bloques": [
         {
-          "p": "A diferencia de las mangueras plásticas rígidas, este modelo Stretto posee un **espiral metálico entrelazado de doble engarce** que le permite extenderse ligeramente y doblarse con soltura sin estrangular el caudal de agua."
+          "p": "A diferencia de las mangueras plásticas, este modelo Stretto tiene un **espiral metálico cromado** que se dobla con soltura y estira un poco al usar la ducha de mano."
         },
         {
           "p": "Su largo de **1,75 metros** ofrece la holgura ideal para usar la ducha de mano de pie, bañar a niños o enjuagar los rincones de la tina sin tirones molestos."
@@ -125,16 +125,16 @@
   ],
   "faq": [
     {
-      "pregunta": "¿Sirve para cualquier mango de ducha teléfono?",
-      "respuesta": "Sí, la tuerca cónica tiene hilo estándar de 1/2 pulgada y la conicidad universal compatible con la gran mayoría de mangos y soportes en Chile."
+      "pregunta": "¿Sirve para cualquier mango de ducha?",
+      "respuesta": "Sirve para los mangos con conexión estándar de 1/2 pulgada, que son la mayoría. Si tu mango es de otra medida, revisa la rosca antes de comprar."
     },
     {
       "pregunta": "¿Requiere teflón en la unión con el mango?",
       "respuesta": "No, ambas tuercas sellan por compresión mediante las gomas redondas que vienen en su interior; poner teflón puede dificultar el asentamiento correcto del sello."
     },
     {
-      "pregunta": "¿Se enreda o se dobla con el agua caliente?",
-      "respuesta": "Su malla metálica reforzada evita que la manguera interna colapse o se anude al circular agua caliente a presión."
+      "pregunta": "¿Se dobla o se enreda?",
+      "respuesta": "El espiral metálico lo hace más firme que una manguera plástica. Déjalo colgar sin torcerlo sobre sí mismo para que dure más."
     }
   ],
   "aviso_final": "Los precios incluyen IVA. Se recomienda limpiar con un paño suave para conservar el brillo del cromado.",
