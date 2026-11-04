@@ -170,6 +170,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Extractor de Aire',
     filename: 'Pack-Extractor-de-Aire-Ferreteria-Ukra.zip',
   },
+  'pack-ascensor-salvaescaleras-elegir-cotizar-excel': {
+    name: 'Pack Ascensor y Salvaescaleras',
+    filename: 'Pack-Ascensor-Salvaescaleras-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1645,6 +1649,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-EXTRACTOR',
+  },
+  {
+    slug: 'pack-ascensor-salvaescaleras-elegir-cotizar-excel',
+    name: 'Pack Ascensor y Salvaescaleras: Planilla Excel para Elegir la Solución, Medir, Comparar Cotizaciones, Costo de Uso y Trámites + Guía de Decisión + Trámites y Mantención',
+    price: 7990,
+    image: '/producto/pack-ascensor-salvaescaleras-elegir-cotizar-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-ASCENSOR',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
