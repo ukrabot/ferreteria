@@ -142,6 +142,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Destape de Cañerías',
     filename: 'Pack-Destape-Canerias-Ferreteria-Ukra.zip',
   },
+  'pack-instalar-calefont-litros-tiro-cotizacion-excel': {
+    name: 'Pack Instalar Calefont',
+    filename: 'Pack-Instalar-Calefont-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1554,6 +1558,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-DESTAPE',
+  },
+  {
+    slug: 'pack-instalar-calefont-litros-tiro-cotizacion-excel',
+    name: 'Pack Instalar Calefont: Planilla Excel de Litros, Tipo de Tiro, Consumo de Gas y Cotizaciones + Guía para Elegir y Cotizar + Checklist de Recepción',
+    price: 7990,
+    image: '/producto/pack-instalar-calefont-litros-tiro-cotizacion-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-CALEFONT-INST',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
