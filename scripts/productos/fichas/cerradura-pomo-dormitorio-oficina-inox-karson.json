@@ -14,7 +14,7 @@
   "seo_titulo": "Cerradura Pomo Dormitorio Oficina Inox Karson",
   "meta_descripcion": "Compra la cerradura de pomo para dormitorio y oficina Karson en acero inoxidable a {precio}. Pomo esférico con llave exterior y pestillo. Envíos a todo Chile.",
   "og_descripcion": "Cerradura tubular de pomo esférico en acero inoxidable para puertas de interior, dormitorios y oficinas. Incluye llaves y pestillo.",
-  "descripcion": "Cerradura cilíndrica de pomo para puertas interiores de dormitorio y oficina. Fabricada en acero inoxidable con acabado satinado, cilindro exterior con llave, seguro interior por botón giratorio y pestillo tubular con traba anti-tarjeta.",
+  "descripcion": "Cerradura cilíndrica de pomo para puertas interiores de dormitorio y oficina. Terminación acero inoxidable satinado, cilindro exterior con llave, seguro interior por botón giratorio y pestillo tubular.",
   "lede": "¿Necesitas renovar la cerradura de una pieza o despacho con un pomo resistente y de giro suave? Esta **cerradura de pomo Karson en acero inoxidable** te ofrece cierre con **llave por fuera y seguro interior**, ideal para puertas de dormitorio u oficina.",
   "fotos": [
     {
@@ -60,8 +60,8 @@
       "Dormitorio u oficina interior"
     ],
     [
-      "Material",
-      "Acero inoxidable"
+      "Acabado",
+      "Acero inoxidable satinado"
     ],
     [
       "Acabado",
@@ -82,8 +82,8 @@
       "detalle": "Diseño esférico de agarre cómodo"
     },
     {
-      "titulo": "✨ Acero inoxidable",
-      "detalle": "Resistente al desgaste y la humedad"
+      "titulo": "✨ Inox satinado",
+      "detalle": "Terminación fácil de limpiar"
     },
     {
       "titulo": "🔑 Con llaves",
@@ -108,9 +108,9 @@
         },
         {
           "lista": [
-            "Diseño simétrico adaptable a puertas de mano derecha o izquierda",
-            "Pestillo tubular con pasador de seguridad para evitar aperturas forzadas",
-            "Acabado satinado que disimula marcas de dedos y resiste la limpieza frecuente"
+            "Diseño simétrico para puertas de mano derecha o izquierda.",
+            "Pestillo tubular de giro suave.",
+            "Terminación satinada que disimula marcas de dedos."
           ]
         }
       ]
@@ -134,8 +134,8 @@
   ],
   "faq": [
     {
-      "pregunta": "¿Viene con llaves incluidas?",
-      "respuesta": "Sí, la cerradura incluye 3 llaves de fábrica para el cilindro exterior."
+      "pregunta": "¿Viene con llaves?",
+      "respuesta": "Sí, trae llaves de fábrica para el cilindro exterior."
     },
     {
       "pregunta": "¿Sirve para puertas de cualquier espesor?",

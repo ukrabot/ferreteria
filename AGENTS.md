@@ -52,6 +52,13 @@ actualizar fichas de productos físicos con el generador**. Nada más.
   10 A; 1,5 mm² → 16 A). Los cordones de PVC (H05VV-F, paralelos) no son para
   intemperie ni para instalación fija; no los recomiendes para soldadoras.
   La sección de una acometida la define la distribuidora.
+- **«Según ficha técnica»** solo si el dato aparece de verdad en la ficha o en
+  una foto con datos del fabricante; si no, no lo pongas (velocidades, ciclos,
+  módulos de cremallera, sistemas antiaplastamiento, backset, «acero
+  inoxidable macizo»). Di siempre qué incluye el kit y qué se compra aparte
+  (por ejemplo, la cremallera de un motor de portón). No llames «de
+  sobreponer» a una cerradura que en la foto es de embutir (tiene frontal en
+  el canto).
 - **Precio**: lo entrega el dueño, o te da un **margen**. Con margen, pon en la
   ficha `precio_referencia` (precio normal, no el de oferta ni el de tarjeta)
   y `margen`, y **no pongas `precio`**: el generador lo calcula y lo redondea a

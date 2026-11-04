@@ -12,10 +12,10 @@
   "color": "Burdeo",
   "disponible": true,
   "seo_titulo": "Kit Portón Eléctrico New Speed 600 kg Veloti",
-  "meta_descripcion": "Compra el kit de motor corredizo New Speed 600 kg Veloti a {precio}. Apertura rápida en 8 segundos, 2 controles remotos y llaves de destrabe. Envíos a todo Chile.",
-  "og_descripcion": "Motor rápido para portón corredizo de hasta 600 kg Veloti. Ciclo ágil de 8 segundos, controles remotos y desbloqueo manual.",
-  "descripcion": "Kit de motor corredizo rápido Veloti New Speed para portones residenciales de hasta 600 kg. Apertura veloz en aprox. 8 segundos, hasta 40 maniobras por hora, 2 controles remotos y llaves de destrabe manual ante cortes de energía.",
-  "lede": "¿Buscas automatizar el portón de tu casa con un motor rápido y confiable? El **kit corredizo Veloti New Speed 600 kg** abre tu portón en aproximadamente **8 segundos** (según ficha técnica), soporta hojas de hasta 600 kg e incluye **2 controles remotos y destrabe manual**.",
+  "meta_descripcion": "Compra el kit Veloti New Speed 600 kg a {precio}: motor para portón corredizo de hasta 600 kg y 5 m, 2 controles y destrabe manual. Envíos a todo Chile.",
+  "og_descripcion": "Kit motor Veloti New Speed para portón corredizo de hasta 600 kg y 5 m de ancho, con 2 controles y destrabe manual.",
+  "descripcion": "Kit de motor para portón corredizo Veloti New Speed para portones residenciales de hasta 600 kg y hasta 5 m de ancho. Según el fabricante abre un portón de 3 m en 8,5 segundos y admite hasta 40 maniobras por hora. Incluye 2 controles remotos, llaves de destrabe manual e imanes de fin de carrera; la cremallera se compra aparte. Garantía de 6 meses.",
+  "lede": "¿Quieres automatizar el portón corredizo de tu casa? El **kit Veloti New Speed 600 kg** abre un portón de 3 m en **8,5 segundos** (según el fabricante), soporta hojas de hasta **600 kg y 5 m de ancho** y trae **2 controles remotos y destrabe manual con llave** para los cortes de luz.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/7851049_12/w=1200,h=1200,fit=cover",
@@ -29,7 +29,7 @@
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7851049_21/w=1200,h=1200,fit=cover",
-      "alt": "Vista en perspectiva del motor de portón corredizo Veloti New Speed 600 kg",
+      "alt": "Motor Veloti New Speed 600 kg con datos del fabricante: 8,5 segundos, hasta 600 kg, hasta 5 m, 40 maniobras por hora",
       "miniatura": "Ver ángulo del motor"
     },
     {
@@ -52,24 +52,36 @@
       "New Speed 600 kg"
     ],
     [
-      "Capacidad de carga",
-      "Hasta 600 kg (según ficha técnica)"
+      "Tipo de portón",
+      "Corredizo"
     ],
     [
-      "Tiempo de apertura",
-      "Aprox. 8 segundos (según ficha técnica)"
+      "Peso máximo del portón",
+      "600 kg (según fabricante)"
     ],
     [
-      "Frecuencia de maniobras",
-      "Hasta 40 ciclos/hora (según ficha técnica)"
+      "Ancho máximo del portón",
+      "5 m (según fabricante)"
     ],
     [
-      "Color carcasa",
+      "Velocidad",
+      "Abre un portón de 3 m en 8,5 s (según fabricante)"
+    ],
+    [
+      "Frecuencia de uso",
+      "Hasta 40 maniobras por hora, uso residencial (según fabricante)"
+    ],
+    [
+      "Cremallera compatible",
+      "Nylon o acero (no incluida)"
+    ],
+    [
+      "Incluye",
+      "Motor con central, 2 controles remotos, 2 llaves de destrabe, imanes de fin de carrera y pernos"
+    ],
+    [
+      "Color",
       "Burdeo y gris"
-    ],
-    [
-      "Tensión eléctrica",
-      "220 V CA"
     ],
     [
       "Garantía",
@@ -78,16 +90,16 @@
   ],
   "confianza": [
     {
-      "titulo": "⚡ Velocidad Speed",
-      "detalle": "Apertura en aprox. 8 segundos"
+      "titulo": "⚡ 8,5 segundos",
+      "detalle": "Portón de 3 m, según fabricante"
     },
     {
       "titulo": "🚪 Hasta 600 kg",
-      "detalle": "Ideal para portones residenciales"
+      "detalle": "Y hasta 5 m de ancho"
     },
     {
       "titulo": "🔑 Destrabe con llave",
-      "detalle": "Desbloqueo manual en cortes de luz"
+      "detalle": "Para cortes de luz"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -101,16 +113,14 @@
       "indice": "Rendimiento",
       "bloques": [
         {
-          "p": "El modelo **Veloti New Speed 600 kg** está pensado para el uso habitual en accesos residenciales, combinando un motor de respuesta ágil con una relación de transmisión que abre el portón en unos 8 segundos."
-        },
-        {
-          "p": "Soporta portones correderos de fierro, madera o perfiles metálicos de hasta 600 kg, con una capacidad de hasta **40 aperturas por hora** (según ficha técnica) para atender entradas continuas durante el día."
+          "p": "El **Veloti New Speed 600 kg** es un motor para portones corredizos de uso residencial. Según el fabricante, abre un portón de 3 m en 8,5 segundos y admite hasta **40 maniobras por hora**, suficiente para una casa con varios autos."
         },
         {
           "lista": [
-            "Sistema de embrague electrónico regulable para detener el movimiento ante obstáculos",
-            "Piñón de salida resistente compatible con cremalleras dentadas de nylon o acero",
-            "Incluye 2 controles inalámbricos y llaves para desacoplar el motor a mano"
+            "Portones corredizos de hasta 600 kg y hasta 5 m de ancho.",
+            "Piñón de acero compatible con cremallera de nylon o de acero (la cremallera no viene en el kit).",
+            "Incluye 2 controles remotos, 2 llaves de destrabe, imanes de fin de carrera y pernos de fijación.",
+            "Compatible con el módulo WiFi Smart Veloti, que se vende por separado."
           ]
         }
       ]
@@ -121,36 +131,36 @@
       "indice": "Instalación",
       "bloques": [
         {
-          "p": "Fija la base sobre un pollo de hormigón a nivel del piso, asegurando que el piñón engrane centrado en la cremallera sin cargar el peso de la hoja sobre el eje."
+          "p": "El portón debe correr suave y alineado sobre su riel antes de instalar el motor. La base se fija a un dado de hormigón nivelado, de modo que el piñón engrane centrado en la cremallera sin cargar el peso de la hoja."
         },
         {
-          "aviso": "Conecta la central electrónica a un circuito eléctrico con protección a tierra y automático termomagnético acorde al consumo."
+          "advertencia": "La alimentación eléctrica del motor (circuito exclusivo con automático, diferencial y tierra) la hace un instalador eléctrico autorizado por la SEC."
         },
         {
-          "p": "Revisa consejos de fase y neutro en la guía sobre [cómo identificar fase y neutro en un enchufe](/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/)."
+          "p": "Por seguridad, conviene agregar fotoceldas (no incluidas) para que el portón no cierre sobre un auto o una persona. Para conocer los colores de los cables, revisa nuestra guía de [código de colores de cables en Chile](/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/)."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿Qué tamaño y peso de portón soporta este modelo?",
-      "respuesta": "Está diseñado para portones corredizos de hasta 600 kg de peso total (según ficha técnica) y hasta 4 o 5 metros de ancho de apertura."
+      "pregunta": "¿Qué tamaño de portón soporta?",
+      "respuesta": "Portones corredizos de hasta 600 kg y hasta 5 m de ancho, según el fabricante."
     },
     {
-      "pregunta": "¿Qué pasa si se corta la luz en la casa?",
-      "respuesta": "Abres la compuerta con la llave de emergencia provista para liberar el piñón y mover el portón a mano suavemente."
+      "pregunta": "¿Trae cremallera?",
+      "respuesta": "No. Trae el motor con su central, 2 controles, 2 llaves de destrabe, imanes de fin de carrera y pernos. La cremallera (de nylon o de acero) se compra según el largo del portón."
     },
     {
-      "pregunta": "¿Los controles vienen programados?",
-      "respuesta": "Vienen listos para ser enlazados a la tarjeta receptora del motor siguiendo los pasos sencillos del instructivo incluido."
+      "pregunta": "¿Qué pasa si se corta la luz?",
+      "respuesta": "Abres la tapa de destrabe con la llave incluida y mueves el portón a mano."
     }
   ],
   "aviso_final": "Los precios incluyen IVA. El tiempo de apertura corresponde a condiciones estándar con riel limpio y nivelado.",
   "lateral": {
     "etiqueta": "Portón Residencial",
     "titulo": "Veloti Speed 600 kg",
-    "texto": "Apertura ágil en 8 segundos para portones de hasta 600 kg. Incluye 2 controles y 6 meses de garantía."
+    "texto": "Motor corredizo para portones de hasta 600 kg y 5 m. Abre un portón de 3 m en 8,5 s según el fabricante. Incluye 2 controles."
   },
   "relacionados": [
     "kit-porton-electrico-new-speed-800-kg-veloti",
@@ -158,13 +168,13 @@
   ],
   "guias": [
     {
-      "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
-      "texto": "Identificar fase y neutro en una instalación"
+      "url": "/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/",
+      "texto": "Código de colores de cables"
     }
   ],
   "tarjeta": {
     "titulo": "Kit Portón Eléctrico New Speed 600 kg Veloti",
-    "extracto": "Motor corredizo veloz para portón de 600 kg. Apertura en aprox. 8 segundos con 2 controles y llaves de destrabe.",
+    "extracto": "Motor para portón corredizo de hasta 600 kg y 5 m de ancho. 2 controles, destrabe con llave; cremallera aparte.",
     "alt": "Kit motor de portón corredizo Veloti New Speed 600 kg",
     "etiqueta": "Portones"
   }

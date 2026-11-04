@@ -12,10 +12,10 @@
   "color": "Verde",
   "disponible": true,
   "seo_titulo": "Kit Portón Eléctrico New Speed 800 kg Veloti",
-  "meta_descripcion": "Compra el kit de motor para portón eléctrico New Speed 800 kg Veloti a {precio}. Apertura rápida en 8 segundos, 2 controles y llaves de destrabe. Despacho a todo Chile.",
-  "og_descripcion": "Motor rápido para portón corredizo de hasta 800 kg Veloti. Maniobra ágil en 8 segundos, controles remotos y desbloqueo manual.",
-  "descripcion": "Kit de motor corredizo rápido Veloti New Speed para portones residenciales o comerciales de hasta 800 kg. Apertura veloz en aprox. 8 segundos, hasta 40 maniobras por hora, 2 controles remotos y llaves de destrabe manual ante cortes de energía.",
-  "lede": "¿Cansado de esperar minutos frente al portón de tu casa? El **kit corredizo Veloti New Speed 800 kg** abre tu portón en apenas **8 segundos** (según ficha técnica), soportando hojas de hasta 800 kg con hasta **40 maniobras por hora** y destrabe con llave.",
+  "meta_descripcion": "Compra el kit Veloti New Speed 800 kg a {precio}: motor para portón corredizo de hasta 800 kg y 5 m, 2 controles y destrabe manual. Envíos a todo Chile.",
+  "og_descripcion": "Kit motor Veloti New Speed para portón corredizo de hasta 800 kg y 5 m de ancho, con 2 controles y destrabe manual.",
+  "descripcion": "Kit de motor para portón corredizo Veloti New Speed para portones de hasta 800 kg y hasta 5 m de ancho. Piñón de acero compatible con cremallera de nylon o acero. Incluye 2 controles remotos, llaves de destrabe manual e imanes de fin de carrera; la cremallera se compra aparte. Garantía de 6 meses.",
+  "lede": "¿Tu portón corredizo es más pesado? El **kit Veloti New Speed 800 kg** mueve hojas de hasta **800 kg y 5 m de ancho** (según el fabricante) y trae **2 controles remotos y destrabe manual con llave** para los cortes de luz.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/7851030_12/w=1200,h=1200,fit=cover",
@@ -52,24 +52,28 @@
       "New Speed 800 kg"
     ],
     [
-      "Capacidad de carga",
-      "Hasta 800 kg (según ficha técnica)"
+      "Tipo de portón",
+      "Corredizo"
     ],
     [
-      "Tiempo de apertura",
-      "Aprox. 8 segundos (según ficha técnica)"
+      "Peso máximo del portón",
+      "800 kg (según fabricante)"
     ],
     [
-      "Frecuencia de maniobras",
-      "Hasta 40 ciclos/hora (según ficha técnica)"
+      "Ancho máximo del portón",
+      "5 m (según fabricante)"
     ],
     [
-      "Color carcasa",
+      "Cremallera compatible",
+      "Nylon o acero (no incluida)"
+    ],
+    [
+      "Incluye",
+      "Motor con central, 2 controles remotos, 2 llaves de destrabe, imanes de fin de carrera y pernos"
+    ],
+    [
+      "Color",
       "Verde y gris"
-    ],
-    [
-      "Tensión eléctrica",
-      "220 V CA"
     ],
     [
       "Garantía",
@@ -78,16 +82,16 @@
   ],
   "confianza": [
     {
-      "titulo": "⚡ Velocidad Speed",
-      "detalle": "Apertura en aprox. 8 segundos"
+      "titulo": "🚪 Hasta 800 kg",
+      "detalle": "Y hasta 5 m de ancho"
     },
     {
-      "titulo": "🚪 Hasta 800 kg",
-      "detalle": "Para uso residencial y comercial"
+      "titulo": "⚙️ Piñón de acero",
+      "detalle": "Cremallera de nylon o acero"
     },
     {
       "titulo": "🔑 Destrabe con llave",
-      "detalle": "Operación manual si no hay luz"
+      "detalle": "Para cortes de luz"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -97,20 +101,18 @@
   "secciones": [
     {
       "id": "rendimiento-y-seguridad",
-      "titulo": "¿Por qué elegir la versión New Speed de Veloti?",
+      "titulo": "¿Para qué portones sirve el Veloti New Speed 800 kg?",
       "indice": "Rendimiento",
       "bloques": [
         {
-          "p": "La serie **New Speed de Veloti** está optimizada para reducir el tiempo de espera en la calle, abriendo una hoja estándar en aproximadamente 8 segundos."
-        },
-        {
-          "p": "Cuenta con capacidad de hasta **40 ciclos por hora** (según ficha técnica), lo que la hace adecuada para casas con múltiples vehículos o condominios pequeños."
+          "p": "El **Veloti New Speed 800 kg** es la versión para portones corredizos más pesados de la serie: según el fabricante, mueve hojas de hasta **800 kg** y hasta **5 m** de ancho, con una central electrónica pensada para el uso diario."
         },
         {
           "lista": [
-            "Mecanismo anti-aplastamiento regulable para seguridad de vehículos y personas",
-            "Piñón compatible con cremalleras de nylon de alta resistencia o de acero",
-            "Incluye 2 controles remotos y llaves de desbloqueo manual"
+            "Portones corredizos de fierro o madera de hasta 800 kg.",
+            "Piñón de acero compatible con cremallera de nylon o de acero (la cremallera no viene en el kit).",
+            "Incluye 2 controles remotos, 2 llaves de destrabe, imanes de fin de carrera y pernos de fijación.",
+            "Compatible con el módulo WiFi Smart Veloti, que se vende por separado."
           ]
         }
       ]
@@ -121,36 +123,36 @@
       "indice": "Instalación",
       "bloques": [
         {
-          "p": "La base del motor debe anclarse sobre una loseta de hormigón firme y nivelada, paralela al recorrido del portón y respetando la holgura del piñón con la cremallera."
+          "p": "La base se ancla a un dado de hormigón firme y nivelado, paralelo al recorrido del portón, dejando la holgura entre el piñón y la cremallera que indica el manual. Antes, revisa que la hoja corra suave sobre su riel."
         },
         {
-          "aviso": "Utiliza una línea eléctrica independiente con conexión a tierra y protección diferencial para exteriores."
+          "advertencia": "La alimentación eléctrica del motor (circuito exclusivo con automático, diferencial y tierra) la hace un instalador eléctrico autorizado por la SEC."
         },
         {
-          "p": "Revisa los detalles de conexiones y fases en la guía de [cómo identificar fase y neutro en un enchufe](/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/)."
+          "p": "Por seguridad, conviene agregar fotoceldas (no incluidas). Para identificar fase y neutro, revisa la guía de [cómo identificar fase y neutro](/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/)."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿Qué diferencia tiene con el modelo estándar?",
-      "respuesta": "La versión New Speed incorpora una relación de engranajes y motor optimizada para abrir la hoja en unos 8 segundos, reduciendo a la mitad el tiempo de espera habitual."
+      "pregunta": "¿Qué diferencia tiene con el de 600 kg?",
+      "respuesta": "Soporta portones más pesados: hasta 800 kg en vez de 600 kg, con el mismo ancho máximo de 5 m según el fabricante."
     },
     {
-      "pregunta": "¿Qué tipo de cremallera requiere?",
-      "respuesta": "El piñón de salida es compatible con cremalleras estándar de módulo 4, tanto de nylon con alma de acero como completamente metálicas."
+      "pregunta": "¿Trae cremallera?",
+      "respuesta": "No. Trae el motor con su central, 2 controles, 2 llaves de destrabe, imanes de fin de carrera y pernos. La cremallera se compra según el largo del portón."
     },
     {
       "pregunta": "¿Cómo se desbloquea en un corte de luz?",
-      "respuesta": "Giras la cerradura frontal con la llave de emergencia provista para desacoplar el embrague y empujar la hoja con la mano sin resistencia."
+      "respuesta": "Abres la tapa de destrabe con la llave incluida y mueves el portón a mano."
     }
   ],
   "aviso_final": "Los precios incluyen IVA. El tiempo de maniobra puede variar ligeramente según el peso real y la lubricación de las ruedas del portón.",
   "lateral": {
     "etiqueta": "Portón Veloz",
     "titulo": "Veloti New Speed 800 kg",
-    "texto": "Apertura rápida en 8 segundos para portones de hasta 800 kg. Incluye controles y garantía de 6 meses."
+    "texto": "Motor corredizo para portones de hasta 800 kg y 5 m de ancho. Incluye 2 controles y destrabe con llave."
   },
   "relacionados": [
     "kit-porton-electrico-new-1200-kg-veloti",
@@ -164,7 +166,7 @@
   ],
   "tarjeta": {
     "titulo": "Kit Portón Eléctrico New Speed 800 kg Veloti",
-    "extracto": "Motor rápido para portón corredizo de 800 kg. Abre en aprox. 8 segundos e incluye 2 controles remotos y llaves.",
+    "extracto": "Motor para portón corredizo de hasta 800 kg y 5 m de ancho. 2 controles, destrabe con llave; cremallera aparte.",
     "alt": "Kit motor de portón eléctrico Veloti New Speed 800 kg",
     "etiqueta": "Portones"
   }

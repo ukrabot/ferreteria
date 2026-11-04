@@ -14,7 +14,7 @@
   "seo_titulo": "Cerradura Sobreponer RIM 323BL Caja Soldar Odis",
   "meta_descripcion": "Compra la cerradura de sobreponer RIM 323BL Odis con caja para soldar a {precio}. Doble pitón de acero, cilindro exterior Odis y recibidor. Envíos a todo Chile.",
   "og_descripcion": "Cerradura de sobreponer de alta seguridad Odis RIM 323BL con caja metálica para soldar a rejas y portones. Doble pitón de acero.",
-  "descripcion": "Cerradura de sobreponer para rejas perimetrales, portones metálicos y puertas de acceso exterior. Modelo RIM 323BL de Odis equipado con caja de acero para soldar o atornillar, doble cerrojo cilíndrico de acero macizo, cilindro de latón y recibidor a juego.",
+  "descripcion": "Cerradura de sobreponer para rejas perimetrales, portones metálicos y puertas de acceso exterior. Modelo RIM 323BL de Odis equipado con caja de acero para soldar o atornillar, doble cerrojo cilíndrico de acero macizo, cilindro Odis con llaves y recibidor.",
   "lede": "¿Buscas asegurar un portón de acceso o una reja metálica exterior con una cerradura hecha para durar? La **cerradura de sobreponer Odis RIM 323BL** incluye **caja metálica para soldar**, cilindro de seguridad Odis y **doble cerrojo cilíndrico de acero** de gran firmeza.",
   "fotos": [
     {
@@ -56,20 +56,24 @@
       "Sobreponer para rejas y portones"
     ],
     [
-      "Cierre de seguridad",
-      "Doble pitón cilíndrico de acero"
+      "Cierre",
+      "Doble cerrojo cilíndrico"
     ],
     [
       "Caja de montaje",
       "Caja metálica para soldar o atornillar"
     ],
     [
-      "Acabado",
-      "Pintura electrostática negro mate"
+      "Color",
+      "Negro"
     ],
     [
       "Cilindro",
-      "Latón macizo con llaves Odis"
+      "Odis, con llaves"
+    ],
+    [
+      "Incluye",
+      "Cerradura, caja, recibidor, llaves y tornillos"
     ],
     [
       "Garantía",
@@ -101,16 +105,16 @@
       "indice": "Ventajas para rejas",
       "bloques": [
         {
-          "p": "El modelo **RIM 323BL de Odis** está diseñado específicamente para rejas perimetrales y portones metálicos gracias a su caja metálica exterior envolvente, que protege el mecanismo contra manipulaciones indebidas y lluvia directa."
+          "p": "El modelo **RIM 323BL de Odis** está pensado para rejas y portones metálicos: trae una **caja metálica** que se suelda o atornilla al perfil y dentro de la cual se monta la cerradura, protegiendo el mecanismo."
         },
         {
           "p": "Sus dos pitones cilíndricos de acero penetran con solidez en el recibidor, asegurando un anclaje firme frente a intentos de palanca o empuje forzado."
         },
         {
           "lista": [
-            "Caja de acero lista para soldar a perfiles tubulares o fijar con pernos pasantes",
-            "Cilindro exterior de latón protegido por roseta de acero estampado",
-            "Incluye llaves originales Odis y recibidor metálico de calce exacto"
+            "Caja metálica para soldar a perfiles o fijar con pernos.",
+            "Cilindro Odis con llaves.",
+            "Recibidor y tornillos de fijación incluidos."
           ]
         }
       ]
