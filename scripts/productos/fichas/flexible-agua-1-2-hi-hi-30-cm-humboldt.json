@@ -1,0 +1,158 @@
+{
+  "slug": "flexible-agua-1-2-hi-hi-30-cm-humboldt",
+  "nombre": "Flexible para agua 1/2 HI-HI 30 cm trenzado Humboldt",
+  "titulo_h1": "Flexible para Agua 1/2 HI-HI 30 cm Humboldt",
+  "titulo_corto": "Flexible Agua 1/2 HI-HI 30 cm Humboldt",
+  "marca": "Humboldt",
+  "sku": "110219941",
+  "precio_referencia": 2690,
+  "margen": 50,
+  "categoria": "gasfiteria",
+  "subcategoria": "Flexibles de agua",
+  "color": "Plateado",
+  "disponible": true,
+  "seo_titulo": "Flexible Agua 1/2 HI-HI 30 cm Humboldt",
+  "meta_descripcion": "Compra el flexible para agua 1/2 HI-HI de 30 cm Humboldt a {precio}. Malla trenzada de acero, tuercas de 1/2 con gomas de estanqueidad. Envíos a todo Chile.",
+  "og_descripcion": "Flexible para agua 1/2 pulgada HI-HI de 30 cm marca Humboldt. Conexiones hembra estándar para espacios reducidos.",
+  "descripcion": "Flexible trenzado de acero para agua de 30 cm de largo con conexiones de 1/2 pulgada HI-HI (hilo interior hembra). Ideal para instalaciones compactas de lavamanos, grifos monomando o estanques sanitarios cercanos a la toma de agua.",
+  "lede": "¿La llave de paso de tu baño o cocina está muy cerca del artefacto y los flexibles largos quedan enrollados? Este **flexible para agua Humboldt de 30 cm** ofrece **conexiones hembra de 1/2 pulgada (HI-HI)** y la longitud justa para espacios reducidos.",
+  "fotos": [
+    {
+      "url": "https://media.falabella.com/sodimacCL/1201301_01/w=1200,h=1200,fit=cover",
+      "alt": "Flexible para agua trenzado Humboldt 1/2 pulgada HI-HI de 30 cm curvado",
+      "miniatura": "Ver flexible completo"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/1201301_12/w=1200,h=1200,fit=cover",
+      "alt": "Detalle de la tuerca hembra hexagonal de 1/2 pulgada con empaquetadura interior",
+      "miniatura": "Ver tuerca y empaquetadura"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/1201301_21/w=1200,h=1200,fit=cover",
+      "alt": "Vista en ángulo del casquillo de compresión metálico y malla de acero",
+      "miniatura": "Ver casquillo y malla"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    [
+      "Marca",
+      "Humboldt"
+    ],
+    [
+      "Tipo de fluido",
+      "Agua"
+    ],
+    [
+      "Largo",
+      "30 cm"
+    ],
+    [
+      "Diámetro de conexión",
+      "1/2 pulgada"
+    ],
+    [
+      "Tipo de rosca",
+      "HI-HI (hembra - hembra)"
+    ],
+    [
+      "Garantía",
+      "6 meses"
+    ]
+  ],
+  "confianza": [
+    {
+      "titulo": "📏 Medida compacta",
+      "detalle": "30 cm para instalaciones sin exceso de manguera"
+    },
+    {
+      "titulo": "🔩 Rosca 1/2 HI-HI",
+      "detalle": "Conexión hembra universal en ambos lados"
+    },
+    {
+      "titulo": "💧 Sellos incluidos",
+      "detalle": "Empaquetaduras para apriete estanco"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Garantía de nuestra tienda"
+    }
+  ],
+  "secciones": [
+    {
+      "id": "ventajas-medida-corta",
+      "titulo": "¿Cuándo conviene elegir un flexible de 30 cm?",
+      "indice": "Ventajas 30 cm",
+      "bloques": [
+        {
+          "p": "Cuando la llave de paso en el muro se encuentra a menos de 25 o 30 cm del estanque sanitario o del monomando, usar un flexible de 50 cm obliga a forzar bucles cerrados que pueden estrangular el paso de agua."
+        },
+        {
+          "p": "Este modelo corto de **30 cm de Humboldt** permite una bajada directa y limpia, manteniendo una curvatura natural sin deformar la malla metálica exterior."
+        },
+        {
+          "lista": [
+            "Qué incluye: 1 flexible trenzado de 30 cm con 2 tuercas hembra de 1/2 pulgada y sus empaquetaduras de goma planas",
+            "Qué se compra por separado: llave angular de paso o adaptadores en caso de conexiones no estándar",
+            "Malla trenzada de acero que resiste los golpes de presión normales de la red domiciliaria"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "consejos-de-apriete",
+      "titulo": "Instalación y apriete sin forzar las roscas",
+      "indice": "Instalación",
+      "bloques": [
+        {
+          "p": "Alinea la tuerca perpendicular a la rosca macho para evitar que el hilo entre rodado, enroscando las primeras vueltas con los dedos."
+        },
+        {
+          "aviso": "No uses teflón ni pasta de gasfitería en las roscas con tuerca móvil HI: el sellado lo realiza la goma interior al comprimirse contra el borde plano."
+        },
+        {
+          "p": "Para más instrucciones sobre llaves de corte y reemplazo de flexibles, revisa nuestra guía sobre [cómo instalar una llave de paso](/blog/como-instalar-una-llave-de-paso-paso-a-paso/)."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Sirve para la entrada del estanque de WC?",
+      "respuesta": "Sí, siempre que la válvula de entrada del estanque tenga hilo macho exterior de 1/2 pulgada (o cuente con terminal correspondiente)."
+    },
+    {
+      "pregunta": "¿El largo de 30 cm incluye las tuercas?",
+      "respuesta": "Sí, la medida nominal de 30 cm se mide entre los extremos de las conexiones para estimar la distancia entre artefacto y llave."
+    },
+    {
+      "pregunta": "¿Soporta agua caliente de calefont o termo?",
+      "respuesta": "Sí, su tubo interior y malla están diseñados para operar con agua fría y caliente sanitaria."
+    }
+  ],
+  "aviso_final": "Los precios incluyen IVA. Se recomienda no doblar el flexible en radios menores a 3 cm.",
+  "lateral": {
+    "etiqueta": "Medida Corta",
+    "titulo": "Flexible Humboldt 30 cm",
+    "texto": "Terminales hembra 1/2 HI-HI de 30 cm para vanitorios y sanitarios compactos. Garantía de 6 meses."
+  },
+  "relacionados": [
+    "flexible-agua-1-2-hi-hi-50-cm-humboldt",
+    "llave-de-paso-1-2-so-bronce-stretto"
+  ],
+  "guias": [
+    {
+      "url": "/blog/como-instalar-una-llave-de-paso-paso-a-paso/",
+      "texto": "Cómo instalar una llave de paso"
+    }
+  ],
+  "tarjeta": {
+    "titulo": "Flexible para Agua 1/2 HI-HI 30 cm Humboldt",
+    "extracto": "Flexible de agua trenzado de 30 cm con tuercas hembra de 1/2 pulgada para conexiones compactas y ordenadas.",
+    "alt": "Flexible para agua 1/2 HI-HI 30 cm Humboldt",
+    "etiqueta": "Gasfitería"
+  }
+}
