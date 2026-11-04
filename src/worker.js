@@ -158,6 +158,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Termofusión PPR',
     filename: 'Pack-Termofusion-PPR-Ferreteria-Ukra.zip',
   },
+  'pack-cubierta-cocina-material-medicion-excel': {
+    name: 'Pack Cubierta de Cocina',
+    filename: 'Pack-Cubierta-de-Cocina-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1606,6 +1610,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-PPR',
+  },
+  {
+    slug: 'pack-cubierta-cocina-material-medicion-excel',
+    name: 'Pack Cubierta de Cocina: Planilla Excel para Elegir Material, Medir el Mesón y Comparar Cotizaciones + Guía de Decisión + Checklist de Instalación y Mantención',
+    price: 7990,
+    image: '/producto/pack-cubierta-cocina-material-medicion-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-CUBIERTA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
