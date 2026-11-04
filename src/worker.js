@@ -2351,7 +2351,7 @@ const SEED_PRODUCTS = [
   },
   {
     slug: 'cable-concentrico-2x4-mm2-madeco',
-    name: 'Cable Concéntrico 2x4 mm² Negro Madeco por Metro',
+    name: 'Cable Concéntrico 2x4 mm² Madeco por Metro',
     price: 2990,
     image: '/producto/cable-concentrico-2x4-mm2-madeco.webp',
     category: 'Material Eléctrico',
@@ -2360,7 +2360,7 @@ const SEED_PRODUCTS = [
   },
   {
     slug: 'cable-concentrico-2x6-mm2-madeco',
-    name: 'Cable Concéntrico 2x6 mm² Negro Madeco por Metro',
+    name: 'Cable Concéntrico 2x6 mm² Madeco por Metro',
     price: 4990,
     image: '/producto/cable-concentrico-2x6-mm2-madeco.webp',
     category: 'Material Eléctrico',

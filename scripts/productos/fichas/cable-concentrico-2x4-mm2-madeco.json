@@ -1,8 +1,8 @@
 {
   "slug": "cable-concentrico-2x4-mm2-madeco",
-  "nombre": "Cable Concéntrico 2x4 mm² Negro Madeco por Metro",
-  "titulo_h1": "Cable Concéntrico 2x4 mm² Negro Madeco (Metro)",
-  "titulo_corto": "Cable Concéntrico 2x4 mm² Madeco",
+  "nombre": "Cable Concéntrico 2x4 mm² Madeco por Metro",
+  "titulo_h1": "Cable Concéntrico 2x4 mm² Madeco por Metro",
+  "titulo_corto": "Cable Concéntrico 2x4 mm² Madeco por Metro",
   "marca": "MADECO",
   "sku": "110265598",
   "precio_referencia": 1990,
@@ -11,130 +11,148 @@
   "subcategoria": "Cables de acometida",
   "color": "Negro",
   "disponible": true,
-
-  "seo_titulo": "Cable Concéntrico 2x4 mm² Negro Madeco Metro",
-  "meta_descripcion": "Compra cable concéntrico 2x4 mm² Madeco a {precio} el metro. Acometida monofásica con conductor central y malla concéntrica de cobre. Envíos a todo Chile.",
-  "og_descripcion": "Cable concéntrico de cobre 2x4 mm² Madeco para acometidas eléctricas monofásicas. Conductor central y malla concéntrica. Despacho a todo Chile.",
-  "descripcion": "Cable concéntrico monofásico de cobre 2x4 mm² marca Madeco para acometidas y derivaciones domiciliarias. Conductor central de fase aislado y neutro concéntrico exterior en espiral de cobre, con cubierta protectora de PVC negro resistente a la intemperie y 600 V de tensión de servicio.",
-  "lede": "¿Necesitas conectar tu empalme monofásico hacia el tablero general o alimentar una faena exterior? Este **cable concéntrico Madeco 2x4 mm²** entrega la aislación y protección mecánica exigida en acometidas, con conductor central de cobre y **malla concéntrica de neutro**.",
-
+  "seo_titulo": "Cable Concéntrico 2x4 mm² Madeco por Metro",
+  "meta_descripcion": "Compra cable Concéntrico 2x4 mm² Madeco por Metro a {precio}. Cable concéntrico monofásico 2x4 mm² Madeco por metro: fase central de cobre y neutro concéntrico. Para.",
+  "og_descripcion": "Cable concéntrico monofásico 2x4 mm² Madeco por metro: fase central de cobre y neutro concéntrico. Para acometidas de empalmes.",
+  "descripcion": "Cable concéntrico monofásico 2x4 mm² marca Madeco (Nexans), vendido por metro. Tiene un conductor central de cobre aislado, que es la fase, rodeado por un neutro de alambres de cobre dispuestos en hélice, y una cubierta exterior negra. Se usa en acometidas de empalmes monofásicos. Garantía de 6 meses.",
+  "lede": "El **cable concéntrico 2x4 mm²** Madeco es el que se usa en la **acometida** de un empalme monofásico, el tramo que llega desde la red de distribución hasta el medidor. Como el **neutro rodea a la fase**, es difícil intervenirlo sin provocar un cortocircuito, y por eso se usa contra los colgados.",
   "fotos": [
     {
       "url": "https://media.sodimac.cl/sodimacCL/4113543_01/public",
-      "alt": "Corte escalonado de cable concéntrico Madeco mostrando capas de aislamiento y conductores de cobre",
-      "miniatura": "Ver capas del cable"
+      "alt": "Corte de cable concéntrico: conductor central de cobre, neutro de alambres en hélice y cubierta negra",
+      "miniatura": "Ver corte del cable"
     }
   ],
   "stock": {
     "titulo": "En stock",
     "detalle": "Despacho en 24-48 h hábiles"
   },
-
   "especificaciones": [
-    ["Marca", "Madeco"],
-    ["Tipo de conductor", "Concéntrico monofásico"],
-    ["Sección nominal", "2x4 mm²"],
-    ["Conductor central", "Cobre electrolítico de 4 mm²"],
-    ["Conductor exterior", "Malla concéntrica de cobre de 4 mm²"],
-    ["Aislación interna", "Polietileno reticulado o PVC dieléctrico"],
-    ["Cubierta exterior", "PVC negro resistente a rayos UV"],
-    ["Tensión de servicio", "600 V"],
-    ["Normativa", "Fabricado bajo norma IEC 60228 / NCh Electricidad"]
+    [
+      "Marca",
+      "Madeco (Nexans)"
+    ],
+    [
+      "Tipo",
+      "Cable concéntrico monofásico"
+    ],
+    [
+      "Sección",
+      "2x4 mm²"
+    ],
+    [
+      "Fase",
+      "Conductor central de cobre, aislado"
+    ],
+    [
+      "Neutro",
+      "Alambres de cobre concéntricos en hélice"
+    ],
+    [
+      "Cubierta exterior",
+      "Negra"
+    ],
+    [
+      "Venta",
+      "Por metro, en un solo tramo"
+    ],
+    [
+      "Garantía",
+      "6 meses"
+    ]
   ],
   "confianza": [
     {
-      "titulo": "⚡ Cobre puro",
-      "detalle": "Conductores de cobre electrolítico de alta pureza"
+      "titulo": "⚡ Cobre",
+      "detalle": "Fase central y neutro concéntrico"
     },
     {
-      "titulo": "🛡️ Protección antirrobo",
-      "detalle": "Diseño concéntrico evita tomas fraudulentas"
+      "titulo": "🛡️ Antihurto",
+      "detalle": "El neutro rodea a la fase"
     },
     {
       "titulo": "🚚 Envío a todo Chile",
-      "detalle": "Despacho rápido a domicilio o retiro"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🔒 Garantía 6 meses",
-      "detalle": "Garantía legal directa de Ferretería Ukra"
+      "detalle": "Por fallas de fabricación"
     }
   ],
-
   "secciones": [
     {
-      "id": "donde-se-utiliza",
-      "titulo": "¿Dónde se utiliza el cable concéntrico 2x4 mm²?",
-      "indice": "¿Dónde se utiliza?",
+      "id": "para-que-sirve",
+      "titulo": "¿Para qué sirve el cable concéntrico?",
+      "indice": "Para qué sirve",
       "bloques": [
         {
-          "p": "El cable concéntrico está diseñado principalmente para la **acometida eléctrica domiciliaria** que une el medidor de la compañía distribuidora con el [tablero eléctrico domiciliario](/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/). Su configuración física sitúa la fase en el centro y el neutro rodeándola en una corona helicoidal de alambres de cobre, haciendo que cualquier intento de perforación o intervención provoque un cortocircuito inmediato que active la protección."
+          "p": "En un empalme monofásico, la acometida es el cable que va desde la red de baja tensión de la distribuidora hasta el medidor. El concéntrico se usa ahí porque su neutro de alambres envuelve la fase: para llegar a ella hay que cortar el neutro, lo que hace muy difícil conectarse en forma clandestina."
         },
         {
           "lista": [
-            "Acometidas aéreas desde postes de distribución hacia la fachada de la vivienda.",
-            "Tendido subterráneo protegido en ducto conduit entre medidor exterior y tablero interior.",
-            "Líneas de alimentación monofásica para bombas de agua, bodegas y talleres secundarios."
+            "Acometida aérea o subterránea de empalmes monofásicos, según lo indique la distribuidora.",
+            "Reemplazo de una acometida dañada de 2x4 mm², con la sección que exige la distribuidora para ese empalme.",
+            "Se pide por metro: ingresa en el carro los metros que necesitas."
           ]
         }
       ]
     },
     {
-      "id": "criterios-de-seguridad",
-      "titulo": "Recomendaciones de montaje y normativa SEC",
-      "indice": "Montaje y seguridad",
+      "id": "antes-de-comprar",
+      "titulo": "Antes de comprar",
+      "indice": "Antes de comprar",
       "bloques": [
         {
-          "p": "Para instalaciones residenciales en Chile, el Pliego Técnico Normativo RIC exige que las acometidas y alimentadores generales mantengan una caída de tensión inferior al 3 % hasta el tablero de distribución. Con un calibre de 4 mm², este cable es apto para circuitos con protecciones termomagnéticas de hasta 25 A en tendidos de longitud moderada."
+          "p": "La sección de la acometida no se elige a ojo: la define la distribuidora según la potencia y la protección del empalme. Confirma con ella o con tu instalador si corresponde 2x4 o 2x6 mm² y cuántos metros necesitas. Más información en la [guía de empalme eléctrico y aumento de potencia](/blog/empalme-electrico-y-aumento-de-potencia-en-chile-guia-sec/)."
         },
         {
-          "advertencia": "La conexión en el medidor y la intervención de la red pública deben ser coordinadas con la empresa eléctrica y ejecutadas por un instalador autorizado por la SEC."
-        },
-        {
-          "p": "Para revisar cómo calcular el empalme y las secciones de alimentación general, consulta nuestra guía sobre [empalme eléctrico y aumento de potencia en Chile](/blog/empalme-electrico-y-aumento-de-potencia-en-chile-guia-sec/)."
+          "advertencia": "La conexión a la red y al empalme la hace la distribuidora o un instalador eléctrico autorizado por la SEC, con la línea desenergizada. No intervengas la acometida tú mismo."
         }
       ]
     }
   ],
-
   "faq": [
     {
-      "pregunta": "¿Por qué el neutro viene en forma de malla helicoidal?",
-      "respuesta": "La disposición concéntrica del neutro rodeando a la fase sirve como barrera física y de seguridad contra conexiones clandestinas y ayuda a blindar el conductor central frente a roces mecánicos accidentales."
+      "pregunta": "¿Por qué el neutro va alrededor de la fase?",
+      "respuesta": "Porque así la fase queda protegida dentro del neutro. Para tocarla hay que cortar el neutro, lo que hace muy difícil colgarse de la acometida."
     },
     {
-      "pregunta": "¿Cuánta corriente soporta este cable de 4 mm²?",
-      "respuesta": "En tendido al aire o en ducto ventilado soporta habitualmente hasta 25 a 30 A según la temperatura ambiente, ideal para alimentar viviendas monofásicas de consumo estándar."
+      "pregunta": "¿2x4 o 2x6 mm²?",
+      "respuesta": "Depende del empalme: la distribuidora define la sección según la potencia contratada y el largo. Confírmalo antes de comprar."
     },
     {
-      "pregunta": "¿Cómo se vende y despacha este producto?",
-      "respuesta": "Se vende por metro lineal según la cantidad que ingreses al carro de compras y se corta en un solo tramo continuo sin añadiduras antes de preparar el despacho."
+      "pregunta": "¿Cómo se vende?",
+      "respuesta": "Por metro. La cantidad que ingresas en el carro son los metros, y se entregan en un solo tramo."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
     }
   ],
-
   "lateral": {
     "etiqueta": "Cable de acometida",
-    "titulo": "Madeco Concéntrico 2x4 mm²",
-    "texto": "Cable concéntrico de cobre para acometidas monofásicas seguras y duraderas. Cubierta exterior de PVC negro resistente a rayos solares y 600 V de aislación."
+    "titulo": "Cable Concéntrico 2x4 mm² Madeco por Metro",
+    "texto": "Cable concéntrico monofásico 2x4 mm² Madeco por metro: fase central de cobre y neutro concéntrico. Para acometidas de empalmes."
   },
-
   "relacionados": [
+    "cable-concentrico-2x6-mm2-madeco",
     "kit-tablero-electrico-monofasico-12-modulos",
     "interruptor-automatico-20-a"
   ],
   "guias": [
     {
       "url": "/blog/empalme-electrico-y-aumento-de-potencia-en-chile-guia-sec/",
-      "texto": "Guía de empalme eléctrico y potencia SEC"
+      "texto": "Empalme eléctrico y aumento de potencia"
     },
     {
       "url": "/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/",
-      "texto": "Cómo armar un tablero eléctrico domiciliario"
+      "texto": "Cómo armar un tablero eléctrico"
     }
   ],
   "tarjeta": {
-    "titulo": "Cable Concéntrico 2x4 mm² Negro Madeco",
-    "extracto": "Conductor concéntrico de cobre para acometida monofásica. Conductor central y malla exterior en espiral, cubierta PVC negro de 600 V.",
-    "alt": "Cable concéntrico Madeco 2x4 mm² para acometida monofásica",
+    "titulo": "Cable Concéntrico 2x4 mm² Madeco por Metro",
+    "extracto": "Cable concéntrico monofásico 2x4 mm² Madeco por metro: fase central de cobre y neutro concéntrico. Para acometidas de empalmes.",
+    "alt": "Cable Concéntrico 2x4 mm² Madeco por Metro",
     "etiqueta": "Material Eléctrico"
   }
 }

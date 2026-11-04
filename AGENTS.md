@@ -44,6 +44,14 @@ actualizar fichas de productos físicos con el generador**. Nada más.
 - **Coincide con las fotos**: antes de terminar, mira las fotos y revisa que el
   texto calce: color, tipo de manilla (palanca, volante o mariposa), material
   y tipo de válvula. Si la foto muestra una etiqueta o envase con datos, úsalos.
+  El `alt` describe lo que la foto muestra de verdad (no «extremo pelado» si es
+  un rollo). Si la foto trae impresa otra sección, otra cantidad de conductores
+  u otro modelo que el producto, avísale al dueño antes de publicar.
+- **Cables y cordones**: no pongas amperes «según rotulación» si la cubierta no
+  los trae impresos; usa la referencia IEC 60335-1 (0,75 mm² → 6 A; 1 mm² →
+  10 A; 1,5 mm² → 16 A). Los cordones de PVC (H05VV-F, paralelos) no son para
+  intemperie ni para instalación fija; no los recomiendes para soldadoras.
+  La sección de una acometida la define la distribuidora.
 - **Precio**: lo entrega el dueño, o te da un **margen**. Con margen, pon en la
   ficha `precio_referencia` (precio normal, no el de oferta ni el de tarjeta)
   y `margen`, y **no pongas `precio`**: el generador lo calcula y lo redondea a

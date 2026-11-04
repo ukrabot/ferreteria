@@ -2,7 +2,7 @@
   "slug": "cordon-h05vv-f-2x0-75-mm2-negro-10m-elfle",
   "nombre": "Cordón H05VV-F 2x0,75 mm² Negro 10 m ELFLE",
   "titulo_h1": "Cordón H05VV-F 2x0,75 mm² Negro 10 m ELFLE",
-  "titulo_corto": "Cordón H05VV-F 2x0,75 mm² 10 m",
+  "titulo_corto": "Cordón H05VV-F 2x0,75 mm² Negro 10 m ELFLE",
   "marca": "ELFLE",
   "sku": "142855862",
   "precio_referencia": 6290,
@@ -11,137 +11,173 @@
   "subcategoria": "Cordones y extensiones",
   "color": "Negro",
   "disponible": true,
-
   "seo_titulo": "Cordón H05VV-F 2x0,75 mm² Negro 10 m ELFLE",
-  "meta_descripcion": "Compra cordón bipolar H05VV-F 2x0,75 mm² negro 10 m ELFLE a {precio}. Cable flexible de cobre para lámparas y artefactos livianos. Envíos a todo Chile.",
-  "og_descripcion": "Cordón flexible H05VV-F 2x0,75 mm² negro de 10 metros marca ELFLE. Cable bipolar para iluminación y electrodomésticos clase II. Certificación SEC.",
-  "descripcion": "Cordón eléctrico flexible bipolar H05VV-F de 2x0,75 mm² y 10 metros en color negro marca ELFLE. Cuenta con conductores de cobre multifilar y doble aislación de PVC, apto para alimentación de lámparas, ventiladores, fuentes de poder y artefactos de doble aislación de hasta 6 A y 1.320 W a 220 V.",
-  "lede": "¿Buscando un cable liviano, flexible y seguro para reparar una lámpara o armar una conexión de baja potencia? Este **cordón H05VV-F 2x0,75 mm² de 10 metros ELFLE** brinda **doble aislación de PVC**, conductores de cobre fino y certificación SEC para artefactos que no requieren conexión a tierra.",
-
+  "meta_descripcion": "Compra cordón H05VV-F 2x0,75 mm² Negro 10 m ELFLE a {precio}. Cordón flexible H05VV-F 2x0,75 mm² de 10 m, sin tierra, para artefactos de hasta 6 A. Viene sin enchufes.",
+  "og_descripcion": "Cordón flexible H05VV-F 2x0,75 mm² de 10 m, sin tierra, para artefactos de hasta 6 A. Viene sin enchufes.",
+  "descripcion": "Rollo de 10 metros de cordón flexible H05VV-F de 2 conductores de 0,75 mm², color negro, marca ELFLE. Conductores de cobre flexible con aislación de PVC y cubierta redonda de PVC, para 300/500 V. Trae fase y neutro, sin tierra. Sirve para armar alargadores y cambiar el cable de artefactos de hasta 6 A (unos 1.320 W a 220 V). Viene sin enchufes. Garantía de 6 meses.",
+  "lede": "Para armar un alargador a medida o cambiar el cable de un artefacto, este **cordón H05VV-F 2x0,75 mm² de 10 m** ELFLE es flexible y tiene cubierta redonda de PVC. Es de **dos conductores, sin tierra**: úsalo solo en artefactos de doble aislación de hasta **6 A**.",
   "fotos": [
     {
       "url": "https://media.sodimac.cl/sodimacCL/7712944_01/public",
-      "alt": "Rollo de cordón flexible H05VV-F 2x0,75 mm² negro de 10 metros sobre fondo blanco",
-      "miniatura": "Ver rollo de 10 m"
+      "alt": "Rollo de cordón flexible H05VV-F negro",
+      "miniatura": "Ver rollo"
     },
     {
       "url": "https://media.sodimac.cl/sodimacCL/7712944_03/public",
-      "alt": "Detalle del extremo pelado del cordón 2x0,75 mm² mostrando los hilos de cobre",
-      "miniatura": "Ver cobre conductor"
+      "alt": "Rollo de cordón flexible H05VV-F negro, otra vista",
+      "miniatura": "Ver otra vista"
     }
   ],
   "stock": {
     "titulo": "En stock",
     "detalle": "Despacho en 24-48 h hábiles"
   },
-
   "especificaciones": [
-    ["Marca", "ELFLE"],
-    ["Modelo", "H05VV-F flexible bipolar"],
-    ["Número de conductores", "2 (fase y neutro)"],
-    ["Sección del conductor", "0,75 mm²"],
-    ["Largo", "10 metros"],
-    ["Material conductor", "Cobre multifilar clase 5"],
-    ["Aislamiento y cubierta", "Doble capa de PVC flexible negro"],
-    ["Tensión nominal", "300/500 V (servicio 220 V)"],
-    ["Capacidad eléctrica", "6 A / 1.320 W según rotulación"],
-    ["Certificación SEC", "E-013-14-13244 según etiqueta"]
+    [
+      "Marca",
+      "ELFLE"
+    ],
+    [
+      "Tipo",
+      "Cordón flexible H05VV-F (cubierta redonda de PVC)"
+    ],
+    [
+      "Conductores",
+      "2 de 0,75 mm² (fase y neutro, sin tierra)"
+    ],
+    [
+      "Colores internos",
+      "Café y azul"
+    ],
+    [
+      "Largo",
+      "10 m"
+    ],
+    [
+      "Color de la cubierta",
+      "Negro"
+    ],
+    [
+      "Tensión",
+      "300/500 V (H05)"
+    ],
+    [
+      "Uso recomendado",
+      "Artefactos de hasta 6 A (IEC 60335-1)"
+    ],
+    [
+      "Temperatura máxima del conductor",
+      "70 °C"
+    ],
+    [
+      "Terminales",
+      "Sin enchufes: rollo de cable"
+    ],
+    [
+      "Garantía",
+      "6 meses"
+    ]
   ],
   "confianza": [
     {
-      "titulo": "⚡ Hasta 1.320 W",
-      "detalle": "Capacidad de 6 A a 220 V para artefactos Clase II"
+      "titulo": "⚡ Hasta 6 A",
+      "detalle": "Sección 0,75 mm²"
     },
     {
-      "titulo": "🛡️ Doble aislación",
-      "detalle": "Cubierta redonda de PVC mucho más duradera"
+      "titulo": "⚠️ Sin tierra",
+      "detalle": "Solo doble aislación"
     },
     {
       "titulo": "🚚 Envío a todo Chile",
-      "detalle": "Despacho rápido a domicilio o retiro"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🔒 Garantía 6 meses",
-      "detalle": "Garantía legal directa de Ferretería Ukra"
+      "detalle": "Por fallas de fabricación"
     }
   ],
-
   "secciones": [
     {
-      "id": "cuando-utilizar-cordon-2x075",
-      "titulo": "Usos recomendados del cordón bipolar H05VV-F",
-      "indice": "¿Cuándo utilizarlo?",
+      "id": "para-que-sirve",
+      "titulo": "¿Para qué sirve un cordón 2x0,75 mm²?",
+      "indice": "Para qué sirve",
       "bloques": [
         {
-          "p": "A diferencia del cable paralelo simple (SPT), el cordón **H05VV-F** cuenta con una chaqueta externa cilíndrica de PVC que protege las dos fases interiores contra la abrasión, el aplastamiento y los cortes superficiales. Es la opción técnica apropiada para equipos portátiles de bajo consumo."
+          "p": "El H05VV-F es el cordón flexible de uso doméstico: conductores de cobre de hilos finos, cada uno aislado en PVC, dentro de una cubierta redonda también de PVC. Esa cubierta lo protege mejor que un cable paralelo plano cuando se arrastra o se pisa."
         },
         {
           "lista": [
-            "Lámparas de pie, veladores, apliques de muro y luminarias decorativas.",
-            "Ventiladores de pedestal, radios, televisores y cargadores de baterías.",
-            "Pequeños electrodomésticos de plástico con marcado de doble aislación (símbolo de dos cuadrados concéntricos)."
+            "Lámparas de pie, veladores, apliques y luminarias.",
+            "Radios, cargadores, ventiladores y artefactos livianos de doble aislación.",
+            "No sirve para estufas, hervidores ni herramientas: consumen más de 6 A."
           ]
+        },
+        {
+          "p": "Caída de tensión de referencia: con 6 A en los 10 m, la tensión baja cerca de un 1,3 %. En tramos más largos o con cargas mayores, sube a la sección siguiente. Más detalles en la [guía para elegir el grosor del cable de una extensión](/blog/como-elegir-el-grosor-del-cable-para-una-extension-guia-completa/)."
         }
       ]
     },
     {
-      "id": "normas-y-seguridad-bipolar",
-      "titulo": "Criterios de seguridad para cables de dos conductores",
-      "indice": "Seguridad bipolar",
+      "id": "como-usarlo",
+      "titulo": "Cómo usarlo de forma segura",
+      "indice": "Uso seguro",
       "bloques": [
         {
-          "p": "Al utilizar un cable de 2 conductores sin tierra, asegúrate de conectarlo únicamente a equipos que no tengan partes metálicas accesibles susceptibles de quedar energizadas ante una falla. Para armar la clavija, puedes utilizar un [enchufe macho volante 2P](/producto/enchufe-macho-volante-2p-negro-halux) de 10 A."
+          "pasos": [
+            "Desenchufa todo antes de armar el alargador o cambiar el cable.",
+            "Pela unos 8 mm de cada conductor sin cortar los hilos de cobre.",
+            "Conecta el café y el azul en los dos bornes del enchufe 2P.",
+            "Cierra la abrazadera del enchufe sobre la cubierta redonda, no sobre los conductores, para que un tirón no suelte los cables.",
+            "Con cargas altas, desenrolla el cordón completo: enrollado no disipa el calor y la cubierta se puede dañar."
+          ]
         },
         {
-          "advertencia": "Nunca utilices este cable en herramientas de taller metálicas, estufas eléctricas pesadas ni electrodomésticos con chasis conductor que requieran tierra de protección."
-        },
-        {
-          "p": "Aprende más sobre las diferencias de seguridad en nuestra guía sobre [cuándo usar cable o cordón paralelo y cuándo no](/blog/cuando-usar-cable-cordon-paralelo-y-cuando-no-guia-completa/)."
+          "advertencia": "No tiene tierra: no lo uses en artefactos con carcasa metálica, herramientas, estufas ni electrodomésticos que traen enchufe de tres patas. Es para uso interior; no lo dejes instalado al exterior."
         }
       ]
     }
   ],
-
   "faq": [
     {
-      "pregunta": "¿Este cordón sirve para conectar un refrigerador o microondas?",
-      "respuesta": "No, los refrigeradores y microondas tienen chasis metálico y requieren obligatoriamente un cordón de 3 vías con tierra de protección (como el modelo de 3x1,5 mm²)."
+      "pregunta": "¿Qué potencia aguanta?",
+      "respuesta": "Está pensado para artefactos de hasta 6 A, unos 1.320 W a 220 V. Suma la potencia de todo lo que conectes al alargador."
     },
     {
-      "pregunta": "¿Cuál es la potencia máxima que soporta?",
-      "respuesta": "Soporta una corriente nominal de 6 A a 220 V, lo que equivale a una potencia máxima de 1.320 W para artefactos domésticos livianos."
+      "pregunta": "¿Sirve para un refrigerador o un microondas?",
+      "respuesta": "No. Esos artefactos tienen carcasa metálica y necesitan tierra: usa un cordón de tres conductores, como el H05VV-F 3x1 o 3x1,5 mm²."
     },
     {
-      "pregunta": "¿Qué tipo de enchufe se le debe colocar?",
-      "respuesta": "Se utiliza con un enchufe macho de 2 patas cilíndricas sin espiga de tierra (tipo C o 2P de 10 A) apretando firmemente los tornillos prisioneros sobre el cobre multifilar trenzado."
+      "pregunta": "¿Viene con enchufes?",
+      "respuesta": "No. Es un rollo de 10 m de cable: le pones el enchufe macho y la hembra que necesites."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
     }
   ],
-
   "lateral": {
-    "etiqueta": "Cordón bipolar",
-    "titulo": "ELFLE H05VV-F 2x0,75 mm² 10 m",
-    "texto": "Cordón flexible de 2 conductores con doble aislación de PVC. Ideal para lámparas y equipos livianos de hasta 1.320 W con certificación SEC E-013-14-13244."
+    "etiqueta": "Cordón eléctrico",
+    "titulo": "Cordón H05VV-F 2x0,75 mm² Negro 10 m ELFLE",
+    "texto": "Cordón flexible H05VV-F 2x0,75 mm² de 10 m, sin tierra, para artefactos de hasta 6 A. Viene sin enchufes."
   },
-
   "relacionados": [
     "enchufe-macho-volante-2p-negro-halux",
-    "enchufe-macho-volante-profesional-2p-10a-gris-btic",
-    "cordon-h05vv-f-3x1-5-mm2-negro-10m-elfle"
+    "cordon-h05vv-f-2x0-75-mm2-blanco-10m-elfle"
   ],
   "guias": [
     {
-      "url": "/blog/cuando-usar-cable-cordon-paralelo-y-cuando-no-guia-completa/",
-      "texto": "Cuándo usar cordón paralelo y cuándo no"
+      "url": "/blog/como-elegir-el-grosor-del-cable-para-una-extension-guia-completa/",
+      "texto": "Grosor del cable para una extensión"
     },
     {
-      "url": "/blog/como-elegir-el-grosor-del-cable-para-una-extension-guia-completa/",
-      "texto": "Cómo elegir el grosor de cable para extensiones"
+      "url": "/blog/cuando-usar-cable-cordon-paralelo-y-cuando-no-guia-completa/",
+      "texto": "Cuándo usar cordón paralelo y cuándo no"
     }
   ],
   "tarjeta": {
     "titulo": "Cordón H05VV-F 2x0,75 mm² Negro 10 m ELFLE",
-    "extracto": "Cordón flexible bipolar para lámparas y artefactos livianos de doble aislación. 6 A / 1.320 W, 10 metros, certificación SEC E-013-14-13244.",
-    "alt": "Cordón eléctrico flexible H05VV-F 2x0,75 mm² negro 10 metros ELFLE",
+    "extracto": "Cordón flexible H05VV-F 2x0,75 mm² de 10 m, sin tierra, para artefactos de hasta 6 A. Viene sin enchufes.",
+    "alt": "Cordón H05VV-F 2x0,75 mm² Negro 10 m ELFLE",
     "etiqueta": "Material Eléctrico"
   }
 }

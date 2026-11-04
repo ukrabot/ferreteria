@@ -2,7 +2,7 @@
   "slug": "cordon-h05vv-f-2x0-75-mm2-blanco-10m-elfle",
   "nombre": "Cordón H05VV-F 2x0,75 mm² Blanco 10 m ELFLE",
   "titulo_h1": "Cordón H05VV-F 2x0,75 mm² Blanco 10 m ELFLE",
-  "titulo_corto": "Cordón H05VV-F 2x0,75 mm² Blanco 10 m",
+  "titulo_corto": "Cordón H05VV-F 2x0,75 mm² Blanco 10 m ELFLE",
   "marca": "ELFLE",
   "sku": "142855864",
   "precio_referencia": 6290,
@@ -11,127 +11,163 @@
   "subcategoria": "Cordones y extensiones",
   "color": "Blanco",
   "disponible": true,
-
   "seo_titulo": "Cordón H05VV-F 2x0,75 mm² Blanco 10 m ELFLE",
-  "meta_descripcion": "Compra cordón bipolar H05VV-F 2x0,75 mm² blanco 10 m ELFLE a {precio}. Cable flexible estético para lámparas y electrodomésticos. Envíos a todo Chile.",
-  "og_descripcion": "Cordón flexible H05VV-F 2x0,75 mm² blanco de 10 metros ELFLE. Doble aislamiento para luminarias de techo y veladores. Certificado SEC E-013-14-13244.",
-  "descripcion": "Cordón eléctrico flexible bipolar H05VV-F de 2x0,75 mm² y 10 metros en color blanco marca ELFLE. Diseñado para instalaciones visibles sobre muros claros, lámparas colgantes, veladores y artefactos decorativos de doble aislación, con capacidad hasta 6 A y 1.320 W a 220 V.",
-  "lede": "¿Necesitas cablear una lámpara colgante o cambiar el cable de un velador sin que desentone con tus paredes? Este **cordón H05VV-F 2x0,75 mm² blanco de 10 metros ELFLE** ofrece una terminación estética limpia, **doble aislación de PVC** y certificación SEC oficial para conexiones residenciales.",
-
+  "meta_descripcion": "Compra cordón H05VV-F 2x0,75 mm² Blanco 10 m ELFLE a {precio}. Cordón flexible H05VV-F 2x0,75 mm² de 10 m, sin tierra, para artefactos de hasta 6 A. Viene sin enchufes.",
+  "og_descripcion": "Cordón flexible H05VV-F 2x0,75 mm² de 10 m, sin tierra, para artefactos de hasta 6 A. Viene sin enchufes.",
+  "descripcion": "Rollo de 10 metros de cordón flexible H05VV-F de 2 conductores de 0,75 mm², color blanco, marca ELFLE. Conductores de cobre flexible con aislación de PVC y cubierta redonda de PVC, para 300/500 V. Trae fase y neutro, sin tierra. Sirve para armar alargadores y cambiar el cable de artefactos de hasta 6 A (unos 1.320 W a 220 V). Viene sin enchufes. Garantía de 6 meses.",
+  "lede": "Para armar un alargador a medida o cambiar el cable de un artefacto, este **cordón H05VV-F 2x0,75 mm² de 10 m** ELFLE es flexible y tiene cubierta redonda de PVC. Es de **dos conductores, sin tierra**: úsalo solo en artefactos de doble aislación de hasta **6 A**.",
   "fotos": [
     {
       "url": "https://media.sodimac.cl/sodimacCL/7712928_01/public",
-      "alt": "Rollo de cordón eléctrico H05VV-F 2x0,75 mm² blanco de 10 metros sobre fondo blanco",
-      "miniatura": "Ver rollo blanco 10 m"
+      "alt": "Rollo de cordón flexible H05VV-F blanco",
+      "miniatura": "Ver rollo"
     },
     {
       "url": "https://media.sodimac.cl/sodimacCL/7712928_03/public",
-      "alt": "Extremo pelado del cordón blanco 2x0,75 mm² exhibiendo el cobre multifilar",
-      "miniatura": "Ver detalle de conductores"
+      "alt": "Rollo de cordón flexible H05VV-F blanco, otra vista",
+      "miniatura": "Ver otra vista"
     }
   ],
   "stock": {
     "titulo": "En stock",
     "detalle": "Despacho en 24-48 h hábiles"
   },
-
   "especificaciones": [
-    ["Marca", "ELFLE"],
-    ["Modelo", "H05VV-F flexible bipolar"],
-    ["Número de conductores", "2 (fase y neutro)"],
-    ["Sección del conductor", "0,75 mm²"],
-    ["Largo", "10 metros"],
-    ["Material conductor", "Cobre electrolítico multifilar clase 5"],
-    ["Aislamiento y cubierta", "Doble capa de PVC flexible blanco"],
-    ["Tensión nominal", "300/500 V (servicio 220 V)"],
-    ["Capacidad eléctrica", "6 A / 1.320 W según rotulación"],
-    ["Certificación SEC", "E-013-14-13244 según etiqueta"]
+    [
+      "Marca",
+      "ELFLE"
+    ],
+    [
+      "Tipo",
+      "Cordón flexible H05VV-F (cubierta redonda de PVC)"
+    ],
+    [
+      "Conductores",
+      "2 de 0,75 mm² (fase y neutro, sin tierra)"
+    ],
+    [
+      "Colores internos",
+      "Café y azul"
+    ],
+    [
+      "Largo",
+      "10 m"
+    ],
+    [
+      "Color de la cubierta",
+      "Blanco"
+    ],
+    [
+      "Tensión",
+      "300/500 V (H05)"
+    ],
+    [
+      "Uso recomendado",
+      "Artefactos de hasta 6 A (IEC 60335-1)"
+    ],
+    [
+      "Temperatura máxima del conductor",
+      "70 °C"
+    ],
+    [
+      "Terminales",
+      "Sin enchufes: rollo de cable"
+    ],
+    [
+      "Garantía",
+      "6 meses"
+    ]
   ],
   "confianza": [
     {
-      "titulo": "⚡ Estética blanca",
-      "detalle": "Ideal para muros claros y lámparas decorativas"
+      "titulo": "⚡ Hasta 6 A",
+      "detalle": "Sección 0,75 mm²"
     },
     {
-      "titulo": "🛡️ Doble aislación",
-      "detalle": "Cubierta redonda de PVC flexible y duradera"
+      "titulo": "⚠️ Sin tierra",
+      "detalle": "Solo doble aislación"
     },
     {
       "titulo": "🚚 Envío a todo Chile",
-      "detalle": "Despacho rápido a domicilio o retiro"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🔒 Garantía 6 meses",
-      "detalle": "Garantía legal directa de Ferretería Ukra"
+      "detalle": "Por fallas de fabricación"
     }
   ],
-
   "secciones": [
     {
-      "id": "ventajas-del-acabado-blanco",
-      "titulo": "¿Por qué elegir cordón redondo blanco para iluminación?",
-      "indice": "¿Por qué cordón blanco?",
+      "id": "para-que-sirve",
+      "titulo": "¿Para qué sirve un cordón 2x0,75 mm²?",
+      "indice": "Para qué sirve",
       "bloques": [
         {
-          "p": "En proyectos de decoración e interiorismo, los cables negros o planos suelen verse desprolijos al descolgar lámparas de techo o recorrer rodapiés y molduras. La cubierta blanca cilíndrica del **H05VV-F** se integra discretamente a cielos y muros pintados en tonos claros, manteniendo un estándar técnico superior al cable paralelo tradicional."
+          "p": "El H05VV-F es el cordón flexible de uso doméstico: conductores de cobre de hilos finos, cada uno aislado en PVC, dentro de una cubierta redonda también de PVC. Esa cubierta lo protege mejor que un cable paralelo plano cuando se arrastra o se pisa. Este es de color blanco, para que quede discreto sobre muros y zócalos claros."
         },
         {
           "lista": [
-            "Instalación de lámparas colgantes, campanas de techo y apliques de sobremesa.",
-            "Alimentación de repisas iluminadas, vitrinas y tiras o proyectores LED.",
-            "Restauración de electrodomésticos blancos pequeños como ventiladores o batidoras."
+            "Lámparas de pie, veladores, apliques y luminarias.",
+            "Radios, cargadores, ventiladores y artefactos livianos de doble aislación.",
+            "No sirve para estufas, hervidores ni herramientas: consumen más de 6 A."
           ]
+        },
+        {
+          "p": "Caída de tensión de referencia: con 6 A en los 10 m, la tensión baja cerca de un 1,3 %. En tramos más largos o con cargas mayores, sube a la sección siguiente. Más detalles en la [guía para elegir el grosor del cable de una extensión](/blog/como-elegir-el-grosor-del-cable-para-una-extension-guia-completa/)."
         }
       ]
     },
     {
-      "id": "consejos-de-instalacion",
-      "titulo": "Montaje seguro en lámparas y conexiones móviles",
-      "indice": "Montaje seguro",
+      "id": "como-usarlo",
+      "titulo": "Cómo usarlo de forma segura",
+      "indice": "Uso seguro",
       "bloques": [
         {
-          "p": "Al conectar este cable al florón de una lámpara colgante o a un [enchufe macho volante 2P blanco](/producto/enchufe-macho-volante-2p-blanco-halux), asegúrate de usar un prensacables o nudo de retención que evite que el peso de la pantalla cuelgue de los terminales eléctricos de cobre."
+          "pasos": [
+            "Desenchufa todo antes de armar el alargador o cambiar el cable.",
+            "Pela unos 8 mm de cada conductor sin cortar los hilos de cobre.",
+            "Conecta el café y el azul en los dos bornes del enchufe 2P.",
+            "Cierra la abrazadera del enchufe sobre la cubierta redonda, no sobre los conductores, para que un tirón no suelte los cables.",
+            "Con cargas altas, desenrolla el cordón completo: enrollado no disipa el calor y la cubierta se puede dañar."
+          ]
         },
         {
-          "advertencia": "Este conductor bipolar no cuenta con cable de tierra. No lo uses en artefactos metálicos que requieran conexión de puesta a tierra reglamentaria."
-        },
-        {
-          "p": "Si vas a colgar una lámpara, revisa el paso a paso en nuestra [guía completa para instalar una lámpara colgante en el techo](/blog/guia-completa-para-instalar-una-lampara-colgante-en-el-techo/)."
+          "advertencia": "No tiene tierra: no lo uses en artefactos con carcasa metálica, herramientas, estufas ni electrodomésticos que traen enchufe de tres patas. Es para uso interior; no lo dejes instalado al exterior."
         }
       ]
     }
   ],
-
   "faq": [
     {
-      "pregunta": "¿El color blanco se ensucia o mancha con el tiempo?",
-      "respuesta": "El PVC exterior tiene un acabado liso y no poroso que se limpia fácilmente con un paño ligeramente humedecido, resistiendo el amarilleo en ambientes de interior."
+      "pregunta": "¿Qué potencia aguanta?",
+      "respuesta": "Está pensado para artefactos de hasta 6 A, unos 1.320 W a 220 V. Suma la potencia de todo lo que conectes al alargador."
     },
     {
-      "pregunta": "¿Sirve para tender por canaletas o molduras plásticas?",
-      "respuesta": "Sí, gracias a su diámetro reducido y flexibilidad entra de forma cómoda en molduras y canaletas de superficie de 10x10 mm o 20x10 mm."
+      "pregunta": "¿Sirve para un refrigerador o un microondas?",
+      "respuesta": "No. Esos artefactos tienen carcasa metálica y necesitan tierra: usa un cordón de tres conductores, como el H05VV-F 3x1 o 3x1,5 mm²."
     },
     {
-      "pregunta": "¿Qué enchufe combina mejor con este cable?",
-      "respuesta": "Recomendamos armarlo con un enchufe macho volante blanco de 2 patas para mantener la armonía de color en toda la extensión."
+      "pregunta": "¿Viene con enchufes?",
+      "respuesta": "No. Es un rollo de 10 m de cable: le pones el enchufe macho y la hembra que necesites."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
     }
   ],
-
   "lateral": {
-    "etiqueta": "Cordón decorativo",
-    "titulo": "ELFLE H05VV-F 2x0,75 mm² Blanco",
-    "texto": "Cordón flexible blanco de doble aislación para lámparas y equipos livianos. Resiste hasta 1.320 W y cuenta con certificación SEC oficial E-013-14-13244."
+    "etiqueta": "Cordón eléctrico",
+    "titulo": "Cordón H05VV-F 2x0,75 mm² Blanco 10 m ELFLE",
+    "texto": "Cordón flexible H05VV-F 2x0,75 mm² de 10 m, sin tierra, para artefactos de hasta 6 A. Viene sin enchufes."
   },
-
   "relacionados": [
     "enchufe-macho-volante-2p-blanco-halux",
-    "enchufe-macho-volante-10a-blanco-convertible-salva",
     "cordon-h05vv-f-2x0-75-mm2-negro-10m-elfle"
   ],
   "guias": [
     {
-      "url": "/blog/guia-completa-para-instalar-una-lampara-colgante-en-el-techo/",
-      "texto": "Guía para instalar lámpara colgante"
+      "url": "/blog/como-elegir-el-grosor-del-cable-para-una-extension-guia-completa/",
+      "texto": "Grosor del cable para una extensión"
     },
     {
       "url": "/blog/cuando-usar-cable-cordon-paralelo-y-cuando-no-guia-completa/",
@@ -140,8 +176,8 @@
   ],
   "tarjeta": {
     "titulo": "Cordón H05VV-F 2x0,75 mm² Blanco 10 m ELFLE",
-    "extracto": "Cordón flexible bipolar blanco para lámparas y artefactos livianos. 6 A / 1.320 W, 10 metros, certificación SEC E-013-14-13244.",
-    "alt": "Cordón eléctrico flexible H05VV-F 2x0,75 mm² blanco 10 metros ELFLE",
+    "extracto": "Cordón flexible H05VV-F 2x0,75 mm² de 10 m, sin tierra, para artefactos de hasta 6 A. Viene sin enchufes.",
+    "alt": "Cordón H05VV-F 2x0,75 mm² Blanco 10 m ELFLE",
     "etiqueta": "Material Eléctrico"
   }
 }

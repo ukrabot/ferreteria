@@ -2,7 +2,7 @@
   "slug": "cordon-h05vv-f-3x1-mm2-negro-10m-elfle",
   "nombre": "Cordón H05VV-F 3x1 mm² Negro 10 m ELFLE",
   "titulo_h1": "Cordón H05VV-F 3x1 mm² Negro 10 m ELFLE",
-  "titulo_corto": "Cordón H05VV-F 3x1 mm² 10 m",
+  "titulo_corto": "Cordón H05VV-F 3x1 mm² Negro 10 m ELFLE",
   "marca": "ELFLE",
   "sku": "142855854",
   "precio_referencia": 18990,
@@ -11,137 +11,174 @@
   "subcategoria": "Cordones y extensiones",
   "color": "Negro",
   "disponible": true,
-
   "seo_titulo": "Cordón H05VV-F 3x1 mm² Negro 10 m ELFLE",
-  "meta_descripcion": "Compra cordón H05VV-F 3x1 mm² negro 10 m ELFLE a {precio}. Cable flexible con tierra de protección para alargadores de 10 A y 2.200 W. Envíos a todo Chile.",
-  "og_descripcion": "Cordón flexible H05VV-F 3x1 mm² negro de 10 m ELFLE. Conductor de cobre con tierra para extensiones domiciliarias de 10 A. Certificación SEC E-013-14-13244.",
-  "descripcion": "Cordón eléctrico flexible H05VV-F de 3x1,0 mm² y 10 metros en color negro marca ELFLE. Diseñado con tres conductores de cobre electrolítico multifilar y cubierta de PVC resistente para armar extensiones residenciales, zapatillas y conectar electrodomésticos con conexión a tierra de hasta 10 A y 2.200 W a 220 V.",
-  "lede": "¿Necesitas un cable versátil para armar una extensión de enchufe tradicional de 10 A o renovar la conexión de un electrodoméstico? Este **cordón H05VV-F 3x1 mm² de 10 metros ELFLE** ofrece **tres vías con tierra**, excelente flexibilidad y certificación SEC oficial para el hogar.",
-
+  "meta_descripcion": "Compra cordón H05VV-F 3x1 mm² Negro 10 m ELFLE a {precio}. Cordón flexible H05VV-F 3x1 mm² de 10 m, con tierra, para artefactos de hasta 10 A. Viene sin enchufes.",
+  "og_descripcion": "Cordón flexible H05VV-F 3x1 mm² de 10 m, con tierra, para artefactos de hasta 10 A. Viene sin enchufes.",
+  "descripcion": "Rollo de 10 metros de cordón flexible H05VV-F de 3 conductores de 1 mm², color negro, marca ELFLE. Conductores de cobre flexible con aislación de PVC y cubierta redonda de PVC, para 300/500 V. Trae fase, neutro y tierra (verde-amarillo). Sirve para armar alargadores y cambiar el cable de artefactos de hasta 10 A (unos 2.200 W a 220 V). Viene sin enchufes. Garantía de 6 meses.",
+  "lede": "Para armar un alargador a medida o cambiar el cable de un artefacto, este **cordón H05VV-F 3x1 mm² de 10 m** ELFLE es flexible y tiene cubierta redonda de PVC. Sus **tres conductores incluyen la tierra**, y la sección de 1 mm² sirve para **artefactos de hasta 10 A (unos 2.200 W a 220 V)**.",
   "fotos": [
     {
       "url": "https://media.sodimac.cl/sodimacCL/7712952_01/public",
-      "alt": "Rollo de cordón eléctrico H05VV-F 3x1 mm² negro de 10 metros sobre fondo blanco",
-      "miniatura": "Ver rollo de 10 m"
+      "alt": "Rollo de cordón flexible H05VV-F negro",
+      "miniatura": "Ver rollo"
     },
     {
       "url": "https://media.sodimac.cl/sodimacCL/7712952_03/public",
-      "alt": "Extremo pelado del cordón 3x1 mm² con los tres conductores de cobre expuestos",
-      "miniatura": "Ver conductores internos"
+      "alt": "Rollo de cordón flexible H05VV-F negro, otra vista",
+      "miniatura": "Ver otra vista"
     }
   ],
   "stock": {
     "titulo": "En stock",
     "detalle": "Despacho en 24-48 h hábiles"
   },
-
   "especificaciones": [
-    ["Marca", "ELFLE"],
-    ["Modelo", "H05VV-F flexible con tierra"],
-    ["Número de conductores", "3 (fase, neutro y tierra de protección)"],
-    ["Sección del conductor", "1,0 mm²"],
-    ["Largo", "10 metros"],
-    ["Material conductor", "Cobre electrolítico multifilar clase 5"],
-    ["Aislamiento y cubierta", "PVC flexible resistente al uso continuo"],
-    ["Tensión nominal", "300/500 V (servicio 220 V)"],
-    ["Capacidad eléctrica", "10 A / 2.200 W según rotulación"],
-    ["Certificación SEC", "E-013-14-13244 según etiqueta"]
+    [
+      "Marca",
+      "ELFLE"
+    ],
+    [
+      "Tipo",
+      "Cordón flexible H05VV-F (cubierta redonda de PVC)"
+    ],
+    [
+      "Conductores",
+      "3 de 1 mm² (fase, neutro y tierra)"
+    ],
+    [
+      "Colores internos",
+      "Café, azul y verde-amarillo"
+    ],
+    [
+      "Largo",
+      "10 m"
+    ],
+    [
+      "Color de la cubierta",
+      "Negro"
+    ],
+    [
+      "Tensión",
+      "300/500 V (H05)"
+    ],
+    [
+      "Uso recomendado",
+      "Artefactos de hasta 10 A (IEC 60335-1)"
+    ],
+    [
+      "Temperatura máxima del conductor",
+      "70 °C"
+    ],
+    [
+      "Terminales",
+      "Sin enchufes: rollo de cable"
+    ],
+    [
+      "Garantía",
+      "6 meses"
+    ]
   ],
   "confianza": [
     {
-      "titulo": "⚡ Estándar 10 A",
-      "detalle": "Calce exacto para enchufes domiciliarios chilenos"
+      "titulo": "⚡ Hasta 10 A",
+      "detalle": "Sección 1 mm²"
     },
     {
-      "titulo": "🛡️ Conexión a tierra",
-      "detalle": "Protege a los usuarios contra derivaciones eléctricas"
+      "titulo": "⏚ Con tierra",
+      "detalle": "Conductor verde-amarillo"
     },
     {
       "titulo": "🚚 Envío a todo Chile",
-      "detalle": "Despacho rápido a domicilio o retiro"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🔒 Garantía 6 meses",
-      "detalle": "Garantía legal directa de Ferretería Ukra"
+      "detalle": "Por fallas de fabricación"
     }
   ],
-
   "secciones": [
     {
-      "id": "por-que-elegir-calibre-1mm2",
-      "titulo": "¿Cuándo es ideal el calibre 3x1 mm²?",
-      "indice": "¿Por qué 1 mm²?",
+      "id": "para-que-sirve",
+      "titulo": "¿Para qué sirve un cordón 3x1 mm²?",
+      "indice": "Para qué sirve",
       "bloques": [
         {
-          "p": "El calibre de **1,0 mm²** coincide de forma exacta con la capacidad máxima de las tomas y clavijas estándar de 10 A utilizadas en los hogares chilenos. Proporciona una capacidad de transporte de hasta 2.200 W, siendo más ligero y maniobrable que un cordón de 1,5 mm² sin sacrificar la seguridad de la puesta a tierra."
+          "p": "El H05VV-F es el cordón flexible de uso doméstico: conductores de cobre de hilos finos, cada uno aislado en PVC, dentro de una cubierta redonda también de PVC. Esa cubierta lo protege mejor que un cable paralelo plano cuando se arrastra o se pisa."
         },
         {
           "lista": [
-            "Confección de alargadores domiciliarios para computadores, impresoras, pantallas y sistemas de entretenimiento.",
-            "Alimentación de electrodomésticos de cocina con toma a tierra, como cafeteras, tostadores o procesadoras.",
-            "Conexión de herramientas eléctricas livianas como lijadoras orbitales, caladoras o pistolas de calor."
+            "Alargadores para computadores, televisores, impresoras y equipos de oficina.",
+            "Artefactos de cocina de hasta unos 2.200 W, como cafeteras o tostadoras.",
+            "Herramientas livianas: lijadoras, caladoras o taladros pequeños."
           ]
+        },
+        {
+          "p": "Caída de tensión de referencia: con 10 A en los 10 m, la tensión baja cerca de un 1,6 %. En tramos más largos o con cargas mayores, sube a la sección siguiente. Más detalles en la [guía para elegir el grosor del cable de una extensión](/blog/como-elegir-el-grosor-del-cable-para-una-extension-guia-completa/)."
         }
       ]
     },
     {
-      "id": "armado-y-seguridad-domiciliaria",
-      "titulo": "Consejos para armar alargadores seguros",
-      "indice": "Armado seguro",
+      "id": "como-usarlo",
+      "titulo": "Cómo usarlo de forma segura",
+      "indice": "Uso seguro",
       "bloques": [
         {
-          "p": "Para confeccionar una extensión segura, une este cordón a un [enchufe macho de 10 A con tierra](/producto/enchufe-macho-volante-2p-t-10-a-negro-bticino) y a un [alargador de 4 tomas sin cable](/producto/alargador-4-tomas-sin-cable-halux). Asegúrate de conectar el conductor verde o verde-amarillo al borne central de tierra."
+          "pasos": [
+            "Desenchufa todo antes de armar el alargador o cambiar el cable.",
+            "Pela unos 8 mm de cada conductor sin cortar los hilos de cobre.",
+            "Conecta el café (fase) y el azul (neutro) en los bornes laterales del enchufe y el verde-amarillo en el borne central de tierra.",
+            "Cierra la abrazadera del enchufe sobre la cubierta redonda, no sobre los conductores, para que un tirón no suelte los cables.",
+            "Con cargas altas, desenrolla el cordón completo: enrollado no disipa el calor y la cubierta se puede dañar."
+          ]
         },
         {
-          "advertencia": "No sobrepases los 2.200 W de consumo total en el alargador. Si vas a conectar artefactos de alto consumo continuo, prefiere cordón de 1,5 mm² o 2,5 mm²."
-        },
-        {
-          "p": "Consulta las recomendaciones oficiales en nuestra guía práctica sobre [cómo instalar un enchufe en Chile de forma segura](/blog/como-instalar-un-enchufe-en-chile-guia-segura/)."
+          "advertencia": "Es un cordón para uso interior y trabajos temporales al exterior. No lo dejes instalado al sol o a la lluvia: para uso permanente al exterior u obra se usa cordón de goma H07RN-F. No lo embutas en muros ni lo uses como instalación fija."
         }
       ]
     }
   ],
-
   "faq": [
     {
-      "pregunta": "¿Qué diferencia tiene con el cordón de 1,5 mm²?",
-      "respuesta": "El cordón de 1,0 mm² está limitado a 10 A (2.200 W) y tiene un diámetro menor, haciéndolo más flexible y fácil de guardar, mientras que el de 1,5 mm² soporta hasta 16 A (3.520 W) para herramientas pesadas."
+      "pregunta": "¿Qué potencia aguanta?",
+      "respuesta": "Está pensado para artefactos de hasta 10 A, unos 2.200 W a 220 V. Suma la potencia de todo lo que conectes al alargador."
     },
     {
-      "pregunta": "¿Los conductores interiores vienen identificados por color?",
-      "respuesta": "Sí, cada hilo viene aislado en PVC con los colores reglamentarios: marrón o negro para fase, azul o blanco para neutro y verde-amarillo para tierra de protección."
+      "pregunta": "¿Trae tierra?",
+      "respuesta": "Sí. Tiene tres conductores: café (fase), azul (neutro) y verde-amarillo (tierra). La tierra va al borne central del enchufe chileno."
     },
     {
-      "pregunta": "¿Sirve para tenderlo dentro de muros?",
-      "respuesta": "No, los cordones flexibles H05VV-F están diseñados para uso móvil, exterior o extensiones, no como cableado rígido embutido en tuberías fijas según norma SEC."
+      "pregunta": "¿Viene con enchufes?",
+      "respuesta": "No. Es un rollo de 10 m de cable: le pones el enchufe macho y la hembra que necesites."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones de Chile?",
+      "respuesta": "Sí, despachamos a todo Chile. Puedes comprar en línea o escribirnos por WhatsApp."
     }
   ],
-
   "lateral": {
-    "etiqueta": "Cordón 10 A",
-    "titulo": "ELFLE H05VV-F 3x1 mm² Negro",
-    "texto": "Cordón flexible con tierra para alargadores y electrodomésticos de hasta 10 A (2.200 W). Con certificación SEC oficial E-013-14-13244."
+    "etiqueta": "Cordón eléctrico",
+    "titulo": "Cordón H05VV-F 3x1 mm² Negro 10 m ELFLE",
+    "texto": "Cordón flexible H05VV-F 3x1 mm² de 10 m, con tierra, para artefactos de hasta 10 A. Viene sin enchufes."
   },
-
   "relacionados": [
     "enchufe-macho-volante-2p-t-10-a-negro-bticino",
     "alargador-4-tomas-sin-cable-halux",
-    "cordon-h05vv-f-3x1-5-mm2-negro-10m-elfle"
+    "cordon-h05vv-f-3x1-mm2-blanco-10m-elfle"
   ],
   "guias": [
     {
       "url": "/blog/como-elegir-el-grosor-del-cable-para-una-extension-guia-completa/",
-      "texto": "Cómo elegir el grosor de cable para extensión"
+      "texto": "Grosor del cable para una extensión"
     },
     {
-      "url": "/blog/como-instalar-un-enchufe-en-chile-guia-segura/",
-      "texto": "Guía segura de instalación de enchufes"
+      "url": "/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/",
+      "texto": "Código de colores de cables"
     }
   ],
   "tarjeta": {
     "titulo": "Cordón H05VV-F 3x1 mm² Negro 10 m ELFLE",
-    "extracto": "Cordón flexible de 3 vías con tierra para extensiones residenciales. 10 A / 2.200 W, 10 metros, certificación SEC E-013-14-13244.",
-    "alt": "Cordón eléctrico flexible H05VV-F 3x1 mm² negro de 10 metros ELFLE",
+    "extracto": "Cordón flexible H05VV-F 3x1 mm² de 10 m, con tierra, para artefactos de hasta 10 A. Viene sin enchufes.",
+    "alt": "Cordón H05VV-F 3x1 mm² Negro 10 m ELFLE",
     "etiqueta": "Material Eléctrico"
   }
 }
