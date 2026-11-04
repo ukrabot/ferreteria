@@ -1,0 +1,147 @@
+{
+  "slug": "cordon-h05vv-f-2x0-75-mm2-blanco-10m-elfle",
+  "nombre": "Cordón H05VV-F 2x0,75 mm² Blanco 10 m ELFLE",
+  "titulo_h1": "Cordón H05VV-F 2x0,75 mm² Blanco 10 m ELFLE",
+  "titulo_corto": "Cordón H05VV-F 2x0,75 mm² Blanco 10 m",
+  "marca": "ELFLE",
+  "sku": "142855864",
+  "precio_referencia": 6290,
+  "margen": 50,
+  "categoria": "electricidad",
+  "subcategoria": "Cordones y extensiones",
+  "color": "Blanco",
+  "disponible": true,
+
+  "seo_titulo": "Cordón H05VV-F 2x0,75 mm² Blanco 10 m ELFLE",
+  "meta_descripcion": "Compra cordón bipolar H05VV-F 2x0,75 mm² blanco 10 m ELFLE a {precio}. Cable flexible estético para lámparas y electrodomésticos. Envíos a todo Chile.",
+  "og_descripcion": "Cordón flexible H05VV-F 2x0,75 mm² blanco de 10 metros ELFLE. Doble aislamiento para luminarias de techo y veladores. Certificado SEC E-013-14-13244.",
+  "descripcion": "Cordón eléctrico flexible bipolar H05VV-F de 2x0,75 mm² y 10 metros en color blanco marca ELFLE. Diseñado para instalaciones visibles sobre muros claros, lámparas colgantes, veladores y artefactos decorativos de doble aislación, con capacidad hasta 6 A y 1.320 W a 220 V.",
+  "lede": "¿Necesitas cablear una lámpara colgante o cambiar el cable de un velador sin que desentone con tus paredes? Este **cordón H05VV-F 2x0,75 mm² blanco de 10 metros ELFLE** ofrece una terminación estética limpia, **doble aislación de PVC** y certificación SEC oficial para conexiones residenciales.",
+
+  "fotos": [
+    {
+      "url": "https://media.sodimac.cl/sodimacCL/7712928_01/public",
+      "alt": "Rollo de cordón eléctrico H05VV-F 2x0,75 mm² blanco de 10 metros sobre fondo blanco",
+      "miniatura": "Ver rollo blanco 10 m"
+    },
+    {
+      "url": "https://media.sodimac.cl/sodimacCL/7712928_03/public",
+      "alt": "Extremo pelado del cordón blanco 2x0,75 mm² exhibiendo el cobre multifilar",
+      "miniatura": "Ver detalle de conductores"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+
+  "especificaciones": [
+    ["Marca", "ELFLE"],
+    ["Modelo", "H05VV-F flexible bipolar"],
+    ["Número de conductores", "2 (fase y neutro)"],
+    ["Sección del conductor", "0,75 mm²"],
+    ["Largo", "10 metros"],
+    ["Material conductor", "Cobre electrolítico multifilar clase 5"],
+    ["Aislamiento y cubierta", "Doble capa de PVC flexible blanco"],
+    ["Tensión nominal", "300/500 V (servicio 220 V)"],
+    ["Capacidad eléctrica", "6 A / 1.320 W según rotulación"],
+    ["Certificación SEC", "E-013-14-13244 según etiqueta"]
+  ],
+  "confianza": [
+    {
+      "titulo": "⚡ Estética blanca",
+      "detalle": "Ideal para muros claros y lámparas decorativas"
+    },
+    {
+      "titulo": "🛡️ Doble aislación",
+      "detalle": "Cubierta redonda de PVC flexible y duradera"
+    },
+    {
+      "titulo": "🚚 Envío a todo Chile",
+      "detalle": "Despacho rápido a domicilio o retiro"
+    },
+    {
+      "titulo": "🔒 Garantía 6 meses",
+      "detalle": "Garantía legal directa de Ferretería Ukra"
+    }
+  ],
+
+  "secciones": [
+    {
+      "id": "ventajas-del-acabado-blanco",
+      "titulo": "¿Por qué elegir cordón redondo blanco para iluminación?",
+      "indice": "¿Por qué cordón blanco?",
+      "bloques": [
+        {
+          "p": "En proyectos de decoración e interiorismo, los cables negros o planos suelen verse desprolijos al descolgar lámparas de techo o recorrer rodapiés y molduras. La cubierta blanca cilíndrica del **H05VV-F** se integra discretamente a cielos y muros pintados en tonos claros, manteniendo un estándar técnico superior al cable paralelo tradicional."
+        },
+        {
+          "lista": [
+            "Instalación de lámparas colgantes, campanas de techo y apliques de sobremesa.",
+            "Alimentación de repisas iluminadas, vitrinas y tiras o proyectores LED.",
+            "Restauración de electrodomésticos blancos pequeños como ventiladores o batidoras."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "consejos-de-instalacion",
+      "titulo": "Montaje seguro en lámparas y conexiones móviles",
+      "indice": "Montaje seguro",
+      "bloques": [
+        {
+          "p": "Al conectar este cable al florón de una lámpara colgante o a un [enchufe macho volante 2P blanco](/producto/enchufe-macho-volante-2p-blanco-halux), asegúrate de usar un prensacables o nudo de retención que evite que el peso de la pantalla cuelgue de los terminales eléctricos de cobre."
+        },
+        {
+          "advertencia": "Este conductor bipolar no cuenta con cable de tierra. No lo uses en artefactos metálicos que requieran conexión de puesta a tierra reglamentaria."
+        },
+        {
+          "p": "Si vas a colgar una lámpara, revisa el paso a paso en nuestra [guía completa para instalar una lámpara colgante en el techo](/blog/guia-completa-para-instalar-una-lampara-colgante-en-el-techo/)."
+        }
+      ]
+    }
+  ],
+
+  "faq": [
+    {
+      "pregunta": "¿El color blanco se ensucia o mancha con el tiempo?",
+      "respuesta": "El PVC exterior tiene un acabado liso y no poroso que se limpia fácilmente con un paño ligeramente humedecido, resistiendo el amarilleo en ambientes de interior."
+    },
+    {
+      "pregunta": "¿Sirve para tender por canaletas o molduras plásticas?",
+      "respuesta": "Sí, gracias a su diámetro reducido y flexibilidad entra de forma cómoda en molduras y canaletas de superficie de 10x10 mm o 20x10 mm."
+    },
+    {
+      "pregunta": "¿Qué enchufe combina mejor con este cable?",
+      "respuesta": "Recomendamos armarlo con un enchufe macho volante blanco de 2 patas para mantener la armonía de color en toda la extensión."
+    }
+  ],
+
+  "lateral": {
+    "etiqueta": "Cordón decorativo",
+    "titulo": "ELFLE H05VV-F 2x0,75 mm² Blanco",
+    "texto": "Cordón flexible blanco de doble aislación para lámparas y equipos livianos. Resiste hasta 1.320 W y cuenta con certificación SEC oficial E-013-14-13244."
+  },
+
+  "relacionados": [
+    "enchufe-macho-volante-2p-blanco-halux",
+    "enchufe-macho-volante-10a-blanco-convertible-salva",
+    "cordon-h05vv-f-2x0-75-mm2-negro-10m-elfle"
+  ],
+  "guias": [
+    {
+      "url": "/blog/guia-completa-para-instalar-una-lampara-colgante-en-el-techo/",
+      "texto": "Guía para instalar lámpara colgante"
+    },
+    {
+      "url": "/blog/cuando-usar-cable-cordon-paralelo-y-cuando-no-guia-completa/",
+      "texto": "Cuándo usar cordón paralelo y cuándo no"
+    }
+  ],
+  "tarjeta": {
+    "titulo": "Cordón H05VV-F 2x0,75 mm² Blanco 10 m ELFLE",
+    "extracto": "Cordón flexible bipolar blanco para lámparas y artefactos livianos. 6 A / 1.320 W, 10 metros, certificación SEC E-013-14-13244.",
+    "alt": "Cordón eléctrico flexible H05VV-F 2x0,75 mm² blanco 10 metros ELFLE",
+    "etiqueta": "Material Eléctrico"
+  }
+}

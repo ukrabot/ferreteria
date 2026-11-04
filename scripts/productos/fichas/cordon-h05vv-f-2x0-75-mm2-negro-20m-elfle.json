@@ -1,0 +1,147 @@
+{
+  "slug": "cordon-h05vv-f-2x0-75-mm2-negro-20m-elfle",
+  "nombre": "Cordón H05VV-F 2x0,75 mm² Negro 20 m ELFLE",
+  "titulo_h1": "Cordón H05VV-F 2x0,75 mm² Negro 20 m ELFLE",
+  "titulo_corto": "Cordón H05VV-F 2x0,75 mm² 20 m",
+  "marca": "ELFLE",
+  "sku": "142855868",
+  "precio_referencia": 16310,
+  "margen": 50,
+  "categoria": "electricidad",
+  "subcategoria": "Cordones y extensiones",
+  "color": "Negro",
+  "disponible": true,
+
+  "seo_titulo": "Cordón H05VV-F 2x0,75 mm² Negro 20 m ELFLE",
+  "meta_descripcion": "Compra cordón bipolar H05VV-F 2x0,75 mm² negro de 20 m ELFLE a {precio}. Bobina de 20 metros para iluminación exterior, guirnaldas y quinchos. Envíos a todo Chile.",
+  "og_descripcion": "Cordón flexible bipolar H05VV-F 2x0,75 mm² negro 20 m ELFLE. Doble aislación para guirnaldas, terrazas e iluminación decorativa. Certificación SEC oficial.",
+  "descripcion": "Cordón eléctrico flexible bipolar H05VV-F de 2x0,75 mm² y 20 metros en color negro marca ELFLE. Diseñado con conductores de cobre electrolítico multifilar y doble aislación de PVC para iluminación de largo trazado, guirnaldas de terraza, sistemas de sonido ambiental y artefactos livianos de hasta 6 A y 1.320 W a 220 V.",
+  "lede": "¿Planeas iluminar el perímetro de una terraza, instalar una guirnalda de luces exterior o cablear un quincho? Este **cordón H05VV-F 2x0,75 mm² de 20 metros ELFLE** ofrece **20 metros continuos de cable bipolar**, doble chaqueta de PVC resistente y certificación SEC para instalaciones de baja potencia.",
+
+  "fotos": [
+    {
+      "url": "https://media.sodimac.cl/sodimacCL/7712979_01/public",
+      "alt": "Rollo de cordón eléctrico H05VV-F 2x0,75 mm² negro de 20 metros sobre fondo blanco",
+      "miniatura": "Ver rollo de 20 m"
+    },
+    {
+      "url": "https://media.sodimac.cl/sodimacCL/7712979_03/public",
+      "alt": "Extremo pelado del cordón 2x0,75 mm² mostrando los hilos de cobre multifilar",
+      "miniatura": "Ver conductores de cobre"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+
+  "especificaciones": [
+    ["Marca", "ELFLE"],
+    ["Modelo", "H05VV-F flexible bipolar"],
+    ["Número de conductores", "2 (fase y neutro)"],
+    ["Sección del conductor", "0,75 mm²"],
+    ["Largo", "20 metros"],
+    ["Material conductor", "Cobre electrolítico multifilar clase 5"],
+    ["Aislamiento y cubierta", "Doble capa de PVC flexible negro"],
+    ["Tensión nominal", "300/500 V (servicio 220 V)"],
+    ["Capacidad eléctrica", "6 A / 1.320 W según rotulación"],
+    ["Certificación SEC", "E-013-14-13244 según etiqueta"]
+  ],
+  "confianza": [
+    {
+      "titulo": "⚡ 20 metros continuos",
+      "detalle": "Tirada completa para guirnaldas y quinchos sin uniones"
+    },
+    {
+      "titulo": "🛡️ Doble aislación",
+      "detalle": "Cubierta redonda de PVC mucho más resistente que el paralelo"
+    },
+    {
+      "titulo": "🚚 Envío a todo Chile",
+      "detalle": "Despacho rápido a domicilio o retiro"
+    },
+    {
+      "titulo": "🔒 Garantía 6 meses",
+      "detalle": "Garantía legal directa de Ferretería Ukra"
+    }
+  ],
+
+  "secciones": [
+    {
+      "id": "aplicaciones-en-iluminacion-exterior",
+      "titulo": "¿Cuándo utilizar cordón bipolar de 20 metros?",
+      "indice": "Usos de 20 metros",
+      "bloques": [
+        {
+          "p": "Para montar guirnaldas de luces vintage tipo kermesse, proyectores LED de jardín o tendidos entre pilares de pérgolas, este cordón **H05VV-F 2x0,75 mm²** ofrece una protección mecánica superior al cable plano, tolerando mejor el movimiento por el viento y el roce con maderas o estructuras metálicas."
+        },
+        {
+          "lista": [
+            "Confección de guirnaldas decorativas de ampolletas LED para terrazas, patios y quinchos.",
+            "Alimentación de reflectores LED de bajo consumo (10 W a 100 W) distribuidos a lo largo del jardín.",
+            "Tendido de audio ambiental o pequeños artefactos ornamentales en parcelas."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seguridad-en-circuitos-de-iluminacion",
+      "titulo": "Consejos de seguridad para instalaciones de 20 metros",
+      "indice": "Seguridad en iluminación",
+      "bloques": [
+        {
+          "p": "Al fijar este cordón en vigas o celosías, utiliza grampas plásticas con clavo que no estrangulen la cubierta cilíndrica. Si instalas portalámparas suspendidos a lo largo de los 20 metros, asegúrate de que sean de tipo estanco para intemperie y que el circuito principal cuente con protección diferencial en el tablero."
+        },
+        {
+          "advertencia": "Este cordón no incluye conductor de tierra de protección. Está reservado exclusivamente para artefactos de doble aislación o portalámparas plásticos Clase II."
+        },
+        {
+          "p": "Revisa nuestra guía sobre [cuándo usar cable cordón paralelo y cuándo no](/blog/cuando-usar-cable-cordon-paralelo-y-cuando-no-guia-completa/) para conocer los límites de este tipo de conductores."
+        }
+      ]
+    }
+  ],
+
+  "faq": [
+    {
+      "pregunta": "¿Cuántas ampolletas LED puedo conectar en una guirnalda de 20 metros con este cable?",
+      "respuesta": "Con ampolletas LED tipo filamento de 2 W a 4 W cada una, puedes conectar fácilmente 30 o 50 ampolletas sin superar los 200 W de consumo total, muy por debajo del límite de 1.320 W del cordón."
+    },
+    {
+      "pregunta": "¿El cable puede quedar a la intemperie en invierno?",
+      "respuesta": "La doble chaqueta de PVC negro soporta la humedad y lluvia estacional, pero para evitar acumulación de tensión mecánica por peso de agua o nieve se recomienda tensarlo con una piola de acero de soporte si cruza distancias aéreas."
+    },
+    {
+      "pregunta": "¿Qué enchufe se utiliza para energizar la extensión?",
+      "respuesta": "Se conecta a cualquier toma domiciliaria usando un enchufe macho volante de 2 patas (10 A 2P) sin toma de tierra."
+    }
+  ],
+
+  "lateral": {
+    "etiqueta": "Iluminación exterior",
+    "titulo": "ELFLE H05VV-F 2x0,75 mm² 20 m",
+    "texto": "Cordón flexible bipolar de 20 metros para guirnaldas, terrazas e iluminación perimetral. Soporta hasta 1.320 W con certificación SEC oficial E-013-14-13244."
+  },
+
+  "relacionados": [
+    "cordon-h05vv-f-2x0-75-mm2-negro-10m-elfle",
+    "enchufe-macho-volante-2p-negro-halux",
+    "cordon-h05vv-f-3x1-5-mm2-negro-20m-elfle"
+  ],
+  "guias": [
+    {
+      "url": "/blog/cuando-usar-cable-cordon-paralelo-y-cuando-no-guia-completa/",
+      "texto": "Cuándo usar cordón paralelo y cuándo no"
+    },
+    {
+      "url": "/blog/como-elegir-el-grosor-del-cable-para-una-extension-guia-completa/",
+      "texto": "Cómo elegir el grosor de cable para extensión"
+    }
+  ],
+  "tarjeta": {
+    "titulo": "Cordón H05VV-F 2x0,75 mm² Negro 20 m ELFLE",
+    "extracto": "Cordón flexible bipolar de 20 metros para guirnaldas y terrazas. 6 A / 1.320 W, doble aislación de PVC, certificación SEC E-013-14-13244.",
+    "alt": "Cordón eléctrico flexible H05VV-F 2x0,75 mm² negro de 20 metros ELFLE",
+    "etiqueta": "Material Eléctrico"
+  }
+}

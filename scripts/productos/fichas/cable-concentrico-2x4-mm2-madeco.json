@@ -1,0 +1,140 @@
+{
+  "slug": "cable-concentrico-2x4-mm2-madeco",
+  "nombre": "Cable Concéntrico 2x4 mm² Negro Madeco por Metro",
+  "titulo_h1": "Cable Concéntrico 2x4 mm² Negro Madeco (Metro)",
+  "titulo_corto": "Cable Concéntrico 2x4 mm² Madeco",
+  "marca": "MADECO",
+  "sku": "110265598",
+  "precio_referencia": 1990,
+  "margen": 50,
+  "categoria": "electricidad",
+  "subcategoria": "Cables de acometida",
+  "color": "Negro",
+  "disponible": true,
+
+  "seo_titulo": "Cable Concéntrico 2x4 mm² Negro Madeco Metro",
+  "meta_descripcion": "Compra cable concéntrico 2x4 mm² Madeco a {precio} el metro. Acometida monofásica con conductor central y malla concéntrica de cobre. Envíos a todo Chile.",
+  "og_descripcion": "Cable concéntrico de cobre 2x4 mm² Madeco para acometidas eléctricas monofásicas. Conductor central y malla concéntrica. Despacho a todo Chile.",
+  "descripcion": "Cable concéntrico monofásico de cobre 2x4 mm² marca Madeco para acometidas y derivaciones domiciliarias. Conductor central de fase aislado y neutro concéntrico exterior en espiral de cobre, con cubierta protectora de PVC negro resistente a la intemperie y 600 V de tensión de servicio.",
+  "lede": "¿Necesitas conectar tu empalme monofásico hacia el tablero general o alimentar una faena exterior? Este **cable concéntrico Madeco 2x4 mm²** entrega la aislación y protección mecánica exigida en acometidas, con conductor central de cobre y **malla concéntrica de neutro**.",
+
+  "fotos": [
+    {
+      "url": "https://media.sodimac.cl/sodimacCL/4113543_01/public",
+      "alt": "Corte escalonado de cable concéntrico Madeco mostrando capas de aislamiento y conductores de cobre",
+      "miniatura": "Ver capas del cable"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+
+  "especificaciones": [
+    ["Marca", "Madeco"],
+    ["Tipo de conductor", "Concéntrico monofásico"],
+    ["Sección nominal", "2x4 mm²"],
+    ["Conductor central", "Cobre electrolítico de 4 mm²"],
+    ["Conductor exterior", "Malla concéntrica de cobre de 4 mm²"],
+    ["Aislación interna", "Polietileno reticulado o PVC dieléctrico"],
+    ["Cubierta exterior", "PVC negro resistente a rayos UV"],
+    ["Tensión de servicio", "600 V"],
+    ["Normativa", "Fabricado bajo norma IEC 60228 / NCh Electricidad"]
+  ],
+  "confianza": [
+    {
+      "titulo": "⚡ Cobre puro",
+      "detalle": "Conductores de cobre electrolítico de alta pureza"
+    },
+    {
+      "titulo": "🛡️ Protección antirrobo",
+      "detalle": "Diseño concéntrico evita tomas fraudulentas"
+    },
+    {
+      "titulo": "🚚 Envío a todo Chile",
+      "detalle": "Despacho rápido a domicilio o retiro"
+    },
+    {
+      "titulo": "🔒 Garantía 6 meses",
+      "detalle": "Garantía legal directa de Ferretería Ukra"
+    }
+  ],
+
+  "secciones": [
+    {
+      "id": "donde-se-utiliza",
+      "titulo": "¿Dónde se utiliza el cable concéntrico 2x4 mm²?",
+      "indice": "¿Dónde se utiliza?",
+      "bloques": [
+        {
+          "p": "El cable concéntrico está diseñado principalmente para la **acometida eléctrica domiciliaria** que une el medidor de la compañía distribuidora con el [tablero eléctrico domiciliario](/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/). Su configuración física sitúa la fase en el centro y el neutro rodeándola en una corona helicoidal de alambres de cobre, haciendo que cualquier intento de perforación o intervención provoque un cortocircuito inmediato que active la protección."
+        },
+        {
+          "lista": [
+            "Acometidas aéreas desde postes de distribución hacia la fachada de la vivienda.",
+            "Tendido subterráneo protegido en ducto conduit entre medidor exterior y tablero interior.",
+            "Líneas de alimentación monofásica para bombas de agua, bodegas y talleres secundarios."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "criterios-de-seguridad",
+      "titulo": "Recomendaciones de montaje y normativa SEC",
+      "indice": "Montaje y seguridad",
+      "bloques": [
+        {
+          "p": "Para instalaciones residenciales en Chile, el Pliego Técnico Normativo RIC exige que las acometidas y alimentadores generales mantengan una caída de tensión inferior al 3 % hasta el tablero de distribución. Con un calibre de 4 mm², este cable es apto para circuitos con protecciones termomagnéticas de hasta 25 A en tendidos de longitud moderada."
+        },
+        {
+          "advertencia": "La conexión en el medidor y la intervención de la red pública deben ser coordinadas con la empresa eléctrica y ejecutadas por un instalador autorizado por la SEC."
+        },
+        {
+          "p": "Para revisar cómo calcular el empalme y las secciones de alimentación general, consulta nuestra guía sobre [empalme eléctrico y aumento de potencia en Chile](/blog/empalme-electrico-y-aumento-de-potencia-en-chile-guia-sec/)."
+        }
+      ]
+    }
+  ],
+
+  "faq": [
+    {
+      "pregunta": "¿Por qué el neutro viene en forma de malla helicoidal?",
+      "respuesta": "La disposición concéntrica del neutro rodeando a la fase sirve como barrera física y de seguridad contra conexiones clandestinas y ayuda a blindar el conductor central frente a roces mecánicos accidentales."
+    },
+    {
+      "pregunta": "¿Cuánta corriente soporta este cable de 4 mm²?",
+      "respuesta": "En tendido al aire o en ducto ventilado soporta habitualmente hasta 25 a 30 A según la temperatura ambiente, ideal para alimentar viviendas monofásicas de consumo estándar."
+    },
+    {
+      "pregunta": "¿Cómo se vende y despacha este producto?",
+      "respuesta": "Se vende por metro lineal según la cantidad que ingreses al carro de compras y se corta en un solo tramo continuo sin añadiduras antes de preparar el despacho."
+    }
+  ],
+
+  "lateral": {
+    "etiqueta": "Cable de acometida",
+    "titulo": "Madeco Concéntrico 2x4 mm²",
+    "texto": "Cable concéntrico de cobre para acometidas monofásicas seguras y duraderas. Cubierta exterior de PVC negro resistente a rayos solares y 600 V de aislación."
+  },
+
+  "relacionados": [
+    "kit-tablero-electrico-monofasico-12-modulos",
+    "interruptor-automatico-20-a"
+  ],
+  "guias": [
+    {
+      "url": "/blog/empalme-electrico-y-aumento-de-potencia-en-chile-guia-sec/",
+      "texto": "Guía de empalme eléctrico y potencia SEC"
+    },
+    {
+      "url": "/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/",
+      "texto": "Cómo armar un tablero eléctrico domiciliario"
+    }
+  ],
+  "tarjeta": {
+    "titulo": "Cable Concéntrico 2x4 mm² Negro Madeco",
+    "extracto": "Conductor concéntrico de cobre para acometida monofásica. Conductor central y malla exterior en espiral, cubierta PVC negro de 600 V.",
+    "alt": "Cable concéntrico Madeco 2x4 mm² para acometida monofásica",
+    "etiqueta": "Material Eléctrico"
+  }
+}

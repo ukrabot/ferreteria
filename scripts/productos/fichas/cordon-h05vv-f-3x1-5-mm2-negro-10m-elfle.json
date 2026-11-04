@@ -1,0 +1,147 @@
+{
+  "slug": "cordon-h05vv-f-3x1-5-mm2-negro-10m-elfle",
+  "nombre": "Cordón H05VV-F 3x1,5 mm² Negro 10 m ELFLE",
+  "titulo_h1": "Cordón H05VV-F 3x1,5 mm² Negro 10 m ELFLE",
+  "titulo_corto": "Cordón H05VV-F 3x1,5 mm² 10 m",
+  "marca": "ELFLE",
+  "sku": "142855852",
+  "precio_referencia": 15990,
+  "margen": 50,
+  "categoria": "electricidad",
+  "subcategoria": "Cordones y extensiones",
+  "color": "Negro",
+  "disponible": true,
+
+  "seo_titulo": "Cordón H05VV-F 3x1,5 mm² Negro 10 m ELFLE",
+  "meta_descripcion": "Compra cordón H05VV-F 3x1,5 mm² negro de 10 m ELFLE a {precio}. Cable flexible con tierra para extensiones y herramientas eléctricas. Envíos a todo Chile.",
+  "og_descripcion": "Cordón flexible H05VV-F 3x1,5 mm² negro de 10 metros ELFLE. 3 conductores con tierra de protección, certificado SEC E-013-14-13244. Envíos a todo Chile.",
+  "descripcion": "Cordón eléctrico flexible multipropósito H05VV-F de 3x1,5 mm² y 10 metros de longitud en color negro marca ELFLE. Diseñado con conductores multifilares de cobre electrolítico y doble aislamiento de PVC para alimentar herramientas manuales, electrodomésticos y extensiones de taller hasta 16 A y 3.520 W a 220 V.",
+  "lede": "¿Necesitas armar un alargador de taller confiable o reemplazar el cable de tu herramienta eléctrica? Este **cordón H05VV-F 3x1,5 mm² de 10 metros ELFLE** cuenta con tres conductores flexibles de cobre, **toma a tierra de protección** y certificación SEC oficial para faenas seguras.",
+
+  "fotos": [
+    {
+      "url": "https://media.sodimac.cl/sodimacCL/771291X_01/public",
+      "alt": "Rollo de cordón eléctrico H05VV-F 3x1,5 mm² negro de 10 metros sobre fondo blanco",
+      "miniatura": "Ver rollo de 10 m"
+    },
+    {
+      "url": "https://media.sodimac.cl/sodimacCL/771291X_03/public",
+      "alt": "Extremo pelado del cordón H05VV-F mostrando los conductores de cobre multifilar",
+      "miniatura": "Ver conductores de cobre"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+
+  "especificaciones": [
+    ["Marca", "ELFLE"],
+    ["Modelo", "H05VV-F flexible multipropósito"],
+    ["Número de conductores", "3 (fase, neutro y tierra de protección)"],
+    ["Sección del conductor", "1,5 mm²"],
+    ["Largo", "10 metros"],
+    ["Material conductor", "Cobre multifilar clase 5"],
+    ["Aislamiento y cubierta", "PVC flexible resistente al uso continuo"],
+    ["Tensión nominal", "300/500 V (servicio 220 V)"],
+    ["Capacidad eléctrica", "16 A / 3.520 W según rotulación"],
+    ["Certificación SEC", "E-013-14-13244 según etiqueta"]
+  ],
+  "confianza": [
+    {
+      "titulo": "⚡ Soporta 16 A",
+      "detalle": "Potencia hasta 3.520 W para herramientas y máquinas"
+    },
+    {
+      "titulo": "🛡️ Certificación SEC",
+      "detalle": "Protocolo chileno oficial E-013-14-13244"
+    },
+    {
+      "titulo": "🚚 Envío a todo Chile",
+      "detalle": "Despacho rápido a domicilio o retiro"
+    },
+    {
+      "titulo": "🔒 Garantía 6 meses",
+      "detalle": "Garantía legal directa de Ferretería Ukra"
+    }
+  ],
+
+  "secciones": [
+    {
+      "id": "aplicaciones-del-cordon-3x15",
+      "titulo": "¿Cuándo conviene usar un cordón H05VV-F de 3x1,5 mm²?",
+      "indice": "¿Cuándo usarlo?",
+      "bloques": [
+        {
+          "p": "El cordón H05VV-F (conocido tradicionalmente en faenas como cable tipo taller) incorpora una doble capa de PVC que soporta rozamientos, torsiones y dobleces reiterados. Su configuración de **3 vías con 1,5 mm²** de sección es el punto de equilibrio estándar para equipos que demandan potencia sin comprometer la flexibilidad al manipularlos."
+        },
+        {
+          "lista": [
+            "Confección de extensiones eléctricas para taladros percutores, sierras circulares y esmeriles angulares.",
+            "Alimentación fija o semipermanente de hormigoneras, hidrolavadoras de 1.800 W a 2.500 W y compresores monofásicos.",
+            "Reparación y recambio de cordones desgastados en artefactos domésticos con gabinete metálico aterrado."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seguridad-y-armado-de-alargadores",
+      "titulo": "Recomendaciones para armar una extensión de uso rudo",
+      "indice": "Armado seguro",
+      "bloques": [
+        {
+          "p": "Al montar una extensión, combina este cordón con un [enchufe macho Schuko 16 A](/producto/enchufe-macho-volante-schuko-16a-2p-t-negro-halux) y una [hembra volante con tierra](/producto/enchufe-hembra-volante-10-16a-2p-t-negro-halux). Asegúrate de prensar la cubierta externa en el sujetacables del enchufe para que la tracción mecánica no tire directamente de los bornes de cobre."
+        },
+        {
+          "advertencia": "No utilices este cordón completamente enrollado en un carrete al conectar cargas pesadas (más de 1.500 W), ya que el calor concentrado puede degradar la aislación interna."
+        },
+        {
+          "p": "Para saber qué calibre elegir según los metros y la potencia de tu equipo, lee nuestra guía sobre [cómo elegir el grosor del cable para una extensión](/blog/como-elegir-el-grosor-del-cable-para-una-extension-guia-completa/)."
+        }
+      ]
+    }
+  ],
+
+  "faq": [
+    {
+      "pregunta": "¿Qué artefactos puedo conectar con este cordón de 1,5 mm²?",
+      "respuesta": "Cualquier herramienta o electrodoméstico de hasta 16 A (3.520 W a 220 V), incluyendo esmeriles, sierras, estufas halógenas, aspiradoras de taller y máquinas de soldar inverter pequeñas."
+    },
+    {
+      "pregunta": "¿Viene listo con enchufes o solo el rollo de cable?",
+      "respuesta": "Viene como rollo de 10 metros de cordón sin terminales en los extremos, permitiéndote instalar los enchufes volantes macho y hembra que mejor se adapten a tu proyecto."
+    },
+    {
+      "pregunta": "¿El cordón incluye cable de tierra?",
+      "respuesta": "Sí, incorpora 3 conductores internos de 1,5 mm² cada uno: fase, neutro y conductor verde-amarillo para conexión a tierra de protección."
+    }
+  ],
+
+  "lateral": {
+    "etiqueta": "Cordón multipropósito",
+    "titulo": "ELFLE H05VV-F 3x1,5 mm² 10 m",
+    "texto": "Cordón flexible con tierra de protección para extensiones y herramientas. Soporta hasta 16 A y 3.520 W con certificación SEC E-013-14-13244."
+  },
+
+  "relacionados": [
+    "enchufe-macho-volante-schuko-16a-2p-t-negro-halux",
+    "enchufe-hembra-volante-10-16a-2p-t-negro-halux",
+    "alargador-4-tomas-sin-cable-halux"
+  ],
+  "guias": [
+    {
+      "url": "/blog/como-elegir-el-grosor-del-cable-para-una-extension-guia-completa/",
+      "texto": "Cómo elegir el grosor del cable para una extensión"
+    },
+    {
+      "url": "/blog/como-identificar-cables-por-codigo-de-colores-en-chile-guia-practica/",
+      "texto": "Código de colores de cables en Chile"
+    }
+  ],
+  "tarjeta": {
+    "titulo": "Cordón H05VV-F 3x1,5 mm² Negro 10 m ELFLE",
+    "extracto": "Cordón flexible de 3 vías con tierra para extensiones y taller. 16 A / 3.520 W, 10 metros, certificación SEC E-013-14-13244.",
+    "alt": "Cordón eléctrico H05VV-F 3x1,5 mm² negro de 10 metros ELFLE",
+    "etiqueta": "Material Eléctrico"
+  }
+}

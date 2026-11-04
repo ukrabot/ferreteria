@@ -1,0 +1,147 @@
+{
+  "slug": "cordon-h05vv-f-3x2-5-mm2-negro-10m-elfle",
+  "nombre": "Cordón Eléctrico H05VV-F 3x2,5 mm² Negro 10 m ELFLE",
+  "titulo_h1": "Cordón Eléctrico H05VV-F 3x2,5 mm² Negro 10 m ELFLE",
+  "titulo_corto": "Cordón H05VV-F 3x2,5 mm² 10 m",
+  "marca": "ELFLE",
+  "sku": "147325133",
+  "precio_referencia": 32990,
+  "margen": 50,
+  "categoria": "electricidad",
+  "subcategoria": "Cordones y extensiones",
+  "color": "Negro",
+  "disponible": true,
+
+  "seo_titulo": "Cordón H05VV-F 3x2,5 mm² Negro 10 m ELFLE",
+  "meta_descripcion": "Compra cordón de fuerza H05VV-F 3x2,5 mm² negro 10 m ELFLE a {precio}. Cable de uso rudo para soldadoras, compresores y faenas hasta 20 A. Envíos a todo Chile.",
+  "og_descripcion": "Cordón industrial H05VV-F 3x2,5 mm² negro 10 m ELFLE. Conductores de cobre clase 5 con tierra para alta potencia (20 A / 4.400 W). Certificación SEC oficial.",
+  "descripcion": "Cordón eléctrico flexible de alta resistencia H05VV-F de 3x2,5 mm² y 10 metros en color negro marca ELFLE. Diseñado con tres conductores gruesos de cobre multifilar y cubierta robusta de PVC para soportar consumos intensivos de hasta 20 A y 4.400 W en herramientas de faena, soldadoras inverter, compresores y hormigoneras.",
+  "lede": "¿Tus herramientas de obra hacen saltar los alargadores comunes o notas que el cable se calienta al soldar? El **cordón H05VV-F 3x2,5 mm² de 10 metros ELFLE** está construido para **trabajo pesado de hasta 20 A**, minimizando pérdidas de tensión y garantizando una conexión a tierra confiable.",
+
+  "fotos": [
+    {
+      "url": "https://media.sodimac.cl/sodimacCL/7809298_01/public",
+      "alt": "Rollo de cordón industrial H05VV-F 3x2,5 mm² negro de 10 metros sobre fondo blanco",
+      "miniatura": "Ver rollo de 10 m"
+    },
+    {
+      "url": "https://media.sodimac.cl/sodimacCL/7809298_03/public",
+      "alt": "Punta pelada del cordón 3x2,5 mm² mostrando los tres conductores gruesos de cobre",
+      "miniatura": "Ver conductores de 2,5 mm²"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+
+  "especificaciones": [
+    ["Marca", "ELFLE"],
+    ["Modelo", "H05VV-F flexible de fuerza"],
+    ["Número de conductores", "3 (fase, neutro y tierra de protección)"],
+    ["Sección del conductor", "2,5 mm²"],
+    ["Largo", "10 metros"],
+    ["Material conductor", "Cobre electrolítico multifilar clase 5"],
+    ["Aislamiento y cubierta", "PVC reforzado resistente a impacto y fricción"],
+    ["Tensión nominal", "300/500 V (servicio 220 V)"],
+    ["Capacidad eléctrica", "20 A / 4.400 W según rotulación"],
+    ["Certificación SEC", "E-013-14-13244 según etiqueta"]
+  ],
+  "confianza": [
+    {
+      "titulo": "⚡ Fuerza 20 A",
+      "detalle": "Hasta 4.400 W de potencia sin sobrecalentamiento"
+    },
+    {
+      "titulo": "🛡️ Uso en faena",
+      "detalle": "Cubierta reforzada de PVC resistente a fricción"
+    },
+    {
+      "titulo": "🚚 Envío a todo Chile",
+      "detalle": "Despacho rápido a domicilio o retiro"
+    },
+    {
+      "titulo": "🔒 Garantía 6 meses",
+      "detalle": "Garantía legal directa de Ferretería Ukra"
+    }
+  ],
+
+  "secciones": [
+    {
+      "id": "por-que-usar-calibre-25mm2",
+      "titulo": "Capacidad y rendimiento para herramientas pesadas",
+      "indice": "¿Por qué 2,5 mm²?",
+      "bloques": [
+        {
+          "p": "Al utilizar motores de inducción o soldadoras eléctricas, la corriente de arranque genera caídas de voltaje que perjudican el rendimiento del motor y calientan los cables finos. Con conductores de **2,5 mm² de cobre electrolítico**, este cordón mantiene la tensión estable incluso ante demandas de potencia continuas."
+        },
+        {
+          "lista": [
+            "Conexión de máquinas soldadoras inverter monofásicas de hasta 200 A de salida.",
+            "Alimentación de hidrolavadoras industriales, compresores de 2 HP a 3 HP y trompos concreteros.",
+            "Alargadores principales de faena para distribuir energía hacia subtableros móviles en obra."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compatibilidad-con-enchufes-industriales",
+      "titulo": "Enchufes y clavijas recomendadas para 2,5 mm²",
+      "indice": "Enchufes compatibles",
+      "bloques": [
+        {
+          "p": "Dado su grosor y corriente admisible, este cordón se recomienda combinar con un [enchufe volante de 16 A Legrand](/producto/enchufe-volante-2p-t-16a-legrand) o una clavija Schuko industrial. Sus prensacables amplios aseguran un sellado perfecto alrededor de la chaqueta exterior sin estrangular los conductores internos."
+        },
+        {
+          "advertencia": "Evita conectar este cordón a alargadores triples comunes de 10 A si estás utilizando maquinaria de más de 2.200 W, ya que el punto débil será la clavija domiciliaria."
+        },
+        {
+          "p": "Para calcular el consumo de tus herramientas, consulta nuestra guía sobre [cómo calcular el consumo eléctrico de una soldadora doméstica](/blog/como-calcular-el-consumo-electrico-de-una-soldadora-domestica-guia-completa/)."
+        }
+      ]
+    }
+  ],
+
+  "faq": [
+    {
+      "pregunta": "¿Este cordón entra en un enchufe chileno común de 10 A?",
+      "respuesta": "Físicamente los 3 conductores de 2,5 mm² son más gruesos y requieren un enchufe con bornes amplios; se recomienda usar enchufes de 16 A o Schuko para aprovechar su capacidad de potencia sin forzar los terminales."
+    },
+    {
+      "pregunta": "¿Sirve para soldar con electrodo de 2,5 mm o 3,2 mm?",
+      "respuesta": "Sí, es el calibre reglamentario y seguro para extensiones de máquinas soldadoras inverter, evitando que el equipo se proteja por baja tensión durante el encendido del arco."
+    },
+    {
+      "pregunta": "¿La cubierta resiste aceites o pisadas en faena?",
+      "respuesta": "La formulación de PVC reforzado tolera el tránsito moderado de calzado de seguridad, polvo y pequeñas salpicaduras de obra, siempre manteniendo la inspección visual periódica de la vaina."
+    }
+  ],
+
+  "lateral": {
+    "etiqueta": "Cordón de fuerza",
+    "titulo": "ELFLE H05VV-F 3x2,5 mm² 10 m",
+    "texto": "Cordón flexible de alta potencia para soldadoras, compresores y faenas exigentes. Capacidad de 20 A (4.400 W) con certificación SEC oficial E-013-14-13244."
+  },
+
+  "relacionados": [
+    "enchufe-volante-2p-t-16a-legrand",
+    "enchufe-macho-volante-schuko-16a-2p-t-negro-halux",
+    "cordon-h05vv-f-3x1-5-mm2-negro-10m-elfle"
+  ],
+  "guias": [
+    {
+      "url": "/blog/como-calcular-el-consumo-electrico-de-una-soldadora-domestica-guia-completa/",
+      "texto": "Cálculo de consumo eléctrico de una soldadora"
+    },
+    {
+      "url": "/blog/como-elegir-el-grosor-del-cable-para-una-extension-guia-completa/",
+      "texto": "Cómo elegir el calibre de cable para extensión"
+    }
+  ],
+  "tarjeta": {
+    "titulo": "Cordón H05VV-F 3x2,5 mm² Negro 10 m ELFLE",
+    "extracto": "Cordón flexible de fuerza de 3 vías con tierra para soldadoras y faena. 20 A / 4.400 W, 10 metros, certificación SEC E-013-14-13244.",
+    "alt": "Cordón eléctrico flexible H05VV-F 3x2,5 mm² negro de 10 metros ELFLE",
+    "etiqueta": "Material Eléctrico"
+  }
+}

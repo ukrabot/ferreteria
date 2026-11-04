@@ -1,0 +1,147 @@
+{
+  "slug": "cordon-h05vv-f-3x1-5-mm2-negro-20m-elfle",
+  "nombre": "Cordón H05VV-F 3x1,5 mm² Negro 20 m ELFLE",
+  "titulo_h1": "Cordón H05VV-F 3x1,5 mm² Negro 20 m ELFLE",
+  "titulo_corto": "Cordón H05VV-F 3x1,5 mm² 20 m",
+  "marca": "ELFLE",
+  "sku": "142855909",
+  "precio_referencia": 39990,
+  "margen": 50,
+  "categoria": "electricidad",
+  "subcategoria": "Cordones y extensiones",
+  "color": "Negro",
+  "disponible": true,
+
+  "seo_titulo": "Cordón H05VV-F 3x1,5 mm² Negro 20 m ELFLE",
+  "meta_descripcion": "Compra cordón flexible H05VV-F 3x1,5 mm² negro 20 m ELFLE a {precio}. Bobina de 20 metros con tierra para extensiones de jardín y taller. Envíos a todo Chile.",
+  "og_descripcion": "Cordón H05VV-F 3x1,5 mm² negro de 20 metros ELFLE. Bobina de largo alcance con tierra de protección y certificación SEC E-013-14-13244. Envíos a todo Chile.",
+  "descripcion": "Cordón eléctrico flexible multipropósito H05VV-F de 3x1,5 mm² y 20 metros de longitud en color negro marca ELFLE. Diseñado para la fabricación de alargadores de largo alcance en faenas, mantención de jardines y talleres mecánicos, soportando hasta 16 A y 3.520 W a 220 V con conexión a tierra.",
+  "lede": "¿Necesitas llevar corriente a los rincones más alejados del patio o armar una extensión de largo alcance para tu cortacésped o hidrolavadora? Este **cordón H05VV-F 3x1,5 mm² de 20 metros ELFLE** entrega **20 metros continuos**, conductores de cobre con tierra y certificación SEC oficial.",
+
+  "fotos": [
+    {
+      "url": "https://media.sodimac.cl/sodimacCL/7713053_01/public",
+      "alt": "Rollo de cordón eléctrico H05VV-F 3x1,5 mm² negro de 20 metros sobre fondo blanco",
+      "miniatura": "Ver rollo de 20 m"
+    },
+    {
+      "url": "https://media.sodimac.cl/sodimacCL/7713053_03/public",
+      "alt": "Extremo pelado del cordón de 20 metros mostrando los conductores multifilares de cobre",
+      "miniatura": "Ver conductores de cobre"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+
+  "especificaciones": [
+    ["Marca", "ELFLE"],
+    ["Modelo", "H05VV-F flexible multipropósito"],
+    ["Número de conductores", "3 (fase, neutro y tierra de protección)"],
+    ["Sección del conductor", "1,5 mm²"],
+    ["Largo", "20 metros"],
+    ["Material conductor", "Cobre electrolítico multifilar clase 5"],
+    ["Aislamiento y cubierta", "PVC flexible resistente a la intemperie y flexión"],
+    ["Tensión nominal", "300/500 V (servicio 220 V)"],
+    ["Capacidad eléctrica", "16 A / 3.520 W según rotulación"],
+    ["Certificación SEC", "E-013-14-13244 según etiqueta"]
+  ],
+  "confianza": [
+    {
+      "titulo": "⚡ Largo alcance 20 m",
+      "detalle": "Tirada continua sin empalmes ni uniones intermedias"
+    },
+    {
+      "titulo": "🛡️ Puesta a tierra",
+      "detalle": "3 vías protegidas para equipos con carcasa metálica"
+    },
+    {
+      "titulo": "🚚 Envío a todo Chile",
+      "detalle": "Despacho rápido a domicilio o retiro"
+    },
+    {
+      "titulo": "🔒 Garantía 6 meses",
+      "detalle": "Garantía legal directa de Ferretería Ukra"
+    }
+  ],
+
+  "secciones": [
+    {
+      "id": "ventajas-del-rollo-de-20-metros",
+      "titulo": "¿Por qué elegir una bobina continua de 20 metros?",
+      "indice": "¿Por qué 20 metros?",
+      "bloques": [
+        {
+          "p": "Unir varias extensiones cortas con enchufes intermedios es una de las causas más frecuentes de falsos contactos, sobrecalentamiento y caídas de tensión en faenas domésticas o de taller. Un solo tramo continuo de **20 metros con calibre 1,5 mm²** mantiene la resistencia controlada y elimina los puntos vulnerables expuestos a la humedad o desconexiones por tirones."
+        },
+        {
+          "lista": [
+            "Conexión de cortacéspedes eléctricos, orilladoras y cortasetos en parcelas y jardines amplios.",
+            "Trabajos de pintura con pulverizador, hidrolavado de fachadas y limpieza de techos.",
+            "Alimentación eléctrica móvil en eventos al aire libre, quinchos y zonas de estacionamiento."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cuidado-termico-en-extensiones-largas",
+      "titulo": "Recomendaciones de uso y disipación de calor",
+      "indice": "Uso térmico seguro",
+      "bloques": [
+        {
+          "p": "Al utilizar alargadores de 20 metros con cargas elevadas (como un calefactor o una hidrolavadora de 2.000 W), desenrolla siempre el cordón en su totalidad. Mantener el cable apretado en una bobina crea un efecto inductivo y térmico que eleva la temperatura interna y acorta la vida útil del PVC."
+        },
+        {
+          "advertencia": "Arma siempre los extremos con enchufes volantes prensados para evitar que los hilos de cobre queden sueltos dentro de la bornera."
+        },
+        {
+          "p": "Para conocer cómo identificar fase, neutro y tierra al armar tu extensión, revisa nuestra guía sobre [cómo identificar fase y neutro en un enchufe](/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/)."
+        }
+      ]
+    }
+  ],
+
+  "faq": [
+    {
+      "pregunta": "¿Hay caída de tensión apreciable a 20 metros con 1,5 mm²?",
+      "respuesta": "Para consumos estándar de hasta 10 A o 12 A (unos 2.200 W a 2.600 W), la caída de tensión a 20 metros se mantiene bajo el 2,5 %, funcionando de manera óptima dentro de los rangos admisibles de la norma chilena."
+    },
+    {
+      "pregunta": "¿El cordón soporta sol y lluvia en el patio?",
+      "respuesta": "Su cubierta de PVC negro tiene buena resistencia a la intemperie durante el trabajo exterior; sin embargo, al terminar la faena se recomienda enrollarlo y guardarlo bajo techo para prolongar su durabilidad."
+    },
+    {
+      "pregunta": "¿Qué enchufe recomiendan para armar este alargador de 20 m?",
+      "respuesta": "Recomendamos un enchufe macho Schuko de 16 A con prensaestopas y una hembra volante reforzada con tapa abatible para proteger las tomas en faena exterior."
+    }
+  ],
+
+  "lateral": {
+    "etiqueta": "Extensión larga",
+    "titulo": "ELFLE H05VV-F 3x1,5 mm² 20 m",
+    "texto": "Cordón flexible de 20 metros con tierra para extensiones de amplio alcance en jardín y taller. Soporta hasta 16 A y cuenta con certificación SEC oficial E-013-14-13244."
+  },
+
+  "relacionados": [
+    "cordon-h05vv-f-3x1-5-mm2-negro-10m-elfle",
+    "enchufe-macho-volante-schuko-16a-2p-t-negro-halux",
+    "enchufe-hembra-volante-10-16a-2p-t-negro-halux"
+  ],
+  "guias": [
+    {
+      "url": "/blog/como-elegir-el-grosor-del-cable-para-una-extension-guia-completa/",
+      "texto": "Cómo elegir el calibre para una extensión"
+    },
+    {
+      "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
+      "texto": "Identificar fase y neutro en enchufes"
+    }
+  ],
+  "tarjeta": {
+    "titulo": "Cordón H05VV-F 3x1,5 mm² Negro 20 m ELFLE",
+    "extracto": "Cordón flexible de 3 vías con tierra para extensiones de 20 metros en jardín y taller. 16 A / 3.520 W, certificación SEC E-013-14-13244.",
+    "alt": "Cordón eléctrico flexible H05VV-F 3x1,5 mm² negro de 20 metros ELFLE",
+    "etiqueta": "Material Eléctrico"
+  }
+}
