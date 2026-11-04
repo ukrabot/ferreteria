@@ -146,6 +146,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Instalar Calefont',
     filename: 'Pack-Instalar-Calefont-Ferreteria-Ukra.zip',
   },
+  'pack-puesta-a-tierra-diagnostico-medicion-excel': {
+    name: 'Pack Puesta a Tierra',
+    filename: 'Pack-Puesta-a-Tierra-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1567,6 +1571,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-CALEFONT-INST',
+  },
+  {
+    slug: 'pack-puesta-a-tierra-diagnostico-medicion-excel',
+    name: 'Pack Puesta a Tierra: Planilla Excel de Autodiagnóstico, Revisión de Enchufes, Estimador de Resistencia y Registro de Mediciones + Guía Visual + Checklist de Medición',
+    price: 7990,
+    image: '/producto/pack-puesta-a-tierra-diagnostico-medicion-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-TIERRA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
