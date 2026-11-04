@@ -166,6 +166,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Grosor de Cable para Extensión',
     filename: 'Pack-Grosor-Cable-Extension-Ferreteria-Ukra.zip',
   },
+  'pack-extractor-aire-bano-cocina-caudal-excel': {
+    name: 'Pack Extractor de Aire',
+    filename: 'Pack-Extractor-de-Aire-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1632,6 +1636,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-EXTENSION',
+  },
+  {
+    slug: 'pack-extractor-aire-bano-cocina-caudal-excel',
+    name: 'Pack Extractor de Aire: Planilla Excel de Caudal y Ducto, Ubicación Segura (RIC N°11), Materiales y Diagnóstico + Guía de Obra + Diagnóstico y Mantención',
+    price: 7990,
+    image: '/producto/pack-extractor-aire-bano-cocina-caudal-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-EXTRACTOR',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
