@@ -182,6 +182,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Ventanas Termopanel',
     filename: 'Pack-Ventanas-Termopanel-Ferreteria-Ukra.zip',
   },
+  'pack-pasto-natural-siembra-semilla-riego-excel': {
+    name: 'Pack Pasto Natural',
+    filename: 'Pack-Pasto-Natural-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1684,6 +1688,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-TERMOPANEL',
+  },
+  {
+    slug: 'pack-pasto-natural-siembra-semilla-riego-excel',
+    name: 'Pack Pasto Natural: Planilla Excel de Semilla, Tierra y Fertilizante por Zona, Semilla vs Rollo, Plan de Riego y Registro de Siembra + Guía de Siembra + Plan de 6 Semanas',
+    price: 7990,
+    image: '/producto/pack-pasto-natural-siembra-semilla-riego-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-PASTO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
