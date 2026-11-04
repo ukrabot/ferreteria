@@ -154,6 +154,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Membrana Asfáltica',
     filename: 'Pack-Membrana-Asfaltica-Ferreteria-Ukra.zip',
   },
+  'pack-termofusion-ppr-tiempos-materiales-excel': {
+    name: 'Pack Termofusión PPR',
+    filename: 'Pack-Termofusion-PPR-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1593,6 +1597,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-MEMBRANA',
+  },
+  {
+    slug: 'pack-termofusion-ppr-tiempos-materiales-excel',
+    name: 'Pack Termofusión PPR: Planilla Excel de Tiempos, Tubería y Dilatación, Materiales y Prueba de Presión + Tarjeta de Obra + Control antes de Tabicar',
+    price: 7990,
+    image: '/producto/pack-termofusion-ppr-tiempos-materiales-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-PPR',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
