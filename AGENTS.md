@@ -67,6 +67,19 @@ actualizar fichas de productos físicos con el generador**. Nada más.
   cliente la haga solo; explica qué revisar.
 - Relaciona el producto con fichas y guías existentes cuando aporten.
 
+- **Una ficha pensada para cada producto**: no uses una plantilla con el mismo
+  texto para todos. Cada ficha explica para qué sirve ESE producto, cómo se usa
+  y qué cuidar (un enchufe de remolque de 12 V no es un enchufe de casa; un
+  triple o un enchufe wifi no se arman pelando cables). Las variantes de color
+  pueden compartir texto, pero los datos (corriente, polos, potencia) deben ser
+  los de cada una.
+- **Especificaciones útiles**: no copies filas de otra tienda que no le sirven
+  al cliente ni las que vienen cortadas con «...» («Cantidad de paquetes»,
+  «Tipo de divisor», «Plazo de disponibilidad de repuestos», «Alimentación»).
+  El generador las rechaza.
+- **Tandas chicas**: publica máximo **10 productos por pull request**, para
+  que el dueño los pueda revisar.
+
 ## Flujo de publicación
 
 ```bash

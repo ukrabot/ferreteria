@@ -50,7 +50,7 @@ CATEGORIAS = {
     "otros": ("Otros", "Otros"),
 }
 PROHIBIDAS = ["sodimac", "easy.cl", "falabella", "mercadolibre", "mercado libre", "paris.cl", "lider.cl",
-              "lorem", "ipsum", "xxx", "{{", "}}", "chatgpt", "como modelo de lenguaje"]
+              "lorem", "ipsum", "logística certificada", "empresas de logística", "xxx", "{{", "}}", "chatgpt", "como modelo de lenguaje"]
 MARCA = "<!-- generado: scripts/productos/generar.py -->"
 SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 ID_RE = re.compile(r"^[a-z][a-z0-9-]{1,40}$")
@@ -230,6 +230,9 @@ def cargar_ficha(path: Path, actualizar: bool) -> dict:
                              for i, (a, b) in enumerate(esp, 1)]
     if not any(a.lower() == "marca" for a, _ in f["especificaciones"]):
         raise FichaError("especificaciones: incluye una fila «Marca»")
+    for a_, b_ in f["especificaciones"]:
+        if "..." in a_ or "…" in a_ or a_.lower().startswith(("cantidad de paquetes", "tipo de divisor", "plazo de disponibilidad", "duración en condiciones", "alimentación")):
+            raise FichaError(f"especificaciones: «{a_}» es un dato copiado de otra tienda que no le sirve al cliente; quítalo")
     # Garantía de la tienda: siempre 6 meses (se agrega si falta)
     f["especificaciones"] = [r for r in f["especificaciones"] if r[0].lower() != "garantía"] + [["Garantía", "6 meses"]]
     # confianza
