@@ -3387,6 +3387,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '126117347',
   },
+  {
+    slug: 'interruptor-doble-9-12-16-a-s17-sinthesi-blanco-sinthesi',
+    name: 'Interruptor Doble 9/12 16 A S17 Sinthesi Blanco',
+    price: 5990,
+    image: '/producto/interruptor-doble-9-12-16-a-s17-sinthesi-blanco-sinthesi.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '139923583',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
