@@ -3657,6 +3657,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110252475',
   },
+  {
+    slug: 'interruptor-automatico-15-a-saime',
+    name: 'Interruptor automático 15 A Saime',
+    price: 13990,
+    image: '/producto/interruptor-automatico-15-a-saime.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110223154',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
