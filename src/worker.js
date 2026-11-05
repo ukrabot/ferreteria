@@ -3351,6 +3351,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110253943',
   },
+  {
+    slug: 'interruptor-conmutador-9-24-s17-sinthesi-blanco-sinthesi',
+    name: 'Interruptor conmutador 9/24 s17 Sinthesi Blanco',
+    price: 4990,
+    image: '/producto/interruptor-conmutador-9-24-s17-sinthesi-blanco-sinthesi.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '139923737',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
