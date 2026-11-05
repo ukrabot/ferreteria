@@ -3603,6 +3603,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110274224',
   },
+  {
+    slug: 'interruptor-pulsador-10-a-blanco-karson',
+    name: 'Interruptor pulsador 10 A Blanco Karson',
+    price: 2990,
+    image: '/producto/interruptor-pulsador-10-a-blanco-karson.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110245858',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
