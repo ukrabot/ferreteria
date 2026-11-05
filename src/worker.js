@@ -3000,6 +3000,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110216460',
   },
+  {
+    slug: 'interruptor-conmutador-9-24-16-a-luzica-blanco-bticino',
+    name: 'Interruptor conmutador 9/24 16 A Luzica Blanco Bticino',
+    price: 5990,
+    image: '/producto/interruptor-conmutador-9-24-16-a-luzica-blanco-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110241293',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
