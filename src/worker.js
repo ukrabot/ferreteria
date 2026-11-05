@@ -3378,6 +3378,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110222814',
   },
+  {
+    slug: 'interruptor-automatico-bipolar-2x16ka-schneider',
+    name: 'Interruptor Automatico Bipolar 2x16KA Schneider',
+    price: 11990,
+    image: '/producto/interruptor-automatico-bipolar-2x16ka-schneider.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '126117347',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
