@@ -2982,6 +2982,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110239244',
   },
+  {
+    slug: 'interruptor-simple-9-12-10-a-luzica-blanco-bticino',
+    name: 'Interruptor simple 9/12 10 A Luzica Blanco Bticino',
+    price: 3990,
+    image: '/producto/interruptor-simple-9-12-10-a-luzica-blanco-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110237706',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
