@@ -3009,6 +3009,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110241293',
   },
+  {
+    slug: 'interruptor-doble-9-15-10-a-luzica-blanco-bticino',
+    name: 'Interruptor doble 9/15 10 A Luzica Blanco Bticino',
+    price: 4990,
+    image: '/producto/interruptor-doble-9-15-10-a-luzica-blanco-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110263623',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
