@@ -3324,6 +3324,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110224002',
   },
+  {
+    slug: 'interruptor-simple-9-12-s17-sinthesi-blanco-sinthesi',
+    name: 'Interruptor simple 9/12 s17 Sinthesi Blanco',
+    price: 3990,
+    image: '/producto/interruptor-simple-9-12-s17-sinthesi-blanco-sinthesi.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '139923502',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
