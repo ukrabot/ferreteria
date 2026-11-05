@@ -2964,6 +2964,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110222191',
   },
+  {
+    slug: 'interruptor-diferencial-25-a-legrand',
+    name: 'Interruptor diferencial 25 A Legrand',
+    price: 35990,
+    image: '/producto/interruptor-diferencial-25-a-legrand.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110218255',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
