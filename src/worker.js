@@ -3522,6 +3522,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110271864',
   },
+  {
+    slug: 'interruptor-conmutador-9-24-10-a-nobile-perla-bticino',
+    name: 'Interruptor conmutador 9/24 10 A Nobile Perla Bticino',
+    price: 6990,
+    image: '/producto/interruptor-conmutador-9-24-10-a-nobile-perla-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110250024',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
