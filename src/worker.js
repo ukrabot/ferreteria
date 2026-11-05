@@ -3126,6 +3126,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110235364',
   },
+  {
+    slug: 'interruptor-automatico-10-a-curva-c-6ka-legrand',
+    name: 'Interruptor automático 10 A curva C 6KA Legrand',
+    price: 10990,
+    image: '/producto/interruptor-automatico-10-a-curva-c-6ka-legrand.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110223044',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
