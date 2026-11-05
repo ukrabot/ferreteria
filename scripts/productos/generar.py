@@ -207,7 +207,7 @@ def cargar_ficha(path: Path, actualizar: bool) -> dict:
         for j, w in enumerate(tok):
             if w == "A" and (j == 0 or not re.fullmatch(r"\d+([.,]\d+)?|\d+/\d+|\d+x\d+", tok[j - 1]) or tok[j - 1] in ("9/12", "9/15", "9/24", "9/32")):
                 raise FichaError(f"{k}: falta el amperaje antes de «A» («{f[k]}»). Si no lo sabes, quita la «A»")
-        if re.search(r"\b(\w+) \1\b", f[k], re.I):
+        if re.search(r"\b([A-Za-zÁÉÍÓÚáéíóúÑñ]{3,}) \1\b", f[k], re.I):
             raise FichaError(f"{k}: tiene una palabra repetida («{f[k]}»)")
     texto(f["lede"], "lede", 120, 600)
     if f.get("color"):

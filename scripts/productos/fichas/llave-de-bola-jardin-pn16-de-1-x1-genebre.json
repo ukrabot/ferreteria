@@ -1,0 +1,173 @@
+{
+  "slug": "llave-de-bola-jardin-pn16-de-1-x1-genebre",
+  "marca": "Genebre",
+  "sku": "110267174",
+  "precio_referencia": 9580,
+  "margen": 50,
+  "categoria": "gasfiteria",
+  "nombre": "Llave de jardín bola PN16 1\" x 1\" Genebre",
+  "titulo_h1": "Llave de jardín bola PN16 1\" x 1\" Genebre",
+  "titulo_corto": "Llave de jardín bola PN16 1\" x 1\" Genebre",
+  "subcategoria": "Llaves de paso y válvulas de agua",
+  "disponible": true,
+  "seo_titulo": "Llave de jardín bola PN16 1\" x 1\" Genebre",
+  "meta_descripcion": "Compra Llave de jardín bola PN16 1\" x 1\" Genebre a {precio}. Llave de salida para manguera. Conexión según ficha. Envío a todo Chile.",
+  "og_descripcion": "Llave de jardín bola PN16 1\" x 1\" Genebre: llave de salida para manguera. Conexión según ficha.",
+  "descripcion": "Llave de jardín bola PN16 1\" x 1\" Genebre. Llave de salida para manguera. Garantía de 6 meses.",
+  "lede": "Esta **Llave de jardín bola PN16 1\" x 1\" Genebre** es una llave de salida para manguera. Ciérrala después de usarla para que la manguera no quede con presión.",
+  "fotos": [
+    {
+      "url": "https://media.falabella.com/sodimacCL/3315363_01/w=1200,h=1200,fit=cover",
+      "alt": "Llave de jardín bola PN16 1\" x 1\" Genebre, foto principal sobre fondo blanco",
+      "miniatura": "Ver de frente"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/3315363_17/w=1200,h=1200,fit=cover",
+      "alt": "Llave de jardín bola PN16 1\" x 1\" Genebre, otra vista del producto",
+      "miniatura": "Ver lateral"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/3315363_21/w=1200,h=1200,fit=cover",
+      "alt": "Llave de jardín bola PN16 1\" x 1\" Genebre, otra vista del producto",
+      "miniatura": "Ver roscas"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/3315363_12/w=1200,h=1200,fit=cover",
+      "alt": "Llave de jardín bola PN16 1\" x 1\" Genebre, otra vista del producto",
+      "miniatura": "Ver foto 4"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/3315363_13/w=1200,h=1200,fit=cover",
+      "alt": "Llave de jardín bola PN16 1\" x 1\" Genebre, otra vista del producto",
+      "miniatura": "Ver foto 5"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/3315363_14/w=1200,h=1200,fit=cover",
+      "alt": "Llave de jardín bola PN16 1\" x 1\" Genebre, otra vista del producto",
+      "miniatura": "Ver foto 6"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    [
+      "Marca",
+      "Genebre"
+    ],
+    [
+      "Material Válvula",
+      "Latón"
+    ],
+    [
+      "Uso de la válvula",
+      "Agua"
+    ],
+    [
+      "Tipo de válvula",
+      "Llave"
+    ],
+    [
+      "Presión máxima",
+      "232 Psi"
+    ],
+    [
+      "Diámetro",
+      "1 \""
+    ],
+    [
+      "Características",
+      "Para jardines y lavaderos,Válvula de esfera para conexión manguera,Paso total,Construcción en latón s/ UNE-EN 12165 cromado,Entrada rosca gas (BSP) macho s/ ISO"
+    ]
+  ],
+  "confianza": [
+    {
+      "titulo": "💧 Salida para manguera",
+      "detalle": "Para jardín y patio"
+    },
+    {
+      "titulo": "🔧 Conexión según ficha",
+      "detalle": "Medida 1\""
+    },
+    {
+      "titulo": "🚚 Envíos a todo Chile",
+      "detalle": "Despacho a domicilio"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Ferretería Ukra"
+    }
+  ],
+  "secciones": [
+    {
+      "id": "uso",
+      "titulo": "Para qué sirve y cómo funciona",
+      "indice": "Para qué sirve",
+      "bloques": [
+        {
+          "p": "Llave de salida para jardín o lavadero: se instala en la salida de agua de la pared y en su boca se conecta la manguera. Ciérrala después de usarla para que la manguera no quede con presión."
+        },
+        {
+          "lista": [
+            "Para jardín y patio.",
+            "Conexión según ficha.",
+            "Medida: 1\"."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "instalacion",
+      "titulo": "Instalación y conexión",
+      "indice": "Instalación",
+      "bloques": [
+        {
+          "p": "Revisa en la ficha técnica las medidas y el tipo de conexión antes de comprar."
+        },
+        {
+          "advertencia": "Corta la llave general del medidor y abre una llave baja para vaciar la cañería antes de trabajar. Si no tienes experiencia, pide la instalación a un gasfíter."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Se le puede conectar directo la manguera?",
+      "respuesta": "Sí, la boca de salida es para manguera. Usa un conector o abrazadera para que la manguera no se suelte con la presión."
+    },
+    {
+      "pregunta": "¿Qué conexión tiene?",
+      "respuesta": "La indicada en su nombre y en la ficha técnica. Revísala antes de comprar para que calce con tu cañería."
+    },
+    {
+      "pregunta": "¿Lleva teflón?",
+      "respuesta": "Sí, en las uniones con rosca: la cinta va en el hilo exterior, en el sentido del apriete, sin cubrir el primer hilo."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones?",
+      "respuesta": "Sí, despachamos a todas las regiones de Chile."
+    }
+  ],
+  "lateral": {
+    "etiqueta": "Gasfitería agua",
+    "titulo": "Llave de jardín bola PN16 1\" x 1\" Genebre",
+    "texto": "Llave de salida para manguera. Conexión según ficha. Garantía de 6 meses."
+  },
+  "tarjeta": {
+    "titulo": "Llave de jardín bola PN16 1\" x 1\" Genebre",
+    "extracto": "Llave de salida para manguera. Conexión según ficha. Para jardín y patio.",
+    "alt": "Llave de jardín bola PN16 1\" x 1\" Genebre",
+    "etiqueta": "Gasfitería"
+  },
+  "guias": [
+    {
+      "url": "/blog/como-instalar-una-llave-de-paso-paso-a-paso/",
+      "texto": "Cómo instalar una llave de paso"
+    },
+    {
+      "url": "/blog/selladores-de-rosca-teflon-vs-estopa-cual-elegir/",
+      "texto": "Teflón o estopa: cuál usar"
+    }
+  ]
+}

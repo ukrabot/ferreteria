@@ -1,0 +1,128 @@
+{
+  "slug": "abrazadera-para-cable-3-8-fixser",
+  "marca": "Fixser",
+  "sku": "110329033",
+  "precio_referencia": 2290,
+  "margen": 50,
+  "categoria": "herramientas",
+  "nombre": "Abrazadera para cable 3/8\" Fixser",
+  "titulo_h1": "Abrazadera para cable 3/8\" Fixser",
+  "titulo_corto": "Abrazadera para cable 3/8\" Fixser",
+  "subcategoria": "Fijaciones y quincallería",
+  "disponible": true,
+  "seo_titulo": "Abrazadera para cable 3/8\" Fixser",
+  "meta_descripcion": "Compra Abrazadera para cable 3/8\" Fixser a {precio}. Cierra la gaza del cable. Para amarras y sujeciones livianas. Envío a todo Chile.",
+  "og_descripcion": "Abrazadera para cable 3/8\" Fixser. Cierra la gaza del cable.",
+  "descripcion": "Abrazadera para cable 3/8\" Fixser. Sujetacable para cable de acero: sirve para cerrar el ojo (gaza) en el extremo del cable o unir dos tramos. El estribo en U va sobre la punta corta del cable y la base con dientes sobre el tramo que trabaja. Garantía de 6 meses.",
+  "lede": "**Abrazadera para cable 3/8\" Fixser**. Sujetacable para cable de acero: sirve para cerrar el ojo (gaza) en el extremo del cable o unir dos tramos. El estribo en U va sobre la punta corta del cable y la base con dientes sobre el tramo que trabaja.",
+  "fotos": [
+    {
+      "url": "https://media.falabella.com/sodimacCL/121134_01/w=1200,h=1200,fit=cover",
+      "alt": "Abrazadera para cable 3/8\" Fixser, foto principal sobre fondo blanco",
+      "miniatura": "Ver de frente"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/121134_21/w=1200,h=1200,fit=cover",
+      "alt": "Abrazadera para cable 3/8\" Fixser, otra vista del producto",
+      "miniatura": "Ver roscas"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    [
+      "Marca",
+      "Fixser"
+    ],
+    [
+      "Material",
+      "Acero"
+    ],
+    [
+      "Medidas",
+      "3/8 \""
+    ],
+    [
+      "Color",
+      "Gris"
+    ]
+  ],
+  "confianza": [
+    {
+      "titulo": "🔗 Para cable de acero",
+      "detalle": "Cierra la gaza del cable"
+    },
+    {
+      "titulo": "📏 Medida 3/8\"",
+      "detalle": "Según su nombre y ficha"
+    },
+    {
+      "titulo": "🚚 Envíos a todo Chile",
+      "detalle": "Despacho a domicilio"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Ferretería Ukra"
+    }
+  ],
+  "secciones": [
+    {
+      "id": "uso",
+      "titulo": "Para qué sirve",
+      "indice": "Para qué sirve",
+      "bloques": [
+        {
+          "p": "Sujetacable para cable de acero: sirve para cerrar el ojo (gaza) en el extremo del cable o unir dos tramos. El estribo en U va sobre la punta corta del cable y la base con dientes sobre el tramo que trabaja."
+        },
+        {
+          "lista": [
+            "Usa la medida igual al diámetro del cable.",
+            "Pon al menos dos por gaza, separados, y aprieta las tuercas en forma pareja.",
+            "Reaprieta después de la primera carga."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uso-seguro",
+      "titulo": "Uso seguro",
+      "indice": "Uso seguro",
+      "bloques": [
+        {
+          "p": "Revísalo antes de cada uso y reemplázalo si está deformado, agrietado u oxidado."
+        },
+        {
+          "advertencia": "No lo uses para levantar personas ni para trabajo en altura: no es un equipo de protección personal."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Cuántos sujetacables se usan por gaza?",
+      "respuesta": "Al menos dos, separados entre sí, con el estribo en U sobre la punta corta del cable. Para cables gruesos o cargas mayores sigue la tabla del fabricante."
+    },
+    {
+      "pregunta": "¿Qué medida necesito?",
+      "respuesta": "La misma del diámetro de tu cable de acero. Un sujetacable más grande no aprieta bien."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones?",
+      "respuesta": "Sí, despachamos a todas las regiones de Chile."
+    }
+  ],
+  "lateral": {
+    "etiqueta": "Ferretería",
+    "titulo": "Abrazadera para cable 3/8\" Fixser",
+    "texto": "Cierra la gaza del cable. Para amarras y sujeciones livianas. Garantía de 6 meses."
+  },
+  "tarjeta": {
+    "titulo": "Abrazadera para cable 3/8\" Fixser",
+    "extracto": "Sujetacable para cable de acero: sirve para cerrar el ojo (gaza) en el extremo del cable o unir dos tramos. Cierra la gaza del cable.",
+    "alt": "Abrazadera para cable 3/8\" Fixser",
+    "etiqueta": "Fijaciones"
+  },
+  "guias": []
+}

@@ -1,0 +1,128 @@
+{
+  "slug": "set-de-abrazaderas-aluminio-1-16-2-unidades-fixser",
+  "marca": "Fixser",
+  "sku": "110289273",
+  "precio_referencia": 1490,
+  "margen": 50,
+  "categoria": "herramientas",
+  "nombre": "Abrazadera tubular de aluminio 1/16\" 2 unidades Fixser",
+  "titulo_h1": "Abrazadera tubular de aluminio 1/16\" 2 unidades Fixser",
+  "titulo_corto": "Abrazadera tubular de aluminio 1/16\" 2 unidades Fixser",
+  "subcategoria": "Fijaciones y quincallería",
+  "disponible": true,
+  "seo_titulo": "Abrazadera tubular de aluminio 1/16\" 2 unidades Fixser",
+  "meta_descripcion": "Compra Abrazadera tubular de aluminio 1/16\" 2 unidades Fixser a {precio}. Cierra la gaza del cable. Para amarras y sujeciones livianas. Envío a todo Chile.",
+  "og_descripcion": "Abrazadera tubular de aluminio 1/16\" 2 unidades Fixser. Cierra la gaza del cable.",
+  "descripcion": "Abrazadera tubular de aluminio 1/16\" 2 unidades Fixser. Abrazadera tubular (casquillo) de aluminio para cerrar el ojo (gaza) en el extremo de un cable de acero delgado. El cable pasa dos veces por el casquillo y luego se prensa. Garantía de 6 meses.",
+  "lede": "**Abrazadera tubular de aluminio 1/16\" 2 unidades Fixser**. Abrazadera tubular (casquillo) de aluminio para cerrar el ojo (gaza) en el extremo de un cable de acero delgado. El cable pasa dos veces por el casquillo y luego se prensa.",
+  "fotos": [
+    {
+      "url": "https://media.falabella.com/sodimacCL/54984_01/w=1200,h=1200,fit=cover",
+      "alt": "Abrazadera tubular de aluminio 1/16\" 2 unidades Fixser, foto principal sobre fondo blanco",
+      "miniatura": "Ver de frente"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/54984_21/w=1200,h=1200,fit=cover",
+      "alt": "Abrazadera tubular de aluminio 1/16\" 2 unidades Fixser, otra vista del producto",
+      "miniatura": "Ver roscas"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    [
+      "Marca",
+      "Fixser"
+    ],
+    [
+      "Material",
+      "Aluminio"
+    ],
+    [
+      "Color",
+      "Plateado"
+    ],
+    [
+      "Características",
+      "Fácil de instalar, para aplicaciones decorativas sin requerimientos estructurales"
+    ]
+  ],
+  "confianza": [
+    {
+      "titulo": "🔗 Casquillo de aluminio",
+      "detalle": "Cierra la gaza del cable"
+    },
+    {
+      "titulo": "📏 Medida 1/16\"",
+      "detalle": "Según su nombre y ficha"
+    },
+    {
+      "titulo": "🚚 Envíos a todo Chile",
+      "detalle": "Despacho a domicilio"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Ferretería Ukra"
+    }
+  ],
+  "secciones": [
+    {
+      "id": "uso",
+      "titulo": "Para qué sirve",
+      "indice": "Para qué sirve",
+      "bloques": [
+        {
+          "p": "Abrazadera tubular (casquillo) de aluminio para cerrar el ojo (gaza) en el extremo de un cable de acero delgado. El cable pasa dos veces por el casquillo y luego se prensa."
+        },
+        {
+          "lista": [
+            "Usa la medida igual al diámetro del cable.",
+            "Se cierra con un alicate prensa casquillos o una herramienta de prensado.",
+            "Para trabajos livianos: tendederos, rejas y amarras."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uso-seguro",
+      "titulo": "Uso seguro",
+      "indice": "Uso seguro",
+      "bloques": [
+        {
+          "p": "Revísalo antes de cada uso y reemplázalo si está deformado, agrietado u oxidado."
+        },
+        {
+          "advertencia": "No lo uses para levantar personas ni para trabajo en altura: no es un equipo de protección personal."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Cómo se instala?",
+      "respuesta": "Pasa el cable por un orificio, forma el ojo, vuelve a pasar la punta por el otro orificio y prensa el casquillo con una herramienta de prensado."
+    },
+    {
+      "pregunta": "¿Qué medida necesito?",
+      "respuesta": "La misma del diámetro de tu cable. Si queda holgado, el prensado no sujeta."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones?",
+      "respuesta": "Sí, despachamos a todas las regiones de Chile."
+    }
+  ],
+  "lateral": {
+    "etiqueta": "Ferretería",
+    "titulo": "Abrazadera tubular de aluminio 1/16\" 2 unidades Fixser",
+    "texto": "Cierra la gaza del cable. Para amarras y sujeciones livianas. Garantía de 6 meses."
+  },
+  "tarjeta": {
+    "titulo": "Abrazadera tubular de aluminio 1/16\" 2 unidades Fixser",
+    "extracto": "Abrazadera tubular (casquillo) de aluminio para cerrar el ojo (gaza) en el extremo de un cable de acero delgado. Cierra la gaza del cable.",
+    "alt": "Abrazadera tubular de aluminio 1/16\" 2 unidades Fixser",
+    "etiqueta": "Fijaciones"
+  },
+  "guias": []
+}

@@ -1,0 +1,133 @@
+{
+  "slug": "mosqueton-sin-argolla-9-x-90mm-1-unidad-fixser",
+  "marca": "Fixser",
+  "sku": "110290891",
+  "precio_referencia": 3590,
+  "margen": 50,
+  "categoria": "herramientas",
+  "nombre": "Mosquetón sin argolla 9 x 90mm 1 unidad Fixser",
+  "titulo_h1": "Mosquetón sin argolla 9 x 90mm 1 unidad Fixser",
+  "titulo_corto": "Mosquetón sin argolla 9 x 90mm 1 unidad Fixser",
+  "subcategoria": "Fijaciones y quincallería",
+  "disponible": true,
+  "seo_titulo": "Mosquetón sin argolla 9 x 90mm 1 unidad Fixser",
+  "meta_descripcion": "Compra Mosquetón sin argolla 9 x 90mm 1 unidad Fixser a {precio}. Engancha y suelta rápido. Para amarras y sujeciones livianas. Envío a todo Chile.",
+  "og_descripcion": "Mosquetón sin argolla 9 x 90mm 1 unidad Fixser. Engancha y suelta rápido.",
+  "descripcion": "Mosquetón sin argolla 9 x 90mm 1 unidad Fixser. Mosquetón con gatillo de resorte para enganchar y soltar rápido cadenas, cuerdas, tensores o argollas. Garantía de 6 meses.",
+  "lede": "**Mosquetón sin argolla 9 x 90mm 1 unidad Fixser**. Mosquetón con gatillo de resorte para enganchar y soltar rápido cadenas, cuerdas, tensores o argollas.",
+  "fotos": [
+    {
+      "url": "https://media.falabella.com/sodimacCL/558052_01/w=1200,h=1200,fit=cover",
+      "alt": "Mosquetón sin argolla 9 x 90mm 1 unidad Fixser, foto principal sobre fondo blanco",
+      "miniatura": "Ver de frente"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/558052_21/w=1200,h=1200,fit=cover",
+      "alt": "Mosquetón sin argolla 9 x 90mm 1 unidad Fixser, otra vista del producto",
+      "miniatura": "Ver foto 4"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/558052_22/w=1200,h=1200,fit=cover",
+      "alt": "Mosquetón sin argolla 9 x 90mm 1 unidad Fixser, otra vista del producto",
+      "miniatura": "Ver foto 5"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    [
+      "Marca",
+      "Fixser"
+    ],
+    [
+      "Material",
+      "Acero"
+    ],
+    [
+      "Medidas",
+      "9 cm"
+    ],
+    [
+      "Color",
+      "Gris"
+    ]
+  ],
+  "confianza": [
+    {
+      "titulo": "🔗 Gatillo de resorte",
+      "detalle": "Engancha y suelta rápido"
+    },
+    {
+      "titulo": "📏 Medida según nombre",
+      "detalle": "Según su nombre y ficha"
+    },
+    {
+      "titulo": "🚚 Envíos a todo Chile",
+      "detalle": "Despacho a domicilio"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Ferretería Ukra"
+    }
+  ],
+  "secciones": [
+    {
+      "id": "uso",
+      "titulo": "Para qué sirve",
+      "indice": "Para qué sirve",
+      "bloques": [
+        {
+          "p": "Mosquetón con gatillo de resorte para enganchar y soltar rápido cadenas, cuerdas, tensores o argollas."
+        },
+        {
+          "lista": [
+            "Úsalo para amarras y sujeciones livianas.",
+            "Revisa que el gatillo cierre solo y por completo.",
+            "Cámbialo si está deformado u oxidado."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uso-seguro",
+      "titulo": "Uso seguro",
+      "indice": "Uso seguro",
+      "bloques": [
+        {
+          "p": "Revísalo antes de cada uso y reemplázalo si está deformado, agrietado u oxidado."
+        },
+        {
+          "advertencia": "No lo uses para levantar personas ni para trabajo en altura: no es un equipo de protección personal."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Cuánto peso aguanta?",
+      "respuesta": "El fabricante no indica una carga de trabajo. Úsalo para amarras y sujeciones livianas, no para levantar cargas pesadas."
+    },
+    {
+      "pregunta": "¿Sirve para escalada o trabajo en altura?",
+      "respuesta": "No. No es un equipo de protección personal: para trabajo en altura se usan mosquetones certificados para ese uso."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones?",
+      "respuesta": "Sí, despachamos a todas las regiones de Chile."
+    }
+  ],
+  "lateral": {
+    "etiqueta": "Ferretería",
+    "titulo": "Mosquetón sin argolla 9 x 90mm 1 unidad Fixser",
+    "texto": "Engancha y suelta rápido. Para amarras y sujeciones livianas. Garantía de 6 meses."
+  },
+  "tarjeta": {
+    "titulo": "Mosquetón sin argolla 9 x 90mm 1 unidad Fixser",
+    "extracto": "Mosquetón con gatillo de resorte para enganchar y soltar rápido cadenas, cuerdas, tensores o argollas. Engancha y suelta rápido.",
+    "alt": "Mosquetón sin argolla 9 x 90mm 1 unidad Fixser",
+    "etiqueta": "Fijaciones"
+  },
+  "guias": []
+}

@@ -1,0 +1,154 @@
+{
+  "slug": "valvula-de-paso-1-acero-zincado-stretto",
+  "marca": "Stretto",
+  "sku": "110234229",
+  "precio_referencia": 10390,
+  "margen": 50,
+  "categoria": "gasfiteria",
+  "nombre": "Válvula de paso 1\" acero zincado Stretto",
+  "titulo_h1": "Válvula de paso 1\" acero zincado Stretto",
+  "titulo_corto": "Válvula de paso 1\" acero zincado Stretto",
+  "subcategoria": "Llaves de paso y válvulas de agua",
+  "disponible": true,
+  "seo_titulo": "Válvula de paso 1\" acero zincado Stretto",
+  "meta_descripcion": "Compra Válvula de paso 1\" acero zincado Stretto a {precio}. Válvula de bola de cuarto de vuelta. Conexión según ficha. Envío a todo Chile.",
+  "og_descripcion": "Válvula de paso 1\" acero zincado Stretto: válvula de bola de cuarto de vuelta. Conexión según ficha.",
+  "descripcion": "Válvula de paso 1\" acero zincado Stretto. Válvula de bola de cuarto de vuelta. Garantía de 6 meses.",
+  "lede": "Esta **Válvula de paso 1\" acero zincado Stretto** es una válvula de bola de cuarto de vuelta. Con la manilla en línea con la cañería está abierta; atravesada, cerrada.",
+  "fotos": [
+    {
+      "url": "https://media.falabella.com/sodimacCL/638285_01/w=1200,h=1200,fit=cover",
+      "alt": "Válvula de paso 1\" acero zincado Stretto, foto principal sobre fondo blanco",
+      "miniatura": "Ver de frente"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/638285_12/w=1200,h=1200,fit=cover",
+      "alt": "Válvula de paso 1\" acero zincado Stretto, otra vista del producto",
+      "miniatura": "Ver lateral"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/638285_21/w=1200,h=1200,fit=cover",
+      "alt": "Válvula de paso 1\" acero zincado Stretto, otra vista del producto",
+      "miniatura": "Ver roscas"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    [
+      "Marca",
+      "Stretto"
+    ],
+    [
+      "Material Válvula",
+      "Acero"
+    ],
+    [
+      "Uso de la válvula",
+      "Agua"
+    ],
+    [
+      "Tipo de válvula",
+      "Válvula"
+    ],
+    [
+      "Diámetro",
+      "1 \""
+    ],
+    [
+      "Características",
+      "Terminal HI-HI"
+    ]
+  ],
+  "confianza": [
+    {
+      "titulo": "💧 Cuarto de vuelta",
+      "detalle": "Abre o cierra al instante"
+    },
+    {
+      "titulo": "🔧 Conexión según ficha",
+      "detalle": "Medida 1\""
+    },
+    {
+      "titulo": "🚚 Envíos a todo Chile",
+      "detalle": "Despacho a domicilio"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Ferretería Ukra"
+    }
+  ],
+  "secciones": [
+    {
+      "id": "uso",
+      "titulo": "Para qué sirve y cómo funciona",
+      "indice": "Para qué sirve",
+      "bloques": [
+        {
+          "p": "Válvula de bola: abre o cierra con un cuarto de vuelta. Con la manilla en línea con la cañería está abierta; atravesada, cerrada. Úsala abierta o cerrada del todo, no a medias para regular."
+        },
+        {
+          "lista": [
+            "Abre o cierra al instante.",
+            "Conexión según ficha.",
+            "Medida: 1\"."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "instalacion",
+      "titulo": "Instalación y conexión",
+      "indice": "Instalación",
+      "bloques": [
+        {
+          "p": "Revisa en la ficha técnica las medidas y el tipo de conexión antes de comprar."
+        },
+        {
+          "advertencia": "Corta la llave general del medidor y abre una llave baja para vaciar la cañería antes de trabajar. Si no tienes experiencia, pide la instalación a un gasfíter."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Cómo sé si está abierta?",
+      "respuesta": "Con la manilla en línea con la cañería está abierta; atravesada, cerrada. No la dejes a medias para regular."
+    },
+    {
+      "pregunta": "¿Qué conexión tiene?",
+      "respuesta": "La indicada en su nombre y en la ficha técnica. Revísala antes de comprar para que calce con tu cañería."
+    },
+    {
+      "pregunta": "¿Lleva teflón?",
+      "respuesta": "Sí, en las uniones con rosca: la cinta va en el hilo exterior, en el sentido del apriete, sin cubrir el primer hilo."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones?",
+      "respuesta": "Sí, despachamos a todas las regiones de Chile."
+    }
+  ],
+  "lateral": {
+    "etiqueta": "Gasfitería agua",
+    "titulo": "Válvula de paso 1\" acero zincado Stretto",
+    "texto": "Válvula de bola de cuarto de vuelta. Conexión según ficha. Garantía de 6 meses."
+  },
+  "tarjeta": {
+    "titulo": "Válvula de paso 1\" acero zincado Stretto",
+    "extracto": "Válvula de bola de cuarto de vuelta. Conexión según ficha. Abre o cierra al instante.",
+    "alt": "Válvula de paso 1\" acero zincado Stretto",
+    "etiqueta": "Gasfitería"
+  },
+  "guias": [
+    {
+      "url": "/blog/como-instalar-una-llave-de-paso-paso-a-paso/",
+      "texto": "Cómo instalar una llave de paso"
+    },
+    {
+      "url": "/blog/selladores-de-rosca-teflon-vs-estopa-cual-elegir/",
+      "texto": "Teflón o estopa: cuál usar"
+    }
+  ]
+}
