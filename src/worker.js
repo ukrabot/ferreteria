@@ -3090,6 +3090,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110223652',
   },
+  {
+    slug: 'interruptor-simple-9-24-16-a-sobreponer-blanco-schneider',
+    name: 'Interruptor simple 9/24 16 A Sobreponer blanco Schneider',
+    price: 3990,
+    image: '/producto/interruptor-simple-9-24-16-a-sobreponer-blanco-schneider.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110216638',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
