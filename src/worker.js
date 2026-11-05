@@ -3225,6 +3225,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '116475023',
   },
+  {
+    slug: 'limitador-de-sobretension-20-a-gris-legrand',
+    name: 'Limitador de sobretensión 20 A Gris Legrand',
+    price: 59990,
+    image: '/producto/limitador-de-sobretension-20-a-gris-legrand.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110216740',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
