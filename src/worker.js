@@ -2991,6 +2991,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110237706',
   },
+  {
+    slug: 'interruptor-automatico-10-a-lexo',
+    name: 'Interruptor automático 10 A Lexo',
+    price: 3990,
+    image: '/producto/interruptor-automatico-10-a-lexo.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110216460',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
