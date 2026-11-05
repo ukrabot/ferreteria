@@ -3819,6 +3819,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '117082619',
   },
+  {
+    slug: 'interruptor-doble-9-15-10-a-blanco-karson',
+    name: 'Interruptor doble 9/15 10 A Blanco Karson',
+    price: 3990,
+    image: '/producto/interruptor-doble-9-15-10-a-blanco-karson.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110222643',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
