@@ -3477,6 +3477,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110216979',
   },
+  {
+    slug: 'interruptor-diferencial-2x40a-30ma-lexo',
+    name: 'Interruptor Diferencial 2X40A 30Ma Lexo',
+    price: 20990,
+    image: '/producto/interruptor-diferencial-2x40a-30ma-lexo.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '150569445',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
