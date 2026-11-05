@@ -3243,6 +3243,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110243628',
   },
+  {
+    slug: 'interruptor-doble-1-placa-10-a-nobile-perla-bticino',
+    name: 'Interruptor doble + 1 placa 10 A Nobile Perla Bticino',
+    price: 8990,
+    image: '/producto/interruptor-doble-1-placa-10-a-nobile-perla-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110272338',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
