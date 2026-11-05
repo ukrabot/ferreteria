@@ -3207,6 +3207,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110230879',
   },
+  {
+    slug: 'interruptor-simple-2-a-negro-bticino',
+    name: 'Interruptor simple 2 A Negro Bticino',
+    price: 7990,
+    image: '/producto/interruptor-simple-2-a-negro-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110264187',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
