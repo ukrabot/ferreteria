@@ -4831,6 +4831,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '7362234',
   },
+  {
+    slug: 'mango-ducha-abs-3-funciones-11-cm',
+    name: 'Mango Ducha Abs 3 funciones 11 cm Cromado SENSI DACQUA',
+    price: 13990,
+    image: '/producto/mango-ducha-abs-3-funciones-11-cm.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: '9081402',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
