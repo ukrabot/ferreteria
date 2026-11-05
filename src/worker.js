@@ -3828,6 +3828,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110222643',
   },
+  {
+    slug: 'interruptor-conmutador-9-24-10-a-blanco-karson',
+    name: 'Interruptor conmutador 9/24 10 A Blanco Karson',
+    price: 2990,
+    image: '/producto/interruptor-conmutador-9-24-10-a-blanco-karson.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110251627',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
