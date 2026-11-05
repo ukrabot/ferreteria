@@ -3081,6 +3081,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110274394',
   },
+  {
+    slug: 'interruptor-simple-10-a-negro-halux',
+    name: 'Interruptor simple 10 A Negro Halux',
+    price: 5990,
+    image: '/producto/interruptor-simple-10-a-negro-halux.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110223652',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
