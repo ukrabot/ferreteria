@@ -214,6 +214,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Control de Cascos de Obra',
     filename: 'Pack-Control-Cascos-de-Obra-Ferreteria-Ukra.zip',
   },
+  'pack-techumbre-pendiente-cerchas-ventilacion-excel': {
+    name: 'Pack Techumbre',
+    filename: 'Pack-Techumbre-Pendiente-Estructura-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1788,6 +1792,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-CASCOS',
+  },
+  {
+    slug: 'pack-techumbre-pendiente-cerchas-ventilacion-excel',
+    name: 'Pack Techumbre: Planilla Excel de Pendiente y Geometría, Cerchas y Costaneras, Ventilación del Entretecho, Comparador de Cotizaciones y Supervisión + Tabla de Pendientes + Checklist',
+    price: 7990,
+    image: '/producto/pack-techumbre-pendiente-cerchas-ventilacion-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-TECHUMBRE',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
