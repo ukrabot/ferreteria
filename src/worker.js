@@ -3333,6 +3333,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '139923502',
   },
+  {
+    slug: 'enchufe-interruptor-10-a-nobile-perla-bticino',
+    name: 'Enchufe + interruptor 10 A Nobile Perla Bticino',
+    price: 9990,
+    image: '/producto/enchufe-interruptor-10-a-nobile-perla-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110271939',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
