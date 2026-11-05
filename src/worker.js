@@ -194,6 +194,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Termo Eléctrico',
     filename: 'Pack-Termo-Electrico-Ferreteria-Ukra.zip',
   },
+  'pack-aumento-potencia-empalme-demanda-tramite-excel': {
+    name: 'Pack Aumento de Potencia',
+    filename: 'Pack-Aumento-de-Potencia-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1723,6 +1727,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-TERMO',
+  },
+  {
+    slug: 'pack-aumento-potencia-empalme-demanda-tramite-excel',
+    name: 'Pack Aumento de Potencia: Planilla Excel de Demanda Simultánea, Empalme y Tarifa BT1, Alternativas, Trámite y Presupuesto + Guía Rápida + Checklist del Trámite',
+    price: 7990,
+    image: '/producto/pack-aumento-potencia-empalme-demanda-tramite-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-EMPALME',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
