@@ -4786,6 +4786,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110265243',
   },
+  {
+    slug: 'maneral-ducha-rimini',
+    name: 'Maneral Ducha Rimini Cromado STRETTO',
+    price: 14990,
+    image: '/producto/maneral-ducha-rimini.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: '7326556',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
