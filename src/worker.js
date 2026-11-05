@@ -3747,6 +3747,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110221785',
   },
+  {
+    slug: 'interruptor-pulsador-10-a-blanco-bticino',
+    name: 'Interruptor pulsador 10 A Blanco Bticino',
+    price: 4990,
+    image: '/producto/interruptor-pulsador-10-a-blanco-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110217009',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
