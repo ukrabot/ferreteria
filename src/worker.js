@@ -3045,6 +3045,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110216764',
   },
+  {
+    slug: 'interruptor-simple-9-12-10-a-clio-blanco-halux',
+    name: 'Interruptor simple 9/12 10 A Clio Blanco Halux',
+    price: 3990,
+    image: '/producto/interruptor-simple-9-12-10-a-clio-blanco-halux.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110222129',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
