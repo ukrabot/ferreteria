@@ -3234,6 +3234,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110216740',
   },
+  {
+    slug: 'interruptor-triple-10-a-nobile-perla-bticino',
+    name: 'Interruptor triple 10 A Nobile Perla Bticino',
+    price: 11990,
+    image: '/producto/interruptor-triple-10-a-nobile-perla-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110243628',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
