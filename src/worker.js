@@ -3054,6 +3054,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110222129',
   },
+  {
+    slug: 'interruptor-doble-9-15-10-a-clio-blanco-halux',
+    name: 'Interruptor doble 9/15 10 A Clio Blanco Halux',
+    price: 4990,
+    image: '/producto/interruptor-doble-9-15-10-a-clio-blanco-halux.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110272745',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
