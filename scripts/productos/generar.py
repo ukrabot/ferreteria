@@ -379,7 +379,9 @@ def render(f: dict, cart_v: str) -> str:
     if n_fotos > 1:
         bts = []
         for i, (p, ft) in enumerate(zip(img_rel, f["fotos"])):
-            bts.append(f'      <button type="button"{" aria-current=\"true\"" if i == 0 else ""} data-src="{p}" data-alt="{esc(ft["alt"])}"><img src="{p}" alt="{esc(ft["miniatura"])}" width="84" height="84"{"" if i == 0 else " loading=\"lazy\""}></button>')
+            aria_current = ' aria-current="true"' if i == 0 else ''
+            loading_attr = '' if i == 0 else ' loading="lazy"'
+            bts.append(f'      <button type="button"{aria_current} data-src="{p}" data-alt="{esc(ft["alt"])}"><img src="{p}" alt="{esc(ft["miniatura"])}" width="84" height="84"{loading_attr}></button>')
         thumbs = '\n    <div class="thumbs" role="group" aria-label="Fotos del producto">\n' + "\n".join(bts) + "\n    </div>"
     st = f.get("stock") or {}
     toc = [("ficha-tecnica", "Ficha técnica")] + [(s["id"], s.get("indice", s["titulo"])) for s in f["secciones"]] + [("preguntas", "Preguntas frecuentes")]
