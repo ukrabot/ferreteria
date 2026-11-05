@@ -3135,6 +3135,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110223044',
   },
+  {
+    slug: 'interruptor-conmutador-9-24-16-a-genesis-blanco-schneider',
+    name: 'Interruptor conmutador 9/24 16 A Genesis Blanco Schneider',
+    price: 3990,
+    image: '/producto/interruptor-conmutador-9-24-16-a-genesis-blanco-schneider.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110255276',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
