@@ -5,35 +5,35 @@
   "precio_referencia": 39990,
   "margen": 50,
   "categoria": "electricidad",
-  "nombre": "Limitador de sobretensión 20 A Gris Legrand",
-  "titulo_h1": "Limitador de sobretensión 20 A Gris Legrand",
-  "titulo_corto": "Limitador de sobretensión 20 A Gris Legrand",
+  "nombre": "Limitador de sobretensión 20 kA Gris Legrand",
+  "titulo_h1": "Limitador de sobretensión 20 kA Legrand",
+  "titulo_corto": "Limitador de sobretensión 20 kA Legrand",
   "subcategoria": "Material y mecanismos eléctricos",
   "disponible": true,
-  "seo_titulo": "Limitador de sobretensión 20 A Gris Legrand Calidad y S",
-  "meta_descripcion": "Compra limitador de sobretensión 20 a gris Legrand a {precio}. Material eléctrico certificado para tableros e instalaciones residenciales. Envíos a todo Chile.",
-  "og_descripcion": "Limitador de sobretensión 20 A Gris marca Legrand. Calidad, durabilidad y protección para tu instalación eléctrica.",
-  "descripcion": "Dispositivo eléctrico limitador de sobretensión 20 a gris marca Legrand. Fabricado con materiales de alta resistencia mecánica y aislación eléctrica para montaje seguro. Cumple con normas vigentes. Garantía de 6 meses.",
-  "lede": "Este dispositivo **Limitador de sobretensión 20 A Gris Legrand** entrega confiabilidad, rendimiento seguro y un montaje sencillo en tu instalación eléctrica domiciliaria o comercial.",
+  "seo_titulo": "Limitador de Sobretensión 20 kA Legrand Riel DIN",
+  "meta_descripcion": "Compra el limitador de sobretensión Legrand de 20 kA (Imax) a {precio}. Protege tus equipos contra sobretensiones transitorias. Riel DIN. Envío a todo Chile.",
+  "og_descripcion": "Limitador de sobretensión Legrand, Imax 20 kA según su etiqueta, para el tablero eléctrico.",
+  "descripcion": "Limitador de sobretensiones transitorias marca Legrand, color gris, para riel DIN. Su etiqueta indica una corriente máxima de descarga (Imax) de 20 kA. Protege los equipos conectados ante sobretensiones breves, como las causadas por rayos o maniobras en la red. Garantía de 6 meses.",
+  "lede": "¿Se te han quemado equipos después de una tormenta o un corte de luz? Este **limitador de sobretensión Legrand** se instala en el tablero y desvía a tierra las **sobretensiones transitorias** antes de que lleguen a tus equipos.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/5337682_01/w=1200,h=1200,fit=cover",
-      "alt": "Limitador de sobretensión 20 A Gris Legrand, vista frontal sobre fondo blanco",
+      "alt": "Limitador de sobretensión 20 kA Legrand, foto principal sobre fondo blanco",
       "miniatura": "Ver de frente"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/5337682_21/w=1200,h=1200,fit=cover",
-      "alt": "Limitador de sobretensión 20 A Gris Legrand, vista en ángulo mostrando detalles de terminales",
+      "alt": "Limitador de sobretensión 20 kA Legrand, otra vista del producto",
       "miniatura": "Ver ángulo"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/5337682_22/w=1200,h=1200,fit=cover",
-      "alt": "Limitador de sobretensión 20 A Gris Legrand, vista posterior con fijación para riel o caja",
+      "alt": "Limitador de sobretensión 20 kA Legrand, otra vista del producto",
       "miniatura": "Ver fijación"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/5337682_23/w=1200,h=1200,fit=cover",
-      "alt": "Limitador de sobretensión 20 A Gris Legrand, vista de detalle número 4",
+      "alt": "Limitador de sobretensión 20 kA Legrand, otra vista del producto",
       "miniatura": "Ver detalle 4"
     }
   ],
@@ -47,10 +47,6 @@
       "Legrand"
     ],
     [
-      "Detalle de la garantía",
-      "1 año"
-    ],
-    [
       "Color",
       "Gris"
     ],
@@ -59,26 +55,26 @@
       "220 V"
     ],
     [
-      "Amperaje",
-      "20 A"
-    ],
-    [
       "Montaje",
       "Riel DIN normalizado"
+    ],
+    [
+      "Corriente máxima de descarga (Imax)",
+      "20 kA (según etiqueta)"
     ]
   ],
   "confianza": [
     {
-      "titulo": "⚡ Calidad garantizada",
-      "detalle": "Materiales certificados"
+      "titulo": "⚡ Imax 20 kA",
+      "detalle": "Según etiqueta"
     },
     {
-      "titulo": "🛡️ Operación segura",
-      "detalle": "Aislación eléctrica reforzada"
+      "titulo": "🔌 Riel DIN",
+      "detalle": "Va en el tablero"
     },
     {
       "titulo": "🚚 Envíos a todo Chile",
-      "detalle": "Despacho rápido a domicilio"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -87,60 +83,60 @@
   ],
   "secciones": [
     {
-      "id": "caracteristicas-y-uso",
-      "titulo": "Características y campo de aplicación",
-      "indice": "Características",
+      "id": "que-protege",
+      "titulo": "Qué protege un limitador de sobretensión",
+      "indice": "Qué protege",
       "bloques": [
         {
-          "p": "El equipo limitador de sobretensión 20 a gris Legrand está diseñado para ofrecer máxima fiabilidad operativa en sistemas eléctricos de 220 V CA."
+          "p": "Las sobretensiones transitorias son picos de voltaje muy breves que llegan por la red, por ejemplo por rayos cercanos o maniobras de la distribuidora. El limitador las desvía a tierra para que no dañen televisores, computadores y electrodomésticos."
         },
         {
           "lista": [
-            "Fijación rápida y segura en tablero o caja mural.",
-            "Materiales autoextinguibles de alta calidad técnica.",
-            "Facilidad de conexionado y mantenimiento preventivo."
+            "No reemplaza al automático ni al diferencial: los complementa.",
+            "Necesita una puesta a tierra en buen estado para funcionar.",
+            "Corriente máxima de descarga (Imax) de 20 kA, según su etiqueta."
           ]
         }
       ]
     },
     {
-      "id": "seguridad-y-norma-sec",
-      "titulo": "Uso seguro y recomendaciones técnicas",
-      "indice": "Seguridad y norma",
+      "id": "instalacion-segura",
+      "titulo": "Instalación y revisión",
+      "indice": "Instalación",
       "bloques": [
         {
-          "p": "Antes de cualquier manipulación o reemplazo en la instalación, asegúrate de desenergizar el circuito cortando el suministro eléctrico."
+          "p": "Se monta en riel DIN dentro del tablero, conectado a fase, neutro y tierra con la protección que indique el fabricante. Revisa periódicamente su indicador según el manual: si marca falla, debe reemplazarse."
         },
         {
-          "advertencia": "Para asegurar un conexionado conforme al reglamento de seguridad eléctrica de Chile, recurre a un instalador certificado por la SEC."
+          "advertencia": "La instalación en el tablero debe hacerla un instalador eléctrico autorizado por la SEC, con la energía cortada."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿Qué precauciones se deben tomar al instalarlo?",
-      "respuesta": "Cortar siempre la energía general antes de tocar los bornes y verificar la firmeza del apriete de los cables."
+      "pregunta": "¿Me protege si se corta la luz?",
+      "respuesta": "Protege contra los picos breves de voltaje que pueden ocurrir con tormentas o maniobras en la red. No reemplaza un estabilizador ni una UPS para cortes largos o voltaje bajo."
     },
     {
-      "pregunta": "¿Para qué tipo de corriente está diseñado?",
-      "respuesta": "Está pensado para sistemas de corriente alterna monofásica estándar de 220 V en Chile."
+      "pregunta": "¿Funciona sin tierra?",
+      "respuesta": "No como debe: desvía la sobretensión a tierra. Revisa que tu instalación tenga una puesta a tierra en buen estado."
     },
     {
-      "pregunta": "¿Hacen envíos a regiones?",
-      "respuesta": "Sí, despachamos a todo el territorio chileno con entrega coordinada."
+      "pregunta": "¿Qué significa 20 kA?",
+      "respuesta": "Es la corriente máxima de descarga (Imax) que puede desviar, según su etiqueta. No es la corriente de tu instalación."
     }
   ],
   "lateral": {
-    "etiqueta": "Electricidad",
-    "titulo": "Limitador de sobretensión 20 A Gris Legrand",
-    "texto": "Limitador de sobretensión 20 A Gris marca Legrand. Calidad certificada y máxima seguridad para tu instalación eléctrica. Garantía 6 meses."
+    "etiqueta": "Tablero eléctrico",
+    "titulo": "Limitador de sobretensión Legrand",
+    "texto": "Limitador de sobretensiones transitorias Legrand, Imax 20 kA, para riel DIN. Garantía de 6 meses."
   },
   "tarjeta": {
-    "titulo": "Limitador de sobretensión 20 A Gris Legrand",
-    "extracto": "Solución técnica confiable para montaje en instalaciones y tableros eléctricos residenciales y comerciales.",
-    "alt": "Limitador de sobretensión 20 A Gris Legrand",
-    "etiqueta": "Material eléctrico"
+    "titulo": "Limitador de Sobretensión 20 kA Legrand",
+    "extracto": "Protege los equipos de la casa contra sobretensiones transitorias. Se instala en el tablero, en riel DIN.",
+    "alt": "Limitador de sobretensión Legrand para riel DIN",
+    "etiqueta": "Protección eléctrica"
   },
   "guias": [
     {
@@ -148,8 +144,8 @@
       "texto": "Cómo armar un tablero eléctrico"
     },
     {
-      "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
-      "texto": "Cómo identificar fase y neutro"
+      "url": "/blog/puesta-a-tierra-domiciliaria-como-hacerla-y-medirla-chile/",
+      "texto": "Puesta a tierra domiciliaria"
     }
   ],
   "color": "Gris"

@@ -6,24 +6,24 @@
   "margen": 50,
   "categoria": "electricidad",
   "nombre": "Interruptor automático 15 A Saime",
-  "titulo_h1": "Interruptor automático 15 A 1 polo Saime",
-  "titulo_corto": "Automático 15 A 1 polo Saime",
+  "titulo_h1": "Interruptor automático 15 A tipo americano Saime",
+  "titulo_corto": "Automático 15 A tipo americano Saime",
   "subcategoria": "Automáticos y disyuntores",
   "disponible": true,
-  "seo_titulo": "Interruptor Automático 15 A Saime Riel DIN",
-  "meta_descripcion": "Compra interruptor automático disyuntor 15 A Saime a {precio}. Protección termomagnética contra sobrecargas y cortocircuitos. Envío a todo Chile.",
-  "og_descripcion": "Interruptor automático 15 A Saime para riel DIN. Protege los conductores eléctricos contra sobrecargas y cortocircuitos.",
-  "descripcion": "Disyuntor termomagnético de 15 A marca Saime (1 polo) para montaje en riel DIN. Diseñado para proteger circuitos de alumbrado y enchufes contra corrientes de sobrecarga y cortocircuitos en tableros eléctricos. Garantía de 6 meses.",
-  "lede": "Este **interruptor automático de 15 A Saime** protege los cables de tu circuito desconectando la energía ante sobrecargas o cortocircuitos, evitando recalentamientos e incendios en la instalación eléctrica.",
+  "seo_titulo": "Automático 15 A Tipo Americano Saime",
+  "meta_descripcion": "Compra el interruptor automático 15 A tipo americano Saime a {precio}. Curva B y 6000 A de ruptura según su etiqueta. Para tableros de formato americano. Envío a todo Chile.",
+  "og_descripcion": "Automático 15 A Saime de formato americano, curva B. Para tableros tipo americano, no para riel DIN.",
+  "descripcion": "Interruptor automático termomagnético de 15 A y 1 polo marca Saime, de formato americano: va en tableros con barra de conexión tipo americana, no en riel DIN. Su etiqueta indica curva B, 230 V, 6000 A de capacidad de ruptura e IEC 60898. Garantía de 6 meses.",
+  "lede": "Este **automático Saime de 15 A** es de **formato americano**: sirve para reemplazar automáticos en tableros tipo americano, no para tableros con riel DIN. Protege los cables de tu circuito ante sobrecargas y cortocircuitos.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/793779_01/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor automático 15 A Saime, vista frontal sobre fondo blanco",
+      "alt": "Automático 15 A tipo americano Saime, foto principal sobre fondo blanco",
       "miniatura": "Ver de frente"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/793779_21/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor automático 15 A Saime, vista en ángulo mostrando detalles de terminales",
+      "alt": "Automático 15 A tipo americano Saime, otra vista del producto",
       "miniatura": "Ver ángulo"
     }
   ],
@@ -37,10 +37,6 @@
       "Saime"
     ],
     [
-      "Detalle de la garantía",
-      "6 meses"
-    ],
-    [
       "Uso",
       "Protección contra sobrecargas y cortocircuitos."
     ],
@@ -50,7 +46,7 @@
     ],
     [
       "Cantidad de polos",
-      "1 unidad(es)"
+      "1"
     ],
     [
       "Amperaje",
@@ -58,21 +54,33 @@
     ],
     [
       "Montaje",
-      "Riel DIN normalizado"
+      "Formato americano (no es para riel DIN)"
+    ],
+    [
+      "Curva",
+      "B (según etiqueta)"
+    ],
+    [
+      "Capacidad de ruptura",
+      "6000 A (según etiqueta)"
+    ],
+    [
+      "Norma en la etiqueta",
+      "IEC 60898"
     ]
   ],
   "confianza": [
     {
       "titulo": "⚡ Protección térmica",
-      "detalle": "Corta ante sobrecargas continuas"
+      "detalle": "Corta ante sobrecargas"
     },
     {
-      "titulo": "💥 Protección magnética",
-      "detalle": "Corte instantáneo ante cortocircuito"
+      "titulo": "🔌 Formato americano",
+      "detalle": "No es para riel DIN"
     },
     {
       "titulo": "🚚 Envíos a todo Chile",
-      "detalle": "Despacho rápido a domicilio"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -81,18 +89,18 @@
   ],
   "secciones": [
     {
-      "id": "proteccion-termomagnetica",
-      "titulo": "Protección de circuitos eléctricos",
-      "indice": "Función termomagnética",
+      "id": "formato-americano",
+      "titulo": "Automático de formato americano",
+      "indice": "Formato americano",
       "bloques": [
         {
-          "p": "El automático combina un mecanismo bimetálico para desconectar sobrecargas prolongadas y una bobina magnética para corte ultra rápido ante cortocircuitos directos."
+          "p": "Los automáticos de formato americano van en tableros con barra de conexión tipo americana, comunes en instalaciones más antiguas. No se montan en riel DIN: antes de comprar, revisa que tu tablero use este formato y que el automático que reemplazas sea igual."
         },
         {
           "lista": [
-            "Capacidad de corte calibrada para 15 A de consumo.",
-            "Montaje estandarizado sobre riel DIN de 35 mm.",
-            "Mantiene protegidos los conductores dentro de la pared."
+            "Corriente nominal de 15 A, curva B (según etiqueta).",
+            "Capacidad de ruptura de 6000 A e IEC 60898 (según etiqueta).",
+            "Protege los cables del circuito contra sobrecargas y cortocircuitos."
           ]
         }
       ]
@@ -103,37 +111,37 @@
       "indice": "Dimensionamiento y SEC",
       "bloques": [
         {
-          "p": "El amperaje del automático debe coincidir con la sección del cable del circuito (por ejemplo, 10 A para cables de 1,5 mm² en alumbrado o 16 A para 2,5 mm² en enchufes). Nunca instales un automático de mayor capacidad sin cambiar los cables."
+          "p": "El amperaje del automático debe corresponder a la sección del cable del circuito. Nunca pongas un automático de más amperes sin revisar los cables: dejaría de protegerlos."
         },
         {
-          "advertencia": "La instalación y modificación de tableros eléctricos debe ser realizada por un instalador autorizado por la SEC con la alimentación general cortada."
+          "advertencia": "La instalación y modificación de tableros eléctricos debe hacerla un instalador autorizado por la SEC, con la alimentación general cortada."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿Por qué salta un interruptor automático?",
-      "respuesta": "Salta cuando la corriente supera su capacidad nominal por exceso de aparatos encendidos a la vez (sobrecarga) o cuando se tocan dos cables directamente (cortocircuito)."
+      "pregunta": "¿Sirve para un tablero con riel DIN?",
+      "respuesta": "No. Es de formato americano. Si tu tablero tiene riel DIN de 35 mm, necesitas un automático para riel DIN del mismo amperaje."
     },
     {
-      "pregunta": "¿Puedo cambiar un automático de 10 A por uno de 16 A o 20 A?",
-      "respuesta": "No sin antes verificar que los cables del circuito soporten esa corriente. Colocar un automático sobredimensionado anula la protección y puede provocar fuego en los conductores."
+      "pregunta": "¿Qué significa curva B?",
+      "respuesta": "Que corta antes ante picos de corriente que uno curva C. Se usa en circuitos sin grandes arranques. Si el circuito alimenta motores o equipos con arranque fuerte, consulta a un electricista."
     },
     {
-      "pregunta": "¿Sirve para cualquier tablero domiciliario?",
-      "respuesta": "Sí, utiliza el riel DIN normalizado de 35 mm estándar en todos los tableros domiciliarios e industriales de Chile."
+      "pregunta": "¿Puedo cambiarlo por uno de más amperes?",
+      "respuesta": "No sin revisar antes la sección de los cables. Un automático sobredimensionado deja de proteger los conductores y puede provocar un incendio."
     }
   ],
   "lateral": {
     "etiqueta": "Tablero eléctrico",
     "titulo": "Automático 15 A Saime",
-    "texto": "Disyuntor termomagnético 15 A Saime para riel DIN. Protege tu circuito de sobrecargas y cortocircuitos. Garantía de 6 meses."
+    "texto": "Automático 15 A Saime de formato americano, curva B. Para tableros tipo americano. Garantía de 6 meses."
   },
   "tarjeta": {
-    "titulo": "Interruptor Automático 15 A Saime",
-    "extracto": "Protege los circuitos eléctricos contra sobrecargas y cortocircuitos. Montaje en riel DIN para tableros domiciliarios.",
-    "alt": "Interruptor automático disyuntor 15 A Saime",
+    "titulo": "Automático 15 A Tipo Americano Saime",
+    "extracto": "Para tableros de formato americano, no para riel DIN. Curva B y 6000 A de ruptura según su etiqueta.",
+    "alt": "Automático 15 A Saime tipo americano",
     "etiqueta": "Protección eléctrica"
   },
   "guias": [

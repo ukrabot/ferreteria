@@ -11,29 +11,29 @@
   "subcategoria": "Material y mecanismos eléctricos",
   "disponible": true,
   "seo_titulo": "Enchufe + interruptor 10 A Nobile Perla Bticino Calidad",
-  "meta_descripcion": "Compra enchufe + interruptor 10 a nobile perla Bticino a {precio}. Material eléctrico certificado para tableros e instalaciones residenciales. Envíos a todo Chile.",
-  "og_descripcion": "Enchufe + interruptor 10 A Nobile Perla marca Bticino. Calidad, durabilidad y protección para tu instalación eléctrica.",
-  "descripcion": "Dispositivo eléctrico enchufe + interruptor 10 a nobile perla marca Bticino. Fabricado con materiales de alta resistencia mecánica y aislación eléctrica para montaje seguro. Cumple con normas vigentes. Garantía de 6 meses.",
-  "lede": "Este dispositivo **Enchufe + interruptor 10 A Nobile Perla Bticino** entrega confiabilidad, rendimiento seguro y un montaje sencillo en tu instalación eléctrica domiciliaria o comercial.",
+  "meta_descripcion": "Compra el enchufe + interruptor Bticino Nobile perla a {precio}. Un interruptor de luz y un enchufe de 10 A en la misma placa. Envío a todo Chile.",
+  "og_descripcion": "Enchufe + interruptor Bticino Nobile color perla: interruptor de luz y enchufe en una sola placa.",
+  "descripcion": "Conjunto Bticino Nobile color perla con un interruptor de alumbrado y un enchufe de 10 A en la misma placa, para caja de pared. Garantía de 6 meses.",
+  "lede": "¿Necesitas prender la luz y tener un enchufe en el mismo punto? Este **enchufe + interruptor Bticino Nobile** junta **los dos en una placa**, ideal junto a la puerta o al velador.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/6227201_01/w=1200,h=1200,fit=cover",
-      "alt": "Enchufe + interruptor 10 A Nobile Perla Bticino, vista frontal sobre fondo blanco",
+      "alt": "Enchufe + interruptor 10 A Nobile Perla Bticino, foto principal sobre fondo blanco",
       "miniatura": "Ver de frente"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/6227201_12/w=1200,h=1200,fit=cover",
-      "alt": "Enchufe + interruptor 10 A Nobile Perla Bticino, vista en ángulo mostrando detalles de terminales",
+      "alt": "Enchufe + interruptor 10 A Nobile Perla Bticino, otra vista del producto",
       "miniatura": "Ver ángulo"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/6227201_13/w=1200,h=1200,fit=cover",
-      "alt": "Enchufe + interruptor 10 A Nobile Perla Bticino, vista posterior con fijación para riel o caja",
+      "alt": "Enchufe + interruptor 10 A Nobile Perla Bticino, otra vista del producto",
       "miniatura": "Ver fijación"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/6227201_14/w=1200,h=1200,fit=cover",
-      "alt": "Enchufe + interruptor 10 A Nobile Perla Bticino, vista de detalle número 4",
+      "alt": "Enchufe + interruptor 10 A Nobile Perla Bticino, otra vista del producto",
       "miniatura": "Ver detalle 4"
     }
   ],
@@ -45,10 +45,6 @@
     [
       "Marca",
       "Bticino"
-    ],
-    [
-      "Detalle de la garantía",
-      "1 año"
     ],
     [
       "Color",
@@ -69,16 +65,16 @@
   ],
   "confianza": [
     {
-      "titulo": "⚡ Calidad garantizada",
-      "detalle": "Materiales certificados"
+      "titulo": "🔌 2 en 1",
+      "detalle": "Interruptor y enchufe"
     },
     {
-      "titulo": "🛡️ Operación segura",
-      "detalle": "Aislación eléctrica reforzada"
+      "titulo": "🎨 Bticino Nobile",
+      "detalle": "Color perla"
     },
     {
       "titulo": "🚚 Envíos a todo Chile",
-      "detalle": "Despacho rápido a domicilio"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -87,65 +83,65 @@
   ],
   "secciones": [
     {
-      "id": "caracteristicas-y-uso",
-      "titulo": "Características y campo de aplicación",
-      "indice": "Características",
+      "id": "uso",
+      "titulo": "Interruptor y enchufe en una placa",
+      "indice": "Para qué sirve",
       "bloques": [
         {
-          "p": "El equipo enchufe + interruptor 10 a nobile perla Bticino está diseñado para ofrecer máxima fiabilidad operativa en sistemas eléctricos de 220 V CA."
+          "p": "El interruptor controla una luz y el enchufe queda disponible para cargadores, lámparas u otros equipos. Ahorra una caja cuando necesitas ambos en el mismo punto."
         },
         {
           "lista": [
-            "Fijación rápida y segura en tablero o caja mural.",
-            "Materiales autoextinguibles de alta calidad técnica.",
-            "Facilidad de conexionado y mantenimiento preventivo."
+            "Enchufe de 10 A: no conectes equipos que superen su corriente.",
+            "El enchufe necesita fase, neutro y tierra.",
+            "El interruptor corta la fase de la luz que controla."
           ]
         }
       ]
     },
     {
-      "id": "seguridad-y-norma-sec",
-      "titulo": "Uso seguro y recomendaciones técnicas",
-      "indice": "Seguridad y norma",
+      "id": "instalacion-segura",
+      "titulo": "Instalación segura",
+      "indice": "Instalación",
       "bloques": [
         {
-          "p": "Antes de cualquier manipulación o reemplazo en la instalación, asegúrate de desenergizar el circuito cortando el suministro eléctrico."
+          "p": "Se instala en una caja de pared que reciba la alimentación del enchufe y el retorno de la luz. Corta el automático del circuito antes de abrir la caja y comprueba que no haya tensión."
         },
         {
-          "advertencia": "Para asegurar un conexionado conforme al reglamento de seguridad eléctrica de Chile, recurre a un instalador certificado por la SEC."
+          "advertencia": "Si la caja no tiene cable de tierra o no conoces la instalación, pide la conexión a un instalador eléctrico autorizado por la SEC."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿Qué precauciones se deben tomar al instalarlo?",
-      "respuesta": "Cortar siempre la energía general antes de tocar los bornes y verificar la firmeza del apriete de los cables."
+      "pregunta": "¿Qué puedo conectar al enchufe?",
+      "respuesta": "Equipos de uso general que no superen la corriente del enchufe de 10 A. Para hornos, estufas o equipos de alto consumo usa un enchufe de 16 A en su propio circuito."
     },
     {
-      "pregunta": "¿Para qué tipo de corriente está diseñado?",
-      "respuesta": "Está pensado para sistemas de corriente alterna monofásica estándar de 220 V en Chile."
+      "pregunta": "¿El interruptor apaga el enchufe?",
+      "respuesta": "No necesariamente: lo habitual es que el interruptor controle una luz y el enchufe tenga energía siempre. Depende de cómo se conecte."
     },
     {
-      "pregunta": "¿Hacen envíos a regiones?",
-      "respuesta": "Sí, despachamos a todo el territorio chileno con entrega coordinada."
+      "pregunta": "¿Necesita tierra?",
+      "respuesta": "Sí, el enchufe debe tener conectado el cable de tierra."
     }
   ],
   "lateral": {
-    "etiqueta": "Electricidad",
-    "titulo": "Enchufe + interruptor 10 A Nobile Perla Bticino",
-    "texto": "Enchufe + interruptor 10 A Nobile Perla marca Bticino. Calidad certificada y máxima seguridad para tu instalación eléctrica. Garantía 6 meses."
+    "etiqueta": "Mecanismos eléctricos",
+    "titulo": "Enchufe + interruptor Bticino Nobile",
+    "texto": "Interruptor de luz y enchufe de 10 A en una placa Bticino Nobile perla. Garantía de 6 meses."
   },
   "tarjeta": {
-    "titulo": "Enchufe + interruptor 10 A Nobile Perla Bticino",
-    "extracto": "Solución técnica confiable para montaje en instalaciones y tableros eléctricos residenciales y comerciales.",
-    "alt": "Enchufe + interruptor 10 A Nobile Perla Bticino",
+    "titulo": "Enchufe + Interruptor Bticino Nobile Perla",
+    "extracto": "Interruptor de luz y enchufe en una sola placa, para caja de pared.",
+    "alt": "Enchufe más interruptor Bticino Nobile perla",
     "etiqueta": "Material eléctrico"
   },
   "guias": [
     {
-      "url": "/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/",
-      "texto": "Cómo armar un tablero eléctrico"
+      "url": "/blog/como-instalar-un-enchufe-en-chile-guia-segura/",
+      "texto": "Cómo instalar un enchufe"
     },
     {
       "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",

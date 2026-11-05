@@ -5,30 +5,30 @@
   "precio_referencia": 4890,
   "margen": 50,
   "categoria": "electricidad",
-  "nombre": "Interruptor simple 2 A Negro Bticino",
-  "titulo_h1": "Interruptor simple 9/12 2 A Negro Bticino",
-  "titulo_corto": "Interruptor 9/12 2 A Negro Bticino",
-  "subcategoria": "Interruptores de pared",
+  "nombre": "Interruptor de cordón 2 A Negro Bticino",
+  "titulo_h1": "Interruptor de cordón 2 A Negro Bticino",
+  "titulo_corto": "Interruptor de cordón 2 A Negro Bticino",
+  "subcategoria": "Interruptores de cordón",
   "disponible": true,
-  "seo_titulo": "Interruptor 9/12 Simple 2 A Bticino",
-  "meta_descripcion": "Compra interruptor simple 9/12 2 A Bticino negro a {precio}. Mecanismo para control de iluminación domiciliaria. Envío a todo Chile.",
-  "og_descripcion": "Interruptor simple 9/12 2 A marca Bticino negro. Control confiable para circuitos de alumbrado en el hogar.",
-  "descripcion": "Interruptor de alumbrado simple código 9/12 de 2 A marca Bticino negro. Diseñado para montaje en caja de pared embutida o sobrepuesta, permitiendo el control suave y seguro de circuitos de iluminación. Garantía de 6 meses.",
-  "lede": "Este **interruptor simple 9/12 de 2 A Bticino negro** ofrece un encendido y apagado suave y seguro para un centro de iluminación domiciliario desde un único punto mural.",
+  "seo_titulo": "Interruptor de Cordón 2 A Bticino Negro",
+  "meta_descripcion": "Compra el interruptor de cordón 2 A Bticino negro a {precio}. Se intercala en el cable de una lámpara para encenderla sin desenchufarla. Envío a todo Chile.",
+  "og_descripcion": "Interruptor de cordón Bticino negro de 2 A para lámparas de velador y de pie.",
+  "descripcion": "Interruptor de cordón (de paso) de 2 A marca Bticino, color negro. Se intercala en el cable de una lámpara para encenderla y apagarla desde el mismo cordón. Garantía de 6 meses.",
+  "lede": "¿Tu lámpara no tiene interruptor o se le echó a perder? Este **interruptor de cordón Bticino de 2 A** se instala **en el cable** y te permite encenderla sin desenchufarla.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/1146114_01/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor simple 2 A Negro Bticino, vista frontal sobre fondo blanco",
+      "alt": "Interruptor de cordón 2 A Negro Bticino, foto principal sobre fondo blanco",
       "miniatura": "Ver de frente"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/1146114_12/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor simple 2 A Negro Bticino, vista en ángulo mostrando detalles de terminales",
+      "alt": "Interruptor de cordón 2 A Negro Bticino, otra vista del producto",
       "miniatura": "Ver ángulo"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/1146114_21/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor simple 2 A Negro Bticino, vista posterior con fijación para riel o caja",
+      "alt": "Interruptor de cordón 2 A Negro Bticino, otra vista del producto",
       "miniatura": "Ver fijación"
     }
   ],
@@ -42,10 +42,6 @@
       "Bticino"
     ],
     [
-      "Detalle de la garantía",
-      "6 meses"
-    ],
-    [
       "Color",
       "Negro"
     ],
@@ -56,20 +52,24 @@
     [
       "Amperaje",
       "2 A"
+    ],
+    [
+      "Tipo",
+      "Interruptor de cordón (de paso)"
     ]
   ],
   "confianza": [
     {
-      "titulo": "💡 Circuito 9/12",
-      "detalle": "Control simple eficiente"
+      "titulo": "💡 Para lámparas",
+      "detalle": "Se instala en el cordón"
     },
     {
-      "titulo": "⚡ 2 A · 250 V CA",
-      "detalle": "Contactos de alta durabilidad"
+      "titulo": "⚡ 2 A · 220 V",
+      "detalle": "Hasta unos 440 W"
     },
     {
       "titulo": "🚚 Envíos a todo Chile",
-      "detalle": "Despacho rápido a domicilio"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -78,66 +78,62 @@
   ],
   "secciones": [
     {
-      "id": "conexion-9-12",
-      "titulo": "¿Cómo se conecta el circuito 9/12?",
-      "indice": "Circuito 9/12",
+      "id": "uso-interruptor-de-cordon",
+      "titulo": "Para qué sirve un interruptor de cordón",
+      "indice": "Para qué sirve",
       "bloques": [
         {
-          "p": "El circuito 9/12 está normado en Chile para el accionamiento de lámparas y luminarias. La fase ingresa al borne común del interruptor y los retornos van directo a los centros de luz correspondientes."
+          "p": "Se instala en el cable de lámparas de velador, de pie o de escritorio que no tienen interruptor o lo tienen dañado. Queda a mano en el cordón y enciendes o apagas sin desenchufar."
         },
         {
           "lista": [
-            "Interrumpe siempre el conductor de fase, nunca el neutro.",
-            "Contactos firmes que evitan chispazos y arqueo eléctrico.",
-            "Mecanismo duradero probado para miles de maniobras."
+            "Corriente máxima de 2 A: a 220 V son unos 440 W, suficiente para lámparas.",
+            "Para cordones de lámparas, no para la instalación fija de la casa.",
+            "Intercala uno de los dos conductores del cordón en sus bornes."
           ]
         }
       ]
     },
     {
-      "id": "seguridad-instalacion-mural",
-      "titulo": "Instalación en pared y seguridad eléctrica",
-      "indice": "Seguridad e instalación",
+      "id": "uso-seguro",
+      "titulo": "Instalación y uso seguro",
+      "indice": "Uso seguro",
       "bloques": [
         {
-          "p": "Antes de aflojar tornillos o conectar cables, desenergiza el circuito de alumbrado bajando el automático respectivo en el tablero. Pela el conductor a la medida exacta indicada en el mecanismo para evitar hilos de cobre expuestos."
+          "p": "Desenchufa la lámpara, abre el interruptor, corta solo uno de los conductores del cordón y conecta cada extremo a un borne. Pela lo justo, aprieta bien y deja el cable sujeto en las entradas antes de cerrar."
         },
         {
-          "advertencia": "Si la instalación es antigua o desconoces la distribución de fase y neutro, solicita la intervención de un instalador eléctrico autorizado SEC."
+          "advertencia": "No lo uses con estufas, hervidores u otros equipos de más de 440 W: 2 A es poco para ellos."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿Para qué sirve exactamente el código 9/12?",
-      "respuesta": "En la normativa chilena, 9/12 designa el circuito de alumbrado: simple (9/12), doble (9/15), de escala/conmutación (9/24) o triple (9/32)."
+      "pregunta": "¿Qué potencia aguanta?",
+      "respuesta": "Hasta 2 A: a 220 V son unos 440 W. Sirve para lámparas con ampolletas LED o tradicionales, no para equipos que calientan."
+    },
+    {
+      "pregunta": "¿Sirve para la luz del techo?",
+      "respuesta": "No. Es para cordones de lámparas que se enchufan. Para la luz del techo usa un interruptor de pared 9/12."
     },
     {
       "pregunta": "¿Se puede usar con ampolletas LED?",
-      "respuesta": "Sí, es totalmente compatible con ampolletas LED, tubos fluorescentes, focos dicroicos y lámparas tradicionales de hasta su corriente nominal."
-    },
-    {
-      "pregunta": "¿Hacen envíos a regiones?",
-      "respuesta": "Sí, despachamos a todas las comunas de Chile con seguimiento en línea."
+      "respuesta": "Sí, mientras la lámpara completa no supere los 2 A."
     }
   ],
   "lateral": {
     "etiqueta": "Interruptores",
-    "titulo": "Interruptor 9/12 Bticino",
-    "texto": "Interruptor de alumbrado 9/12 2 A Bticino. Control confiable y estético para tus centros de luz. Garantía de 6 meses."
+    "titulo": "Interruptor de cordón Bticino",
+    "texto": "Interruptor de cordón 2 A Bticino negro para lámparas. Garantía de 6 meses."
   },
   "tarjeta": {
-    "titulo": "Interruptor 9/12 Simple Bticino",
-    "extracto": "Mecanismo de pared para control de iluminación domiciliaria. Acabado prolijo y accionamiento suave y seguro.",
-    "alt": "Interruptor de luz 9/12 Bticino",
+    "titulo": "Interruptor de Cordón 2 A Bticino Negro",
+    "extracto": "Se intercala en el cable de una lámpara para encenderla y apagarla sin desenchufarla.",
+    "alt": "Interruptor de cordón Bticino negro",
     "etiqueta": "Material eléctrico"
   },
   "guias": [
-    {
-      "url": "/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/",
-      "texto": "Cómo armar un tablero eléctrico"
-    },
     {
       "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
       "texto": "Cómo identificar fase y neutro"

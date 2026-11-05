@@ -6,39 +6,39 @@
   "margen": 50,
   "categoria": "electricidad",
   "nombre": "Interruptor conmutador triple 9/24 10 A Luzica Blanco Bticino",
-  "titulo_h1": "Interruptor triple 9/32 10 A Blanco Bticino",
-  "titulo_corto": "Interruptor 9/32 10 A Blanco Bticino",
+  "titulo_h1": "Interruptor conmutador triple 9/24 10 A Blanco Bticino",
+  "titulo_corto": "Conmutador triple 9/24 10 A Bticino",
   "subcategoria": "Interruptores de pared",
   "disponible": true,
-  "seo_titulo": "Interruptor 9/32 Triple 10 A Bticino",
-  "meta_descripcion": "Compra interruptor triple 9/32 10 A Bticino blanco a {precio}. Mecanismo para control de iluminación domiciliaria. Envío a todo Chile.",
-  "og_descripcion": "Interruptor triple 9/32 10 A marca Bticino blanco. Control confiable para circuitos de alumbrado en el hogar.",
-  "descripcion": "Interruptor de alumbrado triple código 9/32 de 10 A marca Bticino blanco. Diseñado para montaje en caja de pared embutida o sobrepuesta, permitiendo el control suave y seguro de circuitos de iluminación. Garantía de 6 meses.",
-  "lede": "Este **interruptor triple 9/32 de 10 A Bticino blanco** te permite controlar tres centros de iluminación por separado desde un solo punto de mando mural con un acabado limpio y uniforme.",
+  "seo_titulo": "Conmutador Triple 9/24 10 A Luzica Bticino",
+  "meta_descripcion": "Compra el conmutador triple 9/24 10 A Bticino Luzica a {precio}. Tres conmutadores en una placa para encender tres luces desde dos lugares. Envío a todo Chile.",
+  "og_descripcion": "Conmutador triple 9/24 10 A Bticino Luzica blanco: tres conmutadores de escala en una placa.",
+  "descripcion": "Tres conmutadores 9/24 de 10 A en una placa, línea Luzica de Bticino, color blanco. Cada uno, junto con otro conmutador, enciende y apaga una luz desde dos lugares. Garantía de 6 meses.",
+  "lede": "¿Tienes tres luces que quieres encender desde dos puntos, como un pasillo largo o una escalera? Este **conmutador triple Bticino Luzica** junta **tres conmutadores 9/24** en una sola placa.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/388936X_01/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor conmutador triple 9/24 10 A Luzica Blanco Bticino, vista frontal sobre fondo blanco",
+      "alt": "Conmutador triple 9/24 10 A Bticino, foto principal sobre fondo blanco",
       "miniatura": "Ver de frente"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/388936X_400/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor conmutador triple 9/24 10 A Luzica Blanco Bticino, vista en ángulo mostrando detalles de terminales",
+      "alt": "Conmutador triple 9/24 10 A Bticino, otra vista del producto",
       "miniatura": "Ver ángulo"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/388936X_12/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor conmutador triple 9/24 10 A Luzica Blanco Bticino, vista posterior con fijación para riel o caja",
+      "alt": "Conmutador triple 9/24 10 A Bticino, otra vista del producto",
       "miniatura": "Ver fijación"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/388936X_21/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor conmutador triple 9/24 10 A Luzica Blanco Bticino, vista de detalle número 4",
+      "alt": "Conmutador triple 9/24 10 A Bticino, otra vista del producto",
       "miniatura": "Ver detalle 4"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/388936X_22/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor conmutador triple 9/24 10 A Luzica Blanco Bticino, vista de detalle número 5",
+      "alt": "Conmutador triple 9/24 10 A Bticino, otra vista del producto",
       "miniatura": "Ver detalle 5"
     }
   ],
@@ -50,10 +50,6 @@
     [
       "Marca",
       "Bticino"
-    ],
-    [
-      "Detalle de la garantía",
-      "1 año"
     ],
     [
       "Material",
@@ -78,16 +74,16 @@
   ],
   "confianza": [
     {
-      "titulo": "💡 Circuito 9/32",
-      "detalle": "Control triple eficiente"
+      "titulo": "💡 Tres conmutadores 9/24",
+      "detalle": "Tres luces desde dos lugares"
     },
     {
-      "titulo": "⚡ 10 A · 250 V CA",
-      "detalle": "Contactos de alta durabilidad"
+      "titulo": "⚡ 10 A · 220 V",
+      "detalle": "Corriente nominal del mecanismo"
     },
     {
       "titulo": "🚚 Envíos a todo Chile",
-      "detalle": "Despacho rápido a domicilio"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -96,18 +92,18 @@
   ],
   "secciones": [
     {
-      "id": "conexion-9-32",
-      "titulo": "¿Cómo se conecta el circuito 9/32?",
-      "indice": "Circuito 9/32",
+      "id": "conexion-9-24",
+      "titulo": "¿Cómo funciona un conmutador triple?",
+      "indice": "Conmutador 9/24",
       "bloques": [
         {
-          "p": "El circuito 9/32 está normado en Chile para el accionamiento de lámparas y luminarias. La fase ingresa al borne común del interruptor y los retornos van directo a los centros de luz correspondientes."
+          "p": "Cada conmutador 9/24 tiene un borne común y dos de salida. Con un par de conmutadores, uno en cada extremo, enciendes y apagas la misma luz desde dos lugares. Este trae tres en una placa: tres luces controladas desde dos puntos, junto con otros conmutadores en el otro extremo."
         },
         {
           "lista": [
-            "Interrumpe siempre el conductor de fase, nunca el neutro.",
-            "Contactos firmes que evitan chispazos y arqueo eléctrico.",
-            "Mecanismo duradero probado para miles de maniobras."
+            "Cada luz necesita su par: este conmutador en un extremo y otro en el otro extremo.",
+            "Interrumpe siempre la fase, nunca el neutro.",
+            "No reemplaza a un interruptor triple 9/32: ese controla tres luces desde un solo lugar."
           ]
         }
       ]
@@ -128,37 +124,37 @@
   ],
   "faq": [
     {
-      "pregunta": "¿Para qué sirve exactamente el código 9/32?",
-      "respuesta": "En la normativa chilena, 9/32 designa el circuito de alumbrado: simple (9/12), doble (9/15), de escala/conmutación (9/24) o triple (9/32)."
+      "pregunta": "¿Qué diferencia tiene con un interruptor triple 9/32?",
+      "respuesta": "El triple 9/32 enciende tres luces desde un solo lugar. El conmutador triple 9/24 sirve para encenderlas desde dos lugares, con otros conmutadores en el otro extremo."
     },
     {
       "pregunta": "¿Se puede usar con ampolletas LED?",
-      "respuesta": "Sí, es totalmente compatible con ampolletas LED, tubos fluorescentes, focos dicroicos y lámparas tradicionales de hasta su corriente nominal."
+      "respuesta": "Sí. El interruptor solo abre y cierra la fase, así que sirve con ampolletas LED y tradicionales mientras no superes su corriente nominal. Si una ampolleta LED queda brillando débil con la luz apagada, revisa que el interruptor esté cortando la fase y no el neutro."
     },
     {
       "pregunta": "¿Hacen envíos a regiones?",
-      "respuesta": "Sí, despachamos a todas las comunas de Chile con seguimiento en línea."
+      "respuesta": "Sí, despachamos a todas las regiones de Chile."
     }
   ],
   "lateral": {
     "etiqueta": "Interruptores",
-    "titulo": "Interruptor 9/32 Bticino",
-    "texto": "Interruptor de alumbrado 9/32 10 A Bticino. Control confiable y estético para tus centros de luz. Garantía de 6 meses."
+    "titulo": "Conmutador triple 9/24 Bticino",
+    "texto": "Tres conmutadores 9/24 de 10 A en una placa Luzica. Garantía de 6 meses."
   },
   "tarjeta": {
-    "titulo": "Interruptor 9/32 Triple Bticino",
-    "extracto": "Mecanismo de pared para control de iluminación domiciliaria. Acabado prolijo y accionamiento suave y seguro.",
-    "alt": "Interruptor de luz 9/32 Bticino",
+    "titulo": "Conmutador Triple 9/24 Bticino",
+    "extracto": "Tres conmutadores de escala en una placa, para encender tres luces desde dos lugares.",
+    "alt": "Conmutador triple 9/24 Bticino Luzica",
     "etiqueta": "Material eléctrico"
   },
   "guias": [
     {
-      "url": "/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/",
-      "texto": "Cómo armar un tablero eléctrico"
-    },
-    {
       "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
       "texto": "Cómo identificar fase y neutro"
+    },
+    {
+      "url": "/blog/guia-completa-para-instalar-una-lampara-colgante-en-el-techo/",
+      "texto": "Cómo instalar una lámpara colgante"
     }
   ],
   "color": "Blanco"

@@ -18,17 +18,17 @@
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/269220_01/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor diferencial bipolar 25 A Lexo visto de frente con botón de prueba",
+      "alt": "Interruptor diferencial 25 A Lexo, foto principal sobre fondo blanco",
       "miniatura": "Ver de frente"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/269220_12/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor diferencial 25 A Lexo en perspectiva lateral mostrando bornes",
+      "alt": "Interruptor diferencial 25 A Lexo, otra vista del producto",
       "miniatura": "Ver lateral"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/269220_21/w=1200,h=1200,fit=cover",
-      "alt": "Vista posterior del interruptor diferencial Lexo con enganche para riel DIN",
+      "alt": "Interruptor diferencial 25 A Lexo, otra vista del producto",
       "miniatura": "Ver riel DIN"
     }
   ],
@@ -123,7 +123,7 @@
     },
     {
       "pregunta": "¿Hacen envíos a todo Chile?",
-      "respuesta": "Sí, despachamos a todas las regiones de Chile con entrega rápida a domicilio o retiro coordinado."
+      "respuesta": "Sí, despachamos a todas las regiones de Chile."
     }
   ],
   "lateral": {
@@ -143,8 +143,8 @@
       "texto": "Cómo armar un tablero eléctrico"
     },
     {
-      "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
-      "texto": "Cómo identificar fase y neutro"
+      "url": "/blog/por-que-salta-el-diferencial-como-encontrar-la-fuga-guia-chile/",
+      "texto": "Por qué salta el diferencial"
     }
   ]
 }

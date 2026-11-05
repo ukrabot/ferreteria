@@ -3122,7 +3122,7 @@ const SEED_PRODUCTS = [
   },
   {
     slug: 'interruptor-simple-10-a-negro-halux',
-    name: 'Interruptor simple 10 A Negro Halux',
+    name: 'Interruptor de pie 10 A Negro Halux',
     price: 5990,
     image: '/producto/interruptor-simple-10-a-negro-halux.webp',
     category: 'Material Eléctrico',
@@ -3140,7 +3140,7 @@ const SEED_PRODUCTS = [
   },
   {
     slug: 'interruptor-simple-2-a-negro-halux',
-    name: 'Interruptor simple 2 A Negro Halux',
+    name: 'Interruptor de cordón 2 A Negro Halux',
     price: 3990,
     image: '/producto/interruptor-simple-2-a-negro-halux.webp',
     category: 'Material Eléctrico',
@@ -3248,7 +3248,7 @@ const SEED_PRODUCTS = [
   },
   {
     slug: 'interruptor-simple-2-a-negro-bticino',
-    name: 'Interruptor simple 2 A Negro Bticino',
+    name: 'Interruptor de cordón 2 A Negro Bticino',
     price: 7990,
     image: '/producto/interruptor-simple-2-a-negro-bticino.webp',
     category: 'Material Eléctrico',
@@ -3266,7 +3266,7 @@ const SEED_PRODUCTS = [
   },
   {
     slug: 'limitador-de-sobretension-20-a-gris-legrand',
-    name: 'Limitador de sobretensión 20 A Gris Legrand',
+    name: 'Limitador de sobretensión 20 kA Gris Legrand',
     price: 59990,
     image: '/producto/limitador-de-sobretension-20-a-gris-legrand.webp',
     category: 'Material Eléctrico',
@@ -3302,7 +3302,7 @@ const SEED_PRODUCTS = [
   },
   {
     slug: 'interruptor-automatico1x25-ac-6-ka-lexo-lexo',
-    name: 'Interruptor Automático1x25 AC 6 Ka Lexo',
+    name: 'Interruptor automático 1x25 A 6 kA Lexo',
     price: 3990,
     image: '/producto/interruptor-automatico1x25-ac-6-ka-lexo-lexo.webp',
     category: 'Material Eléctrico',
@@ -3419,7 +3419,7 @@ const SEED_PRODUCTS = [
   },
   {
     slug: 'interruptor-automatico-bipolar-2x16ka-schneider',
-    name: 'Interruptor Automatico Bipolar 2x16KA Schneider',
+    name: 'Interruptor automático bipolar 2x16 A Schneider',
     price: 11990,
     image: '/producto/interruptor-automatico-bipolar-2x16ka-schneider.webp',
     category: 'Material Eléctrico',
@@ -3572,7 +3572,7 @@ const SEED_PRODUCTS = [
   },
   {
     slug: 'interruptor-simple-2-a-blanco-bticino',
-    name: 'Interruptor simple 2 A Blanco Bticino',
+    name: 'Interruptor de cordón 2 A Blanco Bticino',
     price: 7990,
     image: '/producto/interruptor-simple-2-a-blanco-bticino.webp',
     category: 'Material Eléctrico',
@@ -3707,7 +3707,7 @@ const SEED_PRODUCTS = [
   },
   {
     slug: 'interruptor-simple-10-a-blanco-halux',
-    name: 'Interruptor simple 10 A Blanco Halux',
+    name: 'Interruptor de pie 10 A Blanco Halux',
     price: 4990,
     image: '/producto/interruptor-simple-10-a-blanco-halux.webp',
     category: 'Material Eléctrico',
@@ -3716,7 +3716,7 @@ const SEED_PRODUCTS = [
   },
   {
     slug: 'interruptor-simple-2-a-blanco-halux',
-    name: 'Interruptor simple 2 A Blanco Halux',
+    name: 'Interruptor de cordón 2 A Blanco Halux',
     price: 3990,
     image: '/producto/interruptor-simple-2-a-blanco-halux.webp',
     category: 'Material Eléctrico',
@@ -3824,7 +3824,7 @@ const SEED_PRODUCTS = [
   },
   {
     slug: 'interruptor-doble-9-15-16-a-genesis-blanco-schneider-274151',
-    name: 'Interruptor doble 9/15 16 A Genesis blanco Schneider',
+    name: 'Interruptor doble 9/15 16 A de sobreponer Genesis blanco Schneider',
     price: 4990,
     image: '/producto/interruptor-doble-9-15-16-a-genesis-blanco-schneider-274151.webp',
     category: 'Material Eléctrico',

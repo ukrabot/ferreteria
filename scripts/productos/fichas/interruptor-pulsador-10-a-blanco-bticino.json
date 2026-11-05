@@ -13,33 +13,28 @@
   "seo_titulo": "Pulsador 10 A Blanco Bticino para Timbre",
   "meta_descripcion": "Compra pulsador de timbre 10 A Bticino blanco a {precio}. Mecanismo de contacto momentáneo para timbres y cerraduras eléctricas. Envíos a todo Chile.",
   "og_descripcion": "Pulsador 10 A Bticino blanco. Accionamiento momentáneo para timbres residenciales y chapas eléctricas.",
-  "descripcion": "Pulsador de contacto momentáneo de 10 A marca Bticino blanco. Cierra el circuito mientras se mantiene presionado y regresa automáticamente a su posición inicial al soltarlo. Apto para timbres y cerraduras eléctricas. Garantía de 6 meses.",
+  "descripcion": "Pulsador de contacto momentáneo de 10 A marca Bticino blanco. Cierra el circuito mientras se mantiene presionado y regresa automáticamente a su posición inicial al soltarlo. Apto para timbres y cerraduras eléctricas. Es de sobreponer: va atornillado sobre la pared, sin caja embutida. Garantía de 6 meses.",
   "lede": "Este **pulsador de 10 A Bticino blanco** acciona el circuito eléctrico solo mientras lo mantienes presionado, siendo ideal para timbres cableados, citófonos o apertura de cerraduras eléctricas residenciales.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/1476319_01/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor pulsador 10 A Blanco Bticino, vista frontal sobre fondo blanco",
+      "alt": "Pulsador 10 A Blanco Bticino, foto principal sobre fondo blanco",
       "miniatura": "Ver de frente"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/1476319_400/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor pulsador 10 A Blanco Bticino, vista en ángulo mostrando detalles de terminales",
+      "alt": "Pulsador 10 A Blanco Bticino, otra vista del producto",
       "miniatura": "Ver ángulo"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/1476319_12/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor pulsador 10 A Blanco Bticino, vista posterior con fijación para riel o caja",
+      "alt": "Pulsador 10 A Blanco Bticino, otra vista del producto",
       "miniatura": "Ver fijación"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/1476319_13/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor pulsador 10 A Blanco Bticino, vista de detalle número 4",
+      "alt": "Pulsador 10 A Blanco Bticino, otra vista del producto",
       "miniatura": "Ver detalle 4"
-    },
-    {
-      "url": "https://media.falabella.com/sodimacCL/1476319_18/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor pulsador 10 A Blanco Bticino, vista de detalle número 5",
-      "miniatura": "Ver detalle 5"
     }
   ],
   "stock": {
@@ -50,10 +45,6 @@
     [
       "Marca",
       "Bticino"
-    ],
-    [
-      "Detalle de la garantía",
-      "6 meses"
     ],
     [
       "Material",
@@ -70,6 +61,10 @@
     [
       "Amperaje",
       "10 A"
+    ],
+    [
+      "Montaje",
+      "De sobreponer"
     ]
   ],
   "confianza": [
@@ -78,7 +73,7 @@
       "detalle": "Contacto momentáneo seguro"
     },
     {
-      "titulo": "⚡ 10 A · 250 V CA",
+      "titulo": "⚡ 10 A · 220 V",
       "detalle": "Soporta timbres y cerraduras"
     },
     {
@@ -114,7 +109,7 @@
       "indice": "Instalación segura",
       "bloques": [
         {
-          "p": "Se fija en la caja de distribución mural estándar embutida. Conecta los dos conductores del circuito en los bornes correspondientes asegurando un apriete firme."
+          "p": "Es de sobreponer: se atornilla directo sobre la pared, sin caja embutida. Conecta los dos conductores del circuito en sus bornes y aprieta bien los tornillos."
         },
         {
           "advertencia": "Corta la energía desde el automático del circuito antes de abrir la caja. Si el circuito opera a 220 V y no tienes experiencia, recurre a un instalador autorizado SEC."
@@ -133,7 +128,7 @@
     },
     {
       "pregunta": "¿Hacen envíos a todo Chile?",
-      "respuesta": "Sí, enviamos a todas las comunas del país a través de couriers certificados."
+      "respuesta": "Sí, despachamos a todas las regiones de Chile."
     }
   ],
   "lateral": {
@@ -149,12 +144,12 @@
   },
   "guias": [
     {
-      "url": "/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/",
-      "texto": "Cómo armar un tablero eléctrico"
-    },
-    {
       "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
       "texto": "Cómo identificar fase y neutro"
+    },
+    {
+      "url": "/blog/guia-completa-para-instalar-una-lampara-colgante-en-el-techo/",
+      "texto": "Cómo instalar una lámpara colgante"
     }
   ],
   "color": "Blanco"

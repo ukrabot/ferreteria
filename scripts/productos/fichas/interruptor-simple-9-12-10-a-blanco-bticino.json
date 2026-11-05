@@ -6,35 +6,30 @@
   "margen": 50,
   "categoria": "electricidad",
   "nombre": "Interruptor simple 9/12 10 A blanco Bticino",
-  "titulo_h1": "Interruptor simple 9/12 10 A Blanco Bticino",
-  "titulo_corto": "Interruptor 9/12 10 A Blanco Bticino",
+  "titulo_h1": "Interruptor simple 9/12 10 A de sobreponer Blanco Bticino",
+  "titulo_corto": "Interruptor 9/12 10 A sobreponer Bticino",
   "subcategoria": "Interruptores de pared",
   "disponible": true,
   "seo_titulo": "Interruptor 9/12 Simple 10 A Bticino",
   "meta_descripcion": "Compra interruptor simple 9/12 10 A Bticino blanco a {precio}. Mecanismo para control de iluminación domiciliaria. Envío a todo Chile.",
   "og_descripcion": "Interruptor simple 9/12 10 A marca Bticino blanco. Control confiable para circuitos de alumbrado en el hogar.",
-  "descripcion": "Interruptor de alumbrado simple código 9/12 de 10 A marca Bticino blanco. Diseñado para montaje en caja de pared embutida o sobrepuesta, permitiendo el control suave y seguro de circuitos de iluminación. Garantía de 6 meses.",
+  "descripcion": "Interruptor de alumbrado simple código 9/12 de 10 A marca Bticino blanco. Es de sobreponer: va atornillado sobre la pared, sin caja embutida, permitiendo el control suave y seguro de circuitos de iluminación. Garantía de 6 meses.",
   "lede": "Este **interruptor simple 9/12 de 10 A Bticino blanco** ofrece un encendido y apagado suave y seguro para un centro de iluminación domiciliario desde un único punto mural.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/1433695_01/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor simple 9/12 10 A blanco Bticino, vista frontal sobre fondo blanco",
+      "alt": "Interruptor 9/12 10 A sobreponer Bticino, foto principal sobre fondo blanco",
       "miniatura": "Ver de frente"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/1433695_12/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor simple 9/12 10 A blanco Bticino, vista en ángulo mostrando detalles de terminales",
+      "alt": "Interruptor 9/12 10 A sobreponer Bticino, otra vista del producto",
       "miniatura": "Ver ángulo"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/1433695_13/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor simple 9/12 10 A blanco Bticino, vista posterior con fijación para riel o caja",
+      "alt": "Interruptor 9/12 10 A sobreponer Bticino, otra vista del producto",
       "miniatura": "Ver fijación"
-    },
-    {
-      "url": "https://media.falabella.com/sodimacCL/1433695_18/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor simple 9/12 10 A blanco Bticino, vista de detalle número 4",
-      "miniatura": "Ver detalle 4"
     }
   ],
   "stock": {
@@ -47,10 +42,6 @@
       "Bticino"
     ],
     [
-      "Detalle de la garantía",
-      "1 año"
-    ],
-    [
       "Color",
       "blanco"
     ],
@@ -61,6 +52,10 @@
     [
       "Amperaje",
       "10 A"
+    ],
+    [
+      "Montaje",
+      "De sobreponer"
     ]
   ],
   "confianza": [
@@ -69,8 +64,8 @@
       "detalle": "Control simple eficiente"
     },
     {
-      "titulo": "⚡ 10 A · 250 V CA",
-      "detalle": "Contactos de alta durabilidad"
+      "titulo": "⚡ 10 A · 220 V",
+      "detalle": "Corriente nominal del mecanismo"
     },
     {
       "titulo": "🚚 Envíos a todo Chile",
@@ -88,13 +83,13 @@
       "indice": "Circuito 9/12",
       "bloques": [
         {
-          "p": "El circuito 9/12 está normado en Chile para el accionamiento de lámparas y luminarias. La fase ingresa al borne común del interruptor y los retornos van directo a los centros de luz correspondientes."
+          "p": "En Chile, 9/12 es el código habitual de este interruptor de alumbrado. La fase ingresa al borne común del interruptor y los retornos van directo a los centros de luz correspondientes."
         },
         {
           "lista": [
             "Interrumpe siempre el conductor de fase, nunca el neutro.",
-            "Contactos firmes que evitan chispazos y arqueo eléctrico.",
-            "Mecanismo duradero probado para miles de maniobras."
+            "Aprieta bien los tornillos de los bornes: una conexión floja se calienta.",
+            "No conectes cargas que superen su corriente nominal."
           ]
         }
       ]
@@ -116,15 +111,15 @@
   "faq": [
     {
       "pregunta": "¿Para qué sirve exactamente el código 9/12?",
-      "respuesta": "En la normativa chilena, 9/12 designa el circuito de alumbrado: simple (9/12), doble (9/15), de escala/conmutación (9/24) o triple (9/32)."
+      "respuesta": "En Chile estos códigos identifican el tipo de interruptor de alumbrado: simple (9/12), doble (9/15), de escala/conmutación (9/24) o triple (9/32)."
     },
     {
       "pregunta": "¿Se puede usar con ampolletas LED?",
-      "respuesta": "Sí, es totalmente compatible con ampolletas LED, tubos fluorescentes, focos dicroicos y lámparas tradicionales de hasta su corriente nominal."
+      "respuesta": "Sí. El interruptor solo abre y cierra la fase, así que sirve con ampolletas LED y tradicionales mientras no superes su corriente nominal. Si una ampolleta LED queda brillando débil con la luz apagada, revisa que el interruptor esté cortando la fase y no el neutro."
     },
     {
       "pregunta": "¿Hacen envíos a regiones?",
-      "respuesta": "Sí, despachamos a todas las comunas de Chile con seguimiento en línea."
+      "respuesta": "Sí, despachamos a todas las regiones de Chile."
     }
   ],
   "lateral": {
@@ -140,12 +135,12 @@
   },
   "guias": [
     {
-      "url": "/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/",
-      "texto": "Cómo armar un tablero eléctrico"
-    },
-    {
       "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
       "texto": "Cómo identificar fase y neutro"
+    },
+    {
+      "url": "/blog/guia-completa-para-instalar-una-lampara-colgante-en-el-techo/",
+      "texto": "Cómo instalar una lámpara colgante"
     }
   ],
   "color": "Blanco"

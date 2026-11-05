@@ -18,17 +18,17 @@
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/779350_01/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor automático 10 A curva C 6KA Bticino, vista frontal sobre fondo blanco",
+      "alt": "Automático 10 A 1 polo Bticino, foto principal sobre fondo blanco",
       "miniatura": "Ver de frente"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/779350_21/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor automático 10 A curva C 6KA Bticino, vista en ángulo mostrando detalles de terminales",
+      "alt": "Automático 10 A 1 polo Bticino, otra vista del producto",
       "miniatura": "Ver ángulo"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/779350_22/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor automático 10 A curva C 6KA Bticino, vista posterior con fijación para riel o caja",
+      "alt": "Automático 10 A 1 polo Bticino, otra vista del producto",
       "miniatura": "Ver fijación"
     }
   ],
@@ -42,10 +42,6 @@
       "Bticino"
     ],
     [
-      "Detalle de la garantía",
-      "6 meses"
-    ],
-    [
       "Uso",
       "Protección contra sobrecargas y cortocircuitos."
     ],
@@ -55,7 +51,7 @@
     ],
     [
       "Cantidad de polos",
-      "1 unidad(es)"
+      "1"
     ],
     [
       "Amperaje",
@@ -95,7 +91,7 @@
         },
         {
           "lista": [
-            "Capacidad de corte calibrada para 10 A de consumo.",
+            "Corriente nominal de 10 A.",
             "Montaje estandarizado sobre riel DIN de 35 mm.",
             "Mantiene protegidos los conductores dentro de la pared."
           ]
@@ -127,7 +123,7 @@
     },
     {
       "pregunta": "¿Sirve para cualquier tablero domiciliario?",
-      "respuesta": "Sí, utiliza el riel DIN normalizado de 35 mm estándar en todos los tableros domiciliarios e industriales de Chile."
+      "respuesta": "Sí, si tu tablero tiene riel DIN de 35 mm, el formato de los tableros actuales. Los tableros antiguos de tipo americano usan automáticos de otro formato: revisa el tuyo antes de comprar."
     }
   ],
   "lateral": {

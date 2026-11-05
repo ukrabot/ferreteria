@@ -5,30 +5,30 @@
   "precio_referencia": 3290,
   "margen": 50,
   "categoria": "electricidad",
-  "nombre": "Interruptor simple 10 A Blanco Halux",
-  "titulo_h1": "Interruptor simple 9/12 10 A Blanco Halux",
-  "titulo_corto": "Interruptor 9/12 10 A Blanco Halux",
-  "subcategoria": "Interruptores de pared",
+  "nombre": "Interruptor de pie 10 A Blanco Halux",
+  "titulo_h1": "Interruptor de pie 10 A Blanco Halux",
+  "titulo_corto": "Interruptor de pie 10 A Blanco Halux",
+  "subcategoria": "Interruptores de pie",
   "disponible": true,
-  "seo_titulo": "Interruptor 9/12 Simple 10 A Halux",
-  "meta_descripcion": "Compra interruptor simple 9/12 10 A Halux blanco a {precio}. Mecanismo para control de iluminación domiciliaria. Envío a todo Chile.",
-  "og_descripcion": "Interruptor simple 9/12 10 A marca Halux blanco. Control confiable para circuitos de alumbrado en el hogar.",
-  "descripcion": "Interruptor de alumbrado simple código 9/12 de 10 A marca Halux blanco. Diseñado para montaje en caja de pared embutida o sobrepuesta, permitiendo el control suave y seguro de circuitos de iluminación. Garantía de 6 meses.",
-  "lede": "Este **interruptor simple 9/12 de 10 A Halux blanco** ofrece un encendido y apagado suave y seguro para un centro de iluminación domiciliario desde un único punto mural.",
+  "seo_titulo": "Interruptor de Pie para Cordón 10 A Halux Blanco",
+  "meta_descripcion": "Compra el interruptor de pie 10 A Halux blanco a {precio}. Se intercala en el cordón de una lámpara de pie o un equipo y se acciona con el pie. Envío a todo Chile.",
+  "og_descripcion": "Interruptor de pie Halux blanco de 10 A para cordón de lámparas y equipos.",
+  "descripcion": "Interruptor de pie de 10 A marca Halux, color blanco. Se intercala en el cordón de una lámpara de pie u otro equipo y se enciende o apaga pisándolo. Garantía de 6 meses.",
+  "lede": "¿Tu lámpara de pie tiene el interruptor donde no alcanzas? Este **interruptor de pie Halux de 10 A** se instala en el cordón y la enciendes o apagas **pisándolo**.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/335816X_01/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor simple 10 A Blanco Halux, vista frontal sobre fondo blanco",
+      "alt": "Interruptor de pie 10 A Blanco Halux, foto principal sobre fondo blanco",
       "miniatura": "Ver de frente"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/335816X_12/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor simple 10 A Blanco Halux, vista en ángulo mostrando detalles de terminales",
+      "alt": "Interruptor de pie 10 A Blanco Halux, otra vista del producto",
       "miniatura": "Ver ángulo"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/335816X_21/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor simple 10 A Blanco Halux, vista posterior con fijación para riel o caja",
+      "alt": "Interruptor de pie 10 A Blanco Halux, otra vista del producto",
       "miniatura": "Ver fijación"
     }
   ],
@@ -42,10 +42,6 @@
       "Halux"
     ],
     [
-      "Detalle de la garantía",
-      "6 meses"
-    ],
-    [
       "Color",
       "Blanco"
     ],
@@ -56,20 +52,24 @@
     [
       "Amperaje",
       "10 A"
+    ],
+    [
+      "Tipo",
+      "Interruptor de pie, para cordón"
     ]
   ],
   "confianza": [
     {
-      "titulo": "💡 Circuito 9/12",
-      "detalle": "Control simple eficiente"
+      "titulo": "🦶 Se acciona con el pie",
+      "detalle": "Para lámparas de pie y equipos"
     },
     {
-      "titulo": "⚡ 10 A · 250 V CA",
-      "detalle": "Contactos de alta durabilidad"
+      "titulo": "⚡ 10 A · 220 V",
+      "detalle": "Hasta unos 2.200 W"
     },
     {
       "titulo": "🚚 Envíos a todo Chile",
-      "detalle": "Despacho rápido a domicilio"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -78,66 +78,62 @@
   ],
   "secciones": [
     {
-      "id": "conexion-9-12",
-      "titulo": "¿Cómo se conecta el circuito 9/12?",
-      "indice": "Circuito 9/12",
+      "id": "uso-interruptor-de-pie",
+      "titulo": "Para qué sirve un interruptor de pie",
+      "indice": "Para qué sirve",
       "bloques": [
         {
-          "p": "El circuito 9/12 está normado en Chile para el accionamiento de lámparas y luminarias. La fase ingresa al borne común del interruptor y los retornos van directo a los centros de luz correspondientes."
+          "p": "Se instala en el cordón de una lámpara de pie, una lámpara de velador o un equipo que no tenga interruptor cómodo. Queda en el piso y lo enciendes o apagas pisando el botón."
         },
         {
           "lista": [
-            "Interrumpe siempre el conductor de fase, nunca el neutro.",
-            "Contactos firmes que evitan chispazos y arqueo eléctrico.",
-            "Mecanismo duradero probado para miles de maniobras."
+            "Corriente máxima de 10 A: a 220 V son unos 2.200 W.",
+            "Para cordones de artefactos, no para la instalación fija de la casa.",
+            "Abre el cuerpo, intercala un conductor del cordón en sus bornes y vuelve a cerrar."
           ]
         }
       ]
     },
     {
-      "id": "seguridad-instalacion-mural",
-      "titulo": "Instalación en pared y seguridad eléctrica",
-      "indice": "Seguridad e instalación",
+      "id": "uso-seguro",
+      "titulo": "Instalación y uso seguro",
+      "indice": "Uso seguro",
       "bloques": [
         {
-          "p": "Antes de aflojar tornillos o conectar cables, desenergiza el circuito de alumbrado bajando el automático respectivo en el tablero. Pela el conductor a la medida exacta indicada en el mecanismo para evitar hilos de cobre expuestos."
+          "p": "Desenchufa el artefacto antes de abrir el interruptor. Corta solo uno de los dos conductores del cordón, pela lo justo y aprieta bien los tornillos; el cable debe quedar sujeto en la entrada para que no se suelte al tirar."
         },
         {
-          "advertencia": "Si la instalación es antigua o desconoces la distribución de fase y neutro, solicita la intervención de un instalador eléctrico autorizado SEC."
+          "advertencia": "No lo uses en pisos mojados ni bajo alfombras gruesas, y no lo pises con el cordón dañado. Si el cordón tiene cable de tierra, no la cortes."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿Para qué sirve exactamente el código 9/12?",
-      "respuesta": "En la normativa chilena, 9/12 designa el circuito de alumbrado: simple (9/12), doble (9/15), de escala/conmutación (9/24) o triple (9/32)."
+      "pregunta": "¿Sirve para la luz del techo?",
+      "respuesta": "No. Es para cordones de lámparas y equipos que se enchufan. Para la luz del techo usa un interruptor de pared 9/12."
     },
     {
-      "pregunta": "¿Se puede usar con ampolletas LED?",
-      "respuesta": "Sí, es totalmente compatible con ampolletas LED, tubos fluorescentes, focos dicroicos y lámparas tradicionales de hasta su corriente nominal."
+      "pregunta": "¿Qué potencia aguanta?",
+      "respuesta": "Hasta 10 A: a 220 V son unos 2.200 W, de sobra para lámparas. No lo uses con estufas u otros equipos de más potencia."
     },
     {
-      "pregunta": "¿Hacen envíos a regiones?",
-      "respuesta": "Sí, despachamos a todas las comunas de Chile con seguimiento en línea."
+      "pregunta": "¿Cómo se instala?",
+      "respuesta": "Con el artefacto desenchufado, abre el interruptor, corta uno de los conductores del cordón y conecta cada extremo a un borne. Cierra bien la tapa antes de usarlo."
     }
   ],
   "lateral": {
     "etiqueta": "Interruptores",
-    "titulo": "Interruptor 9/12 Halux",
-    "texto": "Interruptor de alumbrado 9/12 10 A Halux. Control confiable y estético para tus centros de luz. Garantía de 6 meses."
+    "titulo": "Interruptor de pie Halux Blanco",
+    "texto": "Interruptor de pie 10 A Halux blanco para cordón de lámparas y equipos. Garantía de 6 meses."
   },
   "tarjeta": {
-    "titulo": "Interruptor 9/12 Simple Halux",
-    "extracto": "Mecanismo de pared para control de iluminación domiciliaria. Acabado prolijo y accionamiento suave y seguro.",
-    "alt": "Interruptor de luz 9/12 Halux",
+    "titulo": "Interruptor de Pie 10 A Halux Blanco",
+    "extracto": "Se intercala en el cordón de una lámpara de pie o un equipo y se acciona con el pie.",
+    "alt": "Interruptor de pie Halux blanco",
     "etiqueta": "Material eléctrico"
   },
   "guias": [
-    {
-      "url": "/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/",
-      "texto": "Cómo armar un tablero eléctrico"
-    },
     {
       "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
       "texto": "Cómo identificar fase y neutro"

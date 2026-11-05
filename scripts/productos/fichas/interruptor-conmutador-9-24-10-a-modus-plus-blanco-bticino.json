@@ -18,22 +18,22 @@
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/741957_01/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor conmutador 9/24 10 A Modus Plus Blanco Bticino, vista frontal sobre fondo blanco",
+      "alt": "Interruptor 9/24 10 A Blanco Bticino, foto principal sobre fondo blanco",
       "miniatura": "Ver de frente"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/741957_400/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor conmutador 9/24 10 A Modus Plus Blanco Bticino, vista en ángulo mostrando detalles de terminales",
+      "alt": "Interruptor 9/24 10 A Blanco Bticino, otra vista del producto",
       "miniatura": "Ver ángulo"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/741957_12/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor conmutador 9/24 10 A Modus Plus Blanco Bticino, vista posterior con fijación para riel o caja",
+      "alt": "Interruptor 9/24 10 A Blanco Bticino, otra vista del producto",
       "miniatura": "Ver fijación"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/741957_21/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor conmutador 9/24 10 A Modus Plus Blanco Bticino, vista de detalle número 4",
+      "alt": "Interruptor 9/24 10 A Blanco Bticino, otra vista del producto",
       "miniatura": "Ver detalle 4"
     }
   ],
@@ -45,10 +45,6 @@
     [
       "Marca",
       "Bticino"
-    ],
-    [
-      "Detalle de la garantía",
-      "6 meses"
     ],
     [
       "Color",
@@ -73,8 +69,8 @@
       "detalle": "Control conmutador de escala eficiente"
     },
     {
-      "titulo": "⚡ 10 A · 250 V CA",
-      "detalle": "Contactos de alta durabilidad"
+      "titulo": "⚡ 10 A · 220 V",
+      "detalle": "Corriente nominal del mecanismo"
     },
     {
       "titulo": "🚚 Envíos a todo Chile",
@@ -92,13 +88,13 @@
       "indice": "Circuito 9/24",
       "bloques": [
         {
-          "p": "El circuito 9/24 está normado en Chile para el accionamiento de lámparas y luminarias. La fase ingresa al borne común del interruptor y los retornos van directo a los centros de luz correspondientes."
+          "p": "En Chile, 9/24 es el código habitual de este interruptor de alumbrado. La fase ingresa al borne común del interruptor y los retornos van directo a los centros de luz correspondientes."
         },
         {
           "lista": [
             "Interrumpe siempre el conductor de fase, nunca el neutro.",
-            "Contactos firmes que evitan chispazos y arqueo eléctrico.",
-            "Mecanismo duradero probado para miles de maniobras."
+            "Aprieta bien los tornillos de los bornes: una conexión floja se calienta.",
+            "No conectes cargas que superen su corriente nominal."
           ]
         }
       ]
@@ -120,15 +116,15 @@
   "faq": [
     {
       "pregunta": "¿Para qué sirve exactamente el código 9/24?",
-      "respuesta": "En la normativa chilena, 9/24 designa el circuito de alumbrado: simple (9/12), doble (9/15), de escala/conmutación (9/24) o triple (9/32)."
+      "respuesta": "En Chile estos códigos identifican el tipo de interruptor de alumbrado: simple (9/12), doble (9/15), de escala/conmutación (9/24) o triple (9/32)."
     },
     {
       "pregunta": "¿Se puede usar con ampolletas LED?",
-      "respuesta": "Sí, es totalmente compatible con ampolletas LED, tubos fluorescentes, focos dicroicos y lámparas tradicionales de hasta su corriente nominal."
+      "respuesta": "Sí. El interruptor solo abre y cierra la fase, así que sirve con ampolletas LED y tradicionales mientras no superes su corriente nominal. Si una ampolleta LED queda brillando débil con la luz apagada, revisa que el interruptor esté cortando la fase y no el neutro."
     },
     {
       "pregunta": "¿Hacen envíos a regiones?",
-      "respuesta": "Sí, despachamos a todas las comunas de Chile con seguimiento en línea."
+      "respuesta": "Sí, despachamos a todas las regiones de Chile."
     }
   ],
   "lateral": {
@@ -144,12 +140,12 @@
   },
   "guias": [
     {
-      "url": "/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/",
-      "texto": "Cómo armar un tablero eléctrico"
-    },
-    {
       "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
       "texto": "Cómo identificar fase y neutro"
+    },
+    {
+      "url": "/blog/guia-completa-para-instalar-una-lampara-colgante-en-el-techo/",
+      "texto": "Cómo instalar una lámpara colgante"
     }
   ],
   "color": "Blanco"

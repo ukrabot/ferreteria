@@ -11,29 +11,29 @@
   "subcategoria": "Material y mecanismos eléctricos",
   "disponible": true,
   "seo_titulo": "Dimmer Nobile Terra Bticino Calidad y Seguridad",
-  "meta_descripcion": "Compra dimmer nobile terra Bticino a {precio}. Material eléctrico certificado para tableros e instalaciones residenciales. Envíos a todo Chile.",
-  "og_descripcion": "Dimmer Nobile Terra marca Bticino. Calidad, durabilidad y protección para tu instalación eléctrica.",
-  "descripcion": "Dispositivo eléctrico dimmer nobile terra marca Bticino. Fabricado con materiales de alta resistencia mecánica y aislación eléctrica para montaje seguro. Cumple con normas vigentes. Garantía de 6 meses.",
-  "lede": "Este dispositivo **Dimmer Nobile Terra Bticino** entrega confiabilidad, rendimiento seguro y un montaje sencillo en tu instalación eléctrica domiciliaria o comercial.",
+  "meta_descripcion": "Compra el dimmer Bticino Nobile Terra a {precio}. Regula la intensidad de la luz desde la pared. Revisa que tus ampolletas sean dimerizables. Envío a todo Chile.",
+  "og_descripcion": "Dimmer Bticino línea Nobile, color terra, para regular la intensidad de la luz.",
+  "descripcion": "Dimmer (regulador de intensidad) Bticino de la línea Nobile, color terra, para caja de pared. Reemplaza a un interruptor simple y permite bajar o subir la intensidad de la luz con su perilla. Garantía de 6 meses.",
+  "lede": "¿Quieres bajar la luz para ver una película sin apagarla? Este **dimmer Bticino Nobile Terra** reemplaza a tu interruptor y **regula la intensidad** con una perilla.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/6227104_01/w=1200,h=1200,fit=cover",
-      "alt": "Dimmer Nobile Terra Bticino, vista frontal sobre fondo blanco",
+      "alt": "Dimmer Nobile Terra Bticino, foto principal sobre fondo blanco",
       "miniatura": "Ver de frente"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/6227104_12/w=1200,h=1200,fit=cover",
-      "alt": "Dimmer Nobile Terra Bticino, vista en ángulo mostrando detalles de terminales",
+      "alt": "Dimmer Nobile Terra Bticino, otra vista del producto",
       "miniatura": "Ver ángulo"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/6227104_13/w=1200,h=1200,fit=cover",
-      "alt": "Dimmer Nobile Terra Bticino, vista posterior con fijación para riel o caja",
+      "alt": "Dimmer Nobile Terra Bticino, otra vista del producto",
       "miniatura": "Ver fijación"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/6227104_14/w=1200,h=1200,fit=cover",
-      "alt": "Dimmer Nobile Terra Bticino, vista de detalle número 4",
+      "alt": "Dimmer Nobile Terra Bticino, otra vista del producto",
       "miniatura": "Ver detalle 4"
     }
   ],
@@ -45,10 +45,6 @@
     [
       "Marca",
       "Bticino"
-    ],
-    [
-      "Detalle de la garantía",
-      "1 año"
     ],
     [
       "Color",
@@ -65,16 +61,16 @@
   ],
   "confianza": [
     {
-      "titulo": "⚡ Calidad garantizada",
-      "detalle": "Materiales certificados"
+      "titulo": "💡 Regula la luz",
+      "detalle": "Perilla giratoria"
     },
     {
-      "titulo": "🛡️ Operación segura",
-      "detalle": "Aislación eléctrica reforzada"
+      "titulo": "🎨 Línea Nobile",
+      "detalle": "Color terra"
     },
     {
       "titulo": "🚚 Envíos a todo Chile",
-      "detalle": "Despacho rápido a domicilio"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -83,69 +79,69 @@
   ],
   "secciones": [
     {
-      "id": "caracteristicas-y-uso",
-      "titulo": "Características y campo de aplicación",
-      "indice": "Características",
+      "id": "uso-dimmer",
+      "titulo": "Qué ampolletas puedes regular",
+      "indice": "Ampolletas compatibles",
       "bloques": [
         {
-          "p": "El equipo dimmer nobile terra Bticino está diseñado para ofrecer máxima fiabilidad operativa en sistemas eléctricos de 220 V CA."
+          "p": "El dimmer reemplaza a un interruptor simple y regula la intensidad de la luz que controla. Las ampolletas incandescentes y halógenas se regulan bien; las LED solo si su envase dice «dimerizable»."
         },
         {
           "lista": [
-            "Fijación rápida y segura en tablero o caja mural.",
-            "Materiales autoextinguibles de alta calidad técnica.",
-            "Facilidad de conexionado y mantenimiento preventivo."
+            "Revisa en el envase o manual del dimmer la potencia mínima y máxima que acepta.",
+            "Con LED no dimerizables puede haber parpadeo, zumbido o falla.",
+            "No lo uses para motores, ventiladores ni enchufes."
           ]
         }
       ]
     },
     {
-      "id": "seguridad-y-norma-sec",
-      "titulo": "Uso seguro y recomendaciones técnicas",
-      "indice": "Seguridad y norma",
+      "id": "instalacion-segura",
+      "titulo": "Instalación segura",
+      "indice": "Instalación",
       "bloques": [
         {
-          "p": "Antes de cualquier manipulación o reemplazo en la instalación, asegúrate de desenergizar el circuito cortando el suministro eléctrico."
+          "p": "Se instala en la caja de pared donde estaba el interruptor, cortando la fase como él. Corta el automático del circuito antes de abrir la caja y comprueba que no haya tensión."
         },
         {
-          "advertencia": "Para asegurar un conexionado conforme al reglamento de seguridad eléctrica de Chile, recurre a un instalador certificado por la SEC."
+          "advertencia": "Si no conoces la instalación o no sabes identificar la fase, pide la instalación a un instalador eléctrico autorizado por la SEC."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿Qué precauciones se deben tomar al instalarlo?",
-      "respuesta": "Cortar siempre la energía general antes de tocar los bornes y verificar la firmeza del apriete de los cables."
+      "pregunta": "¿Sirve con ampolletas LED?",
+      "respuesta": "Solo con ampolletas LED dimerizables (lo dice su envase) y dentro de la potencia que acepta el dimmer según su manual."
     },
     {
-      "pregunta": "¿Para qué tipo de corriente está diseñado?",
-      "respuesta": "Está pensado para sistemas de corriente alterna monofásica estándar de 220 V en Chile."
+      "pregunta": "¿Reemplaza a un interruptor normal?",
+      "respuesta": "Sí, a un interruptor simple 9/12 en la misma caja de pared. No reemplaza a un conmutador de escalera."
     },
     {
-      "pregunta": "¿Hacen envíos a regiones?",
-      "respuesta": "Sí, despachamos a todo el territorio chileno con entrega coordinada."
+      "pregunta": "¿Puedo conectar un ventilador?",
+      "respuesta": "No. Los dimmers de luz no son para motores; usa un regulador de velocidad para ventiladores."
     }
   ],
   "lateral": {
-    "etiqueta": "Electricidad",
+    "etiqueta": "Mecanismos eléctricos",
     "titulo": "Dimmer Nobile Terra Bticino",
-    "texto": "Dimmer Nobile Terra marca Bticino. Calidad certificada y máxima seguridad para tu instalación eléctrica. Garantía 6 meses."
+    "texto": "Dimmer Bticino Nobile terra para regular la intensidad de la luz. Garantía de 6 meses."
   },
   "tarjeta": {
-    "titulo": "Dimmer Nobile Terra Bticino",
-    "extracto": "Solución técnica confiable para montaje en instalaciones y tableros eléctricos residenciales y comerciales.",
-    "alt": "Dimmer Nobile Terra Bticino",
+    "titulo": "Dimmer Bticino Nobile Terra",
+    "extracto": "Regula la intensidad de la luz desde la pared. Usa ampolletas dimerizables.",
+    "alt": "Dimmer Bticino Nobile terra",
     "etiqueta": "Material eléctrico"
   },
   "guias": [
     {
-      "url": "/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/",
-      "texto": "Cómo armar un tablero eléctrico"
-    },
-    {
       "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
       "texto": "Cómo identificar fase y neutro"
+    },
+    {
+      "url": "/blog/guia-completa-para-instalar-una-lampara-colgante-en-el-techo/",
+      "texto": "Cómo instalar una lámpara colgante"
     }
   ],
   "color": "Terra"

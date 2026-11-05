@@ -6,34 +6,34 @@
   "margen": 50,
   "categoria": "electricidad",
   "nombre": "Luz Piloto Modular Led Rojo 110/400V Bticino",
-  "titulo_h1": "Luz Piloto Modular Led Rojo 110/400V Bticino Bticino",
-  "titulo_corto": "Luz Piloto Modular Led Rojo 110/400V Bticino Bticino",
+  "titulo_h1": "Luz piloto modular LED roja 110-400 V Bticino",
+  "titulo_corto": "Luz piloto LED 110-400 V Bticino",
   "subcategoria": "Material y mecanismos eléctricos",
   "disponible": true,
-  "seo_titulo": "Luz Piloto Modular Led Rojo 110/400V Bticino Bticino Ca",
-  "meta_descripcion": "Compra luz piloto modular led rojo 110/400v bticino Bticino a {precio}. Material eléctrico certificado para tableros e instalaciones residenciales. Envíos a todo Chile.",
-  "og_descripcion": "Luz Piloto Modular Led Rojo 110/400V Bticino marca Bticino. Calidad, durabilidad y protección para tu instalación eléctrica.",
-  "descripcion": "Dispositivo eléctrico luz piloto modular led rojo 110/400v bticino marca Bticino. Fabricado con materiales de alta resistencia mecánica y aislación eléctrica para montaje seguro. Cumple con normas vigentes. Garantía de 6 meses.",
-  "lede": "Este dispositivo **Luz Piloto Modular Led Rojo 110/400V Bticino Bticino** entrega confiabilidad, rendimiento seguro y un montaje sencillo en tu instalación eléctrica domiciliaria o comercial.",
+  "seo_titulo": "Luz Piloto LED Modular para Tablero Bticino",
+  "meta_descripcion": "Compra la luz piloto LED modular Bticino para tablero a {precio}. Indica que hay tensión en el tablero o en un circuito. 110-400 V. Riel DIN. Envío a todo Chile.",
+  "og_descripcion": "Luz piloto LED roja modular Bticino de 110-400 V para riel DIN.",
+  "descripcion": "Luz piloto LED modular Bticino, de luz roja, para riel DIN. Funciona entre 110 y 400 V según su nombre de producto y se enciende cuando hay tensión en el punto donde se conecta. Garantía de 6 meses.",
+  "lede": "¿Quieres saber de un vistazo si llega energía a tu tablero o a un circuito? Esta **luz piloto LED Bticino** se monta en el riel DIN y **se enciende cuando hay tensión**.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/7296312_01/w=1200,h=1200,fit=cover",
-      "alt": "Luz Piloto Modular Led Rojo 110/400V Bticino, vista frontal sobre fondo blanco",
+      "alt": "Luz piloto LED 110-400 V Bticino, foto principal sobre fondo blanco",
       "miniatura": "Ver de frente"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7296312_12/w=1200,h=1200,fit=cover",
-      "alt": "Luz Piloto Modular Led Rojo 110/400V Bticino, vista en ángulo mostrando detalles de terminales",
+      "alt": "Luz piloto LED 110-400 V Bticino, otra vista del producto",
       "miniatura": "Ver ángulo"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7296312_13/w=1200,h=1200,fit=cover",
-      "alt": "Luz Piloto Modular Led Rojo 110/400V Bticino, vista posterior con fijación para riel o caja",
+      "alt": "Luz piloto LED 110-400 V Bticino, otra vista del producto",
       "miniatura": "Ver fijación"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7296312_14/w=1200,h=1200,fit=cover",
-      "alt": "Luz Piloto Modular Led Rojo 110/400V Bticino, vista de detalle número 4",
+      "alt": "Luz piloto LED 110-400 V Bticino, otra vista del producto",
       "miniatura": "Ver detalle 4"
     }
   ],
@@ -47,16 +47,12 @@
       "Bticino"
     ],
     [
-      "Detalle de la garantía",
-      "1 año"
-    ],
-    [
       "Color",
       "Gris"
     ],
     [
       "Voltaje",
-      "220 V"
+      "110-400 V"
     ],
     [
       "Montaje",
@@ -65,16 +61,16 @@
   ],
   "confianza": [
     {
-      "titulo": "⚡ Calidad garantizada",
-      "detalle": "Materiales certificados"
+      "titulo": "💡 LED rojo",
+      "detalle": "Indica tensión"
     },
     {
-      "titulo": "🛡️ Operación segura",
-      "detalle": "Aislación eléctrica reforzada"
+      "titulo": "🔌 Riel DIN",
+      "detalle": "110-400 V"
     },
     {
       "titulo": "🚚 Envíos a todo Chile",
-      "detalle": "Despacho rápido a domicilio"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -83,59 +79,59 @@
   ],
   "secciones": [
     {
-      "id": "caracteristicas-y-uso",
-      "titulo": "Características y campo de aplicación",
-      "indice": "Características",
+      "id": "uso",
+      "titulo": "Para qué sirve una luz piloto",
+      "indice": "Para qué sirve",
       "bloques": [
         {
-          "p": "El equipo luz piloto modular led rojo 110/400v bticino Bticino está diseñado para ofrecer máxima fiabilidad operativa en sistemas eléctricos de 220 V CA."
+          "p": "La luz piloto se enciende cuando hay tensión donde está conectada: en la entrada del tablero, después de un automático o en el circuito de un equipo, como una bomba o un calefactor."
         },
         {
           "lista": [
-            "Fijación rápida y segura en tablero o caja mural.",
-            "Materiales autoextinguibles de alta calidad técnica.",
-            "Facilidad de conexionado y mantenimiento preventivo."
+            "Ocupa un módulo en el riel DIN.",
+            "Tensión de funcionamiento de 110 a 400 V.",
+            "Si se apaga, avisa que se cortó ese circuito."
           ]
         }
       ]
     },
     {
-      "id": "seguridad-y-norma-sec",
-      "titulo": "Uso seguro y recomendaciones técnicas",
-      "indice": "Seguridad y norma",
+      "id": "instalacion-segura",
+      "titulo": "Instalación segura",
+      "indice": "Instalación",
       "bloques": [
         {
-          "p": "Antes de cualquier manipulación o reemplazo en la instalación, asegúrate de desenergizar el circuito cortando el suministro eléctrico."
+          "p": "Se conecta entre fase y neutro del punto que quieres vigilar, con la protección que indique el fabricante."
         },
         {
-          "advertencia": "Para asegurar un conexionado conforme al reglamento de seguridad eléctrica de Chile, recurre a un instalador certificado por la SEC."
+          "advertencia": "Todo trabajo en el tablero debe hacerlo un instalador eléctrico autorizado por la SEC, con la energía cortada."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿Qué precauciones se deben tomar al instalarlo?",
-      "respuesta": "Cortar siempre la energía general antes de tocar los bornes y verificar la firmeza del apriete de los cables."
+      "pregunta": "¿Para qué sirve en el tablero?",
+      "respuesta": "Para ver de un vistazo si llega energía al tablero o a un circuito, sin abrirlo ni medir."
     },
     {
-      "pregunta": "¿Para qué tipo de corriente está diseñado?",
-      "respuesta": "Está pensado para sistemas de corriente alterna monofásica estándar de 220 V en Chile."
+      "pregunta": "¿Sirve para 220 V?",
+      "respuesta": "Sí, su rango indicado es de 110 a 400 V."
     },
     {
-      "pregunta": "¿Hacen envíos a regiones?",
-      "respuesta": "Sí, despachamos a todo el territorio chileno con entrega coordinada."
+      "pregunta": "¿Consume mucha energía?",
+      "respuesta": "No, el LED consume muy poca energía."
     }
   ],
   "lateral": {
-    "etiqueta": "Electricidad",
-    "titulo": "Luz Piloto Modular Led Rojo 110/400V Bticino Bticino",
-    "texto": "Luz Piloto Modular Led Rojo 110/400V Bticino marca Bticino. Calidad certificada y máxima seguridad para tu instalación eléctrica. Garantía 6 meses."
+    "etiqueta": "Tablero eléctrico",
+    "titulo": "Luz piloto LED Bticino",
+    "texto": "Luz piloto LED roja para riel DIN, 110-400 V. Garantía de 6 meses."
   },
   "tarjeta": {
-    "titulo": "Luz Piloto Modular Led Rojo 110/400V Bticino Bticino",
-    "extracto": "Solución técnica confiable para montaje en instalaciones y tableros eléctricos residenciales y comerciales.",
-    "alt": "Luz Piloto Modular Led Rojo 110/400V Bticino Bticino",
+    "titulo": "Luz Piloto LED para Tablero Bticino",
+    "extracto": "Indica que hay tensión en el tablero o en un circuito. Para riel DIN, 110-400 V.",
+    "alt": "Luz piloto LED modular Bticino",
     "etiqueta": "Material eléctrico"
   },
   "guias": [

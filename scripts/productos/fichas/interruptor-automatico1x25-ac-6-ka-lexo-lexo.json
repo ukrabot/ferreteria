@@ -5,20 +5,20 @@
   "precio_referencia": 2290,
   "margen": 50,
   "categoria": "electricidad",
-  "nombre": "Interruptor Automático1x25 AC 6 Ka Lexo",
-  "titulo_h1": "Interruptor automático  A 1 polo Lexo",
-  "titulo_corto": "Automático  A 1 polo Lexo",
+  "nombre": "Interruptor automático 1x25 A 6 kA Lexo",
+  "titulo_h1": "Interruptor automático 25 A 1 polo Lexo",
+  "titulo_corto": "Automático 25 A 1 polo Lexo",
   "subcategoria": "Automáticos y disyuntores",
   "disponible": true,
-  "seo_titulo": "Interruptor Automático  A Lexo Riel DIN",
-  "meta_descripcion": "Compra interruptor automático disyuntor  A Lexo a {precio}. Protección termomagnética contra sobrecargas y cortocircuitos. Envío a todo Chile.",
-  "og_descripcion": "Interruptor automático  A Lexo para riel DIN. Protege los conductores eléctricos contra sobrecargas y cortocircuitos.",
-  "descripcion": "Disyuntor termomagnético de  A marca Lexo (1 polo) para montaje en riel DIN. Diseñado para proteger circuitos de alumbrado y enchufes contra corrientes de sobrecarga y cortocircuitos en tableros eléctricos. Garantía de 6 meses.",
-  "lede": "Este **interruptor automático de  A Lexo** protege los cables de tu circuito desconectando la energía ante sobrecargas o cortocircuitos, evitando recalentamientos e incendios en la instalación eléctrica.",
+  "seo_titulo": "Interruptor Automático 25 A Lexo Riel DIN",
+  "meta_descripcion": "Compra interruptor automático disyuntor 25 A Lexo a {precio}. Protección termomagnética contra sobrecargas y cortocircuitos. Envío a todo Chile.",
+  "og_descripcion": "Interruptor automático 25 A Lexo para riel DIN. Protege los conductores eléctricos contra sobrecargas y cortocircuitos.",
+  "descripcion": "Disyuntor termomagnético de 25 A marca Lexo (1 polo) para montaje en riel DIN. Diseñado para proteger circuitos de alumbrado y enchufes contra corrientes de sobrecarga y cortocircuitos en tableros eléctricos. Garantía de 6 meses.",
+  "lede": "Este **interruptor automático de 25 A Lexo** protege los cables de tu circuito desconectando la energía ante sobrecargas o cortocircuitos, evitando recalentamientos e incendios en la instalación eléctrica.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/1974823_01/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor Automático1x25 AC 6 Ka Lexo, vista frontal sobre fondo blanco",
+      "alt": "Automático 25 A 1 polo Lexo, foto principal sobre fondo blanco",
       "miniatura": "Ver de frente"
     }
   ],
@@ -30,10 +30,6 @@
     [
       "Marca",
       "Lexo"
-    ],
-    [
-      "Detalle de la garantía",
-      "6 meses"
     ],
     [
       "Tipo de corriente",
@@ -89,7 +85,7 @@
         },
         {
           "lista": [
-            "Capacidad de corte calibrada para  A de consumo.",
+            "Corriente nominal de 25 A.",
             "Montaje estandarizado sobre riel DIN de 35 mm.",
             "Mantiene protegidos los conductores dentro de la pared."
           ]
@@ -121,18 +117,18 @@
     },
     {
       "pregunta": "¿Sirve para cualquier tablero domiciliario?",
-      "respuesta": "Sí, utiliza el riel DIN normalizado de 35 mm estándar en todos los tableros domiciliarios e industriales de Chile."
+      "respuesta": "Sí, si tu tablero tiene riel DIN de 35 mm, el formato de los tableros actuales. Los tableros antiguos de tipo americano usan automáticos de otro formato: revisa el tuyo antes de comprar."
     }
   ],
   "lateral": {
     "etiqueta": "Tablero eléctrico",
-    "titulo": "Automático  A Lexo",
-    "texto": "Disyuntor termomagnético  A Lexo para riel DIN. Protege tu circuito de sobrecargas y cortocircuitos. Garantía de 6 meses."
+    "titulo": "Automático 25 A Lexo",
+    "texto": "Disyuntor termomagnético 25 A Lexo para riel DIN. Protege tu circuito de sobrecargas y cortocircuitos. Garantía de 6 meses."
   },
   "tarjeta": {
-    "titulo": "Interruptor Automático  A Lexo",
+    "titulo": "Interruptor Automático 25 A Lexo",
     "extracto": "Protege los circuitos eléctricos contra sobrecargas y cortocircuitos. Montaje en riel DIN para tableros domiciliarios.",
-    "alt": "Interruptor automático disyuntor  A Lexo",
+    "alt": "Interruptor automático disyuntor 25 A Lexo",
     "etiqueta": "Protección eléctrica"
   },
   "guias": [

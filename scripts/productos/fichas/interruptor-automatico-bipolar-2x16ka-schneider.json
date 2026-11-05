@@ -5,30 +5,30 @@
   "precio_referencia": 7990,
   "margen": 50,
   "categoria": "electricidad",
-  "nombre": "Interruptor Automatico Bipolar 2x16KA Schneider",
-  "titulo_h1": "Interruptor automático  A 2 polos Schneider",
-  "titulo_corto": "Automático  A 2 polos Schneider",
+  "nombre": "Interruptor automático bipolar 2x16 A Schneider",
+  "titulo_h1": "Interruptor automático 16 A 2 polos Schneider",
+  "titulo_corto": "Automático 16 A 2 polos Schneider",
   "subcategoria": "Automáticos y disyuntores",
   "disponible": true,
-  "seo_titulo": "Interruptor Automático  A Schneider Riel DIN",
-  "meta_descripcion": "Compra interruptor automático disyuntor  A Schneider a {precio}. Protección termomagnética contra sobrecargas y cortocircuitos. Envío a todo Chile.",
-  "og_descripcion": "Interruptor automático  A Schneider para riel DIN. Protege los conductores eléctricos contra sobrecargas y cortocircuitos.",
-  "descripcion": "Disyuntor termomagnético de  A marca Schneider (2 polos) para montaje en riel DIN. Diseñado para proteger circuitos de alumbrado y enchufes contra corrientes de sobrecarga y cortocircuitos en tableros eléctricos. Garantía de 6 meses.",
-  "lede": "Este **interruptor automático de  A Schneider** protege los cables de tu circuito desconectando la energía ante sobrecargas o cortocircuitos, evitando recalentamientos e incendios en la instalación eléctrica.",
+  "seo_titulo": "Automático 16 A 2 Polos Schneider Riel DIN",
+  "meta_descripcion": "Compra interruptor automático disyuntor 16 A Schneider a {precio}. Protección termomagnética contra sobrecargas y cortocircuitos. Envío a todo Chile.",
+  "og_descripcion": "Interruptor automático 16 A Schneider para riel DIN. Protege los conductores eléctricos contra sobrecargas y cortocircuitos.",
+  "descripcion": "Disyuntor termomagnético de 16 A marca Schneider (2 polos) para montaje en riel DIN. Diseñado para proteger circuitos de alumbrado y enchufes contra corrientes de sobrecarga y cortocircuitos en tableros eléctricos. Garantía de 6 meses.",
+  "lede": "Este **interruptor automático de 16 A Schneider** protege los cables de tu circuito desconectando la energía ante sobrecargas o cortocircuitos, evitando recalentamientos e incendios en la instalación eléctrica.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/7452977_01/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor Automatico Bipolar 2x16KA Schneider, vista frontal sobre fondo blanco",
+      "alt": "Automático 16 A 2 polos Schneider, foto principal sobre fondo blanco",
       "miniatura": "Ver de frente"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7452977_21/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor Automatico Bipolar 2x16KA Schneider, vista en ángulo mostrando detalles de terminales",
+      "alt": "Automático 16 A 2 polos Schneider, otra vista del producto",
       "miniatura": "Ver ángulo"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7452977_22/w=1200,h=1200,fit=cover",
-      "alt": "Interruptor Automatico Bipolar 2x16KA Schneider, vista posterior con fijación para riel o caja",
+      "alt": "Automático 16 A 2 polos Schneider, otra vista del producto",
       "miniatura": "Ver fijación"
     }
   ],
@@ -42,16 +42,12 @@
       "Schneider"
     ],
     [
-      "Detalle de la garantía",
-      "10 años"
-    ],
-    [
       "Tipo de corriente",
       "Corriente alterna CA"
     ],
     [
       "Uso",
-      "RESIDENCIAL"
+      "Residencial"
     ],
     [
       "Voltaje",
@@ -99,7 +95,7 @@
         },
         {
           "lista": [
-            "Capacidad de corte calibrada para  A de consumo.",
+            "Corriente nominal de 16 A.",
             "Montaje estandarizado sobre riel DIN de 35 mm.",
             "Mantiene protegidos los conductores dentro de la pared."
           ]
@@ -131,18 +127,18 @@
     },
     {
       "pregunta": "¿Sirve para cualquier tablero domiciliario?",
-      "respuesta": "Sí, utiliza el riel DIN normalizado de 35 mm estándar en todos los tableros domiciliarios e industriales de Chile."
+      "respuesta": "Sí, si tu tablero tiene riel DIN de 35 mm, el formato de los tableros actuales. Los tableros antiguos de tipo americano usan automáticos de otro formato: revisa el tuyo antes de comprar."
     }
   ],
   "lateral": {
     "etiqueta": "Tablero eléctrico",
-    "titulo": "Automático  A Schneider",
-    "texto": "Disyuntor termomagnético  A Schneider para riel DIN. Protege tu circuito de sobrecargas y cortocircuitos. Garantía de 6 meses."
+    "titulo": "Automático 16 A Schneider",
+    "texto": "Disyuntor termomagnético 16 A Schneider para riel DIN. Protege tu circuito de sobrecargas y cortocircuitos. Garantía de 6 meses."
   },
   "tarjeta": {
-    "titulo": "Interruptor Automático  A Schneider",
+    "titulo": "Interruptor Automático 16 A Schneider",
     "extracto": "Protege los circuitos eléctricos contra sobrecargas y cortocircuitos. Montaje en riel DIN para tableros domiciliarios.",
-    "alt": "Interruptor automático disyuntor  A Schneider",
+    "alt": "Interruptor automático disyuntor 16 A Schneider",
     "etiqueta": "Protección eléctrica"
   },
   "guias": [

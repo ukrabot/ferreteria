@@ -201,6 +201,14 @@ def cargar_ficha(path: Path, actualizar: bool) -> dict:
                       ("subcategoria", 3, 50), ("seo_titulo", 15, 60), ("meta_descripcion", 110, 175),
                       ("og_descripcion", 40, 160), ("descripcion", 80, 600)]:
         f[k] = texto(f[k], k, lo, hi)
+    # Un «A» suelto sin número delante es un amperaje que quedó vacío («9/12  A», «automático  A»)
+    for k in ("nombre", "titulo_h1", "titulo_corto", "seo_titulo"):
+        tok = f[k].split()
+        for j, w in enumerate(tok):
+            if w == "A" and (j == 0 or not re.fullmatch(r"\d+([.,]\d+)?|\d+/\d+|\d+x\d+", tok[j - 1]) or tok[j - 1] in ("9/12", "9/15", "9/24", "9/32")):
+                raise FichaError(f"{k}: falta el amperaje antes de «A» («{f[k]}»). Si no lo sabes, quita la «A»")
+        if re.search(r"\b(\w+) \1\b", f[k], re.I):
+            raise FichaError(f"{k}: tiene una palabra repetida («{f[k]}»)")
     texto(f["lede"], "lede", 120, 600)
     if f.get("color"):
         f["color"] = texto(f["color"], "color", 3, 30)
@@ -234,7 +242,8 @@ def cargar_ficha(path: Path, actualizar: bool) -> dict:
         if "..." in a_ or "…" in a_ or a_.lower().startswith(("cantidad de paquetes", "tipo de divisor", "plazo de disponibilidad", "duración en condiciones", "alimentación")):
             raise FichaError(f"especificaciones: «{a_}» es un dato copiado de otra tienda que no le sirve al cliente; quítalo")
     # Garantía de la tienda: siempre 6 meses (se agrega si falta)
-    f["especificaciones"] = [r for r in f["especificaciones"] if r[0].lower() != "garantía"] + [["Garantía", "6 meses"]]
+    # cualquier fila de garantía copiada de otra tienda («Detalle de la garantía: 1 año») se reemplaza
+    f["especificaciones"] = [r for r in f["especificaciones"] if "garant" not in r[0].lower()] + [["Garantía", "6 meses"]]
     # confianza
     if not isinstance(f["confianza"], list) or len(f["confianza"]) != 4:
         raise FichaError("confianza: exactamente 4 elementos {titulo, detalle}")

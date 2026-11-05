@@ -6,29 +6,29 @@
   "margen": 50,
   "categoria": "electricidad",
   "nombre": "Modulo De Luz Piloto Lexo",
-  "titulo_h1": "Modulo De Luz Piloto Lexo",
-  "titulo_corto": "Modulo De Luz Piloto Lexo",
+  "titulo_h1": "Luz piloto LED modular 220 V Lexo",
+  "titulo_corto": "Luz piloto LED 220 V Lexo",
   "subcategoria": "Material y mecanismos eléctricos",
   "disponible": true,
   "seo_titulo": "Modulo De Luz Piloto Lexo Calidad y Seguridad",
-  "meta_descripcion": "Compra modulo de luz piloto Lexo a {precio}. Material eléctrico certificado para tableros e instalaciones residenciales. Envíos a todo Chile.",
-  "og_descripcion": "Modulo De Luz Piloto marca Lexo. Calidad, durabilidad y protección para tu instalación eléctrica.",
-  "descripcion": "Dispositivo eléctrico modulo de luz piloto marca Lexo. Fabricado con materiales de alta resistencia mecánica y aislación eléctrica para montaje seguro. Cumple con normas vigentes. Garantía de 6 meses.",
-  "lede": "Este dispositivo **Modulo De Luz Piloto Lexo** entrega confiabilidad, rendimiento seguro y un montaje sencillo en tu instalación eléctrica domiciliaria o comercial.",
+  "meta_descripcion": "Compra la luz piloto LED modular Lexo para tablero a {precio}. Indica que hay tensión en el tablero o en un circuito. 220 V CA. Riel DIN. Envío a todo Chile.",
+  "og_descripcion": "Luz piloto LED roja modular Lexo de 220 V CA para riel DIN.",
+  "descripcion": "Luz piloto LED modular Lexo, de luz roja, para riel DIN y 220 V CA según su etiqueta. Se enciende cuando hay tensión en el punto donde se conecta. Garantía de 6 meses.",
+  "lede": "¿Quieres saber de un vistazo si llega energía a tu tablero o a un circuito? Esta **luz piloto LED Lexo** se monta en el riel DIN y **se enciende cuando hay tensión**.",
   "fotos": [
     {
       "url": "https://media.falabella.com/sodimacCL/7301499_01/w=1200,h=1200,fit=cover",
-      "alt": "Modulo De Luz Piloto Lexo, vista frontal sobre fondo blanco",
+      "alt": "Luz piloto LED 220 V Lexo, foto principal sobre fondo blanco",
       "miniatura": "Ver de frente"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7301499_21/w=1200,h=1200,fit=cover",
-      "alt": "Modulo De Luz Piloto Lexo, vista en ángulo mostrando detalles de terminales",
+      "alt": "Luz piloto LED 220 V Lexo, otra vista del producto",
       "miniatura": "Ver ángulo"
     },
     {
       "url": "https://media.falabella.com/sodimacCL/7301499_22/w=1200,h=1200,fit=cover",
-      "alt": "Modulo De Luz Piloto Lexo, vista posterior con fijación para riel o caja",
+      "alt": "Luz piloto LED 220 V Lexo, otra vista del producto",
       "miniatura": "Ver fijación"
     }
   ],
@@ -42,20 +42,12 @@
       "Lexo"
     ],
     [
-      "Detalle de la garantía",
-      "1 año"
-    ],
-    [
       "Color",
       "Gris"
     ],
     [
       "Voltaje",
-      "220 V"
-    ],
-    [
-      "Amperaje",
-      "0 A"
+      "220 V CA (según etiqueta)"
     ],
     [
       "Montaje",
@@ -64,16 +56,16 @@
   ],
   "confianza": [
     {
-      "titulo": "⚡ Calidad garantizada",
-      "detalle": "Materiales certificados"
+      "titulo": "💡 LED rojo",
+      "detalle": "Indica tensión"
     },
     {
-      "titulo": "🛡️ Operación segura",
-      "detalle": "Aislación eléctrica reforzada"
+      "titulo": "🔌 Riel DIN",
+      "detalle": "220 V CA"
     },
     {
       "titulo": "🚚 Envíos a todo Chile",
-      "detalle": "Despacho rápido a domicilio"
+      "detalle": "Despacho a domicilio"
     },
     {
       "titulo": "🛡️ Garantía 6 meses",
@@ -82,59 +74,59 @@
   ],
   "secciones": [
     {
-      "id": "caracteristicas-y-uso",
-      "titulo": "Características y campo de aplicación",
-      "indice": "Características",
+      "id": "uso",
+      "titulo": "Para qué sirve una luz piloto",
+      "indice": "Para qué sirve",
       "bloques": [
         {
-          "p": "El equipo modulo de luz piloto Lexo está diseñado para ofrecer máxima fiabilidad operativa en sistemas eléctricos de 220 V CA."
+          "p": "La luz piloto se enciende cuando hay tensión donde está conectada: en la entrada del tablero, después de un automático o en el circuito de un equipo, como una bomba o un calefactor."
         },
         {
           "lista": [
-            "Fijación rápida y segura en tablero o caja mural.",
-            "Materiales autoextinguibles de alta calidad técnica.",
-            "Facilidad de conexionado y mantenimiento preventivo."
+            "Ocupa un módulo en el riel DIN.",
+            "Para 220 V CA, según su etiqueta.",
+            "Si se apaga, avisa que se cortó ese circuito."
           ]
         }
       ]
     },
     {
-      "id": "seguridad-y-norma-sec",
-      "titulo": "Uso seguro y recomendaciones técnicas",
-      "indice": "Seguridad y norma",
+      "id": "instalacion-segura",
+      "titulo": "Instalación segura",
+      "indice": "Instalación",
       "bloques": [
         {
-          "p": "Antes de cualquier manipulación o reemplazo en la instalación, asegúrate de desenergizar el circuito cortando el suministro eléctrico."
+          "p": "Se conecta entre fase y neutro del punto que quieres vigilar, con la protección que indique el fabricante."
         },
         {
-          "advertencia": "Para asegurar un conexionado conforme al reglamento de seguridad eléctrica de Chile, recurre a un instalador certificado por la SEC."
+          "advertencia": "Todo trabajo en el tablero debe hacerlo un instalador eléctrico autorizado por la SEC, con la energía cortada."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿Qué precauciones se deben tomar al instalarlo?",
-      "respuesta": "Cortar siempre la energía general antes de tocar los bornes y verificar la firmeza del apriete de los cables."
+      "pregunta": "¿Para qué sirve en el tablero?",
+      "respuesta": "Para ver de un vistazo si llega energía al tablero o a un circuito, sin abrirlo ni medir."
     },
     {
-      "pregunta": "¿Para qué tipo de corriente está diseñado?",
-      "respuesta": "Está pensado para sistemas de corriente alterna monofásica estándar de 220 V en Chile."
+      "pregunta": "¿Sirve para 380 V?",
+      "respuesta": "No: su etiqueta indica 220 V CA. Para otras tensiones usa una luz piloto que las indique."
     },
     {
-      "pregunta": "¿Hacen envíos a regiones?",
-      "respuesta": "Sí, despachamos a todo el territorio chileno con entrega coordinada."
+      "pregunta": "¿Consume mucha energía?",
+      "respuesta": "No, el LED consume muy poca energía."
     }
   ],
   "lateral": {
-    "etiqueta": "Electricidad",
-    "titulo": "Modulo De Luz Piloto Lexo",
-    "texto": "Modulo De Luz Piloto marca Lexo. Calidad certificada y máxima seguridad para tu instalación eléctrica. Garantía 6 meses."
+    "etiqueta": "Tablero eléctrico",
+    "titulo": "Luz piloto LED Lexo",
+    "texto": "Luz piloto LED roja para riel DIN, 220 V CA. Garantía de 6 meses."
   },
   "tarjeta": {
-    "titulo": "Modulo De Luz Piloto Lexo",
-    "extracto": "Solución técnica confiable para montaje en instalaciones y tableros eléctricos residenciales y comerciales.",
-    "alt": "Modulo De Luz Piloto Lexo",
+    "titulo": "Luz Piloto LED para Tablero Lexo",
+    "extracto": "Indica que hay tensión en el tablero o en un circuito. Para riel DIN, 220 V CA.",
+    "alt": "Luz piloto LED modular Lexo",
     "etiqueta": "Material eléctrico"
   },
   "guias": [
