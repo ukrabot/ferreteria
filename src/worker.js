@@ -3513,6 +3513,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110237991',
   },
+  {
+    slug: 'interruptor-triple-9-32-10-a-luzica-blanco-bticino',
+    name: 'Interruptor triple 9/32 10 A Luzica Blanco Bticino',
+    price: 5990,
+    image: '/producto/interruptor-triple-9-32-10-a-luzica-blanco-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110271864',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
