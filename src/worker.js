@@ -3837,6 +3837,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110251627',
   },
+  {
+    slug: 'interruptor-simple-9-24-oval-blanco-bticino',
+    name: 'Interruptor simple 9/24 Oval Blanco Bticino',
+    price: 4990,
+    image: '/producto/interruptor-simple-9-24-oval-blanco-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '121900305',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
