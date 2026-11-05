@@ -14,17 +14,17 @@
   "seo_titulo": "Llave Stillson 10 Pulgadas Heavy Duty Bauker",
   "meta_descripcion": "Compra la llave para tubos Stillson de 10 pulgadas Bauker a {precio}. Mordaza de acero forjado y mango de fundición de 24 cm. Envíos a todo Chile.",
   "og_descripcion": "Llave para tubos Stillson de 10 pulgadas (250 mm) Heavy Duty Bauker. Cuerpo de fundición naranja esmaltada y apertura de mordaza hasta 53 mm.",
-  "descripcion": "Llave para tubos tipo Stillson de 10 pulgadas (24 cm de largo) marca Bauker, línea Heavy Duty. Cuenta con mandíbula de acero al carbono forjado con dientes fresados, mango de hierro dúctil de alta resistencia con acabado en esmalte horneado naranja y apertura de hasta 53 mm. Garantía de 6 meses.",
-  "lede": "¿Trabajas en instalaciones de gasfitería con cañerías de 1/2 a 1 pulgada? Esta **llave Stillson de 10 pulgadas Bauker** combina un mango de hierro dúctil de 24 cm con **mordazas de acero forjado**, ofreciendo el torque ideal para apretar terminales, codos y llaves de paso.",
+  "descripcion": "Llave para tubos tipo Stillson de 10 pulgadas marca Bauker, línea Heavy Duty. Cuerpo naranja esmaltado, mordazas dentadas y tuerca moleteada de regulación.",
+  "lede": "¿Trabajas en gasfitería con cañerías de 1/2 a 1 pulgada? Esta **llave Stillson de 10 pulgadas Bauker** tiene **mordazas dentadas** que muerden más fuerte mientras más palanca haces, ideal para terminales, codos y llaves de paso.",
   "fotos": [
     {
       "archivo": "1.jpg",
-      "alt": "Llave para tubos Stillson de 10 pulgadas Bauker vista lateral completa sobre fondo blanco",
+      "alt": "Llave Stillson Bauker de 10 pulgadas, cuerpo naranja y mordazas negras, vista de frente",
       "miniatura": "Ver llave completa"
     },
     {
       "archivo": "2.jpg",
-      "alt": "Detalle de mordazas dentadas y tuerca moleteada de regulación en llave Stillson 10 pulgadas Bauker",
+      "alt": "Llave Stillson Bauker de 10 pulgadas usada sobre la cabeza de un perno",
       "miniatura": "Ver mordazas dentadas"
     }
   ],
@@ -43,19 +43,19 @@
     ],
     [
       "Largo nominal",
-      "10 pulgadas (24 cm)"
+      "10 pulgadas"
     ],
     [
       "Apertura de mordaza",
-      "Hasta 53 mm"
+      "Hasta 53 mm (según ficha)"
     ],
     [
       "Material del mango",
-      "Hierro dúctil esmaltado"
+      "Hierro dúctil esmaltado (según ficha)"
     ],
     [
       "Material de mordazas",
-      "Acero al carbono forjado"
+      "Acero al carbono forjado (según ficha)"
     ],
     [
       "Garantía",
@@ -91,7 +91,7 @@
         },
         {
           "lista": [
-            "Apertura máxima de hasta 53 mm para tubos de agua y gas de hasta 1 pulgada",
+            "Apertura de hasta 53 mm según la ficha, para cañerías y fittings de agua y gas de 1/2\" a 1\" con holgura",
             "Dientes fresados en sentido opuesto que evitan el resbalamiento sobre cañería lisa",
             "Mango de hierro dúctil diseñado para soportar fuerza de torsión continua"
           ]
@@ -120,8 +120,8 @@
   ],
   "faq": [
     {
-      "pregunta": "¿Qué diámetro de tubería permite apretar esta llave de 10 pulgadas?",
-      "respuesta": "Permite trabajar con tuberías y conexiones con un diámetro exterior de hasta 53 mm (5,3 cm), abarcando cañerías de 1/2\", 3/4\" y 1\" con sus respectivas coplas y tuercas."
+      "pregunta": "¿Qué diámetros de cañería toma?",
+      "respuesta": "La ficha indica una apertura de hasta 53 mm. En la práctica se usa en cañerías y fittings de 1/2\" a 1\" y sus coplas."
     },
     {
       "pregunta": "¿Cuál es la diferencia entre el hierro dúctil y la fundición común?",

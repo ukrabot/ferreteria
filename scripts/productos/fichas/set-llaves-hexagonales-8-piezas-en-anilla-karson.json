@@ -12,20 +12,15 @@
   "color": "Negro",
   "disponible": true,
   "seo_titulo": "Set de Llaves Hexagonales 8 Piezas con Anilla Karson",
-  "meta_descripcion": "Compra el set de llaves hexagonales de 8 piezas con anilla Karson a {precio}. Varillas en L de acero fosfatado negro organizadas en llavero. Envíos a todo Chile.",
+  "meta_descripcion": "Compra el set de 8 llaves hexagonales de 1,5 a 6 mm con anilla Karson a {precio}. Llaves en L de acabado negro unidas en una anilla. Envíos a todo Chile.",
   "og_descripcion": "Set de 8 llaves Allen hexagonales en L marca Karson unidas mediante anilla y resortes de sujeción para armar muebles y ajustes de taller.",
-  "descripcion": "Set de 8 llaves hexagonales tipo Allen en forma de L, marca Karson. Fabricadas en acero con acabado fosfatado negro antioxidación, unidas mediante una anilla metálica circular con resortes individuales que permiten pivotar cada llave sin extraviarla. Largo máximo de 16 cm. Garantía de 6 meses.",
-  "lede": "¿Necesitas armar un mueble, ajustar tu bicicleta o reparar un artefacto en casa? Este **set de 8 llaves hexagonales en L Karson** mantiene todas las piezas unidas en una **práctica anilla metálica**, listas para trabajar en cualquier momento sin perder ninguna.",
+  "descripcion": "Set de 8 llaves hexagonales (Allen) en L, en milímetros: 1,5; 2; 2,5; 3; 4; 5; 5,5 y 6 mm (según envase), marca Karson. Acabado negro, unidas por una anilla metálica con resortes que permite girar cada llave sin perderla.",
+  "lede": "¿Necesitas armar un mueble, ajustar la bicicleta o reparar algo en casa? Este **set de 8 llaves hexagonales en L Karson**, de **1,5 a 6 mm**, mantiene todas las llaves unidas en una **anilla metálica**.",
   "fotos": [
     {
       "archivo": "1.jpg",
-      "alt": "Set de 8 llaves hexagonales Allen en forma de L unidas por anilla metálica Karson sobre fondo blanco",
+      "alt": "Set de 8 llaves hexagonales en L negras, unidas por una anilla metálica con resortes, marca Karson",
       "miniatura": "Ver set en anilla"
-    },
-    {
-      "archivo": "2.jpg",
-      "alt": "Vista en ángulo de llaves hexagonales negras con resorte y anilla organizadora Karson",
-      "miniatura": "Ver detalle de anilla"
     }
   ],
   "stock": {
@@ -46,16 +41,16 @@
       "8 piezas"
     ],
     [
+      "Medidas",
+      "1,5; 2; 2,5; 3; 4; 5; 5,5 y 6 mm (según envase)"
+    ],
+    [
       "Organización",
       "Anilla metálica tipo llavero con resortes"
     ],
     [
       "Material",
-      "Acero con acabado fosfatado negro"
-    ],
-    [
-      "Dimensiones del empaque",
-      "16 cm de largo x 8 cm de alto x 3 cm de ancho"
+      "Acero, acabado negro"
     ],
     [
       "Garantía",
@@ -93,7 +88,7 @@
           "lista": [
             "Cada llave pivota suavemente sobre el aro para permitir su uso sin desarmar el conjunto",
             "El formato clásico en L ofrece dos opciones de trabajo: extremo corto para aplicar torque máximo y extremo largo para pernos profundos",
-            "Acabado fosfatado en negro que previene la oxidación superficial ante la humedad ambiental"
+            "Medidas métricas de 1,5 a 6 mm, las más usadas en muebles y bicicletas"
           ]
         },
         {
@@ -110,7 +105,7 @@
           "p": "Es el juego ideal para el armado y apriete periódico de muebles modulares de melamina, sillas de oficina, soportes de televisión, bicicletas y cerraduras."
         },
         {
-          "advertencia": "Inserta siempre la llave de forma perpendicular y hasta el tope en la cavidad del perno para evitar que z Safe y arruine el hexágono del tornillo."
+          "advertencia": "Mete la llave derecha y hasta el fondo del tornillo antes de hacer fuerza; si queda a medias, se redondea el hexágono."
         },
         {
           "p": "Puedes complementar tu caja de herramientas con un [martillo de carpintero](/producto/martillo-carpintero-ubermann) para montaje integral de mobiliario y tabiquería."
@@ -124,8 +119,8 @@
       "respuesta": "Las llaves están diseñadas para pivotar en la anilla sin necesidad de sacarlas, pero si requieres usar una en un espacio extremadamente estrecho, puedes abrir el resorte del aro para liberarla y luego volver a colocarla."
     },
     {
-      "pregunta": "¿Qué acabado tienen las llaves?",
-      "respuesta": "Poseen un tratamiento térmico con acabado fosfatado negro mate que protege el metal de la humedad y reduce el desgaste de las esquinas del hexágono."
+      "pregunta": "¿Qué medidas trae?",
+      "respuesta": "Ocho medidas métricas: 1,5; 2; 2,5; 3; 4; 5; 5,5 y 6 mm, según el envase."
     },
     {
       "pregunta": "¿Qué garantía tiene este set económico?",
@@ -145,11 +140,7 @@
   "guias": [
     {
       "url": "/blog/llaves-allen-y-torx-guia-de-medidas/",
-      "texto": "Guía de medidas de llaves Allen y Torx"
-    },
-    {
-      "url": "/blog/herramientas-basicas-de-gasfiteria-todo-lo-que-necesitas-saber/",
-      "texto": "Herramientas básicas de taller"
+      "texto": "Llaves Allen y Torx: guía de medidas"
     }
   ],
   "tarjeta": {

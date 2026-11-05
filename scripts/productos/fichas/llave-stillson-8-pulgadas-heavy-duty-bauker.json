@@ -42,7 +42,7 @@
     ],
     [
       "Apertura máxima de mordaza",
-      "30 mm"
+      "30 mm (según ficha)"
     ],
     [
       "Cuerpo",
@@ -59,8 +59,8 @@
   ],
   "confianza": [
     {
-      "titulo": "🔧 Mordazas forjadas",
-      "detalle": "Dientes de acero templado"
+      "titulo": "🔧 Mordazas dentadas",
+      "detalle": "Muerden más con más palanca"
     },
     {
       "titulo": "📏 Largo 20 cm",
@@ -105,7 +105,7 @@
           "p": "Para trabajar con seguridad, orienta siempre la boca de la llave de modo que la fuerza empuje hacia la mordaza fija del mango, nunca hacia atrás para no forzar la cremallera roscada."
         },
         {
-          "advertencia": "En redes de gas domiciliario (GLP o gas natural), cualquier modificación de cañerías y llaves de corte debe ser realizada por un instalador autorizado por la SEC. Si sientes olor a gas, no manipules herramientas metálicas que puedan generar chispas."
+          "advertencia": "En redes de gas (licuado o natural), cualquier cambio de cañerías y llaves de corte lo hace un instalador de gas autorizado por la SEC. Si sientes olor a gas, no trabajes: ventila, cierra la llave general y llama a la emergencia de tu distribuidora."
         },
         {
           "p": "Antes de aflojar fitting de agua, corta la llave de paso general del sector y purga la presión abriendo una llave baja. Para uniones roscadas sanitarias, aplica cinta de teflón en el sentido del hilo."

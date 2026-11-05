@@ -12,19 +12,19 @@
   "color": "Plateado",
   "disponible": true,
   "seo_titulo": "Set Llaves Punta Corona Métricas 9 Piezas Ubermann",
-  "meta_descripcion": "Compra el set de llaves punta corona métricas de 9 piezas Ubermann a {precio}. Acero forjado cromado pulido de 6 a 19 mm. Despacho a todo Chile.",
+  "meta_descripcion": "Compra el set de llaves punta corona métricas de 9 piezas Ubermann a {precio}. Acero cromado de 6 a 19 mm. Despacho a todo Chile.",
   "og_descripcion": "Set de 9 llaves combinadas punta corona métricas de 6, 8, 10, 11, 12, 13, 14, 17 y 19 mm marca Ubermann en acero forjado cromado pulido.",
-  "descripcion": "Set de llaves combinadas punta corona métricas de 9 piezas marca Ubermann. Forjadas en acero de alta resistencia con acabado cromado pulido espejo. Incluye las medidas estándar de 6, 8, 10, 11, 12, 13, 14, 17 y 19 mm, con extremo de boca abierta a 15 grados y extremo de corona estriada de 12 puntas. Garantía de 6 meses.",
-  "lede": "¿Buscas un juego de llaves combinadas de calidad profesional para mecánica y mantención? Este **set de llaves punta corona de 9 piezas Ubermann** cubre las **medidas métricas de 6 a 19 mm** en acero forjado con acabado cromado pulido espejo.",
+  "descripcion": "Set de llaves combinadas punta corona métricas de 9 piezas marca Ubermann. Forjadas en acero de alta resistencia con acabado cromado. Incluye las medidas estándar de 6, 8, 10, 11, 12, 13, 14, 17 y 19 mm, con extremo de boca abierta a 15 grados y extremo de corona estriada de 12 puntas. Garantía de 6 meses.",
+  "lede": "¿Buscas un juego de llaves combinadas de calidad profesional para mecánica y mantención? Este **set de llaves punta corona de 9 piezas Ubermann** cubre las **medidas métricas de 6 a 19 mm** en acero forjado con acabado cromado.",
   "fotos": [
     {
       "archivo": "1.jpg",
-      "alt": "Juego de 9 llaves combinadas punta corona métricas de 6 a 19 mm en acero cromado Ubermann sobre fondo blanco",
+      "alt": "Set de 9 llaves punta corona Ubermann de 6 a 19 mm ordenadas por tamaño",
       "miniatura": "Ver set de 9 llaves"
     },
     {
       "archivo": "2.jpg",
-      "alt": "Detalle de bocas de corona de 12 puntas y bocas abiertas fijas en llaves combinadas Ubermann",
+      "alt": "Detalle de la corona de 12 puntas de una llave combinada Ubermann",
       "miniatura": "Ver bocas y coronas"
     }
   ],
@@ -55,7 +55,7 @@
     ],
     [
       "Acabado",
-      "Cromado pulido espejo"
+      "Cromado"
     ],
     [
       "Corona",
@@ -72,8 +72,8 @@
       "detalle": "Rango completo de 6 a 19 mm"
     },
     {
-      "titulo": "✨ Cromado espejo",
-      "detalle": "Protección total anticorrosiva"
+      "titulo": "✨ Acabado cromado",
+      "detalle": "Protege el acero de la corrosión"
     },
     {
       "titulo": "🚚 Envío a todo Chile",
@@ -97,11 +97,11 @@
           "lista": [
             "Boca abierta inclinada a 15°: permite girar tuercas rápidamente en espacios donde la rotación es limitada simplemente volteando la llave",
             "Boca de corona estriada de 12 puntas: abraza completamente el perímetro del perno distribuyendo la fuerza en todas sus caras para aplicar alto torque sin rodar las esquinas",
-            "Set completo con las 9 medidas métricas más empleadas en Chile: 6 mm, 8 mm, 10 mm, 11 mm, 12 mm, 13 mm, 14 mm, 17 mm y 19 mm"
+            "Las 9 medidas métricas: 6, 8, 10, 11, 12, 13, 14, 17 y 19 mm"
           ]
         },
         {
-          "p": "Para trabajos en cerrajería y puertas, puedes complementar con nuestras [cerraduras de acceso](/producto/cerradura-acceso-rustica-negra-3-pitones-odis) disponibles en catálogo."
+          "p": "Para elegir y usar herramientas en casa, revisa nuestra guía de [herramientas básicas de gasfitería](/blog/herramientas-basicas-de-gasfiteria-todo-lo-que-necesitas-saber/)."
         }
       ]
     },
@@ -111,7 +111,7 @@
       "indice": "Cuidado y durabilidad",
       "bloques": [
         {
-          "p": "El pulido cromado espejo no solo otorga una presentación impecable, sino que crea una barrera impenetrable contra aceites, grasas y agentes corrosivos de taller."
+          "p": "El acabado cromado protege el acero de la corrosión en el uso normal del taller."
         },
         {
           "advertencia": "Utiliza siempre la medida exacta para cada perno. Si una tuerca de 10 mm presenta juego o desgaste, no uses la llave de 11 mm para no deformar la cabeza."

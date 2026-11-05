@@ -14,18 +14,13 @@
   "seo_titulo": "Juego de Llaves Hexagonales 9 Piezas SAE Bauker",
   "meta_descripcion": "Compra el juego de llaves hexagonales 9 piezas SAE tipo navaja Bauker a {precio}. Acero Cr-V con puntas de seguridad y mango ergonómico. Envíos a todo Chile.",
   "og_descripcion": "Juego de 9 llaves Allen hexagonales plegables tipo navaja en medidas SAE (pulgadas) Bauker, con puntas de seguridad de acero cromo vanadio.",
-  "descripcion": "Juego de llaves hexagonales tipo Allen de 9 piezas en medidas fraccionarias SAE (pulgadas), marca Bauker. Formato plegable tipo navaja de 11 cm de largo cerrado, fabricado con varillas de acero cromo vanadio (Cr-V) con puntas de seguridad perforadas y mango ergonómico antideslizante verde y naranja. Garantía de 6 meses.",
-  "lede": "¿Cansado de perder las llaves Allen sueltas en el fondo de la caja de herramientas? Este **juego de llaves hexagonales de 9 piezas SAE Bauker** viene en un práctico **formato plegable tipo navaja**, con varillas de acero Cr-V y puntas de seguridad para pernos en pulgadas.",
+  "descripcion": "Juego de 9 llaves hexagonales (Allen) plegables tipo navaja en medidas SAE (pulgadas), marca Bauker: 5/64\", 3/32\", 7/64\", 1/8\", 9/64\", 5/32\", 3/16\", 7/32\" y 1/4\". Acero cromo vanadio, aptas para tornillos de seguridad con pin central (según envase), y cuerpo verde y naranja.",
+  "lede": "¿Cansado de perder las llaves Allen sueltas en la caja de herramientas? Este **juego de 9 llaves hexagonales SAE Bauker** viene en **formato plegable tipo navaja**, con medidas de 5/64\" a 1/4\" en acero cromo vanadio.",
   "fotos": [
     {
       "archivo": "1.jpg",
-      "alt": "Juego de llaves hexagonales plegables tipo navaja de 9 piezas SAE Bauker desplegadas en abanico sobre fondo blanco",
+      "alt": "Juego de llaves hexagonales plegables Bauker de 9 piezas SAE desplegadas en abanico, cuerpo verde y naranja",
       "miniatura": "Ver llaves abiertas"
-    },
-    {
-      "archivo": "2.jpg",
-      "alt": "Cuerpo ergonómico bimaterial cerrado de juego de llaves Allen plegables Bauker",
-      "miniatura": "Ver cuerpo cerrado"
     }
   ],
   "stock": {
@@ -50,12 +45,16 @@
       "SAE (pulgadas)"
     ],
     [
+      "Medidas",
+      "5/64\", 3/32\", 7/64\", 1/8\", 9/64\", 5/32\", 3/16\", 7/32\" y 1/4\""
+    ],
+    [
       "Material de las llaves",
-      "Acero cromo vanadio (Cr-V)"
+      "Acero cromo vanadio (según envase)"
     ],
     [
       "Diseño de puntas",
-      "Puntas con orificio de seguridad"
+      "Aptas para tornillos de seguridad con pin central (según envase)"
     ],
     [
       "Dimensiones cerrado",
@@ -95,9 +94,9 @@
         },
         {
           "lista": [
-            "El mango actúa como una cómoda empuñadura de palanca para aplicar torque en ángulo de 90° o 180°",
-            "Puntas con perforación central de seguridad que permiten trabajar en pernos hexagonales estándar y pernos inviolables (tamper-resistant)",
-            "Varillas de acero cromo vanadio resistentes a la torsión y al desgaste prematuro de las aristas"
+            "El cuerpo sirve de mango: la llave se usa a 90° para más fuerza o en línea para girar rápido",
+            "Puntas aptas para tornillos de seguridad con pin central, además de los hexagonales comunes (según envase)",
+            "Varillas de acero cromo vanadio"
           ]
         },
         {
@@ -111,29 +110,29 @@
       "indice": "Aplicaciones y cuidados",
       "bloques": [
         {
-          "p": "Las medidas SAE en pulgadas son estándar en maquinaria importada, herramientas eléctricas, compresores de aire, bicicletas de competición y motocicletas norteamericanas."
+          "p": "Las medidas en pulgadas (SAE) se encuentran en maquinaria, muebles y bicicletas importadas, especialmente de origen norteamericano. Para tornillos métricos usa un juego en milímetros."
         },
         {
           "advertencia": "Utiliza siempre la medida exacta en pulgadas del perno y evita forzar llaves métricas en cavidades SAE, ya que redondearías la cabeza del tornillo dejando la unión trabada."
         },
         {
-          "p": "Tras finalizar trabajos en entornos húmedos, limpia el cuerpo con un paño seco para conservar el acabado satinado de las llaves."
+          "p": "Después de trabajar en ambientes húmedos, sécalo con un paño para que no se oxide."
         }
       ]
     }
   ],
   "faq": [
     {
-      "pregunta": "¿Qué significa que sean medidas SAE?",
-      "respuesta": "Significa que están calibradas en fracciones de pulgada (como 5/64\", 3/32\", 1/8\", 5/32\", 3/16\", 7/32\", etc.), a diferencia de los juegos métricos que vienen en milímetros."
+      "pregunta": "¿Qué medidas trae?",
+      "respuesta": "Nueve medidas en pulgadas (SAE): 5/64\", 3/32\", 7/64\", 1/8\", 9/64\", 5/32\", 3/16\", 7/32\" y 1/4\", según el envase."
     },
     {
-      "pregunta": "¿Sirven para pernos con pin de seguridad central?",
-      "respuesta": "Sí, las puntas hexagonales tienen una perforación central mecanizada que aloja el pin de seguridad de los pernos inviolables (tamper-proof), sirviendo tanto para pernos normales como de seguridad."
+      "pregunta": "¿Sirven para tornillos de seguridad con pin central?",
+      "respuesta": "Sí, el envase indica que son aptas para tornillos de seguridad, además de los hexagonales comunes."
     },
     {
-      "pregunta": "¿Cuál es el plazo de garantía de este set?",
-      "respuesta": "Cuenta con 6 meses de garantía directa con Ferretería Ukra ante cualquier falla en los pernos de articulación o rotura de las varillas de acero Cr-V."
+      "pregunta": "¿Cuál es la garantía?",
+      "respuesta": "6 meses de garantía de la tienda ante defectos de fabricación."
     }
   ],
   "aviso_final": "Los precios incluyen IVA. Asegúrate de insertar la llave hasta el fondo de la cavidad del perno antes de ejercer fuerza.",
@@ -149,11 +148,7 @@
   "guias": [
     {
       "url": "/blog/llaves-allen-y-torx-guia-de-medidas/",
-      "texto": "Guía de medidas de llaves Allen y Torx"
-    },
-    {
-      "url": "/blog/herramientas-basicas-de-gasfiteria-todo-lo-que-necesitas-saber/",
-      "texto": "Herramientas básicas de taller"
+      "texto": "Llaves Allen y Torx: guía de medidas"
     }
   ],
   "tarjeta": {

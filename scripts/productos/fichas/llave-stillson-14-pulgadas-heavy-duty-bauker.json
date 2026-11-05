@@ -12,20 +12,15 @@
   "color": "Naranja",
   "disponible": true,
   "seo_titulo": "Llave Stillson 14 Pulgadas Heavy Duty Bauker",
-  "meta_descripcion": "Compra la llave para tubos Stillson de 14 pulgadas Bauker a {precio}. Brazo de palanca de 31 cm y apertura de hasta 60 mm. Envíos a todo Chile.",
+  "meta_descripcion": "Compra la llave para tubos Stillson de 14 pulgadas Bauker a {precio}. Mordazas dentadas y apertura de hasta 60 mm. Envíos a todo Chile.",
   "og_descripcion": "Llave para tubos Stillson de 14 pulgadas (350 mm) Heavy Duty Bauker. Cuerpo de fundición naranja de 31 cm y apertura de mordaza hasta 60 mm.",
-  "descripcion": "Llave para tubos tipo Stillson de 14 pulgadas (31 cm de largo) marca Bauker, línea Heavy Duty. Fabricada en fundición robusta con acabado esmaltado naranja, mordazas de acero forjado dentadas con apertura de hasta 60 mm y tuerca moleteada de regulación rápida. Diseñada para uniones de 1 a 2 pulgadas. Garantía de 6 meses.",
-  "lede": "¿Necesitas aflojar una cañería oxidada o apretar coplas de gran diámetro sin que la llave resbale? Esta **llave Stillson de 14 pulgadas Bauker** ofrece un brazo de palanca de 31 cm y una **apertura de hasta 60 mm**, ideal para trabajos pesados en matrices y salas de bombas.",
+  "descripcion": "Llave para tubos tipo Stillson de 14 pulgadas marca Bauker, línea Heavy Duty. Cuerpo naranja esmaltado, mordazas dentadas con apertura de hasta 60 mm según ficha y tuerca moleteada de regulación.",
+  "lede": "¿Necesitas soltar una cañería oxidada o apretar coplas grandes sin que la llave resbale? Esta **llave Stillson de 14 pulgadas Bauker** da más palanca y una **apertura de hasta 60 mm** (según ficha) para trabajos pesados.",
   "fotos": [
     {
       "archivo": "1.jpg",
-      "alt": "Llave Stillson de 14 pulgadas Heavy Duty Bauker en posición horizontal sobre fondo blanco",
+      "alt": "Llave Stillson Bauker de 14 pulgadas, cuerpo naranja y mordazas negras, en posición horizontal",
       "miniatura": "Ver llave completa"
-    },
-    {
-      "archivo": "2.jpg",
-      "alt": "Vista en perspectiva de cabeza dentada y mango de fundición de llave Stillson 14 pulgadas Bauker",
-      "miniatura": "Ver mordaza dentada"
     }
   ],
   "stock": {
@@ -43,11 +38,11 @@
     ],
     [
       "Largo nominal",
-      "14 pulgadas (31 cm)"
+      "14 pulgadas"
     ],
     [
       "Apertura máxima de mordaza",
-      "60 mm"
+      "60 mm (según ficha)"
     ],
     [
       "Cuerpo",
@@ -64,8 +59,8 @@
   ],
   "confianza": [
     {
-      "titulo": "💪 Gran palanca 31 cm",
-      "detalle": "Torque superior para cañerías"
+      "titulo": "💪 14 pulgadas",
+      "detalle": "Más palanca para cañerías"
     },
     {
       "titulo": "📐 Apertura 60 mm",
@@ -124,8 +119,8 @@
       "respuesta": "La mordaza móvil abre hasta 60 mm, lo que permite sujetar cómodamente tubos y coplas de hasta 2 pulgadas de diámetro exterior."
     },
     {
-      "pregunta": "¿Cuánto mide y pesa esta llave de 14 pulgadas?",
-      "respuesta": "Mide 31 cm de longitud total según la ficha técnica de la herramienta, con un mango macizo de fundición diseñado para resistir alto torque sin flexionarse."
+      "pregunta": "¿Qué tan grande es?",
+      "respuesta": "Es una llave de 14 pulgadas, el tamaño que se usa cuando las de 8 o 10 pulgadas no alcanzan a abrir o no dan la palanca necesaria."
     },
     {
       "pregunta": "¿Qué respaldo y garantía ofrece la tienda?",

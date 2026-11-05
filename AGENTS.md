@@ -53,6 +53,7 @@ actualizar fichas de productos físicos con el generador**. Nada más.
   intemperie ni para instalación fija; no los recomiendes para soldadoras.
   La sección de una acometida la define la distribuidora.
 - **Flexibles**: revisa en las fotos qué extremos trae (tuerca hembra o terminal macho) y que calce con HI-HI o HI-HE del nombre; si una foto muestra otro extremo, no la uses y avísale al dueño. No repitas dos fotos casi iguales. En flexibles de gas, las franjas amarillas solo lo identifican: no digas que son «normadas» ni que «certifican»; pide revisar el **sello de certificación SEC** y no escribas fechas de vencimiento ni normas que no veas. No prometas «antitorsión», «no se oxida» o «no acumula sarro» si el fabricante no lo dice.
+- **Herramientas**: si la foto del envase trae datos (medidas, material), úsalos en el texto pero no publiques esa foto. Revisa que el largo en cm calce con las pulgadas (14" ≈ 35,6 cm) y que no haya dos aperturas distintas en la misma ficha. Un mango bimaterial o engomado no es aislante: no digas que «aísla». Enlaza productos y guías relacionados de verdad (no una cerradura en un set de llaves). Lee la ficha completa antes de terminar: no deben quedar palabras cortadas o sin sentido.
 - **«Según ficha técnica»** solo si el dato aparece de verdad en la ficha o en
   una foto con datos del fabricante; si no, no lo pongas (velocidades, ciclos,
   módulos de cremallera, sistemas antiaplastamiento, backset, «acero

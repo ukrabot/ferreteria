@@ -12,19 +12,19 @@
   "color": "Gris y naranja",
   "disponible": true,
   "seo_titulo": "Llave Francesa Ajustable 12 Pulgadas 300 mm Bauker",
-  "meta_descripcion": "Compra la llave francesa ajustable 12 pulgadas Bauker a {precio}. Largo de 30,5 cm, apertura de hasta 45 mm y mango bimaterial. Despacho a todo Chile.",
+  "meta_descripcion": "Compra la llave francesa ajustable 12 pulgadas Bauker a {precio}. Largo de 30,5 cm, mordazas de caras lisas y mango bimaterial antideslizante. Despacho a todo Chile.",
   "og_descripcion": "Llave francesa ajustable de 12 pulgadas (300 mm) Bauker en acero forjado con escala milimétrica grabada y mango antideslizante.",
-  "descripcion": "Llave francesa ajustable de 12 pulgadas (30,5 cm de largo) marca Bauker, diseñada para trabajo pesado. Forjada en acero resistente con cabeza pulida, escala graduada de medición de 0 a 40 mm, apertura máxima de 45 mm y empuñadura bimaterial antideslizante que mejora el agarre y la comodidad al aplicar torque. Garantía de 6 meses.",
-  "lede": "¿Enfrentas pernos grandes de maquinaria, llaves de paso de 1 pulgada o tuercas de gasfitería pesada? Esta **llave francesa ajustable de 12 pulgadas Bauker** tiene 30,5 cm de palanca, **mordazas de acero pulido** con apertura de hasta 45 mm y escala milimétrica grabada.",
+  "descripcion": "Llave francesa ajustable de 12 pulgadas (30,5 cm de largo) marca Bauker, con cabeza de acero pulido, escala grabada en la mordaza y mango bimaterial antideslizante gris y naranja.",
+  "lede": "¿Tienes que soltar tuercas grandes o uniones de gasfitería pesada? Esta **llave francesa ajustable de 12 pulgadas Bauker** te da 30,5 cm de palanca, **mordazas de caras lisas** y mango bimaterial antideslizante.",
   "fotos": [
     {
       "archivo": "1.jpg",
-      "alt": "Llave ajustable de 12 pulgadas Bauker de 300 mm en posición horizontal sobre fondo blanco",
+      "alt": "Llave francesa ajustable Bauker de 12 pulgadas con mango gris y naranja en posición horizontal",
       "miniatura": "Ver llave horizontal"
     },
     {
       "archivo": "2.jpg",
-      "alt": "Vista en perspectiva de cabeza móvil con escala milimétrica en llave francesa de 12 pulgadas Bauker",
+      "alt": "Llave francesa ajustable Bauker de 12 pulgadas en vertical, con la escala grabada en la cabeza",
       "miniatura": "Ver cabeza ajustable"
     }
   ],
@@ -46,8 +46,8 @@
       "12 pulgadas (30,5 cm)"
     ],
     [
-      "Diámetro de apertura",
-      "Hasta 45 mm"
+      "Apertura máxima",
+      "Hasta 45 mm (según ficha)"
     ],
     [
       "Escala de medición",
@@ -55,7 +55,7 @@
     ],
     [
       "Mango",
-      "Bimaterial ergonómico antideslizante"
+      "Bimaterial antideslizante (no es aislante eléctrico)"
     ],
     [
       "Garantía",
@@ -91,9 +91,9 @@
         },
         {
           "lista": [
-            "Apertura de hasta 45 mm para tuercas de estanques, calderas y uniones de 1-1/4\"",
-            "Escala graduada milimétrica grabada en la mordaza para calibrar la medida exacta antes de encajar",
-            "Mango bimaterial en colores gris oscuro y naranja que aísla la mano y evita resbalamientos"
+            "Boca ancha para tuercas grandes, como las de uniones americanas y estanques",
+            "Escala grabada en la mordaza para dejar la medida lista antes de encajar",
+            "Mango bimaterial gris y naranja que mejora el agarre (no aísla de la electricidad)"
           ]
         },
         {
@@ -120,12 +120,12 @@
   ],
   "faq": [
     {
-      "pregunta": "¿Hasta qué medida abre la boca de la llave?",
-      "respuesta": "La mordaza móvil abre hasta 45 mm (4,5 cm) según la ficha técnica del producto, con una regla milimétrica marcada en el cabezal para fijar la medida requerida."
+      "pregunta": "¿Hasta qué medida abre?",
+      "respuesta": "La ficha del producto indica una apertura de hasta 45 mm. Si necesitas una medida exacta, mide la apertura al recibirla."
     },
     {
-      "pregunta": "¿El mango es metálico o con goma?",
-      "respuesta": "El cuerpo estructural es de acero forjado robusto y cuenta con un recubrimiento bimaterial ergonómico antideslizante para mayor comodidad durante jornadas de trabajo prolongadas."
+      "pregunta": "¿El mango es aislante?",
+      "respuesta": "No. El mango bimaterial mejora el agarre y la comodidad, pero no es una herramienta aislada para trabajos eléctricos."
     },
     {
       "pregunta": "¿Qué garantía tiene este producto?",

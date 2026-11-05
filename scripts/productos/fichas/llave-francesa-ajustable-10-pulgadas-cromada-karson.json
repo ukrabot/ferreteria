@@ -19,12 +19,12 @@
   "fotos": [
     {
       "archivo": "1.jpg",
-      "alt": "Llave francesa ajustable cromada de 10 pulgadas Karson vista horizontal completa sobre fondo blanco",
+      "alt": "Llave francesa ajustable cromada de 10 pulgadas Karson vista completa sobre fondo blanco",
       "miniatura": "Ver llave horizontal"
     },
     {
       "archivo": "2.jpg",
-      "alt": "Llave ajustable de 10 pulgadas Karson vista frontal con graduación milimétrica grabada en la cabeza",
+      "alt": "Llave francesa ajustable cromada Karson colgada en un panel por el orificio del mango",
       "miniatura": "Ver graduación frontal"
     }
   ],
@@ -110,7 +110,7 @@
           "p": "Coloca la llave sobre la tuerca y gira la moleta moleteada hasta que las mandíbulas queden sin juego contra los costados del perno para evitar redondear los cantos de la pieza."
         },
         {
-          "advertencia": "En conexiones de artefactos a gas, recuerda que la instalación de llaves de paso y flexibles debe ser ejecutada por un instalador autorizado por la SEC. Verifica siempre la estanqueidad con agua jabonosa, nunca con fuego."
+          "aviso": "Si vas a cambiar una llave de paso o un flexible de gas, eso lo hace un instalador de gas autorizado por la SEC."
         },
         {
           "p": "Puedes revisar nuestra guía sobre [herramientas básicas de gasfitería](/blog/herramientas-basicas-de-gasfiteria-todo-lo-que-necesitas-saber/) para conocer el kit esencial de reparación."
@@ -120,8 +120,8 @@
   ],
   "faq": [
     {
-      "pregunta": "¿Cuál es la apertura máxima de la boca de la llave?",
-      "respuesta": "Abre hasta 25 mm según la ficha técnica de la herramienta, ideal para tuercas hexagonales estándar de hasta 1 pulgada de diámetro."
+      "pregunta": "¿Cuál es la apertura máxima?",
+      "respuesta": "Abre hasta 25 mm entre las mordazas, para tuercas y pernos de hasta 25 mm entre caras."
     },
     {
       "pregunta": "¿El mango tiene recubrimiento de goma?",

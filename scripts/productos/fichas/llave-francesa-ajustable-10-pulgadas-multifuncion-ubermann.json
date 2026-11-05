@@ -19,12 +19,12 @@
   "fotos": [
     {
       "archivo": "1.jpg",
-      "alt": "Llave francesa ajustable de 10 pulgadas Ubermann en acero cromo vanadio vista frontal sobre fondo blanco",
+      "alt": "Llave francesa ajustable Ubermann de 10 pulgadas, cuerpo negro y mango bimaterial, vista de frente",
       "miniatura": "Ver llave frontal"
     },
     {
       "archivo": "2.jpg",
-      "alt": "Detalle de mordaza reversible con cara dentada para tubos en llave ajustable Ubermann",
+      "alt": "Llave ajustable Ubermann con la cara dentada de la mordaza sujetando un tubo de cobre",
       "miniatura": "Ver mordaza reversible"
     }
   ],
@@ -51,15 +51,15 @@
     ],
     [
       "Material",
-      "Acero cromo vanadio (Cr-V)"
+      "Acero cromo vanadio (Cr-V) (según ficha)"
     ],
     [
       "Acabado",
-      "Fosfatado negro anticorrosivo"
+      "Fosfatado negro anticorrosivo (según ficha)"
     ],
     [
       "Mango",
-      "Bimaterial ergonómico TPR"
+      "Bimaterial ergonómico TPR (según ficha)"
     ],
     [
       "Garantía",
@@ -100,7 +100,7 @@
           ]
         },
         {
-          "p": "Su escala milimétrica grabada con láser en la cabeza permite preajustar la apertura exacta antes de encajar la llave en la tuerca."
+          "p": "La escala grabada en la cabeza permite dejar la apertura lista antes de encajar la llave."
         }
       ]
     },
@@ -127,8 +127,8 @@
       "respuesta": "Gira la moleta de ajuste abriendo completamente la mordaza hasta que la corredera salga por el extremo. Dale la vuelta hacia la cara con dientes y vuelve a engranarla en la rosca del sinfín."
     },
     {
-      "pregunta": "¿Qué apertura máxima alcanza este modelo?",
-      "respuesta": "Alcanza una apertura de hasta 35 mm (1,37 pulgadas), superior a la mayoría de las llaves francesas convencionales de 10 pulgadas que suelen abrir hasta 29 o 30 mm."
+      "pregunta": "¿Qué apertura máxima alcanza?",
+      "respuesta": "Hasta 35 mm, según la ficha del producto."
     },
     {
       "pregunta": "¿Qué tipo de garantía incluye?",
