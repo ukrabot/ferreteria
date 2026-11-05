@@ -3414,6 +3414,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110263799',
   },
+  {
+    slug: 'interruptor-automatico-lexo-1x32a-lexo',
+    name: 'Interruptor automático Lexo 1x32A',
+    price: 3990,
+    image: '/producto/interruptor-automatico-lexo-1x32a-lexo.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '121897003',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
