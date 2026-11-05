@@ -3288,6 +3288,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110235801',
   },
+  {
+    slug: 'interruptor-doble-9-15-10-a-clio-gris-halux',
+    name: 'Interruptor doble 9/15 10 A Clio Gris Halux',
+    price: 5990,
+    image: '/producto/interruptor-doble-9-15-10-a-clio-gris-halux.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110249772',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
