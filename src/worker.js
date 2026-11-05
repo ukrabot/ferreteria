@@ -202,6 +202,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Máscara de Soldar',
     filename: 'Pack-Mascara-de-Soldar-Ferreteria-Ukra.zip',
   },
+  'pack-puerta-blindada-clase-rc-cotizaciones-excel': {
+    name: 'Pack Puerta Blindada',
+    filename: 'Pack-Puerta-Blindada-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1749,6 +1753,15 @@ const SEED_PRODUCTS = [
     category: 'Herramientas',
     status: 'available',
     sku: 'PACK-CARETA',
+  },
+  {
+    slug: 'pack-puerta-blindada-clase-rc-cotizaciones-excel',
+    name: 'Pack Puerta Blindada: Planilla Excel de Clase RC, Medición del Vano, Comparación de Cotizaciones, Recepción y Mantención + Guía de Compra + Hoja de Medición y Recepción',
+    price: 7990,
+    image: '/producto/pack-puerta-blindada-clase-rc-cotizaciones-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-PUERTA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
