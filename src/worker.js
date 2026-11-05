@@ -206,6 +206,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Puerta Blindada',
     filename: 'Pack-Puerta-Blindada-Ferreteria-Ukra.zip',
   },
+  'pack-regular-mascara-fotosensible-ajuste-diagnostico-excel': {
+    name: 'Pack Regular Máscara Fotosensible',
+    filename: 'Pack-Regular-Mascara-Fotosensible-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1762,6 +1766,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-PUERTA',
+  },
+  {
+    slug: 'pack-regular-mascara-fotosensible-ajuste-diagnostico-excel',
+    name: 'Pack Regular Máscara Fotosensible: Planilla Excel de Ajuste por Trabajo (DIN, Sensibilidad y Retardo), Diagnóstico de Fallas y Registro + Tarjeta de Ajustes + Prueba Diaria',
+    price: 7990,
+    image: '/producto/pack-regular-mascara-fotosensible-ajuste-diagnostico-excel.webp',
+    category: 'Herramientas',
+    status: 'available',
+    sku: 'PACK-REGULAR-CARETA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
