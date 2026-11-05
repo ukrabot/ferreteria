@@ -1,0 +1,165 @@
+{
+  "slug": "juego-llaves-hexagonales-9-piezas-sae-stanley",
+  "nombre": "Juego de llaves hexagonales 9 piezas SAE tipo navaja Stanley",
+  "titulo_h1": "Juego de Llaves Hexagonales 9 Piezas SAE Stanley",
+  "titulo_corto": "Llaves Hexagonales 9 Piezas SAE Stanley",
+  "marca": "Stanley",
+  "sku": "110023853",
+  "precio_referencia": 11990,
+  "margen": 50,
+  "categoria": "herramientas",
+  "subcategoria": "Llaves hexagonales Allen",
+  "color": "Amarillo y negro",
+  "disponible": true,
+  "seo_titulo": "Juego de Llaves Hexagonales 9 Piezas SAE Stanley",
+  "meta_descripcion": "Compra el juego de llaves hexagonales 9 piezas SAE tipo navaja Stanley a {precio}. Acero forjado con acabado pavonado y cuerpo ergonómico. Envío a todo Chile.",
+  "og_descripcion": "Juego de 9 llaves Allen hexagonales tipo navaja en medidas fraccionarias SAE de 5/64\" a 1/4\" marca Stanley, con mango bimaterial ergonómico.",
+  "descripcion": "Juego de llaves hexagonales plegables tipo navaja de 9 piezas en medidas fraccionarias SAE (desde 5/64\" hasta 1/4\"), marca Stanley. Varillas hexagonales forjadas en acero con acabado pavonado negro antioxidación, montadas en chasis rígido con sobremoldeado de goma antideslizante con textura de diamante. Largo de 12 cm. Garantía de 6 meses.",
+  "lede": "¿Buscas un juego de llaves Allen profesional que resista alto torque sin deformar aristas? Este **juego de llaves hexagonales de 9 piezas SAE Stanley** en formato navaja reúne las **medidas en pulgadas desde 5/64\" hasta 1/4\"**, con cuerpo bimaterial ergonómico de 12 cm.",
+  "fotos": [
+    {
+      "archivo": "1.jpg",
+      "alt": "Juego de llaves hexagonales plegables Stanley SAE de 9 piezas cerrado en vista de perfil sobre fondo blanco",
+      "miniatura": "Ver juego cerrado"
+    },
+    {
+      "archivo": "2.jpg",
+      "alt": "Llaves Allen plegables Stanley SAE vistas de lado mostrando el mango ergonómico amarillo y negro",
+      "miniatura": "Ver mango bimaterial"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    [
+      "Marca",
+      "Stanley"
+    ],
+    [
+      "Tipo de llave",
+      "Hexagonal Allen plegable tipo navaja"
+    ],
+    [
+      "Número de piezas",
+      "9 piezas"
+    ],
+    [
+      "Rango de medidas",
+      "Desde 5/64\" hasta 1/4\" (SAE)"
+    ],
+    [
+      "Material de las llaves",
+      "Acero forjado con acabado pavonado negro"
+    ],
+    [
+      "Cuerpo del estuche",
+      "Bimaterial con goma antideslizante texturizada"
+    ],
+    [
+      "Largo del estuche",
+      "12 cm"
+    ],
+    [
+      "Garantía",
+      "6 meses"
+    ]
+  ],
+  "confianza": [
+    {
+      "titulo": "⭐ Calidad Stanley",
+      "detalle": "Acero forjado y pavonado negro"
+    },
+    {
+      "titulo": "📏 Rango 5/64\" a 1/4\"",
+      "detalle": "9 medidas fraccionarias SAE"
+    },
+    {
+      "titulo": "🚚 Envío a todo Chile",
+      "detalle": "Despacho a domicilio o retiro"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Respaldo Ferretería Ukra"
+    }
+  ],
+  "secciones": [
+    {
+      "id": "caracteristicas-y-calidad",
+      "titulo": "¿Qué destaca al juego de llaves hexagonales Stanley?",
+      "indice": "Características y calidad",
+      "bloques": [
+        {
+          "p": "El estuche plegable tipo navaja de Stanley está diseñado para un uso profesional exigente en montaje y mantenimiento mecánico. Sus componentes garantizan resistencia y durabilidad:"
+        },
+        {
+          "lista": [
+            "9 varillas de acero forjado con tratamiento térmico que conservan sus vértices hexagonales intactos bajo esfuerzo",
+            "Acabado de óxido negro (pavonado) que protege contra la corrosión en ambientes de taller",
+            "Cuerpo ergonómico con laterales de goma antideslizante texturizada en patrón diamante para aplicar palanca con comodidad"
+          ]
+        },
+        {
+          "p": "Para más detalles sobre tablas de equivalencias métricas e imperiales, te invitamos a leer nuestra guía sobre [llaves Allen y Torx: guía de medidas](/blog/llaves-allen-y-torx-guia-de-medidas/)."
+        }
+      ]
+    },
+    {
+      "id": "aplicacion-y-seguridad",
+      "titulo": "Uso seguro en pernos prisioneros y tornillería",
+      "indice": "Uso seguro y consejos",
+      "bloques": [
+        {
+          "p": "Las llaves hexagonales se despliegan individualmente a 90° para trabajar con mayor brazo de palanca o a 180° para girar pernos rápidamente en espacios profundos."
+        },
+        {
+          "advertencia": "Antes de aplicar fuerza, limpia el polvo o viruta del hueco del perno para que la llave ingrese a fondo. Una llave mal insertada arruinará la cabeza del tornillo."
+        },
+        {
+          "p": "Para complementar tu set de herramientas manuales de taller, puedes revisar también nuestro [cortador de tubos](/producto/cortador-de-tubos) para cañerías."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Qué medidas exactas incluye este set Stanley?",
+      "respuesta": "Incluye 9 medidas en pulgadas en el rango desde 5/64\" hasta 1/4\" (incluyendo 3/32\", 1/8\", 9/64\", 5/32\", 3/16\" y 7/32\"), identificadas en el interior del cuerpo organizador."
+    },
+    {
+      "pregunta": "¿Las llaves se pueden trabar en distintas posiciones?",
+      "respuesta": "Las llaves giran sobre ejes pasantes ajustables y se pueden posicionar tanto en ángulo recto de 90 grados para mayor torque como en línea recta de 180 grados como destornillador."
+    },
+    {
+      "pregunta": "¿Cuál es la garantía de este juego de llaves?",
+      "respuesta": "Cuenta con una garantía de 6 meses directa con Ferretería Ukra ante cualquier falla en los pivotes del estuche o rotura en el acero forjado."
+    }
+  ],
+  "aviso_final": "Los precios incluyen IVA. Verifica la correspondencia de la medida antes de forzar el apriete de tornillos milimétricos.",
+  "lateral": {
+    "etiqueta": "Herramienta profesional",
+    "titulo": "Allen 9 piezas Stanley",
+    "texto": "Medidas fraccionarias SAE desde 5/64\" hasta 1/4\" en acero pavonado. Mango bimaterial antideslizante de 12 cm y garantía de 6 meses."
+  },
+  "relacionados": [
+    "taladro-inalambrico-ubermann",
+    "martillo-carpintero-ubermann"
+  ],
+  "guias": [
+    {
+      "url": "/blog/llaves-allen-y-torx-guia-de-medidas/",
+      "texto": "Guía de medidas de llaves Allen y Torx"
+    },
+    {
+      "url": "/blog/herramientas-basicas-de-gasfiteria-todo-lo-que-necesitas-saber/",
+      "texto": "Herramientas de taller y gasfitería"
+    }
+  ],
+  "tarjeta": {
+    "titulo": "Juego de Llaves Hexagonales 9 Piezas SAE Stanley",
+    "extracto": "Juego de 9 llaves Allen plegables tipo navaja en medidas SAE desde 5/64\" hasta 1/4\" en acero forjado con acabado pavonado negro.",
+    "alt": "Juego de llaves hexagonales 9 piezas SAE tipo navaja Stanley",
+    "etiqueta": "Herramientas"
+  }
+}

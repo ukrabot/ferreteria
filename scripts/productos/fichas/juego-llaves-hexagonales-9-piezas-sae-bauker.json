@@ -1,0 +1,165 @@
+{
+  "slug": "juego-llaves-hexagonales-9-piezas-sae-bauker",
+  "nombre": "Juego de llaves hexagonales 9 piezas SAE tipo navaja Bauker",
+  "titulo_h1": "Juego de Llaves Hexagonales 9 Piezas SAE Bauker",
+  "titulo_corto": "Llaves Hexagonales 9 Piezas SAE Bauker",
+  "marca": "Bauker",
+  "sku": "130607355",
+  "precio_referencia": 9990,
+  "margen": 50,
+  "categoria": "herramientas",
+  "subcategoria": "Llaves hexagonales Allen",
+  "color": "Verde y naranja",
+  "disponible": true,
+  "seo_titulo": "Juego de Llaves Hexagonales 9 Piezas SAE Bauker",
+  "meta_descripcion": "Compra el juego de llaves hexagonales 9 piezas SAE tipo navaja Bauker a {precio}. Acero Cr-V con puntas de seguridad y mango ergonómico. Envíos a todo Chile.",
+  "og_descripcion": "Juego de 9 llaves Allen hexagonales plegables tipo navaja en medidas SAE (pulgadas) Bauker, con puntas de seguridad de acero cromo vanadio.",
+  "descripcion": "Juego de llaves hexagonales tipo Allen de 9 piezas en medidas fraccionarias SAE (pulgadas), marca Bauker. Formato plegable tipo navaja de 11 cm de largo cerrado, fabricado con varillas de acero cromo vanadio (Cr-V) con puntas de seguridad perforadas y mango ergonómico antideslizante verde y naranja. Garantía de 6 meses.",
+  "lede": "¿Cansado de perder las llaves Allen sueltas en el fondo de la caja de herramientas? Este **juego de llaves hexagonales de 9 piezas SAE Bauker** viene en un práctico **formato plegable tipo navaja**, con varillas de acero Cr-V y puntas de seguridad para pernos en pulgadas.",
+  "fotos": [
+    {
+      "archivo": "1.jpg",
+      "alt": "Juego de llaves hexagonales plegables tipo navaja de 9 piezas SAE Bauker desplegadas en abanico sobre fondo blanco",
+      "miniatura": "Ver llaves abiertas"
+    },
+    {
+      "archivo": "2.jpg",
+      "alt": "Cuerpo ergonómico bimaterial cerrado de juego de llaves Allen plegables Bauker",
+      "miniatura": "Ver cuerpo cerrado"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    [
+      "Marca",
+      "Bauker"
+    ],
+    [
+      "Tipo de llave",
+      "Hexagonal Allen plegable tipo navaja"
+    ],
+    [
+      "Número de piezas",
+      "9 piezas"
+    ],
+    [
+      "Sistema de medidas",
+      "SAE (pulgadas)"
+    ],
+    [
+      "Material de las llaves",
+      "Acero cromo vanadio (Cr-V)"
+    ],
+    [
+      "Diseño de puntas",
+      "Puntas con orificio de seguridad"
+    ],
+    [
+      "Dimensiones cerrado",
+      "11 cm de largo x 4 cm de alto x 2,3 cm de ancho"
+    ],
+    [
+      "Garantía",
+      "6 meses"
+    ]
+  ],
+  "confianza": [
+    {
+      "titulo": "🧰 Formato navaja",
+      "detalle": "9 medidas unidas en un solo cuerpo"
+    },
+    {
+      "titulo": "🛡️ Acero Cr-V",
+      "detalle": "Puntas endurecidas de seguridad"
+    },
+    {
+      "titulo": "🚚 Envío a todo Chile",
+      "detalle": "Despacho a domicilio o retiro"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Respaldo Ferretería Ukra"
+    }
+  ],
+  "secciones": [
+    {
+      "id": "ventajas-del-formato-plegable",
+      "titulo": "¿Qué ventajas ofrece un juego de llaves Allen tipo navaja?",
+      "indice": "Ventajas del formato plegable",
+      "bloques": [
+        {
+          "p": "El diseño plegable tipo navaja mantiene las 9 medidas organizadas y listas para usar, evitando la pérdida accidental de llaves individuales en el taller o la obra:"
+        },
+        {
+          "lista": [
+            "El mango actúa como una cómoda empuñadura de palanca para aplicar torque en ángulo de 90° o 180°",
+            "Puntas con perforación central de seguridad que permiten trabajar en pernos hexagonales estándar y pernos inviolables (tamper-resistant)",
+            "Varillas de acero cromo vanadio resistentes a la torsión y al desgaste prematuro de las aristas"
+          ]
+        },
+        {
+          "p": "Si tienes dudas sobre equivalencias entre milímetros y pulgadas, consulta nuestra guía sobre [llaves Allen y Torx: guía de medidas](/blog/llaves-allen-y-torx-guia-de-medidas/)."
+        }
+      ]
+    },
+    {
+      "id": "aplicaciones-y-cuidados",
+      "titulo": "Aplicaciones comunes y mantenimiento",
+      "indice": "Aplicaciones y cuidados",
+      "bloques": [
+        {
+          "p": "Las medidas SAE en pulgadas son estándar en maquinaria importada, herramientas eléctricas, compresores de aire, bicicletas de competición y motocicletas norteamericanas."
+        },
+        {
+          "advertencia": "Utiliza siempre la medida exacta en pulgadas del perno y evita forzar llaves métricas en cavidades SAE, ya que redondearías la cabeza del tornillo dejando la unión trabada."
+        },
+        {
+          "p": "Tras finalizar trabajos en entornos húmedos, limpia el cuerpo con un paño seco para conservar el acabado satinado de las llaves."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Qué significa que sean medidas SAE?",
+      "respuesta": "Significa que están calibradas en fracciones de pulgada (como 5/64\", 3/32\", 1/8\", 5/32\", 3/16\", 7/32\", etc.), a diferencia de los juegos métricos que vienen en milímetros."
+    },
+    {
+      "pregunta": "¿Sirven para pernos con pin de seguridad central?",
+      "respuesta": "Sí, las puntas hexagonales tienen una perforación central mecanizada que aloja el pin de seguridad de los pernos inviolables (tamper-proof), sirviendo tanto para pernos normales como de seguridad."
+    },
+    {
+      "pregunta": "¿Cuál es el plazo de garantía de este set?",
+      "respuesta": "Cuenta con 6 meses de garantía directa con Ferretería Ukra ante cualquier falla en los pernos de articulación o rotura de las varillas de acero Cr-V."
+    }
+  ],
+  "aviso_final": "Los precios incluyen IVA. Asegúrate de insertar la llave hasta el fondo de la cavidad del perno antes de ejercer fuerza.",
+  "lateral": {
+    "etiqueta": "Herramienta de taller",
+    "titulo": "Allen 9 piezas SAE Bauker",
+    "texto": "Juego plegable en acero Cr-V con puntas de seguridad y mango bimaterial de 11 cm. Compacto y resistente, con garantía de 6 meses."
+  },
+  "relacionados": [
+    "taladro-inalambrico-ubermann",
+    "martillo-carpintero-ubermann"
+  ],
+  "guias": [
+    {
+      "url": "/blog/llaves-allen-y-torx-guia-de-medidas/",
+      "texto": "Guía de medidas de llaves Allen y Torx"
+    },
+    {
+      "url": "/blog/herramientas-basicas-de-gasfiteria-todo-lo-que-necesitas-saber/",
+      "texto": "Herramientas básicas de taller"
+    }
+  ],
+  "tarjeta": {
+    "titulo": "Juego de Llaves Hexagonales 9 Piezas SAE Bauker",
+    "extracto": "Juego plegable tipo navaja de 9 llaves Allen en medidas SAE (pulgadas) en acero cromo vanadio con puntas de seguridad perforadas.",
+    "alt": "Juego de llaves hexagonales 9 piezas SAE tipo navaja Bauker",
+    "etiqueta": "Herramientas"
+  }
+}
