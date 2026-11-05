@@ -3693,6 +3693,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '117084275',
   },
+  {
+    slug: 'interruptor-automatico-25-a-easy9-schneider',
+    name: 'Interruptor automático 25 A Easy9 Schneider',
+    price: 4990,
+    image: '/producto/interruptor-automatico-25-a-easy9-schneider.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110237888',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
