@@ -242,6 +242,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Piso Flotante',
     filename: 'Pack-Piso-Flotante-Ferreteria-Ukra.zip',
   },
+  'pack-ingletadora-angulos-lista-de-corte-excel': {
+    name: 'Pack Ingletadora',
+    filename: 'Pack-Ingletadora-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1879,6 +1883,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-PISO-FLOT',
+  },
+  {
+    slug: 'pack-ingletadora-angulos-lista-de-corte-excel',
+    name: 'Pack Ingletadora: Planilla Excel de Ángulos de Rincón y Cornisa, Lista de Corte, Elección de Máquina y Disco + Tabla de Ángulos + Checklist de Seguridad',
+    price: 7990,
+    image: '/producto/pack-ingletadora-angulos-lista-de-corte-excel.webp',
+    category: 'Herramientas',
+    status: 'available',
+    sku: 'PACK-INGLETADORA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
