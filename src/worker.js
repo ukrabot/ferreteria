@@ -3018,6 +3018,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110263623',
   },
+  {
+    slug: 'automatico-1p-n-25a-6ka-lexo',
+    name: 'Automático 1P+N 25A 6KA Lexo',
+    price: 8990,
+    image: '/producto/automatico-1p-n-25a-6ka-lexo.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '116407740',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
