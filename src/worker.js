@@ -210,6 +210,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Regular Máscara Fotosensible',
     filename: 'Pack-Regular-Mascara-Fotosensible-Ferreteria-Ukra.zip',
   },
+  'pack-control-cascos-de-obra-vencimiento-inspeccion-excel': {
+    name: 'Pack Control de Cascos de Obra',
+    filename: 'Pack-Control-Cascos-de-Obra-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1775,6 +1779,15 @@ const SEED_PRODUCTS = [
     category: 'Herramientas',
     status: 'available',
     sku: 'PACK-REGULAR-CARETA',
+  },
+  {
+    slug: 'pack-control-cascos-de-obra-vencimiento-inspeccion-excel',
+    name: 'Pack Control de Cascos de Obra: Planilla Excel de Vencimiento de Calota y Suspensión, Selección por Riesgo, Inspección Diaria y Entrega de EPP + Guía para Leer el Casco + Checklist',
+    price: 7990,
+    image: '/producto/pack-control-cascos-de-obra-vencimiento-inspeccion-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-CASCOS',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
