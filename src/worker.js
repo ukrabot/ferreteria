@@ -4894,6 +4894,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '9081399',
   },
+  {
+    slug: 'mango-ducha-bot-abs-3-funciones-12-cm-negro',
+    name: 'Mango Ducha Bot Abs 3 Funciones 12 cm Negro Cromado SENSI DACQUA',
+    price: 29990,
+    image: '/producto/mango-ducha-bot-abs-3-funciones-12-cm-negro.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: '9081356',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
