@@ -218,6 +218,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Techumbre',
     filename: 'Pack-Techumbre-Pendiente-Estructura-Ferreteria-Ukra.zip',
   },
+  'pack-puente-de-adherencia-estuco-hormigon-excel': {
+    name: 'Pack Puente de Adherencia',
+    filename: 'Pack-Puente-de-Adherencia-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1801,6 +1805,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-TECHUMBRE',
+  },
+  {
+    slug: 'pack-puente-de-adherencia-estuco-hormigon-excel',
+    name: 'Pack Puente de Adherencia: Planilla Excel de Materiales por Muro, Tandas, Registro de Aplicación y Diagnóstico del Estuco + Guía de Aplicación + Checklist de Obra',
+    price: 7990,
+    image: '/producto/pack-puente-de-adherencia-estuco-hormigon-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-PUENTE',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
