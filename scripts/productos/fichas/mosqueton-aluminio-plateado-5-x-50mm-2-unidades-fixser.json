@@ -1,0 +1,133 @@
+{
+  "slug": "mosqueton-aluminio-plateado-5-x-50mm-2-unidades-fixser",
+  "marca": "Fixser",
+  "sku": "110275847",
+  "precio_referencia": 2390,
+  "margen": 50,
+  "categoria": "herramientas",
+  "nombre": "Mosquetón aluminio plateado 5 x 50mm 2 unidades Fixser",
+  "titulo_h1": "Mosquetón aluminio plateado 5 x 50mm 2 unidades Fixser",
+  "titulo_corto": "Mosquetón aluminio plateado 5 x 50mm 2 unidades Fixser",
+  "subcategoria": "Fijaciones y quincallería",
+  "disponible": true,
+  "seo_titulo": "Mosquetón aluminio plateado 5 x 50mm 2 unidades Fixser",
+  "meta_descripcion": "Compra Mosquetón aluminio plateado 5 x 50mm 2 unidades Fixser a {precio}. Engancha y suelta rápido. Para amarras y sujeciones livianas. Envío a todo Chile.",
+  "og_descripcion": "Mosquetón aluminio plateado 5 x 50mm 2 unidades Fixser. Engancha y suelta rápido.",
+  "descripcion": "Mosquetón aluminio plateado 5 x 50mm 2 unidades Fixser. Mosquetón con gatillo de resorte para enganchar y soltar rápido cadenas, cuerdas, tensores o argollas. Garantía de 6 meses.",
+  "lede": "**Mosquetón aluminio plateado 5 x 50mm 2 unidades Fixser**. Mosquetón con gatillo de resorte para enganchar y soltar rápido cadenas, cuerdas, tensores o argollas.",
+  "fotos": [
+    {
+      "url": "https://media.falabella.com/sodimacCL/1683683_01/w=1200,h=1200,fit=cover",
+      "alt": "Mosquetón aluminio plateado 5 x 50mm 2 unidades Fixser, foto principal sobre fondo blanco",
+      "miniatura": "Ver de frente"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/1683683_12/w=1200,h=1200,fit=cover",
+      "alt": "Mosquetón aluminio plateado 5 x 50mm 2 unidades Fixser, otra vista del producto",
+      "miniatura": "Ver lateral"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/1683683_21/w=1200,h=1200,fit=cover",
+      "alt": "Mosquetón aluminio plateado 5 x 50mm 2 unidades Fixser, otra vista del producto",
+      "miniatura": "Ver foto 4"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    [
+      "Marca",
+      "Fixser"
+    ],
+    [
+      "Material",
+      "Aluminio"
+    ],
+    [
+      "Medidas",
+      "5 cm"
+    ],
+    [
+      "Color",
+      "Plateado"
+    ]
+  ],
+  "confianza": [
+    {
+      "titulo": "🔗 Gatillo de resorte",
+      "detalle": "Engancha y suelta rápido"
+    },
+    {
+      "titulo": "📏 Medida según nombre",
+      "detalle": "Según su nombre y ficha"
+    },
+    {
+      "titulo": "🚚 Envíos a todo Chile",
+      "detalle": "Despacho a domicilio"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Ferretería Ukra"
+    }
+  ],
+  "secciones": [
+    {
+      "id": "uso",
+      "titulo": "Para qué sirve",
+      "indice": "Para qué sirve",
+      "bloques": [
+        {
+          "p": "Mosquetón con gatillo de resorte para enganchar y soltar rápido cadenas, cuerdas, tensores o argollas."
+        },
+        {
+          "lista": [
+            "Úsalo para amarras y sujeciones livianas.",
+            "Revisa que el gatillo cierre solo y por completo.",
+            "Cámbialo si está deformado u oxidado."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uso-seguro",
+      "titulo": "Uso seguro",
+      "indice": "Uso seguro",
+      "bloques": [
+        {
+          "p": "Revísalo antes de cada uso y reemplázalo si está deformado, agrietado u oxidado."
+        },
+        {
+          "advertencia": "No lo uses para levantar personas ni para trabajo en altura: no es un equipo de protección personal."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Cuánto peso aguanta?",
+      "respuesta": "El fabricante no indica una carga de trabajo. Úsalo para amarras y sujeciones livianas, no para levantar cargas pesadas."
+    },
+    {
+      "pregunta": "¿Sirve para escalada o trabajo en altura?",
+      "respuesta": "No. No es un equipo de protección personal: para trabajo en altura se usan mosquetones certificados para ese uso."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones?",
+      "respuesta": "Sí, despachamos a todas las regiones de Chile."
+    }
+  ],
+  "lateral": {
+    "etiqueta": "Ferretería",
+    "titulo": "Mosquetón aluminio plateado 5 x 50mm 2 unidades Fixser",
+    "texto": "Engancha y suelta rápido. Para amarras y sujeciones livianas. Garantía de 6 meses."
+  },
+  "tarjeta": {
+    "titulo": "Mosquetón aluminio plateado 5 x 50mm 2 unidades Fixser",
+    "extracto": "Mosquetón con gatillo de resorte para enganchar y soltar rápido cadenas, cuerdas, tensores o argollas. Engancha y suelta rápido.",
+    "alt": "Mosquetón aluminio plateado 5 x 50mm 2 unidades Fixser",
+    "etiqueta": "Fijaciones"
+  },
+  "guias": []
+}

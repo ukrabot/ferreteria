@@ -1,0 +1,154 @@
+{
+  "slug": "valvula-bola-25-mm-pvc-nm-duke",
+  "marca": "NM Duke",
+  "sku": "110260962",
+  "precio_referencia": 6590,
+  "margen": 50,
+  "categoria": "gasfiteria",
+  "nombre": "Válvula bola 25 mm PVC NM Duke",
+  "titulo_h1": "Válvula bola 25 mm PVC NM Duke",
+  "titulo_corto": "Válvula bola 25 mm PVC NM Duke",
+  "subcategoria": "Llaves de paso y válvulas de agua",
+  "disponible": true,
+  "seo_titulo": "Válvula bola 25 mm PVC NM Duke",
+  "meta_descripcion": "Compra Válvula bola 25 mm PVC NM Duke a {precio}. Válvula de bola de cuarto de vuelta. Para PVC hidráulico. Envío a todo Chile.",
+  "og_descripcion": "Válvula bola 25 mm PVC NM Duke: válvula de bola de cuarto de vuelta. Para PVC hidráulico.",
+  "descripcion": "Válvula bola 25 mm PVC NM Duke. Válvula de bola de cuarto de vuelta. Se pega a tubería de PVC hidráulico del mismo diámetro con adhesivo para PVC. Garantía de 6 meses.",
+  "lede": "Esta **Válvula bola 25 mm PVC NM Duke** es una válvula de bola de cuarto de vuelta. Con la manilla en línea con la cañería está abierta; atravesada, cerrada.",
+  "fotos": [
+    {
+      "url": "https://media.falabella.com/sodimacCL/122610_01/w=1200,h=1200,fit=cover",
+      "alt": "Válvula bola 25 mm PVC NM Duke, foto principal sobre fondo blanco",
+      "miniatura": "Ver de frente"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/122610_12/w=1200,h=1200,fit=cover",
+      "alt": "Válvula bola 25 mm PVC NM Duke, otra vista del producto",
+      "miniatura": "Ver lateral"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/122610_13/w=1200,h=1200,fit=cover",
+      "alt": "Válvula bola 25 mm PVC NM Duke, otra vista del producto",
+      "miniatura": "Ver roscas"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    [
+      "Marca",
+      "NM Duke"
+    ],
+    [
+      "Material Válvula",
+      "PVC"
+    ],
+    [
+      "Uso de la válvula",
+      "Agua"
+    ],
+    [
+      "Tipo de válvula",
+      "Válvula"
+    ],
+    [
+      "Diámetro",
+      "25 mm"
+    ],
+    [
+      "Características",
+      "Temperatura 0º C a +60º C. Presión 10 kg/cm2"
+    ]
+  ],
+  "confianza": [
+    {
+      "titulo": "💧 Cuarto de vuelta",
+      "detalle": "Abre o cierra al instante"
+    },
+    {
+      "titulo": "🔧 Para PVC hidráulico",
+      "detalle": "Medida 25 mm"
+    },
+    {
+      "titulo": "🚚 Envíos a todo Chile",
+      "detalle": "Despacho a domicilio"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Ferretería Ukra"
+    }
+  ],
+  "secciones": [
+    {
+      "id": "uso",
+      "titulo": "Para qué sirve y cómo funciona",
+      "indice": "Para qué sirve",
+      "bloques": [
+        {
+          "p": "Válvula de bola: abre o cierra con un cuarto de vuelta. Con la manilla en línea con la cañería está abierta; atravesada, cerrada. Úsala abierta o cerrada del todo, no a medias para regular."
+        },
+        {
+          "lista": [
+            "Abre o cierra al instante.",
+            "Para PVC hidráulico.",
+            "Uniones de tuerca a ambos lados: se puede sacar sin cortar la tubería."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "instalacion",
+      "titulo": "Instalación y conexión",
+      "indice": "Instalación",
+      "bloques": [
+        {
+          "p": "Se pega a tubería de PVC hidráulico del mismo diámetro con adhesivo para PVC: corta a escuadra, limpia, aplica el adhesivo en el tubo y en la válvula y respeta el tiempo de secado del adhesivo antes de dar presión."
+        },
+        {
+          "advertencia": "Corta la llave general del medidor y abre una llave baja para vaciar la cañería antes de trabajar. Si no tienes experiencia, pide la instalación a un gasfíter."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Cómo sé si está abierta?",
+      "respuesta": "Con la manilla en línea con la cañería está abierta; atravesada, cerrada. No la dejes a medias para regular."
+    },
+    {
+      "pregunta": "¿Cómo se une a la tubería?",
+      "respuesta": "Se pega a tubería de PVC hidráulico del mismo diámetro con adhesivo para PVC. No lleva teflón ni rosca."
+    },
+    {
+      "pregunta": "¿Lleva teflón?",
+      "respuesta": "No. Se pega con adhesivo para PVC; el teflón es solo para uniones con rosca."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones?",
+      "respuesta": "Sí, despachamos a todas las regiones de Chile."
+    }
+  ],
+  "lateral": {
+    "etiqueta": "Gasfitería agua",
+    "titulo": "Válvula bola 25 mm PVC NM Duke",
+    "texto": "Válvula de bola de cuarto de vuelta. Para PVC hidráulico. Garantía de 6 meses."
+  },
+  "tarjeta": {
+    "titulo": "Válvula bola 25 mm PVC NM Duke",
+    "extracto": "Válvula de bola de cuarto de vuelta. Para PVC hidráulico. Abre o cierra al instante.",
+    "alt": "Válvula bola 25 mm PVC NM Duke",
+    "etiqueta": "Gasfitería"
+  },
+  "guias": [
+    {
+      "url": "/blog/como-instalar-una-llave-de-paso-paso-a-paso/",
+      "texto": "Cómo instalar una llave de paso"
+    },
+    {
+      "url": "/blog/diferencias-entre-tuberias-pvc-y-ppr-guia-completa-para-elegir-la-mejor-opcion/",
+      "texto": "Tuberías de PVC y PPR"
+    }
+  ]
+}

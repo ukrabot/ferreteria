@@ -1,0 +1,140 @@
+{
+  "slug": "valvula-de-pie-mixta-2-pgic",
+  "marca": "Pgic",
+  "sku": "121058725",
+  "precio_referencia": 21490,
+  "margen": 50,
+  "categoria": "gasfiteria",
+  "nombre": "Válvula de pie mixta 2\" Pgic",
+  "titulo_h1": "Válvula de pie mixta 2\" Pgic",
+  "titulo_corto": "Válvula de pie mixta 2\" Pgic",
+  "subcategoria": "Llaves de paso y válvulas de agua",
+  "disponible": true,
+  "seo_titulo": "Válvula de pie mixta 2\" Pgic",
+  "meta_descripcion": "Compra Válvula de pie mixta 2\" Pgic a {precio}. Válvula de pie para la succión de bombas. Va en la succión. Envío a todo Chile.",
+  "og_descripcion": "Válvula de pie mixta 2\" Pgic: válvula de pie para la succión de bombas. Va en la succión.",
+  "descripcion": "Válvula de pie mixta 2\" Pgic. Válvula de pie para la succión de bombas. Garantía de 6 meses.",
+  "lede": "Esta **Válvula de pie mixta 2\" Pgic** es una válvula de pie para la succión de bombas. La rejilla retiene la basura gruesa y la retención mantiene la cañería llena de agua cuando la bomba se detiene, para que no pierda el cebado.",
+  "fotos": [
+    {
+      "url": "https://media.falabella.com/sodimacCL/7337086_01/w=1200,h=1200,fit=cover",
+      "alt": "Válvula de pie mixta 2\" Pgic, foto principal sobre fondo blanco",
+      "miniatura": "Ver de frente"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    [
+      "Marca",
+      "Pgic"
+    ],
+    [
+      "Material Válvula",
+      "Bronce"
+    ],
+    [
+      "Uso de la válvula",
+      "Agua"
+    ],
+    [
+      "Tipo de válvula",
+      "Válvula"
+    ],
+    [
+      "Diámetro",
+      "2 \""
+    ]
+  ],
+  "confianza": [
+    {
+      "titulo": "💧 Para la succión de bombas",
+      "detalle": "Mantiene la bomba cebada"
+    },
+    {
+      "titulo": "🔧 Va en la succión",
+      "detalle": "Medida 2\""
+    },
+    {
+      "titulo": "🚚 Envíos a todo Chile",
+      "detalle": "Despacho a domicilio"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Ferretería Ukra"
+    }
+  ],
+  "secciones": [
+    {
+      "id": "uso",
+      "titulo": "Para qué sirve y cómo funciona",
+      "indice": "Para qué sirve",
+      "bloques": [
+        {
+          "p": "Válvula de pie: va en el extremo sumergido de la cañería de succión de una bomba. La rejilla retiene la basura gruesa y la retención mantiene la cañería llena de agua cuando la bomba se detiene, para que no pierda el cebado. Déjala separada del fondo para que no chupe barro."
+        },
+        {
+          "lista": [
+            "Mantiene la bomba cebada.",
+            "Va en la succión.",
+            "Medida: 2\"."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "instalacion",
+      "titulo": "Instalación y conexión",
+      "indice": "Instalación",
+      "bloques": [
+        {
+          "p": "Se enrosca en el extremo de la cañería de succión. Sella la rosca con teflón y revisa que la unión no deje entrar aire: una entrada de aire en la succión hace que la bomba no aspire bien."
+        },
+        {
+          "advertencia": "Corta la llave general del medidor y abre una llave baja para vaciar la cañería antes de trabajar. Si no tienes experiencia, pide la instalación a un gasfíter."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Dónde va la válvula de pie?",
+      "respuesta": "En el extremo sumergido de la cañería de succión, separada del fondo del pozo o estanque. Mantiene la cañería llena para que la bomba no pierda el cebado."
+    },
+    {
+      "pregunta": "¿Por qué la bomba pierde el agua?",
+      "respuesta": "Si la válvula de pie no cierra bien o la succión deja entrar aire, la cañería se vacía y la bomba pierde el cebado. Revisa la válvula, la rejilla y las uniones."
+    },
+    {
+      "pregunta": "¿Lleva teflón?",
+      "respuesta": "Sí, en las uniones con rosca: la cinta va en el hilo exterior, en el sentido del apriete, sin cubrir el primer hilo."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones?",
+      "respuesta": "Sí, despachamos a todas las regiones de Chile."
+    }
+  ],
+  "lateral": {
+    "etiqueta": "Gasfitería agua",
+    "titulo": "Válvula de pie mixta 2\" Pgic",
+    "texto": "Válvula de pie para la succión de bombas. Va en la succión. Garantía de 6 meses."
+  },
+  "tarjeta": {
+    "titulo": "Válvula de pie mixta 2\" Pgic",
+    "extracto": "Válvula de pie para la succión de bombas. Va en la succión. Mantiene la bomba cebada.",
+    "alt": "Válvula de pie mixta 2\" Pgic",
+    "etiqueta": "Gasfitería"
+  },
+  "guias": [
+    {
+      "url": "/blog/guia-completa-para-conectar-una-bomba-de-agua-a-un-tanque-elevado/",
+      "texto": "Conectar una bomba a un estanque"
+    },
+    {
+      "url": "/blog/ruido-excesivo-en-bomba-de-agua-causas-y-soluciones-que-debes-conocer/",
+      "texto": "Ruido en la bomba de agua"
+    }
+  ]
+}

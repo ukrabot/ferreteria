@@ -1,0 +1,153 @@
+{
+  "slug": "valvula-bola-paso-total-1-1-2-genebre",
+  "marca": "Genebre",
+  "sku": "110243580",
+  "precio_referencia": 26990,
+  "margen": 50,
+  "categoria": "gasfiteria",
+  "nombre": "Válvula Bola Paso Total 1 1/2\" Genebre",
+  "titulo_h1": "Válvula Bola Paso Total 1 1/2\" Genebre",
+  "titulo_corto": "Válvula Bola Paso Total 1 1/2\" Genebre",
+  "subcategoria": "Llaves de paso y válvulas de agua",
+  "disponible": true,
+  "seo_titulo": "Válvula Bola Paso Total 1 1/2\" Genebre",
+  "meta_descripcion": "Compra Válvula Bola Paso Total 1 1/2\" Genebre a {precio}. Válvula de bola de cuarto de vuelta. Conexión según ficha. Envío a todo Chile.",
+  "og_descripcion": "Válvula Bola Paso Total 1 1/2\" Genebre: válvula de bola de cuarto de vuelta. Conexión según ficha.",
+  "descripcion": "Válvula Bola Paso Total 1 1/2\" Genebre. Válvula de bola de cuarto de vuelta. Garantía de 6 meses.",
+  "lede": "Esta **Válvula Bola Paso Total 1 1/2\" Genebre** es una válvula de bola de cuarto de vuelta. Con la manilla en línea con la cañería está abierta; atravesada, cerrada.",
+  "fotos": [
+    {
+      "url": "https://media.falabella.com/sodimacCL/666645_01/w=1200,h=1200,fit=cover",
+      "alt": "Válvula Bola Paso Total 1 1/2\" Genebre, foto principal sobre fondo blanco",
+      "miniatura": "Ver de frente"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/666645_21/w=1200,h=1200,fit=cover",
+      "alt": "Válvula Bola Paso Total 1 1/2\" Genebre, otra vista del producto",
+      "miniatura": "Ver lateral"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    [
+      "Marca",
+      "Genebre"
+    ],
+    [
+      "Material Válvula",
+      "Latón"
+    ],
+    [
+      "Uso de la válvula",
+      "Agua"
+    ],
+    [
+      "Tipo de válvula",
+      "Válvula"
+    ],
+    [
+      "Presión máxima",
+      "362 Psi"
+    ],
+    [
+      "Diámetro",
+      "1-1/2 \""
+    ],
+    [
+      "Características",
+      "Para todo tipo de instalaciones sanitarias y de riego,Válvula de esfera con paso total,Construcción en latón s/ UNE-EN 12165 cromado,Extremos rosca gas (BSP) he"
+    ]
+  ],
+  "confianza": [
+    {
+      "titulo": "💧 Cuarto de vuelta",
+      "detalle": "Abre o cierra al instante"
+    },
+    {
+      "titulo": "🔧 Conexión según ficha",
+      "detalle": "Medida 1 1/2\""
+    },
+    {
+      "titulo": "🚚 Envíos a todo Chile",
+      "detalle": "Despacho a domicilio"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Ferretería Ukra"
+    }
+  ],
+  "secciones": [
+    {
+      "id": "uso",
+      "titulo": "Para qué sirve y cómo funciona",
+      "indice": "Para qué sirve",
+      "bloques": [
+        {
+          "p": "Válvula de bola: abre o cierra con un cuarto de vuelta. Con la manilla en línea con la cañería está abierta; atravesada, cerrada. Úsala abierta o cerrada del todo, no a medias para regular."
+        },
+        {
+          "lista": [
+            "Abre o cierra al instante.",
+            "Conexión según ficha.",
+            "Medida: 1 1/2\"."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "instalacion",
+      "titulo": "Instalación y conexión",
+      "indice": "Instalación",
+      "bloques": [
+        {
+          "p": "Revisa en la ficha técnica las medidas y el tipo de conexión antes de comprar."
+        },
+        {
+          "advertencia": "Corta la llave general del medidor y abre una llave baja para vaciar la cañería antes de trabajar. Si no tienes experiencia, pide la instalación a un gasfíter."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Cómo sé si está abierta?",
+      "respuesta": "Con la manilla en línea con la cañería está abierta; atravesada, cerrada. No la dejes a medias para regular."
+    },
+    {
+      "pregunta": "¿Qué conexión tiene?",
+      "respuesta": "La indicada en su nombre y en la ficha técnica. Revísala antes de comprar para que calce con tu cañería."
+    },
+    {
+      "pregunta": "¿Lleva teflón?",
+      "respuesta": "Sí, en las uniones con rosca: la cinta va en el hilo exterior, en el sentido del apriete, sin cubrir el primer hilo."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones?",
+      "respuesta": "Sí, despachamos a todas las regiones de Chile."
+    }
+  ],
+  "lateral": {
+    "etiqueta": "Gasfitería agua",
+    "titulo": "Válvula Bola Paso Total 1 1/2\" Genebre",
+    "texto": "Válvula de bola de cuarto de vuelta. Conexión según ficha. Garantía de 6 meses."
+  },
+  "tarjeta": {
+    "titulo": "Válvula Bola Paso Total 1 1/2\" Genebre",
+    "extracto": "Válvula de bola de cuarto de vuelta. Conexión según ficha. Abre o cierra al instante.",
+    "alt": "Válvula Bola Paso Total 1 1/2\" Genebre",
+    "etiqueta": "Gasfitería"
+  },
+  "guias": [
+    {
+      "url": "/blog/como-instalar-una-llave-de-paso-paso-a-paso/",
+      "texto": "Cómo instalar una llave de paso"
+    },
+    {
+      "url": "/blog/selladores-de-rosca-teflon-vs-estopa-cual-elegir/",
+      "texto": "Teflón o estopa: cuál usar"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "slug": "llave-de-gas-1-2-hi-he-bronce-stretto",
+  "marca": "Stretto",
+  "sku": "110234397",
+  "precio_referencia": 5690,
+  "margen": 50,
+  "categoria": "gasfiteria",
+  "nombre": "Llave de gas 1/2\" HI-HE bronce Stretto",
+  "titulo_h1": "Llave de gas 1/2\" HI-HE bronce Stretto",
+  "titulo_corto": "Llave de gas 1/2\" HI-HE bronce Stretto",
+  "subcategoria": "Llaves de paso de gas",
+  "disponible": true,
+  "seo_titulo": "Llave de gas 1/2\" HI-HE bronce Stretto",
+  "meta_descripcion": "Compra llave de gas 1/2\" hi-he bronce Stretto a {precio}. Corte de gas rápido y hermético para cocinas, estufas y calefones. Envíos a todo Chile.",
+  "og_descripcion": "Llave de paso para gas Stretto. Corte hermético de seguridad en un cuarto de vuelta para redes domésticas.",
+  "descripcion": "Llave de paso de bola para gas marca Stretto. Diseñada para permitir el corte rápido y seguro del suministro de gas licuado o natural en arranques de cocinas, calefones y estufas domiciliarias. Garantía de 6 meses.",
+  "lede": "Esta **llave de paso para gas Stretto** entrega un corte hermético e inmediato del suministro de gas con solo un cuarto de vuelta de su manilla, facilitando mantenciones y asegurando tu hogar ante emergencias.",
+  "fotos": [
+    {
+      "url": "https://media.falabella.com/sodimacCL/3318389_01/w=1200,h=1200,fit=cover",
+      "alt": "Llave de gas 1/2\" HI-HE bronce Stretto, foto principal sobre fondo blanco",
+      "miniatura": "Ver de frente"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/3318389_12/w=1200,h=1200,fit=cover",
+      "alt": "Llave de gas 1/2\" HI-HE bronce Stretto, otra vista del producto",
+      "miniatura": "Ver lateral"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/3318389_13/w=1200,h=1200,fit=cover",
+      "alt": "Llave de gas 1/2\" HI-HE bronce Stretto, otra vista del producto",
+      "miniatura": "Ver roscas"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/3318389_14/w=1200,h=1200,fit=cover",
+      "alt": "Llave de gas 1/2\" HI-HE bronce Stretto, otra vista del producto",
+      "miniatura": "Ver foto 4"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/3318389_15/w=1200,h=1200,fit=cover",
+      "alt": "Llave de gas 1/2\" HI-HE bronce Stretto, otra vista del producto",
+      "miniatura": "Ver foto 5"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/3318389_21/w=1200,h=1200,fit=cover",
+      "alt": "Llave de gas 1/2\" HI-HE bronce Stretto, otra vista del producto",
+      "miniatura": "Ver foto 6"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    [
+      "Marca",
+      "Stretto"
+    ],
+    [
+      "Material Válvula",
+      "Bronce"
+    ],
+    [
+      "Uso de la válvula",
+      "Gas"
+    ],
+    [
+      "Tipo de válvula",
+      "Llave"
+    ],
+    [
+      "Diámetro",
+      "1/2 \""
+    ]
+  ],
+  "confianza": [
+    {
+      "titulo": "🟡 Línea de gas",
+      "detalle": "Manilla amarilla distintiva"
+    },
+    {
+      "titulo": "🛡️ Corte hermético",
+      "detalle": "Mecanismo de bola de 1/4 vuelta"
+    },
+    {
+      "titulo": "🚚 Envíos a todo Chile",
+      "detalle": "Despacho a domicilio"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Ferretería Ukra"
+    }
+  ],
+  "secciones": [
+    {
+      "id": "funcion-corte-gas",
+      "titulo": "Corte de seguridad para artefactos a gas",
+      "indice": "Función y seguridad",
+      "bloques": [
+        {
+          "p": "Cada artefacto a gas en la vivienda (cocina, encimera o calefón) debe contar con una llave de paso accesible que permita aislarlo sin cortar el suministro de toda la casa."
+        },
+        {
+          "lista": [
+            "Accionamiento rápido en un cuarto de vuelta.",
+            "Manilla perpendicular al tubo indica corte cerrado; paralela indica paso abierto."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "instalacion-norma-sec-gas",
+      "titulo": "Quién instala y precauciones obligatorias",
+      "indice": "Instalación SEC",
+      "bloques": [
+        {
+          "p": "Las tuberías y llaves de gas deben ser intervenidas exclusivamente por un instalador de gas autorizado por la SEC. El cliente no debe desmontar uniones de gas por cuenta propia."
+        },
+        {
+          "advertencia": "Las uniones roscadas de gas se sellan únicamente con cinta o pasta aprobada para gas (nunca con teflón delgado común de agua). Si sospechas de fuga, ventila y contacta a un técnico SEC."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Por qué las llaves de gas llevan manilla de color amarillo?",
+      "respuesta": "El color amarillo identifica en Chile las llaves de la red de gas, evitando confusiones con cañerías de agua."
+    },
+    {
+      "pregunta": "¿Se puede usar teflón corriente en una llave de gas?",
+      "respuesta": "No. Debe utilizarse cinta de teflón de alta densidad para gas o pasta sellante homologada para hidrocarburos gaseosos."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones?",
+      "respuesta": "Sí, despachamos a todas las regiones de Chile."
+    }
+  ],
+  "lateral": {
+    "etiqueta": "Gasfitería gas",
+    "titulo": "Llave de gas 1/2\" HI-HE bronce Stretto",
+    "texto": "Llave de paso para gas Stretto. Corte rápido de seguridad para cocinas, calefones y estufas. Garantía de 6 meses."
+  },
+  "tarjeta": {
+    "titulo": "Llave de gas 1/2\" HI-HE bronce Stretto",
+    "extracto": "Corte de bola en cuarto de vuelta para arranques de cocinas, encimeras y calefones. Cierre hermético seguro.",
+    "alt": "Llave de gas 1/2\" HI-HE bronce Stretto",
+    "etiqueta": "Gasfitería"
+  },
+  "guias": [
+    {
+      "url": "/blog/sello-verde-gas-inspeccion-periodica-sello-amarillo-rojo-chile/",
+      "texto": "Sello verde de gas"
+    },
+    {
+      "url": "/blog/fuga-de-gas-y-monoxido-como-detectar-y-que-hacer-chile/",
+      "texto": "Fuga de gas: cómo detectarla"
+    }
+  ]
+}

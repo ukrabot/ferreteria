@@ -1,0 +1,149 @@
+{
+  "slug": "llave-de-paso-1-2-so-so-bronce-nibsa-640387",
+  "marca": "Nibsa",
+  "sku": "110229915",
+  "precio_referencia": 14690,
+  "margen": 50,
+  "categoria": "gasfiteria",
+  "nombre": "Llave de paso 1/2\" SO SO bronce Nibsa",
+  "titulo_h1": "Llave de paso 1/2\" SO SO bronce Nibsa",
+  "titulo_corto": "Llave de paso 1/2\" SO SO bronce Nibsa",
+  "subcategoria": "Llaves de paso y válvulas de agua",
+  "disponible": true,
+  "seo_titulo": "Llave de paso 1/2\" SO SO bronce Nibsa",
+  "meta_descripcion": "Compra Llave de paso 1/2\" SO SO bronce Nibsa a {precio}. Llave de paso de vástago. Terminales SO para soldar a cobre. Envío a todo Chile.",
+  "og_descripcion": "Llave de paso 1/2\" SO SO bronce Nibsa: llave de paso de vástago. Terminales SO para soldar a cobre.",
+  "descripcion": "Llave de paso 1/2\" SO SO bronce Nibsa. Llave de paso de vástago. Terminales SO para soldar a cañería de cobre con soldadura de estaño. No llevan rosca ni teflón. Garantía de 6 meses.",
+  "lede": "Esta **Llave de paso 1/2\" SO SO bronce Nibsa** es una llave de paso de vástago. Sirve para cortar el agua de un tramo o de un artefacto sin cortar toda la casa.",
+  "fotos": [
+    {
+      "url": "https://media.falabella.com/sodimacCL/640387_01/w=1200,h=1200,fit=cover",
+      "alt": "Llave de paso 1/2\" SO SO bronce Nibsa, foto principal sobre fondo blanco",
+      "miniatura": "Ver de frente"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/640387_21/w=1200,h=1200,fit=cover",
+      "alt": "Llave de paso 1/2\" SO SO bronce Nibsa, otra vista del producto",
+      "miniatura": "Ver lateral"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    [
+      "Marca",
+      "Nibsa"
+    ],
+    [
+      "Material Válvula",
+      "Bronce"
+    ],
+    [
+      "Uso de la válvula",
+      "Agua"
+    ],
+    [
+      "Tipo de válvula",
+      "Llave"
+    ],
+    [
+      "Diámetro",
+      "1/2 \""
+    ],
+    [
+      "Características",
+      "Unión SO. Superior Cromado"
+    ]
+  ],
+  "confianza": [
+    {
+      "titulo": "💧 Llave de paso",
+      "detalle": "Corta el agua de un tramo"
+    },
+    {
+      "titulo": "🔧 Terminales SO para soldar a cobre",
+      "detalle": "Medida 1/2\""
+    },
+    {
+      "titulo": "🚚 Envíos a todo Chile",
+      "detalle": "Despacho a domicilio"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Ferretería Ukra"
+    }
+  ],
+  "secciones": [
+    {
+      "id": "uso",
+      "titulo": "Para qué sirve y cómo funciona",
+      "indice": "Para qué sirve",
+      "bloques": [
+        {
+          "p": "Llave de paso de vástago: se abre y cierra girando la manilla varias vueltas. Sirve para cortar el agua de un tramo o de un artefacto sin cortar toda la casa. Si el cuerpo trae una flecha, instálala en el sentido en que corre el agua."
+        },
+        {
+          "lista": [
+            "Corta el agua de un tramo.",
+            "Terminales SO para soldar a cobre.",
+            "Medida: 1/2\"."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "instalacion",
+      "titulo": "Instalación y conexión",
+      "indice": "Instalación",
+      "bloques": [
+        {
+          "p": "Terminales SO para soldar a cañería de cobre con soldadura de estaño. No llevan rosca ni teflón: limpia y lija el cobre, aplica pasta y suelda. Protege del calor las partes interiores; si la llave se desarma, saca la parte superior antes de soldar."
+        },
+        {
+          "advertencia": "Corta la llave general del medidor y vacía la cañería antes de soldar: con agua dentro el cobre no toma temperatura. Si no tienes experiencia soldando cobre, pide la instalación a un gasfíter."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Para qué sirve una llave de paso?",
+      "respuesta": "Para cortar el agua de un tramo o de un artefacto y poder repararlo sin cortar el agua de toda la casa."
+    },
+    {
+      "pregunta": "¿Qué significa SO?",
+      "respuesta": "Que la llave tiene terminales para soldar a cañería de cobre con soldadura de estaño (soldadura capilar). No lleva rosca ni teflón."
+    },
+    {
+      "pregunta": "¿Lleva teflón?",
+      "respuesta": "No. Los terminales SO se sueldan a cobre con estaño; el teflón es solo para uniones con rosca."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones?",
+      "respuesta": "Sí, despachamos a todas las regiones de Chile."
+    }
+  ],
+  "lateral": {
+    "etiqueta": "Gasfitería agua",
+    "titulo": "Llave de paso 1/2\" SO SO bronce Nibsa",
+    "texto": "Llave de paso de vástago. Terminales SO para soldar a cobre. Garantía de 6 meses."
+  },
+  "tarjeta": {
+    "titulo": "Llave de paso 1/2\" SO SO bronce Nibsa",
+    "extracto": "Llave de paso de vástago. Terminales SO para soldar a cobre. Corta el agua de un tramo.",
+    "alt": "Llave de paso 1/2\" SO SO bronce Nibsa",
+    "etiqueta": "Gasfitería"
+  },
+  "guias": [
+    {
+      "url": "/blog/como-instalar-una-llave-de-paso-paso-a-paso/",
+      "texto": "Cómo instalar una llave de paso"
+    },
+    {
+      "url": "/blog/como-soldar-con-estano-guia-paso-a-paso/",
+      "texto": "Cómo soldar con estaño"
+    }
+  ]
+}
