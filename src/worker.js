@@ -3594,6 +3594,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110252088',
   },
+  {
+    slug: 'interruptor-simple-9-12-10-a-blanco-karson',
+    name: 'Interruptor simple 9/12 10 A Blanco Karson',
+    price: 2990,
+    image: '/producto/interruptor-simple-9-12-10-a-blanco-karson.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110274224',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
