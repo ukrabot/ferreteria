@@ -3585,6 +3585,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '130316076',
   },
+  {
+    slug: 'interruptor-automatico-20-a-easy9-schneider',
+    name: 'Interruptor automático 20 A Easy9 Schneider',
+    price: 4990,
+    image: '/producto/interruptor-automatico-20-a-easy9-schneider.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110252088',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
