@@ -3702,6 +3702,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110237888',
   },
+  {
+    slug: 'enchufe-interruptor-s17-sinthesi-blanco-sinthesi',
+    name: 'Enchufe + interruptor s17 Sinthesi Blanco',
+    price: 4990,
+    image: '/producto/enchufe-interruptor-s17-sinthesi-blanco-sinthesi.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '139923735',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
