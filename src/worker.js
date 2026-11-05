@@ -234,6 +234,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Estanque Hidroneumático',
     filename: 'Pack-Estanque-Hidroneumatico-Ferreteria-Ukra.zip',
   },
+  'pack-vidrios-inteligentes-ganancia-solar-ahorro-excel': {
+    name: 'Pack Vidrios Inteligentes',
+    filename: 'Pack-Vidrios-Inteligentes-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1853,6 +1857,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-HIDROPACK',
+  },
+  {
+    slug: 'pack-vidrios-inteligentes-ganancia-solar-ahorro-excel',
+    name: 'Pack Vidrios Inteligentes: Planilla Excel de Calor Solar por Ventana, Comparación de Soluciones, Ahorro y Retorno + Guía para Elegir + Checklist de Cotización',
+    price: 7990,
+    image: '/producto/pack-vidrios-inteligentes-ganancia-solar-ahorro-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-VIDRIOS-INT',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
