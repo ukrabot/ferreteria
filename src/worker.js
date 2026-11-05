@@ -3342,6 +3342,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110271939',
   },
+  {
+    slug: 'interruptor-conmutador-9-24-10-a-modus-plus-blanco-bticino',
+    name: 'Interruptor conmutador 9/24 10 A Modus Plus Blanco Bticino',
+    price: 5990,
+    image: '/producto/interruptor-conmutador-9-24-10-a-modus-plus-blanco-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110253943',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
