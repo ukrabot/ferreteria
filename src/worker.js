@@ -3468,6 +3468,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110217616',
   },
+  {
+    slug: 'dimmer-nobile-perla-bticino',
+    name: 'Dimmer Nobile Perla Bticino',
+    price: 55990,
+    image: '/producto/dimmer-nobile-perla-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110216979',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
