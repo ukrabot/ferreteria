@@ -1,0 +1,147 @@
+{
+  "slug": "interruptor-simple-9-12-10-a-blanco-karson",
+  "marca": "Karson",
+  "sku": "110274224",
+  "precio_referencia": 1590,
+  "margen": 50,
+  "categoria": "electricidad",
+  "nombre": "Interruptor simple 9/12 10 A Blanco Karson",
+  "titulo_h1": "Interruptor simple 9/12 10 A Blanco Karson",
+  "titulo_corto": "Interruptor 9/12 10 A Blanco Karson",
+  "subcategoria": "Interruptores de pared",
+  "disponible": true,
+  "seo_titulo": "Interruptor 9/12 Simple 10 A Karson",
+  "meta_descripcion": "Compra interruptor simple 9/12 10 A Karson blanco a {precio}. Mecanismo para control de iluminación domiciliaria. Envío a todo Chile.",
+  "og_descripcion": "Interruptor simple 9/12 10 A marca Karson blanco. Control confiable para circuitos de alumbrado en el hogar.",
+  "descripcion": "Interruptor de alumbrado simple código 9/12 de 10 A marca Karson blanco. Diseñado para montaje en caja de pared embutida o sobrepuesta, permitiendo el control suave y seguro de circuitos de iluminación. Garantía de 6 meses.",
+  "lede": "Este **interruptor simple 9/12 de 10 A Karson blanco** ofrece un encendido y apagado suave y seguro para un centro de iluminación domiciliario desde un único punto mural.",
+  "fotos": [
+    {
+      "url": "https://media.falabella.com/sodimacCL/3246752_01/w=1200,h=1200,fit=cover",
+      "alt": "Interruptor simple 9/12 10 A Blanco Karson, vista frontal sobre fondo blanco",
+      "miniatura": "Ver de frente"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/3246752_12/w=1200,h=1200,fit=cover",
+      "alt": "Interruptor simple 9/12 10 A Blanco Karson, vista en ángulo mostrando detalles de terminales",
+      "miniatura": "Ver ángulo"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/3246752_21/w=1200,h=1200,fit=cover",
+      "alt": "Interruptor simple 9/12 10 A Blanco Karson, vista posterior con fijación para riel o caja",
+      "miniatura": "Ver fijación"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    [
+      "Marca",
+      "Karson"
+    ],
+    [
+      "Detalle de la garantía",
+      "1 año"
+    ],
+    [
+      "Color",
+      "Blanco"
+    ],
+    [
+      "Voltaje",
+      "220 V"
+    ],
+    [
+      "Amperaje",
+      "10 A"
+    ]
+  ],
+  "confianza": [
+    {
+      "titulo": "💡 Circuito 9/12",
+      "detalle": "Control simple eficiente"
+    },
+    {
+      "titulo": "⚡ 10 A · 250 V CA",
+      "detalle": "Contactos de alta durabilidad"
+    },
+    {
+      "titulo": "🚚 Envíos a todo Chile",
+      "detalle": "Despacho rápido a domicilio"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Ferretería Ukra"
+    }
+  ],
+  "secciones": [
+    {
+      "id": "conexion-9-12",
+      "titulo": "¿Cómo se conecta el circuito 9/12?",
+      "indice": "Circuito 9/12",
+      "bloques": [
+        {
+          "p": "El circuito 9/12 está normado en Chile para el accionamiento de lámparas y luminarias. La fase ingresa al borne común del interruptor y los retornos van directo a los centros de luz correspondientes."
+        },
+        {
+          "lista": [
+            "Interrumpe siempre el conductor de fase, nunca el neutro.",
+            "Contactos firmes que evitan chispazos y arqueo eléctrico.",
+            "Mecanismo duradero probado para miles de maniobras."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seguridad-instalacion-mural",
+      "titulo": "Instalación en pared y seguridad eléctrica",
+      "indice": "Seguridad e instalación",
+      "bloques": [
+        {
+          "p": "Antes de aflojar tornillos o conectar cables, desenergiza el circuito de alumbrado bajando el automático respectivo en el tablero. Pela el conductor a la medida exacta indicada en el mecanismo para evitar hilos de cobre expuestos."
+        },
+        {
+          "advertencia": "Si la instalación es antigua o desconoces la distribución de fase y neutro, solicita la intervención de un instalador eléctrico autorizado SEC."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Para qué sirve exactamente el código 9/12?",
+      "respuesta": "En la normativa chilena, 9/12 designa el circuito de alumbrado: simple (9/12), doble (9/15), de escala/conmutación (9/24) o triple (9/32)."
+    },
+    {
+      "pregunta": "¿Se puede usar con ampolletas LED?",
+      "respuesta": "Sí, es totalmente compatible con ampolletas LED, tubos fluorescentes, focos dicroicos y lámparas tradicionales de hasta su corriente nominal."
+    },
+    {
+      "pregunta": "¿Hacen envíos a regiones?",
+      "respuesta": "Sí, despachamos a todas las comunas de Chile con seguimiento en línea."
+    }
+  ],
+  "lateral": {
+    "etiqueta": "Interruptores",
+    "titulo": "Interruptor 9/12 Karson",
+    "texto": "Interruptor de alumbrado 9/12 10 A Karson. Control confiable y estético para tus centros de luz. Garantía de 6 meses."
+  },
+  "tarjeta": {
+    "titulo": "Interruptor 9/12 Simple Karson",
+    "extracto": "Mecanismo de pared para control de iluminación domiciliaria. Acabado prolijo y accionamiento suave y seguro.",
+    "alt": "Interruptor de luz 9/12 Karson",
+    "etiqueta": "Material eléctrico"
+  },
+  "guias": [
+    {
+      "url": "/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/",
+      "texto": "Cómo armar un tablero eléctrico"
+    },
+    {
+      "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
+      "texto": "Cómo identificar fase y neutro"
+    }
+  ],
+  "color": "Blanco"
+}

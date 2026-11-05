@@ -1,0 +1,154 @@
+{
+  "slug": "interruptor-automatico-25-a-curva-c-6ka-bticino",
+  "marca": "Bticino",
+  "sku": "110251812",
+  "precio_referencia": 4390,
+  "margen": 50,
+  "categoria": "electricidad",
+  "nombre": "interruptor automático 25 A curva C 6KA Bticino",
+  "titulo_h1": "Interruptor automático 25 A 1 polo Bticino",
+  "titulo_corto": "Automático 25 A 1 polo Bticino",
+  "subcategoria": "Automáticos y disyuntores",
+  "disponible": true,
+  "seo_titulo": "Interruptor Automático 25 A Bticino Riel DIN",
+  "meta_descripcion": "Compra interruptor automático disyuntor 25 A Bticino a {precio}. Protección termomagnética contra sobrecargas y cortocircuitos. Envío a todo Chile.",
+  "og_descripcion": "Interruptor automático 25 A Bticino para riel DIN. Protege los conductores eléctricos contra sobrecargas y cortocircuitos.",
+  "descripcion": "Disyuntor termomagnético de 25 A marca Bticino (1 polo) para montaje en riel DIN. Diseñado para proteger circuitos de alumbrado y enchufes contra corrientes de sobrecarga y cortocircuitos en tableros eléctricos. Garantía de 6 meses.",
+  "lede": "Este **interruptor automático de 25 A Bticino** protege los cables de tu circuito desconectando la energía ante sobrecargas o cortocircuitos, evitando recalentamientos e incendios en la instalación eléctrica.",
+  "fotos": [
+    {
+      "url": "https://media.falabella.com/sodimacCL/781622_01/w=1200,h=1200,fit=cover",
+      "alt": "interruptor automático 25 A curva C 6KA Bticino, vista frontal sobre fondo blanco",
+      "miniatura": "Ver de frente"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/781622_12/w=1200,h=1200,fit=cover",
+      "alt": "interruptor automático 25 A curva C 6KA Bticino, vista en ángulo mostrando detalles de terminales",
+      "miniatura": "Ver ángulo"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/781622_21/w=1200,h=1200,fit=cover",
+      "alt": "interruptor automático 25 A curva C 6KA Bticino, vista posterior con fijación para riel o caja",
+      "miniatura": "Ver fijación"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    [
+      "Marca",
+      "Bticino"
+    ],
+    [
+      "Detalle de la garantía",
+      "6 meses"
+    ],
+    [
+      "Uso",
+      "Protección contra sobrecargas y cortocircuitos."
+    ],
+    [
+      "Voltaje",
+      "400 V"
+    ],
+    [
+      "Cantidad de polos",
+      "1 unidad(es)"
+    ],
+    [
+      "Amperaje",
+      "25 A"
+    ],
+    [
+      "Montaje",
+      "Riel DIN normalizado"
+    ]
+  ],
+  "confianza": [
+    {
+      "titulo": "⚡ Protección térmica",
+      "detalle": "Corta ante sobrecargas continuas"
+    },
+    {
+      "titulo": "💥 Protección magnética",
+      "detalle": "Corte instantáneo ante cortocircuito"
+    },
+    {
+      "titulo": "🚚 Envíos a todo Chile",
+      "detalle": "Despacho rápido a domicilio"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Ferretería Ukra"
+    }
+  ],
+  "secciones": [
+    {
+      "id": "proteccion-termomagnetica",
+      "titulo": "Protección de circuitos eléctricos",
+      "indice": "Función termomagnética",
+      "bloques": [
+        {
+          "p": "El automático combina un mecanismo bimetálico para desconectar sobrecargas prolongadas y una bobina magnética para corte ultra rápido ante cortocircuitos directos."
+        },
+        {
+          "lista": [
+            "Capacidad de corte calibrada para 25 A de consumo.",
+            "Montaje estandarizado sobre riel DIN de 35 mm.",
+            "Mantiene protegidos los conductores dentro de la pared."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dimensionamiento-y-seguridad",
+      "titulo": "Uso seguro y dimensionamiento de cables",
+      "indice": "Dimensionamiento y SEC",
+      "bloques": [
+        {
+          "p": "El amperaje del automático debe coincidir con la sección del cable del circuito (por ejemplo, 10 A para cables de 1,5 mm² en alumbrado o 16 A para 2,5 mm² en enchufes). Nunca instales un automático de mayor capacidad sin cambiar los cables."
+        },
+        {
+          "advertencia": "La instalación y modificación de tableros eléctricos debe ser realizada por un instalador autorizado por la SEC con la alimentación general cortada."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Por qué salta un interruptor automático?",
+      "respuesta": "Salta cuando la corriente supera su capacidad nominal por exceso de aparatos encendidos a la vez (sobrecarga) o cuando se tocan dos cables directamente (cortocircuito)."
+    },
+    {
+      "pregunta": "¿Puedo cambiar un automático de 10 A por uno de 16 A o 20 A?",
+      "respuesta": "No sin antes verificar que los cables del circuito soporten esa corriente. Colocar un automático sobredimensionado anula la protección y puede provocar fuego en los conductores."
+    },
+    {
+      "pregunta": "¿Sirve para cualquier tablero domiciliario?",
+      "respuesta": "Sí, utiliza el riel DIN normalizado de 35 mm estándar en todos los tableros domiciliarios e industriales de Chile."
+    }
+  ],
+  "lateral": {
+    "etiqueta": "Tablero eléctrico",
+    "titulo": "Automático 25 A Bticino",
+    "texto": "Disyuntor termomagnético 25 A Bticino para riel DIN. Protege tu circuito de sobrecargas y cortocircuitos. Garantía de 6 meses."
+  },
+  "tarjeta": {
+    "titulo": "Interruptor Automático 25 A Bticino",
+    "extracto": "Protege los circuitos eléctricos contra sobrecargas y cortocircuitos. Montaje en riel DIN para tableros domiciliarios.",
+    "alt": "Interruptor automático disyuntor 25 A Bticino",
+    "etiqueta": "Protección eléctrica"
+  },
+  "guias": [
+    {
+      "url": "/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/",
+      "texto": "Cómo armar un tablero eléctrico"
+    },
+    {
+      "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
+      "texto": "Cómo identificar fase y neutro"
+    }
+  ]
+}
