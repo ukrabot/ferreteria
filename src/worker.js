@@ -3171,6 +3171,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110265693',
   },
+  {
+    slug: 'interruptor-conmutador-9-24-10-a-nobile-terra-bticino',
+    name: 'Interruptor conmutador 9/24 10 A Nobile Terra Bticino',
+    price: 6990,
+    image: '/producto/interruptor-conmutador-9-24-10-a-nobile-terra-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110217224',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
