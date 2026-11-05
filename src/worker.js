@@ -4903,6 +4903,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '9081356',
   },
+  {
+    slug: 'mango-ducha-abs-1-funcin-d6-2cm',
+    name: 'Mango Ducha Abs 1 Función D6 2cm Cromado KARSON',
+    price: 5990,
+    image: '/producto/mango-ducha-abs-1-funcin-d6-2cm.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: '9081380',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
