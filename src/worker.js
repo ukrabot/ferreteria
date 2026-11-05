@@ -238,6 +238,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Vidrios Inteligentes',
     filename: 'Pack-Vidrios-Inteligentes-Ferreteria-Ukra.zip',
   },
+  'pack-piso-flotante-materiales-instalacion-excel': {
+    name: 'Pack Piso Flotante',
+    filename: 'Pack-Piso-Flotante-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1866,6 +1870,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-VIDRIOS-INT',
+  },
+  {
+    slug: 'pack-piso-flotante-materiales-instalacion-excel',
+    name: 'Pack Piso Flotante: Planilla Excel de Materiales por Recinto, Distribución de Tablas, Presupuesto y Cotizaciones + Guía Rápida de Instalación + Checklist de Obra',
+    price: 7990,
+    image: '/producto/pack-piso-flotante-materiales-instalacion-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-PISO-FLOT',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
