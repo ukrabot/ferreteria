@@ -3270,6 +3270,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '130442052',
   },
+  {
+    slug: 'automatico-2p-c25a-230-400v-6000a-bticino',
+    name: 'Automatico 2P C25A 230/400V 6000A Bticino',
+    price: 11990,
+    image: '/producto/automatico-2p-c25a-230-400v-6000a-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '117082607',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
