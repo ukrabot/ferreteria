@@ -3027,6 +3027,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '116407740',
   },
+  {
+    slug: 'modulo-de-luz-piloto-lexo',
+    name: 'Modulo De Luz Piloto Lexo',
+    price: 4990,
+    image: '/producto/modulo-de-luz-piloto-lexo.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '117082453',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
