@@ -3567,6 +3567,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110217198',
   },
+  {
+    slug: 'interruptor-automatico-1x30a-saime',
+    name: 'Interruptor Automatico 1x30A Saime',
+    price: 13990,
+    image: '/producto/interruptor-automatico-1x30a-saime.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110216824',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
