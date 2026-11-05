@@ -2973,6 +2973,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110218255',
   },
+  {
+    slug: 'interruptor-simple-9-12-16-a-genesis-blanco-schneider',
+    name: 'Interruptor simple 9/12 16 A Genesis Blanco Schneider',
+    price: 2990,
+    image: '/producto/interruptor-simple-9-12-16-a-genesis-blanco-schneider.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110239244',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
