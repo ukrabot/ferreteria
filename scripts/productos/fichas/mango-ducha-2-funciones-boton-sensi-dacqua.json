@@ -1,0 +1,164 @@
+{
+  "slug": "mango-ducha-2-funciones-boton-sensi-dacqua",
+  "nombre": "Mango de ducha 2 funciones con botón cromado Sensi Dacqua",
+  "titulo_h1": "Mango de Ducha 2 Funciones con Botón Sensi Dacqua",
+  "titulo_corto": "Mango Ducha 2 Funciones Sensi Dacqua",
+  "marca": "Sensi Dacqua",
+  "sku": "3221601",
+  "precio_referencia": 15990,
+  "margen": 50,
+  "categoria": "gasfiteria",
+  "subcategoria": "Mangos de ducha",
+  "color": "Cromado",
+  "disponible": true,
+  "seo_titulo": "Mango de Ducha 2 Funciones con Botón Sensi Dacqua",
+  "meta_descripcion": "Compra el mango de ducha Sensi Dacqua de 2 funciones con botón a {precio}. Cabezal redondo de ABS cromado brillante. Envíos a todo Chile.",
+  "og_descripcion": "Mango de ducha Sensi Dacqua con botón para cambiar entre 2 funciones de chorro.",
+  "descripcion": "Mango de ducha teléfono Sensi Dacqua modelo FS21038C, de ABS cromado brillante, con cabezal redondo y 2 funciones que se cambian con un botón. Anticalcáreo según su nombre de fábrica.",
+  "lede": "¿Quieres cambiar el tipo de chorro sin girar el cabezal? Este **mango Sensi Dacqua de 2 funciones** tiene un **botón en el cabezal** para pasar de un chorro a otro.",
+  "fotos": [
+    {
+      "url": "https://media.sodimac.cl/sodimacCL/3221601_01/public",
+      "alt": "Mango de ducha Sensi Dacqua de 2 funciones visto de frente",
+      "miniatura": "Ver de frente"
+    },
+    {
+      "url": "https://media.sodimac.cl/sodimacCL/3221601_21/public",
+      "alt": "Cabezal redondo con el botón para cambiar de función",
+      "miniatura": "Ver botón"
+    },
+    {
+      "url": "https://media.sodimac.cl/sodimacCL/3221601_22/public",
+      "alt": "Parte inferior del mango con la rosca de conexión",
+      "miniatura": "Ver rosca"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    [
+      "Marca",
+      "Sensi Dacqua"
+    ],
+    [
+      "Modelo",
+      "FS21038C"
+    ],
+    [
+      "Tipo",
+      "Mango de ducha teléfono"
+    ],
+    [
+      "Funciones",
+      "2, con botón"
+    ],
+    [
+      "Material",
+      "ABS"
+    ],
+    [
+      "Acabado",
+      "Cromado brillante"
+    ],
+    [
+      "Forma del cabezal",
+      "Redonda"
+    ],
+    [
+      "Incluye",
+      "Solo el mango"
+    ]
+  ],
+  "confianza": [
+    {
+      "titulo": "🔘 Botón",
+      "detalle": "Cambia entre 2 funciones"
+    },
+    {
+      "titulo": "⭕ Cabezal redondo",
+      "detalle": "Acabado cromado"
+    },
+    {
+      "titulo": "🔩 Se enrosca a mano",
+      "detalle": "En el extremo del flexible"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Garantía de nuestra tienda"
+    }
+  ],
+  "secciones": [
+    {
+      "id": "como-es",
+      "titulo": "¿Cómo funciona el botón?",
+      "indice": "Cómo es",
+      "bloques": [
+        {
+          "p": "El cabezal redondo tiene un **botón** que cambia entre las **2 funciones** de chorro: lo presionas con el pulgar mientras sostienes el mango, sin tener que girar nada."
+        },
+        {
+          "p": "El cuerpo es de **ABS con acabado cromado brillante**."
+        },
+        {
+          "lista": [
+            "Qué incluye: el mango de ducha",
+            "Qué se compra aparte: el flexible de ducha y el soporte de pared"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "instalacion",
+      "titulo": "Cómo cambiar el mango de la ducha",
+      "indice": "Instalación",
+      "bloques": [
+        {
+          "pasos": [
+            "Cierra la llave de la ducha y saca el mango antiguo girándolo a mano en sentido contrario a los punteros del reloj.",
+            "Revisa que la goma de sellado esté dentro de la tuerca del flexible; si está dura o rota, cámbiala.",
+            "Enrosca el mango nuevo a mano hasta que quede firme. No uses llaves ni alicates sobre el acabado.",
+            "Abre el agua y revisa que no gotee por la unión. Si gotea, aprieta un poco más a mano o revisa la goma."
+          ]
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Sirve para mi flexible de ducha?",
+      "respuesta": "Se enrosca en el extremo del flexible de ducha. La rosca más común en Chile es de 1/2 pulgada; revisa que tu flexible tenga la misma antes de comprar."
+    },
+    {
+      "pregunta": "¿Qué incluye?",
+      "respuesta": "Incluye solo el mango de ducha. El flexible y el soporte de pared se compran por separado si los necesitas cambiar."
+    },
+    {
+      "pregunta": "¿Qué hago si el botón se pone duro?",
+      "respuesta": "Suele ser sarro. Limpia el cabezal con agua y vinagre, enjuágalo y presiona el botón varias veces con el agua corriendo."
+    }
+  ],
+  "aviso_final": "Los precios incluyen IVA. Cierra el agua antes de cambiar el mango y no uses herramientas sobre el acabado.",
+  "lateral": {
+    "etiqueta": "Con botón",
+    "titulo": "Mango 2 funciones Sensi Dacqua",
+    "texto": "Cabezal redondo con botón para cambiar entre 2 funciones de chorro."
+  },
+  "relacionados": [
+    "flexible-ducha-metal-1-5-m-sensi-dacqua",
+    "flexible-ducha-extensible-1-75-m-stretto"
+  ],
+  "guias": [
+    {
+      "url": "/blog/remodelacion-bano-completa-costos-materiales-paso-a-paso-chile/",
+      "texto": "Remodelación de baño: costos y materiales"
+    }
+  ],
+  "tarjeta": {
+    "titulo": "Mango de Ducha 2 Funciones con Botón Sensi Dacqua",
+    "extracto": "Cabezal redondo con botón para 2 funciones de chorro, ABS cromado.",
+    "alt": "Mango de ducha Sensi Dacqua de 2 funciones de frente",
+    "etiqueta": "Gasfitería"
+  }
+}

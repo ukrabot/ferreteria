@@ -26,7 +26,9 @@ actualizar fichas de productos físicos con el generador**. Nada más.
   El generador escribe lo necesario.
 - Editar `scripts/productos/generar.py` o `plantilla.html`. Si el generador
   rechaza la ficha, corrige el JSON según el mensaje.
-- Hacer push a `main` o hacer merge. Solo el dueño publica.
+- Hacer push a `main` o hacer merge, ni aprobar o unir tu propio pull request
+  (tampoco con `gh pr merge` ni con la API). Abre el pull request y detente:
+  solo el dueño lo revisa y lo une.
 - Leer, copiar o mostrar contraseñas o llaves (por ejemplo, las de
   `wrangler.jsonc`).
 - Cambiar precios de productos ya publicados: eso se hace en `/admin/`.
@@ -85,6 +87,15 @@ actualizar fichas de productos físicos con el generador**. Nada más.
   instalador de gas autorizado por la SEC: no escribas pasos para que el
   cliente la haga solo; explica qué revisar.
 - Relaciona el producto con fichas y guías existentes cuando aporten.
+- **Grifería y duchas (manerales, mangos, flexibles de ducha)**: mira las fotos
+  para saber qué trae la caja. Si una foto muestra soporte, flexible o barra que
+  no vienen incluidos, no la publiques y di en el texto qué se compra aparte. Un
+  mango de mano no es «ducha de pared». No digas «puedes ajustar el chorro» en
+  un mango de 1 función, ni «resistente a la corrosión» o «rosca estándar en la
+  mayoría» sin dato del fabricante; la rosca es 1/2" solo si la ficha lo dice.
+  No publiques fotos de ambiente (baño, persona duchándose), del blíster, con
+  sellos SISS/CESMEC ni campañas de otras tiendas («Cuidemos la Casa de
+  Todos»).
 
 - **Una ficha pensada para cada producto**: no uses una plantilla con el mismo
   texto para todos. Cada ficha explica para qué sirve ESE producto, cómo se usa
@@ -96,6 +107,17 @@ actualizar fichas de productos físicos con el generador**. Nada más.
   al cliente ni las que vienen cortadas con «...» («Cantidad de paquetes»,
   «Tipo de divisor», «Plazo de disponibilidad de repuestos», «Alimentación»).
   El generador las rechaza.
+- **Nombre, slug y ortografía** (el generador los revisa en las fichas nuevas):
+  - El slug sale del nombre **sin perder letras**: «función» → `funcion`, no
+    `funcin`; «botón» → `boton`, no `botn`; «anticalcáreo» → `anticalcareo`.
+  - El nombre lleva **un solo color**, el que muestra la foto (no «Negro
+    Cromado» ni «cromo Cromado»). No pongas «ABS» o «Bot» sueltos: escribe el
+    tipo real («botón», «cuadrado», «slim»).
+  - Todo el texto va **con tildes y ñ** (instalación, función, baño, fácil,
+    según, también, diseño, cómoda, práctico, periódicamente).
+  - Cada foto tiene un `alt` distinto que dice lo que se ve en ella (cara
+    frontal, rosca, botón, perfil). Nada de «vista adicional», «otra vista del
+    producto» ni «Vista 4».
 - **Sin límite por tanda**: puedes publicar **todos los productos que quieras
   en un mismo pull request**. Cada uno debe pasar `--verificar <slug>` con ✔
   antes de abrirlo, y en la descripción del pull request lista cada producto

@@ -31,6 +31,7 @@ import datetime as _dt
 import html
 import json
 import re
+import unicodedata
 import shutil
 import subprocess
 import sys
@@ -161,6 +162,67 @@ def precio_con_margen(f: dict) -> int:
         raise FichaError("margen: porcentaje de ganancia entre 0 y 300 (ej. 40)")
     bruto = ref * (1 + mg / 100)
     return max(990, math.ceil((bruto - 990) / 1000) * 1000 + 990)
+
+
+# Palabras que en una ficha siempre llevan tilde. Sin tilde delatan un texto
+# copiado de una plantilla o pasado por un traductor.
+SIN_TILDE = ("instalacion", "funcion", "conexion", "bano", "banos", "danar", "comoda",
+             "comodo", "rapida", "rapido", "facil", "facilmente", "segun", "tambien", "diseno", "practico",
+             "practica", "periodicamente", "electrico", "electrica", "electricos", "electricas", "tecnica",
+             "tecnico", "valvula", "metalico", "metalica", "plastico", "plastica", "despues", "ademas", "util",
+             "maximo", "maxima", "minimo", "minima", "presion", "proteccion", "ultimo", "ultima", "caracteristicas",
+             "tension", "codigo", "limpialo", "girala")
+COLORES = ("negro", "negra", "blanco", "blanca", "cromado", "cromada", "gris", "rojo", "roja", "azul", "verde",
+           "dorado", "dorada", "plateado", "plateada", "amarillo", "amarilla", "beige", "cobre", "bronce")
+ALT_GENERICO = re.compile(r"vista adicional|otra vista del producto|^vista \d|detalle t[eé]cnico \d|^foto \d|imagen \d", re.I)
+NO_TEXTO = {"slug", "sku", "categoria", "url", "archivo", "id", "stock", "relacionados", "_ruta"}
+
+
+def _sin_acentos(t: str) -> str:
+    return "".join(c for c in unicodedata.normalize("NFD", t.lower()) if unicodedata.category(c) != "Mn")
+
+
+def _textos(v, k=""):
+    if k in NO_TEXTO:
+        return
+    if isinstance(v, str):
+        yield k, re.sub(r"\]\([^)]*\)", "]", v)
+    elif isinstance(v, dict):
+        for kk, vv in v.items():
+            yield from _textos(vv, kk)
+    elif isinstance(v, list):
+        for vv in v:
+            yield from _textos(vv, k)
+
+
+def revisar_redaccion(f: dict, nueva: bool) -> None:
+    """Errores típicos de una ficha armada a la rápida. El color se revisa en todas;
+    el slug, las tildes y los alt, en las fichas nuevas (las ya publicadas no cambian de URL)."""
+    colores = {c.rstrip("ao") for c in COLORES if re.search(rf"\b{c}\b", _sin_acentos(f["nombre"]))}
+    if len(colores) > 1:
+        raise FichaError(f"nombre: tiene dos colores («{f['nombre']}»). Deja solo el color que muestra la foto")
+    if not nueva:
+        return
+    nombre = _sin_acentos(f["nombre"] + " " + f["titulo_h1"] + " " + f["marca"])
+    palabras = set(re.findall(r"[a-z0-9]+", nombre))
+    # «mango-ducha-1-funcin» viene de «Función» con la ó perdida al armar el slug
+    for t in f["slug"].split("-"):
+        if t in palabras or not t.isalpha() or len(t) < 3:
+            continue
+        for w in palabras:
+            if len(w) == len(t) + 1 and any(w[:j] + w[j + 1:] == t for j in range(len(w))):
+                raise FichaError(f"slug: «{t}» perdió una letra (en el nombre dice «{w}»). Arma el slug sin perder letras: «{w}»")
+    malas = set()
+    for k, t in _textos(f):
+        malas |= {m.group(0) for m in re.finditer(r"\b(" + "|".join(SIN_TILDE) + r")\b", t.lower())}
+    if malas:
+        raise FichaError("texto sin tildes: " + ", ".join(sorted(malas)) + ". Escribe en español con tildes y ñ (instalación, función, baño)")
+    alts = [ft["alt"].strip().lower() for ft in f["fotos"]]
+    if len(set(alts)) < len(alts):
+        raise FichaError("fotos: hay dos fotos con el mismo alt. Cada alt describe lo que muestra esa foto")
+    for i, a in enumerate(alts, 1):
+        if ALT_GENERICO.search(a):
+            raise FichaError(f"fotos[{i}].alt: «{a}» es genérico. Describe lo que se ve en esa foto (cara frontal, rosca, botón, etiqueta)")
 
 
 def cargar_ficha(path: Path, actualizar: bool) -> dict:
@@ -298,6 +360,7 @@ def cargar_ficha(path: Path, actualizar: bool) -> dict:
     for k in ("microcopy", "aviso_final"):
         if f.get(k):
             texto(f[k], k, 10, 300)
+    revisar_redaccion(f, nueva=not actualizar)
     st = f.get("stock") or {}
     texto(st.get("titulo", "En stock"), "stock.titulo", 3, 30); texto(st.get("detalle", "Despacho en 24-48 h hábiles"), "stock.detalle", 5, 60)
     # SKU único en el servidor
