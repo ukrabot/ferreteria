@@ -4858,6 +4858,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '9081224',
   },
+  {
+    slug: 'mango-ducha-slim-abs-1-funcin-negro',
+    name: 'Mango Ducha Slim Abs 1 función Negro Cromado SENSI DACQUA',
+    price: 10990,
+    image: '/producto/mango-ducha-slim-abs-1-funcin-negro.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: '908133X',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
