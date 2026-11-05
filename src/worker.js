@@ -3441,6 +3441,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110251812',
   },
+  {
+    slug: 'interruptor-automatico-termomagnetico-40a-easy9-schneider',
+    name: 'Interruptor automático termomagnético 40A.. Easy9 Schneider',
+    price: 4990,
+    image: '/producto/interruptor-automatico-termomagnetico-40a-easy9-schneider.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110222605',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
