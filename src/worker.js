@@ -198,6 +198,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Aumento de Potencia',
     filename: 'Pack-Aumento-de-Potencia-Ferreteria-Ukra.zip',
   },
+  'pack-mascara-de-soldar-din-comparador-checklist-excel': {
+    name: 'Pack Máscara de Soldar',
+    filename: 'Pack-Mascara-de-Soldar-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1736,6 +1740,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-EMPALME',
+  },
+  {
+    slug: 'pack-mascara-de-soldar-din-comparador-checklist-excel',
+    name: 'Pack Máscara de Soldar: Planilla Excel de DIN por Proceso y Amperaje, Comparador de Caretas, Costo de Uso y Checklist + Guía para Elegir + Checklist Diario',
+    price: 7990,
+    image: '/producto/pack-mascara-de-soldar-din-comparador-checklist-excel.webp',
+    category: 'Herramientas',
+    status: 'available',
+    sku: 'PACK-CARETA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
