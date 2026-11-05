@@ -3765,6 +3765,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110252103',
   },
+  {
+    slug: 'interruptor-diferencial-25-a-bticino',
+    name: 'Interruptor diferencial 25 A Bticino',
+    price: 29990,
+    image: '/producto/interruptor-diferencial-25-a-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110271110',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
