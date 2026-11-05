@@ -4867,6 +4867,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '908133X',
   },
+  {
+    slug: 'mango-ducha-2-funciones-con-botn-anticalcreo',
+    name: 'Mango ducha 2 funciones con botón anticalcáreo Cromado SENSI DACQUA',
+    price: 23990,
+    image: '/producto/mango-ducha-2-funciones-con-botn-anticalcreo.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: '3221601',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
