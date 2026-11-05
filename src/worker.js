@@ -3711,6 +3711,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '139923735',
   },
+  {
+    slug: 'interruptor-doble-9-15-10-a-modus-plus-blanco-bticino',
+    name: 'Interruptor doble 9/15 10 A Modus Plus Blanco Bticino',
+    price: 6990,
+    image: '/producto/interruptor-doble-9-15-10-a-modus-plus-blanco-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110222638',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
