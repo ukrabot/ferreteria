@@ -3459,6 +3459,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110249885',
   },
+  {
+    slug: 'dimmer-nobile-terra-bticino',
+    name: 'Dimmer Nobile Terra Bticino',
+    price: 55990,
+    image: '/producto/dimmer-nobile-terra-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110217616',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
