@@ -4795,6 +4795,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '7326556',
   },
+  {
+    slug: 'maneral-de-ducha-stella-duo-de-6-funciones',
+    name: 'Maneral de Ducha Stella Duo de 6 funciones Cromado STRETTO',
+    price: 29990,
+    image: '/producto/maneral-de-ducha-stella-duo-de-6-funciones.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: '7646224',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
