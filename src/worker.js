@@ -226,6 +226,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Chalecos Reflectantes',
     filename: 'Pack-Chalecos-Reflectantes-Ferreteria-Ukra.zip',
   },
+  'pack-construir-piscina-presupuesto-cotizaciones-excel': {
+    name: 'Pack Construir una Piscina',
+    filename: 'Pack-Construir-Piscina-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1827,6 +1831,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-CHALECOS',
+  },
+  {
+    slug: 'pack-construir-piscina-presupuesto-cotizaciones-excel',
+    name: 'Pack Construir una Piscina: Planilla Excel de Medidas y Excavación, Presupuesto Completo, Comparación de Cotizaciones y Costo de Operación + Guía Antes de Construir + Checklist',
+    price: 7990,
+    image: '/producto/pack-construir-piscina-presupuesto-cotizaciones-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-PISCINA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
