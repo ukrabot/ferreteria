@@ -3040,15 +3040,6 @@ const SEED_PRODUCTS = [
     sku: '110216460',
   },
   {
-    slug: 'interruptor-conmutador-9-24-16-a-luzica-blanco-bticino',
-    name: 'Interruptor conmutador 9/24 16 A Luzica Blanco Bticino',
-    price: 5990,
-    image: '/producto/interruptor-conmutador-9-24-16-a-luzica-blanco-bticino.webp',
-    category: 'Material Eléctrico',
-    status: 'available',
-    sku: '110241293',
-  },
-  {
     slug: 'interruptor-doble-9-15-10-a-luzica-blanco-bticino',
     name: 'Interruptor doble 9/15 10 A Luzica Blanco Bticino',
     price: 4990,
@@ -3445,15 +3436,6 @@ const SEED_PRODUCTS = [
     sku: '116276452',
   },
   {
-    slug: 'interruptor-automatico-6-a-curva-c-6ka-bticino',
-    name: 'Interruptor automático 6 A curva C 6KA Bticino',
-    price: 6990,
-    image: '/producto/interruptor-automatico-6-a-curva-c-6ka-bticino.webp',
-    category: 'Material Eléctrico',
-    status: 'available',
-    sku: '110263799',
-  },
-  {
     slug: 'interruptor-automatico-lexo-1x32a-lexo',
     name: 'Interruptor automático Lexo 1x32A',
     price: 3990,
@@ -3652,15 +3634,6 @@ const SEED_PRODUCTS = [
     sku: '110245858',
   },
   {
-    slug: 'interruptor-triple-9-32-s17-sinthesi-blanco-sinthesi',
-    name: 'Interruptor triple 9/32 s17 Sinthesi Blanco',
-    price: 6990,
-    image: '/producto/interruptor-triple-9-32-s17-sinthesi-blanco-sinthesi.webp',
-    category: 'Material Eléctrico',
-    status: 'available',
-    sku: '139923500',
-  },
-  {
     slug: 'interruptor-automatico-10-a-curva-c-6ka-bticino',
     name: 'Interruptor automático 10 A curva C 6KA Bticino',
     price: 6990,
@@ -3670,15 +3643,6 @@ const SEED_PRODUCTS = [
     sku: '110222928',
   },
   {
-    slug: 'interruptor-simple-9-12-16-a-blanco-schneider',
-    name: 'Interruptor simple 9/12 16 A blanco Schneider',
-    price: 4990,
-    image: '/producto/interruptor-simple-9-12-16-a-blanco-schneider.webp',
-    category: 'Material Eléctrico',
-    status: 'available',
-    sku: '110272389',
-  },
-  {
     slug: 'interruptor-automatico-32a-easy9-schneider',
     name: 'Interruptor automático 32A Easy9 Schneider',
     price: 4990,
@@ -3686,15 +3650,6 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: '110265378',
-  },
-  {
-    slug: 'interruptor-automatico-40-a-curva-c-6ka-legrand',
-    name: 'interruptor automático 40 A curva C 6KA Legrand',
-    price: 10990,
-    image: '/producto/interruptor-automatico-40-a-curva-c-6ka-legrand.webp',
-    category: 'Material Eléctrico',
-    status: 'available',
-    sku: '110252475',
   },
   {
     slug: 'interruptor-automatico-15-a-saime',
@@ -4114,6 +4069,15 @@ async function handleAdminSettings(request, env) {
   return json(await getAdminSettings(env));
 }
 
+// Productos retirados del catálogo: se borran también de la base de datos.
+const RETIRED_PRODUCTS = [
+  'interruptor-automatico-40-a-curva-c-6ka-legrand',
+  'interruptor-automatico-6-a-curva-c-6ka-bticino',
+  'interruptor-triple-9-32-s17-sinthesi-blanco-sinthesi',
+  'interruptor-simple-9-12-16-a-blanco-schneider',
+  'interruptor-conmutador-9-24-16-a-luzica-blanco-bticino',
+];
+
 async function ensureSchema(env) {
   // Add sku column if missing. Separate from the batch because it fails
   // (harmlessly) once the column exists, and a failed batch rolls back.
@@ -4132,6 +4096,9 @@ async function ensureSchema(env) {
     stmts.push(env.DB.prepare(
       `UPDATE products SET sku = ? WHERE slug = ? AND (sku IS NULL OR sku = '')`
     ).bind(p.sku, p.slug));
+  }
+  for (const slug of RETIRED_PRODUCTS) {
+    stmts.push(env.DB.prepare('DELETE FROM products WHERE slug = ?').bind(slug));
   }
   await env.DB.batch(stmts);
 }
