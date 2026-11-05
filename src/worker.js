@@ -3036,6 +3036,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '117082453',
   },
+  {
+    slug: 'interruptor-automatico-16-a-lexo',
+    name: 'Interruptor automático 16 A Lexo',
+    price: 3990,
+    image: '/producto/interruptor-automatico-16-a-lexo.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110216764',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
