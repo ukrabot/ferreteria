@@ -3774,6 +3774,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110271110',
   },
+  {
+    slug: 'interruptor-triple-9-32-10-a-modus-plus-blanco-bticino',
+    name: 'Interruptor triple 9/32 10 A Modus Plus Blanco Bticino',
+    price: 11990,
+    image: '/producto/interruptor-triple-9-32-10-a-modus-plus-blanco-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110252759',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
