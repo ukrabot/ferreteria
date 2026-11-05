@@ -1,0 +1,150 @@
+{
+  "slug": "interruptor-diferencial-25-a-lexo",
+  "marca": "Lexo",
+  "sku": "110222191",
+  "precio_referencia": 9790,
+  "margen": 50,
+  "categoria": "electricidad",
+  "nombre": "Interruptor diferencial 25 A 2 polos Lexo",
+  "titulo_h1": "Interruptor diferencial 25 A 2 polos Lexo",
+  "titulo_corto": "Interruptor diferencial 25 A Lexo",
+  "subcategoria": "Interruptores y diferenciales",
+  "disponible": true,
+  "seo_titulo": "Interruptor Diferencial 25 A Lexo 2 Polos",
+  "meta_descripcion": "Compra interruptor diferencial 25 A Lexo a {precio}. Protección contra fugas a tierra para tableros eléctricos residenciales. Envíos a todo Chile.",
+  "og_descripcion": "Interruptor diferencial 25 A de 2 polos Lexo. Protege a las personas contra fugas de corriente en tableros eléctricos.",
+  "descripcion": "Interruptor diferencial bipolar de 25 A marca Lexo para montaje en riel DIN de tableros eléctricos residenciales o comerciales. Diseñado para detectar fugas de corriente y proteger la seguridad de las personas. Tensión nominal de 220/400 V CA, 2 polos. Garantía de 6 meses.",
+  "lede": "Este **interruptor diferencial de 25 A y 2 polos Lexo** protege a las personas ante fugas de corriente y contactos accidentales en la instalación eléctrica, desconectando el circuito de forma inmediata para evitar descargas peligrosas.",
+  "fotos": [
+    {
+      "url": "https://media.falabella.com/sodimacCL/269220_01/w=1200,h=1200,fit=cover",
+      "alt": "Interruptor diferencial bipolar 25 A Lexo visto de frente con botón de prueba",
+      "miniatura": "Ver de frente"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/269220_12/w=1200,h=1200,fit=cover",
+      "alt": "Interruptor diferencial 25 A Lexo en perspectiva lateral mostrando bornes",
+      "miniatura": "Ver lateral"
+    },
+    {
+      "url": "https://media.falabella.com/sodimacCL/269220_21/w=1200,h=1200,fit=cover",
+      "alt": "Vista posterior del interruptor diferencial Lexo con enganche para riel DIN",
+      "miniatura": "Ver riel DIN"
+    }
+  ],
+  "stock": {
+    "titulo": "En stock",
+    "detalle": "Despacho en 24-48 h hábiles"
+  },
+  "especificaciones": [
+    [
+      "Marca",
+      "Lexo"
+    ],
+    [
+      "Tipo de producto",
+      "Interruptor diferencial"
+    ],
+    [
+      "Amperaje nominal",
+      "25 A"
+    ],
+    [
+      "Cantidad de polos",
+      "2 polos"
+    ],
+    [
+      "Voltaje de operación",
+      "220-400 V CA"
+    ],
+    [
+      "Montaje",
+      "Riel DIN"
+    ]
+  ],
+  "confianza": [
+    {
+      "titulo": "🛡️ Protección activa",
+      "detalle": "Corta ante fugas de corriente"
+    },
+    {
+      "titulo": "⚡ 25 A · 2 polos",
+      "detalle": "Para tableros monofásicos"
+    },
+    {
+      "titulo": "🚚 Envíos a todo Chile",
+      "detalle": "Despacho rápido a domicilio"
+    },
+    {
+      "titulo": "🛡️ Garantía 6 meses",
+      "detalle": "Ferretería Ukra"
+    }
+  ],
+  "secciones": [
+    {
+      "id": "para-que-sirve",
+      "titulo": "¿Por qué es obligatorio un interruptor diferencial?",
+      "indice": "Función y seguridad",
+      "bloques": [
+        {
+          "p": "El interruptor diferencial mide continuamente que la corriente que entra por la fase sea exactamente igual a la que regresa por el neutro. Si detecta una diferencia por fuga a tierra o contacto accidental, corta el paso en milisegundos."
+        },
+        {
+          "lista": [
+            "Protege directamente la vida de las personas contra electrocución.",
+            "Detecta fallas de aislamiento en artefactos y electrodomésticos.",
+            "Obligatorio según la normativa eléctrica chilena en circuitos domiciliarios."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "instalacion-y-seguridad",
+      "titulo": "Instalación segura en tablero eléctrico",
+      "indice": "Seguridad e instalación",
+      "bloques": [
+        {
+          "p": "Se monta directamente sobre riel DIN normalizado en el tablero de distribución general o secundario. Debe instalarse aguas abajo del disyuntor general y aguas arriba de los circuitos terminales."
+        },
+        {
+          "advertencia": "Todo trabajo en el tablero eléctrico debe realizarse con la energía cortada desde el empalme y por un instalador eléctrico autorizado por la SEC."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Cuál es la diferencia entre un automático y un diferencial?",
+      "respuesta": "El automático (disyuntor) protege los cables y la instalación contra sobrecargas y cortocircuitos. El diferencial protege la vida de las personas desconectando el circuito ante fugas de corriente a tierra."
+    },
+    {
+      "pregunta": "¿Cómo se prueba que el diferencial funcione correctamente?",
+      "respuesta": "Presionando el botón Test (T) ubicado en el frontal. Al apretarlo debe cortar inmediatamente el suministro; se recomienda probarlo una vez al mes."
+    },
+    {
+      "pregunta": "¿Hacen envíos a todo Chile?",
+      "respuesta": "Sí, despachamos a todas las regiones de Chile con entrega rápida a domicilio o retiro coordinado."
+    }
+  ],
+  "lateral": {
+    "etiqueta": "Protección eléctrica",
+    "titulo": "Interruptor diferencial 25 A Lexo",
+    "texto": "Protección esencial contra fugas de corriente para tableros domiciliarios. Montaje en riel DIN, 25 A, garantía de 6 meses."
+  },
+  "tarjeta": {
+    "titulo": "Interruptor Diferencial 25 A 2 Polos Lexo",
+    "extracto": "Protege a las personas contra contactos accidentales y fugas de corriente en tableros eléctricos. Montaje en riel DIN.",
+    "alt": "Interruptor diferencial bipolar 25 A Lexo para tablero eléctrico",
+    "etiqueta": "Material eléctrico"
+  },
+  "guias": [
+    {
+      "url": "/blog/como-armar-un-tablero-electrico-domiciliario-chile-guia-sec/",
+      "texto": "Cómo armar un tablero eléctrico"
+    },
+    {
+      "url": "/blog/como-identificar-fase-y-neutro-en-un-enchufe-guia-practica/",
+      "texto": "Cómo identificar fase y neutro"
+    }
+  ]
+}

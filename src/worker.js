@@ -2955,6 +2955,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110023940',
   },
+  {
+    slug: 'interruptor-diferencial-25-a-lexo',
+    name: 'Interruptor diferencial 25 A 2 polos Lexo',
+    price: 14990,
+    image: '/producto/interruptor-diferencial-25-a-lexo.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110222191',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
