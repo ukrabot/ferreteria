@@ -3639,6 +3639,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110272389',
   },
+  {
+    slug: 'interruptor-automatico-32a-easy9-schneider',
+    name: 'Interruptor automático 32A Easy9 Schneider',
+    price: 4990,
+    image: '/producto/interruptor-automatico-32a-easy9-schneider.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110265378',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
