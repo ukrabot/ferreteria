@@ -4876,6 +4876,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '3221601',
   },
+  {
+    slug: 'mango-ducha-abs-5-funciones-12-cm-negro',
+    name: 'Mango Ducha Abs 5 Funciones 12 cm Negro Cromado SENSI DACQUA',
+    price: 19990,
+    image: '/producto/mango-ducha-abs-5-funciones-12-cm-negro.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: '9081321',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
