@@ -3108,6 +3108,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110273712',
   },
+  {
+    slug: 'interruptor-automatico-16-a-easy9-schneider',
+    name: 'Interruptor automático 16 A Easy9 Schneider',
+    price: 4990,
+    image: '/producto/interruptor-automatico-16-a-easy9-schneider.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110263816',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
