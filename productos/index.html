@@ -406,6 +406,14 @@ nav a:hover,nav a.active{color:#FFF;text-decoration:none;border-bottom-color:var
 
 /* Product Grid */
 .prod-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem}
+.pager{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.4rem;margin:2rem 0 .5rem}
+.pager a,.pager span.dots{min-width:40px;height:40px;padding:0 .7rem;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--border-color);border-radius:10px;background:var(--bg-card);color:var(--text-main);font-weight:700;font-size:.9rem;text-decoration:none}
+.pager a:hover{border-color:var(--primary);color:var(--primary)}
+.pager a.current{background:var(--primary);border-color:var(--primary);color:#FFF;pointer-events:none}
+.pager a.disabled{opacity:.4;pointer-events:none}
+.pager span.dots{border:none;background:none;min-width:20px;padding:0}
+@media(max-width:480px){.pager{gap:.3rem}.pager a{min-width:36px;padding:0 .55rem}.pager .lbl{display:none}}
+.pager-info{text-align:center;color:var(--text-muted);font-size:.85rem;margin-bottom:1rem}
 .card-prod{background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
 .card-prod:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
 .card-prod-media{background:#FFF;border-bottom:1px solid var(--border-color);aspect-ratio:1/1;display:block}
@@ -5110,6 +5118,9 @@ footer{background:#0F172A;color:#94A3B8;padding:3rem 0 1.5rem;margin-top:4rem;bo
 
   </div>
 
+  <nav class="pager" id="pager" aria-label="Páginas del catálogo"></nav>
+  <p class="pager-info" id="pagerInfo"></p>
+
   <div class="search-no-results" id="noResults">
     <div class="icon">🔍</div>
     <p>No se encontraron productos para tu búsqueda</p>
@@ -5164,49 +5175,108 @@ footer{background:#0F172A;color:#94A3B8;padding:3rem 0 1.5rem;margin-top:4rem;bo
 var m=document.getElementById('menuToggle'),n=document.getElementById('mainNav');
 m.addEventListener('click',function(){var o=n.classList.toggle('active');this.setAttribute('aria-expanded',o);this.innerHTML=o?'✕':'☰'});
 
-// Filter + Search
+// Filter + Search + Pagination (48 por página)
 (function(){
-  var currentCat='todos', currentQuery='';
-  var cards=document.querySelectorAll('.card-prod');
+  var PER=48, currentCat='todos', currentQuery='', page=1;
+  var grid=document.getElementById('prodGrid');
+  var cards=Array.prototype.slice.call(grid.querySelectorAll(':scope > .card-prod'));
   var searchInput=document.getElementById('prodSearch');
   var clearBtn=document.getElementById('searchClear');
   var noResults=document.getElementById('noResults');
+  var pager=document.getElementById('pager');
+  var info=document.getElementById('pagerInfo');
+  var texts=cards.map(function(c){return (c.textContent||'').toLowerCase()});
 
-  function filterCards(){
-    var visible=0;
-    cards.forEach(function(card){
-      var catMatch=currentCat==='todos'||card.getAttribute('data-cat')===currentCat;
-      var searchMatch=true;
-      if(currentQuery){
-        var text=(card.textContent||'').toLowerCase();
-        searchMatch=currentQuery.split(/\s+/).every(function(w){return text.indexOf(w)!==-1});
-      }
-      if(catMatch&&searchMatch){card.style.display='';visible++}
-      else{card.style.display='none'}
-    });
-    noResults.style.display=visible===0?'block':'none';
+  function readPage(){
+    var n=parseInt(new URLSearchParams(location.search).get('pagina'),10);
+    return n>0?n:1;
   }
+  function url(n){
+    var u=new URL(location.href);
+    if(n>1)u.searchParams.set('pagina',n);else u.searchParams.delete('pagina');
+    return u.pathname+u.search+u.hash;
+  }
+  function link(label,n,cls,aria){
+    var a=document.createElement('a');
+    a.href=url(n);a.setAttribute('data-page',n);
+    if(label.length>2){var t=label.split(' ');a.innerHTML=label.charAt(0)==='‹'?'‹<span class="lbl"> '+t[1]+'</span>':'<span class="lbl">'+t[0]+' </span>›'}else a.textContent=label;
+    if(cls)a.className=cls;
+    if(aria)a.setAttribute('aria-label',aria);
+    if(cls==='current')a.setAttribute('aria-current','page');
+    return a;
+  }
+  function renderPager(pages){
+    pager.innerHTML='';
+    if(pages<=1){pager.style.display='none';return}
+    pager.style.display='';
+    pager.appendChild(link('‹ Anterior',Math.max(1,page-1),page===1?'disabled':'','Página anterior'));
+    var nums=[],k;
+    for(k=1;k<=pages;k++){if(k===1||k===pages||Math.abs(k-page)<=1)nums.push(k)}
+    var last=0;
+    nums.forEach(function(k){
+      if(k-last>1){var d=document.createElement('span');d.className='dots';d.textContent='…';pager.appendChild(d)}
+      pager.appendChild(link(String(k),k,k===page?'current':'','Página '+k));
+      last=k;
+    });
+    pager.appendChild(link('Siguiente ›',Math.min(pages,page+1),page===pages?'disabled':'','Página siguiente'));
+  }
+  function render(){
+    var matches=[];
+    cards.forEach(function(card,i){
+      var catMatch=currentCat==='todos'||card.getAttribute('data-cat')===currentCat;
+      var searchMatch=!currentQuery||currentQuery.split(/\s+/).every(function(w){return texts[i].indexOf(w)!==-1});
+      if(catMatch&&searchMatch)matches.push(card);
+      card.style.display='none';
+    });
+    var pages=Math.max(1,Math.ceil(matches.length/PER));
+    if(page>pages)page=pages;
+    var from=(page-1)*PER, to=Math.min(matches.length,from+PER);
+    for(var k=from;k<to;k++)matches[k].style.display='';
+    noResults.style.display=matches.length===0?'block':'none';
+    info.textContent=matches.length?('Mostrando '+(from+1)+'–'+to+' de '+matches.length+' productos'):'';
+    renderPager(pages);
+    document.dispatchEvent(new CustomEvent('catalog:render'));
+  }
+  function go(n,push){
+    page=n;render();
+    if(push)history.pushState({pagina:n},'',url(n));
+    var top=grid.getBoundingClientRect().top+window.pageYOffset-90;
+    window.scrollTo({top:Math.max(0,top),behavior:'smooth'});
+  }
+
+  pager.addEventListener('click',function(e){
+    var a=e.target.closest('a[data-page]');
+    if(!a||e.ctrlKey||e.metaKey||e.shiftKey)return;
+    e.preventDefault();
+    go(parseInt(a.getAttribute('data-page'),10),true);
+  });
+  window.addEventListener('popstate',function(){page=readPage();render()});
+
+  function reset(){page=1;if(location.search.indexOf('pagina=')!==-1)history.replaceState(null,'',url(1));render()}
 
   document.querySelectorAll('.filter-btn').forEach(function(btn){
     btn.addEventListener('click',function(){
       document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active')});
       this.classList.add('active');
       currentCat=this.getAttribute('data-cat');
-      filterCards();
+      reset();
     });
   });
 
   searchInput.addEventListener('input',function(){
     currentQuery=this.value.trim().toLowerCase();
     clearBtn.style.display=currentQuery?'block':'none';
-    filterCards();
+    reset();
   });
 
   clearBtn.addEventListener('click',function(){
-    searchInput.value='';currentQuery='';clearBtn.style.display='none';filterCards();searchInput.focus();
+    searchInput.value='';currentQuery='';clearBtn.style.display='none';reset();searchInput.focus();
   });
+
+  page=readPage();
+  render();
 })();
 </script>
-<script src="/assets/cart.js?v=20261105e"></script>
+<script src="/assets/cart.js?v=20261105f"></script>
 </body>
 </html>

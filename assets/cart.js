@@ -692,12 +692,13 @@
       if (where === 'row') {
         ad.style.gridColumn = '1 / -1'; ad.style.margin = '4px 0';
         el.insertAdjacentElement('afterend', ad);
-        // With a filter or search active, rows no longer line up: hide the in-grid ad
+        // Keep the in-grid ad after the 12th visible card (pagination, filters and search hide cards)
         const sync = () => setTimeout(() => {
-          const hidden = [...document.querySelectorAll('#prodGrid > .card-prod')].some(c => c.style.display === 'none');
-          ad.style.display = hidden ? 'none' : '';
+          const visible = [...document.querySelectorAll('#prodGrid > .card-prod')].filter(c => c.style.display !== 'none');
+          if (visible.length > 16) { visible[11].insertAdjacentElement('afterend', ad); ad.style.display = ''; }
+          else ad.style.display = 'none';
         }, 0);
-        document.addEventListener('click', sync); document.addEventListener('input', sync);
+        ['catalog:render', 'click', 'input'].forEach(ev => document.addEventListener(ev, sync)); sync();
       }
       else if (where === 'after') el.insertAdjacentElement('afterend', ad);
       else el.insertAdjacentElement('beforebegin', ad);
