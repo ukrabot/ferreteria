@@ -3180,6 +3180,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110217224',
   },
+  {
+    slug: 'interruptor-automatico-25-a-saime',
+    name: 'Interruptor automático 25 A Saime',
+    price: 13990,
+    image: '/producto/interruptor-automatico-25-a-saime.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110252516',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
