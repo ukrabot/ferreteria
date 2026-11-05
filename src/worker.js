@@ -3360,6 +3360,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '139923737',
   },
+  {
+    slug: 'interruptor-triple-9-32-10-a-clio-gris-claro-halux',
+    name: 'Interruptor triple 9/32 10 A Clio Gris claro Halux',
+    price: 6990,
+    image: '/producto/interruptor-triple-9-32-10-a-clio-gris-claro-halux.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110237517',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
