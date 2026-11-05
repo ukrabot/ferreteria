@@ -3576,6 +3576,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110216824',
   },
+  {
+    slug: 'interruptor-automatico-40a-lexo',
+    name: 'Interruptor automático 40A Lexo',
+    price: 3990,
+    image: '/producto/interruptor-automatico-40a-lexo.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '130316076',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
