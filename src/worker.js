@@ -3261,6 +3261,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110250127',
   },
+  {
+    slug: 'interruptor-automatico1x25-ac-6-ka-lexo-lexo',
+    name: 'Interruptor Automático1x25 AC 6 Ka Lexo',
+    price: 3990,
+    image: '/producto/interruptor-automatico1x25-ac-6-ka-lexo-lexo.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '130442052',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
