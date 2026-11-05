@@ -3792,6 +3792,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110229908',
   },
+  {
+    slug: 'interruptor-triple-9-32-16-a-genesis-blanco-schneider',
+    name: 'Interruptor triple 9/32 16 A Genesis Blanco Schneider',
+    price: 5990,
+    image: '/producto/interruptor-triple-9-32-16-a-genesis-blanco-schneider.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110252821',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
