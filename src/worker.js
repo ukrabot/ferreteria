@@ -3801,6 +3801,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110252821',
   },
+  {
+    slug: 'interruptor-triple-9-32-10-a-blanco-karson',
+    name: 'Interruptor triple 9/32 10 A Blanco Karson',
+    price: 4990,
+    image: '/producto/interruptor-triple-9-32-10-a-blanco-karson.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110230614',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
