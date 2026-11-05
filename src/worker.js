@@ -4822,6 +4822,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '3221555',
   },
+  {
+    slug: 'mango-de-ducha-medidor-caudal-flode',
+    name: 'Mango de ducha medidor caudal flode Cromado DUSCHY',
+    price: 34990,
+    image: '/producto/mango-de-ducha-medidor-caudal-flode.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: '7362234',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
