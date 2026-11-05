@@ -3162,6 +3162,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110216317',
   },
+  {
+    slug: 'interruptor-simple-9-12-10-a-modus-plus-blanco-bticino',
+    name: 'Interruptor simple 9/12 10 A Modus Plus Blanco Bticino',
+    price: 4990,
+    image: '/producto/interruptor-simple-9-12-10-a-modus-plus-blanco-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110265693',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
