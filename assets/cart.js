@@ -676,19 +676,30 @@
       const faq = prose.querySelector('#preguntas') || prose.querySelector('.sources') || prose.querySelector('.disclosure');
       if (faq) spots.push(['before', faq]);
     } else {
-      // Catalog: before the grid, between the two grids, after the last grid
+      // Catalog: before the grid, a full-width row inside the grid after card 12, after the grid
       const g1 = document.getElementById('prodGrid');
-      const g2 = document.getElementById('prodGrid2');
-      if (g1) spots.push(['before', g1]);
-      if (g2) spots.push(['before', g2]);
-      const last = g2 || g1;
-      if (last) spots.push(['after', last]);
+      if (g1) {
+        spots.push(['before', g1]);
+        const cards = g1.querySelectorAll(':scope > .card-prod');
+        if (cards.length > 16) spots.push(['row', cards[11]]);
+        spots.push(['after', g1]);
+      }
     }
     if (!spots.length) return;
 
     spots.slice(0, 3).forEach(([where, el]) => {
       const ad = makeAdSlot();
-      if (where === 'after') el.insertAdjacentElement('afterend', ad);
+      if (where === 'row') {
+        ad.style.gridColumn = '1 / -1'; ad.style.margin = '4px 0';
+        el.insertAdjacentElement('afterend', ad);
+        // With a filter or search active, rows no longer line up: hide the in-grid ad
+        const sync = () => setTimeout(() => {
+          const hidden = [...document.querySelectorAll('#prodGrid > .card-prod')].some(c => c.style.display === 'none');
+          ad.style.display = hidden ? 'none' : '';
+        }, 0);
+        document.addEventListener('click', sync); document.addEventListener('input', sync);
+      }
+      else if (where === 'after') el.insertAdjacentElement('afterend', ad);
       else el.insertAdjacentElement('beforebegin', ad);
     });
 
