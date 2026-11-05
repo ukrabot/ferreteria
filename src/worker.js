@@ -4840,6 +4840,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '9081402',
   },
+  {
+    slug: 'mango-ducha-abs-1-funcin-10-cm',
+    name: 'Mango Ducha Abs 1 Función 10 cm Cromado SENSI DACQUA',
+    price: 12990,
+    image: '/producto/mango-ducha-abs-1-funcin-10-cm.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: '9081216',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
