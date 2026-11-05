@@ -222,6 +222,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Puente de Adherencia',
     filename: 'Pack-Puente-de-Adherencia-Ferreteria-Ukra.zip',
   },
+  'pack-chalecos-reflectantes-clase-control-excel': {
+    name: 'Pack Chalecos Reflectantes',
+    filename: 'Pack-Chalecos-Reflectantes-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1814,6 +1818,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-PUENTE',
+  },
+  {
+    slug: 'pack-chalecos-reflectantes-clase-control-excel',
+    name: 'Pack Chalecos Reflectantes: Planilla Excel de Selección de Clase, Control de Lavados, Inspección y Entrega de EPP + Guía de Clases + Checklist de Revisión',
+    price: 7990,
+    image: '/producto/pack-chalecos-reflectantes-clase-control-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-CHALECOS',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
