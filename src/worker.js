@@ -186,6 +186,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Pasto Natural',
     filename: 'Pack-Pasto-Natural-Ferreteria-Ukra.zip',
   },
+  'pack-melamina-15-18-mm-repisas-despiece-excel': {
+    name: 'Pack Melamina 15 o 18 mm',
+    filename: 'Pack-Melamina-15-18-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1697,6 +1701,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-PASTO',
+  },
+  {
+    slug: 'pack-melamina-15-18-mm-repisas-despiece-excel',
+    name: 'Pack Melamina 15 o 18 mm: Planilla Excel de Flecha de Repisas, Despiece, Planchas y Tapacanto, y Margen para Tornillos + Guía de Espesores + Hoja de Despiece',
+    price: 7990,
+    image: '/producto/pack-melamina-15-18-mm-repisas-despiece-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-MELAMINA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
