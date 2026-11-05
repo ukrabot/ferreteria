@@ -94,19 +94,24 @@ actualizar fichas de productos físicos con el generador**. Nada más.
   al cliente ni las que vienen cortadas con «...» («Cantidad de paquetes»,
   «Tipo de divisor», «Plazo de disponibilidad de repuestos», «Alimentación»).
   El generador las rechaza.
-- **Tandas chicas**: publica máximo **10 productos por pull request**, para
-  que el dueño los pueda revisar.
+- **Sin límite por tanda**: puedes publicar **todos los productos que quieras
+  en un mismo pull request**. Cada uno debe pasar `--verificar <slug>` con ✔
+  antes de abrirlo, y en la descripción del pull request lista cada producto
+  (nombre, SKU y precio) para que el dueño los pueda revisar.
 
 ## Flujo de publicación
 
 ```bash
 git checkout main && git pull
-git checkout -b producto/<slug>
+git checkout -b producto/<slug>        # o productos/<tema> si es una tanda
 # … crear la ficha, poner fotos, ejecutar el generador hasta que diga ✔ …
 git add <solo los archivos que lista el generador>
-git commit -m "Producto: <nombre del producto>"
-git push -u origin producto/<slug>
-gh pr create --title "Producto: <nombre>" --body "Ficha generada con scripts/productos/generar.py. Verificación: ✔"
+git commit -m "Producto: <nombre del producto>"   # un commit por producto
+# … repetir para cada producto de la tanda …
+git push -u origin <rama>
+gh pr create --title "Productos: <tema> (<cantidad>)" --body "Fichas generadas con scripts/productos/generar.py. Verificación: ✔
+- <nombre> · <SKU> · <precio>
+- …"
 ```
 
 Luego avisa al dueño con el enlace del pull request, el precio y un resumen de
