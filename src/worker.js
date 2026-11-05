@@ -190,6 +190,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Melamina 15 o 18 mm',
     filename: 'Pack-Melamina-15-18-Ferreteria-Ukra.zip',
   },
+  'pack-termo-electrico-litros-circuito-instalacion-excel': {
+    name: 'Pack Termo Eléctrico',
+    filename: 'Pack-Termo-Electrico-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1710,6 +1714,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-MELAMINA',
+  },
+  {
+    slug: 'pack-termo-electrico-litros-circuito-instalacion-excel',
+    name: 'Pack Termo Eléctrico: Planilla Excel de Litros, Horas de Calentamiento y Costo Mensual, Peso y Fijación, Circuito, Checklist de Instalación y Mantención + Guía de Instalación + Puesta en Marcha',
+    price: 7990,
+    image: '/producto/pack-termo-electrico-litros-circuito-instalacion-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-TERMO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
