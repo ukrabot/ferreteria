@@ -3666,6 +3666,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110223154',
   },
+  {
+    slug: 'interruptor-simple-10-a-blanco-halux',
+    name: 'Interruptor simple 10 A Blanco Halux',
+    price: 4990,
+    image: '/producto/interruptor-simple-10-a-blanco-halux.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110217897',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
