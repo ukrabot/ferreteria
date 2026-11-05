@@ -3756,6 +3756,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110217009',
   },
+  {
+    slug: 'interruptor-pulsador-10-a-luzica-blanco-bticino',
+    name: 'Interruptor pulsador 10 A Luzica Blanco Bticino',
+    price: 4990,
+    image: '/producto/interruptor-pulsador-10-a-luzica-blanco-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110252103',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
