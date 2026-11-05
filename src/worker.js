@@ -4813,6 +4813,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '1503251',
   },
+  {
+    slug: 'mango-ducha-1-funcin-anticalcreo',
+    name: 'Mango ducha 1 función anticalcáreo Cromado SENSI DACQUA',
+    price: 13990,
+    image: '/producto/mango-ducha-1-funcin-anticalcreo.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: '3221555',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
