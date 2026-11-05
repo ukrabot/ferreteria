@@ -230,6 +230,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Construir una Piscina',
     filename: 'Pack-Construir-Piscina-Ferreteria-Ukra.zip',
   },
+  'pack-estanque-hidroneumatico-tamano-precarga-excel': {
+    name: 'Pack Estanque Hidroneumático',
+    filename: 'Pack-Estanque-Hidroneumatico-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1840,6 +1844,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-PISCINA',
+  },
+  {
+    slug: 'pack-estanque-hidroneumatico-tamano-precarga-excel',
+    name: 'Pack Estanque Hidroneumático: Planilla Excel de Tamaño del Estanque, Precarga de Aire, Mantención y Diagnóstico de Fallas + Guía de Tamaño y Precarga + Checklist de Instalación',
+    price: 7990,
+    image: '/producto/pack-estanque-hidroneumatico-tamano-precarga-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-HIDROPACK',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
