@@ -3612,6 +3612,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110245858',
   },
+  {
+    slug: 'interruptor-triple-9-32-s17-sinthesi-blanco-sinthesi',
+    name: 'Interruptor triple 9/32 s17 Sinthesi Blanco',
+    price: 6990,
+    image: '/producto/interruptor-triple-9-32-s17-sinthesi-blanco-sinthesi.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '139923500',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
