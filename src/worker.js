@@ -3153,6 +3153,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110223254',
   },
+  {
+    slug: 'interruptor-automatico-40-a-saime',
+    name: 'Interruptor automático 40 A Saime',
+    price: 13990,
+    image: '/producto/interruptor-automatico-40-a-saime.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110216317',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
