@@ -3297,6 +3297,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110249772',
   },
+  {
+    slug: 'interruptor-9-12-s17-sinthesi-grafito-sinthesi',
+    name: 'Interruptor 9/12 S17 Sinthesi Grafito',
+    price: 4990,
+    image: '/producto/interruptor-9-12-s17-sinthesi-grafito-sinthesi.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '140798035',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
