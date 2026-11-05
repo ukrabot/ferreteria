@@ -3486,6 +3486,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '150569445',
   },
+  {
+    slug: 'interruptor-doble-9-15-16-a-genesis-blanco-schneider',
+    name: 'Interruptor doble 9/15 16 A Genesis Blanco Schneider',
+    price: 4990,
+    image: '/producto/interruptor-doble-9-15-16-a-genesis-blanco-schneider.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110271337',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
