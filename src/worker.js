@@ -3369,6 +3369,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110237517',
   },
+  {
+    slug: 'interruptor-automatico-32-a-curva-c-6ka-bticino',
+    name: 'Interruptor automático 32 A curva C 6KA Bticino',
+    price: 6990,
+    image: '/producto/interruptor-automatico-32-a-curva-c-6ka-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110222814',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
