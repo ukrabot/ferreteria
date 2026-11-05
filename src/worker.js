@@ -4804,6 +4804,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '7646224',
   },
+  {
+    slug: 'maneral-de-ducha-3-funciones-anticalcreo-cromo',
+    name: 'Maneral de ducha 3 funciones anticalcáreo cromo Cromado STRETTO',
+    price: 34990,
+    image: '/producto/maneral-de-ducha-3-funciones-anticalcreo-cromo.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: '1503251',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
