@@ -246,6 +246,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Ingletadora',
     filename: 'Pack-Ingletadora-Ferreteria-Ukra.zip',
   },
+  'pack-diferencial-diagnostico-fuga-circuitos-excel': {
+    name: 'Pack Diferencial',
+    filename: 'Pack-Diferencial-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -1892,6 +1896,15 @@ const SEED_PRODUCTS = [
     category: 'Herramientas',
     status: 'available',
     sku: 'PACK-INGLETADORA',
+  },
+  {
+    slug: 'pack-diferencial-diagnostico-fuga-circuitos-excel',
+    name: 'Pack Diferencial: Planilla Excel de Registro de Pruebas, Circuitos del Tablero, Fugas por Diferencial y Botón Test + Guía Rápida + Registro Imprimible',
+    price: 7990,
+    image: '/producto/pack-diferencial-diagnostico-fuga-circuitos-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-DIFERENCIAL',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
