@@ -3306,6 +3306,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '140798035',
   },
+  {
+    slug: 'interruptor-conmutador-triple-9-24-10-a-luzica-blanco-bticino',
+    name: 'Interruptor conmutador triple 9/24 10 A Luzica Blanco Bticino',
+    price: 6990,
+    image: '/producto/interruptor-conmutador-triple-9-24-10-a-luzica-blanco-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110238134',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
