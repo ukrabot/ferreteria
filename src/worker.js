@@ -3810,6 +3810,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110230614',
   },
+  {
+    slug: 'automatico-2p-c32a-230-400v-6000a-bticino',
+    name: 'Automatico 2P C32A 230/400V 6000A Bticino',
+    price: 11990,
+    image: '/producto/automatico-2p-c32a-230-400v-6000a-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '117082619',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
