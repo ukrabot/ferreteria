@@ -3063,6 +3063,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110272745',
   },
+  {
+    slug: 'interruptor-triple-10-a-nobile-terra-bticino',
+    name: 'Interruptor triple 10 A Nobile Terra Bticino',
+    price: 12990,
+    image: '/producto/interruptor-triple-10-a-nobile-terra-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110274167',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
