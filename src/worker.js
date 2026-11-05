@@ -3396,6 +3396,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '139923583',
   },
+  {
+    slug: 'luz-piloto-modular-led-rojo-110-400v-bticino-bticino',
+    name: 'Luz Piloto Modular Led Rojo 110/400V Bticino',
+    price: 29990,
+    image: '/producto/luz-piloto-modular-led-rojo-110-400v-bticino-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '116276452',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
