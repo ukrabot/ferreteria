@@ -3423,6 +3423,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '121897003',
   },
+  {
+    slug: 'enchufe-interruptor-10-a-nobile-terra-bticino',
+    name: 'Enchufe + interruptor 10 A Nobile Terra Bticino',
+    price: 9990,
+    image: '/producto/enchufe-interruptor-10-a-nobile-terra-bticino.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110229299',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
