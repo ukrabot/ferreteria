@@ -3450,6 +3450,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110222605',
   },
+  {
+    slug: 'interruptor-pulsador-10-a-clio-aluminio-halux',
+    name: 'Interruptor pulsador 10 A Clio Aluminio Halux',
+    price: 4990,
+    image: '/producto/interruptor-pulsador-10-a-clio-aluminio-halux.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110249885',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
