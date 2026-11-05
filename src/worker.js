@@ -3630,6 +3630,15 @@ const SEED_PRODUCTS = [
     status: 'available',
     sku: '110222928',
   },
+  {
+    slug: 'interruptor-simple-9-12-16-a-blanco-schneider',
+    name: 'Interruptor simple 9/12 16 A blanco Schneider',
+    price: 4990,
+    image: '/producto/interruptor-simple-9-12-16-a-blanco-schneider.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: '110272389',
+  },
 ];
 
 // ── Shipping settings ────────────────────────────────────────────────
