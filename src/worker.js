@@ -5141,7 +5141,6 @@ async function handleAdminSettings(request, env) {
   return json(await getAdminSettings(env));
 }
 
-// Productos retirados del catálogo: se borran también de la base de datos.
 // Renamed product pages: the old URL answers 301 to the new one.
 const PRODUCT_REDIRECTS = {
   'maneral-de-ducha-3-funciones-anticalcreo-cromo': 'maneral-ducha-3-funciones-anticalcareo-stretto',
@@ -5160,6 +5159,7 @@ const PRODUCT_REDIRECTS = {
   'mango-ducha-slim-abs-1-funcin-negro': 'mango-ducha-slim-1-funcion-negro-sensi-dacqua',
 };
 
+// Productos retirados del catálogo: se borran también de la base de datos.
 const RETIRED_PRODUCTS = [
   'interruptor-automatico-40-a-curva-c-6ka-legrand',
   'interruptor-automatico-6-a-curva-c-6ka-bticino',
