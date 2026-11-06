@@ -566,21 +566,31 @@ function clpToUsd(clp, rate, recargo) {
   return (Math.ceil((clp / rate) * (1 + recargo / 100) * 100) / 100).toFixed(2);
 }
 
-let ppTokenMem = null;
-async function paypalToken(env) {
-  if (ppTokenMem && ppTokenMem.env === env.PAYPAL_CLIENT_ID && Date.now() < ppTokenMem.exp) return ppTokenMem.token;
-  const res = await fetch(`${paypalBase(env)}/v1/oauth2/token`, {
+// Credentials pasted into the dashboard can carry spaces or a line break.
+const ppCreds = env => `${String(env.PAYPAL_CLIENT_ID || '').trim()}:${String(env.PAYPAL_CLIENT_SECRET || '').trim()}`;
+
+async function paypalFetchToken(env, base) {
+  const res = await fetch(`${base}/v1/oauth2/token`, {
     method: 'POST',
     headers: {
-      Authorization: `Basic ${btoa(`${env.PAYPAL_CLIENT_ID}:${env.PAYPAL_CLIENT_SECRET}`)}`,
+      Authorization: `Basic ${btoa(ppCreds(env))}`,
       'Content-Type': 'application/x-www-form-urlencoded',
     },
     body: 'grant_type=client_credentials',
   });
   const d = await res.json().catch(() => ({}));
+  return { res, d };
+}
+
+let ppTokenMem = null;
+async function paypalToken(env) {
+  if (ppTokenMem && ppTokenMem.env === env.PAYPAL_CLIENT_ID && Date.now() < ppTokenMem.exp) return ppTokenMem.token;
+  const { res, d } = await paypalFetchToken(env, paypalBase(env));
   if (!res.ok || !d.access_token) {
     console.error('PayPal token error:', res.status, JSON.stringify(d).substring(0, 200));
-    throw new Error(`PayPal token ${res.status}`);
+    const e = new Error(`PayPal token ${res.status}`);
+    e.status = res.status; e.data = d; e.step = 'token';
+    throw e;
   }
   ppTokenMem = { token: d.access_token, env: env.PAYPAL_CLIENT_ID, exp: Date.now() + Math.max(60, (d.expires_in || 3600) - 300) * 1000 };
   return d.access_token;
@@ -601,6 +611,76 @@ async function paypalRequest(env, path, init = {}) {
     throw e;
   }
   return data;
+}
+
+// Short, secret-free summary of a PayPal error, for /admin/ → Ajustes → PayPal.
+function paypalErrorInfo(e) {
+  const d = e?.data || {};
+  const det = Array.isArray(d.details) && d.details[0] ? d.details[0] : {};
+  return {
+    step: e?.step || 'orden',
+    status: e?.status || null,
+    name: String(d.name || d.error || e?.message || 'error').substring(0, 80),
+    issue: String(det.issue || '').substring(0, 80),
+    description: String(det.description || d.error_description || d.message || '').substring(0, 240),
+    debug_id: String(d.debug_id || '').substring(0, 40),
+  };
+}
+
+async function savePaypalError(env, e, orderNumber) {
+  try {
+    const info = { ...paypalErrorInfo(e), order: orderNumber, at: new Date().toISOString() };
+    await env.DB.prepare(`INSERT INTO settings (key, value) VALUES ('paypal_last_error', ?)
+      ON CONFLICT(key) DO UPDATE SET value = excluded.value`).bind(JSON.stringify(info)).run();
+  } catch {}
+}
+
+// GET /api/admin/paypal-check: are the keys live or sandbox, and can they
+// create an order? (The test order is for US$1.00 and is never captured.)
+async function handleAdminPaypalCheck(request, env) {
+  if (!checkAdmin(request, env)) return err('No autorizado', 401);
+  const out = {
+    configured: paypalEnabled(env),
+    env: env.PAYPAL_ENV === 'sandbox' ? 'sandbox' : 'live',
+    client_id_start: String(env.PAYPAL_CLIENT_ID || '').trim().substring(0, 4),
+    client_id_length: String(env.PAYPAL_CLIENT_ID || '').trim().length,
+    secret_length: String(env.PAYPAL_CLIENT_SECRET || '').trim().length,
+    spaces_trimmed: String(env.PAYPAL_CLIENT_ID || '') !== String(env.PAYPAL_CLIENT_ID || '').trim()
+      || String(env.PAYPAL_CLIENT_SECRET || '') !== String(env.PAYPAL_CLIENT_SECRET || '').trim(),
+  };
+  try {
+    const row = await env.DB.prepare(`SELECT value FROM settings WHERE key = 'paypal_last_error'`).first();
+    out.last_error = row ? JSON.parse(row.value) : null;
+  } catch { out.last_error = null; }
+  if (!out.configured) return json(out);
+  for (const [k, base] of [['live', PAYPAL_API], ['sandbox', PAYPAL_API_SANDBOX]]) {
+    try {
+      const { res, d } = await paypalFetchToken(env, base);
+      out[k] = { ok: res.ok && !!d.access_token, status: res.status, error: res.ok ? '' : String(d.error || d.name || '').substring(0, 60) };
+    } catch (e) {
+      out[k] = { ok: false, status: 0, error: String(e.message || e).substring(0, 60) };
+    }
+  }
+  if (out[out.env].ok) {
+    try {
+      ppTokenMem = null;
+      const o = await paypalRequest(env, '/v2/checkout/orders', {
+        method: 'POST',
+        body: JSON.stringify({
+          intent: 'CAPTURE',
+          purchase_units: [{ description: 'Prueba de conexión (no se cobra)', amount: { currency_code: 'USD', value: '1.00' } }],
+          payment_source: { paypal: { experience_context: {
+            brand_name: 'Ferretería Ukra', shipping_preference: 'NO_SHIPPING', user_action: 'PAY_NOW',
+            return_url: `${env.SITE_URL}/api/paypal/return`, cancel_url: `${env.SITE_URL}/api/paypal/return?cancel=1`,
+          } } },
+        }),
+      });
+      out.create = { ok: !!o.id, status: 200, link: !!(o.links || []).find(l => l.rel === 'payer-action' || l.rel === 'approve') };
+    } catch (e) {
+      out.create = { ok: false, ...paypalErrorInfo(e) };
+    }
+  }
+  return json(out);
 }
 
 async function paypalCreateOrder(env, order) {
@@ -874,6 +954,7 @@ async function handleCheckout(request, env) {
       return json({ paymentUrl: link.href, orderNumber: order_number, subtotal, shipping, total, usd });
     } catch (e) {
       console.error('PayPal checkout error:', e);
+      await savePaypalError(env, e, order_number);
       await env.DB.prepare(`UPDATE orders SET status = 'error' WHERE order_number = ?`).bind(order_number).run();
       return err('No pudimos abrir PayPal. Intenta de nuevo o paga con Mercado Pago o Flow.', 502);
     }
@@ -5563,6 +5644,7 @@ export default {
       if (path === '/api/admin/products' && method === 'GET') return handleAdminProducts(request, env);
       if (path === '/api/admin/products' && method === 'POST') return handleAdminCreateProduct(request, env);
       if (path === '/api/admin/digital' && method === 'GET') return handleAdminDigitalList(request, env);
+      if (path === '/api/admin/paypal-check' && method === 'GET') return handleAdminPaypalCheck(request, env);
       const digitalMatch = path.match(/^\/api\/admin\/digital\/([a-z0-9-]+)$/);
       if (digitalMatch && method === 'PUT') return handleAdminDigitalUpload(request, env, digitalMatch[1]);
       if (digitalMatch && method === 'GET') return handleAdminDigitalDownload(request, env, digitalMatch[1]);

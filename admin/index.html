@@ -279,6 +279,13 @@ tr:hover td{background:rgba(15,23,42,.3)}
         <p class="settings-help">Sube aquí el archivo .zip que recibe el cliente. Se guarda en la base de datos (no en el sitio público) y se entrega con un enlace privado solo cuando Flow confirma el pago.</p>
         <div id="digital-list"><p class="settings-help">Cargando…</p></div>
       </div>
+
+      <div class="settings-card" style="margin-top:16px">
+        <h2>PayPal</h2>
+        <p class="settings-help">Revisa si las claves de PayPal guardadas en Cloudflare funcionan. La prueba crea una orden de US$1,00 que nunca se cobra.</p>
+        <button type="button" class="mini-btn" id="pp-check-btn" onclick="checkPaypal()">Probar conexión con PayPal</button>
+        <div id="pp-check" style="margin-top:12px"></div>
+      </div>
     </div>
 
     <!-- ORDERS TAB -->
@@ -453,6 +460,36 @@ tr:hover td{background:rgba(15,23,42,.3)}
   }
 
   // Download with the admin token and save it locally (to send it to a customer by email/WhatsApp)
+  window.checkPaypal = async function() {
+    const box = $('pp-check'), btn = $('pp-check-btn');
+    btn.disabled = true; box.innerHTML = '<p class="settings-help">Probando…</p>';
+    try {
+      const res = await apiFetch('/api/admin/paypal-check');
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const d = await res.json();
+      const lines = [];
+      let verdict;
+      if (!d.configured) verdict = '❌ Faltan las claves: agrega PAYPAL_CLIENT_ID y PAYPAL_CLIENT_SECRET como secretos en Cloudflare.';
+      else if (d.env === 'live' && !d.live.ok && d.sandbox.ok) verdict = '❌ Tus claves son de <strong>prueba (Sandbox)</strong>. En developer.paypal.com cambia a <strong>Live</strong>, copia el Client ID y el Secret de esa app y reemplázalos en Cloudflare (o agrega PAYPAL_ENV = sandbox para probar sin cobrar).';
+      else if (d.env === 'sandbox' && !d.sandbox.ok && d.live.ok) verdict = '❌ Tus claves son de <strong>producción (Live)</strong>, pero PAYPAL_ENV dice sandbox: borra PAYPAL_ENV en Cloudflare.';
+      else if (!d[d.env].ok) verdict = '❌ PayPal no acepta las claves (' + esc(d[d.env].error || ('HTTP ' + d[d.env].status)) + '). Revisa que el Client ID y el Secret sean de la misma app y que no hayas cambiado uno por el otro.';
+      else if (d.create && !d.create.ok) verdict = '❌ Las claves funcionan, pero PayPal no deja crear la orden: <strong>' + esc(d.create.name) + (d.create.issue ? ' · ' + esc(d.create.issue) : '') + '</strong>' + (d.create.description ? '<br>' + esc(d.create.description) : '');
+      else verdict = '✅ PayPal funciona (' + (d.env === 'live' ? 'producción' : 'sandbox') + '). Los clientes ya pueden pagar packs digitales con PayPal.';
+      lines.push('<p style="margin:0 0 8px">' + verdict + '</p>');
+      lines.push('<p class="settings-help" style="margin:0">Client ID empieza con «' + esc(d.client_id_start || '') + '» · largo ' + d.client_id_length + ' · Secret largo ' + d.secret_length +
+        (d.live ? ' · Live: ' + (d.live.ok ? 'OK' : 'rechaza') + ' · Sandbox: ' + (d.sandbox.ok ? 'OK' : 'rechaza') : '') +
+        (d.spaces_trimmed ? ' · (había espacios de más al copiar; ya se ignoran)' : '') + '</p>');
+      if (d.last_error) {
+        const e = d.last_error;
+        lines.push('<p class="settings-help" style="margin:8px 0 0">Último error en una compra (' + esc(new Date(e.at).toLocaleString('es-CL')) + ', orden ' + esc(e.order || '') + '): ' +
+          esc(e.step) + ' · ' + esc(String(e.status || '')) + ' ' + esc(e.name) + (e.issue ? ' · ' + esc(e.issue) : '') + (e.description ? ' — ' + esc(e.description) : '') + (e.debug_id ? ' · debug_id ' + esc(e.debug_id) : '') + '</p>');
+      }
+      box.innerHTML = lines.join('');
+    } catch (e) {
+      box.innerHTML = '<p class="settings-help">No se pudo probar: ' + esc(e.message) + '</p>';
+    } finally { btn.disabled = false; }
+  };
+
   window.downloadDigital = async function(slug, btn) {
     const label = btn ? btn.textContent : '';
     if (btn) { btn.disabled = true; btn.textContent = 'Descargando…'; }
