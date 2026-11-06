@@ -262,6 +262,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Corte de Piso Flotante',
     filename: 'Pack-Corte-Piso-Flotante-Ferreteria-Ukra.zip',
   },
+  'pack-acceso-vehicular-hormigon-adoquin-cubicacion-excel': {
+    name: 'Pack Acceso Vehicular',
+    filename: 'Pack-Acceso-Vehicular-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2275,6 +2279,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-CORTE-PISO',
+  },
+  {
+    slug: 'pack-acceso-vehicular-hormigon-adoquin-cubicacion-excel',
+    name: 'Pack Acceso Vehicular: Planilla Excel de Cubicación de Hormigón o Adoquines, Base, Juntas, Pendiente y Comparador de Cotizaciones + Guía de Obra + Checklist de Recepción',
+    price: 7990,
+    image: '/producto/pack-acceso-vehicular-hormigon-adoquin-cubicacion-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-ACCESO-VEH',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
