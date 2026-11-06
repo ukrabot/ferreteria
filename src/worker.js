@@ -258,6 +258,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Diferencial',
     filename: 'Pack-Diferencial-Ferreteria-Ukra.zip',
   },
+  'pack-corte-piso-flotante-sin-astillar-excel': {
+    name: 'Pack Corte de Piso Flotante',
+    filename: 'Pack-Corte-Piso-Flotante-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2262,6 +2266,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-DIFERENCIAL',
+  },
+  {
+    slug: 'pack-corte-piso-flotante-sin-astillar-excel',
+    name: 'Pack Corte de Piso Flotante: Planilla Excel de Plan de Cortes por Fila, Cara según Herramienta y Perforaciones + Guía de Corte sin Astillar + Hoja de Terreno',
+    price: 7990,
+    image: '/producto/pack-corte-piso-flotante-sin-astillar-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-CORTE-PISO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
