@@ -412,6 +412,7 @@
         el.required = !digitalOnly;
       });
       if (totalEl) totalEl.textContent = fmt(subtotal + shipping);
+      if (typeof refreshPay === 'function') refreshPay(digitalOnly, subtotal + shipping);
       const subEl = document.getElementById('checkout-subtotal');
       const shipEl = document.getElementById('checkout-shipping');
       const hintEl = document.getElementById('ship-hint');
@@ -459,27 +460,62 @@
       });
     }
 
-    render();
-
-    // Payment methods: Mercado Pago shows up only when it's configured.
+    // Payment methods: Mercado Pago shows up when it's configured; PayPal when
+    // it's configured AND the cart has only digital products (charged in USD).
     let gateway = 'flow';
+    let methods = null;
     const payBox = document.getElementById('pay-methods');
     const payBtn = form ? form.querySelector('button[type="submit"]') : null;
     const payNote = document.getElementById('secure-note-text');
-    const setGateway = g => {
-      gateway = g;
-      if (payBtn && !payBtn.disabled) payBtn.textContent = g === 'mercadopago' ? 'Pagar con Mercado Pago' : 'Pagar con Flow';
-      if (payNote) payNote.textContent = g === 'mercadopago'
-        ? 'Pago seguro procesado por Mercado Pago — Tarjetas de crédito, débito, saldo en Mercado Pago y cuotas'
-        : 'Pago seguro procesado por Flow.cl — Aceptamos tarjetas de crédito, débito y transferencia';
+    const PAY = {
+      flow: ['Pagar con Flow', 'Pago seguro procesado por Flow.cl — Aceptamos tarjetas de crédito, débito y transferencia'],
+      mercadopago: ['Pagar con Mercado Pago', 'Pago seguro procesado por Mercado Pago — Tarjetas de crédito, débito, saldo en Mercado Pago y cuotas'],
+      paypal: ['Pagar con PayPal', 'Pago seguro procesado por PayPal — Se cobra en dólares (USD) al valor del dólar observado del día'],
     };
+    const setGateway = g => {
+      gateway = PAY[g] ? g : 'flow';
+      if (payBtn && !payBtn.disabled) payBtn.textContent = PAY[gateway][0];
+      if (payNote) payNote.textContent = PAY[gateway][1];
+    };
+    // While PayPal runs on sandbox credentials it only shows up for testing:
+    // open /checkout/?paypal=prueba (remembered for this tab).
+    let paypalPrueba = false;
+    try {
+      if (new URLSearchParams(location.search).get('paypal') === 'prueba') sessionStorage.setItem('paypal_prueba', '1');
+      paypalPrueba = sessionStorage.getItem('paypal_prueba') === '1';
+    } catch (e) {
+      paypalPrueba = new URLSearchParams(location.search).get('paypal') === 'prueba';
+    }
+    function refreshPay(digitalOnly, total) {
+      if (!payBox || !form || !methods) return;
+      const ppOk = !!methods.paypal && digitalOnly && (!methods.paypal_sandbox || paypalPrueba);
+      const avail = { flow: true, mercadopago: !!methods.mercadopago, paypal: ppOk };
+      form.querySelectorAll('input[name="payment_method"]').forEach(r => {
+        const label = r.closest('.pay-opt');
+        if (label) label.style.display = avail[r.value] ? '' : 'none';
+        if (!avail[r.value]) r.checked = false;
+      });
+      const usdEl = document.getElementById('paypal-usd');
+      if (usdEl && avail.paypal && methods.paypal_usd_rate > 0) {
+        const usd = Math.ceil(total / methods.paypal_usd_rate * (1 + (methods.paypal_recargo || 0) / 100) * 100) / 100;
+        usdEl.textContent = `Cuenta PayPal o tarjeta · total US$${usd.toFixed(2).replace('.', ',')} (se cobra en dólares)`;
+      }
+      const shown = Object.keys(avail).filter(k => avail[k]);
+      payBox.classList.toggle('on', shown.length > 1);
+      let checked = form.querySelector('input[name="payment_method"]:checked');
+      if (!checked) {
+        checked = form.querySelector(`input[name="payment_method"][value="${avail.mercadopago ? 'mercadopago' : 'flow'}"]`);
+        if (checked) checked.checked = true;
+      }
+      setGateway(shown.length > 1 && checked ? checked.value : 'flow');
+    }
+    render();
     if (payBox && form) {
+      form.querySelectorAll('input[name="payment_method"]').forEach(r => { r.onchange = () => setGateway(r.value); });
       fetch('/api/payment-methods').then(r => r.ok ? r.json() : null).then(m => {
-        if (!m || !m.mercadopago) return;
-        payBox.classList.add('on');
-        const checked = form.querySelector('input[name="payment_method"]:checked');
-        setGateway(checked ? checked.value : 'mercadopago');
-        form.querySelectorAll('input[name="payment_method"]').forEach(r => { r.onchange = () => setGateway(r.value); });
+        if (!m) return;
+        methods = m;
+        render();
       }).catch(() => {});
     }
 
@@ -504,6 +540,7 @@
           customer_region: form.customer_region ? form.customer_region.value.trim() : '',
           items: cart,
           payment_method: gateway,
+          paypal_prueba: gateway === 'paypal' && paypalPrueba,
         };
 
         try {
@@ -588,6 +625,7 @@
               <span>Total</span>
               <strong>${fmt(data.total)}</strong>
             </div>
+            ${data.paypal_usd ? `<div class="order-product-row"><span>Cobrado en PayPal</span><strong>US$${esc(String(data.paypal_usd).replace('.', ','))}</strong></div>` : ''}
           </div>
           <p class="order-info">Cliente: ${esc(data.customer_name)}<br>Fecha: ${new Date(data.created_at).toLocaleDateString('es-CL', { year:'numeric', month:'long', day:'numeric', hour:'2-digit', minute:'2-digit' })}</p>
           ${data.status === 'paid' && data.has_physical !== false ? '<p class="order-info success-msg">Te contactaremos por email para coordinar el envío.</p>' : ''}

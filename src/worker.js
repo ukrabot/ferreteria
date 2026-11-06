@@ -1,6 +1,6 @@
 /**
  * Ferretería Ukra — Worker API
- * Handles checkout (Flow and Mercado Pago), order management, product management, and admin panel API.
+ * Handles checkout (Flow, Mercado Pago and PayPal for digital products), order management, product management, and admin panel API.
  * Static assets are served automatically by Cloudflare Workers Static Assets.
  */
 
@@ -8,6 +8,14 @@ const FLOW_API = 'https://www.flow.cl/api';
 // Mercado Pago (Checkout Pro). Enabled when the MP_ACCESS_TOKEN secret exists.
 // The token is a Cloudflare secret: never put it in wrangler.jsonc (public repo).
 const MP_API = 'https://api.mercadopago.com';
+// PayPal (Orders v2, redirect flow). Only for carts with digital products only.
+// Enabled when the PAYPAL_CLIENT_ID and PAYPAL_CLIENT_SECRET secrets exist.
+// PayPal doesn't take CLP for this account type: the order is charged in USD at
+// the Banco Central "dólar observado" (mindicador.cl), plus PAYPAL_RECARGO_PCT.
+// Set the secret PAYPAL_ENV=sandbox to test with sandbox credentials.
+const PAYPAL_API = 'https://api-m.paypal.com';
+const PAYPAL_API_SANDBOX = 'https://api-m.sandbox.paypal.com';
+const USD_RATE_API = 'https://mindicador.cl/api/dolar';
 
 // Digital products: delivered by a private download link after payment.
 // The file is uploaded from /admin/ and stored in D1 (the repo is public, so
@@ -497,6 +505,241 @@ async function mpSignatureValid(request, env, dataId) {
   return safeEqual(await hmacSHA256(env.MP_WEBHOOK_SECRET, manifest), parts.v1 || '');
 }
 
+// ── PayPal ───────────────────────────────────────────────────────────
+
+const paypalEnabled = env => !!(env.PAYPAL_CLIENT_ID && env.PAYPAL_CLIENT_SECRET);
+const paypalBase = env => (env.PAYPAL_ENV === 'sandbox' ? PAYPAL_API_SANDBOX : PAYPAL_API);
+
+let ppColsDone = false;
+async function ensurePaypalColumns(env) {
+  if (ppColsDone) return;
+  await ensureMpColumns(env); // gateway column
+  try { await env.DB.prepare('ALTER TABLE orders ADD COLUMN paypal_order_id TEXT').run(); } catch {}
+  try { await env.DB.prepare('ALTER TABLE orders ADD COLUMN paypal_usd TEXT').run(); } catch {}
+  try { await env.DB.prepare('ALTER TABLE orders ADD COLUMN paypal_capture_id TEXT').run(); } catch {}
+  ppColsDone = true;
+}
+
+// CLP per USD: dólar observado, cached 6 h in settings. Falls back to the last
+// saved value, then to PAYPAL_USD_FALLBACK (or 950) so checkout never breaks.
+let usdRateMem = null;
+async function getUsdRate(env) {
+  const now = Date.now();
+  if (usdRateMem && now - usdRateMem.at < 6 * 3600e3) return usdRateMem.valor;
+  let saved = null;
+  try {
+    const row = await env.DB.prepare(`SELECT value FROM settings WHERE key = 'usd_clp'`).first();
+    if (row) saved = JSON.parse(row.value);
+  } catch {}
+  if (saved && now - saved.at < 6 * 3600e3) { usdRateMem = saved; return saved.valor; }
+  try {
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), 2500);
+    const res = await fetch(USD_RATE_API, { signal: ctrl.signal, headers: { Accept: 'application/json' } });
+    clearTimeout(t);
+    const d = await res.json();
+    const valor = Number(d?.serie?.[0]?.valor);
+    if (res.ok && valor > 300 && valor < 3000) {
+      const rate = { valor, fecha: String(d.serie[0].fecha || '').substring(0, 10), at: now };
+      usdRateMem = rate;
+      try {
+        await env.DB.prepare(`INSERT INTO settings (key, value) VALUES ('usd_clp', ?)
+          ON CONFLICT(key) DO UPDATE SET value = excluded.value`).bind(JSON.stringify(rate)).run();
+      } catch {}
+      return valor;
+    }
+  } catch (e) {
+    console.error('Dólar observado no disponible:', e.message || e);
+  }
+  if (saved) { usdRateMem = { ...saved, at: now - 5 * 3600e3 }; return saved.valor; } // retry in ~1 h
+  const fb = Number(env.PAYPAL_USD_FALLBACK);
+  return fb > 300 && fb < 3000 ? fb : 950;
+}
+
+function paypalRecargo(env) {
+  const r = Number(env.PAYPAL_RECARGO_PCT || 0);
+  return r >= 0 && r <= 30 ? r : 0;
+}
+
+// Same formula as the checkout page shows: rounded up to the cent.
+function clpToUsd(clp, rate, recargo) {
+  return (Math.ceil((clp / rate) * (1 + recargo / 100) * 100) / 100).toFixed(2);
+}
+
+let ppTokenMem = null;
+async function paypalToken(env) {
+  if (ppTokenMem && ppTokenMem.env === env.PAYPAL_CLIENT_ID && Date.now() < ppTokenMem.exp) return ppTokenMem.token;
+  const res = await fetch(`${paypalBase(env)}/v1/oauth2/token`, {
+    method: 'POST',
+    headers: {
+      Authorization: `Basic ${btoa(`${env.PAYPAL_CLIENT_ID}:${env.PAYPAL_CLIENT_SECRET}`)}`,
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: 'grant_type=client_credentials',
+  });
+  const d = await res.json().catch(() => ({}));
+  if (!res.ok || !d.access_token) {
+    console.error('PayPal token error:', res.status, JSON.stringify(d).substring(0, 200));
+    throw new Error(`PayPal token ${res.status}`);
+  }
+  ppTokenMem = { token: d.access_token, env: env.PAYPAL_CLIENT_ID, exp: Date.now() + Math.max(60, (d.expires_in || 3600) - 300) * 1000 };
+  return d.access_token;
+}
+
+async function paypalRequest(env, path, init = {}) {
+  const res = await fetch(`${paypalBase(env)}${path}`, {
+    ...init,
+    headers: { Authorization: `Bearer ${await paypalToken(env)}`, 'Content-Type': 'application/json', ...(init.headers || {}) },
+  });
+  const text = await res.text();
+  let data = {};
+  try { data = text ? JSON.parse(text) : {}; } catch {}
+  if (!res.ok) {
+    console.error('PayPal error:', res.status, path, text.substring(0, 300));
+    const e = new Error(`PayPal ${res.status}`);
+    e.status = res.status; e.data = data;
+    throw e;
+  }
+  return data;
+}
+
+async function paypalCreateOrder(env, order) {
+  const body = {
+    intent: 'CAPTURE',
+    purchase_units: [{
+      reference_id: order.order_number,
+      custom_id: order.order_number,
+      invoice_id: order.order_number,
+      description: String(order.description).substring(0, 127),
+      soft_descriptor: 'FERRETERIA UKRA',
+      amount: { currency_code: 'USD', value: order.usd },
+    }],
+    payment_source: {
+      paypal: {
+        experience_context: {
+          brand_name: 'Ferretería Ukra',
+          shipping_preference: 'NO_SHIPPING',
+          user_action: 'PAY_NOW',
+          return_url: `${env.SITE_URL}/api/paypal/return`,
+          cancel_url: `${env.SITE_URL}/api/paypal/return?cancel=1`,
+        },
+      },
+    },
+  };
+  return paypalRequest(env, '/v2/checkout/orders', {
+    method: 'POST',
+    headers: { 'PayPal-Request-Id': `create-${order.order_number}` },
+    body: JSON.stringify(body),
+  });
+}
+
+// Reads the order from PayPal (never trusts query strings or webhook bodies),
+// captures it once the buyer approved it, and updates our order.
+async function paypalSyncOrder(env, orderNumber) {
+  await ensurePaypalColumns(env);
+  const row = await env.DB.prepare(
+    `SELECT status, paypal_order_id, paypal_usd FROM orders WHERE order_number = ? AND gateway = 'paypal'`
+  ).bind(orderNumber).first();
+  if (!row || !row.paypal_order_id) return null;
+  const id = encodeURIComponent(row.paypal_order_id);
+  let o = await paypalRequest(env, `/v2/checkout/orders/${id}`);
+  const unit = o.purchase_units?.[0] || {};
+  if ((unit.custom_id || unit.reference_id) !== orderNumber) {
+    console.error('PayPal order mismatch', orderNumber, row.paypal_order_id);
+    return row.status;
+  }
+  if (o.status === 'APPROVED') {
+    try {
+      o = await paypalRequest(env, `/v2/checkout/orders/${id}/capture`, {
+        method: 'POST', headers: { 'PayPal-Request-Id': `capture-${orderNumber}` }, body: '{}',
+      });
+    } catch (e) {
+      if (e.status !== 422) throw e; // 422: already captured or declined → read it again
+      o = await paypalRequest(env, `/v2/checkout/orders/${id}`);
+    }
+  }
+  const cap = (o.purchase_units?.[0]?.payments?.captures || [])[0] || null;
+  let status = 'pending';
+  if (o.status === 'VOIDED') status = 'cancelled';
+  else if (o.status === 'COMPLETED' && cap) {
+    status = { COMPLETED: 'paid', PENDING: 'pending', DECLINED: 'rejected', FAILED: 'rejected',
+               REFUNDED: 'cancelled', PARTIALLY_REFUNDED: 'paid' }[cap.status] || 'pending';
+    if (status === 'paid' && (cap.amount?.currency_code !== 'USD' || Number(cap.amount?.value) + 0.001 < Number(row.paypal_usd))) {
+      console.error('PayPal amount mismatch', orderNumber, JSON.stringify(cap.amount), row.paypal_usd);
+      status = 'pending';
+    }
+  }
+  // A paid order only goes back if the payment was refunded.
+  if (row.status === 'paid' && status !== 'paid' && status !== 'cancelled') status = 'paid';
+  if (row.status === 'cancelled' && status === 'pending') status = 'cancelled';
+  const usd = cap?.amount?.value || row.paypal_usd;
+  await env.DB.prepare(
+    `UPDATE orders SET status = ?, payment_method = ?, paypal_capture_id = COALESCE(?, paypal_capture_id),
+       paid_at = CASE WHEN ? = 'paid' THEN COALESCE(paid_at, ?) ELSE paid_at END
+     WHERE order_number = ?`
+  ).bind(status, `PayPal · US$${usd}`, cap ? String(cap.id) : null, status, new Date().toISOString(), orderNumber).run();
+  return status;
+}
+
+// GET /api/paypal/return?token=<PayPal order id>[&cancel=1]
+async function handlePaypalReturn(request, env, url) {
+  const token = url.searchParams.get('token') || '';
+  if (!paypalEnabled(env) || !/^[A-Z0-9]{8,40}$/.test(token)) {
+    return Response.redirect(`${env.SITE_URL}/orden/?error=no_token`, 302);
+  }
+  await ensurePaypalColumns(env);
+  const row = await env.DB.prepare(
+    `SELECT order_number, download_token FROM orders WHERE paypal_order_id = ? AND gateway = 'paypal'`
+  ).bind(token).first();
+  if (!row) return Response.redirect(`${env.SITE_URL}/orden/?error=no_token`, 302);
+  let status = 'pending';
+  try {
+    status = (await paypalSyncOrder(env, row.order_number)) || 'pending';
+    if (status === 'pending' && url.searchParams.get('cancel')) {
+      await env.DB.prepare(`UPDATE orders SET status = 'cancelled' WHERE order_number = ? AND status = 'pending'`)
+        .bind(row.order_number).run();
+      status = 'cancelled';
+    }
+  } catch (e) {
+    console.error('PayPal return error:', e);
+  }
+  const dl = row.download_token ? `&dl=${row.download_token}` : '';
+  return Response.redirect(`${env.SITE_URL}/orden/?order=${encodeURIComponent(row.order_number)}&status=${status}${dl}`, 302);
+}
+
+// POST /api/paypal/webhook (optional: CHECKOUT.ORDER.APPROVED, PAYMENT.CAPTURE.*).
+// The body only says which order to look at; its state is read from the API.
+async function handlePaypalWebhook(request, env) {
+  if (!paypalEnabled(env)) return new Response('OK');
+  let body = {};
+  try { body = await request.json(); } catch {}
+  const r = body.resource || {};
+  const ppId = String(body.event_type || '').startsWith('CHECKOUT.ORDER') ? r.id : r.supplementary_data?.related_ids?.order_id;
+  if (!ppId || !/^[A-Z0-9]{8,40}$/.test(ppId)) return new Response('OK');
+  try {
+    await ensurePaypalColumns(env);
+    const row = await env.DB.prepare(`SELECT order_number FROM orders WHERE paypal_order_id = ? AND gateway = 'paypal'`).bind(ppId).first();
+    if (row) await paypalSyncOrder(env, row.order_number);
+  } catch (e) {
+    console.error('PayPal webhook error:', e);
+    return new Response('Error', { status: 500 }); // PayPal retries
+  }
+  return new Response('OK');
+}
+
+// GET /api/payment-methods
+async function handlePaymentMethods(env) {
+  const out = { flow: true, mercadopago: !!env.MP_ACCESS_TOKEN, paypal: paypalEnabled(env) };
+  if (out.paypal) {
+    if (env.PAYPAL_ENV === 'sandbox') out.paypal_sandbox = true; // shown only with ?paypal=prueba
+    out.paypal_usd_rate = await getUsdRate(env);
+    out.paypal_recargo = paypalRecargo(env);
+  }
+  const res = json(out);
+  res.headers.set('Cache-Control', 'no-store');
+  return res;
+}
+
 // ── Route: GET /api/products (public) ───────────────────────────────
 
 async function handleGetProducts(request, env, url) {
@@ -529,7 +772,8 @@ async function handleCheckout(request, env) {
   }
 
   const { customer_name, customer_email, customer_phone, customer_comuna, customer_address, customer_region, items } = data;
-  const gateway = data.payment_method === 'mercadopago' && env.MP_ACCESS_TOKEN ? 'mercadopago' : 'flow';
+  const gateway = data.payment_method === 'mercadopago' && env.MP_ACCESS_TOKEN ? 'mercadopago'
+    : data.payment_method === 'paypal' && paypalEnabled(env) ? 'paypal' : 'flow';
   if (!customer_name || !customer_email || !Array.isArray(items) || !items.length) {
     return err('Faltan campos obligatorios: nombre, email y productos');
   }
@@ -578,6 +822,12 @@ async function handleCheckout(request, env) {
   const physicalItems = validatedItems.filter(i => !isDigital(i.slug));
   const hasDigital = physicalItems.length < validatedItems.length;
   const physicalSubtotal = physicalItems.reduce((s, i) => s + i.price * i.quantity, 0);
+  if (gateway === 'paypal' && env.PAYPAL_ENV === 'sandbox' && data.paypal_prueba !== true) {
+    return err('PayPal está en modo de prueba. Paga con Mercado Pago o Flow.');
+  }
+  if (gateway === 'paypal' && (physicalItems.length || !hasDigital)) {
+    return err('PayPal está disponible solo para productos digitales. Para productos con envío paga con Mercado Pago o Flow.');
+  }
   let shipping = 0;
   if (physicalItems.length) {
     shipping = shippingFor(physicalSubtotal, await getShippingSettings(env));
@@ -609,6 +859,24 @@ async function handleCheckout(request, env) {
     await ensureDownloadColumns(env);
     await env.DB.prepare(`UPDATE orders SET download_token = ? WHERE order_number = ?`)
       .bind(randomToken(), order_number).run();
+  }
+
+  if (gateway === 'paypal') {
+    await ensurePaypalColumns(env);
+    try {
+      const usd = clpToUsd(total, await getUsdRate(env), paypalRecargo(env));
+      const names = validatedItems.filter(i => isDigital(i.slug)).map(i => i.name).join(' + ');
+      const pp = await paypalCreateOrder(env, { order_number, usd, description: `Ferretería Ukra: ${names}` });
+      const link = (pp.links || []).find(l => l.rel === 'payer-action' || l.rel === 'approve');
+      if (!pp.id || !link) throw new Error('sin enlace de pago');
+      await env.DB.prepare(`UPDATE orders SET gateway = 'paypal', paypal_order_id = ?, paypal_usd = ? WHERE order_number = ?`)
+        .bind(String(pp.id), usd, order_number).run();
+      return json({ paymentUrl: link.href, orderNumber: order_number, subtotal, shipping, total, usd });
+    } catch (e) {
+      console.error('PayPal checkout error:', e);
+      await env.DB.prepare(`UPDATE orders SET status = 'error' WHERE order_number = ?`).bind(order_number).run();
+      return err('No pudimos abrir PayPal. Intenta de nuevo o paga con Mercado Pago o Flow.', 502);
+    }
   }
 
   if (gateway === 'mercadopago') {
@@ -818,7 +1086,13 @@ async function handleOrderStatus(request, env, url) {
   if (!row) return err('Orden no encontrada', 404);
 
   const products = JSON.parse(row.products);
+  let paypal_usd = null;
+  try {
+    const pp = await env.DB.prepare(`SELECT paypal_usd FROM orders WHERE order_number = ? AND gateway = 'paypal'`).bind(orderNum).first();
+    paypal_usd = pp?.paypal_usd || null;
+  } catch {} // columns not created yet
   return json({
+    paypal_usd,
     order_number: row.order_number,
     customer_name: row.customer_name,
     has_digital: products.some(p => isDigital(p.slug)),
@@ -859,7 +1133,9 @@ async function handleDownload(request, env, url) {
 
   // Payment may still be pending if Flow's confirmation hasn't arrived: re-check it.
   let status = row.status;
-  if (status !== 'paid' && row.gateway === 'mercadopago' && env.MP_ACCESS_TOKEN) {
+  if (status !== 'paid' && row.gateway === 'paypal' && paypalEnabled(env)) {
+    try { status = (await paypalSyncOrder(env, row.order_number)) || status; } catch (e) { console.error('Download PayPal check error:', e); }
+  } else if (status !== 'paid' && row.gateway === 'mercadopago' && env.MP_ACCESS_TOKEN) {
     try { status = (await mpSyncOrder(env, row.order_number)) || status; } catch (e) { console.error('Download MP check error:', e); }
   } else if (status !== 'paid' && row.flow_token) {
     try {
@@ -5272,7 +5548,9 @@ export default {
       if (path === '/api/checkout' && method === 'POST') return handleCheckout(request, env);
       if (path === '/api/flow/confirm' && method === 'POST') return handleFlowConfirm(request, env);
       if (path === '/api/flow/return' && (method === 'GET' || method === 'POST')) return handleFlowReturn(request, env, url);
-      if (path === '/api/payment-methods' && method === 'GET') return json({ flow: true, mercadopago: !!env.MP_ACCESS_TOKEN });
+      if (path === '/api/payment-methods' && method === 'GET') return handlePaymentMethods(env);
+      if (path === '/api/paypal/return' && method === 'GET') return handlePaypalReturn(request, env, url);
+      if (path === '/api/paypal/webhook' && method === 'POST') return handlePaypalWebhook(request, env);
       if (path === '/api/mp/return' && method === 'GET') return handleMpReturn(request, env, url);
       if (path === '/api/mp/webhook' && (method === 'POST' || method === 'GET')) return handleMpWebhook(request, env, url);
       if (path === '/api/order-status' && method === 'GET') return handleOrderStatus(request, env, url);

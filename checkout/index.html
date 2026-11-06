@@ -217,6 +217,7 @@ footer{background:#0F172A;color:#94A3B8;padding:3rem 0 1.5rem;margin-top:48px;bo
           <h3>Medio de pago</h3>
           <label class="pay-opt"><input type="radio" name="payment_method" value="mercadopago" checked><span><strong>Mercado Pago</strong><small>Tarjetas, saldo en Mercado Pago y cuotas</small></span></label>
           <label class="pay-opt"><input type="radio" name="payment_method" value="flow"><span><strong>Flow</strong><small>Webpay: tarjetas de crédito y débito, y transferencia</small></span></label>
+          <label class="pay-opt" style="display:none"><input type="radio" name="payment_method" value="paypal"><span><strong>PayPal</strong><small id="paypal-usd">Cuenta PayPal o tarjeta · se cobra en dólares (USD)</small></span></label>
         </fieldset>
         <button type="submit" class="btn-pay">Pagar con Flow</button>
         <div class="secure-note">
@@ -257,6 +258,6 @@ footer{background:#0F172A;color:#94A3B8;padding:3rem 0 1.5rem;margin-top:48px;bo
 var m=document.getElementById('menuToggle'),n=document.getElementById('mainNav');
 m.addEventListener('click',function(){var o=n.classList.toggle('active');this.setAttribute('aria-expanded',o);this.innerHTML=o?'✕':'☰'});
 </script>
-<script src="/assets/cart.js?v=20261105m"></script>
+<script src="/assets/cart.js?v=20261105n"></script>
 </body>
 </html>
