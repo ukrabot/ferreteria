@@ -270,6 +270,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Llaves Allen y Torx',
     filename: 'Pack-Llaves-Allen-Torx-Ferreteria-Ukra.zip',
   },
+  'pack-paneles-solares-dimensionamiento-ahorro-excel': {
+    name: 'Pack Paneles Solares',
+    filename: 'Pack-Paneles-Solares-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2301,6 +2305,15 @@ const SEED_PRODUCTS = [
     category: 'Herramientas',
     status: 'available',
     sku: 'PACK-ALLEN-TORX',
+  },
+  {
+    slug: 'pack-paneles-solares-dimensionamiento-ahorro-excel',
+    name: 'Pack Paneles Solares: Planilla Excel de Consumo, Dimensionamiento, Ahorro con Net Billing, Retorno a 25 Años y Comparador de Cotizaciones + Guía Ley 20.571 + Checklist de Techo y Mantención',
+    price: 7990,
+    image: '/producto/pack-paneles-solares-dimensionamiento-ahorro-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-SOLAR',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
