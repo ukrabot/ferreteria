@@ -266,6 +266,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Acceso Vehicular',
     filename: 'Pack-Acceso-Vehicular-Ferreteria-Ukra.zip',
   },
+  'pack-llaves-allen-torx-medidas-equivalencias-excel': {
+    name: 'Pack Llaves Allen y Torx',
+    filename: 'Pack-Llaves-Allen-Torx-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2288,6 +2292,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-ACCESO-VEH',
+  },
+  {
+    slug: 'pack-llaves-allen-torx-medidas-equivalencias-excel',
+    name: 'Pack Llaves Allen y Torx: Planilla Excel para Identificar la Medida, Equivalencias mm-Pulgadas, Llave por Perno, Torx y Mi Juego + Tabla de Medidas + Guía de Perno Rodado',
+    price: 7990,
+    image: '/producto/pack-llaves-allen-torx-medidas-equivalencias-excel.webp',
+    category: 'Herramientas',
+    status: 'available',
+    sku: 'PACK-ALLEN-TORX',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
