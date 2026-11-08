@@ -278,6 +278,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Revestimiento de Piedra',
     filename: 'Pack-Revestimiento-Piedra-Ferreteria-Ukra.zip',
   },
+  'pack-estanque-agua-potable-capacidad-mantencion-excel': {
+    name: 'Pack Estanque de Agua Potable',
+    filename: 'Pack-Estanque-Agua-Potable-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2327,6 +2331,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-PIEDRA',
+  },
+  {
+    slug: 'pack-estanque-agua-potable-capacidad-mantencion-excel',
+    name: 'Pack Estanque de Agua Potable: Planilla Excel de Capacidad, Peso y Presión, Desinfección con Cloro, Calendario de Mantención y Comparador de Presupuestos + Guía RIDAA + Checklist de Instalación y Mantención',
+    price: 7990,
+    image: '/producto/pack-estanque-agua-potable-capacidad-mantencion-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-ESTANQUE',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
