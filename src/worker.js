@@ -282,6 +282,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Estanque de Agua Potable',
     filename: 'Pack-Estanque-Agua-Potable-Ferreteria-Ukra.zip',
   },
+  'pack-muebles-cocina-modulos-planchas-herrajes-excel': {
+    name: 'Pack Muebles de Cocina',
+    filename: 'Pack-Muebles-Cocina-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2340,6 +2344,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-ESTANQUE',
+  },
+  {
+    slug: 'pack-muebles-cocina-modulos-planchas-herrajes-excel',
+    name: 'Pack Muebles de Cocina: Planilla Excel de Módulos por Muro, Planchas de Melamina, Tapacanto, Herrajes, Presupuesto y Triángulo de Trabajo + Guía de Medidas y Armado + Checklist de Medición, Compra y Recepción',
+    price: 7990,
+    image: '/producto/pack-muebles-cocina-modulos-planchas-herrajes-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-COCINA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
