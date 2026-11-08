@@ -274,6 +274,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Paneles Solares',
     filename: 'Pack-Paneles-Solares-Ferreteria-Ukra.zip',
   },
+  'pack-revestimiento-piedra-muros-materiales-excel': {
+    name: 'Pack Revestimiento de Piedra',
+    filename: 'Pack-Revestimiento-Piedra-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2314,6 +2318,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-SOLAR',
+  },
+  {
+    slug: 'pack-revestimiento-piedra-muros-materiales-excel',
+    name: 'Pack Revestimiento de Piedra: Planilla Excel de Metros, Cajas, Adhesivo, Rejunte, Sellador, Peso sobre el Muro, Presupuesto y Comparador de Materiales + Guía de Instalación + Checklist de Obra y Mantención',
+    price: 7990,
+    image: '/producto/pack-revestimiento-piedra-muros-materiales-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-PIEDRA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
