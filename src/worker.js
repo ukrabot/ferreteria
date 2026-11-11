@@ -306,6 +306,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Desbrozadora y Orilladora',
     filename: 'Pack-Desbrozadora-Orilladora-Ferreteria-Ukra.zip',
   },
+  'pack-cordon-paralelo-corriente-artefactos-excel': {
+    name: 'Pack Cordón Paralelo',
+    filename: 'Pack-Cordon-Paralelo-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2418,6 +2422,15 @@ const SEED_PRODUCTS = [
     category: 'Herramientas',
     status: 'available',
     sku: 'PACK-DESBROZADORA',
+  },
+  {
+    slug: 'pack-cordon-paralelo-corriente-artefactos-excel',
+    name: 'Pack Cordón Paralelo: Planilla Excel para Revisar Artefactos, Corriente Admisible y Tipo de Cordón según RIC N°04 + Guía + Checklist de Revisión',
+    price: 7990,
+    image: '/producto/pack-cordon-paralelo-corriente-artefactos-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-CORDON-PARALELO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
