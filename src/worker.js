@@ -346,6 +346,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Cerámica en Pared',
     filename: 'Pack-Ceramica-Pared-Ferreteria-Ukra.zip',
   },
+  'pack-mantencion-piscina-cloro-ph-excel': {
+    name: 'Pack Mantención de Piscina',
+    filename: 'Pack-Mantencion-Piscina-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2548,6 +2552,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-CERAMICA-PARED',
+  },
+  {
+    slug: 'pack-mantencion-piscina-cloro-ph-excel',
+    name: 'Pack Mantención de Piscina: Planilla Excel de Volumen, Dosis de Cloro por Producto, Choque, pH y Alcalinidad, Horas de Filtración, Registro y Temporada + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-mantencion-piscina-cloro-ph-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-PISCINA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
