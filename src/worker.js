@@ -294,6 +294,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Multímetro',
     filename: 'Pack-Multimetro-Ferreteria-Ukra.zip',
   },
+  'pack-bateria-careta-fotosensible-diagnostico-excel': {
+    name: 'Pack Batería Careta',
+    filename: 'Pack-Bateria-Careta-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2379,6 +2383,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-MULTIMETRO',
+  },
+  {
+    slug: 'pack-bateria-careta-fotosensible-diagnostico-excel',
+    name: 'Pack Batería Careta: Planilla Excel de Diagnóstico de Careta Fotosensible, Registro de Pila con Voltajes, Calendario de Mantención y Costo de Reparar + Guía de la Pila + Checklist Diario',
+    price: 7990,
+    image: '/producto/pack-bateria-careta-fotosensible-diagnostico-excel.webp',
+    category: 'Herramientas',
+    status: 'available',
+    sku: 'PACK-BATERIA-CARETA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
