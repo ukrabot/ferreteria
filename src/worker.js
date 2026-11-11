@@ -322,6 +322,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Perforación Recta',
     filename: 'Pack-Perforacion-Recta-Ferreteria-Ukra.zip',
   },
+  'pack-selladores-rosca-teflon-estopa-excel': {
+    name: 'Pack Selladores de Rosca',
+    filename: 'Pack-Selladores-Rosca-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2470,6 +2474,15 @@ const SEED_PRODUCTS = [
     category: 'Herramientas',
     status: 'available',
     sku: 'PACK-PERFORACION-RECTA',
+  },
+  {
+    slug: 'pack-selladores-rosca-teflon-estopa-excel',
+    name: 'Pack Selladores de Rosca: Planilla Excel para Elegir Sellador, Identificar Rosca BSP o NPT, Materiales y Prueba de Hermeticidad + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-selladores-rosca-teflon-estopa-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-SELLADORES-ROSCA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
