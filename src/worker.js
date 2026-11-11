@@ -298,6 +298,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Batería Careta',
     filename: 'Pack-Bateria-Careta-Ferreteria-Ukra.zip',
   },
+  'pack-tv-ladrillo-hueco-anclajes-fuerza-altura-excel': {
+    name: 'Pack TV en Ladrillo Hueco',
+    filename: 'Pack-TV-Ladrillo-Hueco-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2392,6 +2396,15 @@ const SEED_PRODUCTS = [
     category: 'Herramientas',
     status: 'available',
     sku: 'PACK-BATERIA-CARETA',
+  },
+  {
+    slug: 'pack-tv-ladrillo-hueco-anclajes-fuerza-altura-excel',
+    name: 'Pack TV en Ladrillo Hueco: Planilla Excel de Fuerza en los Anclajes, Altura de la Pantalla, Compatibilidad VESA y Lista de Materiales + Guía de Instalación + Checklist',
+    price: 7990,
+    image: '/producto/pack-tv-ladrillo-hueco-anclajes-fuerza-altura-excel.webp',
+    category: 'Herramientas',
+    status: 'available',
+    sku: 'PACK-TV-HUECO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
