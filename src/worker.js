@@ -350,6 +350,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Mantención de Piscina',
     filename: 'Pack-Mantencion-Piscina-Ferreteria-Ukra.zip',
   },
+  'pack-termosifon-solar-ahorro-instalacion-excel': {
+    name: 'Pack Termosifón Solar',
+    filename: 'Pack-Termosifon-Solar-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2020,7 +2024,7 @@ const SEED_PRODUCTS = [
     image: '/producto/pack-muro-contencion-drenaje-supervision-excel.webp',
     category: 'Construcción',
     status: 'available',
-    sku: 'PACK-MURO',
+    sku: 'PACK-MURO-CONTENCION',
   },
   {
     slug: 'pack-impermeabilizacion-radier-capilaridad-excel',
@@ -2560,7 +2564,16 @@ const SEED_PRODUCTS = [
     image: '/producto/pack-mantencion-piscina-cloro-ph-excel.webp',
     category: 'Gasfitería',
     status: 'available',
-    sku: 'PACK-PISCINA',
+    sku: 'PACK-MANTENCION-PISCINA',
+  },
+  {
+    slug: 'pack-termosifon-solar-ahorro-instalacion-excel',
+    name: 'Pack Termosifón Solar: Planilla Excel de Litros por Persona, Ahorro y Retorno, Inclinación y Peso en el Techo, Compatibilidad con el Calefont, Presupuesto y Mantención + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-termosifon-solar-ahorro-instalacion-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-TERMOSIFON',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
