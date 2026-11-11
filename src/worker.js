@@ -330,6 +330,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Alargadores',
     filename: 'Pack-Alargadores-Ferreteria-Ukra.zip',
   },
+  'pack-ceramica-piso-materiales-trazado-excel': {
+    name: 'Pack Cerámica en Piso',
+    filename: 'Pack-Ceramica-Piso-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2496,6 +2500,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-ALARGADORES',
+  },
+  {
+    slug: 'pack-ceramica-piso-materiales-trazado-excel',
+    name: 'Pack Cerámica en Piso: Planilla Excel de Cajas por Recinto, Adhesivo y Fragüe, Trazado de Cortes, Cobertura y Presupuesto + Guía + Checklist de Obra',
+    price: 7990,
+    image: '/producto/pack-ceramica-piso-materiales-trazado-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-CERAMICA-PISO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
