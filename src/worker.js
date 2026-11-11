@@ -326,6 +326,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Selladores de Rosca',
     filename: 'Pack-Selladores-Rosca-Ferreteria-Ukra.zip',
   },
+  'pack-alargadores-carga-carrete-comparar-excel': {
+    name: 'Pack Alargadores',
+    filename: 'Pack-Alargadores-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2483,6 +2487,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-SELLADORES-ROSCA',
+  },
+  {
+    slug: 'pack-alargadores-carga-carrete-comparar-excel',
+    name: 'Pack Alargadores: Planilla Excel de Carga del Alargador, Carrete Enrollado, Comparar Modelos y Revisión + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-alargadores-carga-carrete-comparar-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-ALARGADORES',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
