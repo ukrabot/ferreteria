@@ -342,6 +342,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Espina de Pescado',
     filename: 'Pack-Espina-de-Pescado-Ferreteria-Ukra.zip',
   },
+  'pack-ceramica-pared-adhesivo-trazado-excel': {
+    name: 'Pack Cerámica en Pared',
+    filename: 'Pack-Ceramica-Pared-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2535,6 +2539,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-ESPINA-PESCADO',
+  },
+  {
+    slug: 'pack-ceramica-pared-adhesivo-trazado-excel',
+    name: 'Pack Cerámica en Pared: Planilla Excel de Cajas por Muro, Adhesivo Recomendado (EN 12004), Pastina, Trazado con Listón, Prueba de Destape y Presupuesto + Guía + Checklist de Obra',
+    price: 7990,
+    image: '/producto/pack-ceramica-pared-adhesivo-trazado-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-CERAMICA-PARED',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
