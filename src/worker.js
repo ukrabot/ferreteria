@@ -314,6 +314,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Calzado Dieléctrico',
     filename: 'Pack-Calzado-Dielectrico-Ferreteria-Ukra.zip',
   },
+  'pack-control-solar-ventanas-alero-roller-excel': {
+    name: 'Pack Control Solar',
+    filename: 'Pack-Control-Solar-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2444,6 +2448,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-CALZADO-DIELECTRICO',
+  },
+  {
+    slug: 'pack-control-solar-ventanas-alero-roller-excel',
+    name: 'Pack Control Solar: Planilla Excel de Solución por Ventana y Orientación, Sombra del Alero, Medidas de Cortina Roller y Presupuesto + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-control-solar-ventanas-alero-roller-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-CONTROL-SOLAR',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
