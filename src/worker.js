@@ -334,6 +334,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Cerámica en Piso',
     filename: 'Pack-Ceramica-Piso-Ferreteria-Ukra.zip',
   },
+  'pack-juntas-dilatacion-ceramica-exterior-excel': {
+    name: 'Pack Juntas de Dilatación',
+    filename: 'Pack-Juntas-Dilatacion-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2509,6 +2513,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-CERAMICA-PISO',
+  },
+  {
+    slug: 'pack-juntas-dilatacion-ceramica-exterior-excel',
+    name: 'Pack Juntas de Dilatación en Cerámica Exterior: Planilla Excel de Paños, Movimiento Térmico, Ancho de Junta, Sellador, Cordón y Presupuesto + Guía + Checklist de Obra',
+    price: 7990,
+    image: '/producto/pack-juntas-dilatacion-ceramica-exterior-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-JUNTAS-DILATACION',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
