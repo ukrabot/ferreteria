@@ -302,6 +302,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack TV en Ladrillo Hueco',
     filename: 'Pack-TV-Ladrillo-Hueco-Ferreteria-Ukra.zip',
   },
+  'pack-desbrozadora-orilladora-elegir-mezcla-mantencion-excel': {
+    name: 'Pack Desbrozadora y Orilladora',
+    filename: 'Pack-Desbrozadora-Orilladora-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2405,6 +2409,15 @@ const SEED_PRODUCTS = [
     category: 'Herramientas',
     status: 'available',
     sku: 'PACK-TV-HUECO',
+  },
+  {
+    slug: 'pack-desbrozadora-orilladora-elegir-mezcla-mantencion-excel',
+    name: 'Pack Desbrozadora y Orilladora: Planilla Excel para Elegir Herramienta, Hilo o Cuchilla, Mezcla de Dos Tiempos, Mantención y Presupuesto + Guía de Uso + Checklist',
+    price: 7990,
+    image: '/producto/pack-desbrozadora-orilladora-elegir-mezcla-mantencion-excel.webp',
+    category: 'Herramientas',
+    status: 'available',
+    sku: 'PACK-DESBROZADORA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
