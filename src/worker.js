@@ -290,6 +290,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Cambiar Cerradura',
     filename: 'Pack-Cambiar-Cerradura-Ferreteria-Ukra.zip',
   },
+  'pack-multimetro-mediciones-ley-de-ohm-cat-excel': {
+    name: 'Pack Multímetro',
+    filename: 'Pack-Multimetro-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2366,6 +2370,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-CERRADURA',
+  },
+  {
+    slug: 'pack-multimetro-mediciones-ley-de-ohm-cat-excel',
+    name: 'Pack Multímetro: Planilla Excel de Ley de Ohm, Registro de Mediciones con Rangos, Resistencias Esperadas y Elección por Categoría CAT + Guía Rápida + Checklist de Seguridad',
+    price: 7990,
+    image: '/producto/pack-multimetro-mediciones-ley-de-ohm-cat-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-MULTIMETRO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
