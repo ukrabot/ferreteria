@@ -318,6 +318,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Control Solar',
     filename: 'Pack-Control-Solar-Ferreteria-Ukra.zip',
   },
+  'pack-perforacion-recta-rpm-casquillo-excel': {
+    name: 'Pack Perforación Recta',
+    filename: 'Pack-Perforacion-Recta-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2457,6 +2461,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-CONTROL-SOLAR',
+  },
+  {
+    slug: 'pack-perforacion-recta-rpm-casquillo-excel',
+    name: 'Pack Perforación Recta: Planilla Excel de RPM por Material y Diámetro, Desviación, Casquillo y Plan de Agujeros + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-perforacion-recta-rpm-casquillo-excel.webp',
+    category: 'Herramientas',
+    status: 'available',
+    sku: 'PACK-PERFORACION-RECTA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
