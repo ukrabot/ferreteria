@@ -338,6 +338,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Juntas de Dilatación',
     filename: 'Pack-Juntas-Dilatacion-Ferreteria-Ukra.zip',
   },
+  'pack-espina-de-pescado-ceramica-trazado-excel': {
+    name: 'Pack Espina de Pescado',
+    filename: 'Pack-Espina-de-Pescado-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2522,6 +2526,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-JUNTAS-DILATACION',
+  },
+  {
+    slug: 'pack-espina-de-pescado-ceramica-trazado-excel',
+    name: 'Pack Espina de Pescado: Planilla Excel de Cajas con Merma por Patrón, Adhesivo y Fragüe, Trazado de Franjas a 45°, Control de Ángulo y Presupuesto + Guía + Checklist de Obra',
+    price: 7990,
+    image: '/producto/pack-espina-de-pescado-ceramica-trazado-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-ESPINA-PESCADO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
