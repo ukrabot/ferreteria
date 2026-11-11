@@ -286,6 +286,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Muebles de Cocina',
     filename: 'Pack-Muebles-Cocina-Ferreteria-Ukra.zip',
   },
+  'pack-cambiar-cerradura-bombin-medida-diagnostico-excel': {
+    name: 'Pack Cambiar Cerradura',
+    filename: 'Pack-Cambiar-Cerradura-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2353,6 +2357,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-COCINA',
+  },
+  {
+    slug: 'pack-cambiar-cerradura-bombin-medida-diagnostico-excel',
+    name: 'Pack Cambiar Cerradura: Planilla Excel de Diagnóstico, Medida del Bombín Europeo, Comparador de Opciones y Registro de Llaves + Guía Paso a Paso + Checklist de Compra y Mantención',
+    price: 7990,
+    image: '/producto/pack-cambiar-cerradura-bombin-medida-diagnostico-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-CERRADURA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
