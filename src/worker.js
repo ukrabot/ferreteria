@@ -482,6 +482,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Cámaras de Seguridad',
     filename: 'Pack-Camaras-Seguridad-Ferreteria-Ukra.zip',
   },
+  'pack-regulador-gas-balon-presiones-excel': {
+    name: 'Pack Regulador de Gas',
+    filename: 'Pack-Regulador-Gas-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2990,6 +2994,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-CAMARAS-SEGURIDAD',
+  },
+  {
+    slug: 'pack-regulador-gas-balon-presiones-excel',
+    name: 'Pack Regulador de Gas: Planilla Excel de Consumo y Duración del Balón, Conversor de Presiones, Acetileno y Revisión + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-regulador-gas-balon-presiones-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-REGULADOR-GAS',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
