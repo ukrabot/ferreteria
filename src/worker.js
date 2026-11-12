@@ -358,6 +358,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Calefont o Termo',
     filename: 'Pack-Calefont-o-Termo-Ferreteria-Ukra.zip',
   },
+  'pack-jacuzzi-spa-peso-circuito-agua-excel': {
+    name: 'Pack Jacuzzi y Spa',
+    filename: 'Pack-Jacuzzi-Spa-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2587,6 +2591,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-CALEFONT-TERMO',
+  },
+  {
+    slug: 'pack-jacuzzi-spa-peso-circuito-agua-excel',
+    name: 'Pack Jacuzzi y Spa: Planilla Excel de Peso Lleno y Carga sobre el Piso, Circuito Eléctrico, Tratamiento y Cambio de Agua, Energía, Presupuesto y Mantención + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-jacuzzi-spa-peso-circuito-agua-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-JACUZZI-SPA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
