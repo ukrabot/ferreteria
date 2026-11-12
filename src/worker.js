@@ -390,6 +390,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Aislación Cielo Raso',
     filename: 'Pack-Aislacion-Cielo-Raso-Ferreteria-Ukra.zip',
   },
+  'pack-aislacion-acustica-sellado-trasdosado-excel': {
+    name: 'Pack Aislación Acústica',
+    filename: 'Pack-Aislacion-Acustica-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2691,6 +2695,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-AISLACION-CIELO',
+  },
+  {
+    slug: 'pack-aislacion-acustica-sellado-trasdosado-excel',
+    name: 'Pack Aislación Acústica: Planilla Excel de Diagnóstico del Ruido, Filtraciones, Puerta y Rendijas, Trasdosado y Presupuesto + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-aislacion-acustica-sellado-trasdosado-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-AISLACION-ACUSTICA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
