@@ -366,6 +366,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Presión y Caudal de Agua',
     filename: 'Pack-Presion-Caudal-Agua-Ferreteria-Ukra.zip',
   },
+  'pack-horno-empotrado-nicho-circuito-consumo-excel': {
+    name: 'Pack Horno Empotrado',
+    filename: 'Pack-Horno-Empotrado-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2613,6 +2617,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-PRESION-CAUDAL',
+  },
+  {
+    slug: 'pack-horno-empotrado-nicho-circuito-consumo-excel',
+    name: 'Pack Horno Empotrado: Planilla Excel de Medidas del Nicho, Circuito Eléctrico, Consumo y Costo al Año, Comparación de Modelos y Presupuesto + Guía + Checklist de Instalación',
+    price: 7990,
+    image: '/producto/pack-horno-empotrado-nicho-circuito-consumo-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-HORNO-EMPOTRADO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
