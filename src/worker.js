@@ -470,6 +470,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Rejas de Protección',
     filename: 'Pack-Rejas-Proteccion-Ferreteria-Ukra.zip',
   },
+  'pack-refuerzo-bisagras-puerta-excel': {
+    name: 'Pack Refuerzo de Bisagras',
+    filename: 'Pack-Refuerzo-Bisagras-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2951,6 +2955,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-REJAS-PROTECCION',
+  },
+  {
+    slug: 'pack-refuerzo-bisagras-puerta-excel',
+    name: 'Pack Refuerzo de Bisagras: Planilla Excel de Peso de la Puerta, Bisagras, Tornillo según el Muro, Compra y Holguras + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-refuerzo-bisagras-puerta-excel.webp',
+    category: 'Herramientas',
+    status: 'available',
+    sku: 'PACK-REFUERZO-BISAGRAS',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
