@@ -434,6 +434,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Riego por Goteo',
     filename: 'Pack-Riego-por-Goteo-Ferreteria-Ukra.zip',
   },
+  'pack-riego-por-aspersion-cesped-zonas-excel': {
+    name: 'Pack Riego por Aspersión',
+    filename: 'Pack-Riego-por-Aspersion-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2834,6 +2838,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-RIEGO-GOTEO-ZONAS',
+  },
+  {
+    slug: 'pack-riego-por-aspersion-cesped-zonas-excel',
+    name: 'Pack Riego por Aspersión: Planilla Excel de Grilla de Aspersores, Zonas, Milímetros por Hora, Programa y Presupuesto + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-riego-por-aspersion-cesped-zonas-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-RIEGO-ASPERSION',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
