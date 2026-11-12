@@ -474,6 +474,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Refuerzo de Bisagras',
     filename: 'Pack-Refuerzo-Bisagras-Ferreteria-Ukra.zip',
   },
+  'pack-closet-a-medida-modulos-excel': {
+    name: 'Pack Clóset a Medida',
+    filename: 'Pack-Closet-a-Medida-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2964,6 +2968,15 @@ const SEED_PRODUCTS = [
     category: 'Herramientas',
     status: 'available',
     sku: 'PACK-REFUERZO-BISAGRAS',
+  },
+  {
+    slug: 'pack-closet-a-medida-modulos-excel',
+    name: 'Pack Clóset a Medida: Planilla Excel de Módulos, Capacidad según tu Ropa, Planchas, Herrajes y Presupuesto + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-closet-a-medida-modulos-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-CLOSET-MEDIDA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
