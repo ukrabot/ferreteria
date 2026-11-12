@@ -414,6 +414,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Instalación Estufa a Leña',
     filename: 'Pack-Instalacion-Estufa-Lena-Ferreteria-Ukra.zip',
   },
+  'pack-aire-acondicionado-portatil-btu-consumo-excel': {
+    name: 'Pack Aire Acondicionado Portátil',
+    filename: 'Pack-Aire-Acondicionado-Portatil-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2769,6 +2773,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-ESTUFA-LENA',
+  },
+  {
+    slug: 'pack-aire-acondicionado-portatil-btu-consumo-excel',
+    name: 'Pack Aire Acondicionado Portátil: Planilla Excel de BTU, Comparación de Modelos, Consumo de Luz y Placa para la Ventana + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-aire-acondicionado-portatil-btu-consumo-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-AIRE-PORTATIL',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
