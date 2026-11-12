@@ -374,6 +374,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Rodamientos de Lavadora',
     filename: 'Pack-Rodamientos-Lavadora-Ferreteria-Ukra.zip',
   },
+  'pack-goteras-losa-concreto-diagnostico-materiales-excel': {
+    name: 'Pack Goteras en Losa',
+    filename: 'Pack-Goteras-Losa-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2639,6 +2643,15 @@ const SEED_PRODUCTS = [
     category: 'Herramientas',
     status: 'available',
     sku: 'PACK-RODAMIENTOS-LAVADORA',
+  },
+  {
+    slug: 'pack-goteras-losa-concreto-diagnostico-materiales-excel',
+    name: 'Pack Goteras en Losa de Concreto: Planilla Excel de Diagnóstico con Manguera, Fisuras, Pendiente y Materiales, Plan con Pronóstico, Presupuesto y Mantención + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-goteras-losa-concreto-diagnostico-materiales-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-GOTERAS-LOSA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
