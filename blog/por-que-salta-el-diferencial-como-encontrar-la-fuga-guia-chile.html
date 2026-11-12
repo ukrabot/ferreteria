@@ -501,6 +501,6 @@
 function toggleFaq(btn){var expanded=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',!expanded);var resp=btn.nextElementSibling;resp.classList.toggle('abierta',!expanded)}
 const menuToggle=document.getElementById('menuToggle');const mainNav=document.getElementById('mainNav');menuToggle.addEventListener('click',function(){const isOpen=mainNav.classList.toggle('active');this.setAttribute('aria-expanded',isOpen);this.innerHTML=isOpen?'✕':'☰'});document.querySelectorAll('#mainNav a').forEach(link=>{link.addEventListener('click',()=>{if(window.innerWidth<=860){mainNav.classList.remove('active');menuToggle.innerHTML='☰';menuToggle.setAttribute('aria-expanded','false')}})});
 </script>
-<script src="/assets/cart.js?v=20261113c" defer></script>
+<script src="/assets/cart.js?v=20261113d" defer></script>
 </body>
 </html>

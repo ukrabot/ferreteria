@@ -502,6 +502,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Electrodos',
     filename: 'Pack-Electrodos-Ferreteria-Ukra.zip',
   },
+  'pack-escalera-peldanos-trazado-baranda-excel': {
+    name: 'Pack Escalera',
+    filename: 'Pack-Escalera-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3055,6 +3059,15 @@ const SEED_PRODUCTS = [
     category: 'Herramientas',
     status: 'available',
     sku: 'PACK-ELECTRODOS',
+  },
+  {
+    slug: 'pack-escalera-peldanos-trazado-baranda-excel',
+    name: 'Pack Escalera: Planilla Excel de Peldaños, Huella y Contrahuella, Trazado, Altura de Paso, Baranda y Materiales + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-escalera-peldanos-trazado-baranda-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-ESCALERA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
