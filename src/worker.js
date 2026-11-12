@@ -406,6 +406,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Cálculo de Pintura',
     filename: 'Pack-Calculo-Pintura-Ferreteria-Ukra.zip',
   },
+  'pack-consumo-estufa-gas-balon-costo-excel': {
+    name: 'Pack Consumo Estufa a Gas',
+    filename: 'Pack-Consumo-Estufa-Gas-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2743,6 +2747,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-CALCULO-PINTURA',
+  },
+  {
+    slug: 'pack-consumo-estufa-gas-balon-costo-excel',
+    name: 'Pack Consumo Estufa a Gas: Planilla Excel de Gramos por Hora, Balones por Mes, Costo de la Temporada y Comparación de Energías + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-consumo-estufa-gas-balon-costo-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-ESTUFA-GAS',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
