@@ -426,6 +426,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Limpieza de Evaporadores',
     filename: 'Pack-Limpieza-Evaporadores-Ferreteria-Ukra.zip',
   },
+  'pack-tragaluz-claraboya-tamano-tunel-excel': {
+    name: 'Pack Tragaluz y Claraboya',
+    filename: 'Pack-Tragaluz-Claraboya-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2808,6 +2812,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-LIMPIEZA-EVAPORADOR',
+  },
+  {
+    slug: 'pack-tragaluz-claraboya-tamano-tunel-excel',
+    name: 'Pack Tragaluz y Claraboya: Planilla Excel de Tamaño, Sistema, Medidas Estándar, Túnel de Luz y Presupuesto + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-tragaluz-claraboya-tamano-tunel-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-TRAGALUZ',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
