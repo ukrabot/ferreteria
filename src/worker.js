@@ -370,6 +370,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Horno Empotrado',
     filename: 'Pack-Horno-Empotrado-Ferreteria-Ukra.zip',
   },
+  'pack-rodamientos-lavadora-diagnostico-repuesto-excel': {
+    name: 'Pack Rodamientos de Lavadora',
+    filename: 'Pack-Rodamientos-Lavadora-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2626,6 +2630,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-HORNO-EMPOTRADO',
+  },
+  {
+    slug: 'pack-rodamientos-lavadora-diagnostico-repuesto-excel',
+    name: 'Pack Rodamientos de Lavadora: Planilla Excel de Diagnóstico, Medidas por Código, Registro del Desarme, Costos Reparar o Comprar y Prueba Final + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-rodamientos-lavadora-diagnostico-repuesto-excel.webp',
+    category: 'Herramientas',
+    status: 'available',
+    sku: 'PACK-RODAMIENTOS-LAVADORA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
