@@ -466,6 +466,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Perforar sin Riesgo',
     filename: 'Pack-Perforar-Sin-Riesgo-Ferreteria-Ukra.zip',
   },
+  'pack-rejas-proteccion-ventanas-excel': {
+    name: 'Pack Rejas de Protección',
+    filename: 'Pack-Rejas-Proteccion-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2938,6 +2942,15 @@ const SEED_PRODUCTS = [
     category: 'Herramientas',
     status: 'available',
     sku: 'PACK-PERFORAR-SIN-RIESGO',
+  },
+  {
+    slug: 'pack-rejas-proteccion-ventanas-excel',
+    name: 'Pack Rejas de Protección: Planilla Excel de Medidas, Barrotes, Anclajes, Salida de Emergencia, Presupuesto y Encargo + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-rejas-proteccion-ventanas-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-REJAS-PROTECCION',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
