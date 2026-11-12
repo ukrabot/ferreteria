@@ -362,6 +362,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Jacuzzi y Spa',
     filename: 'Pack-Jacuzzi-Spa-Ferreteria-Ukra.zip',
   },
+  'pack-presion-caudal-agua-fugas-excel': {
+    name: 'Pack Presión y Caudal de Agua',
+    filename: 'Pack-Presion-Caudal-Agua-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2600,6 +2604,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-JACUZZI-SPA',
+  },
+  {
+    slug: 'pack-presion-caudal-agua-fugas-excel',
+    name: 'Pack Presión y Caudal de Agua: Planilla Excel de Presión Estática y Dinámica, Caudal por Artefacto, Velocidad en la Cañería, Prueba de Fugas y Conversión de Unidades + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-presion-caudal-agua-fugas-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-PRESION-CAUDAL',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
