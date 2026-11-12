@@ -438,6 +438,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Riego por Aspersión',
     filename: 'Pack-Riego-por-Aspersion-Ferreteria-Ukra.zip',
   },
+  'pack-led-bajo-mueble-cocina-transformador-excel': {
+    name: 'Pack LED Bajo Mueble',
+    filename: 'Pack-LED-Bajo-Mueble-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2847,6 +2851,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-RIEGO-ASPERSION',
+  },
+  {
+    slug: 'pack-led-bajo-mueble-cocina-transformador-excel',
+    name: 'Pack LED Bajo Mueble de Cocina: Planilla Excel de Tramos, Transformador, Caída de Tensión, Cable, Materiales y Consumo + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-led-bajo-mueble-cocina-transformador-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-LED-BAJO-MUEBLE',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
