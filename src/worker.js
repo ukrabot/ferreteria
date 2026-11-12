@@ -382,6 +382,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Puerta Corredera',
     filename: 'Pack-Puerta-Corredera-Ferreteria-Ukra.zip',
   },
+  'pack-radier-autonivelante-niveles-sacos-excel': {
+    name: 'Pack Radier Autonivelante',
+    filename: 'Pack-Radier-Autonivelante-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2665,6 +2669,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-PUERTA-CORREDERA',
+  },
+  {
+    slug: 'pack-radier-autonivelante-niveles-sacos-excel',
+    name: 'Pack Radier con Mortero Autonivelante: Planilla Excel de Mapa de Niveles, Sacos e Imprimante, Plan de Vaciado, Secado y Presupuesto + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-radier-autonivelante-niveles-sacos-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-RADIER-AUTONIVELANTE',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
