@@ -410,6 +410,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Consumo Estufa a Gas',
     filename: 'Pack-Consumo-Estufa-Gas-Ferreteria-Ukra.zip',
   },
+  'pack-instalacion-estufa-lena-canon-materiales-excel': {
+    name: 'Pack Instalación Estufa a Leña',
+    filename: 'Pack-Instalacion-Estufa-Lena-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2756,6 +2760,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-ESTUFA-GAS',
+  },
+  {
+    slug: 'pack-instalacion-estufa-lena-canon-materiales-excel',
+    name: 'Pack Instalación Estufa a Leña: Planilla Excel de Distancias, Base, Cañón por Tramos, Materiales, Consumo de Leña y Mantención + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-instalacion-estufa-lena-canon-materiales-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-ESTUFA-LENA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
