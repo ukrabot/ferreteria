@@ -490,6 +490,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Tarugos para Pared',
     filename: 'Pack-Tarugos-Pared-Ferreteria-Ukra.zip',
   },
+  'pack-deshumidificador-litros-reales-consumo-excel': {
+    name: 'Pack Deshumidificador',
+    filename: 'Pack-Deshumidificador-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3016,6 +3020,15 @@ const SEED_PRODUCTS = [
     category: 'Herramientas',
     status: 'available',
     sku: 'PACK-TARUGOS-PARED',
+  },
+  {
+    slug: 'pack-deshumidificador-litros-reales-consumo-excel',
+    name: 'Pack Deshumidificador: Planilla Excel de Litros Reales, Consumo y Costo de Luz, Vapor de la Casa y Ajuste del Higrostato + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-deshumidificador-litros-reales-consumo-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-DESHUMIDIFICADOR',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
