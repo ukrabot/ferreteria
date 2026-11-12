@@ -386,6 +386,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Radier Autonivelante',
     filename: 'Pack-Radier-Autonivelante-Ferreteria-Ukra.zip',
   },
+  'pack-aislacion-cielo-raso-espesor-placas-excel': {
+    name: 'Pack Aislación Cielo Raso',
+    filename: 'Pack-Aislacion-Cielo-Raso-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2678,6 +2682,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-RADIER-AUTONIVELANTE',
+  },
+  {
+    slug: 'pack-aislacion-cielo-raso-espesor-placas-excel',
+    name: 'Pack Aislación de Cielo Raso con EPS: Planilla Excel de Exigencia por Zona Térmica, Espesor, Placas, Ahorro y Presupuesto + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-aislacion-cielo-raso-espesor-placas-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-AISLACION-CIELO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
