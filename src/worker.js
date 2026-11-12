@@ -402,6 +402,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Impermeabilizante de Techo',
     filename: 'Pack-Impermeabilizante-Techo-Ferreteria-Ukra.zip',
   },
+  'pack-calculo-pintura-casa-litros-envases-excel': {
+    name: 'Pack Cálculo de Pintura',
+    filename: 'Pack-Calculo-Pintura-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2730,6 +2734,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-IMPERMEABILIZANTE-TECHO',
+  },
+  {
+    slug: 'pack-calculo-pintura-casa-litros-envases-excel',
+    name: 'Pack Cálculo de Pintura para la Casa: Planilla Excel por Recinto y Fachada, Litros por Producto, Galones o Tinetas y Presupuesto + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-calculo-pintura-casa-litros-envases-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-CALCULO-PINTURA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
