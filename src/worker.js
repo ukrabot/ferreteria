@@ -418,6 +418,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Aire Acondicionado Portátil',
     filename: 'Pack-Aire-Acondicionado-Portatil-Ferreteria-Ukra.zip',
   },
+  'pack-instalacion-split-canerias-cotizacion-excel': {
+    name: 'Pack Instalación Split',
+    filename: 'Pack-Instalacion-Split-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2782,6 +2786,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-AIRE-PORTATIL',
+  },
+  {
+    slug: 'pack-instalacion-split-canerias-cotizacion-excel',
+    name: 'Pack Instalación Split: Planilla Excel de Recorrido de Cañería, Drenaje, Cotizaciones, Presupuesto y Recepción del Trabajo + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-instalacion-split-canerias-cotizacion-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-INSTALACION-SPLIT',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
