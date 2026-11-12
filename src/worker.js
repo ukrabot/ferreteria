@@ -394,6 +394,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Aislación Acústica',
     filename: 'Pack-Aislacion-Acustica-Ferreteria-Ukra.zip',
   },
+  'pack-lana-aislante-vidrio-mineral-espesor-excel': {
+    name: 'Pack Lana Aislante',
+    filename: 'Pack-Lana-Aislante-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2704,6 +2708,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-AISLACION-ACUSTICA',
+  },
+  {
+    slug: 'pack-lana-aislante-vidrio-mineral-espesor-excel',
+    name: 'Pack Lana Aislante (Vidrio o Mineral): Planilla Excel de Exigencia por Zona, Opciones de Espesor con Costo, Rollos y Presupuesto + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-lana-aislante-vidrio-mineral-espesor-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-LANA-AISLANTE',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
