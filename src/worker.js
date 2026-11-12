@@ -378,6 +378,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Goteras en Losa',
     filename: 'Pack-Goteras-Losa-Ferreteria-Ukra.zip',
   },
+  'pack-puerta-corredera-medidas-herraje-excel': {
+    name: 'Pack Puerta Corredera',
+    filename: 'Pack-Puerta-Corredera-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2652,6 +2656,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-GOTERAS-LOSA',
+  },
+  {
+    slug: 'pack-puerta-corredera-medidas-herraje-excel',
+    name: 'Pack Puerta Corredera Interior: Planilla Excel de Medidas de Hoja y Riel, Muro Libre, Peso y Capacidad del Herraje, Anclaje y Presupuesto + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-puerta-corredera-medidas-herraje-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-PUERTA-CORREDERA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
