@@ -450,6 +450,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Bomba y Filtro de Piscina',
     filename: 'Pack-Bomba-Filtro-Piscina-Ferreteria-Ukra.zip',
   },
+  'pack-sellado-ventanas-fugas-burletes-excel': {
+    name: 'Pack Sellado de Ventanas',
+    filename: 'Pack-Sellado-Ventanas-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2886,6 +2890,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-BOMBA-FILTRO-PISCINA',
+  },
+  {
+    slug: 'pack-sellado-ventanas-fugas-burletes-excel',
+    name: 'Pack Sellado de Ventanas: Planilla Excel de Fugas, Burlete por Hueco, Metros de Material, Lista de Compra y Ahorro + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-sellado-ventanas-fugas-burletes-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-SELLADO-VENTANAS',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
