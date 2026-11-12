@@ -398,6 +398,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Lana Aislante',
     filename: 'Pack-Lana-Aislante-Ferreteria-Ukra.zip',
   },
+  'pack-impermeabilizante-techo-materiales-plan-excel': {
+    name: 'Pack Impermeabilizante de Techo',
+    filename: 'Pack-Impermeabilizante-Techo-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2717,6 +2721,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-LANA-AISLANTE',
+  },
+  {
+    slug: 'pack-impermeabilizante-techo-materiales-plan-excel',
+    name: 'Pack Impermeabilizante de Techo: Planilla Excel para Elegir Producto, Materiales, Sellador y Espesor, Plan con Clima, Presupuesto y Mantención + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-impermeabilizante-techo-materiales-plan-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-IMPERMEABILIZANTE-TECHO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
