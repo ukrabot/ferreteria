@@ -462,6 +462,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Cambio de Vidrio',
     filename: 'Pack-Cambio-Vidrio-Ferreteria-Ukra.zip',
   },
+  'pack-perforar-sin-riesgo-detector-excel': {
+    name: 'Pack Perforar sin Riesgo',
+    filename: 'Pack-Perforar-Sin-Riesgo-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2925,6 +2929,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-CAMBIO-VIDRIO',
+  },
+  {
+    slug: 'pack-perforar-sin-riesgo-detector-excel',
+    name: 'Pack Perforar sin Riesgo: Planilla Excel de Riesgo por Punto, Anclaje, Broca y Tope, y Comparación de Detectores + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-perforar-sin-riesgo-detector-excel.webp',
+    category: 'Herramientas',
+    status: 'available',
+    sku: 'PACK-PERFORAR-SIN-RIESGO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
