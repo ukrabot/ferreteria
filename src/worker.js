@@ -478,6 +478,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Clóset a Medida',
     filename: 'Pack-Closet-a-Medida-Ferreteria-Ukra.zip',
   },
+  'pack-camaras-seguridad-cobertura-disco-excel': {
+    name: 'Pack Cámaras de Seguridad',
+    filename: 'Pack-Camaras-Seguridad-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2977,6 +2981,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-CLOSET-MEDIDA',
+  },
+  {
+    slug: 'pack-camaras-seguridad-cobertura-disco-excel',
+    name: 'Pack Cámaras de Seguridad: Planilla Excel de Cobertura y Detalle por Cámara, Disco, PoE y Lista de Compra + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-camaras-seguridad-cobertura-disco-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-CAMARAS-SEGURIDAD',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
