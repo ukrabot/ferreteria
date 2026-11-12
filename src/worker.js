@@ -422,6 +422,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Instalación Split',
     filename: 'Pack-Instalacion-Split-Ferreteria-Ukra.zip',
   },
+  'pack-limpieza-evaporadores-mantencion-split-excel': {
+    name: 'Pack Limpieza de Evaporadores',
+    filename: 'Pack-Limpieza-Evaporadores-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2795,6 +2799,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-INSTALACION-SPLIT',
+  },
+  {
+    slug: 'pack-limpieza-evaporadores-mantencion-split-excel',
+    name: 'Pack Limpieza de Evaporadores: Planilla Excel de Calendario por Equipo, Diagnóstico por Síntomas, Costos y Limpieza Paso a Paso + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-limpieza-evaporadores-mantencion-split-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-LIMPIEZA-EVAPORADOR',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
