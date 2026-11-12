@@ -430,6 +430,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Tragaluz y Claraboya',
     filename: 'Pack-Tragaluz-Claraboya-Ferreteria-Ukra.zip',
   },
+  'pack-riego-por-goteo-zonas-laterales-excel': {
+    name: 'Pack Riego por Goteo',
+    filename: 'Pack-Riego-por-Goteo-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2821,6 +2825,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-TRAGALUZ',
+  },
+  {
+    slug: 'pack-riego-por-goteo-zonas-laterales-excel',
+    name: 'Pack Riego por Goteo: Planilla Excel de Caudal, Litros por Planta, Zonas, Laterales, Programa de Riego y Presupuesto + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-riego-por-goteo-zonas-laterales-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-RIEGO-GOTEO-ZONAS',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
