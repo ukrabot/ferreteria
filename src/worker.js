@@ -454,6 +454,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Sellado de Ventanas',
     filename: 'Pack-Sellado-Ventanas-Ferreteria-Ukra.zip',
   },
+  'pack-cableado-red-puntos-materiales-excel': {
+    name: 'Pack Cableado de Red',
+    filename: 'Pack-Cableado-Red-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2899,6 +2903,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-SELLADO-VENTANAS',
+  },
+  {
+    slug: 'pack-cableado-red-puntos-materiales-excel',
+    name: 'Pack Cableado de Red: Planilla Excel de Puntos, Largo de Cable, Materiales, Switch y PoE, Etiquetas y Pruebas + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-cableado-red-puntos-materiales-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-CABLEADO-RED',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
