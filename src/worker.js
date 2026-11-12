@@ -498,6 +498,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Hormigón Estampado',
     filename: 'Pack-Hormigon-Estampado-Ferreteria-Ukra.zip',
   },
+  'pack-electrodos-selector-amperaje-consumo-excel': {
+    name: 'Pack Electrodos',
+    filename: 'Pack-Electrodos-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3042,6 +3046,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-HORMIGON-ESTAMPADO',
+  },
+  {
+    slug: 'pack-electrodos-selector-amperaje-consumo-excel',
+    name: 'Pack Electrodos 6011, 6013 y 7018: Planilla Excel Selector por Trabajo, Amperaje, Consumo en Kilos y Control del 7018 + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-electrodos-selector-amperaje-consumo-excel.webp',
+    category: 'Herramientas',
+    status: 'available',
+    sku: 'PACK-ELECTRODOS',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
