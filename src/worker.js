@@ -446,6 +446,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Preparación Sísmica',
     filename: 'Pack-Preparacion-Sismica-Ferreteria-Ukra.zip',
   },
+  'pack-bomba-filtro-piscina-caudal-excel': {
+    name: 'Pack Bomba y Filtro de Piscina',
+    filename: 'Pack-Bomba-Filtro-Piscina-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -2873,6 +2877,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-PREPARACION-SISMICA',
+  },
+  {
+    slug: 'pack-bomba-filtro-piscina-caudal-excel',
+    name: 'Pack Bomba y Filtro de Piscina: Planilla Excel de Volumen, Caudal de Diseño, Tamaño de Filtro, Consumo Eléctrico y Manómetro + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-bomba-filtro-piscina-caudal-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-BOMBA-FILTRO-PISCINA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
