@@ -494,6 +494,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Deshumidificador',
     filename: 'Pack-Deshumidificador-Ferreteria-Ukra.zip',
   },
+  'pack-hormigon-estampado-cubicacion-juntas-excel': {
+    name: 'Pack Hormigón Estampado',
+    filename: 'Pack-Hormigon-Estampado-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3029,6 +3033,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-DESHUMIDIFICADOR',
+  },
+  {
+    slug: 'pack-hormigon-estampado-cubicacion-juntas-excel',
+    name: 'Pack Hormigón Estampado: Planilla Excel de Cubicación por Paño, Juntas, Materiales, Presupuesto y Cotizaciones + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-hormigon-estampado-cubicacion-juntas-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-HORMIGON-ESTAMPADO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
