@@ -486,6 +486,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Regulador de Gas',
     filename: 'Pack-Regulador-Gas-Ferreteria-Ukra.zip',
   },
+  'pack-tarugos-pared-carga-tornillo-excel': {
+    name: 'Pack Tarugos para Pared',
+    filename: 'Pack-Tarugos-Pared-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3003,6 +3007,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-REGULADOR-GAS',
+  },
+  {
+    slug: 'pack-tarugos-pared-carga-tornillo-excel',
+    name: 'Pack Tarugos para Pared: Planilla Excel de Carga por Anclaje, Broca, Tornillo y Lista de Compra + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-tarugos-pared-carga-tornillo-excel.webp',
+    category: 'Herramientas',
+    status: 'available',
+    sku: 'PACK-TARUGOS-PARED',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
