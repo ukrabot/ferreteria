@@ -538,6 +538,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Bomba de Pozo Profundo',
     filename: 'Pack-Bomba-Pozo-Profundo-Ferreteria-Ukra.zip',
   },
+  'pack-net-billing-solar-tramite-boleta-retorno-excel': {
+    name: 'Pack Net Billing Solar',
+    filename: 'Pack-Net-Billing-Solar-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3172,6 +3176,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-BOMBA-POZO-PROFUNDO',
+  },
+  {
+    slug: 'pack-net-billing-solar-tramite-boleta-retorno-excel',
+    name: 'Pack Net Billing Solar: Planilla Excel de Calendario del Trámite, Boleta con Remanentes, Retorno con Casa Solar y Revisión de Cotizaciones + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-net-billing-solar-tramite-boleta-retorno-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-NET-BILLING',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
