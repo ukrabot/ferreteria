@@ -510,6 +510,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Silicona para Baño',
     filename: 'Pack-Silicona-Bano-Ferreteria-Ukra.zip',
   },
+  'pack-remodelacion-bano-presupuesto-materiales-excel': {
+    name: 'Pack Remodelación de Baño',
+    filename: 'Pack-Remodelacion-Bano-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3081,6 +3085,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-SILICONA-BANO',
+  },
+  {
+    slug: 'pack-remodelacion-bano-presupuesto-materiales-excel',
+    name: 'Pack Remodelación de Baño: Planilla Excel de Materiales, Presupuesto por Partida, Cotizaciones y Cronograma + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-remodelacion-bano-presupuesto-materiales-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-REMODELACION-BANO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
