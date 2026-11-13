@@ -534,6 +534,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Pistola de Impacto 1"',
     filename: 'Pack-Pistola-Impacto-1-Ferreteria-Ukra.zip',
   },
+  'pack-bomba-pozo-profundo-hmt-seleccion-excel': {
+    name: 'Pack Bomba de Pozo Profundo',
+    filename: 'Pack-Bomba-Pozo-Profundo-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3159,6 +3163,15 @@ const SEED_PRODUCTS = [
     category: 'Herramientas',
     status: 'available',
     sku: 'PACK-PISTOLA-IMPACTO-1',
+  },
+  {
+    slug: 'pack-bomba-pozo-profundo-hmt-seleccion-excel',
+    name: 'Pack Bomba de Pozo Profundo: Planilla Excel de Caudal, Altura Manométrica, Selección, Cable, Arranques e Instalación + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-bomba-pozo-profundo-hmt-seleccion-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-BOMBA-POZO-PROFUNDO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
