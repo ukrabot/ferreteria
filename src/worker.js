@@ -530,6 +530,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Cartucho Monocomando',
     filename: 'Pack-Cartucho-Monocomando-Ferreteria-Ukra.zip',
   },
+  'pack-pistola-impacto-1-compresor-ruido-excel': {
+    name: 'Pack Pistola de Impacto 1"',
+    filename: 'Pack-Pistola-Impacto-1-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3146,6 +3150,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-CARTUCHO-MONOCOMANDO',
+  },
+  {
+    slug: 'pack-pistola-impacto-1-compresor-ruido-excel',
+    name: 'Pack Pistola de Impacto 1": Planilla Excel Comparador de Modelos, Compresor y Manguera, Ruido DS 594 y Apriete de Ruedas + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-pistola-impacto-1-compresor-ruido-excel.webp',
+    category: 'Herramientas',
+    status: 'available',
+    sku: 'PACK-PISTOLA-IMPACTO-1',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
