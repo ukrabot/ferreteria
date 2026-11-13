@@ -514,6 +514,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Remodelación de Baño',
     filename: 'Pack-Remodelacion-Bano-Ferreteria-Ukra.zip',
   },
+  'pack-sensor-movimiento-carga-ahorro-excel': {
+    name: 'Pack Sensor de Movimiento',
+    filename: 'Pack-Sensor-Movimiento-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3094,6 +3098,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-REMODELACION-BANO',
+  },
+  {
+    slug: 'pack-sensor-movimiento-carga-ahorro-excel',
+    name: 'Pack Sensor de Movimiento: Planilla Excel Selector por Lugar, Carga LED, Ahorro y Conexión por Colores + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-sensor-movimiento-carga-ahorro-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-SENSOR-MOVIMIENTO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
