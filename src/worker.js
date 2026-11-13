@@ -506,6 +506,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Escalera',
     filename: 'Pack-Escalera-Ferreteria-Ukra.zip',
   },
+  'pack-silicona-bano-selector-cartuchos-excel': {
+    name: 'Pack Silicona para Baño',
+    filename: 'Pack-Silicona-Bano-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3068,6 +3072,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-ESCALERA',
+  },
+  {
+    slug: 'pack-silicona-bano-selector-cartuchos-excel',
+    name: 'Pack Silicona para Baño: Planilla Excel Selector por Material, Cartuchos y Respaldo por Junta, Curado y Diagnóstico + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-silicona-bano-selector-cartuchos-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-SILICONA-BANO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
