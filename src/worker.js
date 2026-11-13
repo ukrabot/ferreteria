@@ -522,6 +522,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Sello Verde de Gas',
     filename: 'Pack-Sello-Verde-Gas-Ferreteria-Ukra.zip',
   },
+  'pack-fuga-llave-de-paso-diagnostico-reparacion-excel': {
+    name: 'Pack Fuga en Llave de Paso',
+    filename: 'Pack-Fuga-Llave-de-Paso-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3120,6 +3124,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-SELLO-VERDE-GAS',
+  },
+  {
+    slug: 'pack-fuga-llave-de-paso-diagnostico-reparacion-excel',
+    name: 'Pack Fuga en Llave de Paso: Planilla Excel de Diagnóstico por Síntoma, Pérdida de Agua, Inventario de Llaves y Presupuesto + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-fuga-llave-de-paso-diagnostico-reparacion-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-FUGA-LLAVE-PASO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
