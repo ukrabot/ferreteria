@@ -546,6 +546,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Instalación de Lavavajillas',
     filename: 'Pack-Instalacion-Lavavajillas-Ferreteria-Ukra.zip',
   },
+  'pack-pergola-bioclimatica-medidas-viento-cotizaciones-excel': {
+    name: 'Pack Pérgola Bioclimática',
+    filename: 'Pack-Pergola-Bioclimatica-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3198,6 +3202,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-LAVAVAJILLAS',
+  },
+  {
+    slug: 'pack-pergola-bioclimatica-medidas-viento-cotizaciones-excel',
+    name: 'Pack Pérgola Bioclimática: Planilla Excel de Medidas y Módulos, Viento y Nieve, Fundaciones, Cotizaciones y Mantenimiento + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-pergola-bioclimatica-medidas-viento-cotizaciones-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-PERGOLA-BIOCLIMATICA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
