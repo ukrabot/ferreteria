@@ -542,6 +542,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Net Billing Solar',
     filename: 'Pack-Net-Billing-Solar-Ferreteria-Ukra.zip',
   },
+  'pack-instalacion-lavavajillas-hueco-conexiones-excel': {
+    name: 'Pack Instalación de Lavavajillas',
+    filename: 'Pack-Instalacion-Lavavajillas-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3185,6 +3189,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-NET-BILLING',
+  },
+  {
+    slug: 'pack-instalacion-lavavajillas-hueco-conexiones-excel',
+    name: 'Pack Instalación de Lavavajillas: Planilla Excel de Medidas del Hueco, Agua y Desagüe, Circuito Eléctrico, Costo de Uso y Diagnóstico + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-instalacion-lavavajillas-hueco-conexiones-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-LAVAVAJILLAS',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
