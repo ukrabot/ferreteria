@@ -550,6 +550,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Pérgola Bioclimática',
     filename: 'Pack-Pergola-Bioclimatica-Ferreteria-Ukra.zip',
   },
+  'pack-elegir-generador-casa-cargas-comparador-excel': {
+    name: 'Pack Elegir Generador',
+    filename: 'Pack-Elegir-Generador-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3211,6 +3215,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-PERGOLA-BIOCLIMATICA',
+  },
+  {
+    slug: 'pack-elegir-generador-casa-cargas-comparador-excel',
+    name: 'Pack Elegir Generador: Planilla Excel de Cargas con Partida, Comparador de 3 Modelos, Combustible, Presupuesto y Registro de Pruebas + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-elegir-generador-casa-cargas-comparador-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-ELEGIR-GENERADOR',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
