@@ -558,6 +558,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Cerradura Digital',
     filename: 'Pack-Cerradura-Digital-Ferreteria-Ukra.zip',
   },
+  'pack-perfiles-metalcon-selector-recepcion-excel': {
+    name: 'Pack Perfiles Metalcon',
+    filename: 'Pack-Perfiles-Metalcon-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3237,6 +3241,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-CERRADURA-DIGITAL',
+  },
+  {
+    slug: 'pack-perfiles-metalcon-selector-recepcion-excel',
+    name: 'Pack Perfiles Metalcon: Planilla Excel de Selector por Aplicación, Identificar Montante o Canal, Referencia con Peso y Precio, Costo por Metro y Recepción en Obra + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-perfiles-metalcon-selector-recepcion-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-PERFILES-METALCON',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
