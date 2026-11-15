@@ -554,6 +554,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Elegir Generador',
     filename: 'Pack-Elegir-Generador-Ferreteria-Ukra.zip',
   },
+  'pack-cerradura-digital-compatibilidad-comparador-excel': {
+    name: 'Pack Cerradura Digital',
+    filename: 'Pack-Cerradura-Digital-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3224,6 +3228,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-ELEGIR-GENERADOR',
+  },
+  {
+    slug: 'pack-cerradura-digital-compatibilidad-comparador-excel',
+    name: 'Pack Cerradura Digital: Planilla Excel de Compatibilidad con tu Puerta, Comparador de Modelos, Accesos Temporales, Pilas y Presupuesto + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-cerradura-digital-compatibilidad-comparador-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-CERRADURA-DIGITAL',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
