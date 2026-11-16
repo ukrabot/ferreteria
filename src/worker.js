@@ -566,6 +566,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Grietas en Muros',
     filename: 'Pack-Grietas-en-Muros-Ferreteria-Ukra.zip',
   },
+  'pack-sierra-inmersion-riel-comparador-excel': {
+    name: 'Pack Sierra de Inmersión',
+    filename: 'Pack-Sierra-de-Inmersion-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3263,6 +3267,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-GRIETAS-MUROS',
+  },
+  {
+    slug: 'pack-sierra-inmersion-riel-comparador-excel',
+    name: 'Pack Sierra de Inmersión: Planilla Excel de Comparador de Sierras, Rieles para tus Cortes, Profundidad, Avance, Costo-Beneficio y Mantenimiento + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-sierra-inmersion-riel-comparador-excel.webp',
+    category: 'Herramientas',
+    status: 'available',
+    sku: 'PACK-SIERRA-INMERSION',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
