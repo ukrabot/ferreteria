@@ -562,6 +562,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Perfiles Metalcon',
     filename: 'Pack-Perfiles-Metalcon-Ferreteria-Ukra.zip',
   },
+  'pack-grietas-en-muros-ficha-monitoreo-excel': {
+    name: 'Pack Grietas en Muros',
+    filename: 'Pack-Grietas-en-Muros-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3250,6 +3254,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-PERFILES-METALCON',
+  },
+  {
+    slug: 'pack-grietas-en-muros-ficha-monitoreo-excel',
+    name: 'Pack Grietas en Muros: Planilla Excel de Señales de Urgencia, Ficha por Grieta, Monitoreo de 30 Días, Material según Soporte, Cantidades y Presupuesto + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-grietas-en-muros-ficha-monitoreo-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-GRIETAS-MUROS',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',

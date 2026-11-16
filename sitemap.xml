@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://www.ferreteriaukra.cl/productos-digitales/</loc>
-    <lastmod>2026-11-15</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -650,7 +650,7 @@
   </url>
   <url>
     <loc>https://www.ferreteriaukra.cl/blog/como-reparar-grietas-en-paredes-y-muros/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2619,6 +2619,12 @@
   <url>
     <loc>https://www.ferreteriaukra.cl/producto/pack-perfiles-metalcon-selector-recepcion-excel/</loc>
     <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ferreteriaukra.cl/producto/pack-grietas-en-muros-ficha-monitoreo-excel/</loc>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
