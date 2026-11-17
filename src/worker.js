@@ -570,6 +570,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Sierra de Inmersión',
     filename: 'Pack-Sierra-de-Inmersion-Ferreteria-Ukra.zip',
   },
+  'pack-mosquiteros-ventanas-medida-presupuesto-excel': {
+    name: 'Pack Mosquiteros',
+    filename: 'Pack-Mosquiteros-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3276,6 +3280,15 @@ const SEED_PRODUCTS = [
     category: 'Herramientas',
     status: 'available',
     sku: 'PACK-SIERRA-INMERSION',
+  },
+  {
+    slug: 'pack-mosquiteros-ventanas-medida-presupuesto-excel',
+    name: 'Pack Mosquiteros: Planilla Excel de Sistema por Ventana, Medida a Pedir, Materiales para Fabricar, Presupuesto y Seguridad + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-mosquiteros-ventanas-medida-presupuesto-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-MOSQUITEROS',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
