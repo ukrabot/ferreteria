@@ -574,6 +574,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Mosquiteros',
     filename: 'Pack-Mosquiteros-Ferreteria-Ukra.zip',
   },
+  'pack-pintura-epoxica-pisos-galones-humedad-excel': {
+    name: 'Pack Pintura Epóxica para Pisos',
+    filename: 'Pack-Pintura-Epoxica-Pisos-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3289,6 +3293,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-MOSQUITEROS',
+  },
+  {
+    slug: 'pack-pintura-epoxica-pisos-galones-humedad-excel',
+    name: 'Pack Pintura Epóxica para Pisos: Planilla Excel de Galones según Ficha, Prueba de Humedad, Punto de Rocío, Mezcla A:B, Calendario de Curado y Presupuesto + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-pintura-epoxica-pisos-galones-humedad-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-PINTURA-EPOXICA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
