@@ -578,6 +578,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Pintura Epóxica para Pisos',
     filename: 'Pack-Pintura-Epoxica-Pisos-Ferreteria-Ukra.zip',
   },
+  'pack-extintores-tipos-ds594-inventario-excel': {
+    name: 'Pack Extintores',
+    filename: 'Pack-Extintores-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3302,6 +3306,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-PINTURA-EPOXICA',
+  },
+  {
+    slug: 'pack-extintores-tipos-ds594-inventario-excel',
+    name: 'Pack Extintores: Planilla Excel de Agente por Riesgo, Cálculo DS 594 por Recinto, Inventario con Vencimientos, Inspección Mensual y Presupuesto + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-extintores-tipos-ds594-inventario-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-EXTINTORES',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
