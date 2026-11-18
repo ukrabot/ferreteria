@@ -586,6 +586,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Techar Terraza con Policarbonato',
     filename: 'Pack-Techar-Terraza-Policarbonato-Ferreteria-Ukra.zip',
   },
+  'pack-tapacantos-melamina-metros-rollos-plancha-excel': {
+    name: 'Pack Tapacantos',
+    filename: 'Pack-Tapacantos-Melamina-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3328,6 +3332,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-TECHAR-TERRAZA',
+  },
+  {
+    slug: 'pack-tapacantos-melamina-metros-rollos-plancha-excel',
+    name: 'Pack Tapacantos: Planilla Excel de Metros por Pieza y Color, Ancho Sugerido, Rollos y Presupuesto, Registro de Prueba de Plancha y Diagnóstico + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-tapacantos-melamina-metros-rollos-plancha-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-TAPACANTOS',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
