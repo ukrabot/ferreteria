@@ -582,6 +582,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Extintores',
     filename: 'Pack-Extintores-Ferreteria-Ukra.zip',
   },
+  'pack-techar-terraza-policarbonato-pendiente-planchas-excel': {
+    name: 'Pack Techar Terraza con Policarbonato',
+    filename: 'Pack-Techar-Terraza-Policarbonato-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3315,6 +3319,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-EXTINTORES',
+  },
+  {
+    slug: 'pack-techar-terraza-policarbonato-pendiente-planchas-excel',
+    name: 'Pack Techar Terraza con Policarbonato: Planilla Excel de Pendiente y Largo de Plancha, Planchas y Accesorios, Separación de Apoyos, Presupuesto y Cotizaciones + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-techar-terraza-policarbonato-pendiente-planchas-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-TECHAR-TERRAZA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
