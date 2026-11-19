@@ -598,6 +598,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Detectores de Humo',
     filename: 'Pack-Detectores-de-Humo-Ferreteria-Ukra.zip',
   },
+  'pack-lista-materiales-tablero-electrico-excel': {
+    name: 'Pack Lista de Materiales del Tablero',
+    filename: 'Pack-Lista-Materiales-Tablero-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3367,6 +3371,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-DETECTORES-HUMO',
+  },
+  {
+    slug: 'pack-lista-materiales-tablero-electrico-excel',
+    name: 'Pack Lista de Materiales del Tablero: Planilla Excel de Circuitos, Caja con Reserva, Automáticos, Diferenciales, Peines, Barras y Cable + Hoja de Compra',
+    price: 2990,
+    image: '/producto/pack-lista-materiales-tablero-electrico-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-MATERIALES-TABLERO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
