@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://www.ferreteriaukra.cl/productos-digitales/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -146,7 +146,7 @@
   </url>
   <url>
     <loc>https://www.ferreteriaukra.cl/blog/cerramiento-de-terraza-cortinas-de-cristal-y-paneles-chile/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2679,6 +2679,12 @@
   <url>
     <loc>https://www.ferreteriaukra.cl/producto/pack-lista-materiales-tablero-electrico-excel/</loc>
     <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ferreteriaukra.cl/producto/pack-cerramiento-terraza-vanos-permisos-cotizaciones-excel/</loc>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

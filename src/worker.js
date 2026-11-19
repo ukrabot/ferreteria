@@ -602,6 +602,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Lista de Materiales del Tablero',
     filename: 'Pack-Lista-Materiales-Tablero-Ferreteria-Ukra.zip',
   },
+  'pack-cerramiento-terraza-vanos-permisos-cotizaciones-excel': {
+    name: 'Pack Cerramiento de Terraza',
+    filename: 'Pack-Cerramiento-Terraza-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3380,6 +3384,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-MATERIALES-TABLERO',
+  },
+  {
+    slug: 'pack-cerramiento-terraza-vanos-permisos-cotizaciones-excel',
+    name: 'Pack Cerramiento de Terraza: Planilla Excel de Sistema según el Objetivo, Medición de Vanos, Permisos de Copropiedad y DOM, Cotizaciones y Mantención + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-cerramiento-terraza-vanos-permisos-cotizaciones-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-CERRAMIENTO-TERRAZA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
