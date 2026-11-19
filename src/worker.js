@@ -590,6 +590,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Tapacantos',
     filename: 'Pack-Tapacantos-Melamina-Ferreteria-Ukra.zip',
   },
+  'pack-arena-revoques-capas-cemento-curado-excel': {
+    name: 'Pack Arena para Revoques',
+    filename: 'Pack-Arena-Revoques-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3341,6 +3345,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-TAPACANTOS',
+  },
+  {
+    slug: 'pack-arena-revoques-capas-cemento-curado-excel',
+    name: 'Pack Arena para Revoques: Planilla Excel de Paños y Capas, Cemento, Arena Gruesa y Fina, Presupuesto, Prueba de Arena y Curado + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-arena-revoques-capas-cemento-curado-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-ARENA-REVOQUES',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
