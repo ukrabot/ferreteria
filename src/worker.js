@@ -594,6 +594,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Arena para Revoques',
     filename: 'Pack-Arena-Revoques-Ferreteria-Ukra.zip',
   },
+  'pack-detectores-humo-ubicacion-vencimientos-excel': {
+    name: 'Pack Detectores de Humo',
+    filename: 'Pack-Detectores-de-Humo-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3354,6 +3358,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-ARENA-REVOQUES',
+  },
+  {
+    slug: 'pack-detectores-humo-ubicacion-vencimientos-excel',
+    name: 'Pack Detectores de Humo: Planilla Excel de Ubicación por Recinto, Resumen por Piso, Inventario con Vencimientos, Pruebas Mensuales, Presupuesto y Plan de Evacuación + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-detectores-humo-ubicacion-vencimientos-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-DETECTORES-HUMO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
