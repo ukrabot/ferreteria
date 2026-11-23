@@ -614,6 +614,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Calefacción Central',
     filename: 'Pack-Calefaccion-Central-Ferreteria-Ukra.zip',
   },
+  'pack-deck-de-madera-viguetas-tablas-tornillos-excel': {
+    name: 'Pack Deck de Madera',
+    filename: 'Pack-Deck-de-Madera-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3419,6 +3423,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-CALEFACCION-CENTRAL',
+  },
+  {
+    slug: 'pack-deck-de-madera-viguetas-tablas-tornillos-excel',
+    name: 'Pack Deck de Madera: Planilla Excel de Clase de Impregnación NCh 819, Viguetas, Tablas, Tornillos, Dados y Compra + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-deck-de-madera-viguetas-tablas-tornillos-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-DECK-MADERA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
