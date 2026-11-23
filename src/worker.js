@@ -610,6 +610,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Separadores y Juntas',
     filename: 'Pack-Separadores-Baldosas-Ferreteria-Ukra.zip',
   },
+  'pack-calefaccion-central-radiadores-losa-radiante-excel': {
+    name: 'Pack Calefacción Central',
+    filename: 'Pack-Calefaccion-Central-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3406,6 +3410,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-SEPARADORES-BALDOSAS',
+  },
+  {
+    slug: 'pack-calefaccion-central-radiadores-losa-radiante-excel',
+    name: 'Pack Calefacción Central: Planilla Excel de Pérdidas por Recinto, Radiadores según EN 442, Losa Radiante según EN 1264, Potencia de Caldera y Cotizaciones + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-calefaccion-central-radiadores-losa-radiante-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-CALEFACCION-CENTRAL',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
