@@ -618,6 +618,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Deck de Madera',
     filename: 'Pack-Deck-de-Madera-Ferreteria-Ukra.zip',
   },
+  'pack-calefaccion-mas-barata-costo-kwh-comparador-excel': {
+    name: 'Pack Calefacción Más Barata',
+    filename: 'Pack-Calefaccion-Mas-Barata-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3432,6 +3436,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-DECK-MADERA',
+  },
+  {
+    slug: 'pack-calefaccion-mas-barata-costo-kwh-comparador-excel',
+    name: 'Pack Calefacción Más Barata: Planilla Excel de Costo por kWh Útil con tus Precios, Costo del Mes y la Temporada, Agua de Estufas sin Ducto y Retorno de Cambiar de Equipo + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-calefaccion-mas-barata-costo-kwh-comparador-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-CALEFACCION-BARATA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
