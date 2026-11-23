@@ -606,6 +606,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Cerramiento de Terraza',
     filename: 'Pack-Cerramiento-Terraza-Ferreteria-Ukra.zip',
   },
+  'pack-separadores-baldosas-junta-cantidades-excel': {
+    name: 'Pack Separadores y Juntas',
+    filename: 'Pack-Separadores-Baldosas-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3393,6 +3397,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-CERRAMIENTO-TERRAZA',
+  },
+  {
+    slug: 'pack-separadores-baldosas-junta-cantidades-excel',
+    name: 'Pack Separadores y Juntas: Planilla Excel de Junta Mínima según ANSI A108.02, Piezas, Crucetas, Clips Niveladores y Juntas de Movimiento según TCNA EJ171 + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-separadores-baldosas-junta-cantidades-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-SEPARADORES-BALDOSAS',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
