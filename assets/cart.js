@@ -754,6 +754,90 @@
     });
   }
 
+
+  // ── Blog: after 1 minute reading, suggest the article's digital pack ──
+
+  function initPackNudge() {
+    const src = document.querySelector('button[data-add-cart][data-slug^="pack-"]');
+    if (!src || !parseInt(src.dataset.price)) return;
+    const slug = src.dataset.slug;
+    const KEY = 'ukraPackNudge:' + slug;
+    const DELAY = 60000, SNOOZE = 3 * 864e5;
+    try { if (Date.now() - Number(localStorage.getItem(KEY) || 0) < SNOOZE) return; } catch {}
+    if (getCart().some(i => i.slug === slug)) return;
+
+    const box = src.closest('section') || src.parentElement;
+    const titleEl = box && box.querySelector('h2, h3');
+    const title = (titleEl ? titleEl.textContent : src.dataset.name || '').trim();
+    const link = (box && box.querySelector('a[href^="/producto/"]')) || null;
+    const href = link ? link.getAttribute('href') : '/producto/' + slug;
+    const price = parseInt(src.dataset.price);
+    let shown = false, done = false, visibleMs = 0, last = Date.now();
+
+    // Don't pop up while the reader is looking at the pack box itself.
+    let boxInView = false;
+    if (box && 'IntersectionObserver' in window) {
+      new IntersectionObserver(es => { boxInView = es[0].isIntersecting; }, { threshold: 0.3 }).observe(box);
+    }
+    src.addEventListener('click', () => { done = true; remember(); });
+
+    function remember() { try { localStorage.setItem(KEY, String(Date.now())); } catch {} }
+
+    function tick() {
+      if (shown || done) return;
+      const now = Date.now();
+      if (document.visibilityState === 'visible') visibleMs += now - last;
+      last = now;
+      const cookie = document.querySelector('.cookie-banner.visible');
+      if (visibleMs >= DELAY && !boxInView && !cookie && !getCart().some(i => i.slug === slug)) show();
+      else setTimeout(tick, 2000);
+    }
+    document.addEventListener('visibilitychange', () => { last = Date.now(); });
+    setTimeout(tick, 2000);
+
+    function show() {
+      shown = true;
+      const st = document.createElement('style');
+      st.textContent = `
+.ukra-nudge{position:fixed;left:24px;bottom:24px;z-index:10001;width:360px;max-width:calc(100vw - 32px);background:#0F172A;color:#E2E8F0;border-radius:16px;box-shadow:0 18px 50px rgba(15,23,42,.35);padding:16px;font-family:Inter,system-ui,sans-serif;transform:translateY(24px);opacity:0;transition:transform .35s ease,opacity .35s ease}
+.ukra-nudge.on{transform:none;opacity:1}
+.ukra-nudge-x{position:absolute;top:8px;right:8px;width:32px;height:32px;border:none;border-radius:50%;background:rgba(255,255,255,.08);color:#CBD5E1;font-size:18px;line-height:1;cursor:pointer}
+.ukra-nudge-x:hover{background:rgba(255,255,255,.16);color:#fff}
+.ukra-nudge-row{display:flex;gap:12px;align-items:center;padding-right:28px}
+.ukra-nudge img{width:76px;height:76px;border-radius:10px;object-fit:cover;flex-shrink:0;background:#fff}
+.ukra-nudge-eb{margin:0 0 4px;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#F59E0B}
+.ukra-nudge-t{margin:0;font-size:.98rem;font-weight:800;line-height:1.3;color:#fff}
+.ukra-nudge-p{margin:12px 0 10px;font-size:1.35rem;font-weight:900;color:#fff}
+.ukra-nudge-p small{font-size:.75rem;font-weight:600;color:#94A3B8}
+.ukra-nudge-buy{display:block;width:100%;border:none;border-radius:999px;background:#D9381E;color:#fff;font-weight:800;font-size:.95rem;padding:11px 16px;cursor:pointer}
+.ukra-nudge-buy:hover{background:#B82A13}
+.ukra-nudge-more{display:block;text-align:center;margin-top:8px;font-size:.85rem;font-weight:700;color:#F59E0B;text-decoration:none}
+@media (max-width:600px){.ukra-nudge{left:8px;right:8px;bottom:8px;width:auto;max-width:none}}`;
+      document.head.appendChild(st);
+      const el = document.createElement('div');
+      el.className = 'ukra-nudge';
+      el.setAttribute('role', 'dialog');
+      el.setAttribute('aria-labelledby', 'ukra-nudge-t');
+      el.innerHTML = `<button type="button" class="ukra-nudge-x" aria-label="Cerrar">×</button>
+<div class="ukra-nudge-row"><img alt="" width="76" height="76">
+<div><p class="ukra-nudge-eb">Pack digital para este artículo</p><p class="ukra-nudge-t" id="ukra-nudge-t"></p></div></div>
+<p class="ukra-nudge-p">${fmt(price)} <small>CLP · descarga inmediata</small></p>
+<button type="button" class="ukra-nudge-buy">⬇️ Comprar nuestro pack digital</button>
+<a class="ukra-nudge-more">Ver qué incluye</a>`;
+      el.querySelector('img').src = src.dataset.image || '';
+      el.querySelector('.ukra-nudge-t').textContent = title;
+      el.querySelector('.ukra-nudge-more').href = href;
+      document.body.appendChild(el);
+      requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('on')));
+      const close = () => { remember(); el.classList.remove('on'); setTimeout(() => el.remove(), 400); document.removeEventListener('keydown', onKey); };
+      const onKey = e => { if (e.key === 'Escape') close(); };
+      document.addEventListener('keydown', onKey);
+      el.querySelector('.ukra-nudge-x').onclick = close;
+      el.querySelector('.ukra-nudge-buy').onclick = () => { remember(); src.click(); };
+      el.querySelector('.ukra-nudge-more').addEventListener('click', remember);
+    }
+  }
+
   // ── Init ──────────────────────────────────────────────────────────
 
   function init() {
@@ -765,6 +849,7 @@
     if (path.startsWith('/producto/') || path.startsWith('/productos')) initAds();
     if (path.startsWith('/checkout')) initCheckoutPage();
     if (path.startsWith('/orden')) initOrderPage();
+    if (path.startsWith('/blog/')) initPackNudge();
   }
 
   if (document.readyState === 'loading') {
