@@ -6617,7 +6617,45 @@ async function handleGetSiteConfig(env) {
 }
 
 async function getAdminSettings(env) {
-  return { ...(await getShippingSettings(env)), ...(await getSiteConfig(env)) };
+  return { ...(await getShippingSettings(env)), ...(await getSiteConfig(env)), ...(await getDigitalPriceInfo(env)) };
+}
+
+// General price for digital products: stored in settings, applied to every
+// digital product in the products table (and to new ones when they are seeded).
+async function getDigitalPriceInfo(env) {
+  try {
+    const [row, all] = await Promise.all([
+      env.DB.prepare(`SELECT value FROM settings WHERE key = 'digital_price'`).first(),
+      env.DB.prepare(`SELECT slug, price FROM products`).all(),
+    ]);
+    const prices = {};
+    let count = 0;
+    for (const p of all.results || []) {
+      if (!isDigital(p.slug)) continue;
+      count++;
+      prices[p.price] = (prices[p.price] || 0) + 1;
+    }
+    return { digital_price: row ? parseInt(row.value) : null, digital_count: count, digital_prices: prices };
+  } catch {
+    return { digital_price: null, digital_count: 0, digital_prices: {} };
+  }
+}
+
+async function applyDigitalPrice(env, price) {
+  const slugs = Object.keys(DIGITAL_PRODUCTS);
+  const stmts = [env.DB.prepare(
+    `INSERT INTO settings (key, value) VALUES ('digital_price', ?)
+     ON CONFLICT(key) DO UPDATE SET value = excluded.value`
+  ).bind(String(price))];
+  for (let i = 0; i < slugs.length; i += 90) {
+    const part = slugs.slice(i, i + 90);
+    stmts.push(env.DB.prepare(
+      `UPDATE products SET price = ?, updated_at = strftime('%Y-%m-%dT%H:%M:%SZ','now')
+       WHERE slug IN (${part.map(() => '?').join(', ')})`
+    ).bind(price, ...part));
+  }
+  await env.DB.batch(stmts);
+  dbPriceCache = { map: null, at: 0 }; // static pages pick up the new price right away
 }
 
 // GET|PUT /api/admin/settings
@@ -6650,8 +6688,15 @@ async function handleAdminSettings(request, env) {
        ON CONFLICT(key) DO UPDATE SET value = excluded.value`
     ).bind(key, String(n)));
   }
-  if (!updates.length) return err('No hay campos para actualizar');
-  await env.DB.batch(updates);
+  let digitalPrice = null;
+  if (data.digital_price !== undefined) {
+    digitalPrice = parseInt(data.digital_price);
+    // 350 CLP is the minimum Flow accepts for a payment.
+    if (isNaN(digitalPrice) || digitalPrice < 350 || digitalPrice > 10000000) return err('Precio inválido: mínimo $350');
+  }
+  if (!updates.length && digitalPrice === null) return err('No hay campos para actualizar');
+  if (updates.length) await env.DB.batch(updates);
+  if (digitalPrice !== null) await applyDigitalPrice(env, digitalPrice);
   return json(await getAdminSettings(env));
 }
 
@@ -6708,9 +6753,15 @@ async function ensureSchema(env) {
     env.DB.prepare(`CREATE TABLE IF NOT EXISTS settings (key TEXT PRIMARY KEY, value TEXT NOT NULL)`),
   ];
   for (const p of SEED_PRODUCTS) {
-    stmts.push(env.DB.prepare(
-      'INSERT OR IGNORE INTO products (slug, name, price, image, category, status, sku) VALUES (?, ?, ?, ?, ?, ?, ?)'
-    ).bind(p.slug, p.name, p.price, p.image, p.category, p.status, p.sku));
+    // A new digital product starts at the general digital price, if one is set.
+    stmts.push(isDigital(p.slug)
+      ? env.DB.prepare(
+        `INSERT OR IGNORE INTO products (slug, name, price, image, category, status, sku)
+         VALUES (?, ?, COALESCE((SELECT CAST(value AS INTEGER) FROM settings WHERE key = 'digital_price'), ?), ?, ?, ?, ?)`
+      ).bind(p.slug, p.name, p.price, p.image, p.category, p.status, p.sku)
+      : env.DB.prepare(
+        'INSERT OR IGNORE INTO products (slug, name, price, image, category, status, sku) VALUES (?, ?, ?, ?, ?, ?, ?)'
+      ).bind(p.slug, p.name, p.price, p.image, p.category, p.status, p.sku));
     stmts.push(env.DB.prepare(
       `UPDATE products SET sku = ? WHERE slug = ? AND (sku IS NULL OR sku = '')`
     ).bind(p.sku, p.slug));

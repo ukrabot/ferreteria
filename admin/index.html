@@ -275,6 +275,20 @@ tr:hover td{background:rgba(15,23,42,.3)}
       </div>
 
       <div class="settings-card" style="margin-top:16px">
+        <h2>Precio general de productos digitales</h2>
+        <p class="settings-help">Cambia de una vez el precio de todos los packs digitales (planillas, guías y checklists). Se aplica al instante en el checkout, en las fichas, en el catálogo, en la portada y en los recuadros del blog. Los packs nuevos que se publiquen también tomarán este precio.</p>
+        <form class="add-form" onsubmit="return saveDigitalPrice(event)">
+          <div>
+            <label for="set-digital-price">Precio para todos los productos digitales (CLP)</label>
+            <input id="set-digital-price" type="number" min="350" step="10" required placeholder="7990">
+          </div>
+          <div class="settings-preview" id="digital-price-now" style="display:none"></div>
+          <button type="submit" class="submit-btn" id="digital-price-submit">Aplicar a todos</button>
+        </form>
+        <p class="settings-help" style="margin-top:12px;margin-bottom:0">Después puedes cambiar un pack puntual en la pestaña Productos; si vuelves a aplicar el precio general, ese pack también vuelve al precio general.</p>
+      </div>
+
+      <div class="settings-card" style="margin-top:16px">
         <h2>Productos digitales</h2>
         <p class="settings-help">Sube aquí el archivo .zip que recibe el cliente. Se guarda en la base de datos (no en el sitio público) y se entrega con un enlace privado solo cuando Flow confirma el pago.</p>
         <div id="digital-list"><p class="settings-help">Cargando…</p></div>
@@ -424,8 +438,46 @@ tr:hover td{background:rgba(15,23,42,.3)}
       updateShippingPreview();
       setAdsenseUI(!!d.adsense_products);
       setAdsenseBlogUI(d.adsense_blog !== false);
+      setDigitalPriceUI(d);
     } catch {}
   }
+
+  // ── General price for digital products ───────────────────────────
+
+  function setDigitalPriceUI(d) {
+    const prices = Object.entries(d.digital_prices || {}).sort((a, b) => b[1] - a[1]);
+    if (d.digital_price) $('set-digital-price').value = d.digital_price;
+    else if (prices.length) $('set-digital-price').value = prices[0][0];
+    const box = $('digital-price-now');
+    if (!d.digital_count) { box.style.display = 'none'; return; }
+    const parts = prices.map(([p, n]) => `${n} a ${fmt(Number(p))}`).join(', ');
+    box.textContent = `Hoy: ${d.digital_count} productos digitales (${parts}).`;
+    box.style.display = 'block';
+  }
+
+  window.saveDigitalPrice = async function(e) {
+    e.preventDefault();
+    const digital_price = parseInt($('set-digital-price').value);
+    if (isNaN(digital_price) || digital_price < 350) { toast('El precio mínimo es $350', true); return false; }
+    if (!confirm(`¿Poner todos los productos digitales a ${fmt(digital_price)}?`)) return false;
+    const btn = $('digital-price-submit');
+    btn.disabled = true; btn.textContent = 'Aplicando…';
+    try {
+      const res = await apiFetch('/api/admin/settings', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ digital_price }),
+      });
+      const d = await res.json();
+      if (res.ok) {
+        setDigitalPriceUI(d);
+        toast(`Productos digitales a ${fmt(digital_price)}`);
+        if (typeof loadProducts === 'function') loadProducts();
+      } else toast(d.error || 'Error al guardar', true);
+    } catch { toast('Error de conexión', true); }
+    btn.disabled = false; btn.textContent = 'Aplicar a todos';
+    return false;
+  };
 
   // ── Digital products (file upload) ───────────────────────────────
 
