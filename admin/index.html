@@ -289,6 +289,26 @@ tr:hover td{background:rgba(15,23,42,.3)}
       </div>
 
       <div class="settings-card" style="margin-top:16px">
+        <h2>Aviso de pack digital en el blog</h2>
+        <p class="settings-help">Cuando alguien lleva un rato leyendo un artículo que tiene pack, aparece un aviso para comprarlo. Si lo cierra, no lo vuelve a ver en 3 días.</p>
+        <label class="switch-row">
+          <span class="switch">
+            <input type="checkbox" id="set-nudge" onchange="saveNudge(this.checked)">
+            <span class="slider"></span>
+          </span>
+          <span id="nudge-label">Cargando…</span>
+        </label>
+        <form class="add-form" onsubmit="return saveNudgeSeconds(event)" style="margin-top:14px">
+          <div>
+            <label for="set-nudge-secs">Mostrar el aviso después de (segundos de lectura)</label>
+            <input id="set-nudge-secs" type="number" min="5" max="600" step="1" required placeholder="30">
+          </div>
+          <button type="submit" class="submit-btn" id="nudge-secs-submit">Guardar tiempo</button>
+        </form>
+        <p class="settings-help" style="margin-top:12px;margin-bottom:0">Entre 5 y 600 segundos. Solo cuenta el tiempo con la pestaña a la vista. Los cambios se aplican en hasta 1 minuto.</p>
+      </div>
+
+      <div class="settings-card" style="margin-top:16px">
         <h2>Productos digitales</h2>
         <p class="settings-help">Sube aquí el archivo .zip que recibe el cliente. Se guarda en la base de datos (no en el sitio público) y se entrega con un enlace privado solo cuando Flow confirma el pago.</p>
         <div id="digital-list"><p class="settings-help">Cargando…</p></div>
@@ -439,8 +459,56 @@ tr:hover td{background:rgba(15,23,42,.3)}
       setAdsenseUI(!!d.adsense_products);
       setAdsenseBlogUI(d.adsense_blog !== false);
       setDigitalPriceUI(d);
+      setNudgeUI(d.pack_nudge !== false);
+      $('set-nudge-secs').value = d.pack_nudge_seconds || 30;
     } catch {}
   }
+
+  // ── Pack notice in blog articles ──────────────────────────────────
+
+  function setNudgeUI(on) {
+    $('set-nudge').checked = on;
+    $('nudge-label').textContent = on ? 'Aviso activado' : 'Aviso desactivado';
+    $('nudge-label').style.color = on ? '#4ade80' : '#94a3b8';
+  }
+
+  window.saveNudge = async function(on) {
+    const box = $('set-nudge');
+    box.disabled = true;
+    try {
+      const res = await apiFetch('/api/admin/settings', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ pack_nudge: on }),
+      });
+      const d = await res.json();
+      if (res.ok) {
+        setNudgeUI(d.pack_nudge !== false);
+        toast(d.pack_nudge !== false ? 'Aviso de pack activado' : 'Aviso de pack desactivado');
+      } else { setNudgeUI(!on); toast(d.error || 'Error al guardar', true); }
+    } catch { setNudgeUI(!on); toast('Error de conexión', true); }
+    box.disabled = false;
+  };
+
+  window.saveNudgeSeconds = async function(e) {
+    e.preventDefault();
+    const pack_nudge_seconds = parseInt($('set-nudge-secs').value);
+    if (isNaN(pack_nudge_seconds) || pack_nudge_seconds < 5 || pack_nudge_seconds > 600) { toast('Pon entre 5 y 600 segundos', true); return false; }
+    const btn = $('nudge-secs-submit');
+    btn.disabled = true; btn.textContent = 'Guardando…';
+    try {
+      const res = await apiFetch('/api/admin/settings', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ pack_nudge_seconds }),
+      });
+      const d = await res.json();
+      if (res.ok) { $('set-nudge-secs').value = d.pack_nudge_seconds; toast(`El aviso saldrá a los ${d.pack_nudge_seconds} segundos`); }
+      else toast(d.error || 'Error al guardar', true);
+    } catch { toast('Error de conexión', true); }
+    btn.disabled = false; btn.textContent = 'Guardar tiempo';
+    return false;
+  };
 
   // ── General price for digital products ───────────────────────────
 

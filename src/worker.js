@@ -6458,13 +6458,18 @@ async function handleGetShipping(env) {
 async function getSiteConfig(env) {
   try {
     const rows = await env.DB.prepare(
-      `SELECT key, value FROM settings WHERE key IN ('adsense_products', 'adsense_blog')`
+      `SELECT key, value FROM settings WHERE key IN ('adsense_products', 'adsense_blog', 'pack_nudge', 'pack_nudge_seconds')`
     ).all();
     const v = Object.fromEntries((rows.results || []).map(r => [r.key, r.value]));
     // Products: off unless enabled. Blog: on unless disabled (it always had ads).
-    return { adsense_products: v.adsense_products === '1', adsense_blog: v.adsense_blog !== '0' };
+    // Pack notice in blog articles: on unless disabled, after 30 s by default.
+    const secs = parseInt(v.pack_nudge_seconds);
+    return {
+      adsense_products: v.adsense_products === '1', adsense_blog: v.adsense_blog !== '0',
+      pack_nudge: v.pack_nudge !== '0', pack_nudge_seconds: secs >= 5 && secs <= 600 ? secs : 30,
+    };
   } catch {
-    return { adsense_products: false, adsense_blog: true }; // settings table not created yet
+    return { adsense_products: false, adsense_blog: true, pack_nudge: true, pack_nudge_seconds: 30 }; // settings table not created yet
   }
 }
 
@@ -6678,6 +6683,20 @@ async function handleAdminSettings(request, env) {
       `INSERT INTO settings (key, value) VALUES ('adsense_products', ?)
        ON CONFLICT(key) DO UPDATE SET value = excluded.value`
     ).bind(data.adsense_products ? '1' : '0'));
+  }
+  if (data.pack_nudge !== undefined) {
+    updates.push(env.DB.prepare(
+      `INSERT INTO settings (key, value) VALUES ('pack_nudge', ?)
+       ON CONFLICT(key) DO UPDATE SET value = excluded.value`
+    ).bind(data.pack_nudge ? '1' : '0'));
+  }
+  if (data.pack_nudge_seconds !== undefined) {
+    const secs = parseInt(data.pack_nudge_seconds);
+    if (isNaN(secs) || secs < 5 || secs > 600) return err('Segundos inválidos: entre 5 y 600');
+    updates.push(env.DB.prepare(
+      `INSERT INTO settings (key, value) VALUES ('pack_nudge_seconds', ?)
+       ON CONFLICT(key) DO UPDATE SET value = excluded.value`
+    ).bind(String(secs)));
   }
   for (const key of ['shipping_cost', 'free_shipping_min']) {
     if (data[key] === undefined) continue;

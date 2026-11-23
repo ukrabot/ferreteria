@@ -755,16 +755,20 @@
   }
 
 
-  // ── Blog: after 1 minute reading, suggest the article's digital pack ──
+  // ── Blog: after some time reading (set in /admin/), suggest the article's pack ──
 
-  function initPackNudge() {
+  async function initPackNudge() {
     const src = document.querySelector('button[data-add-cart][data-slug^="pack-"]');
     if (!src || !parseInt(src.dataset.price)) return;
     const slug = src.dataset.slug;
     const KEY = 'ukraPackNudge:' + slug;
-    const DELAY = 60000, SNOOZE = 3 * 864e5;
+    const SNOOZE = 3 * 864e5;
     try { if (Date.now() - Number(localStorage.getItem(KEY) || 0) < SNOOZE) return; } catch {}
     if (getCart().some(i => i.slug === slug)) return;
+    // On/off and delay come from /admin/ (Ajustes); defaults: on, 30 s.
+    const cfg = await fetchJSON('/api/site-config', 4000);
+    if (cfg && cfg.pack_nudge === false) return;
+    const DELAY = (cfg && cfg.pack_nudge_seconds > 0 ? cfg.pack_nudge_seconds : 30) * 1000;
 
     const box = src.closest('section') || src.parentElement;
     const titleEl = box && box.querySelector('h2, h3');
