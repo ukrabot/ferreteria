@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://www.ferreteriaukra.cl/productos-digitales/</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -956,7 +956,7 @@
   </url>
   <url>
     <loc>https://www.ferreteriaukra.cl/blog/herramientas-basicas-de-gasfiteria-todo-lo-que-necesitas-saber/</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2709,6 +2709,12 @@
   <url>
     <loc>https://www.ferreteriaukra.cl/producto/pack-calefaccion-mas-barata-costo-kwh-comparador-excel/</loc>
     <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ferreteriaukra.cl/producto/pack-kit-gasfiteria-herramientas-ppr-prueba-presion-excel/</loc>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

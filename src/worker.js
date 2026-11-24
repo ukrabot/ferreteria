@@ -622,6 +622,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Calefacción Más Barata',
     filename: 'Pack-Calefaccion-Mas-Barata-Ferreteria-Ukra.zip',
   },
+  'pack-kit-gasfiteria-herramientas-ppr-prueba-presion-excel': {
+    name: 'Pack Kit de Gasfitería',
+    filename: 'Pack-Kit-Gasfiteria-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3445,6 +3449,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-CALEFACCION-BARATA',
+  },
+  {
+    slug: 'pack-kit-gasfiteria-herramientas-ppr-prueba-presion-excel',
+    name: 'Pack Kit de Gasfitería: Planilla Excel de Herramientas por Tarea, Presupuesto del Kit, Registro de Termofusión PPR y Pruebas de Presión RIDAA + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-kit-gasfiteria-herramientas-ppr-prueba-presion-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-KIT-GASFITERIA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
