@@ -634,6 +634,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Careta Fotosensible',
     filename: 'Pack-Careta-Fotosensible-Ferreteria-Ukra.zip',
   },
+  'pack-elegir-soldadora-amperaje-ciclo-circuito-excel': {
+    name: 'Pack Elegir Soldadora',
+    filename: 'Pack-Elegir-Soldadora-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3484,6 +3488,15 @@ const SEED_PRODUCTS = [
     category: 'Herramientas',
     status: 'available',
     sku: 'PACK-CARETA-FOTOSENSIBLE',
+  },
+  {
+    slug: 'pack-elegir-soldadora-amperaje-ciclo-circuito-excel',
+    name: 'Pack Elegir Soldadora: Planilla Excel de Proceso y Amperaje, Ciclo de Trabajo, Placa y Circuito, Comparador de 3 Máquinas y Presupuesto + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-elegir-soldadora-amperaje-ciclo-circuito-excel.webp',
+    category: 'Herramientas',
+    status: 'available',
+    sku: 'PACK-ELEGIR-SOLDADORA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
