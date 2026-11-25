@@ -638,6 +638,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Elegir Soldadora',
     filename: 'Pack-Elegir-Soldadora-Ferreteria-Ukra.zip',
   },
+  'pack-caldera-mural-potencia-acs-condensacion-excel': {
+    name: 'Pack Caldera Mural',
+    filename: 'Pack-Caldera-Mural-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3497,6 +3501,15 @@ const SEED_PRODUCTS = [
     category: 'Herramientas',
     status: 'available',
     sku: 'PACK-ELEGIR-SOLDADORA',
+  },
+  {
+    slug: 'pack-caldera-mural-potencia-acs-condensacion-excel',
+    name: 'Pack Caldera Mural: Planilla Excel de Potencia por Recinto, Agua Caliente de Caldera Mixta, Convencional vs Condensación, Consumo de Gas, Cotizaciones y Mantención + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-caldera-mural-potencia-acs-condensacion-excel.webp',
+    category: 'Gasfitería',
+    status: 'available',
+    sku: 'PACK-CALDERA-MURAL',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
