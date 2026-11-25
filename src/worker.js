@@ -646,6 +646,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Recepción de Vivienda',
     filename: 'Pack-Recepcion-Vivienda-Ferreteria-Ukra.zip',
   },
+  'pack-licuadora-olor-quemado-diagnostico-excel': {
+    name: 'Pack Licuadora',
+    filename: 'Pack-Licuadora-Quemado-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3523,6 +3527,15 @@ const SEED_PRODUCTS = [
     category: 'Construcción',
     status: 'available',
     sku: 'PACK-RECEPCION-VIVIENDA',
+  },
+  {
+    slug: 'pack-licuadora-olor-quemado-diagnostico-excel',
+    name: 'Pack Licuadora con Olor a Quemado: Planilla Excel de Diagnóstico por Síntomas, Mediciones con Multímetro, Garantía Legal y Reparar o Comprar + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-licuadora-olor-quemado-diagnostico-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-LICUADORA-QUEMADO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
