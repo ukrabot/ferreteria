@@ -630,6 +630,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Careta de Soldar',
     filename: 'Pack-Careta-de-Soldar-Ferreteria-Ukra.zip',
   },
+  'pack-careta-fotosensible-marcado-en379-prueba-excel': {
+    name: 'Pack Careta Fotosensible',
+    filename: 'Pack-Careta-Fotosensible-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3471,6 +3475,15 @@ const SEED_PRODUCTS = [
     category: 'Herramientas',
     status: 'available',
     sku: 'PACK-CARETA-SOLDAR',
+  },
+  {
+    slug: 'pack-careta-fotosensible-marcado-en379-prueba-excel',
+    name: 'Pack Careta Fotosensible: Planilla Excel para Leer el Marcado EN 379, Tono DIN y Luz que Pasa, Costo Pasiva vs Fotosensible y Prueba de Recepción + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-careta-fotosensible-marcado-en379-prueba-excel.webp',
+    category: 'Herramientas',
+    status: 'available',
+    sku: 'PACK-CARETA-FOTOSENSIBLE',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
