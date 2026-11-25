@@ -650,6 +650,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Licuadora',
     filename: 'Pack-Licuadora-Quemado-Ferreteria-Ukra.zip',
   },
+  'pack-discos-esmeril-angular-rpm-vencimiento-excel': {
+    name: 'Pack Discos para Esmeril',
+    filename: 'Pack-Discos-Esmeril-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3536,6 +3540,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-LICUADORA-QUEMADO',
+  },
+  {
+    slug: 'pack-discos-esmeril-angular-rpm-vencimiento-excel',
+    name: 'Pack Discos para Esmeril Angular: Planilla Excel para Elegir Disco, Calcular RPM Máximas, Leer la Etiqueta y Controlar Vencimientos + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-discos-esmeril-angular-rpm-vencimiento-excel.webp',
+    category: 'Herramientas',
+    status: 'available',
+    sku: 'PACK-DISCOS-ESMERIL',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
