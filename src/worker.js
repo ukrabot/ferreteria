@@ -642,6 +642,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Caldera Mural',
     filename: 'Pack-Caldera-Mural-Ferreteria-Ukra.zip',
   },
+  'pack-recepcion-vivienda-nueva-inspeccion-acta-excel': {
+    name: 'Pack Recepción de Vivienda',
+    filename: 'Pack-Recepcion-Vivienda-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3510,6 +3514,15 @@ const SEED_PRODUCTS = [
     category: 'Gasfitería',
     status: 'available',
     sku: 'PACK-CALDERA-MURAL',
+  },
+  {
+    slug: 'pack-recepcion-vivienda-nueva-inspeccion-acta-excel',
+    name: 'Pack Recepción de Vivienda: Planilla Excel de Inspección con Criterios CChC, Pruebas con Medida, Acta de Observaciones Automática, Plazos Legales y Posventa + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-recepcion-vivienda-nueva-inspeccion-acta-excel.webp',
+    category: 'Construcción',
+    status: 'available',
+    sku: 'PACK-RECEPCION-VIVIENDA',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
