@@ -140,12 +140,60 @@
   }
 
   function updateBadge() {
+    const c = cartCount();
     const el = document.getElementById('ukra-cart-count');
     if (el) {
-      const c = cartCount();
       el.textContent = c;
       el.style.display = c > 0 ? 'flex' : 'none';
     }
+    document.querySelectorAll('.ukra-cart-n').forEach(n => {
+      n.textContent = c;
+      n.style.display = c > 0 ? 'inline-flex' : 'none';
+    });
+  }
+
+  // ── Cart link in the top navigation menu ──────────────────────────
+
+  function createNavCart() {
+    if (document.querySelector('.ukra-nav-cart')) return;
+    const list = document.querySelector('header nav ul');
+    if (!list) return;
+    if (!document.getElementById('ukra-nav-cart-css')) {
+      const st = document.createElement('style');
+      st.id = 'ukra-nav-cart-css';
+      st.textContent = '.ukra-nav-cart{display:flex!important;align-items:center;gap:6px;white-space:nowrap}' +
+        '.ukra-nav-cart svg{width:18px;height:18px;flex:none}' +
+        '.ukra-nav-cart .ukra-cart-n{background:#D9381E;color:#fff;font-size:.7rem;font-weight:800;min-width:18px;height:18px;padding:0 5px;border-radius:99px;align-items:center;justify-content:center;line-height:1}' +
+        '.ukra-nav-cart.ukra-nav-cart--icon .ukra-nav-cart-lbl{display:none}';
+      document.head.appendChild(st);
+    }
+    const li = document.createElement('li');
+    li.className = 'ukra-nav-cart-li';
+    const a = document.createElement('a');
+    a.href = '/checkout/';
+    a.className = 'ukra-nav-cart';
+    a.setAttribute('aria-label', 'Ver carrito');
+    if (window.location.pathname.startsWith('/checkout')) a.setAttribute('aria-current', 'page');
+    a.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg><span class="ukra-nav-cart-lbl">Carrito</span><span class="ukra-cart-n" style="display:none">0</span>';
+    li.appendChild(a);
+    list.appendChild(li);
+    updateBadge();
+    // On desktop, if the label pushes the cart to a new menu row, show only the icon
+    const fit = () => {
+      a.classList.remove('ukra-nav-cart--icon');
+      const first = list.firstElementChild;
+      if (window.innerWidth <= 900 || !first || first === li) return;
+      li.style.display = 'none';
+      const base = first.getBoundingClientRect().top;
+      li.style.display = '';
+      const top = first.getBoundingClientRect().top;
+      if (top - base > 8 || li.getBoundingClientRect().top - top > 8) a.classList.add('ukra-nav-cart--icon');
+    };
+    fit();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+    window.addEventListener('load', fit);
+    let rt;
+    window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(fit, 150); });
   }
 
   // ── Product page: parse JSON-LD and add button ────────────────────
@@ -846,6 +894,7 @@
 
   function init() {
     createBadge();
+    createNavCart();
     initAddCartButtons();
     const path = window.location.pathname;
     if (path.startsWith('/producto/')) initProductPage();
