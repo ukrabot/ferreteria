@@ -658,6 +658,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Videoportero',
     filename: 'Pack-Videoportero-Ferreteria-Ukra.zip',
   },
+  'pack-lijas-secuencia-granos-madera-metal-pared-excel': {
+    name: 'Pack Lijas',
+    filename: 'Pack-Lijas-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3562,6 +3566,15 @@ const SEED_PRODUCTS = [
     category: 'Material Eléctrico',
     status: 'available',
     sku: 'PACK-VIDEOPORTERO',
+  },
+  {
+    slug: 'pack-lijas-secuencia-granos-madera-metal-pared-excel',
+    name: 'Pack Lijas para Madera, Metal y Pared: Planilla Excel de Secuencia de Granos con Tamaño FEPA, Mineral y Formato y Presupuesto + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-lijas-secuencia-granos-madera-metal-pared-excel.webp',
+    category: 'Herramientas',
+    status: 'available',
+    sku: 'PACK-LIJAS',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
