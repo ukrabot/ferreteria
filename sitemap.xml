@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://www.ferreteriaukra.cl/productos-digitales/</loc>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -1436,7 +1436,7 @@
   </url>
   <url>
     <loc>https://www.ferreteriaukra.cl/blog/videoportero-y-timbre-con-camara-como-elegir-e-instalar-chile/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2757,6 +2757,12 @@
   <url>
     <loc>https://www.ferreteriaukra.cl/producto/pack-discos-esmeril-angular-rpm-vencimiento-excel/</loc>
     <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ferreteriaukra.cl/producto/pack-videoportero-timbre-camara-wifi-cableado-excel/</loc>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

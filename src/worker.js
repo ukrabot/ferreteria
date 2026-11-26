@@ -654,6 +654,10 @@ const DIGITAL_PRODUCTS = {
     name: 'Pack Discos para Esmeril',
     filename: 'Pack-Discos-Esmeril-Ferreteria-Ukra.zip',
   },
+  'pack-videoportero-timbre-camara-wifi-cableado-excel': {
+    name: 'Pack Videoportero',
+    filename: 'Pack-Videoportero-Ferreteria-Ukra.zip',
+  },
 };
 const FILE_CHUNK = 90 * 1024; // keeps each statement under D1's 100 KB limit
 const MAX_FILE = 20 * 1024 * 1024;
@@ -3549,6 +3553,15 @@ const SEED_PRODUCTS = [
     category: 'Herramientas',
     status: 'available',
     sku: 'PACK-DISCOS-ESMERIL',
+  },
+  {
+    slug: 'pack-videoportero-timbre-camara-wifi-cableado-excel',
+    name: 'Pack Videoportero y Timbre con Cámara: Planilla Excel para Elegir WiFi o Cableado, Alimentación y Apertura, Comparador con Costo a 3 Años y Presupuesto + Guía + Checklist',
+    price: 7990,
+    image: '/producto/pack-videoportero-timbre-camara-wifi-cableado-excel.webp',
+    category: 'Material Eléctrico',
+    status: 'available',
+    sku: 'PACK-VIDEOPORTERO',
   },
   {
     slug: 'llave-de-paso-1-2-so-bronce-stretto',
